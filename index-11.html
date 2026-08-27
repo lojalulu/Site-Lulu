@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loja Lulu — Moda Fitness</title>
+<meta name="description" content="Loja Lulu Moda Fitness — kits para revenda. Pedido mínimo 4 kits. Frete grátis para Salvador acima de 6 kits.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+/* ===== Tokens — identidade Loja Lulu ================================ */
+:root{
+  --bg:            #FFF6FA;   /* papel levemente rosado */
+  --surface:       #FFFFFF;
+  --surface-2:     #FDE9F1;   /* rosa suave — cards e etiquetas */
+  --line:          #F5D3E3;
+  --text:          #2B1524;   /* ameixa quase-preto, não preto puro */
+  --text-muted:    #93798A;
+  --accent:        #FF3D80;   /* rosa Lulu — vibrante e alegre */
+  --accent-ink:    #FFFFFF;
+  --gold:          #FFB100;   /* amarelo-sol — contraste energético */
+  --good:          #1FAA59;
+
+  --font-display:  'Baloo 2', system-ui, sans-serif;   /* redondo, alegre — combina com "Lulu" */
+  --font-body:     'Work Sans', system-ui, sans-serif;
+  --font-mono:     'IBM Plex Mono', ui-monospace, monospace; /* preços e contagem de kits */
+
+  --radius: 16px;
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+body{
+  margin:0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 84px; /* espaço pra barra do carrinho */
+}
+a{ color: inherit; }
+:focus-visible{ outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ===== Topbar ======================================================= */
+.topbar{
+  position: sticky; top:0; z-index: 40;
+  background: rgba(255,246,250,.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.topbar-inner{
+  max-width: 1180px; margin:0 auto; padding: 14px 20px;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.brand{ font-family: var(--font-display); font-size: 15px; letter-spacing: .02em; }
+.brand strong{ color: var(--accent); }
+.brand-tag{
+  font-family: var(--font-mono); font-size: 10px; color: var(--text-muted);
+  border: 1px solid var(--line); border-radius: 999px; padding: 3px 8px; margin-left: 8px;
+  vertical-align: middle;
+}
+.topbar-whats{
+  font-family: var(--font-mono); font-size: 12px; text-decoration:none;
+  background: var(--accent); color: #fff; padding: 9px 16px; border-radius: 999px;
+  transition: transform .15s ease;
+}
+.topbar-whats:hover{ transform: translateY(-1px); }
+
+/* ===== Hero ========================================================= */
+.hero{ padding: 56px 20px 40px; }
+.hero-inner{ max-width: 760px; margin: 0 auto; text-align:center; }
+.eyebrow{
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--accent); margin: 0 0 18px;
+}
+.hero h1{
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(28px, 5vw, 44px); line-height: 1.15; margin: 0 0 18px;
+}
+.hero-sub{ color: var(--text-muted); font-size: 16px; line-height: 1.6; max-width: 520px; margin: 0 auto 32px; }
+
+.hero-rules{ display:flex; gap:14px; justify-content:center; flex-wrap: wrap; }
+.rule-chip{
+  display:flex; align-items:center; gap:10px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
+  padding: 10px 18px 10px 12px;
+}
+.rule-chip--accent{ border-color: var(--accent); background: linear-gradient(180deg, rgba(255,61,128,.10), transparent); }
+.rule-num{
+  font-family: var(--font-mono); font-weight: 600; font-size: 16px;
+  background: var(--surface-2); color: var(--accent); border-radius: 999px;
+  min-width: 34px; height: 34px; display:flex; align-items:center; justify-content:center;
+}
+.rule-chip--accent .rule-num{ color: var(--accent); }
+.rule-label{ font-size: 13px; color: var(--text-muted); text-align:left; }
+
+/* ===== Catálogo ====================================================== */
+.catalog{ max-width: 1180px; margin: 0 auto; padding: 20px 20px 60px; }
+.catalog-head{ display:flex; align-items: baseline; gap: 12px; margin-bottom: 20px; }
+.catalog-head h2{ font-family: var(--font-display); font-weight:400; font-size: 20px; margin:0; }
+.catalog-count{ font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); }
+
+.grid{
+  display:grid; gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+}
+.scroll-sentinel{ height: 1px; }
+.load-more-msg{
+  grid-column: 1 / -1; text-align:center; padding: 18px 0; color: var(--text-muted);
+  font-family: var(--font-mono); font-size: 12px;
+}
+
+.card{
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  overflow: hidden; display:flex; flex-direction:column;
+  transition: border-color .15s ease;
+}
+.card:hover{ border-color: var(--accent); }
+.card-img-wrap{ position:relative; aspect-ratio: 3/4; background: var(--surface-2); overflow:hidden; touch-action: pan-y; }
+
+/* carrossel de fotos — estilo "arraste pro lado" */
+.carousel-track{
+  display:flex; height:100%; width:100%;
+  transition: transform .3s ease;
+}
+.carousel-track img{
+  flex: 0 0 100%; width:100%; height:100%; object-fit: cover; display:block;
+  -webkit-user-drag: none; user-select: none;
+}
+.carousel-arrow{
+  position:absolute; top:50%; transform: translateY(-50%); z-index: 2;
+  width: 28px; height: 28px; border-radius: 50%; border:none; cursor:pointer;
+  background: rgba(255,255,255,.85); color: var(--text); font-size: 16px; line-height:1;
+  display:flex; align-items:center; justify-content:center;
+  opacity:0; transition: opacity .15s ease;
+}
+.card-img-wrap:hover .carousel-arrow{ opacity:1; }
+.carousel-arrow.prev{ left:8px; }
+.carousel-arrow.next{ right:8px; }
+.carousel-dots{
+  position:absolute; bottom:8px; left:0; right:0; z-index:2;
+  display:flex; justify-content:center; gap:5px;
+}
+.carousel-dots .dot{
+  width:5px; height:5px; border-radius:50%; background: rgba(255,255,255,.55);
+  border: none; padding:0; cursor:pointer;
+}
+.carousel-dots .dot.is-active{ background:#fff; width:14px; border-radius:3px; }
+.card-badge{
+  position:absolute; top:10px; left:10px;
+  font-family: var(--font-mono); font-size: 10px; letter-spacing:.03em;
+  background: rgba(43,21,36,.85); color: var(--gold); border: 1px solid var(--gold);
+  border-radius: 999px; padding: 4px 9px;
+}
+.card-body{ padding: 14px 14px 16px; display:flex; flex-direction:column; gap: 10px; flex:1; }
+.card-title{ font-size: 14px; line-height: 1.35; margin:0; min-height: 38px; }
+
+/* etiqueta de preço estilo "tag de roupa" */
+.price-tag{
+  display:inline-flex; align-items:center; gap:8px; align-self:flex-start;
+  background: var(--surface-2); border: 1px dashed var(--line); border-radius: 8px;
+  padding: 7px 10px 7px 8px; position:relative;
+}
+.price-tag::before{
+  content:""; width:8px; height:8px; border-radius:50%; background: var(--bg);
+  border: 1px solid var(--line);
+}
+.price-tag .valor{ font-family: var(--font-mono); font-weight: 600; font-size: 16px; color: var(--text); }
+.price-tag .valor small{ font-size: 11px; color: var(--text-muted); font-weight: 500; }
+
+.card-foot{ margin-top: auto; display:flex; align-items:center; gap:10px; }
+
+.qty-stepper{
+  display:flex; align-items:center; border: 1px solid var(--line); border-radius: 999px; overflow:hidden;
+}
+.qty-stepper button{
+  width: 30px; height: 30px; background: var(--surface-2); color: var(--text); border:none;
+  font-family: var(--font-mono); font-size: 15px; cursor:pointer;
+}
+.qty-stepper button:hover{ background: var(--accent); color:#fff; }
+.qty-stepper span{ width: 30px; text-align:center; font-family: var(--font-mono); font-size: 13px; }
+
+.add-btn{
+  flex:1; background: var(--accent); color:#fff; border:none; border-radius: 999px;
+  padding: 9px 14px; font-family: var(--font-body); font-weight:600; font-size: 13px; cursor:pointer;
+  transition: filter .15s ease;
+}
+.add-btn:hover{ filter: brightness(1.08); }
+.add-btn.is-added{ background: var(--good); color: var(--accent-ink); }
+
+/* ===== Footer ======================================================== */
+.site-footer{ text-align:center; padding: 30px 20px 40px; color: var(--text-muted); font-size: 12px; }
+
+/* ===== Barra do carrinho (elemento-assinatura) ======================= */
+.cart-bar{
+  position: fixed; left:0; right:0; bottom:0; z-index: 50;
+  background: var(--surface); border-top: 1px solid var(--line);
+  box-shadow: 0 -8px 24px rgba(43,21,36,.14);
+}
+.cart-bar-inner{
+  max-width: 1180px; margin: 0 auto; padding: 10px 16px;
+  display:grid; grid-template-columns: auto 1fr auto; align-items:center; gap: 16px;
+}
+.cart-toggle{
+  display:flex; align-items:center; gap:8px; background: none; border:none; color: var(--text);
+  cursor:pointer; padding: 6px 4px; font-family: var(--font-body);
+}
+.cart-toggle-count{
+  font-family: var(--font-mono); font-weight:600; background: var(--accent); color:#fff;
+  border-radius: 999px; min-width: 26px; height:26px; display:flex; align-items:center; justify-content:center; padding: 0 6px;
+}
+.cart-toggle-label{ font-size: 13px; color: var(--text-muted); white-space:nowrap; }
+.cart-toggle-chevron{ transition: transform .2s ease; color: var(--text-muted); }
+.cart-bar[data-open="true"] .cart-toggle-chevron{ transform: rotate(180deg); }
+
+.cart-progress-wrap{ min-width: 0; }
+.cart-progress-track{
+  position:relative; height: 6px; border-radius: 999px; background: var(--surface-2); overflow: visible;
+}
+.cart-progress-fill{
+  height:100%; border-radius: 999px; background: linear-gradient(90deg, var(--accent), var(--gold));
+  width: 0%; transition: width .25s ease;
+}
+.cart-progress-mark{
+  position:absolute; top:-3px; width: 2px; height: 12px; background: var(--text-muted); opacity:.6;
+}
+.cart-progress-text{ margin: 6px 0 0; font-size: 11.5px; color: var(--text-muted); font-family: var(--font-mono); }
+
+.cart-total-wrap{ text-align:right; }
+.cart-total-label{ display:block; font-size: 10px; text-transform:uppercase; letter-spacing:.06em; color: var(--text-muted); }
+.cart-total-value{ font-family: var(--font-mono); font-weight:600; font-size: 18px; color: var(--accent); }
+
+.cart-panel{
+  max-height: 0; overflow: hidden; transition: max-height .28s ease;
+  border-top: 1px solid transparent;
+}
+.cart-bar[data-open="true"] .cart-panel{
+  max-height: 70vh; overflow-y: auto; border-top-color: var(--line);
+}
+.cart-panel-items{ max-width: 1180px; margin: 0 auto; padding: 14px 16px 0; display:flex; flex-direction:column; gap:10px; }
+.cart-line{ display:flex; align-items:center; gap:10px; font-size: 13px; }
+.cart-line-name{ flex:1; }
+.cart-line-qty{ font-family: var(--font-mono); color: var(--text-muted); }
+.cart-line-remove{ background:none; border:none; color: var(--text-muted); cursor:pointer; font-size: 16px; line-height:1; }
+.cart-line-remove:hover{ color: var(--accent); }
+.cart-empty-msg{ color: var(--text-muted); font-size: 13px; padding: 4px 0 12px; }
+
+.cart-shipping{ max-width: 1180px; margin: 0 auto; padding: 16px; display:flex; flex-direction:column; gap:8px; }
+.cart-shipping-title{ font-family: var(--font-mono); font-size: 11px; text-transform:uppercase; letter-spacing:.06em; color: var(--text-muted); margin: 4px 0 2px; }
+.ship-option{
+  display:flex; align-items:center; gap:10px; border:1px solid var(--line); border-radius: 10px; padding: 10px 12px;
+  cursor:pointer; font-size: 13px;
+}
+.ship-option:has(input:checked){ border-color: var(--accent); background: rgba(255,61,128,.06); }
+.ship-option:has(input:disabled){ opacity:.4; cursor:not-allowed; }
+.ship-name em{ font-style:normal; color: var(--text-muted); display:block; font-size: 11px; }
+.ship-price{ margin-left:auto; font-family: var(--font-mono); }
+
+.cart-payment{
+  max-width: 1180px; margin: 4px auto 0; padding: 12px 16px; border-top: 1px dashed var(--line);
+}
+.cart-payment-title{ font-family: var(--font-mono); font-size: 11px; text-transform:uppercase; letter-spacing:.06em; color: var(--text-muted); margin: 4px 0 2px; }
+.cart-payment-hint{ font-size: 12px; color: var(--text-muted); margin: 0 0 10px; }
+.cart-payment-row{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+.cart-payment-value{ font-family: var(--font-mono); font-weight:600; font-size: 16px; background: var(--surface-2); border-radius: 8px; padding: 6px 10px; }
+.copy-btn{
+  background: var(--surface-2); border: 1px solid var(--line); color: var(--text);
+  border-radius: 999px; padding: 7px 14px; font-size: 12px; font-family: var(--font-body); font-weight:600; cursor:pointer;
+}
+.copy-btn:hover{ border-color: var(--accent); }
+.copy-btn.is-copied{ background: var(--good); color:#fff; border-color: var(--good); }
+.mp-link-btn{
+  text-decoration:none; background: var(--accent); color:#fff; border-radius: 999px;
+  padding: 7px 14px; font-size: 12px; font-weight:600;
+}
+
+.cart-summary{ max-width: 1180px; margin: 0 auto; padding: 4px 16px 0; display:flex; flex-direction:column; gap:6px; }
+.cart-summary-row{ display:flex; justify-content:space-between; font-size: 13px; color: var(--text-muted); font-family: var(--font-mono); }
+.cart-summary-row--total{ color: var(--text); font-size: 16px; font-weight:600; padding-top:6px; border-top: 1px dashed var(--line); }
+
+.checkout-btn{
+  display:block; width: calc(100% - 32px); max-width: 1148px; margin: 14px auto 18px;
+  background: var(--good); color: var(--accent-ink); border:none; border-radius: 999px;
+  padding: 14px 18px; font-family: var(--font-body); font-weight: 700; font-size: 15px; cursor:pointer;
+}
+.checkout-btn:disabled{ background: var(--surface-2); color: var(--text-muted); cursor:not-allowed; }
+
+@media (max-width: 640px){
+  .cart-bar-inner{ grid-template-columns: auto 1fr; }
+  .cart-total-wrap{ grid-column: 1 / -1; text-align:left; display:flex; align-items:baseline; gap:8px; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{ transition: none !important; }
+  html{ scroll-behavior: auto; }
+}
+
+</style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <span class="brand">Loja <strong>Lulu</strong><span class="brand-tag">moda fitness</span></span>
+      <a class="topbar-whats" href="https://wa.me/5571986441234" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Loja Lulu &middot; catálogo de revenda atualizado semanalmente</p>
+      <h1>Kit fechado. Preço fechado.<br>Você só escolhe quanto vender.</h1>
+      <p class="hero-sub">Peças em suplex e poliamida, cores variadas em cada kit, prontas pra girar na sua loja ou no seu Instagram.</p>
+      <div class="hero-rules">
+        <div class="rule-chip">
+          <span class="rule-num">4</span>
+          <span class="rule-label">kits &mdash; pedido mínimo</span>
+        </div>
+        <div class="rule-chip rule-chip--accent">
+          <span class="rule-num">6+</span>
+          <span class="rule-label">kits &mdash; frete grátis pra Salvador</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="catalog" id="catalogo">
+    <div class="catalog-head">
+      <h2>Disponível agora</h2>
+      <span class="catalog-count" id="contagem-produtos">&nbsp;</span>
+    </div>
+    <div class="grid" id="grid-produtos"></div>
+    <div class="scroll-sentinel" id="scroll-sentinel"></div>
+    <p class="load-more-msg" id="load-more-msg" hidden>Carregando mais kits…</p>
+  </main>
+
+  <footer class="site-footer">
+    <p>Loja Lulu &middot; Moda Fitness &middot; Pedidos via WhatsApp &middot; Catálogo atualizado semanalmente</p>
+  </footer>
+
+  <!-- Barra fixa do carrinho: o elemento-assinatura do site -->
+  <div class="cart-bar" id="cart-bar" data-state="empty">
+    <div class="cart-bar-inner">
+
+      <button class="cart-toggle" id="cart-toggle" aria-expanded="false">
+        <span class="cart-toggle-count" id="cart-count">0</span>
+        <span class="cart-toggle-label" id="cart-label">kits no pedido</span>
+        <svg class="cart-toggle-chevron" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5.5L7 9.5L11 5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <div class="cart-progress-wrap">
+        <div class="cart-progress-track">
+          <div class="cart-progress-fill" id="cart-progress-fill"></div>
+          <div class="cart-progress-mark" style="left:66.66%"></div>
+        </div>
+        <p class="cart-progress-text" id="cart-progress-text">Adicione 4 kits para fechar o pedido</p>
+      </div>
+
+      <div class="cart-total-wrap">
+        <span class="cart-total-label">total</span>
+        <span class="cart-total-value" id="cart-total-value">R$ 0,00</span>
+      </div>
+    </div>
+
+    <div class="cart-panel" id="cart-panel">
+      <div class="cart-panel-items" id="cart-panel-items"></div>
+
+      <div class="cart-shipping">
+        <p class="cart-shipping-title">Frete</p>
+        <label class="ship-option" data-ship="economico">
+          <input type="radio" name="frete" value="economico" checked>
+          <span class="ship-name">Econômico <em>9 dias úteis</em></span>
+          <span class="ship-price">R$ 39,90</span>
+        </label>
+        <label class="ship-option" data-ship="vip">
+          <input type="radio" name="frete" value="vip">
+          <span class="ship-name">Vip rápido <em>4 dias úteis</em></span>
+          <span class="ship-price">R$ 90,00</span>
+        </label>
+        <label class="ship-option" data-ship="vip_gratis" id="ship-gratis-option">
+          <input type="radio" name="frete" value="vip_gratis" disabled>
+          <span class="ship-name">Vip grátis <em>4 dias úteis &middot; acima de 6 kits</em></span>
+          <span class="ship-price">R$ 0,00</span>
+        </label>
+      </div>
+
+      <div class="cart-payment">
+        <p class="cart-payment-title">Pagar com Mercado Pago</p>
+        <p class="cart-payment-hint">O link é de valor livre — abra e digite o valor abaixo na hora de pagar.</p>
+        <div class="cart-payment-row">
+          <span class="cart-payment-value" id="pagamento-valor">R$ 0,00</span>
+          <button type="button" class="copy-btn" id="copiar-valor-btn">Copiar valor</button>
+          <a class="mp-link-btn" id="mp-link" href="https://link.mercadopago.com.br/lulumodafitness" target="_blank" rel="noopener">Abrir link</a>
+        </div>
+      </div>
+
+      <div class="cart-summary">
+        <div class="cart-summary-row">
+          <span>Peças</span>
+          <span id="summary-subtotal">R$ 0,00</span>
+        </div>
+        <div class="cart-summary-row">
+          <span>Frete</span>
+          <span id="summary-frete">R$ 39,90</span>
+        </div>
+        <div class="cart-summary-row cart-summary-row--total">
+          <span>Total</span>
+          <span id="summary-total">R$ 0,00</span>
+        </div>
+      </div>
+
+      <button class="checkout-btn" id="checkout-btn" disabled>
+        Pedido mínimo: 4 kits
+      </button>
+    </div>
+  </div>
+
+  <!-- PRODUTOS:START -->
+<script id="produtos-data" type="application/json">
+[
+  {
+    "id": "3501601",
+    "nome": "Pacote com 5 Conjuntos de Calça Suplex Plus Ref Viés 10",
+    "preco_original": 175.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1761524337_f3ec2b9c50ec4f3f9b97.webp",
+      "https://arquivos.facilzap.app.br/produtos/1761524243_2088c2c1c6cff4843cac.webp"
+    ],
+    "preco_final": 280.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "3347550",
+    "nome": "Pacote com 5 Conjuntos Short 07 Suplex",
+    "preco_original": 145.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1757290160_f62a18411622ee4d0e2c.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757290158_f2b583bc9301b1a856ec.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757290155_64a99ff2bfe43844c904.jpeg.webp"
+    ],
+    "preco_final": 232.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "2816748",
+    "nome": "Pacote com 5 Conjuntos de Calça Plus Size Ref 04",
+    "preco_original": 175.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1740420838_59b52e19f4bed81cffe4.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1740420835_3bbca057415ae2e59354.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1740420833_407c817f708698ffc9d3.jpeg.webp"
+    ],
+    "preco_final": 280.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "2816743",
+    "nome": "Pacote com 5 Conjuntos de Short 04 Suplex PLUS SIZE",
+    "preco_original": 165.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1740420789_4099cdd6334bcd8d85f5.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1740420786_936c5848cd5df1e2c78f.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1740420782_8be80ab4332f5b46174d.jpeg.webp"
+    ],
+    "preco_final": 264.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "2816726",
+    "nome": "Pacote com 5 Conjuntos de Short Bolso 03 Plus",
+    "preco_original": 140.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1740420529_1e966ff90eb006ebd457.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1740420526_046ba25bb04b08b28a84.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1740420522_7ddbc6c986028702e448.jpeg.webp"
+    ],
+    "preco_final": 224.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "2107286",
+    "nome": "Pacote com 5 Conjuntos de Calça Viés 09",
+    "preco_original": 130.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1722285342_e757fbdc52d905c0352b.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1722285337_614e2a55b654fc36a53e.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1722285334_47c1759d88ef5f6b2ed7.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1722285331_70a2d8084b8d89d1a66d.jpeg.webp"
+    ],
+    "preco_final": 208.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "2049296",
+    "nome": "Pacote com 5 Conjuntos de Short Plus Viés 07",
+    "preco_original": 140.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1721257949_8b54b991a5d36fa57543.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1721257942_e0aac78fd6d3cc576864.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1721257934_100b948c6c77586e19b7.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1721257926_c493e6ff28d2d001cc3d.jpeg.webp"
+    ],
+    "preco_final": 224.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "853903",
+    "nome": "Pacote com 5 conjuntos plus short bolso 02",
+    "preco_original": 145.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1699299218_aeba45d507dbbb841261.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1699299220_243124f6937aea4938eb.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1699299221_9c04059a6bb633e4c2ea.jpeg"
+    ],
+    "preco_final": 232.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "317955",
+    "nome": "Pacote Com 10 Regatas Gg",
+    "preco_original": 95.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1674009513_42a70ad5f9546d942c11.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1674009513_5fed00263cdb9342e457.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1674009514_164a84562e915fbdac85.jpeg"
+    ],
+    "preco_final": 152.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "3347497",
+    "nome": "Pacote com 5 Conjuntos de Calça Suplex Plus 07",
+    "preco_original": 175.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1757289571_4d60d709ad21d27f6720.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757289569_23ca7b117a818a55bbea.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757289567_28e79bee1ec10c4b3b58.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757289566_d8010e1c6caa533e1fa3.jpeg.webp"
+    ],
+    "preco_final": 280.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "684178",
+    "nome": "PACOTE COM 5 MACACÃO PLUS 01",
+    "preco_original": 150.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1695078952_c1989be3bc779caf93a7.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1695078951_48d12799a247ae99274e.jpg"
+    ],
+    "preco_final": 240.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "684175",
+    "nome": "PACOTE COM 5 MACACÃO PLUS 02",
+    "preco_original": 150.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1695078824_3964622c4050d782dd3c.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1695078823_a0e5b4c50427c5af1b09.jpg"
+    ],
+    "preco_final": 240.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "318149",
+    "nome": "Pacote com 5 Conjuntos Midi Short Bolso",
+    "preco_original": 145.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1674044621_c15c8f4828faedb794c0.png",
+      "https://arquivos.facilzap.app.br/produtos/1674044621_8b832c1e30b291348174.png"
+    ],
+    "preco_final": 232.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "318147",
+    "nome": "Pacote Com 5 Conjuntos Midi Calça Bolso",
+    "preco_original": 165.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1674044552_139f43c353fd422289a5.png",
+      "https://arquivos.facilzap.app.br/produtos/1674044553_46e866836b21a1006a34.png"
+    ],
+    "preco_final": 264.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "318124",
+    "nome": "Pacote Com 5 Conjuntos de Calça Bolso Plus",
+    "preco_original": 175.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1712758355_1836724bfa11fc523c14.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1712758352_f2bcdf9f52090280ff70.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1712758349_9202ffdbdcb529f76280.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1712758346_8dd7bc9ac2330ed04e90.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1712758343_c535498112abc2d1a2c8.jpeg.webp"
+    ],
+    "preco_final": 280.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "3703560",
+    "nome": "Kit com 5 Conjuntos Fitness em Suplex – Linha Slim (Ref.) 21",
+    "preco_original": 100.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1768184379_4f9b66c22c0088846e1f.webp",
+      "https://arquivos.facilzap.app.br/produtos/1768184301_0a8227dc7be88501dbd4.webp",
+      "https://arquivos.facilzap.app.br/produtos/1768184370_41b9d8344479fc641429.webp",
+      "https://arquivos.facilzap.app.br/produtos/1768184367_0367869de1a22d23d836.webp"
+    ],
+    "preco_final": 160.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "3745068",
+    "nome": "Pacote com 5 Conjuntos – Short Duplo em Suplex 04",
+    "preco_original": 130.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1769453023_21115af9d1fc2694276b.webp",
+      "https://arquivos.facilzap.app.br/produtos/1769452946_a66117391a3f29e4dedc.webp",
+      "https://arquivos.facilzap.app.br/produtos/1769453016_3024b48eefd91c8df32e.webp"
+    ],
+    "preco_final": 208.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "3745064",
+    "nome": "Pacote com 5 Conjuntos – Short Duplo em Suplex 05",
+    "preco_original": 130.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1769452941_ea4ff6e14df2dea6efe3.webp",
+      "https://arquivos.facilzap.app.br/produtos/1769452938_da8ac2d3a78dd4453c7c.webp",
+      "https://arquivos.facilzap.app.br/produtos/1769452861_d749549268838ecb52ff.webp"
+    ],
+    "preco_final": 208.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "3745047",
+    "nome": "Pacote com 5 Conjuntos – Short Duplo em Suplex 06",
+    "preco_original": 155.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1769452867_da70358a3d4aca9b6a9a.webp",
+      "https://arquivos.facilzap.app.br/produtos/1769452863_88b5aa8134df5c29cb69.webp",
+      "https://arquivos.facilzap.app.br/produtos/1769452859_61f861ff2b6b3198e9b9.webp"
+    ],
+    "preco_final": 248.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "3249148",
+    "nome": "Pacote com 5 Conjuntos de Short Duplo Suplex",
+    "preco_original": 155.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1754400023_546d16364f8d5d85b35c.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1754400020_58c2d4b57e658585ad2a.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1754400029_d886ef6d0ca26faf588a.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1754400015_1afd3a5d0a71b877d1f5.jpeg.webp"
+    ],
+    "preco_final": 248.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "2632923",
+    "nome": "Pacote com 5 Conjuntos de Short Ref 57",
+    "preco_original": 125.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1734452185_f0de7e52f28d6f33d766.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1734452182_a8ef2b106b843fd23348.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1734452178_b840d2a9b97a97925707.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1734452174_9d2db7a1cb0db4ed2742.jpeg.webp"
+    ],
+    "preco_final": 200.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "3311193",
+    "nome": "Pacote com 5 Casacos Corta Vento Em Tactel",
+    "preco_original": 100.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1775601640_a05498ebbe8f75fdb54f.webp",
+      "https://arquivos.facilzap.app.br/produtos/1775601637_d2bb8e3244a52e17dcd4.webp",
+      "https://arquivos.facilzap.app.br/produtos/1775601634_f67b0a23b661dc892f68.webp",
+      "https://arquivos.facilzap.app.br/produtos/1775601632_ea4bbf32a06eba9ea2f9.webp",
+      "https://arquivos.facilzap.app.br/produtos/1756130392_4a95d327fecad384eb26.jpeg.webp"
+    ],
+    "preco_final": 160.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "684191",
+    "nome": "PACOTE COM 5 MACAQUINHOS CURTO REF 06",
+    "preco_original": 100.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1695079278_3e1e4484e5f105324157.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1695079279_67e7c3e08c76d8464348.jpg"
+    ],
+    "preco_final": 160.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "3769198",
+    "nome": "Pacote com 5 Conjuntos Short Duplo em Poliamida com Proteção UV REF 06",
+    "preco_original": 275.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1770214968_150c3bbb17d5d18ef45a.webp",
+      "https://arquivos.facilzap.app.br/produtos/1770214888_b6b7db2f077cbb7c9422.webp",
+      "https://arquivos.facilzap.app.br/produtos/1770214934_3b0e4c1556db129c7364.webp"
+    ],
+    "preco_final": 440.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "3036498",
+    "nome": "Pacote com 5 Conjuntos de Short Duplo Ref 03",
+    "preco_original": 280.5,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1747664376_34b34d8abfcb5f0f76ca.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747664374_68b685678c47173880e4.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747664371_fdd40b8281211baec771.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747664370_b0d21f3151909415fd21.jpeg.webp"
+    ],
+    "preco_final": 448.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "3018361",
+    "nome": "Pacote com 5 conjuntos em poliamida Ref 62 Grmt 320",
+    "preco_original": 321.3,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1747099866_8d3dfbe4468c120a5e7b.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747099864_bcc8f9a6c91c36d2b49d.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747099861_2c426de550c6a0233e79.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747099857_a8079d24755c35922641.jpeg.webp"
+    ],
+    "preco_final": 514.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "2960573",
+    "nome": "Pacote com 10 Regatas M",
+    "preco_original": 95.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1745250718_be87d946c3b460164f03.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1745250718_ffbb6c56eb67c0ba8261.jpeg.webp"
+    ],
+    "preco_final": 152.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "2851134",
+    "nome": "Pacote com 5 Conjuntos de Short Ref 08 Jcquard Grmt 360",
+    "preco_original": 230.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1741779465_9ae594e4dc324b893514.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1741779462_6f24c1ae5a419b0974d4.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1741779459_a63d01d234007579cc64.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1741779456_1bc50a798f098d825b17.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1741779454_7c63332fc48115e44887.jpeg.webp"
+    ],
+    "preco_final": 368.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "2774063",
+    "nome": "PACOTE COM 10 REGATAS MASC DRYFIT SORTIDAS",
+    "preco_original": 125.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1739208574_ffc34845d8ced51c9ab0.jpg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1739208571_48023c3afb56aeff8def.jpg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1739208568_2fdb7c77a4abc00ccaba.jpg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1739208564_86a4e53d85aac9b581f4.jpg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1739208560_62efd6fd0a835518c739.jpg.webp"
+    ],
+    "preco_final": 200.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "2576248",
+    "nome": "Pacote com 5 Conjuntos de Calça Ref 11 Poliamida Gramatura 320",
+    "preco_original": 220.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1732561598_b4bb302b57c04cf3e3b5.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1732561592_9d87e4761015324b6612.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1732561587_01af7c862f9dbe1efbc0.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1732561581_1687c2400490a02071fa.jpeg.webp"
+    ],
+    "preco_final": 352.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "2107380",
+    "nome": "Pacote com 10 Blusas Masc DryFit Lisa P,M,G,GG",
+    "preco_original": 130.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1722286403_f08154d018f8e3eea1db.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1722286400_532b08802fbe71e084be.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1722286396_c6eb1df10619c3d36d9d.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1722286392_90a0e5d3d5188fc8d30c.jpeg.webp"
+    ],
+    "preco_final": 208.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "2107347",
+    "nome": "Pacote com 5 Conjuntos de Calça Ref 45",
+    "preco_original": 150.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1742831169_e15ee1c8630647348e00.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1742831166_bec39897179ecb176721.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1742831160_ebbe8b99b679e22c9e7f.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1722286038_69e10bb7e080dfb86d68.jpeg.webp"
+    ],
+    "preco_final": 240.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "1902473",
+    "nome": "Pacote com 5 Casacos Cropped Poliamida Premium",
+    "preco_original": 150.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1719350971_b0809909463b103619c6.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1719350967_51bdd769554a2c350f57.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1719350963_08cc21035723717d2bd4.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1719350959_0bf97863e611da24d03a.jpeg.webp"
+    ],
+    "preco_final": 240.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "1902472",
+    "nome": "Pacote com 5 Casacos Longos Poliamida Premium",
+    "preco_original": 150.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1719350888_2dd96acee16e98c8a682.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1719350886_a55c3726064562e2248f.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1719350882_2b4b7b12a4a3ede4cd45.jpeg.webp"
+    ],
+    "preco_final": 240.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "1548837",
+    "nome": "PACOTE COM 5 CONJUNTOS DE CALÇA 44 POLIAMIDA CANELADO",
+    "preco_original": 350.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1713802390_f5b47d68435d0e9ab2c3.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1713802385_adfd99324e314eb136a5.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1713802382_c48282a17ad461e10660.jpeg.webp"
+    ],
+    "preco_final": 560.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "570243",
+    "nome": "PACOTE COM 5 COLETES PLUS SIZE Gg POLIAMIDA FURADINHO",
+    "preco_original": 130.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1690901308_fe94b9dbd5e959a669f9.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1690901306_ceb9e0e6a4c2373b7b86.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1690901307_b5972968bca42c051540.jpg"
+    ],
+    "preco_final": 208.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "570240",
+    "nome": "PACOTE COM 5 CASAQUINHOS LONGO PLUS SIZE- Gg",
+    "preco_original": 125.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1690901330_1c9691c21f829b576f2a.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1690901333_6a147889c16b59f2ecf3.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1690901332_bc01103a0fc4475858d9.jpg"
+    ],
+    "preco_final": 200.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "570215",
+    "nome": "PACOTE COM 5 CROPPED CURTO COM ZIPER POLIAMIDA",
+    "preco_original": 100.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1690837007_554cfd6627e6d7eed54c.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1690837008_c21d86cea733ab347a53.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1690837008_d37fe6869465d1c8fc86.jpg"
+    ],
+    "preco_final": 160.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "352718",
+    "nome": "PACOTE COM 10 BLUSAS COM MANGA G POLIAMIDA",
+    "preco_original": 205.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1677100459_7d522bf56bc29aff6ce1.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1677100468_da90f51917f9706b6702.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1677100457_869adfbb584031d0ea08.jpg"
+    ],
+    "preco_final": 328.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "352707",
+    "nome": "PACOTE COM 5 CONJUNTOS DE CALÇA POLIAMIDA MODELO 03 Canelado",
+    "preco_original": 350.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1677099668_2a4b4c6a1bcb3b04051c.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1677099669_ef67434e34e06204c017.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1677099673_afc5408da599622f5a0e.jpg"
+    ],
+    "preco_final": 560.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "2141881",
+    "nome": "PACOTE COM 5 MACAQUINHOS POLIAMIDA CANELADO COM REGULAGEM",
+    "preco_original": 330.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1722953115_7300a01e34613b9b49b4.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1722953113_dd41a8b59f9b8dea7b4d.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1722953110_8b63d4d6696aa6cf83ba.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1722953108_f034a96b5e1ecf960b73.jpeg.webp"
+    ],
+    "preco_final": 528.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "4364027",
+    "nome": "Pacote com 5 Macaquinho Ref 01 Em Suplex",
+    "preco_original": 125.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1786631087_3611a133d72ec16a0533.webp",
+      "https://arquivos.facilzap.app.br/produtos/1786630988_30819bd767500dccd907.webp",
+      "https://arquivos.facilzap.app.br/produtos/1786631065_b62c9575a6d0bdd41ea2.webp"
+    ],
+    "preco_final": 200.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "4364023",
+    "nome": "Conjunto de Calça em Suplex Ref 71",
+    "preco_original": 150.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1786630979_f5fc4c50e644908725f8.webp",
+      "https://arquivos.facilzap.app.br/produtos/1786630986_d9593870c9b56f31c8e5.webp",
+      "https://arquivos.facilzap.app.br/produtos/1786631022_c935995ff14e7f369c4f.webp",
+      "https://arquivos.facilzap.app.br/produtos/1786631028_52655dab2874538655b2.webp"
+    ],
+    "preco_final": 240.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "2632810",
+    "nome": "Pacote com 5 Conjuntos de Calça Ref 51 Suplex",
+    "preco_original": 155.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1734449782_f3b72fcada96d574864b.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1734449779_40cfe3224935ed633b2d.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1734449769_d5d636f9848b3ad078c7.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1734449765_5c4dc8066091cb36169b.jpeg.webp"
+    ],
+    "preco_final": 248.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "3950005",
+    "nome": "Pacote com 5 Conjuntos de Calça Viés",
+    "preco_original": 120.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1775599866_c79400f6cf3e5147b12a.webp",
+      "https://arquivos.facilzap.app.br/produtos/1775599861_4de81a4cbc952b2a07f4.webp"
+    ],
+    "preco_final": 192.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "2773884",
+    "nome": "PACOTE COM 5 CONJUNTOS DE CALCA REF 28 POLIAMIDA GMRT 320",
+    "preco_original": 220.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1739208029_b4e96719411b8dd0a0d5.jpg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1739208024_aa864d4d8b796ead0ed6.jpg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1739208015_a0c6c8a8e9a2559ce164.jpg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1739208010_52035c0bca5dd1b3ae4f.jpg.webp"
+    ],
+    "preco_final": 352.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "4019547",
+    "nome": "Pacote com 5 Conjuntos de Short Duplo em Suplex Ref 06",
+    "preco_original": 120.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777481150_a93c099878d7ca1f6274.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777480991_435bf127e0b4da8d9a41.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777481142_976987011784b58fb90f.webp"
+    ],
+    "preco_final": 192.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "3347539",
+    "nome": "Pacote com 5 Conjuntos de Short Saia 07 Plus Suplex",
+    "preco_original": 175.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1757290031_8e32b5e3470411a2f55c.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757290000_309505e20332f03040a8.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757289998_2182d8775adec9870235.jpeg.webp"
+    ],
+    "preco_final": 280.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "3347534",
+    "nome": "Pacote com 5 Conjuntos de Short Duplo Suplex Bicolor",
+    "preco_original": 175.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1757289912_48daaf37bf7741116be8.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757289911_bd0a55baaae3706cbaf2.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757289909_1f699d1c5c9f78ab0d13.jpeg.webp"
+    ],
+    "preco_final": 280.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "3347483",
+    "nome": "Pacote com 5 Conjuntos de Short Bolso 04 Plus Suplex",
+    "preco_original": 145.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1757289374_b18d7e5690d7a99e33dc.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757289372_1301788b883cf129d3c7.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757289371_08b4561086cfb1c6fb50.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757289369_bcd1ac9e56ca284c48c5.jpeg.webp"
+    ],
+    "preco_final": 232.9,
+    "cores_variadas": true
+  }
+]
+</script>
+<!-- PRODUTOS:END -->
+<script>
+// ===== Config ============================================================
+const WHATSAPP_NUMERO = "5571986441234"; // 71 98644-1234
+const MERCADOPAGO_LINK = "https://link.mercadopago.com.br/lulumodafitness"; // link de valor livre
+const PEDIDO_MINIMO = 4;
+const FRETE_GRATIS_A_PARTIR_DE = 6;
+const LOTE_TAMANHO = 12; // quantos kits aparecem por vez, ao rolar a página
+const FRETE = {
+  economico: { label: "Econômico (9 dias úteis)", valor: 39.90 },
+  vip:        { label: "Vip rápido (4 dias úteis)", valor: 90.00 },
+  vip_gratis: { label: "Vip grátis (4 dias úteis)", valor: 0.00 },
+};
+
+// ===== Estado ============================================================
+let PRODUTOS = [];
+const carrinho = {}; // { id: quantidade }
+let freteEscolhido = "economico";
+let indiceRenderizado = 0;      // quantos produtos já foram colocados na tela
+const carouselState = {};       // { id: foto atual }
+let observerInfinito = null;
+
+// ===== Utilidades ========================================================
+function formatarReais(valor) {
+  return valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+}
+
+function produtoPorId(id) {
+  return PRODUTOS.find(p => p.id === id);
+}
+
+function totalKitsNoCarrinho() {
+  return Object.values(carrinho).reduce((soma, q) => soma + q, 0);
+}
+
+function subtotalPecas() {
+  return Object.entries(carrinho).reduce((soma, [id, qtd]) => {
+    const produto = produtoPorId(id);
+    return produto ? soma + produto.preco_final * qtd : soma;
+  }, 0);
+}
+
+// ===== Renderização do catálogo (em lotes, com carrossel de fotos) ======
+function criarCardHTML(produto) {
+  const imagensHTML = produto.imagens
+    .map(src => `<img src="${src}" alt="${produto.nome}" loading="lazy" draggable="false">`)
+    .join("");
+
+  const temVariasFotos = produto.imagens.length > 1;
+
+  const setasHTML = temVariasFotos ? `
+    <button type="button" class="carousel-arrow prev" data-action="carousel-prev" aria-label="Foto anterior">‹</button>
+    <button type="button" class="carousel-arrow next" data-action="carousel-next" aria-label="Próxima foto">›</button>
+  ` : "";
+
+  const dotsHTML = temVariasFotos ? `
+    <div class="carousel-dots">
+      ${produto.imagens.map((_, i) => `<button type="button" class="dot${i === 0 ? " is-active" : ""}" data-action="carousel-dot" data-i="${i}" aria-label="Foto ${i + 1}"></button>`).join("")}
+    </div>
+  ` : "";
+
+  return `
+    <article class="card" data-product-id="${produto.id}">
+      <div class="card-img-wrap" data-id="${produto.id}">
+        <div class="carousel-track" data-role="track">${imagensHTML}</div>
+        ${setasHTML}
+        ${dotsHTML}
+        ${produto.cores_variadas ? '<span class="card-badge">cores variadas</span>' : ""}
+      </div>
+      <div class="card-body">
+        <p class="card-title">${produto.nome}</p>
+        <div class="price-tag">
+          <span class="valor">${formatarReais(produto.preco_final)}</span>
+          <small>o kit</small>
+        </div>
+        <div class="card-foot">
+          <div class="qty-stepper" data-id="${produto.id}">
+            <button type="button" data-action="menos" aria-label="Diminuir">–</button>
+            <span data-role="qtd">0</span>
+            <button type="button" data-action="mais" aria-label="Aumentar">+</button>
+          </div>
+          <button type="button" class="add-btn" data-action="adicionar" data-id="${produto.id}">
+            Adicionar
+          </button>
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+function irParaFoto(cardImgWrap, novoIndice) {
+  const track = cardImgWrap.querySelector("[data-role='track']");
+  const total = track.children.length;
+  if (total <= 1) return;
+  const indice = ((novoIndice % total) + total) % total; // sempre dá a volta, nunca trava na ponta
+  track.style.transform = `translateX(-${indice * 100}%)`;
+  cardImgWrap.querySelectorAll(".dot").forEach((dot, i) => dot.classList.toggle("is-active", i === indice));
+  carouselState[cardImgWrap.dataset.id] = indice;
+}
+
+function carregarMaisProdutos() {
+  const grid = document.getElementById("grid-produtos");
+  const proximoLote = PRODUTOS.slice(indiceRenderizado, indiceRenderizado + LOTE_TAMANHO);
+
+  proximoLote.forEach(produto => {
+    grid.insertAdjacentHTML("beforeend", criarCardHTML(produto));
+    carouselState[produto.id] = 0;
+  });
+  indiceRenderizado += proximoLote.length;
+
+  if (indiceRenderizado >= PRODUTOS.length && observerInfinito) {
+    observerInfinito.disconnect();
+    document.getElementById("load-more-msg").hidden = true;
+  }
+}
+
+function configurarRolagemInfinita() {
+  try {
+    const sentinela = document.getElementById("scroll-sentinel");
+    observerInfinito = new IntersectionObserver((entradas) => {
+      entradas.forEach(entrada => {
+        if (entrada.isIntersecting && indiceRenderizado < PRODUTOS.length) {
+          const msg = document.getElementById("load-more-msg");
+          msg.hidden = false;
+          setTimeout(() => {
+            carregarMaisProdutos();
+            msg.hidden = true;
+          }, 150);
+        }
+      });
+    }, { rootMargin: "500px" });
+    observerInfinito.observe(sentinela);
+  } catch (erro) {
+    // navegador muito antigo sem suporte a IntersectionObserver — nunca deve
+    // impedir o resto do site de funcionar (carrinho, frete, WhatsApp).
+    console.warn("Rolagem infinita indisponível neste navegador:", erro);
+  }
+}
+
+function ligarSwipeDoCarrossel(grid) {
+  let inicioX = 0;
+  let wrapAtual = null;
+
+  grid.addEventListener("touchstart", (e) => {
+    const wrap = e.target.closest(".card-img-wrap");
+    if (!wrap) return;
+    wrapAtual = wrap;
+    inicioX = e.touches[0].clientX;
+  }, { passive: true });
+
+  grid.addEventListener("touchend", (e) => {
+    if (!wrapAtual) return;
+    const deltaX = e.changedTouches[0].clientX - inicioX;
+    if (Math.abs(deltaX) > 40) {
+      const atual = carouselState[wrapAtual.dataset.id] || 0;
+      irParaFoto(wrapAtual, atual + (deltaX < 0 ? 1 : -1));
+    }
+    wrapAtual = null;
+  }, { passive: true });
+}
+
+function renderCatalogo() {
+  const grid = document.getElementById("grid-produtos");
+  grid.innerHTML = "";
+  indiceRenderizado = 0;
+
+  document.getElementById("contagem-produtos").textContent =
+    `${PRODUTOS.length} kit${PRODUTOS.length === 1 ? "" : "s"} em estoque`;
+
+  carregarMaisProdutos();
+  grid.addEventListener("click", onGridClick);
+  ligarSwipeDoCarrossel(grid);
+  configurarRolagemInfinita();
+}
+
+let quantidadesPendentes = {}; // quantidade selecionada no card antes de "Adicionar"
+
+function onGridClick(evento) {
+  const setaBtn = evento.target.closest("[data-action='carousel-prev'],[data-action='carousel-next']");
+  if (setaBtn) {
+    const wrap = setaBtn.closest(".card-img-wrap");
+    const atual = carouselState[wrap.dataset.id] || 0;
+    irParaFoto(wrap, atual + (setaBtn.dataset.action === "carousel-next" ? 1 : -1));
+    return;
+  }
+
+  const dotBtn = evento.target.closest("[data-action='carousel-dot']");
+  if (dotBtn) {
+    const wrap = dotBtn.closest(".card-img-wrap");
+    irParaFoto(wrap, parseInt(dotBtn.dataset.i, 10));
+    return;
+  }
+
+  const stepperBtn = evento.target.closest("[data-action='menos'],[data-action='mais']");
+  if (stepperBtn) {
+    const wrap = stepperBtn.closest(".qty-stepper");
+    const id = wrap.dataset.id;
+    const atual = quantidadesPendentes[id] || 0;
+    const nova = stepperBtn.dataset.action === "mais" ? atual + 1 : Math.max(0, atual - 1);
+    quantidadesPendentes[id] = nova;
+    wrap.querySelector("[data-role='qtd']").textContent = nova;
+    return;
+  }
+
+  const addBtn = evento.target.closest("[data-action='adicionar']");
+  if (addBtn) {
+    const id = addBtn.dataset.id;
+    const qtd = quantidadesPendentes[id] || 1; // se não mexeu no stepper, adiciona 1
+    carrinho[id] = (carrinho[id] || 0) + qtd;
+    quantidadesPendentes[id] = 0;
+    const wrap = addBtn.parentElement.querySelector(".qty-stepper");
+    wrap.querySelector("[data-role='qtd']").textContent = "0";
+
+    addBtn.classList.add("is-added");
+    addBtn.textContent = "Adicionado ✓";
+    setTimeout(() => {
+      addBtn.classList.remove("is-added");
+      addBtn.textContent = "Adicionar";
+    }, 900);
+
+    renderCarrinho();
+    abrirCarrinho(true);
+  }
+}
+
+// ===== Carrinho ==========================================================
+function renderCarrinho() {
+  const totalKits = totalKitsNoCarrinho();
+  const subtotal = subtotalPecas();
+
+  // barra fixa
+  document.getElementById("cart-count").textContent = totalKits;
+  document.getElementById("cart-label").textContent = totalKits === 1 ? "kit no pedido" : "kits no pedido";
+
+  const progresso = Math.min(100, (totalKits / FRETE_GRATIS_A_PARTIR_DE) * 100);
+  document.getElementById("cart-progress-fill").style.width = progresso + "%";
+
+  const textoProgresso = document.getElementById("cart-progress-text");
+  if (totalKits < PEDIDO_MINIMO) {
+    textoProgresso.textContent = `Faltam ${PEDIDO_MINIMO - totalKits} kit${PEDIDO_MINIMO - totalKits === 1 ? "" : "s"} para o pedido mínimo`;
+  } else if (totalKits < FRETE_GRATIS_A_PARTIR_DE) {
+    textoProgresso.textContent = `Faltam ${FRETE_GRATIS_A_PARTIR_DE - totalKits} kit${FRETE_GRATIS_A_PARTIR_DE - totalKits === 1 ? "" : "s"} para o frete grátis`;
+  } else {
+    textoProgresso.textContent = "Frete grátis liberado 🎉";
+  }
+
+  // opção de frete grátis: habilita/seleciona a partir do limite
+  const inputGratis = document.querySelector("input[value='vip_gratis']");
+  const optionGratis = document.getElementById("ship-gratis-option");
+  if (totalKits >= FRETE_GRATIS_A_PARTIR_DE) {
+    inputGratis.disabled = false;
+    inputGratis.checked = true;
+    freteEscolhido = "vip_gratis";
+    optionGratis.classList.remove("is-disabled");
+  } else {
+    inputGratis.disabled = true;
+    if (freteEscolhido === "vip_gratis") {
+      freteEscolhido = "economico";
+      document.querySelector("input[value='economico']").checked = true;
+    }
+  }
+
+  // painel expandido: lista de itens
+  const painelItems = document.getElementById("cart-panel-items");
+  const idsNoCarrinho = Object.keys(carrinho).filter(id => carrinho[id] > 0);
+
+  if (idsNoCarrinho.length === 0) {
+    painelItems.innerHTML = `<p class="cart-empty-msg">Seu pedido está vazio. Adicione kits no catálogo acima.</p>`;
+  } else {
+    painelItems.innerHTML = idsNoCarrinho.map(id => {
+      const produto = produtoPorId(id);
+      return `
+        <div class="cart-line" data-id="${id}">
+          <span class="cart-line-name">${produto.nome}</span>
+          <span class="cart-line-qty">${carrinho[id]}x ${formatarReais(produto.preco_final)}</span>
+          <button class="cart-line-remove" data-remove="${id}" aria-label="Remover">×</button>
+        </div>
+      `;
+    }).join("");
+  }
+
+  // resumo financeiro
+  const frete = FRETE[freteEscolhido].valor;
+  const total = subtotal + frete;
+  document.getElementById("summary-subtotal").textContent = formatarReais(subtotal);
+  document.getElementById("summary-frete").textContent = frete === 0 ? "Grátis" : formatarReais(frete);
+  document.getElementById("summary-total").textContent = formatarReais(total);
+  document.getElementById("cart-total-value").textContent = formatarReais(total);
+  document.getElementById("pagamento-valor").textContent = formatarReais(total);
+
+  // botão de checkout
+  const btn = document.getElementById("checkout-btn");
+  if (totalKits < PEDIDO_MINIMO) {
+    btn.disabled = true;
+    btn.textContent = `Pedido mínimo: ${PEDIDO_MINIMO} kits (faltam ${PEDIDO_MINIMO - totalKits})`;
+  } else {
+    btn.disabled = false;
+    btn.textContent = `Fechar pedido no WhatsApp — ${formatarReais(total)}`;
+  }
+}
+
+function abrirCarrinho(forcar) {
+  const bar = document.getElementById("cart-bar");
+  const aberto = bar.getAttribute("data-open") === "true";
+  bar.setAttribute("data-open", forcar ? "true" : String(!aberto));
+}
+
+// ===== Montagem da mensagem de WhatsApp ==================================
+function montarMensagemPedido() {
+  const linhas = [];
+  linhas.push("Olá! Quero fechar este pedido:");
+  linhas.push("");
+
+  Object.keys(carrinho).filter(id => carrinho[id] > 0).forEach(id => {
+    const produto = produtoPorId(id);
+    const qtd = carrinho[id];
+    const subtotalItem = produto.preco_final * qtd;
+    linhas.push(`• ${qtd}x ${produto.nome} — ${formatarReais(produto.preco_final)} = ${formatarReais(subtotalItem)}`);
+  });
+
+  linhas.push("");
+  linhas.push(`Total de kits: ${totalKitsNoCarrinho()}`);
+  linhas.push(`Peças: ${formatarReais(subtotalPecas())}`);
+  linhas.push(`Frete (${FRETE[freteEscolhido].label}): ${freteEscolhido === "vip_gratis" ? "Grátis" : formatarReais(FRETE[freteEscolhido].valor)}`);
+  linhas.push(`Total do pedido: ${formatarReais(subtotalPecas() + FRETE[freteEscolhido].valor)}`);
+  linhas.push("");
+  linhas.push(`Se for pagar pelo Mercado Pago: ${MERCADOPAGO_LINK}`);
+  linhas.push(`(o link é de valor livre — informar ${formatarReais(subtotalPecas() + FRETE[freteEscolhido].valor)} ao pagar)`);
+
+  return linhas.join("\n");
+}
+
+// ===== Eventos globais ===================================================
+function ligarEventos() {
+  document.getElementById("cart-toggle").addEventListener("click", () => abrirCarrinho());
+
+  document.getElementById("cart-panel-items").addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-remove]");
+    if (!btn) return;
+    delete carrinho[btn.dataset.remove];
+    renderCarrinho();
+  });
+
+  document.querySelectorAll("input[name='frete']").forEach(input => {
+    input.addEventListener("change", () => {
+      if (!input.disabled) {
+        freteEscolhido = input.value;
+        renderCarrinho();
+      }
+    });
+  });
+
+  document.getElementById("copiar-valor-btn").addEventListener("click", async (e) => {
+    const total = subtotalPecas() + FRETE[freteEscolhido].valor;
+    const texto = total.toFixed(2).replace(".", ","); // formato que o Mercado Pago pede
+    try {
+      await navigator.clipboard.writeText(texto);
+      e.target.classList.add("is-copied");
+      e.target.textContent = "Copiado ✓";
+      setTimeout(() => {
+        e.target.classList.remove("is-copied");
+        e.target.textContent = "Copiar valor";
+      }, 1200);
+    } catch (err) {
+      alert(`Valor a informar no Mercado Pago: ${texto}`);
+    }
+  });
+
+  document.getElementById("checkout-btn").addEventListener("click", () => {
+    if (totalKitsNoCarrinho() < PEDIDO_MINIMO) return;
+    const mensagem = montarMensagemPedido();
+    const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, "_blank");
+  });
+}
+
+// ===== Inicialização ======================================================
+function iniciar() {
+  const tag = document.getElementById("produtos-data");
+  PRODUTOS = JSON.parse(tag.textContent);
+  ligarEventos();
+  renderCarrinho();
+  renderCatalogo();
+}
+
+iniciar();
+
+</script>
+</body>
+</html>
