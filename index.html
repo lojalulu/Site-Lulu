@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Loja Lulu — Moda Fitness</title>
-<meta name="description" content="Loja Lulu Moda Fitness — kits para revenda. Pedido mínimo 4 kits. Frete grátis para Salvador acima de 6 kits.">
+<title>Lulu - Extra Fitness</title>
+<meta name="description" content="Lulu - Extra Fitness — kits para revenda. Pedido mínimo 4 kits. Frete grátis para Salvador e o Brasil acima de 6 kits.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
@@ -85,7 +85,14 @@ a{ color: inherit; }
   background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
   padding: 10px 18px 10px 12px;
 }
-.rule-chip--accent{ border-color: var(--accent); background: linear-gradient(180deg, rgba(255,61,128,.10), transparent); }
+.rule-chip--destaque{
+  border-color: var(--accent); background: linear-gradient(180deg, rgba(255,61,128,.16), rgba(255,177,0,.08));
+  box-shadow: 0 0 0 2px rgba(255,61,128,.18);
+  padding: 12px 20px 12px 12px;
+}
+.rule-chip--destaque .rule-num{ background: var(--accent); color:#fff; font-size:17px; min-width:38px; height:38px; }
+.rule-chip--destaque .rule-label{ font-size: 14px; color: var(--text); }
+.rule-chip--destaque .rule-label strong{ color: var(--accent); }
 .rule-num{
   font-family: var(--font-mono); font-weight: 600; font-size: 16px;
   background: var(--surface-2); color: var(--accent); border-radius: 999px;
@@ -93,6 +100,19 @@ a{ color: inherit; }
 }
 .rule-chip--accent .rule-num{ color: var(--accent); }
 .rule-label{ font-size: 13px; color: var(--text-muted); text-align:left; }
+
+/* ===== Filtros de tecido ============================================ */
+.filtros{
+  max-width: 1180px; margin: 0 auto; padding: 0 20px 26px;
+  display:flex; gap:10px; flex-wrap:wrap;
+}
+.filtro-btn{
+  font-family: var(--font-body); font-weight:600; font-size: 13px;
+  background: var(--surface); border: 1px solid var(--line); color: var(--text-muted);
+  border-radius: 999px; padding: 9px 18px; cursor:pointer; transition: all .15s ease;
+}
+.filtro-btn:hover{ border-color: var(--accent); color: var(--text); }
+.filtro-btn.is-active{ background: var(--accent); border-color: var(--accent); color:#fff; }
 
 /* ===== Catálogo ====================================================== */
 .catalog{ max-width: 1180px; margin: 0 auto; padding: 20px 20px 60px; }
@@ -256,34 +276,62 @@ a{ color: inherit; }
 .ship-name em{ font-style:normal; color: var(--text-muted); display:block; font-size: 11px; }
 .ship-price{ margin-left:auto; font-family: var(--font-mono); }
 
+.cart-panel-head{
+  position: sticky; top:0; z-index:5; background: var(--surface);
+  max-width: 1180px; margin: 0 auto; padding: 10px 16px; border-bottom: 1px solid var(--line);
+}
+.voltar-btn{
+  display:flex; align-items:center; gap:6px; margin:0 auto;
+  background: var(--surface-2); border: 1px solid var(--line); color: var(--text);
+  border-radius: 999px; padding: 9px 18px; font-family: var(--font-body); font-weight:600; font-size: 13px; cursor:pointer;
+}
+.voltar-btn:hover{ border-color: var(--accent); }
+.voltar-btn svg{ color: var(--text-muted); }
+
 .cart-payment{
-  max-width: 1180px; margin: 4px auto 0; padding: 12px 16px; border-top: 1px dashed var(--line);
+  max-width: 1180px; margin: 4px auto 0; padding: 12px 16px 22px; border-top: 1px dashed var(--line);
+  display:flex; flex-direction:column; gap:8px;
 }
 .cart-payment-title{ font-family: var(--font-mono); font-size: 11px; text-transform:uppercase; letter-spacing:.06em; color: var(--text-muted); margin: 4px 0 2px; }
-.cart-payment-hint{ font-size: 12px; color: var(--text-muted); margin: 0 0 10px; }
-.cart-payment-row{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
-.cart-payment-value{ font-family: var(--font-mono); font-weight:600; font-size: 16px; background: var(--surface-2); border-radius: 8px; padding: 6px 10px; }
+
+.pay-option{
+  display:flex; align-items:center; gap:10px; border:1px solid var(--line); border-radius: 10px; padding: 12px;
+  cursor:pointer; font-size: 14px;
+}
+.pay-option:has(input:checked){ border-color: var(--accent); background: rgba(255,61,128,.06); }
+.pay-name{ display:flex; align-items:center; gap:8px; }
+.pay-name em{ font-style:normal; color: var(--text-muted); font-size: 12px; }
+.pay-badge{
+  background: var(--good); color:#fff; font-size: 10px; font-weight:700; letter-spacing:.02em;
+  border-radius: 999px; padding: 2px 8px;
+}
+.pay-total{ margin-left:auto; font-family: var(--font-mono); font-weight:600; }
+
+.pay-panel{
+  border: 1px solid var(--line); border-radius: 10px; padding: 14px; background: var(--surface-2);
+  display:flex; flex-direction:column; gap:10px;
+}
+.pay-hint{ font-size: 12.5px; color: var(--text-muted); margin:0; }
+.pix-key-row{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+.pix-key{ font-family: var(--font-mono); font-weight:600; font-size: 14px; background: var(--surface); border-radius: 8px; padding: 8px 10px; word-break: break-all; }
+.pix-titular{ margin:0; font-size: 12.5px; color: var(--text-muted); }
 .copy-btn{
-  background: var(--surface-2); border: 1px solid var(--line); color: var(--text);
+  background: var(--surface); border: 1px solid var(--line); color: var(--text);
   border-radius: 999px; padding: 7px 14px; font-size: 12px; font-family: var(--font-body); font-weight:600; cursor:pointer;
 }
 .copy-btn:hover{ border-color: var(--accent); }
 .copy-btn.is-copied{ background: var(--good); color:#fff; border-color: var(--good); }
-.mp-link-btn{
-  text-decoration:none; background: var(--accent); color:#fff; border-radius: 999px;
-  padding: 7px 14px; font-size: 12px; font-weight:600;
-}
 
 .cart-summary{ max-width: 1180px; margin: 0 auto; padding: 4px 16px 0; display:flex; flex-direction:column; gap:6px; }
 .cart-summary-row{ display:flex; justify-content:space-between; font-size: 13px; color: var(--text-muted); font-family: var(--font-mono); }
 .cart-summary-row--total{ color: var(--text); font-size: 16px; font-weight:600; padding-top:6px; border-top: 1px dashed var(--line); }
 
 .checkout-btn{
-  display:block; width: calc(100% - 32px); max-width: 1148px; margin: 14px auto 18px;
+  display:block; width: 100%; margin: 0;
   background: var(--good); color: var(--accent-ink); border:none; border-radius: 999px;
   padding: 14px 18px; font-family: var(--font-body); font-weight: 700; font-size: 15px; cursor:pointer;
 }
-.checkout-btn:disabled{ background: var(--surface-2); color: var(--text-muted); cursor:not-allowed; }
+.checkout-btn:disabled{ background: var(--surface); color: var(--text-muted); cursor:not-allowed; }
 
 @media (max-width: 640px){
   .cart-bar-inner{ grid-template-columns: auto 1fr; }
@@ -301,28 +349,34 @@ a{ color: inherit; }
 
   <header class="topbar">
     <div class="topbar-inner">
-      <span class="brand">Loja <strong>Lulu</strong><span class="brand-tag">moda fitness</span></span>
+      <span class="brand"><strong>Lulu</strong><span class="brand-tag">extra fitness</span></span>
       <a class="topbar-whats" href="https://wa.me/5571986441234" target="_blank" rel="noopener">Falar no WhatsApp</a>
     </div>
   </header>
 
   <section class="hero">
     <div class="hero-inner">
-      <p class="eyebrow">Loja Lulu &middot; catálogo de revenda atualizado semanalmente</p>
-      <h1>Kit fechado. Preço fechado.<br>Você só escolhe quanto vender.</h1>
+      <p class="eyebrow">Lulu Extra Fitness &middot; catálogo de revenda atualizado semanalmente</p>
+      <h1>Fabricamos com amor. Extra qualidade.<br>Pensada pra sua loja e suas clientes ❤️</h1>
       <p class="hero-sub">Peças em suplex e poliamida, cores variadas em cada kit, prontas pra girar na sua loja ou no seu Instagram.</p>
       <div class="hero-rules">
         <div class="rule-chip">
           <span class="rule-num">4</span>
           <span class="rule-label">kits &mdash; pedido mínimo</span>
         </div>
-        <div class="rule-chip rule-chip--accent">
+        <div class="rule-chip rule-chip--destaque">
           <span class="rule-num">6+</span>
-          <span class="rule-label">kits &mdash; frete grátis pra Salvador</span>
+          <span class="rule-label">kits &mdash; <strong>frete grátis</strong> pra Salvador e o Brasil</span>
         </div>
       </div>
     </div>
   </section>
+
+  <nav class="filtros" id="filtros" aria-label="Filtrar por tecido">
+    <button type="button" class="filtro-btn is-active" data-filtro="todos">Todos os produtos</button>
+    <button type="button" class="filtro-btn" data-filtro="poliamida">Poliamida</button>
+    <button type="button" class="filtro-btn" data-filtro="suplex">Suplex</button>
+  </nav>
 
   <main class="catalog" id="catalogo">
     <div class="catalog-head">
@@ -335,7 +389,7 @@ a{ color: inherit; }
   </main>
 
   <footer class="site-footer">
-    <p>Loja Lulu &middot; Moda Fitness &middot; Pedidos via WhatsApp &middot; Catálogo atualizado semanalmente</p>
+    <p>Lulu Extra Fitness &middot; Pedidos via WhatsApp &middot; Catálogo atualizado semanalmente</p>
   </footer>
 
   <!-- Barra fixa do carrinho: o elemento-assinatura do site -->
@@ -363,6 +417,13 @@ a{ color: inherit; }
     </div>
 
     <div class="cart-panel" id="cart-panel">
+      <div class="cart-panel-head">
+        <button type="button" class="voltar-btn" id="voltar-compras-btn">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M11 5.5L7 9.5L3 5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Voltar às compras
+        </button>
+      </div>
+
       <div class="cart-panel-items" id="cart-panel-items"></div>
 
       <div class="cart-shipping">
@@ -379,19 +440,9 @@ a{ color: inherit; }
         </label>
         <label class="ship-option" data-ship="vip_gratis" id="ship-gratis-option">
           <input type="radio" name="frete" value="vip_gratis" disabled>
-          <span class="ship-name">Vip grátis <em>4 dias úteis &middot; acima de 6 kits</em></span>
+          <span class="ship-name">Vip grátis <em>4 dias úteis &middot; Salvador e Brasil &middot; acima de 6 kits</em></span>
           <span class="ship-price">R$ 0,00</span>
         </label>
-      </div>
-
-      <div class="cart-payment">
-        <p class="cart-payment-title">Pagar com Mercado Pago</p>
-        <p class="cart-payment-hint">O link é de valor livre — abra e digite o valor abaixo na hora de pagar.</p>
-        <div class="cart-payment-row">
-          <span class="cart-payment-value" id="pagamento-valor">R$ 0,00</span>
-          <button type="button" class="copy-btn" id="copiar-valor-btn">Copiar valor</button>
-          <a class="mp-link-btn" id="mp-link" href="https://link.mercadopago.com.br/lulumodafitness" target="_blank" rel="noopener">Abrir link</a>
-        </div>
       </div>
 
       <div class="cart-summary">
@@ -403,15 +454,41 @@ a{ color: inherit; }
           <span>Frete</span>
           <span id="summary-frete">R$ 39,90</span>
         </div>
-        <div class="cart-summary-row cart-summary-row--total">
-          <span>Total</span>
-          <span id="summary-total">R$ 0,00</span>
-        </div>
       </div>
 
-      <button class="checkout-btn" id="checkout-btn" disabled>
-        Pedido mínimo: 4 kits
-      </button>
+      <div class="cart-payment">
+        <p class="cart-payment-title">Como você quer pagar?</p>
+
+        <label class="pay-option" data-pay="pix">
+          <input type="radio" name="pagamento" value="pix" checked>
+          <span class="pay-name">Pix <strong class="pay-badge">10% off</strong></span>
+          <span class="pay-total" id="total-pix">R$ 0,00</span>
+        </label>
+        <label class="pay-option" data-pay="cartao">
+          <input type="radio" name="pagamento" value="cartao">
+          <span class="pay-name">Cartão de crédito <em>até 3x, sem desconto</em></span>
+          <span class="pay-total" id="total-cartao">R$ 0,00</span>
+        </label>
+
+        <div class="pay-panel" id="pay-panel-pix">
+          <p class="pay-hint">Chave Pix (e-mail) — copie e pague, depois confirme abaixo:</p>
+          <div class="pix-key-row">
+            <span class="pix-key" id="pix-chave">fabricaluluextra@gmail.com</span>
+            <button type="button" class="copy-btn" id="copiar-chave-btn">Copiar chave</button>
+          </div>
+          <p class="pix-titular">Lucas Pereira Silva de Deus</p>
+          <button type="button" class="checkout-btn" id="btn-confirmar-pix" disabled>
+            Já paguei — confirmar no WhatsApp
+          </button>
+        </div>
+
+        <div class="pay-panel" id="pay-panel-cartao" hidden>
+          <p class="pay-hint">Parcelamos em até 3x no cartão, sem desconto. Peça o link de pagamento:</p>
+          <button type="button" class="checkout-btn" id="btn-solicitar-cartao" disabled>
+            Solicitar link de pagamento (cartão)
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -1041,10 +1118,12 @@ a{ color: inherit; }
 <script>
 // ===== Config ============================================================
 const WHATSAPP_NUMERO = "5571986441234"; // 71 98644-1234
-const MERCADOPAGO_LINK = "https://link.mercadopago.com.br/lulumodafitness"; // link de valor livre
 const PEDIDO_MINIMO = 4;
 const FRETE_GRATIS_A_PARTIR_DE = 6;
 const LOTE_TAMANHO = 12; // quantos kits aparecem por vez, ao rolar a página
+const PIX_DESCONTO = 0.10;
+const PIX_CHAVE = "fabricaluluextra@gmail.com";
+const PIX_TITULAR = "Lucas Pereira Silva de Deus";
 const FRETE = {
   economico: { label: "Econômico (9 dias úteis)", valor: 39.90 },
   vip:        { label: "Vip rápido (4 dias úteis)", valor: 90.00 },
@@ -1058,6 +1137,11 @@ let freteEscolhido = "economico";
 let indiceRenderizado = 0;      // quantos produtos já foram colocados na tela
 const carouselState = {};       // { id: foto atual }
 let observerInfinito = null;
+let swipeConfigurado = false;
+let filtroAtivo = "todos";      // "todos" | "poliamida" | "suplex"
+let produtosVisiveis = [];      // lista já filtrada, usada pela rolagem infinita
+let formaPagamento = "pix";     // "pix" | "cartao"
+let numeroPedido = null;
 
 // ===== Utilidades ========================================================
 function formatarReais(valor) {
@@ -1066,6 +1150,17 @@ function formatarReais(valor) {
 
 function produtoPorId(id) {
   return PRODUTOS.find(p => p.id === id);
+}
+
+function aplicarFiltro(lista, filtro) {
+  if (filtro === "poliamida") return lista.filter(p => /poliamida/i.test(p.nome));
+  if (filtro === "suplex") return lista.filter(p => !/poliamida/i.test(p.nome));
+  return lista;
+}
+
+function gerarNumeroPedido() {
+  const numero = Math.floor(100 + Math.random() * 900); // 100-999
+  return "LU" + numero;
 }
 
 function totalKitsNoCarrinho() {
@@ -1139,7 +1234,7 @@ function irParaFoto(cardImgWrap, novoIndice) {
 
 function carregarMaisProdutos() {
   const grid = document.getElementById("grid-produtos");
-  const proximoLote = PRODUTOS.slice(indiceRenderizado, indiceRenderizado + LOTE_TAMANHO);
+  const proximoLote = produtosVisiveis.slice(indiceRenderizado, indiceRenderizado + LOTE_TAMANHO);
 
   proximoLote.forEach(produto => {
     grid.insertAdjacentHTML("beforeend", criarCardHTML(produto));
@@ -1147,7 +1242,7 @@ function carregarMaisProdutos() {
   });
   indiceRenderizado += proximoLote.length;
 
-  if (indiceRenderizado >= PRODUTOS.length && observerInfinito) {
+  if (indiceRenderizado >= produtosVisiveis.length && observerInfinito) {
     observerInfinito.disconnect();
     document.getElementById("load-more-msg").hidden = true;
   }
@@ -1155,10 +1250,11 @@ function carregarMaisProdutos() {
 
 function configurarRolagemInfinita() {
   try {
+    if (observerInfinito) { observerInfinito.disconnect(); observerInfinito = null; }
     const sentinela = document.getElementById("scroll-sentinel");
     observerInfinito = new IntersectionObserver((entradas) => {
       entradas.forEach(entrada => {
-        if (entrada.isIntersecting && indiceRenderizado < PRODUTOS.length) {
+        if (entrada.isIntersecting && indiceRenderizado < produtosVisiveis.length) {
           const msg = document.getElementById("load-more-msg");
           msg.hidden = false;
           setTimeout(() => {
@@ -1202,14 +1298,28 @@ function renderCatalogo() {
   const grid = document.getElementById("grid-produtos");
   grid.innerHTML = "";
   indiceRenderizado = 0;
+  produtosVisiveis = aplicarFiltro(PRODUTOS, filtroAtivo);
 
   document.getElementById("contagem-produtos").textContent =
-    `${PRODUTOS.length} kit${PRODUTOS.length === 1 ? "" : "s"} em estoque`;
+    `${produtosVisiveis.length} kit${produtosVisiveis.length === 1 ? "" : "s"} em estoque`;
 
   carregarMaisProdutos();
   grid.addEventListener("click", onGridClick);
-  ligarSwipeDoCarrossel(grid);
+  if (!swipeConfigurado) {
+    ligarSwipeDoCarrossel(grid);
+    swipeConfigurado = true;
+  }
   configurarRolagemInfinita();
+}
+
+function ligarFiltros() {
+  document.getElementById("filtros").addEventListener("click", (e) => {
+    const btn = e.target.closest(".filtro-btn");
+    if (!btn) return;
+    document.querySelectorAll(".filtro-btn").forEach(b => b.classList.toggle("is-active", b === btn));
+    filtroAtivo = btn.dataset.filtro;
+    renderCatalogo();
+  });
 }
 
 let quantidadesPendentes = {}; // quantidade selecionada no card antes de "Adicionar"
@@ -1267,6 +1377,14 @@ function renderCarrinho() {
   const totalKits = totalKitsNoCarrinho();
   const subtotal = subtotalPecas();
 
+  // número do pedido: gera um novo quando o carrinho sai do vazio,
+  // e "esquece" quando o carrinho volta a ficar vazio (próximo pedido = novo número)
+  if (totalKits > 0 && !numeroPedido) {
+    numeroPedido = gerarNumeroPedido();
+  } else if (totalKits === 0) {
+    numeroPedido = null;
+  }
+
   // barra fixa
   document.getElementById("cart-count").textContent = totalKits;
   document.getElementById("cart-label").textContent = totalKits === 1 ? "kit no pedido" : "kits no pedido";
@@ -1320,21 +1438,29 @@ function renderCarrinho() {
 
   // resumo financeiro
   const frete = FRETE[freteEscolhido].valor;
-  const total = subtotal + frete;
+  const descontoPix = subtotal * PIX_DESCONTO;
+  const totalPix = (subtotal - descontoPix) + frete;
+  const totalCartao = subtotal + frete;
+
   document.getElementById("summary-subtotal").textContent = formatarReais(subtotal);
   document.getElementById("summary-frete").textContent = frete === 0 ? "Grátis" : formatarReais(frete);
-  document.getElementById("summary-total").textContent = formatarReais(total);
-  document.getElementById("cart-total-value").textContent = formatarReais(total);
-  document.getElementById("pagamento-valor").textContent = formatarReais(total);
+  document.getElementById("cart-total-value").textContent = formatarReais(totalCartao);
+  document.getElementById("total-pix").textContent = formatarReais(totalPix);
+  document.getElementById("total-cartao").textContent = formatarReais(totalCartao);
 
-  // botão de checkout
-  const btn = document.getElementById("checkout-btn");
+  // botões de checkout (um por forma de pagamento)
+  const btnPix = document.getElementById("btn-confirmar-pix");
+  const btnCartao = document.getElementById("btn-solicitar-cartao");
   if (totalKits < PEDIDO_MINIMO) {
-    btn.disabled = true;
-    btn.textContent = `Pedido mínimo: ${PEDIDO_MINIMO} kits (faltam ${PEDIDO_MINIMO - totalKits})`;
+    btnPix.disabled = true;
+    btnCartao.disabled = true;
+    btnPix.textContent = `Pedido mínimo: ${PEDIDO_MINIMO} kits (faltam ${PEDIDO_MINIMO - totalKits})`;
+    btnCartao.textContent = `Pedido mínimo: ${PEDIDO_MINIMO} kits (faltam ${PEDIDO_MINIMO - totalKits})`;
   } else {
-    btn.disabled = false;
-    btn.textContent = `Fechar pedido no WhatsApp — ${formatarReais(total)}`;
+    btnPix.disabled = false;
+    btnCartao.disabled = false;
+    btnPix.textContent = "Já paguei — confirmar no WhatsApp";
+    btnCartao.textContent = "Solicitar link de pagamento (cartão)";
   }
 }
 
@@ -1344,34 +1470,67 @@ function abrirCarrinho(forcar) {
   bar.setAttribute("data-open", forcar ? "true" : String(!aberto));
 }
 
-// ===== Montagem da mensagem de WhatsApp ==================================
-function montarMensagemPedido() {
-  const linhas = [];
-  linhas.push("Olá! Quero fechar este pedido:");
-  linhas.push("");
+function fecharCarrinho() {
+  document.getElementById("cart-bar").setAttribute("data-open", "false");
+}
 
-  Object.keys(carrinho).filter(id => carrinho[id] > 0).forEach(id => {
+// ===== Montagem das mensagens de WhatsApp ================================
+function montarListaItens() {
+  return Object.keys(carrinho).filter(id => carrinho[id] > 0).map(id => {
     const produto = produtoPorId(id);
     const qtd = carrinho[id];
     const subtotalItem = produto.preco_final * qtd;
-    linhas.push(`• ${qtd}x ${produto.nome} — ${formatarReais(produto.preco_final)} = ${formatarReais(subtotalItem)}`);
+    return `• ${qtd}x ${produto.nome} — ${formatarReais(produto.preco_final)} = ${formatarReais(subtotalItem)}`;
   });
+}
 
-  linhas.push("");
-  linhas.push(`Total de kits: ${totalKitsNoCarrinho()}`);
-  linhas.push(`Peças: ${formatarReais(subtotalPecas())}`);
-  linhas.push(`Frete (${FRETE[freteEscolhido].label}): ${freteEscolhido === "vip_gratis" ? "Grátis" : formatarReais(FRETE[freteEscolhido].valor)}`);
-  linhas.push(`Total do pedido: ${formatarReais(subtotalPecas() + FRETE[freteEscolhido].valor)}`);
-  linhas.push("");
-  linhas.push(`Se for pagar pelo Mercado Pago: ${MERCADOPAGO_LINK}`);
-  linhas.push(`(o link é de valor livre — informar ${formatarReais(subtotalPecas() + FRETE[freteEscolhido].valor)} ao pagar)`);
+function montarMensagemPix() {
+  const subtotal = subtotalPecas();
+  const desconto = subtotal * PIX_DESCONTO;
+  const frete = FRETE[freteEscolhido].valor;
+  const total = (subtotal - desconto) + frete;
 
+  const linhas = [
+    `Paguei o pedido ${numeroPedido} — via Pix — confira por gentileza 🙏`,
+    "",
+    `Pedido ${numeroPedido} — itens:`,
+    ...montarListaItens(),
+    "",
+    `Peças: ${formatarReais(subtotal)}`,
+    `Desconto Pix (10%): -${formatarReais(desconto)}`,
+    `Frete (${FRETE[freteEscolhido].label}): ${freteEscolhido === "vip_gratis" ? "Grátis" : formatarReais(frete)}`,
+    `Total pago: ${formatarReais(total)}`,
+  ];
+  return linhas.join("\n");
+}
+
+function montarMensagemCartao() {
+  const subtotal = subtotalPecas();
+  const frete = FRETE[freteEscolhido].valor;
+  const total = subtotal + frete;
+
+  const linhas = [
+    `Desejo pagar o pedido ${numeroPedido} via cartão de crédito (até 3x, sem desconto) — pode me enviar o link de pagamento?`,
+    "",
+    `Pedido ${numeroPedido} — itens:`,
+    ...montarListaItens(),
+    "",
+    `Peças: ${formatarReais(subtotal)}`,
+    `Frete (${FRETE[freteEscolhido].label}): ${freteEscolhido === "vip_gratis" ? "Grátis" : formatarReais(frete)}`,
+    `Total: ${formatarReais(total)}`,
+  ];
   return linhas.join("\n");
 }
 
 // ===== Eventos globais ===================================================
+function abrirWhatsApp(mensagem) {
+  const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(mensagem)}`;
+  window.open(url, "_blank");
+}
+
 function ligarEventos() {
   document.getElementById("cart-toggle").addEventListener("click", () => abrirCarrinho());
+  document.getElementById("voltar-compras-btn").addEventListener("click", () => fecharCarrinho());
 
   document.getElementById("cart-panel-items").addEventListener("click", (e) => {
     const btn = e.target.closest("[data-remove]");
@@ -1389,28 +1548,39 @@ function ligarEventos() {
     });
   });
 
-  document.getElementById("copiar-valor-btn").addEventListener("click", async (e) => {
-    const total = subtotalPecas() + FRETE[freteEscolhido].valor;
-    const texto = total.toFixed(2).replace(".", ","); // formato que o Mercado Pago pede
+  document.querySelectorAll("input[name='pagamento']").forEach(input => {
+    input.addEventListener("change", () => {
+      formaPagamento = input.value;
+      document.getElementById("pay-panel-pix").hidden = formaPagamento !== "pix";
+      document.getElementById("pay-panel-cartao").hidden = formaPagamento !== "cartao";
+    });
+  });
+
+  document.getElementById("copiar-chave-btn").addEventListener("click", async (e) => {
     try {
-      await navigator.clipboard.writeText(texto);
+      await navigator.clipboard.writeText(PIX_CHAVE);
       e.target.classList.add("is-copied");
       e.target.textContent = "Copiado ✓";
       setTimeout(() => {
         e.target.classList.remove("is-copied");
-        e.target.textContent = "Copiar valor";
+        e.target.textContent = "Copiar chave";
       }, 1200);
     } catch (err) {
-      alert(`Valor a informar no Mercado Pago: ${texto}`);
+      alert(`Chave Pix: ${PIX_CHAVE}`);
     }
   });
 
-  document.getElementById("checkout-btn").addEventListener("click", () => {
+  document.getElementById("btn-confirmar-pix").addEventListener("click", () => {
     if (totalKitsNoCarrinho() < PEDIDO_MINIMO) return;
-    const mensagem = montarMensagemPedido();
-    const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(mensagem)}`;
-    window.open(url, "_blank");
+    abrirWhatsApp(montarMensagemPix());
   });
+
+  document.getElementById("btn-solicitar-cartao").addEventListener("click", () => {
+    if (totalKitsNoCarrinho() < PEDIDO_MINIMO) return;
+    abrirWhatsApp(montarMensagemCartao());
+  });
+
+  ligarFiltros();
 }
 
 // ===== Inicialização ======================================================
