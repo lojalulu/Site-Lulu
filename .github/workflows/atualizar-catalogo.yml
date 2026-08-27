@@ -1,0 +1,35 @@
+name: Atualizar catálogo Loja Lulu
+
+on:
+  schedule:
+    - cron: '0 11 * * 1'   # toda segunda-feira, 11:00 UTC = 08:00 em Salvador
+  workflow_dispatch:        # permite clicar em "Run workflow" manualmente
+
+permissions:
+  contents: write
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependências
+        run: pip install requests
+
+      - name: Verificar loja e atualizar o site
+        run: python atualizar_catalogo.py
+
+      - name: Publicar a atualização no repositório
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html produtos.json ultima_verificacao.csv
+          git diff --cached --quiet || git commit -m "Atualização automática do catálogo"
+          git push
