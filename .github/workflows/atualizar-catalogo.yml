@@ -30,7 +30,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add index.html produtos.json ultima_verificacao.csv
-          git add kitavulso/index.html kitavulso/produtos.json kitavulso/ultima_verificacao.csv
+          git add index.html produtos.json ultima_verificacao.csv erros.csv
+          git add kitavulso/index.html kitavulso/produtos.json kitavulso/ultima_verificacao.csv kitavulso/erros.csv
           git diff --cached --quiet || git commit -m "Atualização automática do catálogo (kits + peças avulsas)"
           git push
