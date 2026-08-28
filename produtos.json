@@ -784,6 +784,77 @@
     "cores_variadas": true
   },
   {
+    "id": "3405523",
+    "nome": "Pacote com 10 Blusa de Tule em Poliamida",
+    "preco_original": 165.5,
+    "preco_final": 264.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1758651718_fe7124a1b6b6feafce56.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1758651716_82a40711205abe6e3d49.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1758651715_5db5c843f3b517511523.jpeg.webp"
+    ],
+    "cores_variadas": true
+  },
+  {
+    "id": "3874845",
+    "nome": "Pacote com 10 BLUSÃO Tule Poliamida Recorte Lateral",
+    "preco_original": 200.5,
+    "preco_final": 320.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1773237277_99f4ac601dc55acaa1de.webp",
+      "https://arquivos.facilzap.app.br/produtos/1773237275_69ba144a9c4e085d91a4.webp",
+      "https://arquivos.facilzap.app.br/produtos/1773237489_27ce48347733015898eb.webp"
+    ],
+    "cores_variadas": true
+  },
+  {
+    "id": "3709232",
+    "nome": "Pacote com 10 Blusa de Tule em Poliamida Ref 03",
+    "preco_original": 165.5,
+    "preco_final": 264.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1768320738_7233a3b5a97afbf82e33.webp",
+      "https://arquivos.facilzap.app.br/produtos/1768320735_a4e93804e0af7e5c5931.webp",
+      "https://arquivos.facilzap.app.br/produtos/1768320732_3fd127543d46588abb56.webp"
+    ],
+    "cores_variadas": true
+  },
+  {
+    "id": "3552957",
+    "nome": "Pacote com 10 Regatas de Tule",
+    "preco_original": 165.5,
+    "preco_final": 264.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1762887868_b0ec424fb5ba9f138049.webp",
+      "https://arquivos.facilzap.app.br/produtos/1762887865_9881ce20245458f948f4.webp",
+      "https://arquivos.facilzap.app.br/produtos/1762887815_b0cceb1468eb1bfa8376.webp"
+    ],
+    "cores_variadas": true
+  },
+  {
+    "id": "3405521",
+    "nome": "Pacote com 10 Cropped de Tule",
+    "preco_original": 165.5,
+    "preco_final": 264.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1758651651_10ed6c434ba2281fb103.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1758651649_a98db826a7318520fe1d.jpeg.webp"
+    ],
+    "cores_variadas": true
+  },
+  {
+    "id": "3388638",
+    "nome": "Pacote com 10 Blusão de Tule Sortidos",
+    "preco_original": 200.5,
+    "preco_final": 320.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1764168213_e1a46c40988cd2ac6910.webp",
+      "https://arquivos.facilzap.app.br/produtos/1764168209_91f9333c04103a8d113a.webp",
+      "https://arquivos.facilzap.app.br/produtos/1764168204_8f2af842e68b32243dee.webp"
+    ],
+    "cores_variadas": true
+  },
+  {
     "id": "3703564",
     "nome": "Kit com 5 Conjuntos Fitness em Suplex – Linha Slim (Ref.) 26",
     "preco_original": 155.0,
@@ -1762,6 +1833,18 @@
     "imagens": [
       "https://arquivos.facilzap.app.br/produtos/1681733286_bd040482acd76c7fe05e.jpeg",
       "https://arquivos.facilzap.app.br/produtos/1681733285_4af278da94a9c79bd7fe.jpeg"
+    ],
+    "cores_variadas": true
+  },
+  {
+    "id": "1026249",
+    "nome": "PACOTE COM 5 CONJUNTOS DE SHORT PLUS VIES 05",
+    "preco_original": 145.0,
+    "preco_final": 232.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1745421738_5ae392d1d5e4428e426e.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1745421736_6bec27b6a2af47400bff.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1745421733_24ad1371b465aaa63a10.jpeg.webp"
     ],
     "cores_variadas": true
   },

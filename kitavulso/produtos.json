@@ -3,52 +3,53 @@
     "id": "328359",
     "nome": "TOP NADADOR POLIAMIDA REF 081",
     "preco_original": 17.0,
+    "preco_final": 27.9,
     "imagens": [
       "https://arquivos.facilzap.app.br/produtos/1674823563_11551760b5ff021775e6.jpeg",
       "https://arquivos.facilzap.app.br/produtos/1674823564_108b6d9b9d1a3968fe72.jpeg"
     ],
-    "preco_final": 27.9,
     "cores_variadas": false
   },
   {
     "id": "4414230",
     "nome": "COLETE CORTA VENTO COM BOLSO",
     "preco_original": 40.0,
+    "preco_final": 64.9,
     "imagens": [
       "https://arquivos.facilzap.app.br/produtos/1787749869_161c5b76ab8e1a99a010.webp",
       "https://arquivos.facilzap.app.br/produtos/1787749872_75b196ef25a041a38764.webp",
       "https://arquivos.facilzap.app.br/produtos/1787749876_1f753997623a2fca9b21.webp"
     ],
-    "preco_final": 64.9,
     "cores_variadas": false
   },
   {
     "id": "4323187",
     "nome": "CALÇA FLARE 001",
     "preco_original": 60.0,
+    "preco_final": 96.9,
     "imagens": [
       "https://arquivos.facilzap.app.br/produtos/1785850766_9653b19dcd5c560c615f.webp",
       "https://arquivos.facilzap.app.br/produtos/1785850771_d72696e98e1335297f18.webp"
     ],
-    "preco_final": 96.9,
     "cores_variadas": false
   },
   {
     "id": "4267810",
     "nome": "CASACO POLIAMIDA COM ZIPER",
     "preco_original": 55.0,
+    "preco_final": 88.9,
     "imagens": [
       "https://arquivos.facilzap.app.br/produtos/1784571214_bf5bd151640004c939c9.webp",
       "https://arquivos.facilzap.app.br/produtos/1784571204_01271539c01a5f065180.webp",
       "https://arquivos.facilzap.app.br/produtos/1784571209_f6b05e610d75bda242cf.webp"
     ],
-    "preco_final": 88.9,
     "cores_variadas": false
   },
   {
     "id": "4376846",
     "nome": "CONJ GG DE CALÇA CANELADA",
     "preco_original": 70.0,
+    "preco_final": 112.9,
     "imagens": [
       "https://arquivos.facilzap.app.br/produtos/1787014363_74e25371160075acad40.webp",
       "https://arquivos.facilzap.app.br/produtos/1787014260_39433860bfe35ab19eb4.webp",
@@ -56,8 +57,905 @@
       "https://arquivos.facilzap.app.br/produtos/1787014347_7ef006afcfc5dfdda23e.webp",
       "https://arquivos.facilzap.app.br/produtos/1787014351_4a0349e8d2da833245a4.webp"
     ],
-    "preco_final": 112.9,
     "cores_variadas": false
   },
   {
     "id": "4376841",
+    "nome": "CONJ DE CALÇA CANELADA",
+    "preco_original": 67.0,
+    "preco_final": 107.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1787013989_b65cb33fe1a2f83080b1.webp",
+      "https://arquivos.facilzap.app.br/produtos/1787013991_ee4da918da4c96674155.webp",
+      "https://arquivos.facilzap.app.br/produtos/1787013993_f70f04544d3043846db9.webp",
+      "https://arquivos.facilzap.app.br/produtos/1787013995_73185aaa75a8da747b17.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "4371813",
+    "nome": "REGATA MACHÃO",
+    "preco_original": 25.0,
+    "preco_final": 40.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1786972002_958c6ee8150fc056a0a2.webp",
+      "https://arquivos.facilzap.app.br/produtos/1786972078_218ebc45bcb99e8b2e6e.webp",
+      "https://arquivos.facilzap.app.br/produtos/1786972083_1ca51c75d59a04d29be1.webp",
+      "https://arquivos.facilzap.app.br/produtos/1786972199_57ca6d9359926f674757.webp",
+      "https://arquivos.facilzap.app.br/produtos/1786972204_245bd7868aa71bc712ab.webp",
+      "https://arquivos.facilzap.app.br/produtos/1786972210_f45ff27e076d2acb81de.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "4337639",
+    "nome": "CONJUNTO CECILIA CALÇA",
+    "preco_original": 75.0,
+    "preco_final": 120.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1786017884_8885939b5086ae0cd703.webp",
+      "https://arquivos.facilzap.app.br/produtos/1786017956_f7de9e7341601285f5cd.webp",
+      "https://arquivos.facilzap.app.br/produtos/1786017959_c3f2b6f9a05f2ae79d42.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "4337633",
+    "nome": "CONJUNTO CECILIA SHORT",
+    "preco_original": 70.0,
+    "preco_final": 112.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1786017758_cb98af3ba5f4395a7b2d.webp",
+      "https://arquivos.facilzap.app.br/produtos/1786017865_9cc6d6633942fddbb670.webp",
+      "https://arquivos.facilzap.app.br/produtos/1786017869_2e49eaf8afe3c57d497a.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "4324179",
+    "nome": "SHORT MASCULINO",
+    "preco_original": 55.0,
+    "preco_final": 88.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1785858412_3c734896704b986c16b8.webp",
+      "https://arquivos.facilzap.app.br/produtos/1785858419_02eec30bada64db9c264.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "4323904",
+    "nome": "CASACO PREMIUM COM BOLSO",
+    "preco_original": 55.0,
+    "preco_final": 88.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1785859150_27f6f07a20ba68762191.webp",
+      "https://arquivos.facilzap.app.br/produtos/1785856528_0de4c7a527026aca2975.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "4298763",
+    "nome": "SHORT SAIA PREMIUM",
+    "preco_original": 42.0,
+    "preco_final": 67.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1785241079_20bc36c9c8169c26f8ab.webp",
+      "https://arquivos.facilzap.app.br/produtos/1785241124_4d46d288d9d0f575da45.webp",
+      "https://arquivos.facilzap.app.br/produtos/1785241082_2029615c35740faa826d.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "4275987",
+    "nome": "SHORT DUPLO PREMIUM",
+    "preco_original": 40.0,
+    "preco_final": 64.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1784662286_e328423d3593d2cadafd.webp",
+      "https://arquivos.facilzap.app.br/produtos/1784662245_2ce47d532a27fb4063f8.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "327294",
+    "nome": "LEGGING CINTURA ALTA POLIAMIDA REF 334",
+    "preco_original": 32.0,
+    "preco_final": 51.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1750293429_a71b647287106a70b5ae.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1750293427_6b4b665ee9f9df60374e.jpeg.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3793662",
+    "nome": "CORTA VENTO",
+    "preco_original": 45.0,
+    "preco_final": 72.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1770841708_ebff7d989ba216697abf.webp",
+      "https://arquivos.facilzap.app.br/produtos/1770841702_d32e5295ea49448c2936.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3146488",
+    "nome": "MACAQUITO CANELADO DE BOLSO",
+    "preco_original": 60.0,
+    "preco_final": 96.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1762890523_ed688a31e41edc4e983a.webp",
+      "https://arquivos.facilzap.app.br/produtos/1762890514_ce96fe8ba38f6a6a6826.webp",
+      "https://arquivos.facilzap.app.br/produtos/1762890552_d923c36a709871747941.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "331423",
+    "nome": "REGATA CURTA POLIAMIDA DRYFIT REF 120",
+    "preco_original": 18.0,
+    "preco_final": 28.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1675169619_b79b457561f03a0081bd.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1675169618_cf0a9cb3b242a6515a23.jpeg"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "334025",
+    "nome": "LEGGING DETALHE LATERAL POLIAMIDA REF 322",
+    "preco_original": 34.0,
+    "preco_final": 54.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1675338021_ee5a93ad651b67cf22ca.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1675338020_9f930b7d510cd8ae7a62.jpeg"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "4059477",
+    "nome": "CONJUNTO CANELADO GG DE CALÇA",
+    "preco_original": 70.0,
+    "preco_final": 112.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1778617044_630a83dc09adc26019e2.webp",
+      "https://arquivos.facilzap.app.br/produtos/1778617039_0666388e199be64726b9.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "333277",
+    "nome": "TOP 3D DE ALÇA REF 350",
+    "preco_original": 22.0,
+    "preco_final": 35.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777385588_8d2c9e6d9631cc916c1b.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777385582_881499a98698ab3747d6.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777385575_b8a4e4ca6dbea9fc8417.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "875534",
+    "nome": "SHORT CURTO POLIAMIDA REF 366",
+    "preco_original": 22.0,
+    "preco_final": 35.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777399845_eb53a3b9dbf4c25d738c.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777399715_6a492d6f6e4094afe24b.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777399702_ada3aa0d1091b9876551.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "875523",
+    "nome": "TOP FRANZIDO POLIAMIDA REF 374",
+    "preco_original": 22.0,
+    "preco_final": 35.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777398930_624fb6879027f18e4cc0.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777398920_f1b8bef0617347bb1eb0.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "332873",
+    "nome": "MACAQUITO LISO POLIAMIDA REF 314",
+    "preco_original": 38.0,
+    "preco_final": 60.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777398053_181373984cfeed870d9b.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777398043_81e9f6af59fd0c721d7b.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777398036_042b6324ecab52ad73f0.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "332840",
+    "nome": "MACACÃO LISO POLIAMIDA REF 315",
+    "preco_original": 47.0,
+    "preco_final": 75.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777397916_46caae37034d05d98f49.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777397907_7017513e27a4d25c4d70.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777397925_5d7642f73f3500801fb4.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "331427",
+    "nome": "REGATÃO POLIAMIDA DRYFIT REF 050",
+    "preco_original": 18.0,
+    "preco_final": 28.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777398027_65d7349fc8fac91faa73.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777398018_e8f89c5f5bdcde1a5ac6.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "327777",
+    "nome": "TOP NADADOR 3D REF 091",
+    "preco_original": 20.0,
+    "preco_final": 32.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777398338_72981bde90a992375686.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777398329_ab29354fa5aefa071ceb.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3592535",
+    "nome": "CASACO DEBORAH",
+    "preco_original": 40.0,
+    "preco_final": 64.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777379981_8dbfb3bf11776a468b50.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777379974_920c63783b30f98017a2.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777379965_36288fa2b5ae3a43b11b.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3553045",
+    "nome": "SHORT CICLISTA 3D GG",
+    "preco_original": 30.0,
+    "preco_final": 48.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777385892_4299b75524a898d46e79.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777386039_443232e0c36c0eab6fbf.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777385875_d5bde42b87be589eb1ac.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3480272",
+    "nome": "BLUSA MASCULINA",
+    "preco_original": 30.0,
+    "preco_final": 48.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777379690_7094cd86e4d3080b2f23.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777379526_926b5fb0487bcc9f8dd9.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3480266",
+    "nome": "MACACÃO LONGO CANELADO",
+    "preco_original": 65.0,
+    "preco_final": 104.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777379668_e9764f3f32a0c432462d.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777379659_fe3f6f9d4d345b0c256f.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777379642_3560032511790f2d840a.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3480260",
+    "nome": "SHORT 3D COM BOLSO",
+    "preco_original": 30.0,
+    "preco_final": 48.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777385891_739391f10f63d3ffc334.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777385910_3db40116bead0205ad52.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777385745_5538368596534eb75a68.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3340284",
+    "nome": "LEGGING DE BOLSO CANELADA GG",
+    "preco_original": 45.0,
+    "preco_final": 72.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777379964_91c83a01bf6d7b7f4641.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777380023_0aab05869b8e59fae410.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777379973_a666a9680f0174d803d3.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3184623",
+    "nome": "CASACO COM ZIPER",
+    "preco_original": 37.0,
+    "preco_final": 59.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777380038_b47607832d77e08263ae.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777380030_cb1e1a0d52fa32966d75.webp",
+      "https://arquivos.facilzap.app.br/produtos/1762888999_7a1b296a0cb0c87c3069.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3145402",
+    "nome": "BLUSA DE TULE",
+    "preco_original": 20.0,
+    "preco_final": 32.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777380378_bcf2af7c05e99f79b2e5.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777380213_64ce2a284a5e460a624e.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777380205_d2fd3f93d200f3d87cf8.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777380195_581c218a8f37d4a8f4a8.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3145398",
+    "nome": "LEGGING CANELADA DE BOLSO",
+    "preco_original": 42.0,
+    "preco_final": 67.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777380377_7bed5fbae232af19c3a2.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777380369_d8970f016817a2d938c1.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777380517_65b67467ecbe13957b0a.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3133783",
+    "nome": "LEGGING 3D GG",
+    "preco_original": 40.0,
+    "preco_final": 64.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777381245_a156228f4bfec4ea3884.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777381242_211a6711f483741f041f.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777381068_336e75a74a36f4d0a449.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3118780",
+    "nome": "SHORT CICLISTA GG",
+    "preco_original": 30.0,
+    "preco_final": 48.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777382213_06d034a3758bf8b066a1.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777382204_9a8505eafb9fafcef382.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777382192_8729a7664042ea7650cc.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3118770",
+    "nome": "LEGGING DE BOLSO GG POLIAMIDA REF 373",
+    "preco_original": 40.0,
+    "preco_final": 64.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777382114_448ca40e14496a2f1a11.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777382107_efade3036a32fa82322a.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3117802",
+    "nome": "CASACO COM ZIPER",
+    "preco_original": 37.0,
+    "preco_final": 59.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777383128_b9dea70cf0bfc951a68c.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777383120_52596b7cf9e832ef4600.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "2673571",
+    "nome": "CONJUNTO CANELADO DE SHORT REF 386",
+    "preco_original": 57.0,
+    "preco_final": 91.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777384098_6b89dacf1d82ef55a543.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777384091_619e484f1bf0e182f21b.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777384084_897b6922f487a2b6dce9.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "2673557",
+    "nome": "CONJUNTO CANELADO DE CALÇA REF 388",
+    "preco_original": 67.0,
+    "preco_final": 107.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777383370_a05d12972d12cfababc1.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777383206_7a336e37dd192e6961dc.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777383196_df4adb085156e02e4e1a.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "875488",
+    "nome": "SHORT CICLISTA 3D REF 368",
+    "preco_original": 22.0,
+    "preco_final": 35.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777384987_3546d8bd907ff3d42ea1.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777384976_bfa1395d2534bee2d81c.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777384965_9fae78397677104da06b.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "334031",
+    "nome": "SHORT CADARÇO POLIAMIDA REF 357",
+    "preco_original": 22.0,
+    "preco_final": 35.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777385048_462bb0debf143d33d015.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777385031_efb80a8d96a6978b74eb.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777385039_97d68b45d69165bf7b14.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "333290",
+    "nome": "TOP POLIAMIDA DE ALÇA REF 352",
+    "preco_original": 20.0,
+    "preco_final": 32.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777385334_7d462f232324cf307131.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777385341_d7e7ddcc99fba700f287.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "333275",
+    "nome": "SHORT CURTO 3D LISO REF 355",
+    "preco_original": 22.0,
+    "preco_final": 35.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777385590_d1b072182a431961e4c9.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777385581_f4a723177a39fc1c6383.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777385730_3e85d0b30dd1fb934e01.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "331394",
+    "nome": "BABY LOOK DRYFIT POLIAMIDA REF 085",
+    "preco_original": 24.0,
+    "preco_final": 38.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1675168377_26410a888d4e425b43f9.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1675168378_242150607b3a5e6113b1.jpeg"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3552750",
+    "nome": "TOP ALÇA LARGA",
+    "preco_original": 22.0,
+    "preco_final": 35.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1776083953_353c743a98571f5023c1.webp",
+      "https://arquivos.facilzap.app.br/produtos/1776083948_8894373fa46ba0bbf6c5.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3552730",
+    "nome": "REGATA COLADA POLIAMIDA",
+    "preco_original": 20.0,
+    "preco_final": 32.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1776083916_23f691eacda455fd6ec0.webp",
+      "https://arquivos.facilzap.app.br/produtos/1776083795_5bb77f92718307d87877.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "327396",
+    "nome": "SHORT CICLISTA POLIAMIDA REF 335",
+    "preco_original": 20.0,
+    "preco_final": 32.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1674737291_ffba463a09bfcb811a54.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1674737292_770838fe43e144916467.jpeg"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3117884",
+    "nome": "CONJUNTO DE SHORT DUPLO",
+    "preco_original": 65.0,
+    "preco_final": 104.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1750269801_5a440d8dc9bae7289a6d.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1750269793_a593f18a959cba28605b.jpeg.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "334077",
+    "nome": "CONJUNTO GAIN REF 352023",
+    "preco_original": 52.0,
+    "preco_final": 83.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1675340276_792065500d85ba289ebd.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1675340275_1f4c584161b1699248e1.jpeg"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "334059",
+    "nome": "CONJUNTO 3D MASTER REF 350355",
+    "preco_original": 40.0,
+    "preco_final": 64.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1675339722_e698e647a00ed4e565da.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1675339721_e6a7a15d7a3a5bedbd66.jpeg"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3254120",
+    "nome": "MACAQUITO CANELADO CORTE LATERAL",
+    "preco_original": 70.0,
+    "preco_final": 112.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1754500598_712cd59dc371f9fba0fa.jpg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1754500584_2a37b0082389a060b865.jpg.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3667508",
+    "nome": "CROPPED DE TULE REF 397",
+    "preco_original": 15.0,
+    "preco_final": 24.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777386106_64a40d41e92671474d03.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777386097_92fb90ebbb35f8afa3df.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "331422",
+    "nome": "BLUSA CORTE LATERAL POLIAMIDA DRYFIT REF 340",
+    "preco_original": 26.0,
+    "preco_final": 41.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1675169423_8593a554caea15e722ed.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1675169422_5923792a9d7ddd283756.jpeg"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3184620",
+    "nome": "CONJUNTO DE SHORT DUPLO",
+    "preco_original": 65.0,
+    "preco_final": 104.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1762890381_619fd570fff5f850714a.webp",
+      "https://arquivos.facilzap.app.br/produtos/1762890374_d492d8ea3090ce4265ac.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "334036",
+    "nome": "CONJUNTO SPORT REF 342357",
+    "preco_original": 40.0,
+    "preco_final": 64.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1675339091_2f103c3c1bf84c3a9760.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1675339090_f3d8a2bf8837b2dea4cc.jpeg"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3390015",
+    "nome": "CONJUNTO MALU",
+    "preco_original": 70.0,
+    "preco_final": 112.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1758214506_9ca3d2d2cbe4f0130134.jpg.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3389992",
+    "nome": "MACACÃO ALÇA POLIAMIDA",
+    "preco_original": 70.0,
+    "preco_final": 112.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1758214002_a4f01b7214f23419fc3d.jpg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1758213997_059d4f2166dfd247bf5c.jpg.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "2488494",
+    "nome": "LEGGING DE BOLSO POLIAMIDA REF 373",
+    "preco_original": 36.0,
+    "preco_final": 57.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1747762446_cb47c722f097cb60b1d6.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747762532_957b6114f9ae5bb22580.jpeg.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3338686",
+    "nome": "SHORT DUPLO",
+    "preco_original": 40.0,
+    "preco_final": 64.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1756985914_7087ca8c5103a73f12b5.jpg.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3336920",
+    "nome": "CONJUNTO ZOE CANELADO",
+    "preco_original": 75.0,
+    "preco_final": 120.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1756916677_2a94275e427885a37bc9.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1756916675_23ab9182c963e1b4715f.jpeg.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3184622",
+    "nome": "MACAQUITO DE ALÇA",
+    "preco_original": 65.0,
+    "preco_final": 104.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1752667466_1301d6b4866a80bc9954.jpg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1752667462_5f0e5dceb80b00d244b1.jpg.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3184612",
+    "nome": "MACACÃO DE ALÇA",
+    "preco_original": 75.0,
+    "preco_final": 120.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1752667224_ae98f4fc850163b50c91.jpg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1752667219_b2f4708c75e8fab8ebb7.jpg.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3117842",
+    "nome": "MACACÃO CANELADO",
+    "preco_original": 75.0,
+    "preco_final": 120.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1750269547_902742fda320e950a02b.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1750269523_548680a4402954d90525.jpeg.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3117836",
+    "nome": "MACAQUITO",
+    "preco_original": 65.0,
+    "preco_final": 104.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1750269354_9f3e66bf856004daa691.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1750269352_380c4c979f1ac0487443.jpeg.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3043182",
+    "nome": "SHORT CANELADO DE BOLSO",
+    "preco_original": 30.0,
+    "preco_final": 48.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1747834055_326026fb3d8103975ba9.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747834035_f8a34376817f839355df.jpeg.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3133821",
+    "nome": "BABY LOOK PLUS SIZE",
+    "preco_original": 30.0,
+    "preco_final": 48.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1750883501_29fb2d23e9e2f5fcc8c5.jpg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1750883496_c4eab16ab38075d419d7.jpg.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "365104",
+    "nome": "SHORT DE BOLSO REF 360",
+    "preco_original": 26.0,
+    "preco_final": 41.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1747769418_4c7ce2a214e3ed878e8f.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747769419_3c0a7c24bbd5f51615cc.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747769404_eff7902179ec3a502365.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747769412_63c08ee5974a678df376.jpeg.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "327731",
+    "nome": "TOP CRUZADO POLIAMIDA REF 342",
+    "preco_original": 22.0,
+    "preco_final": 35.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1674756107_e00da8a945e1e53ea862.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1674756106_df74f660e15dacc8e96b.jpeg"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3118777",
+    "nome": "LEGGING LISA GG",
+    "preco_original": 40.0,
+    "preco_final": 64.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1750292562_a2d51897d782435a0fcd.jpg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1750292559_e789f2dcdf32b995459a.jpg.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "3118772",
+    "nome": "SHORT DE BOLSO GG REF 360",
+    "preco_original": 30.0,
+    "preco_final": 48.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1750292453_77bf43261812495efc8f.jpg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1750292450_28589a9d32db042c6c73.jpg.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "332904",
+    "nome": "LEGGING LISA CADARÇO POLIAMIDA REF 023",
+    "preco_original": 34.0,
+    "preco_final": 54.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1747770651_e53122da674e98f0e239.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747770596_773920985a246d2616cf.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747770606_477d68669c8cdb3e2ab9.jpeg.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "331455",
+    "nome": "TOP NADADOR SUPLEX REF 02",
+    "preco_original": 12.0,
+    "preco_final": 19.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1747771139_fb68abd9c7c240915266.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747771133_1a573fe35c0268408980.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747770724_7a26da8396b4e11c8465.jpeg.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "875515",
+    "nome": "LEGGING EMPINA BUMBUM POLIAMIDA REF 370",
+    "preco_original": 34.0,
+    "preco_final": 54.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1730139915_95b2658093d89c7d5ab6.jpg.webp"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "875537",
+    "nome": "SHORT SEM COSTURA REF 376",
+    "preco_original": 22.0,
+    "preco_final": 35.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1699731315_b6b436d4d2ba99043c70.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1699731311_91f36dd829245b6b8395.jpg"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "334028",
+    "nome": "SAIA LISA POLIAMIDA REF 046",
+    "preco_original": 12.0,
+    "preco_final": 19.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1675338397_979eae681640dc7dee37.jpeg"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "327770",
+    "nome": "LEGGING 3D REF 067",
+    "preco_original": 35.0,
+    "preco_final": 56.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1674758287_8ffa9879cb93f1b2289c.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1674758288_dae2a9b31724bc79492e.jpeg"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "334090",
+    "nome": "CONJUNTO PRO REF 342023",
+    "preco_original": 55.0,
+    "preco_final": 88.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1675340882_0922af9c2d4ac758bacd.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1675340881_04b83a1909584f4f6ed5.jpeg"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "331487",
+    "nome": "REGATA LONGA POLIESTER REF 099",
+    "preco_original": 12.0,
+    "preco_final": 19.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1675171863_9e81b619560201b33ab1.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1675171864_1415ec37acd5d69da1c2.jpeg"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "331480",
+    "nome": "BABY LOOK POLIÉSTER REF 307",
+    "preco_original": 14.0,
+    "preco_final": 22.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1675171690_07c99d27c3cf9f901d34.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1675171689_564fe3081ad51a0845fc.jpeg"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "331414",
+    "nome": "REGATA LONGA DRYFIT POLIAMIDA REF 095",
+    "preco_original": 20.0,
+    "preco_final": 32.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1675168690_99240ddf61f27cd3f90c.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1675168691_9912561f4b0b32808cca.jpeg"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "327794",
+    "nome": "BLUSA DE NÓ POLIAMIDA REF 328",
+    "preco_original": 15.0,
+    "preco_final": 24.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1674759478_f2fef323fceea3cc7e62.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1674759479_48f2488d0636f7859034.jpeg"
+    ],
+    "cores_variadas": false
+  },
+  {
+    "id": "326653",
+    "nome": "CROPPED POLIAMIDA DRYFIT REF 080",
+    "preco_original": 15.0,
+    "preco_final": 24.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1674673200_02213b658e03ca68de5e.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1674673201_83dafaa87398dd391fae.jpeg"
+    ],
+    "cores_variadas": false
+  }
+]
