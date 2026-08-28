@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lulu - Peças Avulsas</title>
-<meta name="description" content="Lulu - Peças Avulsas — catálogo avulso pra completar seu mix. Pedido mínimo 10 peças. Frete grátis Brasil.">
+<title>Lulu - Extra Fitness</title>
+<meta name="description" content="Lulu - Extra Fitness — kits para revenda. Pedido mínimo 4 kits. Frete grátis para Salvador e o Brasil acima de 6 kits.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
@@ -80,13 +80,6 @@ a{ color: inherit; }
 .hero-sub{ color: var(--text-muted); font-size: 16px; line-height: 1.6; max-width: 520px; margin: 0 auto 32px; }
 
 .hero-rules{ display:flex; gap:14px; justify-content:center; flex-wrap: wrap; }
-
-.aviso-separado{
-  max-width: 620px; margin: 26px auto 0;
-  background: var(--surface-2); border: 2px solid var(--accent); border-radius: 14px;
-  padding: 16px 20px; font-size: 14px; line-height: 1.6; color: var(--text);
-}
-.aviso-separado strong{ color: var(--accent); }
 .rule-chip{
   display:flex; align-items:center; gap:10px;
   background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
@@ -280,7 +273,6 @@ a{ color: inherit; }
 }
 .ship-option:has(input:checked){ border-color: var(--accent); background: rgba(255,61,128,.06); }
 .ship-option:has(input:disabled){ opacity:.4; cursor:not-allowed; }
-.ship-option--fixo{ border-color: var(--accent); background: rgba(255,61,128,.06); cursor:default; }
 .ship-name em{ font-style:normal; color: var(--text-muted); display:block; font-size: 11px; }
 .ship-price{ margin-left:auto; font-family: var(--font-mono); }
 
@@ -357,35 +349,34 @@ a{ color: inherit; }
 
   <header class="topbar">
     <div class="topbar-inner">
-      <span class="brand"><strong>Lulu</strong><span class="brand-tag">peças avulsas</span></span>
+      <span class="brand"><strong>Lulu</strong><span class="brand-tag">extra fitness</span></span>
       <a class="topbar-whats" href="https://wa.me/5571986441234" target="_blank" rel="noopener">Falar no WhatsApp</a>
     </div>
   </header>
 
   <section class="hero">
     <div class="hero-inner">
-      <p class="eyebrow">Lulu Peças Avulsas &middot; catálogo atualizado semanalmente</p>
-      <h1>Peça avulsa, do jeito que sua loja precisa.<br>Sem comprar kit fechado ❤️</h1>
-      <p class="hero-sub">Peças escolhidas uma a uma, em vários modelos e tamanhos, pra completar seu mix sem sobra de estoque.</p>
+      <p class="eyebrow">Lulu Extra Fitness &middot; catálogo de revenda atualizado semanalmente</p>
+      <h1>Fabricamos com amor. Extra qualidade.<br>Pensada pra sua loja e suas clientes ❤️</h1>
+      <p class="hero-sub">Peças em suplex e poliamida, cores variadas em cada kit, prontas pra girar na sua loja ou no seu Instagram.</p>
       <div class="hero-rules">
         <div class="rule-chip">
-          <span class="rule-num">10</span>
-          <span class="rule-label">peças &mdash; pedido mínimo</span>
+          <span class="rule-num">4</span>
+          <span class="rule-label">kits &mdash; pedido mínimo</span>
         </div>
         <div class="rule-chip rule-chip--destaque">
-          <span class="rule-num">🚚</span>
-          <span class="rule-label"><strong>Frete grátis</strong> Vip &mdash; 4 a 7 dias úteis</span>
+          <span class="rule-num">6+</span>
+          <span class="rule-label">kits &mdash; <strong>frete grátis</strong> pra Salvador e o Brasil</span>
         </div>
-      </div>
-
-      <div class="aviso-separado">
-        <strong>Catálogo separado da loja de kits.</strong>
-        Pedido mínimo aqui: <strong>10 peças avulsas</strong>. Não dá pra misturar
-        peça avulsa com os kits de 5 peças da Lulu Extra Fitness no mesmo pedido
-        — são lojas e pedidos diferentes.
       </div>
     </div>
   </section>
+
+  <nav class="filtros" id="filtros" aria-label="Filtrar por tecido">
+    <button type="button" class="filtro-btn is-active" data-filtro="todos">Todos os produtos</button>
+    <button type="button" class="filtro-btn" data-filtro="poliamida">Poliamida</button>
+    <button type="button" class="filtro-btn" data-filtro="suplex">Suplex</button>
+  </nav>
 
   <main class="catalog" id="catalogo">
     <div class="catalog-head">
@@ -398,7 +389,7 @@ a{ color: inherit; }
   </main>
 
   <footer class="site-footer">
-    <p>Lulu Peças Avulsas &middot; Pedidos via WhatsApp &middot; Catálogo atualizado semanalmente</p>
+    <p>Lulu Extra Fitness &middot; Pedidos via WhatsApp &middot; Catálogo atualizado semanalmente</p>
   </footer>
 
   <!-- Barra fixa do carrinho: o elemento-assinatura do site -->
@@ -407,15 +398,16 @@ a{ color: inherit; }
 
       <button class="cart-toggle" id="cart-toggle" aria-expanded="false">
         <span class="cart-toggle-count" id="cart-count">0</span>
-        <span class="cart-toggle-label" id="cart-label">peças no pedido</span>
+        <span class="cart-toggle-label" id="cart-label">kits no pedido</span>
         <svg class="cart-toggle-chevron" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5.5L7 9.5L11 5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
 
       <div class="cart-progress-wrap">
         <div class="cart-progress-track">
           <div class="cart-progress-fill" id="cart-progress-fill"></div>
+          <div class="cart-progress-mark" style="left:66.66%"></div>
         </div>
-        <p class="cart-progress-text" id="cart-progress-text">Adicione 10 peças para fechar o pedido</p>
+        <p class="cart-progress-text" id="cart-progress-text">Adicione 4 kits para fechar o pedido</p>
       </div>
 
       <div class="cart-total-wrap">
@@ -436,10 +428,21 @@ a{ color: inherit; }
 
       <div class="cart-shipping">
         <p class="cart-shipping-title">Frete</p>
-        <div class="ship-option ship-option--fixo">
-          <span class="ship-name">Vip grátis <em>4 a 7 dias úteis</em></span>
+        <label class="ship-option" data-ship="economico">
+          <input type="radio" name="frete" value="economico" checked>
+          <span class="ship-name">Econômico <em>9 dias úteis</em></span>
+          <span class="ship-price">R$ 39,90</span>
+        </label>
+        <label class="ship-option" data-ship="vip">
+          <input type="radio" name="frete" value="vip">
+          <span class="ship-name">Vip rápido <em>4 dias úteis</em></span>
+          <span class="ship-price">R$ 90,00</span>
+        </label>
+        <label class="ship-option" data-ship="vip_gratis" id="ship-gratis-option">
+          <input type="radio" name="frete" value="vip_gratis" disabled>
+          <span class="ship-name">Vip grátis <em>4 dias úteis &middot; Salvador e Brasil &middot; acima de 6 kits</em></span>
           <span class="ship-price">R$ 0,00</span>
-        </div>
+        </label>
       </div>
 
       <div class="cart-summary">
@@ -493,250 +496,621 @@ a{ color: inherit; }
 <script id="produtos-data" type="application/json">
 [
   {
-    "id": "328359",
-    "nome": "TOP NADADOR POLIAMIDA REF 081",
-    "preco_original": 17.0,
+    "id": "3501601",
+    "nome": "Pacote com 5 Conjuntos de Calça Suplex Plus Ref Viés 10",
+    "preco_original": 175.0,
     "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1674823563_11551760b5ff021775e6.jpeg",
-      "https://arquivos.facilzap.app.br/produtos/1674823564_108b6d9b9d1a3968fe72.jpeg"
+      "https://arquivos.facilzap.app.br/produtos/1761524337_f3ec2b9c50ec4f3f9b97.webp",
+      "https://arquivos.facilzap.app.br/produtos/1761524243_2088c2c1c6cff4843cac.webp"
     ],
-    "preco_final": 27.9,
-    "cores_variadas": false
+    "preco_final": 280.9,
+    "cores_variadas": true
   },
   {
-    "id": "4414230",
-    "nome": "COLETE CORTA VENTO COM BOLSO",
-    "preco_original": 40.0,
+    "id": "3347550",
+    "nome": "Pacote com 5 Conjuntos Short 07 Suplex",
+    "preco_original": 145.0,
     "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1787749869_161c5b76ab8e1a99a010.webp",
-      "https://arquivos.facilzap.app.br/produtos/1787749872_75b196ef25a041a38764.webp",
-      "https://arquivos.facilzap.app.br/produtos/1787749876_1f753997623a2fca9b21.webp"
+      "https://arquivos.facilzap.app.br/produtos/1757290160_f62a18411622ee4d0e2c.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757290158_f2b583bc9301b1a856ec.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757290155_64a99ff2bfe43844c904.jpeg.webp"
     ],
-    "preco_final": 64.9,
-    "cores_variadas": false
+    "preco_final": 232.9,
+    "cores_variadas": true
   },
   {
-    "id": "4323187",
-    "nome": "CALÇA FLARE 001",
-    "preco_original": 60.0,
+    "id": "2816748",
+    "nome": "Pacote com 5 Conjuntos de Calça Plus Size Ref 04",
+    "preco_original": 175.0,
     "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1785850766_9653b19dcd5c560c615f.webp",
-      "https://arquivos.facilzap.app.br/produtos/1785850771_d72696e98e1335297f18.webp"
+      "https://arquivos.facilzap.app.br/produtos/1740420838_59b52e19f4bed81cffe4.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1740420835_3bbca057415ae2e59354.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1740420833_407c817f708698ffc9d3.jpeg.webp"
     ],
-    "preco_final": 96.9,
-    "cores_variadas": false
+    "preco_final": 280.9,
+    "cores_variadas": true
   },
   {
-    "id": "4267810",
-    "nome": "CASACO POLIAMIDA COM ZIPER",
-    "preco_original": 55.0,
+    "id": "2816743",
+    "nome": "Pacote com 5 Conjuntos de Short 04 Suplex PLUS SIZE",
+    "preco_original": 165.0,
     "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1784571214_bf5bd151640004c939c9.webp",
-      "https://arquivos.facilzap.app.br/produtos/1784571204_01271539c01a5f065180.webp",
-      "https://arquivos.facilzap.app.br/produtos/1784571209_f6b05e610d75bda242cf.webp"
+      "https://arquivos.facilzap.app.br/produtos/1740420789_4099cdd6334bcd8d85f5.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1740420786_936c5848cd5df1e2c78f.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1740420782_8be80ab4332f5b46174d.jpeg.webp"
     ],
-    "preco_final": 88.9,
-    "cores_variadas": false
+    "preco_final": 264.9,
+    "cores_variadas": true
   },
   {
-    "id": "4376846",
-    "nome": "CONJ GG DE CALÇA CANELADA",
-    "preco_original": 70.0,
+    "id": "2816726",
+    "nome": "Pacote com 5 Conjuntos de Short Bolso 03 Plus",
+    "preco_original": 140.0,
     "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1787014363_74e25371160075acad40.webp",
-      "https://arquivos.facilzap.app.br/produtos/1787014260_39433860bfe35ab19eb4.webp",
-      "https://arquivos.facilzap.app.br/produtos/1787014265_0e399c4abf1e220f152d.webp",
-      "https://arquivos.facilzap.app.br/produtos/1787014347_7ef006afcfc5dfdda23e.webp",
-      "https://arquivos.facilzap.app.br/produtos/1787014351_4a0349e8d2da833245a4.webp"
+      "https://arquivos.facilzap.app.br/produtos/1740420529_1e966ff90eb006ebd457.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1740420526_046ba25bb04b08b28a84.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1740420522_7ddbc6c986028702e448.jpeg.webp"
     ],
-    "preco_final": 112.9,
-    "cores_variadas": false
+    "preco_final": 224.9,
+    "cores_variadas": true
   },
   {
-    "id": "4376841",
-    "nome": "CONJ DE CALÇA CANELADA",
-    "preco_original": 67.0,
+    "id": "2107286",
+    "nome": "Pacote com 5 Conjuntos de Calça Viés 09",
+    "preco_original": 130.0,
     "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1787013989_b65cb33fe1a2f83080b1.webp",
-      "https://arquivos.facilzap.app.br/produtos/1787013991_ee4da918da4c96674155.webp",
-      "https://arquivos.facilzap.app.br/produtos/1787013993_f70f04544d3043846db9.webp",
-      "https://arquivos.facilzap.app.br/produtos/1787013995_73185aaa75a8da747b17.webp"
+      "https://arquivos.facilzap.app.br/produtos/1722285342_e757fbdc52d905c0352b.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1722285337_614e2a55b654fc36a53e.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1722285334_47c1759d88ef5f6b2ed7.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1722285331_70a2d8084b8d89d1a66d.jpeg.webp"
     ],
-    "preco_final": 107.9,
-    "cores_variadas": false
+    "preco_final": 208.9,
+    "cores_variadas": true
   },
   {
-    "id": "4371813",
-    "nome": "REGATA MACHÃO",
-    "preco_original": 25.0,
+    "id": "2049296",
+    "nome": "Pacote com 5 Conjuntos de Short Plus Viés 07",
+    "preco_original": 140.0,
     "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1786972002_958c6ee8150fc056a0a2.webp",
-      "https://arquivos.facilzap.app.br/produtos/1786972078_218ebc45bcb99e8b2e6e.webp",
-      "https://arquivos.facilzap.app.br/produtos/1786972083_1ca51c75d59a04d29be1.webp",
-      "https://arquivos.facilzap.app.br/produtos/1786972199_57ca6d9359926f674757.webp"
+      "https://arquivos.facilzap.app.br/produtos/1721257949_8b54b991a5d36fa57543.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1721257942_e0aac78fd6d3cc576864.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1721257934_100b948c6c77586e19b7.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1721257926_c493e6ff28d2d001cc3d.jpeg.webp"
     ],
-    "preco_final": 40.9,
-    "cores_variadas": false
+    "preco_final": 224.9,
+    "cores_variadas": true
   },
   {
-    "id": "4337639",
-    "nome": "CONJUNTO CECILIA CALÇA",
-    "preco_original": 75.0,
+    "id": "853903",
+    "nome": "Pacote com 5 conjuntos plus short bolso 02",
+    "preco_original": 145.0,
     "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1786017884_8885939b5086ae0cd703.webp",
-      "https://arquivos.facilzap.app.br/produtos/1786017956_f7de9e7341601285f5cd.webp",
-      "https://arquivos.facilzap.app.br/produtos/1786017959_c3f2b6f9a05f2ae79d42.webp"
+      "https://arquivos.facilzap.app.br/produtos/1699299218_aeba45d507dbbb841261.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1699299220_243124f6937aea4938eb.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1699299221_9c04059a6bb633e4c2ea.jpeg"
     ],
-    "preco_final": 120.9,
-    "cores_variadas": false
+    "preco_final": 232.9,
+    "cores_variadas": true
   },
   {
-    "id": "4337633",
-    "nome": "CONJUNTO CECILIA SHORT",
-    "preco_original": 70.0,
+    "id": "317955",
+    "nome": "Pacote Com 10 Regatas Gg",
+    "preco_original": 95.0,
     "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1786017758_cb98af3ba5f4395a7b2d.webp",
-      "https://arquivos.facilzap.app.br/produtos/1786017865_9cc6d6633942fddbb670.webp",
-      "https://arquivos.facilzap.app.br/produtos/1786017869_2e49eaf8afe3c57d497a.webp"
+      "https://arquivos.facilzap.app.br/produtos/1674009513_42a70ad5f9546d942c11.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1674009513_5fed00263cdb9342e457.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1674009514_164a84562e915fbdac85.jpeg"
     ],
-    "preco_final": 112.9,
-    "cores_variadas": false
+    "preco_final": 152.9,
+    "cores_variadas": true
   },
   {
-    "id": "4324179",
-    "nome": "SHORT MASCULINO",
-    "preco_original": 55.0,
+    "id": "3347497",
+    "nome": "Pacote com 5 Conjuntos de Calça Suplex Plus 07",
+    "preco_original": 175.0,
     "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1785858412_3c734896704b986c16b8.webp",
-      "https://arquivos.facilzap.app.br/produtos/1785858419_02eec30bada64db9c264.webp"
+      "https://arquivos.facilzap.app.br/produtos/1757289571_4d60d709ad21d27f6720.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757289569_23ca7b117a818a55bbea.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757289567_28e79bee1ec10c4b3b58.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757289566_d8010e1c6caa533e1fa3.jpeg.webp"
     ],
-    "preco_final": 88.9,
-    "cores_variadas": false
+    "preco_final": 280.9,
+    "cores_variadas": true
   },
   {
-    "id": "4323904",
-    "nome": "CASACO PREMIUM COM BOLSO",
-    "preco_original": 55.0,
+    "id": "684178",
+    "nome": "PACOTE COM 5 MACACÃO PLUS 01",
+    "preco_original": 150.0,
     "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1785859150_27f6f07a20ba68762191.webp",
-      "https://arquivos.facilzap.app.br/produtos/1785856528_0de4c7a527026aca2975.webp"
+      "https://arquivos.facilzap.app.br/produtos/1695078952_c1989be3bc779caf93a7.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1695078951_48d12799a247ae99274e.jpg"
     ],
-    "preco_final": 88.9,
-    "cores_variadas": false
+    "preco_final": 240.9,
+    "cores_variadas": true
   },
   {
-    "id": "4298763",
-    "nome": "SHORT SAIA PREMIUM",
-    "preco_original": 42.0,
+    "id": "684175",
+    "nome": "PACOTE COM 5 MACACÃO PLUS 02",
+    "preco_original": 150.0,
     "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1785241079_20bc36c9c8169c26f8ab.webp",
-      "https://arquivos.facilzap.app.br/produtos/1785241124_4d46d288d9d0f575da45.webp",
-      "https://arquivos.facilzap.app.br/produtos/1785241082_2029615c35740faa826d.webp"
+      "https://arquivos.facilzap.app.br/produtos/1695078824_3964622c4050d782dd3c.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1695078823_a0e5b4c50427c5af1b09.jpg"
     ],
-    "preco_final": 67.9,
-    "cores_variadas": false
+    "preco_final": 240.9,
+    "cores_variadas": true
   },
   {
-    "id": "4275987",
-    "nome": "SHORT DUPLO PREMIUM",
-    "preco_original": 40.0,
+    "id": "318149",
+    "nome": "Pacote com 5 Conjuntos Midi Short Bolso",
+    "preco_original": 145.0,
     "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1784662286_e328423d3593d2cadafd.webp",
-      "https://arquivos.facilzap.app.br/produtos/1784662245_2ce47d532a27fb4063f8.webp"
+      "https://arquivos.facilzap.app.br/produtos/1674044621_c15c8f4828faedb794c0.png",
+      "https://arquivos.facilzap.app.br/produtos/1674044621_8b832c1e30b291348174.png"
     ],
-    "preco_final": 64.9,
-    "cores_variadas": false
+    "preco_final": 232.9,
+    "cores_variadas": true
   },
   {
-    "id": "327294",
-    "nome": "LEGGING CINTURA ALTA POLIAMIDA REF 334",
-    "preco_original": 32.0,
+    "id": "318147",
+    "nome": "Pacote Com 5 Conjuntos Midi Calça Bolso",
+    "preco_original": 165.0,
     "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1750293429_a71b647287106a70b5ae.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1750293427_6b4b665ee9f9df60374e.jpeg.webp"
+      "https://arquivos.facilzap.app.br/produtos/1674044552_139f43c353fd422289a5.png",
+      "https://arquivos.facilzap.app.br/produtos/1674044553_46e866836b21a1006a34.png"
     ],
-    "preco_final": 51.9,
-    "cores_variadas": false
+    "preco_final": 264.9,
+    "cores_variadas": true
   },
   {
-    "id": "3793662",
-    "nome": "CORTA VENTO",
-    "preco_original": 45.0,
+    "id": "318124",
+    "nome": "Pacote Com 5 Conjuntos de Calça Bolso Plus",
+    "preco_original": 175.0,
     "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1770841708_ebff7d989ba216697abf.webp",
-      "https://arquivos.facilzap.app.br/produtos/1770841702_d32e5295ea49448c2936.webp"
+      "https://arquivos.facilzap.app.br/produtos/1712758355_1836724bfa11fc523c14.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1712758352_f2bcdf9f52090280ff70.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1712758349_9202ffdbdcb529f76280.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1712758346_8dd7bc9ac2330ed04e90.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1712758343_c535498112abc2d1a2c8.jpeg.webp"
     ],
-    "preco_final": 72.9,
-    "cores_variadas": false
+    "preco_final": 280.9,
+    "cores_variadas": true
   },
   {
-    "id": "3146488",
-    "nome": "MACAQUITO CANELADO DE BOLSO",
-    "preco_original": 60.0,
+    "id": "3703560",
+    "nome": "Kit com 5 Conjuntos Fitness em Suplex – Linha Slim (Ref.) 21",
+    "preco_original": 100.0,
     "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1762890523_ed688a31e41edc4e983a.webp",
-      "https://arquivos.facilzap.app.br/produtos/1762890514_ce96fe8ba38f6a6a6826.webp",
-      "https://arquivos.facilzap.app.br/produtos/1762890552_d923c36a709871747941.webp"
+      "https://arquivos.facilzap.app.br/produtos/1768184379_4f9b66c22c0088846e1f.webp",
+      "https://arquivos.facilzap.app.br/produtos/1768184301_0a8227dc7be88501dbd4.webp",
+      "https://arquivos.facilzap.app.br/produtos/1768184370_41b9d8344479fc641429.webp",
+      "https://arquivos.facilzap.app.br/produtos/1768184367_0367869de1a22d23d836.webp"
     ],
-    "preco_final": 96.9,
-    "cores_variadas": false
+    "preco_final": 160.9,
+    "cores_variadas": true
   },
   {
-    "id": "331423",
-    "nome": "REGATA CURTA POLIAMIDA DRYFIT REF 120",
-    "preco_original": 18.0,
+    "id": "3745068",
+    "nome": "Pacote com 5 Conjuntos – Short Duplo em Suplex 04",
+    "preco_original": 130.0,
     "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1675169619_b79b457561f03a0081bd.jpeg",
-      "https://arquivos.facilzap.app.br/produtos/1675169618_cf0a9cb3b242a6515a23.jpeg"
+      "https://arquivos.facilzap.app.br/produtos/1769453023_21115af9d1fc2694276b.webp",
+      "https://arquivos.facilzap.app.br/produtos/1769452946_a66117391a3f29e4dedc.webp",
+      "https://arquivos.facilzap.app.br/produtos/1769453016_3024b48eefd91c8df32e.webp"
     ],
-    "preco_final": 28.9,
-    "cores_variadas": false
+    "preco_final": 208.9,
+    "cores_variadas": true
   },
   {
-    "id": "334025",
-    "nome": "LEGGING DETALHE LATERAL POLIAMIDA REF 322",
-    "preco_original": 34.0,
+    "id": "3745064",
+    "nome": "Pacote com 5 Conjuntos – Short Duplo em Suplex 05",
+    "preco_original": 130.0,
     "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1675338021_ee5a93ad651b67cf22ca.jpeg",
-      "https://arquivos.facilzap.app.br/produtos/1675338020_9f930b7d510cd8ae7a62.jpeg"
+      "https://arquivos.facilzap.app.br/produtos/1769452941_ea4ff6e14df2dea6efe3.webp",
+      "https://arquivos.facilzap.app.br/produtos/1769452938_da8ac2d3a78dd4453c7c.webp",
+      "https://arquivos.facilzap.app.br/produtos/1769452861_d749549268838ecb52ff.webp"
     ],
-    "preco_final": 54.9,
-    "cores_variadas": false
+    "preco_final": 208.9,
+    "cores_variadas": true
   },
   {
-    "id": "4059477",
-    "nome": "CONJUNTO CANELADO GG DE CALÇA",
-    "preco_original": 70.0,
+    "id": "3745047",
+    "nome": "Pacote com 5 Conjuntos – Short Duplo em Suplex 06",
+    "preco_original": 155.0,
     "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1778617044_630a83dc09adc26019e2.webp",
-      "https://arquivos.facilzap.app.br/produtos/1778617039_0666388e199be64726b9.webp"
+      "https://arquivos.facilzap.app.br/produtos/1769452867_da70358a3d4aca9b6a9a.webp",
+      "https://arquivos.facilzap.app.br/produtos/1769452863_88b5aa8134df5c29cb69.webp",
+      "https://arquivos.facilzap.app.br/produtos/1769452859_61f861ff2b6b3198e9b9.webp"
     ],
-    "preco_final": 112.9,
-    "cores_variadas": false
+    "preco_final": 248.9,
+    "cores_variadas": true
   },
   {
-    "id": "333277",
-    "nome": "TOP 3D DE ALÇA REF 350",
-    "preco_original": 22.0,
+    "id": "3249148",
+    "nome": "Pacote com 5 Conjuntos de Short Duplo Suplex",
+    "preco_original": 155.0,
     "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1777385588_8d2c9e6d9631cc916c1b.webp",
-      "https://arquivos.facilzap.app.br/produtos/1777385582_881499a98698ab3747d6.webp",
-      "https://arquivos.facilzap.app.br/produtos/1777385575_b8a4e4ca6dbea9fc8417.webp"
+      "https://arquivos.facilzap.app.br/produtos/1754400023_546d16364f8d5d85b35c.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1754400020_58c2d4b57e658585ad2a.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1754400029_d886ef6d0ca26faf588a.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1754400015_1afd3a5d0a71b877d1f5.jpeg.webp"
     ],
-    "preco_final": 35.9,
-    "cores_variadas": false
+    "preco_final": 248.9,
+    "cores_variadas": true
   },
   {
-    "id": "875534",
-    "nome": "SHORT CURTO POLIAMIDA REF 366",
-    "preco_original": 22.0,
+    "id": "2632923",
+    "nome": "Pacote com 5 Conjuntos de Short Ref 57",
+    "preco_original": 125.0,
     "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1777399845_eb53a3b9dbf4c25d738c.webp",
-      "https://arquivos.facilzap.app.br/produtos/1777399715_6a492d6f6e4094afe24b.webp",
-      "https://arquivos.facilzap.app.br/produtos/1777399702_ada3aa0d1091b9876551.webp"
+      "https://arquivos.facilzap.app.br/produtos/1734452185_f0de7e52f28d6f33d766.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1734452182_a8ef2b106b843fd23348.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1734452178_b840d2a9b97a97925707.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1734452174_9d2db7a1cb0db4ed2742.jpeg.webp"
     ],
-    "preco_final": 35.9,
-    "cores_variadas": false
+    "preco_final": 200.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "3311193",
+    "nome": "Pacote com 5 Casacos Corta Vento Em Tactel",
+    "preco_original": 100.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1775601640_a05498ebbe8f75fdb54f.webp",
+      "https://arquivos.facilzap.app.br/produtos/1775601637_d2bb8e3244a52e17dcd4.webp",
+      "https://arquivos.facilzap.app.br/produtos/1775601634_f67b0a23b661dc892f68.webp",
+      "https://arquivos.facilzap.app.br/produtos/1775601632_ea4bbf32a06eba9ea2f9.webp",
+      "https://arquivos.facilzap.app.br/produtos/1756130392_4a95d327fecad384eb26.jpeg.webp"
+    ],
+    "preco_final": 160.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "684191",
+    "nome": "PACOTE COM 5 MACAQUINHOS CURTO REF 06",
+    "preco_original": 100.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1695079278_3e1e4484e5f105324157.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1695079279_67e7c3e08c76d8464348.jpg"
+    ],
+    "preco_final": 160.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "3769198",
+    "nome": "Pacote com 5 Conjuntos Short Duplo em Poliamida com Proteção UV REF 06",
+    "preco_original": 275.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1770214968_150c3bbb17d5d18ef45a.webp",
+      "https://arquivos.facilzap.app.br/produtos/1770214888_b6b7db2f077cbb7c9422.webp",
+      "https://arquivos.facilzap.app.br/produtos/1770214934_3b0e4c1556db129c7364.webp"
+    ],
+    "preco_final": 440.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "3036498",
+    "nome": "Pacote com 5 Conjuntos de Short Duplo Ref 03",
+    "preco_original": 280.5,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1747664376_34b34d8abfcb5f0f76ca.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747664374_68b685678c47173880e4.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747664371_fdd40b8281211baec771.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747664370_b0d21f3151909415fd21.jpeg.webp"
+    ],
+    "preco_final": 448.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "3018361",
+    "nome": "Pacote com 5 conjuntos em poliamida Ref 62 Grmt 320",
+    "preco_original": 321.3,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1747099866_8d3dfbe4468c120a5e7b.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747099864_bcc8f9a6c91c36d2b49d.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747099861_2c426de550c6a0233e79.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747099857_a8079d24755c35922641.jpeg.webp"
+    ],
+    "preco_final": 514.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "2960573",
+    "nome": "Pacote com 10 Regatas M",
+    "preco_original": 95.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1745250718_be87d946c3b460164f03.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1745250718_ffbb6c56eb67c0ba8261.jpeg.webp"
+    ],
+    "preco_final": 152.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "2851134",
+    "nome": "Pacote com 5 Conjuntos de Short Ref 08 Jcquard Grmt 360",
+    "preco_original": 230.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1741779465_9ae594e4dc324b893514.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1741779462_6f24c1ae5a419b0974d4.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1741779459_a63d01d234007579cc64.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1741779456_1bc50a798f098d825b17.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1741779454_7c63332fc48115e44887.jpeg.webp"
+    ],
+    "preco_final": 368.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "2774063",
+    "nome": "PACOTE COM 10 REGATAS MASC DRYFIT SORTIDAS",
+    "preco_original": 125.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1739208574_ffc34845d8ced51c9ab0.jpg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1739208571_48023c3afb56aeff8def.jpg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1739208568_2fdb7c77a4abc00ccaba.jpg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1739208564_86a4e53d85aac9b581f4.jpg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1739208560_62efd6fd0a835518c739.jpg.webp"
+    ],
+    "preco_final": 200.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "2576248",
+    "nome": "Pacote com 5 Conjuntos de Calça Ref 11 Poliamida Gramatura 320",
+    "preco_original": 220.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1732561598_b4bb302b57c04cf3e3b5.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1732561592_9d87e4761015324b6612.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1732561587_01af7c862f9dbe1efbc0.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1732561581_1687c2400490a02071fa.jpeg.webp"
+    ],
+    "preco_final": 352.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "2107380",
+    "nome": "Pacote com 10 Blusas Masc DryFit Lisa P,M,G,GG",
+    "preco_original": 130.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1722286403_f08154d018f8e3eea1db.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1722286400_532b08802fbe71e084be.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1722286396_c6eb1df10619c3d36d9d.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1722286392_90a0e5d3d5188fc8d30c.jpeg.webp"
+    ],
+    "preco_final": 208.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "2107347",
+    "nome": "Pacote com 5 Conjuntos de Calça Ref 45",
+    "preco_original": 150.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1742831169_e15ee1c8630647348e00.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1742831166_bec39897179ecb176721.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1742831160_ebbe8b99b679e22c9e7f.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1722286038_69e10bb7e080dfb86d68.jpeg.webp"
+    ],
+    "preco_final": 240.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "1902473",
+    "nome": "Pacote com 5 Casacos Cropped Poliamida Premium",
+    "preco_original": 150.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1719350971_b0809909463b103619c6.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1719350967_51bdd769554a2c350f57.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1719350963_08cc21035723717d2bd4.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1719350959_0bf97863e611da24d03a.jpeg.webp"
+    ],
+    "preco_final": 240.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "1902472",
+    "nome": "Pacote com 5 Casacos Longos Poliamida Premium",
+    "preco_original": 150.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1719350888_2dd96acee16e98c8a682.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1719350886_a55c3726064562e2248f.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1719350882_2b4b7b12a4a3ede4cd45.jpeg.webp"
+    ],
+    "preco_final": 240.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "1548837",
+    "nome": "PACOTE COM 5 CONJUNTOS DE CALÇA 44 POLIAMIDA CANELADO",
+    "preco_original": 350.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1713802390_f5b47d68435d0e9ab2c3.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1713802385_adfd99324e314eb136a5.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1713802382_c48282a17ad461e10660.jpeg.webp"
+    ],
+    "preco_final": 560.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "570243",
+    "nome": "PACOTE COM 5 COLETES PLUS SIZE Gg POLIAMIDA FURADINHO",
+    "preco_original": 130.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1690901308_fe94b9dbd5e959a669f9.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1690901306_ceb9e0e6a4c2373b7b86.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1690901307_b5972968bca42c051540.jpg"
+    ],
+    "preco_final": 208.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "570240",
+    "nome": "PACOTE COM 5 CASAQUINHOS LONGO PLUS SIZE- Gg",
+    "preco_original": 125.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1690901330_1c9691c21f829b576f2a.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1690901333_6a147889c16b59f2ecf3.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1690901332_bc01103a0fc4475858d9.jpg"
+    ],
+    "preco_final": 200.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "570215",
+    "nome": "PACOTE COM 5 CROPPED CURTO COM ZIPER POLIAMIDA",
+    "preco_original": 100.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1690837007_554cfd6627e6d7eed54c.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1690837008_c21d86cea733ab347a53.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1690837008_d37fe6869465d1c8fc86.jpg"
+    ],
+    "preco_final": 160.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "352718",
+    "nome": "PACOTE COM 10 BLUSAS COM MANGA G POLIAMIDA",
+    "preco_original": 205.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1677100459_7d522bf56bc29aff6ce1.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1677100468_da90f51917f9706b6702.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1677100457_869adfbb584031d0ea08.jpg"
+    ],
+    "preco_final": 328.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "352707",
+    "nome": "PACOTE COM 5 CONJUNTOS DE CALÇA POLIAMIDA MODELO 03 Canelado",
+    "preco_original": 350.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1677099668_2a4b4c6a1bcb3b04051c.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1677099669_ef67434e34e06204c017.jpg",
+      "https://arquivos.facilzap.app.br/produtos/1677099673_afc5408da599622f5a0e.jpg"
+    ],
+    "preco_final": 560.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "2141881",
+    "nome": "PACOTE COM 5 MACAQUINHOS POLIAMIDA CANELADO COM REGULAGEM",
+    "preco_original": 330.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1722953115_7300a01e34613b9b49b4.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1722953113_dd41a8b59f9b8dea7b4d.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1722953110_8b63d4d6696aa6cf83ba.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1722953108_f034a96b5e1ecf960b73.jpeg.webp"
+    ],
+    "preco_final": 528.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "4364027",
+    "nome": "Pacote com 5 Macaquinho Ref 01 Em Suplex",
+    "preco_original": 125.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1786631087_3611a133d72ec16a0533.webp",
+      "https://arquivos.facilzap.app.br/produtos/1786630988_30819bd767500dccd907.webp",
+      "https://arquivos.facilzap.app.br/produtos/1786631065_b62c9575a6d0bdd41ea2.webp"
+    ],
+    "preco_final": 200.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "4364023",
+    "nome": "Conjunto de Calça em Suplex Ref 71",
+    "preco_original": 150.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1786630979_f5fc4c50e644908725f8.webp",
+      "https://arquivos.facilzap.app.br/produtos/1786630986_d9593870c9b56f31c8e5.webp",
+      "https://arquivos.facilzap.app.br/produtos/1786631022_c935995ff14e7f369c4f.webp",
+      "https://arquivos.facilzap.app.br/produtos/1786631028_52655dab2874538655b2.webp"
+    ],
+    "preco_final": 240.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "2632810",
+    "nome": "Pacote com 5 Conjuntos de Calça Ref 51 Suplex",
+    "preco_original": 155.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1734449782_f3b72fcada96d574864b.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1734449779_40cfe3224935ed633b2d.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1734449769_d5d636f9848b3ad078c7.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1734449765_5c4dc8066091cb36169b.jpeg.webp"
+    ],
+    "preco_final": 248.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "3950005",
+    "nome": "Pacote com 5 Conjuntos de Calça Viés",
+    "preco_original": 120.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1775599866_c79400f6cf3e5147b12a.webp",
+      "https://arquivos.facilzap.app.br/produtos/1775599861_4de81a4cbc952b2a07f4.webp"
+    ],
+    "preco_final": 192.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "2773884",
+    "nome": "PACOTE COM 5 CONJUNTOS DE CALCA REF 28 POLIAMIDA GMRT 320",
+    "preco_original": 220.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1739208029_b4e96719411b8dd0a0d5.jpg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1739208024_aa864d4d8b796ead0ed6.jpg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1739208015_a0c6c8a8e9a2559ce164.jpg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1739208010_52035c0bca5dd1b3ae4f.jpg.webp"
+    ],
+    "preco_final": 352.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "4019547",
+    "nome": "Pacote com 5 Conjuntos de Short Duplo em Suplex Ref 06",
+    "preco_original": 120.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777481150_a93c099878d7ca1f6274.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777480991_435bf127e0b4da8d9a41.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777481142_976987011784b58fb90f.webp"
+    ],
+    "preco_final": 192.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "3347539",
+    "nome": "Pacote com 5 Conjuntos de Short Saia 07 Plus Suplex",
+    "preco_original": 175.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1757290031_8e32b5e3470411a2f55c.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757290000_309505e20332f03040a8.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757289998_2182d8775adec9870235.jpeg.webp"
+    ],
+    "preco_final": 280.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "3347534",
+    "nome": "Pacote com 5 Conjuntos de Short Duplo Suplex Bicolor",
+    "preco_original": 175.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1757289912_48daaf37bf7741116be8.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757289911_bd0a55baaae3706cbaf2.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757289909_1f699d1c5c9f78ab0d13.jpeg.webp"
+    ],
+    "preco_final": 280.9,
+    "cores_variadas": true
+  },
+  {
+    "id": "3347483",
+    "nome": "Pacote com 5 Conjuntos de Short Bolso 04 Plus Suplex",
+    "preco_original": 145.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1757289374_b18d7e5690d7a99e33dc.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757289372_1301788b883cf129d3c7.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757289371_08b4561086cfb1c6fb50.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757289369_bcd1ac9e56ca284c48c5.jpeg.webp"
+    ],
+    "preco_final": 232.9,
+    "cores_variadas": true
   }
 ]
 </script>
@@ -744,13 +1118,12 @@ a{ color: inherit; }
 <script>
 // ===== Config ============================================================
 const WHATSAPP_NUMERO = "5571986441234"; // 71 98644-1234
-const PEDIDO_MINIMO = 10;
-const LOTE_TAMANHO = 12; // quantas peças aparecem por vez, ao rolar a página
+const PEDIDO_MINIMO = 4;
+const FRETE_GRATIS_A_PARTIR_DE = 6;
+const LOTE_TAMANHO = 12; // quantos kits aparecem por vez, ao rolar a página
 const PIX_DESCONTO = 0.10;
 const PIX_CHAVE = "fabricaluluextra@gmail.com";
 const PIX_TITULAR = "Lucas Pereira Silva de Deus";
-const PEDIDO_PREFIXO = "AV"; // AV = avulso, pra diferenciar dos pedidos de kit (LU) no WhatsApp
-const FRETE_UNICO = { label: "Vip grátis (4 a 7 dias úteis)", valor: 0.00 };
 const FRETE = {
   economico: { label: "Econômico (9 dias úteis)", valor: 39.90 },
   vip:        { label: "Vip rápido (4 dias úteis)", valor: 90.00 },
@@ -760,11 +1133,13 @@ const FRETE = {
 // ===== Estado ============================================================
 let PRODUTOS = [];
 const carrinho = {}; // { id: quantidade }
+let freteEscolhido = "economico";
 let indiceRenderizado = 0;      // quantos produtos já foram colocados na tela
 const carouselState = {};       // { id: foto atual }
 let observerInfinito = null;
 let swipeConfigurado = false;
-let produtosVisiveis = [];      // lista mostrada na tela, usada pela rolagem infinita
+let filtroAtivo = "todos";      // "todos" | "poliamida" | "suplex"
+let produtosVisiveis = [];      // lista já filtrada, usada pela rolagem infinita
 let formaPagamento = "pix";     // "pix" | "cartao"
 let numeroPedido = null;
 
@@ -777,9 +1152,15 @@ function produtoPorId(id) {
   return PRODUTOS.find(p => p.id === id);
 }
 
+function aplicarFiltro(lista, filtro) {
+  if (filtro === "poliamida") return lista.filter(p => /poliamida/i.test(p.nome));
+  if (filtro === "suplex") return lista.filter(p => !/poliamida/i.test(p.nome));
+  return lista;
+}
+
 function gerarNumeroPedido() {
   const numero = Math.floor(100 + Math.random() * 900); // 100-999
-  return PEDIDO_PREFIXO + numero;
+  return "LU" + numero;
 }
 
 function totalKitsNoCarrinho() {
@@ -917,10 +1298,10 @@ function renderCatalogo() {
   const grid = document.getElementById("grid-produtos");
   grid.innerHTML = "";
   indiceRenderizado = 0;
-  produtosVisiveis = PRODUTOS;
+  produtosVisiveis = aplicarFiltro(PRODUTOS, filtroAtivo);
 
   document.getElementById("contagem-produtos").textContent =
-    `${produtosVisiveis.length} peça${produtosVisiveis.length === 1 ? "" : "s"} em estoque`;
+    `${produtosVisiveis.length} kit${produtosVisiveis.length === 1 ? "" : "s"} em estoque`;
 
   carregarMaisProdutos();
   grid.addEventListener("click", onGridClick);
@@ -929,6 +1310,16 @@ function renderCatalogo() {
     swipeConfigurado = true;
   }
   configurarRolagemInfinita();
+}
+
+function ligarFiltros() {
+  document.getElementById("filtros").addEventListener("click", (e) => {
+    const btn = e.target.closest(".filtro-btn");
+    if (!btn) return;
+    document.querySelectorAll(".filtro-btn").forEach(b => b.classList.toggle("is-active", b === btn));
+    filtroAtivo = btn.dataset.filtro;
+    renderCatalogo();
+  });
 }
 
 let quantidadesPendentes = {}; // quantidade selecionada no card antes de "Adicionar"
@@ -983,29 +1374,47 @@ function onGridClick(evento) {
 
 // ===== Carrinho ==========================================================
 function renderCarrinho() {
-  const totalPecas = totalKitsNoCarrinho();
+  const totalKits = totalKitsNoCarrinho();
   const subtotal = subtotalPecas();
 
   // número do pedido: gera um novo quando o carrinho sai do vazio,
   // e "esquece" quando o carrinho volta a ficar vazio (próximo pedido = novo número)
-  if (totalPecas > 0 && !numeroPedido) {
+  if (totalKits > 0 && !numeroPedido) {
     numeroPedido = gerarNumeroPedido();
-  } else if (totalPecas === 0) {
+  } else if (totalKits === 0) {
     numeroPedido = null;
   }
 
   // barra fixa
-  document.getElementById("cart-count").textContent = totalPecas;
-  document.getElementById("cart-label").textContent = totalPecas === 1 ? "peça no pedido" : "peças no pedido";
+  document.getElementById("cart-count").textContent = totalKits;
+  document.getElementById("cart-label").textContent = totalKits === 1 ? "kit no pedido" : "kits no pedido";
 
-  const progresso = Math.min(100, (totalPecas / PEDIDO_MINIMO) * 100);
+  const progresso = Math.min(100, (totalKits / FRETE_GRATIS_A_PARTIR_DE) * 100);
   document.getElementById("cart-progress-fill").style.width = progresso + "%";
 
   const textoProgresso = document.getElementById("cart-progress-text");
-  if (totalPecas < PEDIDO_MINIMO) {
-    textoProgresso.textContent = `Faltam ${PEDIDO_MINIMO - totalPecas} peça${PEDIDO_MINIMO - totalPecas === 1 ? "" : "s"} para o pedido mínimo`;
+  if (totalKits < PEDIDO_MINIMO) {
+    textoProgresso.textContent = `Faltam ${PEDIDO_MINIMO - totalKits} kit${PEDIDO_MINIMO - totalKits === 1 ? "" : "s"} para o pedido mínimo`;
+  } else if (totalKits < FRETE_GRATIS_A_PARTIR_DE) {
+    textoProgresso.textContent = `Faltam ${FRETE_GRATIS_A_PARTIR_DE - totalKits} kit${FRETE_GRATIS_A_PARTIR_DE - totalKits === 1 ? "" : "s"} para o frete grátis`;
   } else {
-    textoProgresso.textContent = "Pedido mínimo atingido ✓";
+    textoProgresso.textContent = "Frete grátis liberado 🎉";
+  }
+
+  // opção de frete grátis: habilita/seleciona a partir do limite
+  const inputGratis = document.querySelector("input[value='vip_gratis']");
+  const optionGratis = document.getElementById("ship-gratis-option");
+  if (totalKits >= FRETE_GRATIS_A_PARTIR_DE) {
+    inputGratis.disabled = false;
+    inputGratis.checked = true;
+    freteEscolhido = "vip_gratis";
+    optionGratis.classList.remove("is-disabled");
+  } else {
+    inputGratis.disabled = true;
+    if (freteEscolhido === "vip_gratis") {
+      freteEscolhido = "economico";
+      document.querySelector("input[value='economico']").checked = true;
+    }
   }
 
   // painel expandido: lista de itens
@@ -1013,7 +1422,7 @@ function renderCarrinho() {
   const idsNoCarrinho = Object.keys(carrinho).filter(id => carrinho[id] > 0);
 
   if (idsNoCarrinho.length === 0) {
-    painelItems.innerHTML = `<p class="cart-empty-msg">Seu pedido está vazio. Adicione peças no catálogo acima.</p>`;
+    painelItems.innerHTML = `<p class="cart-empty-msg">Seu pedido está vazio. Adicione kits no catálogo acima.</p>`;
   } else {
     painelItems.innerHTML = idsNoCarrinho.map(id => {
       const produto = produtoPorId(id);
@@ -1027,14 +1436,14 @@ function renderCarrinho() {
     }).join("");
   }
 
-  // resumo financeiro (frete é único e sempre grátis nessa subpágina)
-  const frete = FRETE_UNICO.valor;
+  // resumo financeiro
+  const frete = FRETE[freteEscolhido].valor;
   const descontoPix = subtotal * PIX_DESCONTO;
   const totalPix = (subtotal - descontoPix) + frete;
   const totalCartao = subtotal + frete;
 
   document.getElementById("summary-subtotal").textContent = formatarReais(subtotal);
-  document.getElementById("summary-frete").textContent = "Grátis";
+  document.getElementById("summary-frete").textContent = frete === 0 ? "Grátis" : formatarReais(frete);
   document.getElementById("cart-total-value").textContent = formatarReais(totalCartao);
   document.getElementById("total-pix").textContent = formatarReais(totalPix);
   document.getElementById("total-cartao").textContent = formatarReais(totalCartao);
@@ -1042,11 +1451,11 @@ function renderCarrinho() {
   // botões de checkout (um por forma de pagamento)
   const btnPix = document.getElementById("btn-confirmar-pix");
   const btnCartao = document.getElementById("btn-solicitar-cartao");
-  if (totalPecas < PEDIDO_MINIMO) {
+  if (totalKits < PEDIDO_MINIMO) {
     btnPix.disabled = true;
     btnCartao.disabled = true;
-    btnPix.textContent = `Pedido mínimo: ${PEDIDO_MINIMO} peças (faltam ${PEDIDO_MINIMO - totalPecas})`;
-    btnCartao.textContent = `Pedido mínimo: ${PEDIDO_MINIMO} peças (faltam ${PEDIDO_MINIMO - totalPecas})`;
+    btnPix.textContent = `Pedido mínimo: ${PEDIDO_MINIMO} kits (faltam ${PEDIDO_MINIMO - totalKits})`;
+    btnCartao.textContent = `Pedido mínimo: ${PEDIDO_MINIMO} kits (faltam ${PEDIDO_MINIMO - totalKits})`;
   } else {
     btnPix.disabled = false;
     btnCartao.disabled = false;
@@ -1078,17 +1487,18 @@ function montarListaItens() {
 function montarMensagemPix() {
   const subtotal = subtotalPecas();
   const desconto = subtotal * PIX_DESCONTO;
-  const total = (subtotal - desconto) + FRETE_UNICO.valor;
+  const frete = FRETE[freteEscolhido].valor;
+  const total = (subtotal - desconto) + frete;
 
   const linhas = [
-    `Paguei o pedido ${numeroPedido} (peças avulsas) — via Pix — confira por gentileza 🙏`,
+    `Paguei o pedido ${numeroPedido} — via Pix — confira por gentileza 🙏`,
     "",
     `Pedido ${numeroPedido} — itens:`,
     ...montarListaItens(),
     "",
     `Peças: ${formatarReais(subtotal)}`,
     `Desconto Pix (10%): -${formatarReais(desconto)}`,
-    `Frete (${FRETE_UNICO.label}): Grátis`,
+    `Frete (${FRETE[freteEscolhido].label}): ${freteEscolhido === "vip_gratis" ? "Grátis" : formatarReais(frete)}`,
     `Total pago: ${formatarReais(total)}`,
   ];
   return linhas.join("\n");
@@ -1096,16 +1506,17 @@ function montarMensagemPix() {
 
 function montarMensagemCartao() {
   const subtotal = subtotalPecas();
-  const total = subtotal + FRETE_UNICO.valor;
+  const frete = FRETE[freteEscolhido].valor;
+  const total = subtotal + frete;
 
   const linhas = [
-    `Desejo pagar o pedido ${numeroPedido} (peças avulsas) via cartão de crédito (até 3x, sem desconto) — pode me enviar o link de pagamento?`,
+    `Desejo pagar o pedido ${numeroPedido} via cartão de crédito (até 3x, sem desconto) — pode me enviar o link de pagamento?`,
     "",
     `Pedido ${numeroPedido} — itens:`,
     ...montarListaItens(),
     "",
     `Peças: ${formatarReais(subtotal)}`,
-    `Frete (${FRETE_UNICO.label}): Grátis`,
+    `Frete (${FRETE[freteEscolhido].label}): ${freteEscolhido === "vip_gratis" ? "Grátis" : formatarReais(frete)}`,
     `Total: ${formatarReais(total)}`,
   ];
   return linhas.join("\n");
@@ -1126,6 +1537,15 @@ function ligarEventos() {
     if (!btn) return;
     delete carrinho[btn.dataset.remove];
     renderCarrinho();
+  });
+
+  document.querySelectorAll("input[name='frete']").forEach(input => {
+    input.addEventListener("change", () => {
+      if (!input.disabled) {
+        freteEscolhido = input.value;
+        renderCarrinho();
+      }
+    });
   });
 
   document.querySelectorAll("input[name='pagamento']").forEach(input => {
@@ -1159,6 +1579,8 @@ function ligarEventos() {
     if (totalKitsNoCarrinho() < PEDIDO_MINIMO) return;
     abrirWhatsApp(montarMensagemCartao());
   });
+
+  ligarFiltros();
 }
 
 // ===== Inicialização ======================================================
