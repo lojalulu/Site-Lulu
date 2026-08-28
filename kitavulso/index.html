@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lulu - Peças Avulsas</title>
+<meta name="description" content="Lulu - Peças Avulsas — catálogo avulso pra completar seu mix. Pedido mínimo 10 peças. Frete grátis Brasil.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+/* ===== Tokens — identidade Loja Lulu ================================ */
+:root{
+  --bg:            #FFF6FA;   /* papel levemente rosado */
+  --surface:       #FFFFFF;
+  --surface-2:     #FDE9F1;   /* rosa suave — cards e etiquetas */
+  --line:          #F5D3E3;
+  --text:          #2B1524;   /* ameixa quase-preto, não preto puro */
+  --text-muted:    #93798A;
+  --accent:        #FF3D80;   /* rosa Lulu — vibrante e alegre */
+  --accent-ink:    #FFFFFF;
+  --gold:          #FFB100;   /* amarelo-sol — contraste energético */
+  --good:          #1FAA59;
+
+  --font-display:  'Baloo 2', system-ui, sans-serif;   /* redondo, alegre — combina com "Lulu" */
+  --font-body:     'Work Sans', system-ui, sans-serif;
+  --font-mono:     'IBM Plex Mono', ui-monospace, monospace; /* preços e contagem de kits */
+
+  --radius: 16px;
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+body{
+  margin:0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 84px; /* espaço pra barra do carrinho */
+}
+a{ color: inherit; }
+:focus-visible{ outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ===== Topbar ======================================================= */
+.topbar{
+  position: sticky; top:0; z-index: 40;
+  background: rgba(255,246,250,.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.topbar-inner{
+  max-width: 1180px; margin:0 auto; padding: 14px 20px;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.brand{ font-family: var(--font-display); font-size: 15px; letter-spacing: .02em; }
+.brand strong{ color: var(--accent); }
+.brand-tag{
+  font-family: var(--font-mono); font-size: 10px; color: var(--text-muted);
+  border: 1px solid var(--line); border-radius: 999px; padding: 3px 8px; margin-left: 8px;
+  vertical-align: middle;
+}
+.topbar-whats{
+  font-family: var(--font-mono); font-size: 12px; text-decoration:none;
+  background: var(--accent); color: #fff; padding: 9px 16px; border-radius: 999px;
+  transition: transform .15s ease;
+}
+.topbar-whats:hover{ transform: translateY(-1px); }
+
+/* ===== Hero ========================================================= */
+.hero{ padding: 56px 20px 40px; }
+.hero-inner{ max-width: 760px; margin: 0 auto; text-align:center; }
+.eyebrow{
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--accent); margin: 0 0 18px;
+}
+.hero h1{
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(28px, 5vw, 44px); line-height: 1.15; margin: 0 0 18px;
+}
+.hero-sub{ color: var(--text-muted); font-size: 16px; line-height: 1.6; max-width: 520px; margin: 0 auto 32px; }
+
+.hero-rules{ display:flex; gap:14px; justify-content:center; flex-wrap: wrap; }
+
+.aviso-separado{
+  max-width: 620px; margin: 26px auto 0;
+  background: var(--surface-2); border: 2px solid var(--accent); border-radius: 14px;
+  padding: 16px 20px; font-size: 14px; line-height: 1.6; color: var(--text);
+}
+.aviso-separado strong{ color: var(--accent); }
+.rule-chip{
+  display:flex; align-items:center; gap:10px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
+  padding: 10px 18px 10px 12px;
+}
+.rule-chip--destaque{
+  border-color: var(--accent); background: linear-gradient(180deg, rgba(255,61,128,.16), rgba(255,177,0,.08));
+  box-shadow: 0 0 0 2px rgba(255,61,128,.18);
+  padding: 12px 20px 12px 12px;
+}
+.rule-chip--destaque .rule-num{ background: var(--accent); color:#fff; font-size:17px; min-width:38px; height:38px; }
+.rule-chip--destaque .rule-label{ font-size: 14px; color: var(--text); }
+.rule-chip--destaque .rule-label strong{ color: var(--accent); }
+.rule-num{
+  font-family: var(--font-mono); font-weight: 600; font-size: 16px;
+  background: var(--surface-2); color: var(--accent); border-radius: 999px;
+  min-width: 34px; height: 34px; display:flex; align-items:center; justify-content:center;
+}
+.rule-chip--accent .rule-num{ color: var(--accent); }
+.rule-label{ font-size: 13px; color: var(--text-muted); text-align:left; }
+
+/* ===== Filtros de tecido ============================================ */
+.filtros{
+  max-width: 1180px; margin: 0 auto; padding: 0 20px 26px;
+  display:flex; gap:10px; flex-wrap:wrap;
+}
+.filtro-btn{
+  font-family: var(--font-body); font-weight:600; font-size: 13px;
+  background: var(--surface); border: 1px solid var(--line); color: var(--text-muted);
+  border-radius: 999px; padding: 9px 18px; cursor:pointer; transition: all .15s ease;
+}
+.filtro-btn:hover{ border-color: var(--accent); color: var(--text); }
+.filtro-btn.is-active{ background: var(--accent); border-color: var(--accent); color:#fff; }
+
+/* ===== Catálogo ====================================================== */
+.catalog{ max-width: 1180px; margin: 0 auto; padding: 20px 20px 60px; }
+.catalog-head{ display:flex; align-items: baseline; gap: 12px; margin-bottom: 20px; }
+.catalog-head h2{ font-family: var(--font-display); font-weight:400; font-size: 20px; margin:0; }
+.catalog-count{ font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); }
+
+.grid{
+  display:grid; gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+}
+.scroll-sentinel{ height: 1px; }
+.load-more-msg{
+  grid-column: 1 / -1; text-align:center; padding: 18px 0; color: var(--text-muted);
+  font-family: var(--font-mono); font-size: 12px;
+}
+
+.card{
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  overflow: hidden; display:flex; flex-direction:column;
+  transition: border-color .15s ease;
+}
+.card:hover{ border-color: var(--accent); }
+.card-img-wrap{ position:relative; aspect-ratio: 3/4; background: var(--surface-2); overflow:hidden; touch-action: pan-y; }
+
+/* carrossel de fotos — estilo "arraste pro lado" */
+.carousel-track{
+  display:flex; height:100%; width:100%;
+  transition: transform .3s ease;
+}
+.carousel-track img{
+  flex: 0 0 100%; width:100%; height:100%; object-fit: cover; display:block;
+  -webkit-user-drag: none; user-select: none;
+}
+.carousel-arrow{
+  position:absolute; top:50%; transform: translateY(-50%); z-index: 2;
+  width: 28px; height: 28px; border-radius: 50%; border:none; cursor:pointer;
+  background: rgba(255,255,255,.85); color: var(--text); font-size: 16px; line-height:1;
+  display:flex; align-items:center; justify-content:center;
+  opacity:0; transition: opacity .15s ease;
+}
+.card-img-wrap:hover .carousel-arrow{ opacity:1; }
+.carousel-arrow.prev{ left:8px; }
+.carousel-arrow.next{ right:8px; }
+.carousel-dots{
+  position:absolute; bottom:8px; left:0; right:0; z-index:2;
+  display:flex; justify-content:center; gap:5px;
+}
+.carousel-dots .dot{
+  width:5px; height:5px; border-radius:50%; background: rgba(255,255,255,.55);
+  border: none; padding:0; cursor:pointer;
+}
+.carousel-dots .dot.is-active{ background:#fff; width:14px; border-radius:3px; }
+.card-badge{
+  position:absolute; top:10px; left:10px;
+  font-family: var(--font-mono); font-size: 10px; letter-spacing:.03em;
+  background: rgba(43,21,36,.85); color: var(--gold); border: 1px solid var(--gold);
+  border-radius: 999px; padding: 4px 9px;
+}
+.card-body{ padding: 14px 14px 16px; display:flex; flex-direction:column; gap: 10px; flex:1; }
+.card-title{ font-size: 14px; line-height: 1.35; margin:0; min-height: 38px; }
+
+/* etiqueta de preço estilo "tag de roupa" */
+.price-tag{
+  display:inline-flex; align-items:center; gap:8px; align-self:flex-start;
+  background: var(--surface-2); border: 1px dashed var(--line); border-radius: 8px;
+  padding: 7px 10px 7px 8px; position:relative;
+}
+.price-tag::before{
+  content:""; width:8px; height:8px; border-radius:50%; background: var(--bg);
+  border: 1px solid var(--line);
+}
+.price-tag .valor{ font-family: var(--font-mono); font-weight: 600; font-size: 16px; color: var(--text); }
+.price-tag .valor small{ font-size: 11px; color: var(--text-muted); font-weight: 500; }
+
+.card-foot{ margin-top: auto; display:flex; align-items:center; gap:10px; }
+
+.qty-stepper{
+  display:flex; align-items:center; border: 1px solid var(--line); border-radius: 999px; overflow:hidden;
+}
+.qty-stepper button{
+  width: 30px; height: 30px; background: var(--surface-2); color: var(--text); border:none;
+  font-family: var(--font-mono); font-size: 15px; cursor:pointer;
+}
+.qty-stepper button:hover{ background: var(--accent); color:#fff; }
+.qty-stepper span{ width: 30px; text-align:center; font-family: var(--font-mono); font-size: 13px; }
+
+.add-btn{
+  flex:1; background: var(--accent); color:#fff; border:none; border-radius: 999px;
+  padding: 9px 14px; font-family: var(--font-body); font-weight:600; font-size: 13px; cursor:pointer;
+  transition: filter .15s ease;
+}
+.add-btn:hover{ filter: brightness(1.08); }
+.add-btn.is-added{ background: var(--good); color: var(--accent-ink); }
+
+/* ===== Footer ======================================================== */
+.site-footer{ text-align:center; padding: 30px 20px 40px; color: var(--text-muted); font-size: 12px; }
+
+/* ===== Barra do carrinho (elemento-assinatura) ======================= */
+.cart-bar{
+  position: fixed; left:0; right:0; bottom:0; z-index: 50;
+  background: var(--surface); border-top: 1px solid var(--line);
+  box-shadow: 0 -8px 24px rgba(43,21,36,.14);
+}
+.cart-bar-inner{
+  max-width: 1180px; margin: 0 auto; padding: 10px 16px;
+  display:grid; grid-template-columns: auto 1fr auto; align-items:center; gap: 16px;
+}
+.cart-toggle{
+  display:flex; align-items:center; gap:8px; background: none; border:none; color: var(--text);
+  cursor:pointer; padding: 6px 4px; font-family: var(--font-body);
+}
+.cart-toggle-count{
+  font-family: var(--font-mono); font-weight:600; background: var(--accent); color:#fff;
+  border-radius: 999px; min-width: 26px; height:26px; display:flex; align-items:center; justify-content:center; padding: 0 6px;
+}
+.cart-toggle-label{ font-size: 13px; color: var(--text-muted); white-space:nowrap; }
+.cart-toggle-chevron{ transition: transform .2s ease; color: var(--text-muted); }
+.cart-bar[data-open="true"] .cart-toggle-chevron{ transform: rotate(180deg); }
+
+.cart-progress-wrap{ min-width: 0; }
+.cart-progress-track{
+  position:relative; height: 6px; border-radius: 999px; background: var(--surface-2); overflow: visible;
+}
+.cart-progress-fill{
+  height:100%; border-radius: 999px; background: linear-gradient(90deg, var(--accent), var(--gold));
+  width: 0%; transition: width .25s ease;
+}
+.cart-progress-mark{
+  position:absolute; top:-3px; width: 2px; height: 12px; background: var(--text-muted); opacity:.6;
+}
+.cart-progress-text{ margin: 6px 0 0; font-size: 11.5px; color: var(--text-muted); font-family: var(--font-mono); }
+
+.cart-total-wrap{ text-align:right; }
+.cart-total-label{ display:block; font-size: 10px; text-transform:uppercase; letter-spacing:.06em; color: var(--text-muted); }
+.cart-total-value{ font-family: var(--font-mono); font-weight:600; font-size: 18px; color: var(--accent); }
+
+.cart-panel{
+  max-height: 0; overflow: hidden; transition: max-height .28s ease;
+  border-top: 1px solid transparent;
+}
+.cart-bar[data-open="true"] .cart-panel{
+  max-height: 70vh; overflow-y: auto; border-top-color: var(--line);
+}
+.cart-panel-items{ max-width: 1180px; margin: 0 auto; padding: 14px 16px 0; display:flex; flex-direction:column; gap:10px; }
+.cart-line{ display:flex; align-items:center; gap:10px; font-size: 13px; }
+.cart-line-name{ flex:1; }
+.cart-line-qty{ font-family: var(--font-mono); color: var(--text-muted); }
+.cart-line-remove{ background:none; border:none; color: var(--text-muted); cursor:pointer; font-size: 16px; line-height:1; }
+.cart-line-remove:hover{ color: var(--accent); }
+.cart-empty-msg{ color: var(--text-muted); font-size: 13px; padding: 4px 0 12px; }
+
+.cart-shipping{ max-width: 1180px; margin: 0 auto; padding: 16px; display:flex; flex-direction:column; gap:8px; }
+.cart-shipping-title{ font-family: var(--font-mono); font-size: 11px; text-transform:uppercase; letter-spacing:.06em; color: var(--text-muted); margin: 4px 0 2px; }
+.ship-option{
+  display:flex; align-items:center; gap:10px; border:1px solid var(--line); border-radius: 10px; padding: 10px 12px;
+  cursor:pointer; font-size: 13px;
+}
+.ship-option:has(input:checked){ border-color: var(--accent); background: rgba(255,61,128,.06); }
+.ship-option:has(input:disabled){ opacity:.4; cursor:not-allowed; }
+.ship-option--fixo{ border-color: var(--accent); background: rgba(255,61,128,.06); cursor:default; }
+.ship-name em{ font-style:normal; color: var(--text-muted); display:block; font-size: 11px; }
+.ship-price{ margin-left:auto; font-family: var(--font-mono); }
+
+.cart-panel-head{
+  position: sticky; top:0; z-index:5; background: var(--surface);
+  max-width: 1180px; margin: 0 auto; padding: 10px 16px; border-bottom: 1px solid var(--line);
+}
+.voltar-btn{
+  display:flex; align-items:center; gap:6px; margin:0 auto;
+  background: var(--surface-2); border: 1px solid var(--line); color: var(--text);
+  border-radius: 999px; padding: 9px 18px; font-family: var(--font-body); font-weight:600; font-size: 13px; cursor:pointer;
+}
+.voltar-btn:hover{ border-color: var(--accent); }
+.voltar-btn svg{ color: var(--text-muted); }
+
+.cart-payment{
+  max-width: 1180px; margin: 4px auto 0; padding: 12px 16px 22px; border-top: 1px dashed var(--line);
+  display:flex; flex-direction:column; gap:8px;
+}
+.cart-payment-title{ font-family: var(--font-mono); font-size: 11px; text-transform:uppercase; letter-spacing:.06em; color: var(--text-muted); margin: 4px 0 2px; }
+
+.pay-option{
+  display:flex; align-items:center; gap:10px; border:1px solid var(--line); border-radius: 10px; padding: 12px;
+  cursor:pointer; font-size: 14px;
+}
+.pay-option:has(input:checked){ border-color: var(--accent); background: rgba(255,61,128,.06); }
+.pay-name{ display:flex; align-items:center; gap:8px; }
+.pay-name em{ font-style:normal; color: var(--text-muted); font-size: 12px; }
+.pay-badge{
+  background: var(--good); color:#fff; font-size: 10px; font-weight:700; letter-spacing:.02em;
+  border-radius: 999px; padding: 2px 8px;
+}
+.pay-total{ margin-left:auto; font-family: var(--font-mono); font-weight:600; }
+
+.pay-panel{
+  border: 1px solid var(--line); border-radius: 10px; padding: 14px; background: var(--surface-2);
+  display:flex; flex-direction:column; gap:10px;
+}
+.pay-hint{ font-size: 12.5px; color: var(--text-muted); margin:0; }
+.pix-key-row{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+.pix-key{ font-family: var(--font-mono); font-weight:600; font-size: 14px; background: var(--surface); border-radius: 8px; padding: 8px 10px; word-break: break-all; }
+.pix-titular{ margin:0; font-size: 12.5px; color: var(--text-muted); }
+.copy-btn{
+  background: var(--surface); border: 1px solid var(--line); color: var(--text);
+  border-radius: 999px; padding: 7px 14px; font-size: 12px; font-family: var(--font-body); font-weight:600; cursor:pointer;
+}
+.copy-btn:hover{ border-color: var(--accent); }
+.copy-btn.is-copied{ background: var(--good); color:#fff; border-color: var(--good); }
+
+.cart-summary{ max-width: 1180px; margin: 0 auto; padding: 4px 16px 0; display:flex; flex-direction:column; gap:6px; }
+.cart-summary-row{ display:flex; justify-content:space-between; font-size: 13px; color: var(--text-muted); font-family: var(--font-mono); }
+.cart-summary-row--total{ color: var(--text); font-size: 16px; font-weight:600; padding-top:6px; border-top: 1px dashed var(--line); }
+
+.checkout-btn{
+  display:block; width: 100%; margin: 0;
+  background: var(--good); color: var(--accent-ink); border:none; border-radius: 999px;
+  padding: 14px 18px; font-family: var(--font-body); font-weight: 700; font-size: 15px; cursor:pointer;
+}
+.checkout-btn:disabled{ background: var(--surface); color: var(--text-muted); cursor:not-allowed; }
+
+@media (max-width: 640px){
+  .cart-bar-inner{ grid-template-columns: auto 1fr; }
+  .cart-total-wrap{ grid-column: 1 / -1; text-align:left; display:flex; align-items:baseline; gap:8px; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{ transition: none !important; }
+  html{ scroll-behavior: auto; }
+}
+
+</style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <span class="brand"><strong>Lulu</strong><span class="brand-tag">peças avulsas</span></span>
+      <a class="topbar-whats" href="https://wa.me/5571986441234" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Lulu Peças Avulsas &middot; catálogo atualizado semanalmente</p>
+      <h1>Peça avulsa, do jeito que sua loja precisa.<br>Sem comprar kit fechado ❤️</h1>
+      <p class="hero-sub">Peças escolhidas uma a uma, em vários modelos e tamanhos, pra completar seu mix sem sobra de estoque.</p>
+      <div class="hero-rules">
+        <div class="rule-chip">
+          <span class="rule-num">10</span>
+          <span class="rule-label">peças &mdash; pedido mínimo</span>
+        </div>
+        <div class="rule-chip rule-chip--destaque">
+          <span class="rule-num">🚚</span>
+          <span class="rule-label"><strong>Frete grátis</strong> Vip &mdash; 4 a 7 dias úteis</span>
+        </div>
+      </div>
+
+      <div class="aviso-separado">
+        <strong>Catálogo separado da loja de kits.</strong>
+        Pedido mínimo aqui: <strong>10 peças avulsas</strong>. Não dá pra misturar
+        peça avulsa com os kits de 5 peças da Lulu Extra Fitness no mesmo pedido
+        — são lojas e pedidos diferentes.
+      </div>
+    </div>
+  </section>
+
+  <main class="catalog" id="catalogo">
+    <div class="catalog-head">
+      <h2>Disponível agora</h2>
+      <span class="catalog-count" id="contagem-produtos">&nbsp;</span>
+    </div>
+    <div class="grid" id="grid-produtos"></div>
+    <div class="scroll-sentinel" id="scroll-sentinel"></div>
+    <p class="load-more-msg" id="load-more-msg" hidden>Carregando mais kits…</p>
+  </main>
+
+  <footer class="site-footer">
+    <p>Lulu Peças Avulsas &middot; Pedidos via WhatsApp &middot; Catálogo atualizado semanalmente</p>
+  </footer>
+
+  <!-- Barra fixa do carrinho: o elemento-assinatura do site -->
+  <div class="cart-bar" id="cart-bar" data-state="empty">
+    <div class="cart-bar-inner">
+
+      <button class="cart-toggle" id="cart-toggle" aria-expanded="false">
+        <span class="cart-toggle-count" id="cart-count">0</span>
+        <span class="cart-toggle-label" id="cart-label">peças no pedido</span>
+        <svg class="cart-toggle-chevron" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5.5L7 9.5L11 5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <div class="cart-progress-wrap">
+        <div class="cart-progress-track">
+          <div class="cart-progress-fill" id="cart-progress-fill"></div>
+        </div>
+        <p class="cart-progress-text" id="cart-progress-text">Adicione 10 peças para fechar o pedido</p>
+      </div>
+
+      <div class="cart-total-wrap">
+        <span class="cart-total-label">total</span>
+        <span class="cart-total-value" id="cart-total-value">R$ 0,00</span>
+      </div>
+    </div>
+
+    <div class="cart-panel" id="cart-panel">
+      <div class="cart-panel-head">
+        <button type="button" class="voltar-btn" id="voltar-compras-btn">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M11 5.5L7 9.5L3 5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Voltar às compras
+        </button>
+      </div>
+
+      <div class="cart-panel-items" id="cart-panel-items"></div>
+
+      <div class="cart-shipping">
+        <p class="cart-shipping-title">Frete</p>
+        <div class="ship-option ship-option--fixo">
+          <span class="ship-name">Vip grátis <em>4 a 7 dias úteis</em></span>
+          <span class="ship-price">R$ 0,00</span>
+        </div>
+      </div>
+
+      <div class="cart-summary">
+        <div class="cart-summary-row">
+          <span>Peças</span>
+          <span id="summary-subtotal">R$ 0,00</span>
+        </div>
+        <div class="cart-summary-row">
+          <span>Frete</span>
+          <span id="summary-frete">R$ 39,90</span>
+        </div>
+      </div>
+
+      <div class="cart-payment">
+        <p class="cart-payment-title">Como você quer pagar?</p>
+
+        <label class="pay-option" data-pay="pix">
+          <input type="radio" name="pagamento" value="pix" checked>
+          <span class="pay-name">Pix <strong class="pay-badge">10% off</strong></span>
+          <span class="pay-total" id="total-pix">R$ 0,00</span>
+        </label>
+        <label class="pay-option" data-pay="cartao">
+          <input type="radio" name="pagamento" value="cartao">
+          <span class="pay-name">Cartão de crédito <em>até 3x, sem desconto</em></span>
+          <span class="pay-total" id="total-cartao">R$ 0,00</span>
+        </label>
+
+        <div class="pay-panel" id="pay-panel-pix">
+          <p class="pay-hint">Chave Pix (e-mail) — copie e pague, depois confirme abaixo:</p>
+          <div class="pix-key-row">
+            <span class="pix-key" id="pix-chave">fabricaluluextra@gmail.com</span>
+            <button type="button" class="copy-btn" id="copiar-chave-btn">Copiar chave</button>
+          </div>
+          <p class="pix-titular">Lucas Pereira Silva de Deus</p>
+          <button type="button" class="checkout-btn" id="btn-confirmar-pix" disabled>
+            Já paguei — confirmar no WhatsApp
+          </button>
+        </div>
+
+        <div class="pay-panel" id="pay-panel-cartao" hidden>
+          <p class="pay-hint">Parcelamos em até 3x no cartão, sem desconto. Peça o link de pagamento:</p>
+          <button type="button" class="checkout-btn" id="btn-solicitar-cartao" disabled>
+            Solicitar link de pagamento (cartão)
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUTOS:START -->
+<script id="produtos-data" type="application/json">
+[
+  {
+    "id": "328359",
+    "nome": "TOP NADADOR POLIAMIDA REF 081",
+    "preco_original": 17.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1674823563_11551760b5ff021775e6.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1674823564_108b6d9b9d1a3968fe72.jpeg"
+    ],
+    "preco_final": 27.9,
+    "cores_variadas": false
+  },
+  {
+    "id": "4414230",
+    "nome": "COLETE CORTA VENTO COM BOLSO",
+    "preco_original": 40.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1787749869_161c5b76ab8e1a99a010.webp",
+      "https://arquivos.facilzap.app.br/produtos/1787749872_75b196ef25a041a38764.webp",
+      "https://arquivos.facilzap.app.br/produtos/1787749876_1f753997623a2fca9b21.webp"
+    ],
+    "preco_final": 64.9,
+    "cores_variadas": false
+  },
+  {
+    "id": "4323187",
+    "nome": "CALÇA FLARE 001",
+    "preco_original": 60.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1785850766_9653b19dcd5c560c615f.webp",
+      "https://arquivos.facilzap.app.br/produtos/1785850771_d72696e98e1335297f18.webp"
+    ],
+    "preco_final": 96.9,
+    "cores_variadas": false
+  },
+  {
+    "id": "4267810",
+    "nome": "CASACO POLIAMIDA COM ZIPER",
+    "preco_original": 55.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1784571214_bf5bd151640004c939c9.webp",
+      "https://arquivos.facilzap.app.br/produtos/1784571204_01271539c01a5f065180.webp",
+      "https://arquivos.facilzap.app.br/produtos/1784571209_f6b05e610d75bda242cf.webp"
+    ],
+    "preco_final": 88.9,
+    "cores_variadas": false
+  },
+  {
+    "id": "4376846",
+    "nome": "CONJ GG DE CALÇA CANELADA",
+    "preco_original": 70.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1787014363_74e25371160075acad40.webp",
+      "https://arquivos.facilzap.app.br/produtos/1787014260_39433860bfe35ab19eb4.webp",
+      "https://arquivos.facilzap.app.br/produtos/1787014265_0e399c4abf1e220f152d.webp",
+      "https://arquivos.facilzap.app.br/produtos/1787014347_7ef006afcfc5dfdda23e.webp",
+      "https://arquivos.facilzap.app.br/produtos/1787014351_4a0349e8d2da833245a4.webp"
+    ],
+    "preco_final": 112.9,
+    "cores_variadas": false
+  },
+  {
+    "id": "4376841",
+    "nome": "CONJ DE CALÇA CANELADA",
+    "preco_original": 67.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1787013989_b65cb33fe1a2f83080b1.webp",
+      "https://arquivos.facilzap.app.br/produtos/1787013991_ee4da918da4c96674155.webp",
+      "https://arquivos.facilzap.app.br/produtos/1787013993_f70f04544d3043846db9.webp",
+      "https://arquivos.facilzap.app.br/produtos/1787013995_73185aaa75a8da747b17.webp"
+    ],
+    "preco_final": 107.9,
+    "cores_variadas": false
+  },
+  {
+    "id": "4371813",
+    "nome": "REGATA MACHÃO",
+    "preco_original": 25.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1786972002_958c6ee8150fc056a0a2.webp",
+      "https://arquivos.facilzap.app.br/produtos/1786972078_218ebc45bcb99e8b2e6e.webp",
+      "https://arquivos.facilzap.app.br/produtos/1786972083_1ca51c75d59a04d29be1.webp",
+      "https://arquivos.facilzap.app.br/produtos/1786972199_57ca6d9359926f674757.webp"
+    ],
+    "preco_final": 40.9,
+    "cores_variadas": false
+  },
+  {
+    "id": "4337639",
+    "nome": "CONJUNTO CECILIA CALÇA",
+    "preco_original": 75.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1786017884_8885939b5086ae0cd703.webp",
+      "https://arquivos.facilzap.app.br/produtos/1786017956_f7de9e7341601285f5cd.webp",
+      "https://arquivos.facilzap.app.br/produtos/1786017959_c3f2b6f9a05f2ae79d42.webp"
+    ],
+    "preco_final": 120.9,
+    "cores_variadas": false
+  },
+  {
+    "id": "4337633",
+    "nome": "CONJUNTO CECILIA SHORT",
+    "preco_original": 70.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1786017758_cb98af3ba5f4395a7b2d.webp",
+      "https://arquivos.facilzap.app.br/produtos/1786017865_9cc6d6633942fddbb670.webp",
+      "https://arquivos.facilzap.app.br/produtos/1786017869_2e49eaf8afe3c57d497a.webp"
+    ],
+    "preco_final": 112.9,
+    "cores_variadas": false
+  },
+  {
+    "id": "4324179",
+    "nome": "SHORT MASCULINO",
+    "preco_original": 55.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1785858412_3c734896704b986c16b8.webp",
+      "https://arquivos.facilzap.app.br/produtos/1785858419_02eec30bada64db9c264.webp"
+    ],
+    "preco_final": 88.9,
+    "cores_variadas": false
+  },
+  {
+    "id": "4323904",
+    "nome": "CASACO PREMIUM COM BOLSO",
+    "preco_original": 55.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1785859150_27f6f07a20ba68762191.webp",
+      "https://arquivos.facilzap.app.br/produtos/1785856528_0de4c7a527026aca2975.webp"
+    ],
+    "preco_final": 88.9,
+    "cores_variadas": false
+  },
+  {
+    "id": "4298763",
+    "nome": "SHORT SAIA PREMIUM",
+    "preco_original": 42.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1785241079_20bc36c9c8169c26f8ab.webp",
+      "https://arquivos.facilzap.app.br/produtos/1785241124_4d46d288d9d0f575da45.webp",
+      "https://arquivos.facilzap.app.br/produtos/1785241082_2029615c35740faa826d.webp"
+    ],
+    "preco_final": 67.9,
+    "cores_variadas": false
+  },
+  {
+    "id": "4275987",
+    "nome": "SHORT DUPLO PREMIUM",
+    "preco_original": 40.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1784662286_e328423d3593d2cadafd.webp",
+      "https://arquivos.facilzap.app.br/produtos/1784662245_2ce47d532a27fb4063f8.webp"
+    ],
+    "preco_final": 64.9,
+    "cores_variadas": false
+  },
+  {
+    "id": "327294",
+    "nome": "LEGGING CINTURA ALTA POLIAMIDA REF 334",
+    "preco_original": 32.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1750293429_a71b647287106a70b5ae.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1750293427_6b4b665ee9f9df60374e.jpeg.webp"
+    ],
+    "preco_final": 51.9,
+    "cores_variadas": false
+  },
+  {
+    "id": "3793662",
+    "nome": "CORTA VENTO",
+    "preco_original": 45.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1770841708_ebff7d989ba216697abf.webp",
+      "https://arquivos.facilzap.app.br/produtos/1770841702_d32e5295ea49448c2936.webp"
+    ],
+    "preco_final": 72.9,
+    "cores_variadas": false
+  },
+  {
+    "id": "3146488",
+    "nome": "MACAQUITO CANELADO DE BOLSO",
+    "preco_original": 60.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1762890523_ed688a31e41edc4e983a.webp",
+      "https://arquivos.facilzap.app.br/produtos/1762890514_ce96fe8ba38f6a6a6826.webp",
+      "https://arquivos.facilzap.app.br/produtos/1762890552_d923c36a709871747941.webp"
+    ],
+    "preco_final": 96.9,
+    "cores_variadas": false
+  },
+  {
+    "id": "331423",
+    "nome": "REGATA CURTA POLIAMIDA DRYFIT REF 120",
+    "preco_original": 18.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1675169619_b79b457561f03a0081bd.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1675169618_cf0a9cb3b242a6515a23.jpeg"
+    ],
+    "preco_final": 28.9,
+    "cores_variadas": false
+  },
+  {
+    "id": "334025",
+    "nome": "LEGGING DETALHE LATERAL POLIAMIDA REF 322",
+    "preco_original": 34.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1675338021_ee5a93ad651b67cf22ca.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1675338020_9f930b7d510cd8ae7a62.jpeg"
+    ],
+    "preco_final": 54.9,
+    "cores_variadas": false
+  },
+  {
+    "id": "4059477",
+    "nome": "CONJUNTO CANELADO GG DE CALÇA",
+    "preco_original": 70.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1778617044_630a83dc09adc26019e2.webp",
+      "https://arquivos.facilzap.app.br/produtos/1778617039_0666388e199be64726b9.webp"
+    ],
+    "preco_final": 112.9,
+    "cores_variadas": false
+  },
+  {
+    "id": "333277",
+    "nome": "TOP 3D DE ALÇA REF 350",
+    "preco_original": 22.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777385588_8d2c9e6d9631cc916c1b.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777385582_881499a98698ab3747d6.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777385575_b8a4e4ca6dbea9fc8417.webp"
+    ],
+    "preco_final": 35.9,
+    "cores_variadas": false
+  },
+  {
+    "id": "875534",
+    "nome": "SHORT CURTO POLIAMIDA REF 366",
+    "preco_original": 22.0,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1777399845_eb53a3b9dbf4c25d738c.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777399715_6a492d6f6e4094afe24b.webp",
+      "https://arquivos.facilzap.app.br/produtos/1777399702_ada3aa0d1091b9876551.webp"
+    ],
+    "preco_final": 35.9,
+    "cores_variadas": false
+  }
+]
+</script>
+<!-- PRODUTOS:END -->
+<script>
+// ===== Config ============================================================
+const WHATSAPP_NUMERO = "5571986441234"; // 71 98644-1234
+const PEDIDO_MINIMO = 10;
+const LOTE_TAMANHO = 12; // quantas peças aparecem por vez, ao rolar a página
+const PIX_DESCONTO = 0.10;
+const PIX_CHAVE = "fabricaluluextra@gmail.com";
+const PIX_TITULAR = "Lucas Pereira Silva de Deus";
+const PEDIDO_PREFIXO = "AV"; // AV = avulso, pra diferenciar dos pedidos de kit (LU) no WhatsApp
+const FRETE_UNICO = { label: "Vip grátis (4 a 7 dias úteis)", valor: 0.00 };
+const FRETE = {
+  economico: { label: "Econômico (9 dias úteis)", valor: 39.90 },
+  vip:        { label: "Vip rápido (4 dias úteis)", valor: 90.00 },
+  vip_gratis: { label: "Vip grátis (4 dias úteis)", valor: 0.00 },
+};
+
+// ===== Estado ============================================================
+let PRODUTOS = [];
+const carrinho = {}; // { id: quantidade }
+let indiceRenderizado = 0;      // quantos produtos já foram colocados na tela
+const carouselState = {};       // { id: foto atual }
+let observerInfinito = null;
+let swipeConfigurado = false;
+let produtosVisiveis = [];      // lista mostrada na tela, usada pela rolagem infinita
+let formaPagamento = "pix";     // "pix" | "cartao"
+let numeroPedido = null;
+
+// ===== Utilidades ========================================================
+function formatarReais(valor) {
+  return valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+}
+
+function produtoPorId(id) {
+  return PRODUTOS.find(p => p.id === id);
+}
+
+function gerarNumeroPedido() {
+  const numero = Math.floor(100 + Math.random() * 900); // 100-999
+  return PEDIDO_PREFIXO + numero;
+}
+
+function totalKitsNoCarrinho() {
+  return Object.values(carrinho).reduce((soma, q) => soma + q, 0);
+}
+
+function subtotalPecas() {
+  return Object.entries(carrinho).reduce((soma, [id, qtd]) => {
+    const produto = produtoPorId(id);
+    return produto ? soma + produto.preco_final * qtd : soma;
+  }, 0);
+}
+
+// ===== Renderização do catálogo (em lotes, com carrossel de fotos) ======
+function criarCardHTML(produto) {
+  const imagensHTML = produto.imagens
+    .map(src => `<img src="${src}" alt="${produto.nome}" loading="lazy" draggable="false">`)
+    .join("");
+
+  const temVariasFotos = produto.imagens.length > 1;
+
+  const setasHTML = temVariasFotos ? `
+    <button type="button" class="carousel-arrow prev" data-action="carousel-prev" aria-label="Foto anterior">‹</button>
+    <button type="button" class="carousel-arrow next" data-action="carousel-next" aria-label="Próxima foto">›</button>
+  ` : "";
+
+  const dotsHTML = temVariasFotos ? `
+    <div class="carousel-dots">
+      ${produto.imagens.map((_, i) => `<button type="button" class="dot${i === 0 ? " is-active" : ""}" data-action="carousel-dot" data-i="${i}" aria-label="Foto ${i + 1}"></button>`).join("")}
+    </div>
+  ` : "";
+
+  return `
+    <article class="card" data-product-id="${produto.id}">
+      <div class="card-img-wrap" data-id="${produto.id}">
+        <div class="carousel-track" data-role="track">${imagensHTML}</div>
+        ${setasHTML}
+        ${dotsHTML}
+        ${produto.cores_variadas ? '<span class="card-badge">cores variadas</span>' : ""}
+      </div>
+      <div class="card-body">
+        <p class="card-title">${produto.nome}</p>
+        <div class="price-tag">
+          <span class="valor">${formatarReais(produto.preco_final)}</span>
+          <small>o kit</small>
+        </div>
+        <div class="card-foot">
+          <div class="qty-stepper" data-id="${produto.id}">
+            <button type="button" data-action="menos" aria-label="Diminuir">–</button>
+            <span data-role="qtd">0</span>
+            <button type="button" data-action="mais" aria-label="Aumentar">+</button>
+          </div>
+          <button type="button" class="add-btn" data-action="adicionar" data-id="${produto.id}">
+            Adicionar
+          </button>
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+function irParaFoto(cardImgWrap, novoIndice) {
+  const track = cardImgWrap.querySelector("[data-role='track']");
+  const total = track.children.length;
+  if (total <= 1) return;
+  const indice = ((novoIndice % total) + total) % total; // sempre dá a volta, nunca trava na ponta
+  track.style.transform = `translateX(-${indice * 100}%)`;
+  cardImgWrap.querySelectorAll(".dot").forEach((dot, i) => dot.classList.toggle("is-active", i === indice));
+  carouselState[cardImgWrap.dataset.id] = indice;
+}
+
+function carregarMaisProdutos() {
+  const grid = document.getElementById("grid-produtos");
+  const proximoLote = produtosVisiveis.slice(indiceRenderizado, indiceRenderizado + LOTE_TAMANHO);
+
+  proximoLote.forEach(produto => {
+    grid.insertAdjacentHTML("beforeend", criarCardHTML(produto));
+    carouselState[produto.id] = 0;
+  });
+  indiceRenderizado += proximoLote.length;
+
+  if (indiceRenderizado >= produtosVisiveis.length && observerInfinito) {
+    observerInfinito.disconnect();
+    document.getElementById("load-more-msg").hidden = true;
+  }
+}
+
+function configurarRolagemInfinita() {
+  try {
+    if (observerInfinito) { observerInfinito.disconnect(); observerInfinito = null; }
+    const sentinela = document.getElementById("scroll-sentinel");
+    observerInfinito = new IntersectionObserver((entradas) => {
+      entradas.forEach(entrada => {
+        if (entrada.isIntersecting && indiceRenderizado < produtosVisiveis.length) {
+          const msg = document.getElementById("load-more-msg");
+          msg.hidden = false;
+          setTimeout(() => {
+            carregarMaisProdutos();
+            msg.hidden = true;
+          }, 150);
+        }
+      });
+    }, { rootMargin: "500px" });
+    observerInfinito.observe(sentinela);
+  } catch (erro) {
+    // navegador muito antigo sem suporte a IntersectionObserver — nunca deve
+    // impedir o resto do site de funcionar (carrinho, frete, WhatsApp).
+    console.warn("Rolagem infinita indisponível neste navegador:", erro);
+  }
+}
+
+function ligarSwipeDoCarrossel(grid) {
+  let inicioX = 0;
+  let wrapAtual = null;
+
+  grid.addEventListener("touchstart", (e) => {
+    const wrap = e.target.closest(".card-img-wrap");
+    if (!wrap) return;
+    wrapAtual = wrap;
+    inicioX = e.touches[0].clientX;
+  }, { passive: true });
+
+  grid.addEventListener("touchend", (e) => {
+    if (!wrapAtual) return;
+    const deltaX = e.changedTouches[0].clientX - inicioX;
+    if (Math.abs(deltaX) > 40) {
+      const atual = carouselState[wrapAtual.dataset.id] || 0;
+      irParaFoto(wrapAtual, atual + (deltaX < 0 ? 1 : -1));
+    }
+    wrapAtual = null;
+  }, { passive: true });
+}
+
+function renderCatalogo() {
+  const grid = document.getElementById("grid-produtos");
+  grid.innerHTML = "";
+  indiceRenderizado = 0;
+  produtosVisiveis = PRODUTOS;
+
+  document.getElementById("contagem-produtos").textContent =
+    `${produtosVisiveis.length} peça${produtosVisiveis.length === 1 ? "" : "s"} em estoque`;
+
+  carregarMaisProdutos();
+  grid.addEventListener("click", onGridClick);
+  if (!swipeConfigurado) {
+    ligarSwipeDoCarrossel(grid);
+    swipeConfigurado = true;
+  }
+  configurarRolagemInfinita();
+}
+
+let quantidadesPendentes = {}; // quantidade selecionada no card antes de "Adicionar"
+
+function onGridClick(evento) {
+  const setaBtn = evento.target.closest("[data-action='carousel-prev'],[data-action='carousel-next']");
+  if (setaBtn) {
+    const wrap = setaBtn.closest(".card-img-wrap");
+    const atual = carouselState[wrap.dataset.id] || 0;
+    irParaFoto(wrap, atual + (setaBtn.dataset.action === "carousel-next" ? 1 : -1));
+    return;
+  }
+
+  const dotBtn = evento.target.closest("[data-action='carousel-dot']");
+  if (dotBtn) {
+    const wrap = dotBtn.closest(".card-img-wrap");
+    irParaFoto(wrap, parseInt(dotBtn.dataset.i, 10));
+    return;
+  }
+
+  const stepperBtn = evento.target.closest("[data-action='menos'],[data-action='mais']");
+  if (stepperBtn) {
+    const wrap = stepperBtn.closest(".qty-stepper");
+    const id = wrap.dataset.id;
+    const atual = quantidadesPendentes[id] || 0;
+    const nova = stepperBtn.dataset.action === "mais" ? atual + 1 : Math.max(0, atual - 1);
+    quantidadesPendentes[id] = nova;
+    wrap.querySelector("[data-role='qtd']").textContent = nova;
+    return;
+  }
+
+  const addBtn = evento.target.closest("[data-action='adicionar']");
+  if (addBtn) {
+    const id = addBtn.dataset.id;
+    const qtd = quantidadesPendentes[id] || 1; // se não mexeu no stepper, adiciona 1
+    carrinho[id] = (carrinho[id] || 0) + qtd;
+    quantidadesPendentes[id] = 0;
+    const wrap = addBtn.parentElement.querySelector(".qty-stepper");
+    wrap.querySelector("[data-role='qtd']").textContent = "0";
+
+    addBtn.classList.add("is-added");
+    addBtn.textContent = "Adicionado ✓";
+    setTimeout(() => {
+      addBtn.classList.remove("is-added");
+      addBtn.textContent = "Adicionar";
+    }, 900);
+
+    renderCarrinho();
+    abrirCarrinho(true);
+  }
+}
+
+// ===== Carrinho ==========================================================
+function renderCarrinho() {
+  const totalPecas = totalKitsNoCarrinho();
+  const subtotal = subtotalPecas();
+
+  // número do pedido: gera um novo quando o carrinho sai do vazio,
+  // e "esquece" quando o carrinho volta a ficar vazio (próximo pedido = novo número)
+  if (totalPecas > 0 && !numeroPedido) {
+    numeroPedido = gerarNumeroPedido();
+  } else if (totalPecas === 0) {
+    numeroPedido = null;
+  }
+
+  // barra fixa
+  document.getElementById("cart-count").textContent = totalPecas;
+  document.getElementById("cart-label").textContent = totalPecas === 1 ? "peça no pedido" : "peças no pedido";
+
+  const progresso = Math.min(100, (totalPecas / PEDIDO_MINIMO) * 100);
+  document.getElementById("cart-progress-fill").style.width = progresso + "%";
+
+  const textoProgresso = document.getElementById("cart-progress-text");
+  if (totalPecas < PEDIDO_MINIMO) {
+    textoProgresso.textContent = `Faltam ${PEDIDO_MINIMO - totalPecas} peça${PEDIDO_MINIMO - totalPecas === 1 ? "" : "s"} para o pedido mínimo`;
+  } else {
+    textoProgresso.textContent = "Pedido mínimo atingido ✓";
+  }
+
+  // painel expandido: lista de itens
+  const painelItems = document.getElementById("cart-panel-items");
+  const idsNoCarrinho = Object.keys(carrinho).filter(id => carrinho[id] > 0);
+
+  if (idsNoCarrinho.length === 0) {
+    painelItems.innerHTML = `<p class="cart-empty-msg">Seu pedido está vazio. Adicione peças no catálogo acima.</p>`;
+  } else {
+    painelItems.innerHTML = idsNoCarrinho.map(id => {
+      const produto = produtoPorId(id);
+      return `
+        <div class="cart-line" data-id="${id}">
+          <span class="cart-line-name">${produto.nome}</span>
+          <span class="cart-line-qty">${carrinho[id]}x ${formatarReais(produto.preco_final)}</span>
+          <button class="cart-line-remove" data-remove="${id}" aria-label="Remover">×</button>
+        </div>
+      `;
+    }).join("");
+  }
+
+  // resumo financeiro (frete é único e sempre grátis nessa subpágina)
+  const frete = FRETE_UNICO.valor;
+  const descontoPix = subtotal * PIX_DESCONTO;
+  const totalPix = (subtotal - descontoPix) + frete;
+  const totalCartao = subtotal + frete;
+
+  document.getElementById("summary-subtotal").textContent = formatarReais(subtotal);
+  document.getElementById("summary-frete").textContent = "Grátis";
+  document.getElementById("cart-total-value").textContent = formatarReais(totalCartao);
+  document.getElementById("total-pix").textContent = formatarReais(totalPix);
+  document.getElementById("total-cartao").textContent = formatarReais(totalCartao);
+
+  // botões de checkout (um por forma de pagamento)
+  const btnPix = document.getElementById("btn-confirmar-pix");
+  const btnCartao = document.getElementById("btn-solicitar-cartao");
+  if (totalPecas < PEDIDO_MINIMO) {
+    btnPix.disabled = true;
+    btnCartao.disabled = true;
+    btnPix.textContent = `Pedido mínimo: ${PEDIDO_MINIMO} peças (faltam ${PEDIDO_MINIMO - totalPecas})`;
+    btnCartao.textContent = `Pedido mínimo: ${PEDIDO_MINIMO} peças (faltam ${PEDIDO_MINIMO - totalPecas})`;
+  } else {
+    btnPix.disabled = false;
+    btnCartao.disabled = false;
+    btnPix.textContent = "Já paguei — confirmar no WhatsApp";
+    btnCartao.textContent = "Solicitar link de pagamento (cartão)";
+  }
+}
+
+function abrirCarrinho(forcar) {
+  const bar = document.getElementById("cart-bar");
+  const aberto = bar.getAttribute("data-open") === "true";
+  bar.setAttribute("data-open", forcar ? "true" : String(!aberto));
+}
+
+function fecharCarrinho() {
+  document.getElementById("cart-bar").setAttribute("data-open", "false");
+}
+
+// ===== Montagem das mensagens de WhatsApp ================================
+function montarListaItens() {
+  return Object.keys(carrinho).filter(id => carrinho[id] > 0).map(id => {
+    const produto = produtoPorId(id);
+    const qtd = carrinho[id];
+    const subtotalItem = produto.preco_final * qtd;
+    return `• ${qtd}x ${produto.nome} — ${formatarReais(produto.preco_final)} = ${formatarReais(subtotalItem)}`;
+  });
+}
+
+function montarMensagemPix() {
+  const subtotal = subtotalPecas();
+  const desconto = subtotal * PIX_DESCONTO;
+  const total = (subtotal - desconto) + FRETE_UNICO.valor;
+
+  const linhas = [
+    `Paguei o pedido ${numeroPedido} (peças avulsas) — via Pix — confira por gentileza 🙏`,
+    "",
+    `Pedido ${numeroPedido} — itens:`,
+    ...montarListaItens(),
+    "",
+    `Peças: ${formatarReais(subtotal)}`,
+    `Desconto Pix (10%): -${formatarReais(desconto)}`,
+    `Frete (${FRETE_UNICO.label}): Grátis`,
+    `Total pago: ${formatarReais(total)}`,
+  ];
+  return linhas.join("\n");
+}
+
+function montarMensagemCartao() {
+  const subtotal = subtotalPecas();
+  const total = subtotal + FRETE_UNICO.valor;
+
+  const linhas = [
+    `Desejo pagar o pedido ${numeroPedido} (peças avulsas) via cartão de crédito (até 3x, sem desconto) — pode me enviar o link de pagamento?`,
+    "",
+    `Pedido ${numeroPedido} — itens:`,
+    ...montarListaItens(),
+    "",
+    `Peças: ${formatarReais(subtotal)}`,
+    `Frete (${FRETE_UNICO.label}): Grátis`,
+    `Total: ${formatarReais(total)}`,
+  ];
+  return linhas.join("\n");
+}
+
+// ===== Eventos globais ===================================================
+function abrirWhatsApp(mensagem) {
+  const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(mensagem)}`;
+  window.open(url, "_blank");
+}
+
+function ligarEventos() {
+  document.getElementById("cart-toggle").addEventListener("click", () => abrirCarrinho());
+  document.getElementById("voltar-compras-btn").addEventListener("click", () => fecharCarrinho());
+
+  document.getElementById("cart-panel-items").addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-remove]");
+    if (!btn) return;
+    delete carrinho[btn.dataset.remove];
+    renderCarrinho();
+  });
+
+  document.querySelectorAll("input[name='pagamento']").forEach(input => {
+    input.addEventListener("change", () => {
+      formaPagamento = input.value;
+      document.getElementById("pay-panel-pix").hidden = formaPagamento !== "pix";
+      document.getElementById("pay-panel-cartao").hidden = formaPagamento !== "cartao";
+    });
+  });
+
+  document.getElementById("copiar-chave-btn").addEventListener("click", async (e) => {
+    try {
+      await navigator.clipboard.writeText(PIX_CHAVE);
+      e.target.classList.add("is-copied");
+      e.target.textContent = "Copiado ✓";
+      setTimeout(() => {
+        e.target.classList.remove("is-copied");
+        e.target.textContent = "Copiar chave";
+      }, 1200);
+    } catch (err) {
+      alert(`Chave Pix: ${PIX_CHAVE}`);
+    }
+  });
+
+  document.getElementById("btn-confirmar-pix").addEventListener("click", () => {
+    if (totalKitsNoCarrinho() < PEDIDO_MINIMO) return;
+    abrirWhatsApp(montarMensagemPix());
+  });
+
+  document.getElementById("btn-solicitar-cartao").addEventListener("click", () => {
+    if (totalKitsNoCarrinho() < PEDIDO_MINIMO) return;
+    abrirWhatsApp(montarMensagemCartao());
+  });
+}
+
+// ===== Inicialização ======================================================
+function iniciar() {
+  const tag = document.getElementById("produtos-data");
+  PRODUTOS = JSON.parse(tag.textContent);
+  ligarEventos();
+  renderCarrinho();
+  renderCatalogo();
+}
+
+iniciar();
+
+</script>
+</body>
+</html>
