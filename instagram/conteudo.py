@@ -116,6 +116,16 @@ CTA_ALTERNATIVA = [
     "Manda mensagem que a gente te ajuda a montar o pedido 💬",
 ]
 
+# ===== Hashtags do feed (Stories não suportam legenda/hashtag via API,
+# então isso só entra na legenda do feed). Sorteia 3-4 por post, pra não
+# repetir sempre o mesmo conjunto. =========================================
+HASHTAGS = ["#modafitness", "#salvador", "#modafitnesssalvador", "#modafitnessevangelica", "#rendaextra"]
+
+
+def sortear_hashtags() -> str:
+    qtd = random.randint(3, len(HASHTAGS))
+    return " ".join(random.sample(HASHTAGS, qtd))
+
 TAG_LOJA = {
     "kits": "kit fechado com 5 peças, suplex vip, zero transparência",
     "avulso": "peça avulsa, malha premium, qualidade superior",
@@ -218,6 +228,8 @@ def gerar_post(produto: dict, loja: str, historico_pilares=None, eh_lancamento: 
 
     # CTA: 85% link na bio, 15% alternativa
     linhas.append(random.choice(CTA_BIO) if random.random() < 0.85 else random.choice(CTA_ALTERNATIVA))
+
+    linhas.append(sortear_hashtags())
 
     legenda_feed = "\n\n".join(linhas)
     texto_story = gerar_texto_story(nome_curto, preco, loja, eh_lancamento)
