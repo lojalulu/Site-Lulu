@@ -17,7 +17,7 @@ PILARES = {
                        # transparência, avulso usa malha premium — são tecidos e propostas diferentes)
     "renda_extra": [
         "Enquanto você dorme, seu Instagram pode estar vendendo por você. Ideal pra quem já revende ou quer começar uma renda extra hoje.",
-        "Quem revende sabe: peça boa e barata é sinônimo de lucro certo no fim do mês.",
+        "Quem revende sabe: peça boa e barata é lucro certo no fim do mês.",
         "Se você revende moda fitness, essa é a peça que fecha carrinho rápido.",
     ],
     "cliente_ama": [
@@ -26,9 +26,9 @@ PILARES = {
         "Peça que vira queridinha na primeira leva — cliente ama e indica pra amiga.",
     ],
     "lucratividade": [
-        "Preço de fábrica pra você vender com uma margem excelente.",
-        "Compra em kit, economiza no preço unitário, revende com lucro tranquilo.",
-        "Poucas peças no mercado entregam essa relação custo-benefício pra revenda.",
+        "Preço de fábrica pra você vender com uma margem boa de verdade.",
+        "Compra no kit, sai mais em conta por peça, revende com lucro tranquilo.",
+        "É difícil achar peça com esse preço e essa qualidade pra revender.",
     ],
     "conforto": [
         "Malha que acompanha o corpo sem apertar — conforto o dia inteiro.",
@@ -127,8 +127,16 @@ def sortear_hashtags() -> str:
     return " ".join(random.sample(HASHTAGS, qtd))
 
 TAG_LOJA = {
-    "kits": "kit fechado com 5 peças, suplex vip, zero transparência",
-    "avulso": "peça avulsa, malha premium, qualidade superior",
+    "kits": [
+        "É kit fechado com 5 peças, em suplex vip.",
+        "Vem em kit fechado de 5, tecido suplex vip.",
+        "Kit fechado, 5 peças, suplex vip de verdade.",
+    ],
+    "avulso": [
+        "É peça avulsa, na malha premium.",
+        "Vendida avulsa, sem precisar levar kit fechado.",
+        "Peça avulsa, malha premium de verdade.",
+    ],
 }
 
 EMOJIS_ABERTURA = ["✨", "🔥", "💗", "🛍️", "👗", "💫"]
@@ -224,7 +232,7 @@ def gerar_post(produto: dict, loja: str, historico_pilares=None, eh_lancamento: 
     if random.random() < 0.3:
         linhas.append(random.choice(LINHAS_FRETE[loja]))
 
-    linhas.append(f"({TAG_LOJA[loja]})")
+    linhas.append(random.choice(TAG_LOJA[loja]))
 
     # CTA: 85% link na bio, 15% alternativa
     linhas.append(random.choice(CTA_BIO) if random.random() < 0.85 else random.choice(CTA_ALTERNATIVA))
