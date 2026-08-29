@@ -99,9 +99,9 @@ LINHAS_FRETE = {
         "Ah, e o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛",
     ],
     "avulso": [
-        "Frete grátis (Vip) em todo pedido — não importa a quantidade 🚚",
-        "Aqui o frete já sai grátis sempre, sem pegadinha 📦",
-        "Frete Vip grátis, de 4 a 7 dias úteis, direto pra sua casa 🚛",
+        "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚",
+        "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦",
+        "Dá pra aproveitar o frete grátis (Vip) nesse pedido, direto pra sua casa 🚛",
     ],
 }
 
