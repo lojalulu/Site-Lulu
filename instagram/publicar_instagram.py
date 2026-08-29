@@ -17,8 +17,10 @@ import time
 
 import requests
 
-GRAPH_API_VERSION = "v26.0"  # conferir em developers.facebook.com/docs/graph-api/changelog
-GRAPH_BASE = f"https://graph.facebook.com/{GRAPH_API_VERSION}"
+GRAPH_API_VERSION = "v23.0"  # conferir em developers.facebook.com/docs/instagram-platform/changelog
+# Seu app usa "Instagram Business Login" (não Facebook Login) — por isso o
+# host certo é graph.instagram.com, não graph.facebook.com.
+GRAPH_BASE = f"https://graph.instagram.com/{GRAPH_API_VERSION}"
 
 ACCESS_TOKEN = os.environ.get("INSTAGRAM_ACCESS_TOKEN")
 IG_USER_ID = os.environ.get("INSTAGRAM_BUSINESS_ID")
