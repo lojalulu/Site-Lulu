@@ -14,7 +14,7 @@ import random
 
 PILARES = {
     "qualidade": [],  # tratado à parte por loja — ver QUALIDADE_POR_LOJA (kits usa suplex vip/zero
-                       # transparência, avulso usa malha premium zero transparência  — são tecidos e propostas diferentes)
+                       # transparência, avulso usa malha premium — são tecidos e propostas diferentes)
     "renda_extra": [
         "Enquanto você dorme, seu Instagram pode estar vendendo por você. Ideal pra quem já revende ou quer começar uma renda extra hoje.",
         "Quem revende sabe: peça boa e barata é sinônimo de lucro certo no fim do mês.",
@@ -108,7 +108,7 @@ LINHAS_FRETE = {
 # ===== Chamada pra ação (quase sempre "link na bio", com variação) ========
 CTA_BIO = [
     "Link na bio 🔗", "Catálogo completo — link na bio ✨",
-    "Todo o mix está no link da bio 👆", "Dá uma espiada no link da bio 💗",
+    "Catálogo inteiro tá no link da bio 👆", "Dá uma espiada no link da bio 💗",
     "Link da bio te leva direto pro catálogo 📲",
 ]
 CTA_ALTERNATIVA = [
