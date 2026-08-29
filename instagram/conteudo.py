@@ -13,11 +13,8 @@ import random
 # origem) é encaixado dentro do texto na hora.
 
 PILARES = {
-    "qualidade": [
-        "Malha com ZERO transparência — testada antes de entrar no catálogo. É o tipo de detalhe que sua cliente sente na primeira vestida.",
-        "Tecido grosso, costura reforçada, zero transparência. A diferença que faz ela voltar pra comprar de novo.",
-        "Não é só bonito na foto — é grosso, não marca e não fica transparente nem agachando. Qualidade que vende sozinha.",
-    ],
+    "qualidade": [],  # tratado à parte por loja — ver QUALIDADE_POR_LOJA (kits usa suplex vip/zero
+                       # transparência, avulso usa malha premium — são tecidos e propostas diferentes)
     "renda_extra": [
         "Enquanto você dorme, seu Instagram pode estar vendendo por você. Ideal pra quem já revende ou quer começar uma renda extra hoje.",
         "Quem revende sabe: peça boa e barata é sinônimo de lucro certo no fim do mês.",
@@ -48,6 +45,29 @@ PILARES = {
         "Chegou fresquinho no catálogo — poucas peças por enquanto.",
         "Enquanto durar o estoque desse lote, o preço continua esse.",
     ],
+    "lancamento": [
+        "Acabou de chegar no catálogo — poucas peças, ninguém mais tem ainda.",
+        "Lançamento fresquinho, direto da fábrica pro seu feed.",
+        "Você está entre os primeiros a ver essa peça — lançamento disponível agora.",
+        "Novidade quentinha no catálogo, chegou hoje.",
+    ],
+}
+
+# ===== Qualidade — texto MUITO diferente por loja, porque os produtos
+# são diferentes de verdade: kits são suplex vip/zero transparência,
+# vendidos em pacote fechado de 5; avulso é malha premium, vendida peça
+# por peça, com proposta de qualidade superior/atacado. =================
+QUALIDADE_POR_LOJA = {
+    "kits": [
+        "Suplex vip, zero transparência — testado antes de entrar no catálogo. Kit fechado com 5 peças que não decepciona.",
+        "Tecido suplex vip, grosso e sem transparência nem agachando. Qualidade comprovada em cada kit de 5.",
+        "Zero transparência de verdade — o padrão que só o suplex vip da Lulu entrega, no kit fechado com 5 peças.",
+    ],
+    "avulso": [
+        "Malha premium, qualidade superior — você sente a diferença assim que veste.",
+        "Peça avulsa com malha premium: acabamento de grife, preço de atacado.",
+        "Qualidade superior peça por peça — malha selecionada uma a uma, sem precisar levar kit fechado.",
+    ],
 }
 
 PESOS_PILARES = {
@@ -58,6 +78,7 @@ PESOS_PILARES = {
     "conforto": 1.0,
     "estilo": 1.0,
     "disponibilidade": 0.8,
+    "lancamento": 0,  # nunca sorteado à toa — só é usado quando forçado (eh_lancamento=True)
 }
 
 # ===== Preço (aparece em ~40% dos posts) ===================================
@@ -96,11 +117,63 @@ CTA_ALTERNATIVA = [
 ]
 
 TAG_LOJA = {
-    "kits": "kit fechado, cores variadas",
-    "avulso": "peça avulsa, sem comprar kit fechado",
+    "kits": "kit fechado com 5 peças, suplex vip, zero transparência",
+    "avulso": "peça avulsa, malha premium, qualidade superior",
 }
 
 EMOJIS_ABERTURA = ["✨", "🔥", "💗", "🛍️", "👗", "💫"]
+
+# ===== Frases curtas pro Story (destaque + CTA, duas linhas na imagem) =====
+# Pool comum: preço, disponibilidade, características genéricas — usado
+# pelas duas lojas. Cada loja soma seu pool extra específico de tecido.
+STORY_DESTAQUES_COMUM = [
+    "{preco}",
+    "Só {preco} 💸",
+    "{nome_curto} por {preco}",
+    "Conforto o dia inteiro",
+    "Direto da fábrica pra você",
+    "Poucas peças desse lote",
+    "Chegou fresquinho no catálogo",
+    "Cores variadas disponíveis",
+    "Ótimo pra revenda 💰",
+]
+
+STORY_DESTAQUES_KITS_EXTRA = [
+    "Suplex vip ✨",
+    "Zero transparência ✨",
+    "Kit fechado com 5 peças",
+]
+
+STORY_DESTAQUES_AVULSO_EXTRA = [
+    "Malha premium ✨",
+    "Qualidade superior",
+    "Peça selecionada a dedo",
+]
+
+# Pool exclusivo pra produtos recém-chegados ao catálogo (lançamento).
+STORY_DESTAQUES_LANCAMENTO = [
+    "🚀 Lançamento disponível!",
+    "Lançamento: {nome_curto}",
+    "Lançamento por {preco}",
+    "Chegou agora — lançamento!",
+    "Primeira leva, poucas peças",
+    "Novidade no catálogo hoje",
+]
+
+
+def gerar_texto_story(nome_curto: str, preco: str, loja: str, eh_lancamento: bool) -> str:
+    """Monta o texto do Story em 2 linhas: um destaque curto (preço,
+    característica do tecido certo pra essa loja, ou aviso de
+    lançamento) + uma chamada pra bio, puxando do mesmo pool de CTAs
+    usado no feed pra variar ainda mais."""
+    if eh_lancamento:
+        pool = STORY_DESTAQUES_LANCAMENTO
+    else:
+        extra = STORY_DESTAQUES_KITS_EXTRA if loja == "kits" else STORY_DESTAQUES_AVULSO_EXTRA
+        pool = STORY_DESTAQUES_COMUM + extra
+    destaque = random.choice(pool).format(nome_curto=nome_curto, preco=preco)
+    cta = random.choice(CTA_BIO)
+    return f"{destaque}\n{cta}"
 
 
 def _nome_curto(nome: str, limite: int = 45) -> str:
@@ -116,16 +189,18 @@ def _sortear_pilar(historico_pilares, n_evitar=2):
     return random.choices(candidatos, weights=pesos, k=1)[0]
 
 
-def gerar_post(produto: dict, loja: str, historico_pilares=None):
+def gerar_post(produto: dict, loja: str, historico_pilares=None, eh_lancamento: bool = False):
     """
     produto: {"nome": ..., "preco_final": ...}
     loja: "kits" ou "avulso"
     historico_pilares: lista dos últimos pilares usados (pra variar)
+    eh_lancamento: True se o produto acabou de aparecer no catálogo —
+        força o pilar e o destaque do Story pro modo "lançamento"
     Retorna dict com "legenda_feed" e "texto_story".
     """
     historico_pilares = historico_pilares or []
-    pilar = _sortear_pilar(historico_pilares)
-    corpo = random.choice(PILARES[pilar])
+    pilar = "lancamento" if eh_lancamento else _sortear_pilar(historico_pilares)
+    corpo = random.choice(QUALIDADE_POR_LOJA[loja]) if pilar == "qualidade" else random.choice(PILARES[pilar])
     nome_curto = _nome_curto(produto["nome"])
     preco = f"R$ {produto['preco_final']:.2f}".replace(".", ",")
 
@@ -145,6 +220,6 @@ def gerar_post(produto: dict, loja: str, historico_pilares=None):
     linhas.append(random.choice(CTA_BIO) if random.random() < 0.85 else random.choice(CTA_ALTERNATIVA))
 
     legenda_feed = "\n\n".join(linhas)
-    texto_story = "Link na bio ✨"  # o texto desenhado na imagem do Story é sempre direto e curto
+    texto_story = gerar_texto_story(nome_curto, preco, loja, eh_lancamento)
 
     return {"pilar": pilar, "legenda_feed": legenda_feed, "texto_story": texto_story}
