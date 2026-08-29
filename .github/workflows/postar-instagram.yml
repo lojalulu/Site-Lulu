@@ -2,8 +2,17 @@ name: Postar no Instagram (feed + story)
 
 on:
   schedule:
-    - cron: '0 14 */2 * *'   # a cada 2 dias, 14:00 UTC = 11:00 em Salvador
+    - cron: '0 11 * * *'   # 08:00 em Salvador
+    - cron: '0 13 * * *'   # 10:00 em Salvador
+    - cron: '0 15 * * *'   # 12:00 em Salvador
+    - cron: '0 21 * * *'   # 18:00 em Salvador
+    - cron: '30 22 * * *'  # 19:30 em Salvador
+    - cron: '0 0 * * *'    # 21:00 em Salvador
   workflow_dispatch:          # permite clicar em "Run workflow" manualmente
+
+concurrency:
+  group: postar-instagram
+  cancel-in-progress: false   # se dois horários coincidirem por algum motivo, um espera o outro em vez de cancelar
 
 permissions:
   contents: write
@@ -36,6 +45,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          find . -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true
+          rm -f _tmp_font.ttf instagram/_tmp_font.ttf
           git add -A
           git diff --cached --quiet || git commit -m "Preparar conteúdo do Instagram"
           git pull --rebase origin main
