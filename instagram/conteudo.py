@@ -144,10 +144,15 @@ EMOJIS_ABERTURA = ["✨", "🔥", "💗", "🛍️", "👗", "💫"]
 # ===== Frases curtas pro Story (destaque + CTA, duas linhas na imagem) =====
 # Pool comum: preço, disponibilidade, características genéricas — usado
 # pelas duas lojas. Cada loja soma seu pool extra específico de tecido.
-STORY_DESTAQUES_COMUM = [
+# Separado em "com preço" / "sem preço" porque a loja de kits usa sorteio
+# em duas etapas (ver PROB_PRECO_STORY_KITS) pra controlar a frequência
+# do preço aparecer — a avulso continua com sorteio uniforme simples.
+STORY_DESTAQUES_COMUM_COM_PRECO = [
     "{preco}",
     "Só {preco} 💸",
     "{nome_curto} por {preco}",
+]
+STORY_DESTAQUES_COMUM_SEM_PRECO = [
     "Conforto o dia inteiro",
     "Direto da fábrica pra você",
     "Poucas peças desse lote",
@@ -155,6 +160,7 @@ STORY_DESTAQUES_COMUM = [
     "Cores variadas disponíveis",
     "Ótimo pra revenda 💰",
 ]
+STORY_DESTAQUES_COMUM = STORY_DESTAQUES_COMUM_COM_PRECO + STORY_DESTAQUES_COMUM_SEM_PRECO
 
 STORY_DESTAQUES_KITS_EXTRA = [
     "Suplex vip ✨",
@@ -178,6 +184,14 @@ STORY_DESTAQUES_LANCAMENTO = [
     "Novidade no catálogo hoje",
 ]
 
+# Chance do Story da loja de KITS (luluextra.com) mostrar preço.
+# Antes, com sorteio uniforme entre as 12 frases do pool, a chance "saía"
+# em ~25% (3 frases com preço em 12). A pedido do Lucas, agora o sorteio
+# é em duas etapas só pra essa loja: primeiro decide se mostra preço
+# (com essa probabilidade), depois sorteia a frase dentro do grupo certo.
+# A loja avulso continua igual (sorteio uniforme simples, ~25%).
+PROB_PRECO_STORY_KITS = 0.5
+
 
 def gerar_texto_story(nome_curto: str, preco: str, loja: str, eh_lancamento: bool) -> str:
     """Monta o texto do Story em 2 linhas: um destaque curto (preço,
@@ -186,10 +200,15 @@ def gerar_texto_story(nome_curto: str, preco: str, loja: str, eh_lancamento: boo
     usado no feed pra variar ainda mais."""
     if eh_lancamento:
         pool = STORY_DESTAQUES_LANCAMENTO
+        destaque = random.choice(pool).format(nome_curto=nome_curto, preco=preco)
+    elif loja == "kits":
+        pool_preco = STORY_DESTAQUES_COMUM_COM_PRECO
+        pool_sem_preco = STORY_DESTAQUES_COMUM_SEM_PRECO + STORY_DESTAQUES_KITS_EXTRA
+        pool = pool_preco if random.random() < PROB_PRECO_STORY_KITS else pool_sem_preco
+        destaque = random.choice(pool).format(nome_curto=nome_curto, preco=preco)
     else:
-        extra = STORY_DESTAQUES_KITS_EXTRA if loja == "kits" else STORY_DESTAQUES_AVULSO_EXTRA
-        pool = STORY_DESTAQUES_COMUM + extra
-    destaque = random.choice(pool).format(nome_curto=nome_curto, preco=preco)
+        pool = STORY_DESTAQUES_COMUM + STORY_DESTAQUES_AVULSO_EXTRA
+        destaque = random.choice(pool).format(nome_curto=nome_curto, preco=preco)
     cta = random.choice(CTA_BIO)
     return f"{destaque}\n{cta}"
 
