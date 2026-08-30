@@ -69,8 +69,16 @@ LOJAS = [
         "erros_csv": "kitavulso/erros.csv",
         "markup": 1.6,   # mesma margem por enquanto; ajuste aqui se quiser diferente
         "cores_variadas": False,  # peça avulsa, não é kit sortido
+        "extrair_tamanhos": True,  # só essa loja mostra seletor de tamanho no site
     },
 ]
+
+# Se True, salva o texto bruto (.md) dos primeiros produtos de cada loja
+# com extrair_tamanhos=True em debug_tamanhos.txt (ou kitavulso/debug_tamanhos.txt).
+# Serve só pra conferir/ajustar o formato real de como a loja original escreve
+# os tamanhos — depois que confirmar que está extraindo certo, pode deixar False.
+DEBUG_TAMANHOS = False
+DEBUG_TAMANHOS_QTD_AMOSTRAS = 5
 
 DELAY_SECONDS = 1.0   # pausa entre produtos — mais conservador que antes, de propósito
 TENTATIVAS_POR_PRODUTO = 3
@@ -134,8 +142,70 @@ def get_lista_produtos(sessao: requests.Session, base_url: str):
     return produtos
 
 
-def checar_produto(sessao: requests.Session, url_md: str):
-    """Retorna (status, lista_de_imagens) para um produto."""
+def extrair_tamanhos_do_texto(texto: str):
+    """Tenta reconhecer a lista de tamanhos disponíveis de um produto a
+    partir do texto (.md) da página. Isso é 'melhor esforço': o robô ainda
+    não teve a chance de rodar contra o formato real da loja usefga.com.br,
+    então os padrões abaixo cobrem os jeitos mais comuns que o FácilZap
+    costuma usar — mas pode precisar de ajuste depois da primeira execução
+    real (ative DEBUG_TAMANHOS=True lá em cima pra investigar).
+
+    Sempre retorna uma lista (vazia se não encontrar nada reconhecível) —
+    nunca quebra o robô por causa disso."""
+
+    TAMANHOS_VALIDOS = {"PP", "P", "M", "G", "GG", "XG", "XGG", "U", "ÚNICO", "UNICO",
+                         "36", "38", "40", "42", "44", "46", "48", "50"}
+
+    def limpar_lista(bruto):
+        # separa por vírgula, barra ou "e", remove parênteses tipo "M (2 un.)"
+        pedacos = re.split(r"[,/]| e ", bruto)
+        tamanhos = []
+        for p in pedacos:
+            p = re.sub(r"\(.*?\)", "", p).strip().upper()
+            if p and p not in tamanhos:
+                tamanhos.append(p)
+        return tamanhos
+
+    # Padrão 1: uma linha tipo "**Tamanhos:** P, M, G, GG" ou "**Tamanho:** ..."
+    m = re.search(r"\*\*Tamanhos?(?:\s+dispon[íi]veis)?:\*\*\s*(.+)", texto, re.IGNORECASE)
+    if m:
+        tamanhos = limpar_lista(m.group(1))
+        if tamanhos:
+            return tamanhos
+
+    # Padrão 2: uma linha tipo "**Variações:** P, M, G" ou "**Opções:** ..."
+    m = re.search(r"\*\*(?:Varia[çc][õo]es|Op[çc][õo]es):\*\*\s*(.+)", texto, re.IGNORECASE)
+    if m:
+        tamanhos = limpar_lista(m.group(1))
+        if tamanhos:
+            return tamanhos
+
+    # Padrão 3: lista em itens de markdown, ex.:
+    #   - P (disponível)
+    #   - M
+    #   - G (esgotado)
+    # Só considera "disponível"/sem menção de esgotado como tamanho válido.
+    itens = re.findall(r"^-\s*([A-Za-zÀ-ú0-9]{1,4})\s*(\(.*?\))?\s*$", texto, re.MULTILINE)
+    if itens:
+        candidatos = []
+        for tam, obs in itens:
+            tam_upper = tam.strip().upper()
+            if tam_upper in TAMANHOS_VALIDOS:
+                if obs and re.search(r"esgotad|indispon", obs, re.IGNORECASE):
+                    continue
+                if tam_upper not in candidatos:
+                    candidatos.append(tam_upper)
+        if candidatos:
+            return candidatos
+
+    return []
+
+
+def checar_produto(sessao: requests.Session, url_md: str, extrair_tamanhos: bool = False):
+    """Retorna (status, lista_de_imagens, lista_de_tamanhos) para um produto.
+    lista_de_tamanhos vem vazia quando extrair_tamanhos=False, ou quando o
+    produto não tem opção de tamanho / o robô não conseguiu reconhecer o
+    formato da página."""
     resp = sessao.get(url_md, timeout=TIMEOUT_SEGUNDOS)
     resp.raise_for_status()
     texto = resp.text
@@ -152,11 +222,17 @@ def checar_produto(sessao: requests.Session, url_md: str):
         status = "desconhecido"
 
     imagens = re.findall(r"^-\s*(https?://\S+)", texto, re.MULTILINE)
-    return status, imagens
+
+    tamanhos = []
+    if extrair_tamanhos:
+        tamanhos = extrair_tamanhos_do_texto(texto)
+
+    return status, imagens, tamanhos, texto
 
 
 def atualizar_loja(config: dict):
     nome = config["nome"]
+    extrair_tamanhos = config.get("extrair_tamanhos", False)
     print(f"\n========== {nome} ==========")
     sessao = criar_sessao()
 
@@ -169,33 +245,49 @@ def atualizar_loja(config: dict):
     erros_linhas = []
     disponiveis = 0
     esgotados = 0
+    amostras_debug = []
 
     for i, (pid, nome_produto, preco_original, url_md) in enumerate(produtos_catalogo, start=1):
         try:
-            status, imagens = checar_produto(sessao, url_md)
+            status, imagens, tamanhos, texto_bruto = checar_produto(sessao, url_md, extrair_tamanhos)
         except Exception as e:
             print(f"[{i}/{len(produtos_catalogo)}] ERRO em {nome_produto[:40]}: {e}")
             erros_linhas.append({"id": pid, "nome": nome_produto, "erro": str(e)})
             time.sleep(DELAY_SECONDS)
             continue
 
-        print(f"[{i}/{len(produtos_catalogo)}] {nome_produto[:55]:55s} -> {status}")
+        tag_tam = f" [tamanhos: {', '.join(tamanhos)}]" if tamanhos else (" [sem tamanho reconhecido]" if extrair_tamanhos else "")
+        print(f"[{i}/{len(produtos_catalogo)}] {nome_produto[:55]:55s} -> {status}{tag_tam}")
         log_linhas.append({"id": pid, "nome": nome_produto, "status": status, "preco_original": preco_original})
 
+        if DEBUG_TAMANHOS and extrair_tamanhos and len(amostras_debug) < DEBUG_TAMANHOS_QTD_AMOSTRAS:
+            amostras_debug.append(f"===== {pid} — {nome_produto} =====\n{texto_bruto}\n")
+
         if status == "disponivel" and imagens:
-            resultado.append({
+            item = {
                 "id": pid,
                 "nome": nome_produto,
                 "preco_original": preco_original,
                 "preco_final": preco_final(preco_original, config["markup"]),
                 "imagens": imagens,
                 "cores_variadas": config["cores_variadas"],
-            })
+            }
+            if extrair_tamanhos:
+                item["tamanhos"] = tamanhos  # lista vazia = produto sem seletor de tamanho no site
+            resultado.append(item)
             disponiveis += 1
         elif status == "esgotado":
             esgotados += 1
 
         time.sleep(DELAY_SECONDS)
+
+    if DEBUG_TAMANHOS and amostras_debug:
+        pasta_debug = os.path.dirname(config["output_json"])
+        caminho_debug = os.path.join(pasta_debug, "debug_tamanhos.txt") if pasta_debug else "debug_tamanhos.txt"
+        with open(caminho_debug, "w", encoding="utf-8") as f:
+            f.write("\n\n".join(amostras_debug))
+        print(f"\n[DEBUG_TAMANHOS] Amostras brutas salvas em {caminho_debug} — "
+              f"envie esse arquivo pra ajustar a extração de tamanhos, se necessário.")
 
     # garante que a pasta de destino existe (ex.: "kitavulso/")
     pasta = os.path.dirname(config["output_json"])
