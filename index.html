@@ -101,9 +101,37 @@ a{ color: inherit; }
 .rule-chip--accent .rule-num{ color: var(--accent); }
 .rule-label{ font-size: 13px; color: var(--text-muted); text-align:left; }
 
-/* ===== Filtros de tecido ============================================ */
+/* ===== Busca ========================================================= */
+.busca-wrap{
+  max-width: 1180px; margin: 0 auto; padding: 0 20px 14px;
+}
+.busca-input-wrap{ position: relative; }
+.busca-icone{
+  position:absolute; left:16px; top:50%; transform:translateY(-50%);
+  font-size:15px; color: var(--text-muted); pointer-events:none;
+}
+.busca-input{
+  width:100%; font-family: var(--font-body); font-size: 15px; color: var(--text);
+  background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
+  padding: 12px 40px 12px 42px; outline:none; transition: border-color .15s ease;
+}
+.busca-input:focus{ border-color: var(--accent); }
+.busca-limpar{
+  position:absolute; right:8px; top:50%; transform:translateY(-50%);
+  width:26px; height:26px; border-radius:50%; border:none; background: var(--surface-2);
+  color: var(--text-muted); font-size:14px; cursor:pointer; display:none; align-items:center; justify-content:center;
+}
+.busca-input-wrap.tem-texto .busca-limpar{ display:flex; }
+
+/* ===== Filtros (tecido, categoria, tamanho) ========================== */
+.filtro-grupo{
+  max-width: 1180px; margin: 0 auto; padding: 0 20px 12px;
+}
+.filtro-grupo-label{
+  font-family: var(--font-mono); font-size: 11px; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: .04em; margin: 0 0 8px;
+}
 .filtros{
-  max-width: 1180px; margin: 0 auto; padding: 0 20px 26px;
   display:flex; gap:10px; flex-wrap:wrap;
 }
 .filtro-btn{
@@ -372,11 +400,41 @@ a{ color: inherit; }
     </div>
   </section>
 
-  <nav class="filtros" id="filtros" aria-label="Filtrar por tecido">
-    <button type="button" class="filtro-btn is-active" data-filtro="todos">Todos os produtos</button>
-    <button type="button" class="filtro-btn" data-filtro="poliamida">Poliamida</button>
-    <button type="button" class="filtro-btn" data-filtro="suplex">Suplex</button>
-  </nav>
+  <div class="busca-wrap">
+    <div class="busca-input-wrap" id="busca-input-wrap">
+      <span class="busca-icone">🔍</span>
+      <input type="search" class="busca-input" id="busca-input" placeholder="Buscar pelo título da peça (ex: short, calça, plus...)" aria-label="Buscar produto pelo título">
+      <button type="button" class="busca-limpar" id="busca-limpar" aria-label="Limpar busca">×</button>
+    </div>
+  </div>
+
+  <div class="filtro-grupo">
+    <p class="filtro-grupo-label">Tecido</p>
+    <nav class="filtros" id="filtros-tecido" aria-label="Filtrar por tecido">
+      <button type="button" class="filtro-btn is-active" data-grupo="tecido" data-filtro="todos">Todos</button>
+      <button type="button" class="filtro-btn" data-grupo="tecido" data-filtro="poliamida">Poliamida</button>
+      <button type="button" class="filtro-btn" data-grupo="tecido" data-filtro="suplex">Suplex</button>
+    </nav>
+  </div>
+
+  <div class="filtro-grupo">
+    <p class="filtro-grupo-label">Categoria</p>
+    <nav class="filtros" id="filtros-categoria" aria-label="Filtrar por categoria">
+      <button type="button" class="filtro-btn is-active" data-grupo="categoria" data-filtro="todas">Todas</button>
+      <button type="button" class="filtro-btn" data-grupo="categoria" data-filtro="blusas">Blusas/regatas</button>
+      <button type="button" class="filtro-btn" data-grupo="categoria" data-filtro="coletes">Coletes/casacos</button>
+    </nav>
+  </div>
+
+  <div class="filtro-grupo">
+    <p class="filtro-grupo-label">Tamanho</p>
+    <nav class="filtros" id="filtros-tamanho" aria-label="Filtrar por tamanho">
+      <button type="button" class="filtro-btn is-active" data-grupo="tamanho" data-filtro="todos">Todos</button>
+      <button type="button" class="filtro-btn" data-grupo="tamanho" data-filtro="plus">Plus 46-50</button>
+      <button type="button" class="filtro-btn" data-grupo="tamanho" data-filtro="midi">Midi tam44</button>
+      <button type="button" class="filtro-btn" data-grupo="tamanho" data-filtro="slim">Slim 36-42</button>
+    </nav>
+  </div>
 
   <main class="catalog" id="catalogo">
     <div class="catalog-head">
@@ -2392,7 +2450,10 @@ let indiceRenderizado = 0;      // quantos produtos já foram colocados na tela
 const carouselState = {};       // { id: foto atual }
 let observerInfinito = null;
 let swipeConfigurado = false;
-let filtroAtivo = "todos";      // "todos" | "poliamida" | "suplex"
+let filtroTecido = "todos";     // "todos" | "poliamida" | "suplex"
+let filtroCategoria = "todas";  // "todas" | "blusas" | "coletes"
+let filtroTamanho = "todos";    // "todos" | "plus" | "midi" | "slim"
+let termoBusca = "";            // texto digitado na busca (já normalizado)
 let produtosVisiveis = [];      // lista já filtrada, usada pela rolagem infinita
 let formaPagamento = "pix";     // "pix" | "cartao"
 let numeroPedido = null;
@@ -2406,10 +2467,49 @@ function produtoPorId(id) {
   return PRODUTOS.find(p => p.id === id);
 }
 
-function aplicarFiltro(lista, filtro) {
-  if (filtro === "poliamida") return lista.filter(p => /poliamida/i.test(p.nome));
-  if (filtro === "suplex") return lista.filter(p => !/poliamida/i.test(p.nome));
-  return lista;
+// Remove acentos e caixa alta pra busca/comparação não sensível a isso
+// (ex: "calça" e "calca" devem casar igual, "PLUS" e "plus" também).
+function normalizarTexto(texto) {
+  return (texto || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
+}
+
+// ----- Categoria (blusas/regatas vs coletes/casacos) ---------------------
+// Baseado só no título do produto. Escrever no singular ou plural
+// ("blusa"/"blusas") não muda o resultado — o teste é por trecho da palavra.
+function classificarCategoria(nome) {
+  const n = normalizarTexto(nome);
+  if (/blusa|regata/.test(n)) return "blusas";
+  if (/colete|casaco/.test(n)) return "coletes";
+  return null; // não pertence a nenhuma dessas duas categorias
+}
+
+// ----- Tamanho (filtro exclusivo da loja de kits) -------------------------
+// Regra: Plus/GG no título -> "Plus 46-50". Midi no título -> "Midi tam44".
+// Slim no título OU título sem nenhuma dessas palavras -> "Slim 36-42"
+// (ou seja, todo produto cai em uma das três — Slim é o padrão).
+function classificarTamanho(nome) {
+  const n = normalizarTexto(nome);
+  if (/\bplus\b|\bgg\b/.test(n)) return "plus";
+  if (/\bmidi\b/.test(n)) return "midi";
+  return "slim"; // cobre "slim" explícito e qualquer título sem indicação de tamanho
+}
+
+function aplicarFiltro(lista) {
+  return lista.filter(p => {
+    if (filtroTecido === "poliamida" && !/poliamida/i.test(p.nome)) return false;
+    if (filtroTecido === "suplex" && /poliamida/i.test(p.nome)) return false;
+
+    if (filtroCategoria !== "todas" && classificarCategoria(p.nome) !== filtroCategoria) return false;
+
+    if (filtroTamanho !== "todos" && classificarTamanho(p.nome) !== filtroTamanho) return false;
+
+    if (termoBusca && !normalizarTexto(p.nome).includes(termoBusca)) return false;
+
+    return true;
+  });
 }
 
 function gerarNumeroPedido() {
@@ -2552,7 +2652,7 @@ function renderCatalogo() {
   const grid = document.getElementById("grid-produtos");
   grid.innerHTML = "";
   indiceRenderizado = 0;
-  produtosVisiveis = aplicarFiltro(PRODUTOS, filtroAtivo);
+  produtosVisiveis = aplicarFiltro(PRODUTOS);
 
   document.getElementById("contagem-produtos").textContent =
     `${produtosVisiveis.length} kit${produtosVisiveis.length === 1 ? "" : "s"} em estoque`;
@@ -2567,11 +2667,41 @@ function renderCatalogo() {
 }
 
 function ligarFiltros() {
-  document.getElementById("filtros").addEventListener("click", (e) => {
-    const btn = e.target.closest(".filtro-btn");
-    if (!btn) return;
-    document.querySelectorAll(".filtro-btn").forEach(b => b.classList.toggle("is-active", b === btn));
-    filtroAtivo = btn.dataset.filtro;
+  // Cada grupo (tecido / categoria / tamanho) funciona de forma independente,
+  // e os três se combinam entre si (E lógico) mais o texto da busca.
+  document.querySelectorAll(".filtros").forEach(nav => {
+    nav.addEventListener("click", (e) => {
+      const btn = e.target.closest(".filtro-btn");
+      if (!btn) return;
+      const grupo = btn.dataset.grupo;
+
+      nav.querySelectorAll(".filtro-btn").forEach(b => b.classList.toggle("is-active", b === btn));
+
+      if (grupo === "tecido") filtroTecido = btn.dataset.filtro;
+      if (grupo === "categoria") filtroCategoria = btn.dataset.filtro;
+      if (grupo === "tamanho") filtroTamanho = btn.dataset.filtro;
+
+      renderCatalogo();
+    });
+  });
+}
+
+function ligarBusca() {
+  const input = document.getElementById("busca-input");
+  const wrap = document.getElementById("busca-input-wrap");
+  const limparBtn = document.getElementById("busca-limpar");
+
+  input.addEventListener("input", () => {
+    termoBusca = normalizarTexto(input.value.trim());
+    wrap.classList.toggle("tem-texto", input.value.length > 0);
+    renderCatalogo();
+  });
+
+  limparBtn.addEventListener("click", () => {
+    input.value = "";
+    termoBusca = "";
+    wrap.classList.remove("tem-texto");
+    input.focus();
     renderCatalogo();
   });
 }
@@ -2835,6 +2965,7 @@ function ligarEventos() {
   });
 
   ligarFiltros();
+  ligarBusca();
 }
 
 // ===== Inicialização ======================================================
