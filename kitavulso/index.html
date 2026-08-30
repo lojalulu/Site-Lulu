@@ -182,6 +182,17 @@ a{ color: inherit; }
 .card-body{ padding: 14px 14px 16px; display:flex; flex-direction:column; gap: 10px; flex:1; }
 .card-title{ font-size: 14px; line-height: 1.35; margin:0; min-height: 38px; }
 
+/* ===== Seleção de tamanho (peça avulsa — só aparece quando o produto tem opção) */
+.tam-select{ display:flex; flex-wrap:wrap; gap:6px; }
+.tam-chip{
+  font-family: var(--font-mono); font-weight:600; font-size: 12px;
+  background: var(--surface); border: 1px solid var(--line); color: var(--text-muted);
+  border-radius: 8px; padding: 6px 10px; cursor:pointer; transition: all .15s ease; min-width: 34px;
+}
+.tam-chip:hover{ border-color: var(--accent); color: var(--text); }
+.tam-chip.is-active{ background: var(--accent); border-color: var(--accent); color:#fff; }
+.tam-aviso{ font-size: 12px; color: var(--accent); margin:0; }
+
 /* etiqueta de preço estilo "tag de roupa" */
 .price-tag{
   display:inline-flex; align-items:center; gap:8px; align-self:flex-start;
@@ -214,6 +225,48 @@ a{ color: inherit; }
 }
 .add-btn:hover{ filter: brightness(1.08); }
 .add-btn.is-added{ background: var(--good); color: var(--accent-ink); }
+.add-btn:disabled{ background: var(--surface-2); color: var(--text-muted); cursor:not-allowed; }
+
+/* ===== Busca ========================================================= */
+.busca-wrap{
+  max-width: 1180px; margin: 0 auto; padding: 0 20px 14px;
+}
+.busca-input-wrap{ position: relative; }
+.busca-icone{
+  position:absolute; left:16px; top:50%; transform:translateY(-50%);
+  font-size:15px; color: var(--text-muted); pointer-events:none;
+}
+.busca-input{
+  width:100%; font-family: var(--font-body); font-size: 15px; color: var(--text);
+  background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
+  padding: 12px 40px 12px 42px; outline:none; transition: border-color .15s ease;
+}
+.busca-input:focus{ border-color: var(--accent); }
+.busca-limpar{
+  position:absolute; right:8px; top:50%; transform:translateY(-50%);
+  width:26px; height:26px; border-radius:50%; border:none; background: var(--surface-2);
+  color: var(--text-muted); font-size:14px; cursor:pointer; display:none; align-items:center; justify-content:center;
+}
+.busca-input-wrap.tem-texto .busca-limpar{ display:flex; }
+
+/* ===== Filtros de categoria ========================================== */
+.filtro-grupo{
+  max-width: 1180px; margin: 0 auto; padding: 0 20px 12px;
+}
+.filtro-grupo-label{
+  font-family: var(--font-mono); font-size: 11px; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: .04em; margin: 0 0 8px;
+}
+.filtros{
+  display:flex; gap:10px; flex-wrap:wrap;
+}
+.filtro-btn{
+  font-family: var(--font-body); font-weight:600; font-size: 13px;
+  background: var(--surface); border: 1px solid var(--line); color: var(--text-muted);
+  border-radius: 999px; padding: 9px 18px; cursor:pointer; transition: all .15s ease;
+}
+.filtro-btn:hover{ border-color: var(--accent); color: var(--text); }
+.filtro-btn.is-active{ background: var(--accent); border-color: var(--accent); color:#fff; }
 
 /* ===== Footer ======================================================== */
 .site-footer{ text-align:center; padding: 30px 20px 40px; color: var(--text-muted); font-size: 12px; }
@@ -386,6 +439,23 @@ a{ color: inherit; }
       </div>
     </div>
   </section>
+
+  <div class="busca-wrap">
+    <div class="busca-input-wrap" id="busca-input-wrap">
+      <span class="busca-icone">🔍</span>
+      <input type="search" class="busca-input" id="busca-input" placeholder="Buscar pelo título da peça (ex: blusa, calça, vestido...)" aria-label="Buscar produto pelo título">
+      <button type="button" class="busca-limpar" id="busca-limpar" aria-label="Limpar busca">×</button>
+    </div>
+  </div>
+
+  <div class="filtro-grupo">
+    <p class="filtro-grupo-label">Categoria</p>
+    <nav class="filtros" id="filtros-categoria" aria-label="Filtrar por categoria">
+      <button type="button" class="filtro-btn is-active" data-filtro="todas">Todas</button>
+      <button type="button" class="filtro-btn" data-filtro="blusas">Blusas/regatas</button>
+      <button type="button" class="filtro-btn" data-filtro="coletes">Coletes/casacos</button>
+    </nav>
+  </div>
 
   <main class="catalog" id="catalogo">
     <div class="catalog-head">
@@ -1472,7 +1542,11 @@ const FRETE = {
 
 // ===== Estado ============================================================
 let PRODUTOS = [];
-const carrinho = {}; // { id: quantidade }
+// Chave do carrinho: normalmente é o id do produto. Quando o produto tem
+// tamanhos (produto.tamanhos), a chave vira "id::TAMANHO" — isso permite
+// ter, por exemplo, 3 peças no M e 2 no G do mesmo produto como linhas
+// separadas no carrinho.
+const carrinho = {}; // { chave: quantidade }
 let indiceRenderizado = 0;      // quantos produtos já foram colocados na tela
 const carouselState = {};       // { id: foto atual }
 let observerInfinito = null;
@@ -1480,6 +1554,9 @@ let swipeConfigurado = false;
 let produtosVisiveis = [];      // lista mostrada na tela, usada pela rolagem infinita
 let formaPagamento = "pix";     // "pix" | "cartao"
 let numeroPedido = null;
+let filtroCategoria = "todas";  // "todas" | "blusas" | "coletes"
+let termoBusca = "";            // texto digitado na busca (já normalizado)
+const tamanhoSelecionado = {};  // { id: "M" } — tamanho escolhido no card antes de adicionar
 
 // ===== Utilidades ========================================================
 function formatarReais(valor) {
@@ -1488,6 +1565,41 @@ function formatarReais(valor) {
 
 function produtoPorId(id) {
   return PRODUTOS.find(p => p.id === id);
+}
+
+// Separa a chave do carrinho ("id" ou "id::TAMANHO") de volta em id e tamanho.
+function partesDaChave(chave) {
+  const [id, tamanho] = chave.split("::");
+  return { id, tamanho: tamanho || null };
+}
+
+function produtoDaChave(chave) {
+  return produtoPorId(partesDaChave(chave).id);
+}
+
+// Remove acentos e caixa alta pra busca/comparação não sensível a isso.
+function normalizarTexto(texto) {
+  return (texto || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
+}
+
+// Categoria (blusas/regatas vs coletes/casacos), baseada só no título.
+// Escrever no singular ou plural não muda o resultado.
+function classificarCategoria(nome) {
+  const n = normalizarTexto(nome);
+  if (/blusa|regata/.test(n)) return "blusas";
+  if (/colete|casaco/.test(n)) return "coletes";
+  return null;
+}
+
+function aplicarFiltro(lista) {
+  return lista.filter(p => {
+    if (filtroCategoria !== "todas" && classificarCategoria(p.nome) !== filtroCategoria) return false;
+    if (termoBusca && !normalizarTexto(p.nome).includes(termoBusca)) return false;
+    return true;
+  });
 }
 
 function gerarNumeroPedido() {
@@ -1500,8 +1612,8 @@ function totalKitsNoCarrinho() {
 }
 
 function subtotalPecas() {
-  return Object.entries(carrinho).reduce((soma, [id, qtd]) => {
-    const produto = produtoPorId(id);
+  return Object.entries(carrinho).reduce((soma, [chave, qtd]) => {
+    const produto = produtoDaChave(chave);
     return produto ? soma + produto.preco_final * qtd : soma;
   }, 0);
 }
@@ -1525,6 +1637,16 @@ function criarCardHTML(produto) {
     </div>
   ` : "";
 
+  const temTamanhos = Array.isArray(produto.tamanhos) && produto.tamanhos.length > 0;
+  const tamanhoAtual = tamanhoSelecionado[produto.id] || null;
+
+  const tamanhosHTML = temTamanhos ? `
+    <div class="tam-select" data-role="tam-select" data-id="${produto.id}">
+      ${produto.tamanhos.map(t => `<button type="button" class="tam-chip${t === tamanhoAtual ? " is-active" : ""}" data-action="tamanho" data-id="${produto.id}" data-tam="${t}">${t}</button>`).join("")}
+    </div>
+    <p class="tam-aviso" data-role="tam-aviso" hidden>Escolha um tamanho antes de adicionar</p>
+  ` : "";
+
   return `
     <article class="card" data-product-id="${produto.id}">
       <div class="card-img-wrap" data-id="${produto.id}">
@@ -1539,6 +1661,7 @@ function criarCardHTML(produto) {
           <span class="valor">${formatarReais(produto.preco_final)}</span>
           <small>o kit</small>
         </div>
+        ${tamanhosHTML}
         <div class="card-foot">
           <div class="qty-stepper" data-id="${produto.id}">
             <button type="button" data-action="menos" aria-label="Diminuir">–</button>
@@ -1630,7 +1753,7 @@ function renderCatalogo() {
   const grid = document.getElementById("grid-produtos");
   grid.innerHTML = "";
   indiceRenderizado = 0;
-  produtosVisiveis = PRODUTOS;
+  produtosVisiveis = aplicarFiltro(PRODUTOS);
 
   document.getElementById("contagem-produtos").textContent =
     `${produtosVisiveis.length} peça${produtosVisiveis.length === 1 ? "" : "s"} em estoque`;
@@ -1642,6 +1765,36 @@ function renderCatalogo() {
     swipeConfigurado = true;
   }
   configurarRolagemInfinita();
+}
+
+function ligarFiltros() {
+  document.getElementById("filtros-categoria").addEventListener("click", (e) => {
+    const btn = e.target.closest(".filtro-btn");
+    if (!btn) return;
+    document.querySelectorAll("#filtros-categoria .filtro-btn").forEach(b => b.classList.toggle("is-active", b === btn));
+    filtroCategoria = btn.dataset.filtro;
+    renderCatalogo();
+  });
+}
+
+function ligarBusca() {
+  const input = document.getElementById("busca-input");
+  const wrap = document.getElementById("busca-input-wrap");
+  const limparBtn = document.getElementById("busca-limpar");
+
+  input.addEventListener("input", () => {
+    termoBusca = normalizarTexto(input.value.trim());
+    wrap.classList.toggle("tem-texto", input.value.length > 0);
+    renderCatalogo();
+  });
+
+  limparBtn.addEventListener("click", () => {
+    input.value = "";
+    termoBusca = "";
+    wrap.classList.remove("tem-texto");
+    input.focus();
+    renderCatalogo();
+  });
 }
 
 let quantidadesPendentes = {}; // quantidade selecionada no card antes de "Adicionar"
@@ -1673,11 +1826,33 @@ function onGridClick(evento) {
     return;
   }
 
+  const tamBtn = evento.target.closest("[data-action='tamanho']");
+  if (tamBtn) {
+    const id = tamBtn.dataset.id;
+    tamanhoSelecionado[id] = tamBtn.dataset.tam;
+    const card = tamBtn.closest(".card");
+    card.querySelectorAll(".tam-chip").forEach(chip => chip.classList.toggle("is-active", chip === tamBtn));
+    const aviso = card.querySelector("[data-role='tam-aviso']");
+    if (aviso) aviso.hidden = true;
+    return;
+  }
+
   const addBtn = evento.target.closest("[data-action='adicionar']");
   if (addBtn) {
     const id = addBtn.dataset.id;
+    const produto = produtoPorId(id);
+    const precisaTamanho = Array.isArray(produto.tamanhos) && produto.tamanhos.length > 0;
+
+    if (precisaTamanho && !tamanhoSelecionado[id]) {
+      const card = addBtn.closest(".card");
+      const aviso = card.querySelector("[data-role='tam-aviso']");
+      if (aviso) aviso.hidden = false;
+      return; // não adiciona sem tamanho escolhido
+    }
+
     const qtd = quantidadesPendentes[id] || 1; // se não mexeu no stepper, adiciona 1
-    carrinho[id] = (carrinho[id] || 0) + qtd;
+    const chave = precisaTamanho ? `${id}::${tamanhoSelecionado[id]}` : id;
+    carrinho[chave] = (carrinho[chave] || 0) + qtd;
     quantidadesPendentes[id] = 0;
     const wrap = addBtn.parentElement.querySelector(".qty-stepper");
     wrap.querySelector("[data-role='qtd']").textContent = "0";
@@ -1723,18 +1898,20 @@ function renderCarrinho() {
 
   // painel expandido: lista de itens
   const painelItems = document.getElementById("cart-panel-items");
-  const idsNoCarrinho = Object.keys(carrinho).filter(id => carrinho[id] > 0);
+  const chavesNoCarrinho = Object.keys(carrinho).filter(chave => carrinho[chave] > 0);
 
-  if (idsNoCarrinho.length === 0) {
+  if (chavesNoCarrinho.length === 0) {
     painelItems.innerHTML = `<p class="cart-empty-msg">Seu pedido está vazio. Adicione peças no catálogo acima.</p>`;
   } else {
-    painelItems.innerHTML = idsNoCarrinho.map(id => {
-      const produto = produtoPorId(id);
+    painelItems.innerHTML = chavesNoCarrinho.map(chave => {
+      const { tamanho } = partesDaChave(chave);
+      const produto = produtoDaChave(chave);
+      const nomeComTamanho = tamanho ? `${produto.nome} — Tam ${tamanho}` : produto.nome;
       return `
-        <div class="cart-line" data-id="${id}">
-          <span class="cart-line-name">${produto.nome}</span>
-          <span class="cart-line-qty">${carrinho[id]}x ${formatarReais(produto.preco_final)}</span>
-          <button class="cart-line-remove" data-remove="${id}" aria-label="Remover">×</button>
+        <div class="cart-line" data-id="${chave}">
+          <span class="cart-line-name">${nomeComTamanho}</span>
+          <span class="cart-line-qty">${carrinho[chave]}x ${formatarReais(produto.preco_final)}</span>
+          <button class="cart-line-remove" data-remove="${chave}" aria-label="Remover">×</button>
         </div>
       `;
     }).join("");
@@ -1780,11 +1957,13 @@ function fecharCarrinho() {
 
 // ===== Montagem das mensagens de WhatsApp ================================
 function montarListaItens() {
-  return Object.keys(carrinho).filter(id => carrinho[id] > 0).map(id => {
-    const produto = produtoPorId(id);
-    const qtd = carrinho[id];
+  return Object.keys(carrinho).filter(chave => carrinho[chave] > 0).map(chave => {
+    const { tamanho } = partesDaChave(chave);
+    const produto = produtoDaChave(chave);
+    const qtd = carrinho[chave];
     const subtotalItem = produto.preco_final * qtd;
-    return `• ${qtd}x ${produto.nome} — ${formatarReais(produto.preco_final)} = ${formatarReais(subtotalItem)}`;
+    const nomeComTamanho = tamanho ? `${produto.nome} (Tam ${tamanho})` : produto.nome;
+    return `• ${qtd}x ${nomeComTamanho} — ${formatarReais(produto.preco_final)} = ${formatarReais(subtotalItem)}`;
   });
 }
 
@@ -1879,6 +2058,8 @@ function iniciar() {
   const tag = document.getElementById("produtos-data");
   PRODUTOS = JSON.parse(tag.textContent);
   ligarEventos();
+  ligarFiltros();
+  ligarBusca();
   renderCarrinho();
   renderCatalogo();
 }
