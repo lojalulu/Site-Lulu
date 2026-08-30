@@ -309,12 +309,14 @@ a{ color: inherit; }
   max-width: 1180px; margin: 0 auto; padding: 10px 16px; border-bottom: 1px solid var(--line);
 }
 .voltar-btn{
-  display:flex; align-items:center; gap:6px; margin:0 auto;
-  background: var(--surface-2); border: 1px solid var(--line); color: var(--text);
-  border-radius: 999px; padding: 9px 18px; font-family: var(--font-body); font-weight:600; font-size: 13px; cursor:pointer;
+  display:flex; align-items:center; gap:8px; margin:0 auto;
+  background: var(--accent); border: none; color:#fff;
+  border-radius: 999px; padding: 12px 26px; font-family: var(--font-body); font-weight:700; font-size: 14px; cursor:pointer;
+  box-shadow: 0 4px 14px rgba(255,61,128,.35); transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
 }
-.voltar-btn:hover{ border-color: var(--accent); }
-.voltar-btn svg{ color: var(--text-muted); }
+.voltar-btn:hover{ filter: brightness(1.06); box-shadow: 0 5px 16px rgba(255,61,128,.45); }
+.voltar-btn:active{ transform: scale(.97); }
+.voltar-btn svg{ color:#fff; }
 
 .cart-payment{
   max-width: 1180px; margin: 4px auto 0; padding: 12px 16px 22px; border-top: 1px dashed var(--line);
@@ -851,6 +853,19 @@ a{ color: inherit; }
       "https://arquivos.facilzap.app.br/produtos/1770214968_150c3bbb17d5d18ef45a.webp",
       "https://arquivos.facilzap.app.br/produtos/1770214888_b6b7db2f077cbb7c9422.webp",
       "https://arquivos.facilzap.app.br/produtos/1770214934_3b0e4c1556db129c7364.webp"
+    ],
+    "cores_variadas": true
+  },
+  {
+    "id": "3036498",
+    "nome": "Pacote com 5 Conjuntos de Short Duplo Ref 03",
+    "preco_original": 280.5,
+    "preco_final": 448.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1747664376_34b34d8abfcb5f0f76ca.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747664374_68b685678c47173880e4.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747664371_fdd40b8281211baec771.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747664370_b0d21f3151909415fd21.jpeg.webp"
     ],
     "cores_variadas": true
   },
@@ -2515,6 +2530,29 @@ function subtotalPecas() {
   }, 0);
 }
 
+// Deixa em negrito a quantidade + o item logo em seguida no título
+// (ex: "5 Conjuntos", "10 Blusas", "5 Macaquinhos"), pra bater o olho
+// rápido em quantas peças vêm no kit. Pega o primeiro número do título
+// seguido de uma palavra — é sempre a quantidade nos títulos usados
+// aqui (outros números soltos no meio, tipo "Ref 71", ficam normais).
+// Fallback: quando o número vem DEPOIS do item, no fim do título (ex:
+// "Colete tactel pacote com 5"), destaca só o número — mas nunca quando
+// a palavra logo antes é "Ref" (aí é código do produto, não quantidade).
+function destacarQuantidade(nome) {
+  const comNumeroAntes = nome.replace(/(\d+)(\s+)([A-Za-zÀ-ÿ]+)/, (_m, numero, espaco, palavra) => {
+    return `<strong>${numero}${espaco}${palavra}</strong>`;
+  });
+  if (comNumeroAntes !== nome) return comNumeroAntes;
+
+  const m = nome.match(/([A-Za-zÀ-ÿ.]+)?\s*(\d+)\s*$/);
+  if (m) {
+    const palavraAntes = (m[1] || "").replace(/\./g, "").toLowerCase();
+    if (palavraAntes === "ref") return nome; // código de referência — não é quantidade
+    return nome.replace(/(\d+)\s*$/, (_mm, numero) => `<strong>${numero}</strong>`);
+  }
+  return nome;
+}
+
 // ===== Renderização do catálogo (em lotes, com carrossel de fotos) ======
 function criarCardHTML(produto) {
   const imagensHTML = produto.imagens
@@ -2543,7 +2581,7 @@ function criarCardHTML(produto) {
         ${produto.cores_variadas ? '<span class="card-badge">cores variadas</span>' : ""}
       </div>
       <div class="card-body">
-        <p class="card-title">${produto.nome}</p>
+        <p class="card-title">${destacarQuantidade(produto.nome)}</p>
         <div class="price-tag">
           <span class="valor">${formatarReais(produto.preco_final)}</span>
           <small>o kit</small>
