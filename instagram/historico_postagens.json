@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "2816695",
@@ -8,7 +8,8 @@
       "3874845",
       "352712",
       "3552957",
-      "318144"
+      "318144",
+      "1902476"
     ],
     "avulso": [
       "4337639",
@@ -21,11 +22,11 @@
     ]
   },
   "ultimos_pilares": [
-    "disponibilidade",
     "renda_extra",
     "lucratividade",
     "disponibilidade",
-    "estilo"
+    "estilo",
+    "renda_extra"
   ],
   "conhecidos": {
     "kits": [
