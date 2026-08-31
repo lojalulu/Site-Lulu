@@ -7,6 +7,7 @@ Gera legenda de feed + texto do Story combinando blocos de copy por
 """
 
 import random
+import re
 
 # ===== Pilares de venda (a "personalidade" da marca) =====================
 # Cada pilar tem várias variações. O produto real (nome, preço, loja de
@@ -89,6 +90,18 @@ LINHAS_PRECO = [
     "{preco} — e já pode revender no seu preço.",
 ]
 
+# Só pra loja de KITS, quando o título tem quantidade reconhecível (ex:
+# "Pacote com 5 Conjuntos..." -> "5 Conjuntos"). Toda vez que o preço
+# aparecer numa postagem de kits com quantidade disponível, usa essas
+# linhas em vez das de cima — assim quem vê já entende quantas peças
+# vêm por aquele preço (ex: "5 Conjuntos - só R$ 259,90").
+LINHAS_PRECO_KITS_COM_QTD = [
+    "{quantidade} - só {preco}.",
+    "{quantidade}: {preco}. Simples assim.",
+    "Hoje, {quantidade} sai por {preco}.",
+    "{quantidade} por {preco} — já pode revender no seu preço.",
+]
+
 # ===== Frete (aparece só em parte dos posts) ===============================
 # Atenção: as regras de frete são DIFERENTES entre as duas lojas —
 # nunca usar a mesma linha pras duas.
@@ -163,6 +176,17 @@ STORY_DESTAQUES_COMUM_COM_PRECO = [
     "Só {preco} 💸",
     "{nome_curto} por {preco}",
 ]
+
+# Só pra loja de KITS, quando o título tem quantidade reconhecível.
+# Usado no lugar do pool acima sempre que o Story de kits sorteia
+# "mostrar preço" e a quantidade foi identificada no título (ex:
+# "5 Conjuntos - só R$ 259,90 💸"). Se não achar quantidade no título,
+# cai de volta no pool comum acima.
+STORY_DESTAQUES_COMUM_COM_PRECO_KITS_QTD = [
+    "{quantidade} - só {preco} 💸",
+    "{quantidade} por {preco}",
+    "{quantidade}: {preco}",
+]
 STORY_DESTAQUES_COMUM_SEM_PRECO = [
     "Conforto o dia inteiro",
     "Direto da fábrica pra você",
@@ -195,6 +219,19 @@ STORY_DESTAQUES_LANCAMENTO = [
     "Novidade no catálogo hoje",
 ]
 
+# Mesma lista, só que a linha de preço vem com a quantidade junto.
+# Usada só pra loja de KITS quando dá pra reconhecer a quantidade no
+# título — a regra de "preço sempre com quantidade" vale mesmo em
+# lançamento.
+STORY_DESTAQUES_LANCAMENTO_KITS_QTD = [
+    "🚀 Lançamento disponível!",
+    "Lançamento: {nome_curto}",
+    "Lançamento: {quantidade} por {preco}",
+    "Chegou agora — lançamento!",
+    "Primeira leva, poucas peças",
+    "Novidade no catálogo hoje",
+]
+
 # Chance do Story da loja de KITS (luluextra.com) mostrar preço.
 # Antes, com sorteio uniforme entre as 12 frases do pool, a chance "saía"
 # em ~25% (3 frases com preço em 12). A pedido do Lucas, agora o sorteio
@@ -204,19 +241,46 @@ STORY_DESTAQUES_LANCAMENTO = [
 PROB_PRECO_STORY_KITS = 0.5
 
 
-def gerar_texto_story(nome_curto: str, preco: str, loja: str, eh_lancamento: bool) -> str:
+def extrair_quantidade(nome: str):
+    """Extrai a parte de quantidade do título (ex: 'Pacote com 5
+    Conjuntos de Calça...' -> '5 Conjuntos'), pra usar junto do preço
+    nas postagens de kits. É a mesma lógica usada no site (index.html)
+    pra deixar a quantidade em negrito no título — mantém as duas em
+    sincronia. Retorna None quando o título não indica nenhuma
+    quantidade (não tenta adivinhar — e nunca confunde "Ref 71" com
+    quantidade)."""
+    m = re.search(r"(\d+)(\s+)([A-Za-zÀ-ÿ]+)", nome)
+    if m:
+        return f"{m.group(1)}{m.group(2)}{m.group(3)}"
+
+    m2 = re.search(r"([A-Za-zÀ-ÿ.]+)?\s*(\d+)\s*$", nome)
+    if m2:
+        palavra_antes = (m2.group(1) or "").replace(".", "").lower()
+        if palavra_antes == "ref":
+            return None  # código de referência, não quantidade
+        return m2.group(2)
+
+    return None
+
+
+def gerar_texto_story(nome_curto: str, preco: str, loja: str, eh_lancamento: bool, quantidade=None) -> str:
     """Monta o texto do Story em 2 linhas: um destaque curto (preço,
     característica do tecido certo pra essa loja, ou aviso de
     lançamento) + uma chamada pra bio, puxando do mesmo pool de CTAs
     usado no feed pra variar ainda mais."""
     if eh_lancamento:
-        pool = STORY_DESTAQUES_LANCAMENTO
-        destaque = random.choice(pool).format(nome_curto=nome_curto, preco=preco)
+        pool = STORY_DESTAQUES_LANCAMENTO_KITS_QTD if (loja == "kits" and quantidade) else STORY_DESTAQUES_LANCAMENTO
+        destaque = random.choice(pool).format(nome_curto=nome_curto, preco=preco, quantidade=quantidade or "")
     elif loja == "kits":
-        pool_preco = STORY_DESTAQUES_COMUM_COM_PRECO
         pool_sem_preco = STORY_DESTAQUES_COMUM_SEM_PRECO + STORY_DESTAQUES_KITS_EXTRA
-        pool = pool_preco if random.random() < PROB_PRECO_STORY_KITS else pool_sem_preco
-        destaque = random.choice(pool).format(nome_curto=nome_curto, preco=preco)
+        mostrar_preco = random.random() < PROB_PRECO_STORY_KITS
+        if mostrar_preco and quantidade:
+            pool_preco = STORY_DESTAQUES_COMUM_COM_PRECO_KITS_QTD
+            destaque = random.choice(pool_preco).format(quantidade=quantidade, preco=preco)
+        elif mostrar_preco:
+            destaque = random.choice(STORY_DESTAQUES_COMUM_COM_PRECO).format(nome_curto=nome_curto, preco=preco)
+        else:
+            destaque = random.choice(pool_sem_preco).format(nome_curto=nome_curto, preco=preco)
     else:
         pool = STORY_DESTAQUES_COMUM + STORY_DESTAQUES_AVULSO_EXTRA
         destaque = random.choice(pool).format(nome_curto=nome_curto, preco=preco)
@@ -251,12 +315,16 @@ def gerar_post(produto: dict, loja: str, historico_pilares=None, eh_lancamento: 
     corpo = random.choice(QUALIDADE_POR_LOJA[loja]) if pilar == "qualidade" else random.choice(PILARES[pilar])
     nome_curto = _nome_curto(produto["nome"])
     preco = f"R$ {produto['preco_final']:.2f}".replace(".", ",")
+    quantidade = extrair_quantidade(produto["nome"]) if loja == "kits" else None
 
     linhas = [random.choice(EMOJIS_ABERTURA) + " " + corpo]
 
     # preço aparece em ~40% dos posts
     if random.random() < 0.4:
-        linhas.append(random.choice(LINHAS_PRECO).format(nome_curto=nome_curto, preco=preco))
+        if loja == "kits" and quantidade:
+            linhas.append(random.choice(LINHAS_PRECO_KITS_COM_QTD).format(quantidade=quantidade, preco=preco))
+        else:
+            linhas.append(random.choice(LINHAS_PRECO).format(nome_curto=nome_curto, preco=preco))
 
     # frete aparece em ~30% dos posts (linha certa pra cada loja)
     if random.random() < 0.3:
@@ -270,6 +338,6 @@ def gerar_post(produto: dict, loja: str, historico_pilares=None, eh_lancamento: 
     linhas.append(sortear_hashtags())
 
     legenda_feed = "\n\n".join(linhas)
-    texto_story = gerar_texto_story(nome_curto, preco, loja, eh_lancamento)
+    texto_story = gerar_texto_story(nome_curto, preco, loja, eh_lancamento, quantidade)
 
     return {"pilar": pilar, "legenda_feed": legenda_feed, "texto_story": texto_story}
