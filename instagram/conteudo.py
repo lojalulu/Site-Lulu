@@ -37,7 +37,7 @@ PILARES = {
     ],
     "estilo": [
         "Modelagem atual, cores que estão em alta — moda fitness que também é moda de rua.",
-        "Do treino pro dia a dia sem trocar de roupa — estilo que multiplica o uso da peça.",
+        "Sai da academia e já segue o dia sem trocar de roupa — peça que serve pra tudo.",
         "Aquele visual que a cliente vê no feed e já quer pro guarda-roupa.",
     ],
     "disponibilidade": [
@@ -106,11 +106,22 @@ LINHAS_FRETE = {
 }
 
 # ===== Chamada pra ação (quase sempre "link na bio", com variação) ========
+# Usada na legenda do FEED. Aqui o dedo apontando (👆) faz sentido — é uma
+# referência visual comum a "olha lá em cima, no perfil".
 CTA_BIO = [
     "Link na bio 🔗", "Catálogo completo — link na bio ✨",
     "Catálogo inteiro tá no link da bio 👆", "Dá uma espiada no link da bio 💗",
     "Link da bio te leva direto pro catálogo 📲",
 ]
+
+# Usada só no STORY. Sem dedo apontando (☝️/👆) — no Story não tem nada
+# na tela pra esse gesto apontar, então fica sem sentido/confuso.
+CTA_STORY = [
+    "Link na bio 🔗", "Catálogo completo — link na bio ✨",
+    "Catálogo inteiro tá no link da bio 🛍️", "Dá uma espiada no link da bio 💗",
+    "Link da bio te leva direto pro catálogo 📲",
+]
+
 CTA_ALTERNATIVA = [
     "Chama no direct pra garantir o seu 💬",
     "Manda mensagem que a gente te ajuda a montar o pedido 💬",
@@ -209,7 +220,7 @@ def gerar_texto_story(nome_curto: str, preco: str, loja: str, eh_lancamento: boo
     else:
         pool = STORY_DESTAQUES_COMUM + STORY_DESTAQUES_AVULSO_EXTRA
         destaque = random.choice(pool).format(nome_curto=nome_curto, preco=preco)
-    cta = random.choice(CTA_BIO)
+    cta = random.choice(CTA_STORY)
     return f"{destaque}\n{cta}"
 
 
