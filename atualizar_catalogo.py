@@ -59,6 +59,8 @@ LOJAS = [
         "erros_csv": "erros.csv",
         "markup": 1.6,
         "cores_variadas": True,   # kits com sortimento de cores
+        "rastrear_novidades": True,  # ativa o campo "lancamento" (seção
+                                      # "ACABARAM DE CHEGAR" no site)
     },
     {
         "nome": "Lulu Peças Avulsas",
@@ -233,6 +235,7 @@ def checar_produto(sessao: requests.Session, url_md: str, extrair_tamanhos: bool
 def atualizar_loja(config: dict):
     nome = config["nome"]
     extrair_tamanhos = config.get("extrair_tamanhos", False)
+    rastrear_novidades = config.get("rastrear_novidades", False)
     print(f"\n========== {nome} ==========")
     sessao = criar_sessao()
 
@@ -240,12 +243,27 @@ def atualizar_loja(config: dict):
     produtos_catalogo = get_lista_produtos(sessao, config["base_url"])
     print(f"{len(produtos_catalogo)} referências encontradas. Verificando estoque de cada uma...\n")
 
+    # ----- detecção de lançamento (produtos novos desde a última execução) -----
+    pasta_saida = os.path.dirname(config["output_json"])
+    caminho_conhecidos = os.path.join(pasta_saida, "produtos_conhecidos.json") if pasta_saida else "produtos_conhecidos.json"
+    primeira_execucao = not os.path.exists(caminho_conhecidos)
+    if rastrear_novidades and not primeira_execucao:
+        with open(caminho_conhecidos, encoding="utf-8") as f:
+            ids_conhecidos = set(json.load(f))
+    else:
+        ids_conhecidos = set()
+    # na primeira execução com essa opção ligada, ninguém é "lançamento"
+    # (senão o catálogo inteiro apareceria como novidade de uma vez só)
+
     resultado = []
     log_linhas = []
     erros_linhas = []
+    sem_imagem_linhas = []
+    status_desconhecido_linhas = []
     disponiveis = 0
     esgotados = 0
     amostras_debug = []
+    ids_disponiveis_agora = set()
 
     for i, (pid, nome_produto, preco_original, url_md) in enumerate(produtos_catalogo, start=1):
         try:
@@ -264,6 +282,7 @@ def atualizar_loja(config: dict):
             amostras_debug.append(f"===== {pid} — {nome_produto} =====\n{texto_bruto}\n")
 
         if status == "disponivel" and imagens:
+            ids_disponiveis_agora.add(pid)
             item = {
                 "id": pid,
                 "nome": nome_produto,
@@ -274,12 +293,29 @@ def atualizar_loja(config: dict):
             }
             if extrair_tamanhos:
                 item["tamanhos"] = tamanhos  # lista vazia = produto sem seletor de tamanho no site
+            if rastrear_novidades:
+                item["lancamento"] = (not primeira_execucao) and (pid not in ids_conhecidos)
             resultado.append(item)
             disponiveis += 1
         elif status == "esgotado":
             esgotados += 1
+        elif status == "disponivel" and not imagens:
+            # AUDITORIA: produto está disponível na loja original, mas o robô
+            # não conseguiu extrair nenhuma foto — sem foto, não dá pra
+            # mostrar no site, então fica de fora. Antes isso desaparecia em
+            # silêncio; agora fica registrado aqui pra você conferir.
+            sem_imagem_linhas.append({"id": pid, "nome": nome_produto, "erro": "disponível mas sem nenhuma imagem reconhecida"})
+        else:
+            # AUDITORIA: status não reconhecido (nem "disponível" nem
+            # "esgotado" — o texto de disponibilidade da loja não bateu com
+            # nenhum padrão esperado). Também ficava de fora em silêncio.
+            status_desconhecido_linhas.append({"id": pid, "nome": nome_produto, "erro": f"status não reconhecido: '{status}'"})
 
         time.sleep(DELAY_SECONDS)
+
+    if rastrear_novidades:
+        with open(caminho_conhecidos, "w", encoding="utf-8") as f:
+            json.dump(sorted(ids_conhecidos | ids_disponiveis_agora), f)
 
     if DEBUG_TAMANHOS and amostras_debug:
         pasta_debug = os.path.dirname(config["output_json"])
@@ -331,10 +367,46 @@ def atualizar_loja(config: dict):
         writer.writeheader()
         writer.writerows(erros_linhas)
 
+    caminho_sem_imagem = os.path.join(pasta_saida, "produtos_sem_imagem.csv") if pasta_saida else "produtos_sem_imagem.csv"
+    with open(caminho_sem_imagem, "w", newline="", encoding="utf-8-sig") as f:
+        writer = csv.DictWriter(f, fieldnames=["id", "nome", "erro"])
+        writer.writeheader()
+        writer.writerows(sem_imagem_linhas + status_desconhecido_linhas)
+
     print(f"\n----- Resumo: {nome} -----")
     print(f"Disponíveis (foram para o site): {disponiveis}")
     print(f"Esgotados (ficaram de fora):     {esgotados}")
     print(f"Erros de consulta (NÃO contam como esgotado): {len(erros_linhas)}")
+    if sem_imagem_linhas:
+        print(f"AVISO: {len(sem_imagem_linhas)} produto(s) disponível(is) mas SEM imagem "
+              f"reconhecida — ficaram de fora do site. Detalhes em {caminho_sem_imagem}.")
+    if status_desconhecido_linhas:
+        print(f"AVISO: {len(status_desconhecido_linhas)} produto(s) com status de disponibilidade "
+              f"não reconhecido pelo robô — ficaram de fora do site. Detalhes em {caminho_sem_imagem}.")
+
+    # AUDITORIA GERAL: toda referência do catálogo tem que cair em uma
+    # dessas 5 categorias. Se a soma não bater com o total lido, alguma
+    # referência está desaparecendo em algum lugar do código sem ser
+    # contabilizada — isso é o alerta que confirma (ou descarta) que o
+    # robô está deixando produtos de fora sem avisar.
+    total_contabilizado = disponiveis + esgotados + len(erros_linhas) + len(sem_imagem_linhas) + len(status_desconhecido_linhas)
+    if total_contabilizado != len(produtos_catalogo):
+        diferenca = len(produtos_catalogo) - total_contabilizado
+        print(f"\n⚠️  ALERTA DE AUDITORIA: o catálogo tinha {len(produtos_catalogo)} referências, mas "
+              f"só {total_contabilizado} foram contabilizadas (diferença de {diferenca}). "
+              f"Isso não deveria acontecer — avise o desenvolvedor.")
+    else:
+        print(f"\n✅ Auditoria: as {len(produtos_catalogo)} referências do catálogo foram todas "
+              f"contabilizadas (disponíveis + esgotados + erros + sem imagem + status desconhecido).")
+
+    if rastrear_novidades:
+        n_lancamentos = sum(1 for item in resultado if item.get("lancamento"))
+        if primeira_execucao:
+            print("Detecção de lançamentos: primeira execução com essa opção ligada — "
+                  "nenhum produto foi marcado como novidade dessa vez (a partir da "
+                  "próxima execução, os realmente novos vão aparecer).")
+        else:
+            print(f"Lançamentos detectados nessa execução: {n_lancamentos}")
 
     taxa_erro = len(erros_linhas) / len(produtos_catalogo) if produtos_catalogo else 0
     if taxa_erro > 0.10:
