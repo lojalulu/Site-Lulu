@@ -152,6 +152,15 @@ a{ color: inherit; }
   display:grid; gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
 }
+.secao-titulo{
+  grid-column: 1 / -1; margin: 8px 0 -2px; padding-top: 12px;
+  font-family: var(--font-display); font-weight:600; font-size: 19px; color: var(--text);
+  border-top: 1px solid var(--line);
+}
+.secao-titulo.secao-lancamentos{
+  color: var(--accent); border-top:none; margin-top:0; padding-top:0;
+  display:flex; align-items:center; gap:8px;
+}
 .scroll-sentinel{ height: 1px; }
 .load-more-msg{
   grid-column: 1 / -1; text-align:center; padding: 18px 0; color: var(--text-muted);
@@ -556,131 +565,6 @@ a{ color: inherit; }
 <script id="produtos-data" type="application/json">
 [
   {
-    "id": "4430530",
-    "nome": "Pacote com 5 Conjuntos de Colete com Viés+ Short Duplo em Tactel Ref 05",
-    "preco_original": 200.0,
-    "preco_final": 320.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1788227728_f013ea7b6dd40f3d0c2e.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788227826_514746e0949be199eb83.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788227831_81f70bf3cf3f3667fd78.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788227743_d28e6e111220484391a3.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788227841_95508d8c576093e9d9c7.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788227845_2d0087c5b0568e0969a9.webp"
-    ],
-    "cores_variadas": true
-  },
-  {
-    "id": "4430522",
-    "nome": "Pacote com 5 Conjuntos de Short Duplo em Tactel+ Corta Vento Ref 04",
-    "preco_original": 215.0,
-    "preco_final": 344.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1788227152_96f27bf71f1d5a9158ef.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788227156_d308f25d3ade98af3b02.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788227161_761d1f5b91088ead78ec.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788227165_317bb99cadf578ed25c6.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788227078_cda4b9547f71454ae95d.webp"
-    ],
-    "cores_variadas": true
-  },
-  {
-    "id": "4430515",
-    "nome": "Pacote com 5 Conjuntos Corta Vento+Short Duplo de Tactel Ref 03",
-    "preco_original": 215.0,
-    "preco_final": 344.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1788226825_0c94985bb3de0fd01273.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788226947_3f132caaf619f6d47087.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788226835_5976d2f22f1ce1c89587.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788226955_be99533b2480fbecd010.webp"
-    ],
-    "cores_variadas": true
-  },
-  {
-    "id": "4430512",
-    "nome": "Pacote com 5 Conjuntos Ref 02 De Short Duplo+ Blusa Tactel Com Elastano",
-    "preco_original": 200.0,
-    "preco_final": 320.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1788226768_21ed027c60d58d28a930.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788226680_d7e68275e95045448ce3.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788226685_ace288ad8f64ffc9295b.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788226690_d629e6aa947d01d5a50b.webp"
-    ],
-    "cores_variadas": true
-  },
-  {
-    "id": "4430504",
-    "nome": "Pacote com 5 Conjuntos de Short Duplo Ref 10 Em Poliamid",
-    "preco_original": 275.0,
-    "preco_final": 440.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1788226363_f9af679fda636e754eb4.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788226368_1e6cf62153df3b707d88.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788226372_357b0cb8105d90851b40.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788226400_b221cd72cf9525569770.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788226404_3e82788a982036fb1e50.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788226385_d7da49a513e33d20ee4f.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788226389_2d8cfb858a2c727ec412.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788226393_beb3fa7ebe5cbbc6f759.webp"
-    ],
-    "cores_variadas": true
-  },
-  {
-    "id": "4430502",
-    "nome": "Pacote com 5 Conjuntos Short Duplo Ref 09 Em Poliamida",
-    "preco_original": 275.0,
-    "preco_final": 440.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1788226162_509cfdcf2a315716becc.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788226167_ed71951bba1990969a01.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788226264_0dd7140a62212ab3140f.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788226176_b0d85e53b3c81268d74b.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788226273_712ac323a15a83d26497.webp",
-      "https://arquivos.facilzap.app.br/produtos/1788226187_f5bef987ec2c271af96d.webp"
-    ],
-    "cores_variadas": true
-  },
-  {
-    "id": "3769201",
-    "nome": "Pacote com 5 Conjuntos Short Duplo em Poliamida com Proteção UV REF 08",
-    "preco_original": 275.0,
-    "preco_final": 440.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1770215031_193424e9a0d6ec9d6a3f.webp",
-      "https://arquivos.facilzap.app.br/produtos/1770215024_7703f6ba257c6545ab4f.webp",
-      "https://arquivos.facilzap.app.br/produtos/1770215020_9467fb4248cd60cb14b0.webp"
-    ],
-    "cores_variadas": true
-  },
-  {
-    "id": "3769190",
-    "nome": "Pacote com 5 Conjuntos Short Duplo em Poliamida com Proteção UV REF 07",
-    "preco_original": 275.0,
-    "preco_final": 440.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1770214761_6e817df5aed8466e0578.webp",
-      "https://arquivos.facilzap.app.br/produtos/1770214755_c84ca570fd2916810733.webp"
-    ],
-    "cores_variadas": true
-  },
-  {
-    "id": "3769174",
-    "nome": "Pacote com 5 Conjuntos Short Duplo em Poliamida com Proteção UV – Tamanho Único Ref 05",
-    "preco_original": 275.0,
-    "preco_final": 440.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1770214681_fa8f8302d6af6d70c029.webp",
-      "https://arquivos.facilzap.app.br/produtos/1770214676_1fd5498b8a6d0c05632a.webp",
-      "https://arquivos.facilzap.app.br/produtos/1770214600_f0f04808b8fe7813cbd2.webp",
-      "https://arquivos.facilzap.app.br/produtos/1770214670_d963feedd70eeba35ea0.webp",
-      "https://arquivos.facilzap.app.br/produtos/1770214592_a34ceb971d22ef62949a.webp",
-      "https://arquivos.facilzap.app.br/produtos/1770214589_f2c0dae9814ca128acec.webp"
-    ],
-    "cores_variadas": true
-  },
-  {
     "id": "4418318",
     "nome": "KIT 5 shorts DUPLO tactel (APENAS SHORT)",
     "preco_original": 100.0,
@@ -978,6 +862,19 @@ a{ color: inherit; }
       "https://arquivos.facilzap.app.br/produtos/1770214968_150c3bbb17d5d18ef45a.webp",
       "https://arquivos.facilzap.app.br/produtos/1770214888_b6b7db2f077cbb7c9422.webp",
       "https://arquivos.facilzap.app.br/produtos/1770214934_3b0e4c1556db129c7364.webp"
+    ],
+    "cores_variadas": true
+  },
+  {
+    "id": "3036498",
+    "nome": "Pacote com 5 Conjuntos de Short Duplo Ref 03",
+    "preco_original": 280.5,
+    "preco_final": 448.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1747664376_34b34d8abfcb5f0f76ca.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747664374_68b685678c47173880e4.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747664371_fdd40b8281211baec771.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1747664370_b0d21f3151909415fd21.jpeg.webp"
     ],
     "cores_variadas": true
   },
@@ -2565,6 +2462,9 @@ const carouselState = {};       // { id: foto atual }
 let observerInfinito = null;
 let swipeConfigurado = false;
 let filtroTecido = "todos";     // "todos" | "poliamida" | "suplex"
+let mostrarSecoesLancamento = false; // recalculado a cada renderCatalogo()
+let divisorAcabaramInserido = false;
+let divisorTodosInserido = false;
 let filtroCategoria = "todas";  // "todas" | "blusas" | "coletes"
 let filtroTamanho = "todos";    // "todos" | "plus" | "midi" | "slim"
 let termoBusca = "";            // texto digitado na busca (já normalizado)
@@ -2624,6 +2524,20 @@ function aplicarFiltro(lista) {
 
     return true;
   });
+}
+
+// Só na vista padrão (sem nenhum filtro/busca ativo) os lançamentos vêm
+// primeiro, pra dar pra mostrar a seção "Acabaram de chegar" no topo.
+// Assim que algum filtro é aplicado, a lista volta a ser só a busca
+// filtrada, sem essa separação (não faz sentido misturar as duas coisas).
+function ordenarComLancamentosPrimeiro(lista) {
+  const lancamentos = lista.filter(p => p.lancamento);
+  const resto = lista.filter(p => !p.lancamento);
+  return lancamentos.concat(resto);
+}
+
+function semFiltroAtivo() {
+  return filtroTecido === "todos" && filtroCategoria === "todas" && filtroTamanho === "todos" && !termoBusca;
 }
 
 function gerarNumeroPedido() {
@@ -2728,6 +2642,15 @@ function carregarMaisProdutos() {
   const proximoLote = produtosVisiveis.slice(indiceRenderizado, indiceRenderizado + LOTE_TAMANHO);
 
   proximoLote.forEach(produto => {
+    if (mostrarSecoesLancamento) {
+      if (produto.lancamento && !divisorAcabaramInserido) {
+        grid.insertAdjacentHTML("beforeend", '<h2 class="secao-titulo secao-lancamentos">🚀 Acabaram de chegar</h2>');
+        divisorAcabaramInserido = true;
+      } else if (!produto.lancamento && !divisorTodosInserido) {
+        grid.insertAdjacentHTML("beforeend", '<h2 class="secao-titulo">Todos os produtos</h2>');
+        divisorTodosInserido = true;
+      }
+    }
     grid.insertAdjacentHTML("beforeend", criarCardHTML(produto));
     carouselState[produto.id] = 0;
   });
@@ -2789,7 +2712,13 @@ function renderCatalogo() {
   const grid = document.getElementById("grid-produtos");
   grid.innerHTML = "";
   indiceRenderizado = 0;
-  produtosVisiveis = aplicarFiltro(PRODUTOS);
+
+  const filtrados = aplicarFiltro(PRODUTOS);
+  const semFiltro = semFiltroAtivo();
+  produtosVisiveis = semFiltro ? ordenarComLancamentosPrimeiro(filtrados) : filtrados;
+  mostrarSecoesLancamento = semFiltro && produtosVisiveis.some(p => p.lancamento);
+  divisorAcabaramInserido = false;
+  divisorTodosInserido = false;
 
   document.getElementById("contagem-produtos").textContent =
     `${produtosVisiveis.length} kit${produtosVisiveis.length === 1 ? "" : "s"} em estoque`;
