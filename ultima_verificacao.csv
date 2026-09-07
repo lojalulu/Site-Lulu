@@ -1,10 +1,15 @@
 ﻿id,nome,status,preco_original
-4430530,Pacote com 5 Conjuntos de Colete com Viés+ Short Duplo em Tactel Ref 05,disponivel,200.0
-4430522,Pacote com 5 Conjuntos de Short Duplo em Tactel+ Corta Vento Ref 04,disponivel,215.0
-4430515,Pacote com 5 Conjuntos Corta Vento+Short Duplo de Tactel Ref 03,disponivel,215.0
-4430512,Pacote com 5 Conjuntos Ref 02 De Short Duplo+ Blusa Tactel Com Elastano,disponivel,200.0
-4430504,Pacote com 5 Conjuntos de Short Duplo Ref 10 Em Poliamid,disponivel,275.0
-4430502,Pacote com 5 Conjuntos Short Duplo Ref 09 Em Poliamida,disponivel,275.0
+1366405,Pacote com 5 Conjuntos De Calça de Viés 08,disponivel,120.0
+684193,PACOTE COM 5 MACACÃO LONGO REF 07,disponivel,100.0
+3781598,Casaco Fitness com Zíper e Bolso – Pacote com 5 (Cores Sortidas) Tecido Poliamida,disponivel,175.0
+3249070,Pacote com 5 Conjuntos de Calça Suplex Ref 14,disponivel,158.1
+4019559,Pacote com 5 Macaquinhos Ref 40 em Suplex- Tam M,disponivel,125.0
+2773806,Pacote com 5 Macaquinhos Poliamida Grmt 320,disponivel,200.0
+4431155,Corta vento ~ impermeável ~,disponivel,195.5
+4430530,Pacote com 5 Conjuntos de Colete com Viés+ Short Duplo em Tactel Ref 05,disponivel,190.0
+4430522,Pacote com 5 Conjuntos de Short Duplo em Tactel+ Corta Vento Ref 04,disponivel,200.0
+4430515,Pacote com 5 Conjuntos Corta Vento+Short Duplo de Tactel Ref 03,disponivel,200.0
+4430512,Pacote com 5 Conjuntos Ref 02 De Short Duplo+ Blusa Tactel Com Elastano,disponivel,190.0
 3769201,Pacote com 5 Conjuntos Short Duplo em Poliamida com Proteção UV REF 08,disponivel,275.0
 3769190,Pacote com 5 Conjuntos Short Duplo em Poliamida com Proteção UV REF 07,disponivel,275.0
 3769174,Pacote com 5 Conjuntos Short Duplo em Poliamida com Proteção UV – Tamanho Único Ref 05,disponivel,275.0
@@ -27,7 +32,6 @@
 3745068,Pacote com 5 Conjuntos – Short Duplo em Suplex 04,disponivel,130.0
 3745064,Pacote com 5 Conjuntos – Short Duplo em Suplex 05,disponivel,130.0
 3745047,Pacote com 5 Conjuntos – Short Duplo em Suplex 06,disponivel,155.0
-3249148,Pacote com 5 Conjuntos de Short Duplo Suplex,disponivel,155.0
 2632923,Pacote com 5 Conjuntos de Short Ref 57,disponivel,125.0
 3311193,Pacote com 5 Casacos Corta Vento Em Tactel,disponivel,100.0
 684191,PACOTE COM 5 MACAQUINHOS CURTO REF 06,disponivel,100.0
@@ -40,10 +44,8 @@
 2107380,"Pacote com 10 Blusas Masc DryFit Lisa P,M,G,GG",disponivel,130.0
 2107347,Pacote com 5 Conjuntos de Calça Ref 45,disponivel,150.0
 1902473,Pacote com 5 Casacos Cropped Poliamida Premium,disponivel,150.0
-1902472,Pacote com 5 Casacos Longos Poliamida Premium,disponivel,150.0
 1548837,PACOTE COM 5 CONJUNTOS DE CALÇA 44 POLIAMIDA CANELADO,disponivel,350.0
 570243,PACOTE COM 5 COLETES PLUS SIZE Gg POLIAMIDA FURADINHO,disponivel,130.0
-570240,PACOTE COM 5 CASAQUINHOS LONGO PLUS SIZE- Gg,disponivel,125.0
 352718,PACOTE COM 10 BLUSAS COM MANGA G POLIAMIDA,disponivel,205.0
 352707,PACOTE COM 5 CONJUNTOS DE CALÇA POLIAMIDA MODELO 03 Canelado,disponivel,350.0
 2141881,PACOTE COM 5 MACAQUINHOS POLIAMIDA CANELADO COM REGULAGEM,disponivel,330.0
@@ -55,7 +57,6 @@
 2773884,PACOTE COM 5 CONJUNTOS DE CALCA REF 28 POLIAMIDA GMRT 320,disponivel,220.0
 4019547,Pacote com 5 Conjuntos de Short Duplo em Suplex Ref 06,disponivel,120.0
 3347534,Pacote com 5 Conjuntos de Short Duplo Suplex Bicolor,disponivel,175.0
-3347483,Pacote com 5 Conjuntos de Short Bolso 04 Plus Suplex,disponivel,145.0
 2845550,PACOTE COM 5 CONJUNTOS DE SHORT REF 04 POLIAMIDA CANELADO,disponivel,325.0
 570213,PACOTE COM 5 CASAQUINHOS COLETE POLIAMIDA FURADINHO SLIM,disponivel,100.0
 3378713,Pacote com 5 Conjuntos de Calça Plus Bolso 04 Suplex,disponivel,175.0
@@ -65,7 +66,6 @@
 3769152,Conjunto Bicolor Plus Size – Suplex (Pacote com 5 peças) REF 06,disponivel,140.0
 3769137,Conjunto Bicolor Plus Size – Suplex (Pacote com 5 peças) REF 07,disponivel,140.0
 3555110,Pacote com 5 Conjuntos de Short Suplex Bicolor 05 Plus Size,disponivel,125.0
-2816717,Pacote com 5 Conjuntos de Calça Bolso 03 Plus,disponivel,165.0
 318133,Pacote Com 5 Conjuntos Plus Size Viés 02,disponivel,142.8
 318117,Pacote Com 5 Conjuntos De Calça Plus Vies02,disponivel,175.0
 3405523,Pacote com 10 Blusa de Tule em Poliamida,disponivel,165.5
@@ -77,7 +77,6 @@
 3703564,Kit com 5 Conjuntos Fitness em Suplex – Linha Slim (Ref.) 26,disponivel,155.0
 3703557,Kit com 5 Conjuntos Fitness em Suplex – Linha Slim (Ref.)22,disponivel,100.0
 3950013,Pacote com 5 Conjuntos de Calça Viés 04+ Top No,disponivel,125.0
-3950006,Pacote com 5 Conjuntos de Calça Viés 04,disponivel,125.0
 3950002,Pacote com 5 Conjuntos de Calça Bolso 02,disponivel,120.0
 3865600,Pacote com 10 Blusa Uv Unisexx,disponivel,155.0
 3703559,PACOTE COM 5 Conjunto Fitness em Suplex – Linha Slim REF 23,disponivel,100.0
@@ -110,7 +109,6 @@
 2816695,Pacote com 5 Conjunto de Calça Plus Size Bicolor 03 Suplex,disponivel,140.0
 1902476,Pacote com 10 Regatas Poliamida Premium Ref 12,disponivel,120.0
 1366446,Pacote com 5 Conjuntos De Calça Viés 07,disponivel,120.0
-1366405,Pacote com 5 Conjuntos De Calça de Viés 08,disponivel,120.0
 906628,Pacote com 5 Conjuntos de Calça Viés 04+Top Nó,disponivel,120.0
 477632,Pacote com 5 Conjuntos de Short Vies 04 Plus Size,disponivel,125.0
 477630,Pacote com 5 Conjuntos Plus Size Calça Viés 04,disponivel,140.0
@@ -126,7 +124,6 @@
 2691560,Pacote com 5 Conjuntos de Calça Ref 59 Poliamida Grmt 320,disponivel,300.0
 477732,Pacote com 5 Conjuntos Short Plus Size Faixa 02,disponivel,125.0
 318110,Pacote com 5 Calça Viés Plus Size,disponivel,175.0
-684193,PACOTE COM 5 MACACÃO LONGO REF 07,disponivel,100.0
 2049299,Pacote com 5 Conjuntos de Calça Plus Bolso 02 Estampado,disponivel,160.0
 2049293,Pacote com 5 Conjuntos Plus Estampado Short Bolso,disponivel,140.0
 2049287,Pacote com 5 Conjuntos De Short Plus Viés 08,disponivel,140.0
@@ -152,6 +149,8 @@
 1026249,PACOTE COM 5 CONJUNTOS DE SHORT PLUS VIES 05,disponivel,145.0
 402270,PACOTE COM 5 CONJUNTOS DE SHORT MIDI SIZE DE VIES,disponivel,145.0
 384571,PACOTE COM 5 CONJUNTOS DE SHORT BICOLOR PLUS,disponivel,130.0
+4430504,Pacote com 5 Conjuntos de Short Duplo Ref 10 Em Poliamid,esgotado,275.0
+4430502,Pacote com 5 Conjuntos Short Duplo Ref 09 Em Poliamida,esgotado,275.0
 4249930,Pacote com 5 Conjuntos Poliamida Liso Ref 06 TAM MÍDI,esgotado,250.0
 3361907,Pacote com 5 Conjuntos de Calça Gramatura 320 Poliamida Ref 73,esgotado,300.0
 2535719,Pacote com 5 Conjuntos de Calça Poliamida Canelado Ref 58,esgotado,350.0
@@ -162,7 +161,9 @@
 359656,Pacote com 10 Regata Em Poliamida Plus Gg,esgotado,185.0
 2960582,Pacote com 10 Blusas com manga M,esgotado,105.0
 2535534,Pacote com 5 Macacão Ref 09 Longo Poliamida Canelado,esgotado,350.0
+1902472,Pacote com 5 Casacos Longos Poliamida Premium,esgotado,150.0
 1548840,PACOTE COM 5 CONJUNTOS DE CALÇA 55 POLIAMIDA CANELADO,esgotado,350.0
+570240,PACOTE COM 5 CASAQUINHOS LONGO PLUS SIZE- Gg,esgotado,125.0
 570215,PACOTE COM 5 CROPPED CURTO COM ZIPER POLIAMIDA,esgotado,100.0
 3361897,Pacote com 5 Conjuntos Poliamida Ref 77,esgotado,280.0
 3036498,Pacote com 5 Conjuntos de Short Duplo Ref 03,esgotado,280.5
@@ -172,6 +173,7 @@
 1712443,PACOTE COM 5 MACAQUINHOS POLIAMIDA CANELADO,esgotado,220.0
 3703565,Kit com 5 Conjuntos Fitness em Suplex – Linha Slim (Ref.) 24,esgotado,155.0
 3347539,Pacote com 5 Conjuntos de Short Saia 07 Plus Suplex,esgotado,175.0
+3347483,Pacote com 5 Conjuntos de Short Bolso 04 Plus Suplex,esgotado,145.0
 2816737,Pacote com 5 Conjuntos de Calca Ref 01 Suplex Plus,esgotado,165.0
 3555026,Pacote com 5 Conjuntos de Calca 01 Poliamida Mídi,esgotado,250.0
 3724372,Kit com 5 Conjuntos de Colete+ Short Duplo Tactel,esgotado,200.5
@@ -180,18 +182,18 @@
 4249968,Pacote com 5 Conjuntos de short Poliamida Ref 05 TAM Mídi,esgotado,250.0
 4249936,Pacote com 5 Conjuntos de Short TAM MÍDI Poliamida Ref 06,esgotado,250.0
 4019586,Pacote com 5 Conjuntos Ref 38 em Suplex,esgotado,130.0
-3781598,Casaco Fitness com Zíper e Bolso – Pacote com 5 (Cores Sortidas) Tecido Poliamida,esgotado,175.0
 4019589,Pacote com 5 Conjuntos Ref 37 Em Suplex,esgotado,110.0
 3950034,Pacote com 5 Conjuntos de Short Viés,esgotado,100.0
 3949998,Pacote com 5 Conjuntos de Calça Bolso,esgotado,125.0
 3378715,Pacote com 5 Conjuntos de Calça Viés 09 Suplex,esgotado,175.0
 3567052,Pacote com 5 Macaquinhos Em Poliamida Ref 02 Gramatura 310,esgotado,250.0
 2902240,Pacote com 5 Short Duplo Ref 02,esgotado,126.0
+2816717,Pacote com 5 Conjuntos de Calça Bolso 03 Plus,esgotado,165.0
 3361840,"Pacote com 5 Conjuntos de Calça Em Poliamida Gramatura 320, Ref 74",esgotado,300.0
-4019559,Pacote com 5 Macaquinhos Ref 40 em Suplex- Tam M,esgotado,125.0
 3703562,Kit com 5 Conjuntos Fitness em Suplex – Linha Slim (Ref.) 27,esgotado,125.0
 3950022,Pacote com 5 Conjuntos Short Viés 04,esgotado,100.0
 3950015,Pacote com 5 Conjuntos de Short Bolso 02,esgotado,100.0
+3950006,Pacote com 5 Conjuntos de Calça Viés 04,esgotado,125.0
 3944748,Pacote com 5 Corta Vento Tactel Bicolor,esgotado,120.5
 2049292,Pacote com 5 Conjuntos Plus Canelado Short 01,esgotado,325.0
 642355,PACOTE COM 5 CONJUNTOS DE CALÇA PLus 01 POLIAMIDA Canelado,esgotado,350.0
@@ -238,10 +240,8 @@
 3036689,Pacote com 5 Conjuntos de Calca Poliamida Canelado Plus Ref 02,esgotado,331.5
 2984089,Pacote com 5 Conjuntos de Calça Poliamida Grmtr 310 Bicolor,esgotado,250.0
 3249141,Pacote com 5 Conjuntos de Short Bolso Suplex,esgotado,125.0
-3249070,Pacote com 5 Conjuntos de Calça Suplex Ref 14,esgotado,158.1
 3221674,Pacote com 5 Conjuntos de Calça Suplex Ref 66,esgotado,155.0
 3221650,Pacote com 5 Conjuntos de Short Ref 65 Suplex,esgotado,125.0
-2773806,Pacote com 5 Macaquinhos Poliamida Grmt 320,esgotado,200.0
 2851135,Pacote com 5 Conjuntos de Calça Jacquard Ref 08 Grmt 360,esgotado,357.0
 3144665,Kit com 5 Conjunto Promocional em Jacquard com Bojo- Ref 03,esgotado,178.5
 3144660,Kit com 5 Conjunto Promocional em Jacquard com bojo- Ref 05,esgotado,178.5
@@ -329,5 +329,5 @@
 1115377,PACOTE COM 5 CONJUNTOS DE CALÇA REF 34 POLIAMIDA LISO,esgotado,280.5
 425021,Pacote com 5 Conjuntos de Short Poliamida 06 Canelado,esgotado,255.0
 746157,PACOTE COM 5 CONJUNTOS DE CALÇA POLIAMIDA CANELADO REF 14,esgotado,280.5
-4116139,"Kit Corta vento ref 00, 5 un.",esgotado,190.5
+4116139,"Kit Corta vento ref 00, 5 un.",esgotado,200.0
 3870620,COMBO PROMOCIONAL SHORT DUPLO,esgotado,120.0
