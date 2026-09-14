@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "2816695",
@@ -100,15 +100,16 @@
       "4323904",
       "2673557",
       "331422",
-      "331414"
+      "331414",
+      "4298763"
     ]
   },
   "ultimos_pilares": [
-    "conforto",
     "estilo",
     "disponibilidade",
     "qualidade",
-    "estilo"
+    "estilo",
+    "conforto"
   ],
   "conhecidos": {
     "kits": [
