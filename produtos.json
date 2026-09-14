@@ -1,5 +1,48 @@
 [
   {
+    "id": "3950022",
+    "nome": "Pacote com 5 Conjuntos Short Viés 04",
+    "preco_original": 100.0,
+    "preco_final": 160.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1775600043_9a042d71a3c752ef104a.webp",
+      "https://arquivos.facilzap.app.br/produtos/1775600039_ba07b1b6e788263017b4.webp",
+      "https://arquivos.facilzap.app.br/produtos/1775600219_c6c925f3e4770665a09a.webp"
+    ],
+    "cores_variadas": true,
+    "lancamento": true
+  },
+  {
+    "id": "3949998",
+    "nome": "Pacote com 5 Conjuntos de Calça Bolso",
+    "preco_original": 125.0,
+    "preco_final": 200.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1775599575_7e0a9eb3becac518f8b1.webp",
+      "https://arquivos.facilzap.app.br/produtos/1775599571_893bff925ee9806b1639.webp",
+      "https://arquivos.facilzap.app.br/produtos/1775599568_85417301dcd520d07fcf.webp"
+    ],
+    "cores_variadas": true,
+    "lancamento": true
+  },
+  {
+    "id": "3703570",
+    "nome": "Kit com 5 Conjuntos Fitness em Suplex – Linha Slim (Ref.)25",
+    "preco_original": 125.0,
+    "preco_final": 200.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1768184787_19256440f393b7c0cecc.webp",
+      "https://arquivos.facilzap.app.br/produtos/1768184783_3aef520ecdcbcb2a79d1.webp",
+      "https://arquivos.facilzap.app.br/produtos/1768184779_60e85a9a6228db74a4ab.webp",
+      "https://arquivos.facilzap.app.br/produtos/1768184775_80a83602f5cb49e7c52c.webp",
+      "https://arquivos.facilzap.app.br/produtos/1768184771_8ba50cdf804d477e7bdf.webp",
+      "https://arquivos.facilzap.app.br/produtos/1768184768_ad28a97adbb228f2f37b.webp",
+      "https://arquivos.facilzap.app.br/produtos/1768184764_d9b033896dac9a3a8e23.webp"
+    ],
+    "cores_variadas": true,
+    "lancamento": true
+  },
+  {
     "id": "1366405",
     "nome": "Pacote com 5 Conjuntos De Calça de Viés 08",
     "preco_original": 120.0,
@@ -38,7 +81,7 @@
       "https://arquivos.facilzap.app.br/produtos/1770555581_9d007f6ba27bcfd29f89.webp"
     ],
     "cores_variadas": true,
-    "lancamento": true
+    "lancamento": false
   },
   {
     "id": "3249070",
@@ -51,7 +94,7 @@
       "https://arquivos.facilzap.app.br/produtos/1754399213_aafe116e085b5d8bae53.jpeg.webp"
     ],
     "cores_variadas": true,
-    "lancamento": true
+    "lancamento": false
   },
   {
     "id": "4019559",
@@ -64,7 +107,7 @@
       "https://arquivos.facilzap.app.br/produtos/1777481278_6393bfe870b089bc4d1c.webp"
     ],
     "cores_variadas": true,
-    "lancamento": true
+    "lancamento": false
   },
   {
     "id": "2773806",
@@ -81,12 +124,12 @@
       "https://arquivos.facilzap.app.br/produtos/1739207733_8a8ca33df8d44c766326.jpeg.webp"
     ],
     "cores_variadas": true,
-    "lancamento": true
+    "lancamento": false
   },
   {
     "id": "4431155",
-    "nome": "Corta vento ~ impermeável ~",
-    "preco_original": 195.5,
+    "nome": "Pacote com 5 Corta vento ~ impermeável ~",
+    "preco_original": 195.0,
     "preco_final": 312.9,
     "imagens": [
       "https://arquivos.facilzap.app.br/produtos/1788267530_beac8ebff79976ae3426.webp",
@@ -94,7 +137,7 @@
       "https://arquivos.facilzap.app.br/produtos/1788267544_9853d9ea42dda747891c.webp"
     ],
     "cores_variadas": true,
-    "lancamento": true
+    "lancamento": false
   },
   {
     "id": "4430530",
@@ -495,19 +538,6 @@
     "lancamento": false
   },
   {
-    "id": "3769198",
-    "nome": "Pacote com 5 Conjuntos Short Duplo em Poliamida com Proteção UV REF 06",
-    "preco_original": 275.0,
-    "preco_final": 440.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1770214968_150c3bbb17d5d18ef45a.webp",
-      "https://arquivos.facilzap.app.br/produtos/1770214888_b6b7db2f077cbb7c9422.webp",
-      "https://arquivos.facilzap.app.br/produtos/1770214934_3b0e4c1556db129c7364.webp"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
     "id": "3018361",
     "nome": "Pacote com 5 conjuntos em poliamida Ref 62 Grmt 320",
     "preco_original": 321.3,
@@ -517,18 +547,6 @@
       "https://arquivos.facilzap.app.br/produtos/1747099864_bcc8f9a6c91c36d2b49d.jpeg.webp",
       "https://arquivos.facilzap.app.br/produtos/1747099861_2c426de550c6a0233e79.jpeg.webp",
       "https://arquivos.facilzap.app.br/produtos/1747099857_a8079d24755c35922641.jpeg.webp"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
-    "id": "2960573",
-    "nome": "Pacote com 10 Regatas M",
-    "preco_original": 95.0,
-    "preco_final": 152.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1745250718_be87d946c3b460164f03.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1745250718_ffbb6c56eb67c0ba8261.jpeg.webp"
     ],
     "cores_variadas": true,
     "lancamento": false
@@ -609,21 +627,6 @@
     "lancamento": false
   },
   {
-    "id": "1902473",
-    "nome": "Pacote com 5 Casacos Cropped Poliamida Premium",
-    "preco_original": 150.0,
-    "preco_final": 240.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1719350971_b0809909463b103619c6.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1719350967_51bdd769554a2c350f57.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1719350963_08cc21035723717d2bd4.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1719350959_0bf97863e611da24d03a.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1719350955_525dd525ace26c7579fa.jpeg.webp"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
     "id": "1548837",
     "nome": "PACOTE COM 5 CONJUNTOS DE CALÇA 44 POLIAMIDA CANELADO",
     "preco_original": 350.0,
@@ -651,35 +654,6 @@
       "https://arquivos.facilzap.app.br/produtos/1690901308_fe94b9dbd5e959a669f9.jpg",
       "https://arquivos.facilzap.app.br/produtos/1690901306_ceb9e0e6a4c2373b7b86.jpg",
       "https://arquivos.facilzap.app.br/produtos/1690901307_b5972968bca42c051540.jpg"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
-    "id": "352718",
-    "nome": "PACOTE COM 10 BLUSAS COM MANGA G POLIAMIDA",
-    "preco_original": 205.0,
-    "preco_final": 328.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1677100459_7d522bf56bc29aff6ce1.jpg",
-      "https://arquivos.facilzap.app.br/produtos/1677100468_da90f51917f9706b6702.jpg",
-      "https://arquivos.facilzap.app.br/produtos/1677100457_869adfbb584031d0ea08.jpg",
-      "https://arquivos.facilzap.app.br/produtos/1677100467_4476b935fda32cbbe9c6.jpg"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
-    "id": "352707",
-    "nome": "PACOTE COM 5 CONJUNTOS DE CALÇA POLIAMIDA MODELO 03 Canelado",
-    "preco_original": 350.0,
-    "preco_final": 560.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1677099668_2a4b4c6a1bcb3b04051c.jpg",
-      "https://arquivos.facilzap.app.br/produtos/1677099669_ef67434e34e06204c017.jpg",
-      "https://arquivos.facilzap.app.br/produtos/1677099673_afc5408da599622f5a0e.jpg",
-      "https://arquivos.facilzap.app.br/produtos/1677099637_131d91ce07a633082675.jpg",
-      "https://arquivos.facilzap.app.br/produtos/1677099638_157b2b2eeee6e98d33a0.jpg"
     ],
     "cores_variadas": true,
     "lancamento": false
@@ -1195,19 +1169,6 @@
       "https://arquivos.facilzap.app.br/produtos/1754399310_ae7f99af0f3078b894fd.jpeg.webp",
       "https://arquivos.facilzap.app.br/produtos/1754399307_47b618116c751ae20543.jpeg.webp",
       "https://arquivos.facilzap.app.br/produtos/1754399304_a2119629c2ca7dc158bc.jpeg.webp"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
-    "id": "352712",
-    "nome": "PACOTE COM 5 CONJUNTOS DE SHORT POLIAMIDA MODELO 03 Canelado",
-    "preco_original": 330.0,
-    "preco_final": 528.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1677100148_2ee66406c4a4f130ef5f.jpg",
-      "https://arquivos.facilzap.app.br/produtos/1677100149_933c6d69fd4d017fa76f.jpg",
-      "https://arquivos.facilzap.app.br/produtos/1677100147_b1423ce8ea9199b84e5a.jpg"
     ],
     "cores_variadas": true,
     "lancamento": false
@@ -2006,23 +1967,6 @@
       "https://arquivos.facilzap.app.br/produtos/1782827700_9abbc44f16a1dc9380e9.webp",
       "https://arquivos.facilzap.app.br/produtos/1782827621_9346db41e5b754a158e1.webp",
       "https://arquivos.facilzap.app.br/produtos/1782827695_8bea521c349ea294342d.webp"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
-    "id": "1299848",
-    "nome": "PACOTE COM 10 BLUSAS EM POLIAMIDA REF 08",
-    "preco_original": 183.6,
-    "preco_final": 293.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1719355187_749a68a26b83b735b173.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1719355180_300de9f94995b769381b.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1719355169_0951825729a09dff66ee.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1719355157_f8c7e7a8d86244925b4c.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1708982806_dc46fc2ee2eeedeacfd9.jpg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1708982799_9182f1a7ae4f9248f388.jpg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1708982791_7b34e3b3bf5cdf9e6911.jpg.webp"
     ],
     "cores_variadas": true,
     "lancamento": false
