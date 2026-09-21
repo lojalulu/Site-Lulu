@@ -1,5 +1,95 @@
 [
   {
+    "id": "4485666",
+    "nome": "Pacote com 5 Conjuntos de Calça Poliamida Canelado Ref 83",
+    "preco_original": 350.0,
+    "preco_final": 560.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1789921596_accc3a9bbf3b16e63643.webp",
+      "https://arquivos.facilzap.app.br/produtos/1789921600_5f9506bae1c275918aae.webp",
+      "https://arquivos.facilzap.app.br/produtos/1789921718_92235239e93b5a32c097.webp",
+      "https://arquivos.facilzap.app.br/produtos/1789921722_dd5a37a589339bc85334.webp"
+    ],
+    "cores_variadas": true,
+    "lancamento": true
+  },
+  {
+    "id": "4485664",
+    "nome": "Pacote com 5 Conjuntos de Calça Poliamida Canelado Ref 82",
+    "preco_original": 350.0,
+    "preco_final": 560.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1789921473_9282a3e9e40b9ceb3281.webp",
+      "https://arquivos.facilzap.app.br/produtos/1789921478_e43f167dde44e88e174e.webp",
+      "https://arquivos.facilzap.app.br/produtos/1789921482_14c7a610c4117ddedd89.webp",
+      "https://arquivos.facilzap.app.br/produtos/1789921486_e182acdc85d0e8e3ad99.webp",
+      "https://arquivos.facilzap.app.br/produtos/1789921603_e74b31d588b9c5ab8e9b.webp",
+      "https://arquivos.facilzap.app.br/produtos/1789921496_0348e6d4797e86542425.webp"
+    ],
+    "cores_variadas": true,
+    "lancamento": true
+  },
+  {
+    "id": "4485661",
+    "nome": "Pacote com 5 Conjuntos de Short Ref 79 Poliamida Canelado",
+    "preco_original": 320.0,
+    "preco_final": 512.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1789921491_52d802da144af2504efb.webp",
+      "https://arquivos.facilzap.app.br/produtos/1789921483_7f6d21b25ef42677eeb3.webp",
+      "https://arquivos.facilzap.app.br/produtos/1789921374_ddf51919b5498eb78536.webp",
+      "https://arquivos.facilzap.app.br/produtos/1789921491_a9b0368cb09be7d93188.webp",
+      "https://arquivos.facilzap.app.br/produtos/1789921384_e34bf3f017d28ce20d7d.webp",
+      "https://arquivos.facilzap.app.br/produtos/1789921388_79b9accdd4273b43380c.webp"
+    ],
+    "cores_variadas": true,
+    "lancamento": true
+  },
+  {
+    "id": "4485658",
+    "nome": "Pacote com 5 Conjuntos de Calça Ref 80 Poliamida Canelado",
+    "preco_original": 350.0,
+    "preco_final": 560.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1789921353_4b50fd87082b0d907c1f.webp",
+      "https://arquivos.facilzap.app.br/produtos/1789921357_0d58df1a0f2b68145c2e.webp",
+      "https://arquivos.facilzap.app.br/produtos/1789921362_efd15331c6f5be1fd2bc.webp",
+      "https://arquivos.facilzap.app.br/produtos/1789921353_5195603be6b51614a4b1.webp",
+      "https://arquivos.facilzap.app.br/produtos/1789921372_c49b16b52978e74f9ee6.webp"
+    ],
+    "cores_variadas": true,
+    "lancamento": true
+  },
+  {
+    "id": "4485653",
+    "nome": "Pacote com 5 Macaquinhos De Poliamida Canelado Ref 07",
+    "preco_original": 320.0,
+    "preco_final": 512.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1789921035_90996fb897b06d189cd0.webp",
+      "https://arquivos.facilzap.app.br/produtos/1789921040_1c6a883a8779ce2ff5d9.webp",
+      "https://arquivos.facilzap.app.br/produtos/1789921044_97e141a407aa70298d7e.webp",
+      "https://arquivos.facilzap.app.br/produtos/1789921049_0828ba03327a05fd283e.webp",
+      "https://arquivos.facilzap.app.br/produtos/1789921054_8f6ef6fd7534642518eb.webp"
+    ],
+    "cores_variadas": true,
+    "lancamento": true
+  },
+  {
+    "id": "2816717",
+    "nome": "Pacote com 5 Conjuntos de Calça Bolso 03 Plus",
+    "preco_original": 165.0,
+    "preco_final": 264.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1740420335_6efa9dd78e8c18b33d50.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1740420330_9c50dcbcbfea46728c7e.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1740420323_958ec03cdb055a2b7be2.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1740420321_cc4922f428b928a94867.jpeg.webp"
+    ],
+    "cores_variadas": true,
+    "lancamento": false
+  },
+  {
     "id": "3950022",
     "nome": "Pacote com 5 Conjuntos Short Viés 04",
     "preco_original": 100.0,
@@ -10,7 +100,7 @@
       "https://arquivos.facilzap.app.br/produtos/1775600219_c6c925f3e4770665a09a.webp"
     ],
     "cores_variadas": true,
-    "lancamento": true
+    "lancamento": false
   },
   {
     "id": "3949998",
@@ -23,7 +113,7 @@
       "https://arquivos.facilzap.app.br/produtos/1775599568_85417301dcd520d07fcf.webp"
     ],
     "cores_variadas": true,
-    "lancamento": true
+    "lancamento": false
   },
   {
     "id": "3703570",
@@ -40,7 +130,7 @@
       "https://arquivos.facilzap.app.br/produtos/1768184764_d9b033896dac9a3a8e23.webp"
     ],
     "cores_variadas": true,
-    "lancamento": true
+    "lancamento": false
   },
   {
     "id": "1366405",
@@ -97,19 +187,6 @@
     "lancamento": false
   },
   {
-    "id": "4019559",
-    "nome": "Pacote com 5 Macaquinhos Ref 40 em Suplex- Tam M",
-    "preco_original": 125.0,
-    "preco_final": 200.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1777481286_e4ad4e3bb2188fe384d7.webp",
-      "https://arquivos.facilzap.app.br/produtos/1777481282_a01d613d38f287ae1906.webp",
-      "https://arquivos.facilzap.app.br/produtos/1777481278_6393bfe870b089bc4d1c.webp"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
     "id": "2773806",
     "nome": "Pacote com 5 Macaquinhos Poliamida Grmt 320",
     "preco_original": 200.0,
@@ -129,8 +206,8 @@
   {
     "id": "4431155",
     "nome": "Pacote com 5 Corta vento ~ impermeável ~",
-    "preco_original": 195.0,
-    "preco_final": 312.9,
+    "preco_original": 190.0,
+    "preco_final": 304.9,
     "imagens": [
       "https://arquivos.facilzap.app.br/produtos/1788267530_beac8ebff79976ae3426.webp",
       "https://arquivos.facilzap.app.br/produtos/1788267536_a2e021104d3a8e48e05f.webp",
@@ -235,19 +312,6 @@
       "https://arquivos.facilzap.app.br/produtos/1770214670_d963feedd70eeba35ea0.webp",
       "https://arquivos.facilzap.app.br/produtos/1770214592_a34ceb971d22ef62949a.webp",
       "https://arquivos.facilzap.app.br/produtos/1770214589_f2c0dae9814ca128acec.webp"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
-    "id": "4418318",
-    "nome": "KIT 5 shorts DUPLO tactel (APENAS SHORT)",
-    "preco_original": 100.0,
-    "preco_final": 160.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1787846804_8bf3948ff9e43e2700f6.webp",
-      "https://arquivos.facilzap.app.br/produtos/1787846756_88fc0d2521f36976b7bd.webp",
-      "https://arquivos.facilzap.app.br/produtos/1787846766_2908f5934eea2d9da6f1.webp"
     ],
     "cores_variadas": true,
     "lancamento": false
@@ -538,20 +602,6 @@
     "lancamento": false
   },
   {
-    "id": "3018361",
-    "nome": "Pacote com 5 conjuntos em poliamida Ref 62 Grmt 320",
-    "preco_original": 321.3,
-    "preco_final": 514.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1747099866_8d3dfbe4468c120a5e7b.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1747099864_bcc8f9a6c91c36d2b49d.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1747099861_2c426de550c6a0233e79.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1747099857_a8079d24755c35922641.jpeg.webp"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
     "id": "2851134",
     "nome": "Pacote com 5 Conjuntos de Short Ref 08 Jcquard Grmt 360",
     "preco_original": 230.0,
@@ -577,20 +627,6 @@
       "https://arquivos.facilzap.app.br/produtos/1739208568_2fdb7c77a4abc00ccaba.jpg.webp",
       "https://arquivos.facilzap.app.br/produtos/1739208564_86a4e53d85aac9b581f4.jpg.webp",
       "https://arquivos.facilzap.app.br/produtos/1739208560_62efd6fd0a835518c739.jpg.webp"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
-    "id": "2576248",
-    "nome": "Pacote com 5 Conjuntos de Calça Ref 11 Poliamida Gramatura 320",
-    "preco_original": 220.0,
-    "preco_final": 352.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1732561598_b4bb302b57c04cf3e3b5.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1732561592_9d87e4761015324b6612.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1732561587_01af7c862f9dbe1efbc0.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1732561581_1687c2400490a02071fa.jpeg.webp"
     ],
     "cores_variadas": true,
     "lancamento": false
@@ -641,19 +677,6 @@
       "https://arquivos.facilzap.app.br/produtos/1713802373_00ff6b17f00ad87824f9.jpeg.webp",
       "https://arquivos.facilzap.app.br/produtos/1713802371_6c73d0ff18725b4cb9ad.jpeg.webp",
       "https://arquivos.facilzap.app.br/produtos/1713802367_ab5cc269b8a410d14ace.jpeg.webp"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
-    "id": "570243",
-    "nome": "PACOTE COM 5 COLETES PLUS SIZE Gg POLIAMIDA FURADINHO",
-    "preco_original": 130.0,
-    "preco_final": 208.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1690901308_fe94b9dbd5e959a669f9.jpg",
-      "https://arquivos.facilzap.app.br/produtos/1690901306_ceb9e0e6a4c2373b7b86.jpg",
-      "https://arquivos.facilzap.app.br/produtos/1690901307_b5972968bca42c051540.jpg"
     ],
     "cores_variadas": true,
     "lancamento": false
@@ -1003,19 +1026,6 @@
       "https://arquivos.facilzap.app.br/produtos/1764168213_e1a46c40988cd2ac6910.webp",
       "https://arquivos.facilzap.app.br/produtos/1764168209_91f9333c04103a8d113a.webp",
       "https://arquivos.facilzap.app.br/produtos/1764168204_8f2af842e68b32243dee.webp"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
-    "id": "3703564",
-    "nome": "Kit com 5 Conjuntos Fitness em Suplex – Linha Slim (Ref.) 26",
-    "preco_original": 155.0,
-    "preco_final": 248.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1768184567_0909681e4c190dba1cf2.webp",
-      "https://arquivos.facilzap.app.br/produtos/1768184563_136eda9683d19408034c.webp",
-      "https://arquivos.facilzap.app.br/produtos/1768184560_9260edd009ee969769fd.webp"
     ],
     "cores_variadas": true,
     "lancamento": false
@@ -1659,26 +1669,6 @@
     "lancamento": false
   },
   {
-    "id": "2691573",
-    "nome": "Pacote com 5 Conjuntos de Calça Ref 60A Grmt 320",
-    "preco_original": 220.0,
-    "preco_final": 352.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1736860565_da18b1d0332b0fc9e4f7.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1736860562_8ae54240013631d216c3.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1736860558_b28ec209538164627dba.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1736860553_3f263e67a076688347ac.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1736860542_42d5adc52f1295755d0c.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1736860537_7b53269ce0ccf1e2b640.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1736860531_21e89fbceb0f853caace.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1736860528_a665275c7f3f7c4dc4fe.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1736860524_34557d1b0a53645f971f.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1736860520_7be9eab7dd68a9970c79.jpeg.webp"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
     "id": "2691560",
     "nome": "Pacote com 5 Conjuntos de Calça Ref 59 Poliamida Grmt 320",
     "preco_original": 300.0,
@@ -1953,20 +1943,6 @@
       "https://arquivos.facilzap.app.br/produtos/1674009406_b1abeed409c53f4be6b9.jpeg",
       "https://arquivos.facilzap.app.br/produtos/1674009407_343c5b2c623fb19ad878.jpeg",
       "https://arquivos.facilzap.app.br/produtos/1674009408_2e50a0d6add5991a6def.jpeg"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
-    "id": "4210537",
-    "nome": "Colete tactel pacote com 5",
-    "preco_original": 97.5,
-    "preco_final": 156.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1782827630_a72be3de9e5a25223c71.webp",
-      "https://arquivos.facilzap.app.br/produtos/1782827700_9abbc44f16a1dc9380e9.webp",
-      "https://arquivos.facilzap.app.br/produtos/1782827621_9346db41e5b754a158e1.webp",
-      "https://arquivos.facilzap.app.br/produtos/1782827695_8bea521c349ea294342d.webp"
     ],
     "cores_variadas": true,
     "lancamento": false

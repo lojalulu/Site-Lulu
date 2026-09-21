@@ -1,5 +1,31 @@
 [
   {
+    "id": "4477104",
+    "nome": "SHORT CURTO DUPLO",
+    "preco_original": 45.0,
+    "preco_final": 72.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1789646268_a7411c33dd996cafc36f.webp",
+      "https://arquivos.facilzap.app.br/produtos/1789646382_c12ec68a41c33e717e10.webp",
+      "https://arquivos.facilzap.app.br/produtos/1789646402_1102e118cefc9e8bda31.webp"
+    ],
+    "cores_variadas": false,
+    "tamanhos": []
+  },
+  {
+    "id": "4477094",
+    "nome": "CONJ DE SHORT SAIA PREMIUM",
+    "preco_original": 85.0,
+    "preco_final": 136.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1789645889_655d0d84475937640c4e.webp",
+      "https://arquivos.facilzap.app.br/produtos/1789645894_5a3cf366d7aa70f036e2.webp",
+      "https://arquivos.facilzap.app.br/produtos/1789645914_6220dd0fab2133843697.webp"
+    ],
+    "cores_variadas": false,
+    "tamanhos": []
+  },
+  {
     "id": "4298763",
     "nome": "SHORT SAIA PREMIUM",
     "preco_original": 42.0,
