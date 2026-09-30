@@ -127,7 +127,10 @@ def main():
     else:
         produto = escolher_produto_normal(loja, historico, produtos_loja)
 
-    post = gerar_post(produto, loja, historico["ultimos_pilares"], eh_lancamento=eh_lancamento)
+    post = gerar_post(
+        produto, loja, historico["ultimos_pilares"], eh_lancamento=eh_lancamento,
+        frases_recentes=historico.setdefault("ultimas_frases", {}),
+    )
 
     imagem_bytes = gerar_imagem_story(produto["imagens"][0], post["texto_story"])
     with open(SAIDA_STORY_IMG, "wb") as f:
