@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "2816695",
@@ -99,7 +99,8 @@
       "2708869",
       "1366446",
       "3950002",
-      "3703565"
+      "3703565",
+      "4496249"
     ],
     "avulso": [
       "334028",
@@ -123,9 +124,9 @@
     ]
   },
   "ultimos_pilares": [
-    "estilo",
     "lucratividade",
     "disponibilidade",
+    "lancamento",
     "lancamento",
     "lancamento"
   ],
@@ -397,7 +398,6 @@
   "lancamentos_pendentes": {
     "kits": [
       "3361887",
-      "4496249",
       "4514241"
     ],
     "avulso": [
@@ -407,17 +407,20 @@
   "ultimas_frases": {
     "lancamento": [
       "Peça nova no catálogo, quentinha da produção.",
-      "Modelo novo na área — sua cliente ainda não viu em lugar nenhum."
+      "Modelo novo na área — sua cliente ainda não viu em lugar nenhum.",
+      "Novidade que acabou de entrar — primeira remessa."
     ],
     "frete_kits": [
       "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚"
     ],
     "tag_kits": [
-      "Vendido em kit fechado, cores sortidas."
+      "Vendido em kit fechado, cores sortidas.",
+      "Vem em kit fechado de 5, tecido suplex vip."
     ],
     "cta_bio": [
       "Os outros modelos estão no link da bio 👆",
-      "Vê as cores e monta seu pedido pelo link da bio 🔗"
+      "Vê as cores e monta seu pedido pelo link da bio 🔗",
+      "Link da bio te leva direto pro catálogo 📲"
     ],
     "preco": [
       "{nome_curto}: {preco}."
