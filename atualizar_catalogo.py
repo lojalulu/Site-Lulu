@@ -43,10 +43,23 @@ import json
 import math
 import os
 import re
+import sys
 import time
+from datetime import date, timedelta
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
+
+# Quantos dias um produto novo continua marcado como "lançamento".
+# Com o robô rodando todo dia, sem essa janela o selo sumiria já no dia
+# seguinte e os robôs de Instagram/WhatsApp (que postam em dias e
+# horários diferentes) poderiam nunca ver o produto como novidade.
+DIAS_LANCAMENTO = 7
+
+# Proteção do site: se a loja-fonte devolver bem menos produtos que o
+# normal (instabilidade, página mudou de formato), NÃO sobrescreve o
+# site — mantém a versão anterior e tenta de novo na próxima execução.
+PROPORCAO_MINIMA_SEGURA = 0.4
 
 # ------------------- CONFIGURAÇÃO DAS LOJAS -------------------
 LOJAS = [
@@ -241,6 +254,8 @@ def atualizar_loja(config: dict):
 
     print("Lendo catálogo completo da loja...")
     produtos_catalogo = get_lista_produtos(sessao, config["base_url"])
+    if not produtos_catalogo:
+        raise RuntimeError("a loja-fonte devolveu um catálogo vazio (fora do ar ou formato mudou)")
     print(f"{len(produtos_catalogo)} referências encontradas. Verificando estoque de cada uma...\n")
 
     # ----- detecção de lançamento (produtos novos desde a última execução) -----
@@ -254,6 +269,16 @@ def atualizar_loja(config: dict):
         ids_conhecidos = set()
     # na primeira execução com essa opção ligada, ninguém é "lançamento"
     # (senão o catálogo inteiro apareceria como novidade de uma vez só)
+
+    # data em que cada produto novo foi visto pela primeira vez — mantém o
+    # selo de lançamento por DIAS_LANCAMENTO dias
+    caminho_datas = os.path.join(pasta_saida, "lancamentos_datas.json") if pasta_saida else "lancamentos_datas.json"
+    datas_lancamento = {}
+    if rastrear_novidades and os.path.exists(caminho_datas):
+        with open(caminho_datas, encoding="utf-8") as f:
+            datas_lancamento = json.load(f)
+    hoje = date.today()
+    limite_lancamento = hoje - timedelta(days=DIAS_LANCAMENTO)
 
     resultado = []
     log_linhas = []
@@ -294,7 +319,10 @@ def atualizar_loja(config: dict):
             if extrair_tamanhos:
                 item["tamanhos"] = tamanhos  # lista vazia = produto sem seletor de tamanho no site
             if rastrear_novidades:
-                item["lancamento"] = (not primeira_execucao) and (pid not in ids_conhecidos)
+                if (not primeira_execucao) and (pid not in ids_conhecidos) and pid not in datas_lancamento:
+                    datas_lancamento[pid] = hoje.isoformat()
+                visto_em = datas_lancamento.get(pid)
+                item["lancamento"] = bool(visto_em) and date.fromisoformat(visto_em) > limite_lancamento
             resultado.append(item)
             disponiveis += 1
         elif status == "esgotado":
@@ -313,9 +341,26 @@ def atualizar_loja(config: dict):
 
         time.sleep(DELAY_SECONDS)
 
+    # ----- proteção: não apaga o site se a loja-fonte respondeu pela metade -----
+    try:
+        with open(config["output_json"], encoding="utf-8") as f:
+            qtd_anterior = len(json.load(f))
+    except Exception:
+        qtd_anterior = 0
+    if qtd_anterior >= 20 and len(resultado) < qtd_anterior * PROPORCAO_MINIMA_SEGURA:
+        raise RuntimeError(
+            f"só {len(resultado)} produtos disponíveis agora contra {qtd_anterior} na última versão — "
+            f"parece instabilidade da loja-fonte; site mantido como estava"
+        )
+
     if rastrear_novidades:
         with open(caminho_conhecidos, "w", encoding="utf-8") as f:
             json.dump(sorted(ids_conhecidos | ids_disponiveis_agora), f)
+        # guarda só datas recentes (o suficiente pra janela de lançamento)
+        corte_limpeza = hoje - timedelta(days=60)
+        datas_lancamento = {k: v for k, v in datas_lancamento.items() if date.fromisoformat(v) > corte_limpeza}
+        with open(caminho_datas, "w", encoding="utf-8") as f:
+            json.dump(datas_lancamento, f, ensure_ascii=False, indent=2, sort_keys=True)
 
     if DEBUG_TAMANHOS and amostras_debug:
         pasta_debug = os.path.dirname(config["output_json"])
@@ -424,13 +469,28 @@ def atualizar_loja(config: dict):
 
 def main():
     totais = []
+    falhas = []
     for config in LOJAS:
-        totais.append((config["nome"], *atualizar_loja(config)))
+        # cada loja é independente: se uma falhar (loja-fonte fora do ar,
+        # instabilidade), a outra continua sendo atualizada normalmente
+        try:
+            totais.append((config["nome"], *atualizar_loja(config)))
+        except Exception as e:
+            print(f"\n❌ FALHA em {config['nome']}: {e}")
+            print("   Essa loja ficou como estava; tenta de novo na próxima execução.")
+            falhas.append(config["nome"])
 
     print("\n===== RESUMO GERAL =====")
     for nome, disponiveis, esgotados, erros in totais:
         extra = f" — ATENÇÃO: {erros} erros de rede" if erros else ""
         print(f"{nome}: {disponiveis} disponíveis, {esgotados} esgotados{extra}")
+    for nome in falhas:
+        print(f"{nome}: NÃO ATUALIZADA (falhou nessa execução)")
+
+    # só marca a execução como falha (vermelho no GitHub) se NENHUMA loja
+    # conseguiu atualizar — assim o que deu certo ainda é publicado
+    if falhas and not totais:
+        sys.exit(1)
 
 
 if __name__ == "__main__":

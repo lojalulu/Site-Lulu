@@ -2,7 +2,9 @@ name: Atualizar catálogo Loja Lulu
 
 on:
   schedule:
-    - cron: '0 11 * * 1'   # toda segunda-feira, 11:00 UTC = 08:00 em Salvador
+    - cron: '0 11 * * *'   # todo dia, 11:00 UTC = 08:00 em Salvador
+    # (repositório público = minutos do GitHub ilimitados; o Netlify só faz
+    #  deploy quando o index.html realmente muda — ver netlify.toml)
   workflow_dispatch:        # permite clicar em "Run workflow" manualmente
 
 permissions:
