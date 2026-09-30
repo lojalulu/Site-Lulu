@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "2816695",
@@ -98,7 +98,8 @@
       "3950013",
       "2708869",
       "1366446",
-      "3950002"
+      "3950002",
+      "3703565"
     ],
     "avulso": [
       "334028",
@@ -121,11 +122,11 @@
     ]
   },
   "ultimos_pilares": [
-    "qualidade",
     "cliente_ama",
     "estilo",
     "lucratividade",
-    "disponibilidade"
+    "disponibilidade",
+    "lancamento"
   ],
   "conhecidos": {
     "kits": [
@@ -213,6 +214,7 @@
       "3347522",
       "3347534",
       "3347550",
+      "3361887",
       "3378713",
       "3388638",
       "3405521",
@@ -229,6 +231,7 @@
       "3703559",
       "3703560",
       "3703564",
+      "3703565",
       "3703570",
       "3709232",
       "3745047",
@@ -277,6 +280,8 @@
       "4485664",
       "4485666",
       "449557",
+      "4496249",
+      "4514241",
       "458313",
       "477630",
       "477632",
@@ -387,7 +392,25 @@
     ]
   },
   "lancamentos_pendentes": {
-    "kits": [],
+    "kits": [
+      "3361887",
+      "4496249",
+      "4514241"
+    ],
     "avulso": []
+  },
+  "ultimas_frases": {
+    "lancamento": [
+      "Peça nova no catálogo, quentinha da produção."
+    ],
+    "frete_kits": [
+      "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚"
+    ],
+    "tag_kits": [
+      "Vendido em kit fechado, cores sortidas."
+    ],
+    "cta_bio": [
+      "Os outros modelos estão no link da bio 👆"
+    ]
   }
 }
