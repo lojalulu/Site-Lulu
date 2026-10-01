@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "2816695",
@@ -124,15 +124,16 @@
       "875537",
       "4307641",
       "4513458",
-      "3118780"
+      "3118780",
+      "2673571"
     ]
   },
   "ultimos_pilares": [
     "lancamento",
     "lancamento",
-    "lancamento",
     "qualidade",
-    "lancamento"
+    "lancamento",
+    "conforto"
   ],
   "conhecidos": {
     "kits": [
@@ -422,11 +423,11 @@
       "Kit fechado, 5 peças, suplex vip."
     ],
     "cta_bio": [
-      "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Link da bio te leva direto pro catálogo 📲",
       "Dá uma espiada no link da bio 💗",
       "Catálogo inteiro tá no link da bio 👆",
-      "Catálogo completo — link na bio ✨"
+      "Catálogo completo — link na bio ✨",
+      "Pedido pelo site, link na bio 🛍️"
     ],
     "preco": [
       "{nome_curto}: {preco}.",
@@ -436,7 +437,8 @@
     "tag_avulso": [
       "Peça avulsa, malha premium.",
       "É peça avulsa, na malha premium.",
-      "Vendida avulsa, sem precisar levar kit fechado."
+      "Vendida avulsa, sem precisar levar kit fechado.",
+      "Peça avulsa premium — você monta o pedido do seu jeito."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso."
@@ -449,6 +451,9 @@
     ],
     "cta_alt": [
       "Chama no direct pra garantir o seu 💬"
+    ],
+    "conforto": [
+      "Peça leve, que não pesa nem nos dias mais quentes."
     ]
   }
 }
