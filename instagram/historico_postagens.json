@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "2816695",
@@ -120,12 +120,13 @@
       "4376846",
       "4371813",
       "875537",
-      "4307641"
+      "4307641",
+      "4513458"
     ]
   },
   "ultimos_pilares": [
-    "lucratividade",
     "disponibilidade",
+    "lancamento",
     "lancamento",
     "lancamento",
     "lancamento"
@@ -400,15 +401,14 @@
       "3361887",
       "4514241"
     ],
-    "avulso": [
-      "4513458"
-    ]
+    "avulso": []
   },
   "ultimas_frases": {
     "lancamento": [
       "Peça nova no catálogo, quentinha da produção.",
       "Modelo novo na área — sua cliente ainda não viu em lugar nenhum.",
-      "Novidade que acabou de entrar — primeira remessa."
+      "Novidade que acabou de entrar — primeira remessa.",
+      "Lançamento da semana — sai na frente e oferece antes de todo mundo."
     ],
     "frete_kits": [
       "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚"
@@ -420,13 +420,16 @@
     "cta_bio": [
       "Os outros modelos estão no link da bio 👆",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
-      "Link da bio te leva direto pro catálogo 📲"
+      "Link da bio te leva direto pro catálogo 📲",
+      "Dá uma espiada no link da bio 💗"
     ],
     "preco": [
-      "{nome_curto}: {preco}."
+      "{nome_curto}: {preco}.",
+      "Tudo isso por {preco}."
     ],
     "tag_avulso": [
-      "Peça avulsa, malha premium."
+      "Peça avulsa, malha premium.",
+      "É peça avulsa, na malha premium."
     ]
   }
 }
