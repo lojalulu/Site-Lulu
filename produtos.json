@@ -39,36 +39,6 @@
     "lancamento": true
   },
   {
-    "id": "4485666",
-    "nome": "Pacote com 5 Conjuntos de Calça Poliamida Canelado Ref 83",
-    "preco_original": 350.0,
-    "preco_final": 560.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1789921596_accc3a9bbf3b16e63643.webp",
-      "https://arquivos.facilzap.app.br/produtos/1789921600_5f9506bae1c275918aae.webp",
-      "https://arquivos.facilzap.app.br/produtos/1789921718_92235239e93b5a32c097.webp",
-      "https://arquivos.facilzap.app.br/produtos/1789921722_dd5a37a589339bc85334.webp"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
-    "id": "4485664",
-    "nome": "Pacote com 5 Conjuntos de Calça Poliamida Canelado Ref 82",
-    "preco_original": 350.0,
-    "preco_final": 560.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1789921473_9282a3e9e40b9ceb3281.webp",
-      "https://arquivos.facilzap.app.br/produtos/1789921478_e43f167dde44e88e174e.webp",
-      "https://arquivos.facilzap.app.br/produtos/1789921482_14c7a610c4117ddedd89.webp",
-      "https://arquivos.facilzap.app.br/produtos/1789921486_e182acdc85d0e8e3ad99.webp",
-      "https://arquivos.facilzap.app.br/produtos/1789921603_e74b31d588b9c5ab8e9b.webp",
-      "https://arquivos.facilzap.app.br/produtos/1789921496_0348e6d4797e86542425.webp"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
     "id": "4485661",
     "nome": "Pacote com 5 Conjuntos de Short Ref 79 Poliamida Canelado",
     "preco_original": 320.0,
@@ -80,21 +50,6 @@
       "https://arquivos.facilzap.app.br/produtos/1789921491_a9b0368cb09be7d93188.webp",
       "https://arquivos.facilzap.app.br/produtos/1789921384_e34bf3f017d28ce20d7d.webp",
       "https://arquivos.facilzap.app.br/produtos/1789921388_79b9accdd4273b43380c.webp"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
-    "id": "4485658",
-    "nome": "Pacote com 5 Conjuntos de Calça Ref 80 Poliamida Canelado",
-    "preco_original": 350.0,
-    "preco_final": 560.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1789921353_4b50fd87082b0d907c1f.webp",
-      "https://arquivos.facilzap.app.br/produtos/1789921357_0d58df1a0f2b68145c2e.webp",
-      "https://arquivos.facilzap.app.br/produtos/1789921362_efd15331c6f5be1fd2bc.webp",
-      "https://arquivos.facilzap.app.br/produtos/1789921353_5195603be6b51614a4b1.webp",
-      "https://arquivos.facilzap.app.br/produtos/1789921372_c49b16b52978e74f9ee6.webp"
     ],
     "cores_variadas": true,
     "lancamento": false
@@ -311,22 +266,6 @@
     "lancamento": false
   },
   {
-    "id": "3769174",
-    "nome": "Pacote com 5 Conjuntos Short Duplo em Poliamida com Proteção UV – Tamanho Único Ref 05",
-    "preco_original": 275.0,
-    "preco_final": 440.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1770214681_fa8f8302d6af6d70c029.webp",
-      "https://arquivos.facilzap.app.br/produtos/1770214676_1fd5498b8a6d0c05632a.webp",
-      "https://arquivos.facilzap.app.br/produtos/1770214600_f0f04808b8fe7813cbd2.webp",
-      "https://arquivos.facilzap.app.br/produtos/1770214670_d963feedd70eeba35ea0.webp",
-      "https://arquivos.facilzap.app.br/produtos/1770214592_a34ceb971d22ef62949a.webp",
-      "https://arquivos.facilzap.app.br/produtos/1770214589_f2c0dae9814ca128acec.webp"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
     "id": "3501601",
     "nome": "Pacote com 5 Conjuntos de Calça Suplex Plus Ref Viés 10",
     "preco_original": 175.0,
@@ -463,20 +402,6 @@
       "https://arquivos.facilzap.app.br/produtos/1712758349_9202ffdbdcb529f76280.jpeg.webp",
       "https://arquivos.facilzap.app.br/produtos/1712758346_8dd7bc9ac2330ed04e90.jpeg.webp",
       "https://arquivos.facilzap.app.br/produtos/1712758343_c535498112abc2d1a2c8.jpeg.webp"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
-    "id": "3703560",
-    "nome": "Kit com 5 Conjuntos Fitness em Suplex – Linha Slim (Ref.) 21",
-    "preco_original": 100.0,
-    "preco_final": 160.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1768184379_4f9b66c22c0088846e1f.webp",
-      "https://arquivos.facilzap.app.br/produtos/1768184301_0a8227dc7be88501dbd4.webp",
-      "https://arquivos.facilzap.app.br/produtos/1768184370_41b9d8344479fc641429.webp",
-      "https://arquivos.facilzap.app.br/produtos/1768184367_0367869de1a22d23d836.webp"
     ],
     "cores_variadas": true,
     "lancamento": false
@@ -627,25 +552,6 @@
       "https://arquivos.facilzap.app.br/produtos/1722286038_69e10bb7e080dfb86d68.jpeg.webp",
       "https://arquivos.facilzap.app.br/produtos/1722286031_ea87231a1d6b92624876.jpeg.webp",
       "https://arquivos.facilzap.app.br/produtos/1722286026_81abfc984481ebfacead.jpeg.webp"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
-    "id": "1548837",
-    "nome": "PACOTE COM 5 CONJUNTOS DE CALÇA 44 POLIAMIDA CANELADO",
-    "preco_original": 350.0,
-    "preco_final": 560.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1713802390_f5b47d68435d0e9ab2c3.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1713802385_adfd99324e314eb136a5.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1713802382_c48282a17ad461e10660.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1713802380_872cdb67414623439656.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1713802377_936ac21ed77aaa269d66.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1713802375_47ed23184ee884dbe2a5.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1713802373_00ff6b17f00ad87824f9.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1713802371_6c73d0ff18725b4cb9ad.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1713802367_ab5cc269b8a410d14ace.jpeg.webp"
     ],
     "cores_variadas": true,
     "lancamento": false
@@ -868,18 +774,6 @@
       "https://arquivos.facilzap.app.br/produtos/1762954266_e1d8863a79d8776f6324.webp",
       "https://arquivos.facilzap.app.br/produtos/1762954310_c72894b5e28d28f1ae40.webp",
       "https://arquivos.facilzap.app.br/produtos/1762954307_5a9f168123d5e1b66809.webp"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
-    "id": "318133",
-    "nome": "Pacote Com 5 Conjuntos Plus Size Viés 02",
-    "preco_original": 142.8,
-    "preco_final": 228.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1674043997_e056926556cf494f2fb6.jpeg",
-      "https://arquivos.facilzap.app.br/produtos/1674043996_1fb4878f9b0ed5f156c7.jpeg"
     ],
     "cores_variadas": true,
     "lancamento": false
