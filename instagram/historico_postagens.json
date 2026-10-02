@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "2816695",
@@ -105,7 +105,8 @@
       "4514241",
       "4116139",
       "2141881",
-      "853903"
+      "853903",
+      "318145"
     ],
     "avulso": [
       "334028",
@@ -135,11 +136,11 @@
     ]
   },
   "ultimos_pilares": [
-    "renda_extra",
     "estilo",
     "conforto",
     "qualidade",
-    "disponibilidade"
+    "disponibilidade",
+    "renda_extra"
   ],
   "conhecidos": {
     "kits": [
@@ -426,10 +427,10 @@
       "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚"
     ],
     "tag_kits": [
-      "Kit fechado, 5 peças, suplex vip.",
       "Kit fechado — ótimo pra começar a revender.",
       "É kit fechado com 5 peças, em suplex vip.",
-      "Vem em kit fechado de 5, tecido suplex vip."
+      "Vem em kit fechado de 5, tecido suplex vip.",
+      "Kit com cores variadas."
     ],
     "cta_bio": [
       "Catálogo completo — link na bio ✨",
@@ -462,15 +463,16 @@
       "Hoje, {quantidade} saem por {preco}."
     ],
     "cta_alt": [
-      "Ficou com dúvida? Chama no direct 💬",
-      "Manda mensagem que a gente te ajuda a montar o pedido 💬"
+      "Manda mensagem que a gente te ajuda a montar o pedido 💬",
+      "Chama no direct pra garantir o seu 💬"
     ],
     "conforto": [
       "Peça leve, que não pesa nem nos dias mais quentes.",
       "Feita pra treinar, trabalhar ou só ficar em casa — confortável do mesmo jeito."
     ],
     "renda_extra": [
-      "Muita revendedora começou com um kit só e hoje compra todo mês."
+      "Muita revendedora começou com um kit só e hoje compra todo mês.",
+      "Pra quem vende no WhatsApp ou no Instagram, essa peça ajuda a fechar pedido."
     ],
     "estilo": [
       "Modelagem atual, cores que estão em alta — moda fitness que também é moda de rua."
