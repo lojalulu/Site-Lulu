@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "2816695",
@@ -108,7 +108,8 @@
       "853903",
       "318145",
       "402269",
-      "318126"
+      "318126",
+      "3865600"
     ],
     "avulso": [
       "334028",
@@ -141,11 +142,11 @@
     ]
   },
   "ultimos_pilares": [
-    "lucratividade",
     "disponibilidade",
     "cliente_ama",
     "qualidade",
-    "disponibilidade"
+    "disponibilidade",
+    "estilo"
   ],
   "conhecidos": {
     "kits": [
@@ -433,17 +434,17 @@
       "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦"
     ],
     "tag_kits": [
-      "Vem em kit fechado de 5, tecido suplex vip.",
       "Kit com cores variadas.",
       "Vendido em kit fechado, cores sortidas.",
-      "Kit fechado — ótimo pra começar a revender."
+      "Kit fechado — ótimo pra começar a revender.",
+      "Kit fechado, 5 peças, suplex vip."
     ],
     "cta_bio": [
-      "Os outros modelos estão no link da bio 👆",
       "Dá uma espiada no link da bio 💗",
       "Link da bio te leva direto pro catálogo 📲",
       "Catálogo inteiro tá no link da bio 👆",
-      "Catálogo completo — link na bio ✨"
+      "Catálogo completo — link na bio ✨",
+      "Vê as cores e monta seu pedido pelo link da bio 🔗"
     ],
     "preco": [
       "{nome_curto} sai por {preco}.",
@@ -468,7 +469,8 @@
     "preco_kits": [
       "Hoje, {quantidade} saem por {preco}.",
       "{quantidade}: {preco}.",
-      "{preco} no kit com {quantidade}."
+      "{preco} no kit com {quantidade}.",
+      "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça."
     ],
     "cta_alt": [
       "Me chama no direct que te passo os detalhes 💬",
@@ -483,7 +485,8 @@
       "Pra quem vende no WhatsApp ou no Instagram, essa peça ajuda a fechar pedido."
     ],
     "estilo": [
-      "Modelagem atual, cores que estão em alta — moda fitness que também é moda de rua."
+      "Modelagem atual, cores que estão em alta — moda fitness que também é moda de rua.",
+      "Aquele visual que a cliente vê no feed e já quer pro guarda-roupa."
     ],
     "qualidade_kits": [
       "Tecido suplex vip, grosso e sem transparência nem agachando.",
