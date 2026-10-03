@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "2816695",
@@ -138,15 +138,16 @@
       "3480272",
       "3254120",
       "4477104",
-      "3117836"
+      "3117836",
+      "875515"
     ]
   },
   "ultimos_pilares": [
-    "disponibilidade",
     "cliente_ama",
     "qualidade",
     "disponibilidade",
-    "estilo"
+    "estilo",
+    "cliente_ama"
   ],
   "conhecidos": {
     "kits": [
@@ -440,11 +441,11 @@
       "Kit fechado, 5 peças, suplex vip."
     ],
     "cta_bio": [
-      "Dá uma espiada no link da bio 💗",
       "Link da bio te leva direto pro catálogo 📲",
       "Catálogo inteiro tá no link da bio 👆",
       "Catálogo completo — link na bio ✨",
-      "Vê as cores e monta seu pedido pelo link da bio 🔗"
+      "Vê as cores e monta seu pedido pelo link da bio 🔗",
+      "Link na bio 🔗"
     ],
     "preco": [
       "{nome_curto} sai por {preco}.",
@@ -453,18 +454,18 @@
       "Preço de atacado: {preco}."
     ],
     "tag_avulso": [
-      "Atacado de peça avulsa, a partir de 10 peças.",
       "Vendida avulsa, sem precisar levar kit fechado.",
       "Peça avulsa premium — você monta o pedido do seu jeito.",
-      "Você escolhe peça por peça (mínimo de 10 no pedido)."
+      "Você escolhe peça por peça (mínimo de 10 no pedido).",
+      "É peça avulsa, na malha premium."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso."
     ],
     "frete_avulso": [
-      "Frete grátis (Vip) pra Salvador e todo o Brasil 🚚",
       "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛",
-      "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚"
+      "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚",
+      "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦"
     ],
     "preco_kits": [
       "Hoje, {quantidade} saem por {preco}.",
@@ -501,7 +502,8 @@
       "Comprando direto da fábrica, sobra mais no seu bolso em cada venda."
     ],
     "cliente_ama": [
-      "É o tipo de peça que a cliente compra uma e depois volta pra levar mais duas."
+      "É o tipo de peça que a cliente compra uma e depois volta pra levar mais duas.",
+      "As revendedoras contam que esse modelo quase não volta pra troca."
     ]
   }
 }
