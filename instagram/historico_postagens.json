@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "2816695",
@@ -110,7 +110,8 @@
       "402269",
       "318126",
       "3865600",
-      "684178"
+      "684178",
+      "853848"
     ],
     "avulso": [
       "334028",
@@ -145,11 +146,11 @@
     ]
   },
   "ultimos_pilares": [
-    "disponibilidade",
     "estilo",
     "cliente_ama",
     "conforto",
-    "disponibilidade"
+    "disponibilidade",
+    "cliente_ama"
   ],
   "conhecidos": {
     "kits": [
@@ -437,17 +438,17 @@
       "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛"
     ],
     "tag_kits": [
-      "Vendido em kit fechado, cores sortidas.",
       "Kit fechado — ótimo pra começar a revender.",
       "Kit fechado, 5 peças, suplex vip.",
-      "Vem em kit fechado de 5, tecido suplex vip."
+      "Vem em kit fechado de 5, tecido suplex vip.",
+      "Kit com cores variadas."
     ],
     "cta_bio": [
-      "Catálogo inteiro tá no link da bio 👆",
       "Catálogo completo — link na bio ✨",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Link na bio 🔗",
-      "Os outros modelos estão no link da bio 👆"
+      "Os outros modelos estão no link da bio 👆",
+      "Dá uma espiada no link da bio 💗"
     ],
     "preco": [
       "{nome_curto} sai por {preco}.",
@@ -470,10 +471,10 @@
       "Pedido de peça avulsa com frete grátis (Vip) 📦"
     ],
     "preco_kits": [
-      "Hoje, {quantidade} saem por {preco}.",
       "{quantidade}: {preco}.",
       "{preco} no kit com {quantidade}.",
-      "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça."
+      "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
+      "{quantidade} por {preco} — já pode revender no seu preço."
     ],
     "cta_alt": [
       "Manda mensagem que a gente te ajuda a montar o pedido 💬",
@@ -507,7 +508,8 @@
     ],
     "cliente_ama": [
       "É o tipo de peça que a cliente compra uma e depois volta pra levar mais duas.",
-      "As revendedoras contam que esse modelo quase não volta pra troca."
+      "As revendedoras contam que esse modelo quase não volta pra troca.",
+      "Veste bem em corpos diferentes, por isso quase não tem troca."
     ]
   }
 }
