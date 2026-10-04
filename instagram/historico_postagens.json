@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "2816695",
@@ -109,7 +109,8 @@
       "318145",
       "402269",
       "318126",
-      "3865600"
+      "3865600",
+      "684178"
     ],
     "avulso": [
       "334028",
@@ -143,11 +144,11 @@
     ]
   },
   "ultimos_pilares": [
-    "cliente_ama",
     "qualidade",
     "disponibilidade",
     "estilo",
-    "cliente_ama"
+    "cliente_ama",
+    "conforto"
   ],
   "conhecidos": {
     "kits": [
@@ -430,15 +431,15 @@
       "Lançamento novinho, direto da fábrica."
     ],
     "frete_kits": [
-      "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚",
       "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚",
-      "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦"
+      "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦",
+      "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛"
     ],
     "tag_kits": [
-      "Kit com cores variadas.",
       "Vendido em kit fechado, cores sortidas.",
       "Kit fechado — ótimo pra começar a revender.",
-      "Kit fechado, 5 peças, suplex vip."
+      "Kit fechado, 5 peças, suplex vip.",
+      "Vem em kit fechado de 5, tecido suplex vip."
     ],
     "cta_bio": [
       "Link da bio te leva direto pro catálogo 📲",
@@ -474,12 +475,13 @@
       "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça."
     ],
     "cta_alt": [
-      "Me chama no direct que te passo os detalhes 💬",
-      "Manda mensagem que a gente te ajuda a montar o pedido 💬"
+      "Manda mensagem que a gente te ajuda a montar o pedido 💬",
+      "Ficou com dúvida? Chama no direct 💬"
     ],
     "conforto": [
       "Peça leve, que não pesa nem nos dias mais quentes.",
-      "Feita pra treinar, trabalhar ou só ficar em casa — confortável do mesmo jeito."
+      "Feita pra treinar, trabalhar ou só ficar em casa — confortável do mesmo jeito.",
+      "Veste bem do treino da manhã até o fim do dia."
     ],
     "renda_extra": [
       "Muita revendedora começou com um kit só e hoje compra todo mês.",
