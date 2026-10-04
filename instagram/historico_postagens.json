@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "2816695",
@@ -140,15 +140,16 @@
       "3254120",
       "4477104",
       "3117836",
-      "875515"
+      "875515",
+      "3133783"
     ]
   },
   "ultimos_pilares": [
-    "qualidade",
     "disponibilidade",
     "estilo",
     "cliente_ama",
-    "conforto"
+    "conforto",
+    "disponibilidade"
   ],
   "conhecidos": {
     "kits": [
@@ -442,11 +443,11 @@
       "Vem em kit fechado de 5, tecido suplex vip."
     ],
     "cta_bio": [
-      "Link da bio te leva direto pro catálogo 📲",
       "Catálogo inteiro tá no link da bio 👆",
       "Catálogo completo — link na bio ✨",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
-      "Link na bio 🔗"
+      "Link na bio 🔗",
+      "Os outros modelos estão no link da bio 👆"
     ],
     "preco": [
       "{nome_curto} sai por {preco}.",
@@ -455,18 +456,18 @@
       "Preço de atacado: {preco}."
     ],
     "tag_avulso": [
-      "Vendida avulsa, sem precisar levar kit fechado.",
       "Peça avulsa premium — você monta o pedido do seu jeito.",
       "Você escolhe peça por peça (mínimo de 10 no pedido).",
-      "É peça avulsa, na malha premium."
+      "É peça avulsa, na malha premium.",
+      "Peça avulsa, malha premium."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso."
     ],
     "frete_avulso": [
-      "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛",
       "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚",
-      "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦"
+      "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦",
+      "Pedido de peça avulsa com frete grátis (Vip) 📦"
     ],
     "preco_kits": [
       "Hoje, {quantidade} saem por {preco}.",
@@ -498,7 +499,8 @@
     "disponibilidade": [
       "Estoque limitado nessa leva.",
       "Esse aqui já está saindo bastante essa semana.",
-      "Esse modelo costuma acabar rápido — melhor não deixar pra depois."
+      "Esse modelo costuma acabar rápido — melhor não deixar pra depois.",
+      "Poucas peças disponíveis por enquanto."
     ],
     "lucratividade": [
       "Comprando direto da fábrica, sobra mais no seu bolso em cada venda."
