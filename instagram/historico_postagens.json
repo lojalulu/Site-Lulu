@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "2816695",
@@ -146,15 +146,16 @@
       "875515",
       "3133783",
       "3480266",
-      "3340284"
+      "3340284",
+      "3117802"
     ]
   },
   "ultimos_pilares": [
-    "cliente_ama",
     "estilo",
     "conforto",
     "disponibilidade",
-    "qualidade"
+    "qualidade",
+    "conforto"
   ],
   "conhecidos": {
     "kits": [
@@ -448,11 +449,11 @@
       "Kit fechado — ótimo pra começar a revender."
     ],
     "cta_bio": [
-      "Dá uma espiada no link da bio 💗",
       "Pedido pelo site, link na bio 🛍️",
       "Link da bio te leva direto pro catálogo 📲",
       "Catálogo inteiro tá no link da bio 👆",
-      "Catálogo completo — link na bio ✨"
+      "Catálogo completo — link na bio ✨",
+      "Link na bio 🔗"
     ],
     "preco": [
       "{preco} — e você revende no seu preço.",
@@ -461,10 +462,10 @@
       "Tudo isso por {preco}."
     ],
     "tag_avulso": [
-      "É peça avulsa, na malha premium.",
       "Peça avulsa, malha premium.",
       "Vendida avulsa, sem precisar levar kit fechado.",
-      "Peça avulsa premium — você monta o pedido do seu jeito."
+      "Peça avulsa premium — você monta o pedido do seu jeito.",
+      "Atacado de peça avulsa, a partir de 10 peças."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso."
@@ -488,7 +489,8 @@
       "Peça leve, que não pesa nem nos dias mais quentes.",
       "Feita pra treinar, trabalhar ou só ficar em casa — confortável do mesmo jeito.",
       "Veste bem do treino da manhã até o fim do dia.",
-      "Dá pra agachar, correr e alongar sem ficar ajeitando a roupa."
+      "Dá pra agachar, correr e alongar sem ficar ajeitando a roupa.",
+      "Modelagem que dá liberdade pra se mexer."
     ],
     "renda_extra": [
       "Muita revendedora começou com um kit só e hoje compra todo mês.",
