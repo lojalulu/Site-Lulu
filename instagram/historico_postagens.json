@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "2816695",
@@ -114,7 +114,8 @@
       "853848",
       "3709232",
       "3347550",
-      "3745064"
+      "3745064",
+      "947432"
     ],
     "avulso": [
       "334028",
@@ -153,11 +154,11 @@
     ]
   },
   "ultimos_pilares": [
-    "disponibilidade",
     "qualidade",
     "conforto",
     "renda_extra",
-    "estilo"
+    "estilo",
+    "cliente_ama"
   ],
   "conhecidos": {
     "kits": [
@@ -445,17 +446,17 @@
       "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛"
     ],
     "tag_kits": [
-      "Kit com cores variadas.",
       "É kit fechado com 5 peças, em suplex vip.",
       "Kit fechado — ótimo pra começar a revender.",
-      "Vendido em kit fechado, cores sortidas."
+      "Vendido em kit fechado, cores sortidas.",
+      "Vem em kit fechado de 5, tecido suplex vip."
     ],
     "cta_bio": [
-      "Catálogo inteiro tá no link da bio 👆",
       "Catálogo completo — link na bio ✨",
       "Link na bio 🔗",
       "Dá uma espiada no link da bio 💗",
-      "Os outros modelos estão no link da bio 👆"
+      "Os outros modelos estão no link da bio 👆",
+      "Link da bio te leva direto pro catálogo 📲"
     ],
     "preco": [
       "{preco} — e você revende no seu preço.",
@@ -523,7 +524,8 @@
     "cliente_ama": [
       "É o tipo de peça que a cliente compra uma e depois volta pra levar mais duas.",
       "As revendedoras contam que esse modelo quase não volta pra troca.",
-      "Veste bem em corpos diferentes, por isso quase não tem troca."
+      "Veste bem em corpos diferentes, por isso quase não tem troca.",
+      "Esse é daqueles produtos que a cliente manda foto usando, de tão satisfeita."
     ]
   }
 }
