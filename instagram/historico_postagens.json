@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "2816695",
@@ -148,15 +148,16 @@
       "3133783",
       "3480266",
       "3340284",
-      "3117802"
+      "3117802",
+      "4324179"
     ]
   },
   "ultimos_pilares": [
-    "conforto",
     "disponibilidade",
     "qualidade",
     "conforto",
-    "renda_extra"
+    "renda_extra",
+    "estilo"
   ],
   "conhecidos": {
     "kits": [
@@ -450,11 +451,11 @@
       "Vendido em kit fechado, cores sortidas."
     ],
     "cta_bio": [
-      "Link da bio te leva direto pro catálogo 📲",
       "Catálogo inteiro tá no link da bio 👆",
       "Catálogo completo — link na bio ✨",
       "Link na bio 🔗",
-      "Dá uma espiada no link da bio 💗"
+      "Dá uma espiada no link da bio 💗",
+      "Os outros modelos estão no link da bio 👆"
     ],
     "preco": [
       "{preco} — e você revende no seu preço.",
@@ -463,18 +464,18 @@
       "Tudo isso por {preco}."
     ],
     "tag_avulso": [
-      "Peça avulsa, malha premium.",
       "Vendida avulsa, sem precisar levar kit fechado.",
       "Peça avulsa premium — você monta o pedido do seu jeito.",
-      "Atacado de peça avulsa, a partir de 10 peças."
+      "Atacado de peça avulsa, a partir de 10 peças.",
+      "Você escolhe peça por peça (mínimo de 10 no pedido)."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso."
     ],
     "frete_avulso": [
-      "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚",
       "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦",
-      "Pedido de peça avulsa com frete grátis (Vip) 📦"
+      "Pedido de peça avulsa com frete grátis (Vip) 📦",
+      "Frete grátis (Vip) pra Salvador e todo o Brasil 🚚"
     ],
     "preco_kits": [
       "{preco} no kit com {quantidade}.",
@@ -501,7 +502,8 @@
     "estilo": [
       "Modelagem atual, cores que estão em alta — moda fitness que também é moda de rua.",
       "Aquele visual que a cliente vê no feed e já quer pro guarda-roupa.",
-      "Moda fitness que dá pra usar no mercado, no passeio e na academia."
+      "Moda fitness que dá pra usar no mercado, no passeio e na academia.",
+      "Peça que fica linda na foto — ajuda muito na hora de divulgar."
     ],
     "qualidade_kits": [
       "Tecido suplex vip, grosso e sem transparência nem agachando.",
