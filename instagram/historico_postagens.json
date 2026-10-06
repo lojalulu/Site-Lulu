@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "2816695",
@@ -152,15 +152,16 @@
       "3340284",
       "3117802",
       "4324179",
-      "331414"
+      "331414",
+      "4477094"
     ]
   },
   "ultimos_pilares": [
-    "renda_extra",
     "estilo",
     "cliente_ama",
     "disponibilidade",
-    "renda_extra"
+    "renda_extra",
+    "cliente_ama"
   ],
   "conhecidos": {
     "kits": [
@@ -454,11 +455,11 @@
       "Kit fechado, 5 peças, suplex vip."
     ],
     "cta_bio": [
-      "Link na bio 🔗",
       "Dá uma espiada no link da bio 💗",
       "Os outros modelos estão no link da bio 👆",
       "Link da bio te leva direto pro catálogo 📲",
-      "Catálogo inteiro tá no link da bio 👆"
+      "Catálogo inteiro tá no link da bio 👆",
+      "Catálogo completo — link na bio ✨"
     ],
     "preco": [
       "{preco} — e você revende no seu preço.",
@@ -467,10 +468,10 @@
       "Tudo isso por {preco}."
     ],
     "tag_avulso": [
-      "Peça avulsa premium — você monta o pedido do seu jeito.",
       "Atacado de peça avulsa, a partir de 10 peças.",
       "Você escolhe peça por peça (mínimo de 10 no pedido).",
-      "É peça avulsa, na malha premium."
+      "É peça avulsa, na malha premium.",
+      "Peça avulsa, malha premium."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso."
@@ -529,7 +530,8 @@
       "É o tipo de peça que a cliente compra uma e depois volta pra levar mais duas.",
       "As revendedoras contam que esse modelo quase não volta pra troca.",
       "Veste bem em corpos diferentes, por isso quase não tem troca.",
-      "Esse é daqueles produtos que a cliente manda foto usando, de tão satisfeita."
+      "Esse é daqueles produtos que a cliente manda foto usando, de tão satisfeita.",
+      "Peça que vira queridinha na primeira leva — cliente ama e indica pra amiga."
     ]
   }
 }
