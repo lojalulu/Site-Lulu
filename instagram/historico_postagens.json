@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "2816695",
@@ -119,7 +119,8 @@
       "384574",
       "3347534",
       "384571",
-      "4364027"
+      "4364027",
+      "318146"
     ],
     "avulso": [
       "334028",
@@ -163,11 +164,11 @@
     ]
   },
   "ultimos_pilares": [
-    "disponibilidade",
     "lucratividade",
     "renda_extra",
     "conforto",
-    "qualidade"
+    "qualidade",
+    "estilo"
   ],
   "conhecidos": {
     "kits": [
@@ -450,22 +451,22 @@
       "Lançamento novinho, direto da fábrica."
     ],
     "frete_kits": [
-      "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛",
       "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚",
-      "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦"
+      "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦",
+      "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚"
     ],
     "tag_kits": [
-      "Kit fechado, 5 peças, suplex vip.",
       "Kit com cores variadas.",
       "É kit fechado com 5 peças, em suplex vip.",
-      "Kit fechado — ótimo pra começar a revender."
+      "Kit fechado — ótimo pra começar a revender.",
+      "Vendido em kit fechado, cores sortidas."
     ],
     "cta_bio": [
-      "Catálogo inteiro tá no link da bio 👆",
       "Catálogo completo — link na bio ✨",
       "Link na bio 🔗",
       "Dá uma espiada no link da bio 💗",
-      "Vê as cores e monta seu pedido pelo link da bio 🔗"
+      "Vê as cores e monta seu pedido pelo link da bio 🔗",
+      "Link da bio te leva direto pro catálogo 📲"
     ],
     "preco": [
       "Preço de atacado: {preco}.",
@@ -489,10 +490,10 @@
       "Pedido de peça avulsa com frete grátis (Vip) 📦"
     ],
     "preco_kits": [
-      "{quantidade} por {preco} — já pode revender no seu preço.",
       "{quantidade} - só {preco}.",
       "Kit com {quantidade} por {preco}.",
-      "{preco} no kit com {quantidade}."
+      "{preco} no kit com {quantidade}.",
+      "Hoje, {quantidade} saem por {preco}."
     ],
     "cta_alt": [
       "Ficou com dúvida? Chama no direct 💬",
@@ -517,7 +518,8 @@
       "Modelagem atual, cores que estão em alta — moda fitness que também é moda de rua.",
       "Aquele visual que a cliente vê no feed e já quer pro guarda-roupa.",
       "Moda fitness que dá pra usar no mercado, no passeio e na academia.",
-      "Peça que fica linda na foto — ajuda muito na hora de divulgar."
+      "Peça que fica linda na foto — ajuda muito na hora de divulgar.",
+      "Visual arrumado sem esforço nenhum."
     ],
     "qualidade_kits": [
       "Tecido suplex vip, grosso e sem transparência nem agachando.",
