@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "2816695",
@@ -160,15 +160,16 @@
       "4477094",
       "4298763",
       "334036",
-      "875488"
+      "875488",
+      "2488494"
     ]
   },
   "ultimos_pilares": [
-    "lucratividade",
     "renda_extra",
     "conforto",
     "qualidade",
-    "estilo"
+    "estilo",
+    "conforto"
   ],
   "conhecidos": {
     "kits": [
@@ -462,32 +463,32 @@
       "Vendido em kit fechado, cores sortidas."
     ],
     "cta_bio": [
-      "Catálogo completo — link na bio ✨",
       "Link na bio 🔗",
       "Dá uma espiada no link da bio 💗",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
-      "Link da bio te leva direto pro catálogo 📲"
+      "Link da bio te leva direto pro catálogo 📲",
+      "Pedido pelo site, link na bio 🛍️"
     ],
     "preco": [
-      "Preço de atacado: {preco}.",
       "Tudo isso por {preco}.",
       "Hoje, {nome_curto} sai por {preco}.",
-      "{nome_curto} sai por {preco}."
+      "{nome_curto} sai por {preco}.",
+      "Valor: {preco}."
     ],
     "tag_avulso": [
-      "Peça avulsa, malha premium.",
       "Vendida avulsa, sem precisar levar kit fechado.",
       "Atacado de peça avulsa, a partir de 10 peças.",
-      "Você escolhe peça por peça (mínimo de 10 no pedido)."
+      "Você escolhe peça por peça (mínimo de 10 no pedido).",
+      "É peça avulsa, na malha premium."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
       "Qualidade superior peça por peça, sem precisar levar kit fechado."
     ],
     "frete_avulso": [
-      "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛",
       "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚",
-      "Pedido de peça avulsa com frete grátis (Vip) 📦"
+      "Pedido de peça avulsa com frete grátis (Vip) 📦",
+      "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦"
     ],
     "preco_kits": [
       "{quantidade} - só {preco}.",
@@ -505,7 +506,8 @@
       "Veste bem do treino da manhã até o fim do dia.",
       "Dá pra agachar, correr e alongar sem ficar ajeitando a roupa.",
       "Modelagem que dá liberdade pra se mexer.",
-      "Costura bem feita, que não incomoda na pele."
+      "Costura bem feita, que não incomoda na pele.",
+      "Cós que não enrola e não aperta a barriga."
     ],
     "renda_extra": [
       "Muita revendedora começou com um kit só e hoje compra todo mês.",
