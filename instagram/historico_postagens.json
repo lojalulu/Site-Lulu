@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "2816695",
@@ -122,7 +122,8 @@
       "4364027",
       "318146",
       "1366405",
-      "317284"
+      "317284",
+      "3311193"
     ],
     "avulso": [
       "334028",
@@ -169,11 +170,11 @@
     ]
   },
   "ultimos_pilares": [
-    "conforto",
     "renda_extra",
     "lucratividade",
     "conforto",
-    "estilo"
+    "estilo",
+    "lucratividade"
   ],
   "conhecidos": {
     "kits": [
@@ -456,22 +457,22 @@
       "Lançamento novinho, direto da fábrica."
     ],
     "frete_kits": [
-      "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦",
       "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚",
-      "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛"
+      "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛",
+      "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦"
     ],
     "tag_kits": [
-      "Kit fechado — ótimo pra começar a revender.",
       "Vendido em kit fechado, cores sortidas.",
       "Vem em kit fechado de 5, tecido suplex vip.",
-      "Kit com cores variadas."
+      "Kit com cores variadas.",
+      "Kit fechado, 5 peças, suplex vip."
     ],
     "cta_bio": [
-      "Link da bio te leva direto pro catálogo 📲",
       "Pedido pelo site, link na bio 🛍️",
       "Os outros modelos estão no link da bio 👆",
       "Link na bio 🔗",
-      "Catálogo inteiro tá no link da bio 👆"
+      "Catálogo inteiro tá no link da bio 👆",
+      "Vê as cores e monta seu pedido pelo link da bio 🔗"
     ],
     "preco": [
       "Hoje, {nome_curto} sai por {preco}.",
@@ -548,7 +549,8 @@
     "lucratividade": [
       "Comprando direto da fábrica, sobra mais no seu bolso em cada venda.",
       "Custo baixo por peça é o que faz a revenda valer a pena.",
-      "Você define seu preço de venda — a margem fica com você."
+      "Você define seu preço de venda — a margem fica com você.",
+      "Compra no kit, sai mais em conta por peça, revende com lucro tranquilo."
     ],
     "cliente_ama": [
       "É o tipo de peça que a cliente compra uma e depois volta pra levar mais duas.",
