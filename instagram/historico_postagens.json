@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "2816695",
@@ -162,15 +162,16 @@
       "4298763",
       "334036",
       "875488",
-      "2488494"
+      "2488494",
+      "332904"
     ]
   },
   "ultimos_pilares": [
-    "conforto",
     "qualidade",
     "estilo",
     "conforto",
-    "renda_extra"
+    "renda_extra",
+    "lucratividade"
   ],
   "conhecidos": {
     "kits": [
@@ -464,32 +465,32 @@
       "Vem em kit fechado de 5, tecido suplex vip."
     ],
     "cta_bio": [
-      "Dá uma espiada no link da bio 💗",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Link da bio te leva direto pro catálogo 📲",
       "Pedido pelo site, link na bio 🛍️",
-      "Os outros modelos estão no link da bio 👆"
+      "Os outros modelos estão no link da bio 👆",
+      "Link na bio 🔗"
     ],
     "preco": [
-      "Tudo isso por {preco}.",
       "Hoje, {nome_curto} sai por {preco}.",
       "{nome_curto} sai por {preco}.",
-      "Valor: {preco}."
+      "Valor: {preco}.",
+      "{preco} — e você revende no seu preço."
     ],
     "tag_avulso": [
-      "Vendida avulsa, sem precisar levar kit fechado.",
       "Atacado de peça avulsa, a partir de 10 peças.",
       "Você escolhe peça por peça (mínimo de 10 no pedido).",
-      "É peça avulsa, na malha premium."
+      "É peça avulsa, na malha premium.",
+      "Peça avulsa, malha premium."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
       "Qualidade superior peça por peça, sem precisar levar kit fechado."
     ],
     "frete_avulso": [
-      "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚",
       "Pedido de peça avulsa com frete grátis (Vip) 📦",
-      "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦"
+      "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦",
+      "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛"
     ],
     "preco_kits": [
       "{quantidade} - só {preco}.",
@@ -542,7 +543,8 @@
     ],
     "lucratividade": [
       "Comprando direto da fábrica, sobra mais no seu bolso em cada venda.",
-      "Custo baixo por peça é o que faz a revenda valer a pena."
+      "Custo baixo por peça é o que faz a revenda valer a pena.",
+      "Você define seu preço de venda — a margem fica com você."
     ],
     "cliente_ama": [
       "É o tipo de peça que a cliente compra uma e depois volta pra levar mais duas.",
