@@ -1,5 +1,33 @@
 [
   {
+    "id": "3781598",
+    "nome": "Casaco Fitness com Zíper e Bolso – Pacote com 5 (Cores Sortidas) Tecido Poliamida",
+    "preco_original": 175.0,
+    "preco_final": 280.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1770555594_468d96c62d3166e29212.webp",
+      "https://arquivos.facilzap.app.br/produtos/1770555662_086fe8c1c7a63a550c0b.webp",
+      "https://arquivos.facilzap.app.br/produtos/1770555585_b355d6658931a54c5aea.webp",
+      "https://arquivos.facilzap.app.br/produtos/1770555581_9d007f6ba27bcfd29f89.webp"
+    ],
+    "cores_variadas": true,
+    "lancamento": false
+  },
+  {
+    "id": "3361887",
+    "nome": "Pacote com 5 Conjuntos de Short Suplex Ref 12",
+    "preco_original": 130.0,
+    "preco_final": 208.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1757438871_7e912723d679c7e0d884.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757438900_b8649846388f6a36e566.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757438867_9423d8b17432bd2c2765.jpeg.webp",
+      "https://arquivos.facilzap.app.br/produtos/1757438895_5be44a5a95474a01b3f1.jpeg.webp"
+    ],
+    "cores_variadas": true,
+    "lancamento": false
+  },
+  {
     "id": "4514241",
     "nome": "Pacote com 5 Corta Vento Ref 04 Tactel",
     "preco_original": 100.0,
@@ -222,19 +250,6 @@
       "https://arquivos.facilzap.app.br/produtos/1788226680_d7e68275e95045448ce3.webp",
       "https://arquivos.facilzap.app.br/produtos/1788226685_ace288ad8f64ffc9295b.webp",
       "https://arquivos.facilzap.app.br/produtos/1788226690_d629e6aa947d01d5a50b.webp"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
-    "id": "3769201",
-    "nome": "Pacote com 5 Conjuntos Short Duplo em Poliamida com Proteção UV REF 08",
-    "preco_original": 275.0,
-    "preco_final": 440.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1770215031_193424e9a0d6ec9d6a3f.webp",
-      "https://arquivos.facilzap.app.br/produtos/1770215024_7703f6ba257c6545ab4f.webp",
-      "https://arquivos.facilzap.app.br/produtos/1770215020_9467fb4248cd60cb14b0.webp"
     ],
     "cores_variadas": true,
     "lancamento": false
@@ -740,18 +755,6 @@
     "lancamento": false
   },
   {
-    "id": "318117",
-    "nome": "Pacote Com 5 Conjuntos De Calça Plus Vies02",
-    "preco_original": 175.0,
-    "preco_final": 280.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1674042831_b451579999d85f042161.jpeg",
-      "https://arquivos.facilzap.app.br/produtos/1674042830_6d79bf0b41ff5e12a143.jpeg"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
     "id": "3405523",
     "nome": "Pacote com 10 Blusa de Tule em Poliamida",
     "preco_original": 165.5,
@@ -892,19 +895,6 @@
     "imagens": [
       "https://arquivos.facilzap.app.br/produtos/1685888542_56ba11047f1fd703bc04.jpeg",
       "https://arquivos.facilzap.app.br/produtos/1685888541_5492e8da48dd3829046e.jpeg"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
-    "id": "2883378",
-    "nome": "Pacote com 5 Conjuntos de Calça Ref 71 Suplex",
-    "preco_original": 120.0,
-    "preco_final": 192.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1742830721_2aa8682b56facc027575.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1742830717_545239d91e959a677025.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1742830714_3e02edd469bf2b533f4c.jpeg.webp"
     ],
     "cores_variadas": true,
     "lancamento": false
@@ -1076,19 +1066,6 @@
       "https://arquivos.facilzap.app.br/produtos/1753795040_f874926f48a3915acadb.jpeg.webp",
       "https://arquivos.facilzap.app.br/produtos/1753795037_bfb2c10f645265cfb3b1.jpeg.webp",
       "https://arquivos.facilzap.app.br/produtos/1753795035_7b6c5e0e3292937c8c22.jpeg.webp"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
-    "id": "3221663",
-    "nome": "Pacote com 5 Conjuntos de Calça Ref 61 Suplex",
-    "preco_original": 155.0,
-    "preco_final": 248.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1753794934_a0dd7d616e5de4808e64.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1753794932_775e5d86219fb79aef2c.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1753794929_030f43cd7cd33493a12f.jpeg.webp"
     ],
     "cores_variadas": true,
     "lancamento": false
@@ -1424,28 +1401,6 @@
     "lancamento": false
   },
   {
-    "id": "2691560",
-    "nome": "Pacote com 5 Conjuntos de Calça Ref 59 Poliamida Grmt 320",
-    "preco_original": 300.0,
-    "preco_final": 480.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1736860328_bfffe0b5f381d7707baf.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1736860324_6cee8647d9cf24027b3d.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1736860319_6898b0025da553021466.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1736860315_7f75e2829d33db46f859.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1736860310_702b77d500171d62753f.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1736860306_9ae54ecd848bf8a26102.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1736860303_90bd4dd5acaf1e54d576.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1736860299_977a45347904ed77a97a.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1736860295_40af7e0c84627a8d1cfe.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1736860285_3c65f2710cfef73dfd8d.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1736860281_7bf468060a7bc7274908.jpeg.webp",
-      "https://arquivos.facilzap.app.br/produtos/1736860275_52ac2df4561d2c61cbb2.jpeg.webp"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
     "id": "477732",
     "nome": "Pacote com 5 Conjuntos Short Plus Size Faixa 02",
     "preco_original": 125.0,
@@ -1673,23 +1628,6 @@
     "lancamento": false
   },
   {
-    "id": "317954",
-    "nome": "Pacote com 10 Regatas G",
-    "preco_original": 95.0,
-    "preco_final": 152.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1674009406_2ce52462c588c719f720.jpeg",
-      "https://arquivos.facilzap.app.br/produtos/1674009410_456986d62ec1ca21fbb0.jpeg",
-      "https://arquivos.facilzap.app.br/produtos/1674009407_fa05c53156c69acd720c.jpeg",
-      "https://arquivos.facilzap.app.br/produtos/1674009409_9c5e93a0d56c3d6fb53d.jpeg",
-      "https://arquivos.facilzap.app.br/produtos/1674009406_b1abeed409c53f4be6b9.jpeg",
-      "https://arquivos.facilzap.app.br/produtos/1674009407_343c5b2c623fb19ad878.jpeg",
-      "https://arquivos.facilzap.app.br/produtos/1674009408_2e50a0d6add5991a6def.jpeg"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
     "id": "4116139",
     "nome": "Kit Corta vento ref 00, 5 un.",
     "preco_original": 200.0,
@@ -1701,7 +1639,7 @@
       "https://arquivos.facilzap.app.br/produtos/1780339582_7547e557b744a77c60f5.webp"
     ],
     "cores_variadas": true,
-    "lancamento": true
+    "lancamento": false
   },
   {
     "id": "4210537",
