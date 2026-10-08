@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "2816695",
@@ -166,15 +166,16 @@
       "875488",
       "2488494",
       "332904",
-      "3184622"
+      "3184622",
+      "4323904"
     ]
   },
   "ultimos_pilares": [
-    "renda_extra",
     "lucratividade",
     "conforto",
     "estilo",
-    "lucratividade"
+    "lucratividade",
+    "renda_extra"
   ],
   "conhecidos": {
     "kits": [
@@ -468,32 +469,32 @@
       "Kit fechado, 5 peças, suplex vip."
     ],
     "cta_bio": [
-      "Pedido pelo site, link na bio 🛍️",
       "Os outros modelos estão no link da bio 👆",
       "Link na bio 🔗",
       "Catálogo inteiro tá no link da bio 👆",
-      "Vê as cores e monta seu pedido pelo link da bio 🔗"
+      "Vê as cores e monta seu pedido pelo link da bio 🔗",
+      "Dá uma espiada no link da bio 💗"
     ],
     "preco": [
-      "Hoje, {nome_curto} sai por {preco}.",
       "{nome_curto} sai por {preco}.",
       "Valor: {preco}.",
-      "{preco} — e você revende no seu preço."
+      "{preco} — e você revende no seu preço.",
+      "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Você escolhe peça por peça (mínimo de 10 no pedido).",
       "É peça avulsa, na malha premium.",
       "Peça avulsa, malha premium.",
-      "Peça avulsa premium — você monta o pedido do seu jeito."
+      "Peça avulsa premium — você monta o pedido do seu jeito.",
+      "Atacado de peça avulsa, a partir de 10 peças."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
       "Qualidade superior peça por peça, sem precisar levar kit fechado."
     ],
     "frete_avulso": [
-      "Pedido de peça avulsa com frete grátis (Vip) 📦",
       "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦",
-      "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛"
+      "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛",
+      "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚"
     ],
     "preco_kits": [
       "{quantidade} - só {preco}.",
@@ -521,7 +522,8 @@
       "Quem revende sabe: peça boa e barata é lucro certo no fim do mês.",
       "Essa entra no pedido e sai do seu estoque rapidinho.",
       "Se você revende moda fitness, essa é a peça que sai rápido.",
-      "Boa pra quem vende pra academia, vizinhança ou grupo de amigas."
+      "Boa pra quem vende pra academia, vizinhança ou grupo de amigas.",
+      "Dá pra começar pequeno e ir crescendo — peça que gira bem ajuda muito."
     ],
     "estilo": [
       "Modelagem atual, cores que estão em alta — moda fitness que também é moda de rua.",
