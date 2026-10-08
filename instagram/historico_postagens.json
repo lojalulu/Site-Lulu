@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "2816695",
@@ -123,7 +123,8 @@
       "318146",
       "1366405",
       "317284",
-      "3311193"
+      "3311193",
+      "947443"
     ],
     "avulso": [
       "334028",
@@ -171,11 +172,11 @@
     ]
   },
   "ultimos_pilares": [
-    "lucratividade",
     "conforto",
     "estilo",
     "lucratividade",
-    "renda_extra"
+    "renda_extra",
+    "conforto"
   ],
   "conhecidos": {
     "kits": [
@@ -458,15 +459,15 @@
       "Lançamento novinho, direto da fábrica."
     ],
     "frete_kits": [
-      "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚",
       "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛",
-      "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦"
+      "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦",
+      "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚"
     ],
     "tag_kits": [
-      "Vendido em kit fechado, cores sortidas.",
       "Vem em kit fechado de 5, tecido suplex vip.",
       "Kit com cores variadas.",
-      "Kit fechado, 5 peças, suplex vip."
+      "Kit fechado, 5 peças, suplex vip.",
+      "É kit fechado com 5 peças, em suplex vip."
     ],
     "cta_bio": [
       "Os outros modelos estão no link da bio 👆",
@@ -503,18 +504,18 @@
       "Hoje, {quantidade} saem por {preco}."
     ],
     "cta_alt": [
-      "Chama no direct pra garantir o seu 💬",
-      "Me chama no direct que te passo os detalhes 💬"
+      "Me chama no direct que te passo os detalhes 💬",
+      "Manda mensagem que a gente te ajuda a montar o pedido 💬"
     ],
     "conforto": [
-      "Peça leve, que não pesa nem nos dias mais quentes.",
       "Feita pra treinar, trabalhar ou só ficar em casa — confortável do mesmo jeito.",
       "Veste bem do treino da manhã até o fim do dia.",
       "Dá pra agachar, correr e alongar sem ficar ajeitando a roupa.",
       "Modelagem que dá liberdade pra se mexer.",
       "Costura bem feita, que não incomoda na pele.",
       "Cós que não enrola e não aperta a barriga.",
-      "Firme sem ser apertada. É isso que a cliente procura."
+      "Firme sem ser apertada. É isso que a cliente procura.",
+      "Conforto é o que faz a cliente usar toda semana — e indicar."
     ],
     "renda_extra": [
       "Muita revendedora começou com um kit só e hoje compra todo mês.",
