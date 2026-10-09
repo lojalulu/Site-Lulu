@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "2816695",
@@ -126,7 +126,8 @@
       "3311193",
       "947443",
       "3555110",
-      "3221653"
+      "3221653",
+      "1139922"
     ],
     "avulso": [
       "334028",
@@ -177,11 +178,11 @@
     ]
   },
   "ultimos_pilares": [
-    "cliente_ama",
     "disponibilidade",
     "qualidade",
     "conforto",
-    "cliente_ama"
+    "cliente_ama",
+    "qualidade"
   ],
   "conhecidos": {
     "kits": [
@@ -469,17 +470,17 @@
       "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦"
     ],
     "tag_kits": [
-      "Kit fechado, 5 peças, suplex vip.",
       "É kit fechado com 5 peças, em suplex vip.",
       "Vendido em kit fechado, cores sortidas.",
-      "Kit fechado — ótimo pra começar a revender."
+      "Kit fechado — ótimo pra começar a revender.",
+      "Kit com cores variadas."
     ],
     "cta_bio": [
-      "Catálogo completo — link na bio ✨",
       "Pedido pelo site, link na bio 🛍️",
       "Link na bio 🔗",
       "Os outros modelos estão no link da bio 👆",
-      "Vê as cores e monta seu pedido pelo link da bio 🔗"
+      "Vê as cores e monta seu pedido pelo link da bio 🔗",
+      "Catálogo inteiro tá no link da bio 👆"
     ],
     "preco": [
       "{preco} — e você revende no seu preço.",
@@ -504,10 +505,10 @@
       "Frete grátis (Vip) pra Salvador e todo o Brasil 🚚"
     ],
     "preco_kits": [
-      "{quantidade} - só {preco}.",
       "Kit com {quantidade} por {preco}.",
       "{preco} no kit com {quantidade}.",
-      "Hoje, {quantidade} saem por {preco}."
+      "Hoje, {quantidade} saem por {preco}.",
+      "{quantidade} por {preco} — já pode revender no seu preço."
     ],
     "cta_alt": [
       "Me chama no direct que te passo os detalhes 💬",
@@ -544,7 +545,8 @@
       "Tecido suplex vip, grosso e sem transparência nem agachando.",
       "Suplex vip que segura bem e não deixa marquinha.",
       "Pode fazer o teste do agachamento: zero transparência.",
-      "Zero transparência de verdade — o padrão do suplex vip da Lulu."
+      "Zero transparência de verdade — o padrão do suplex vip da Lulu.",
+      "Não desbota fácil e não faz bolinha — qualidade que dura."
     ],
     "disponibilidade": [
       "Esse aqui já está saindo bastante essa semana.",
