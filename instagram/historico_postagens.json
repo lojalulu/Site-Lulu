@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "2816695",
@@ -172,15 +172,16 @@
       "3184622",
       "4323904",
       "3145398",
-      "326653"
+      "326653",
+      "327396"
     ]
   },
   "ultimos_pilares": [
-    "conforto",
     "cliente_ama",
     "disponibilidade",
     "qualidade",
-    "conforto"
+    "conforto",
+    "cliente_ama"
   ],
   "conhecidos": {
     "kits": [
@@ -474,23 +475,23 @@
       "Kit fechado — ótimo pra começar a revender."
     ],
     "cta_bio": [
-      "Dá uma espiada no link da bio 💗",
       "Catálogo completo — link na bio ✨",
       "Pedido pelo site, link na bio 🛍️",
       "Link na bio 🔗",
-      "Os outros modelos estão no link da bio 👆"
+      "Os outros modelos estão no link da bio 👆",
+      "Vê as cores e monta seu pedido pelo link da bio 🔗"
     ],
     "preco": [
-      "Valor: {preco}.",
       "{preco} — e você revende no seu preço.",
       "{nome_curto}: {preco}.",
-      "Preço de atacado: {preco}."
+      "Preço de atacado: {preco}.",
+      "{nome_curto} sai por {preco}."
     ],
     "tag_avulso": [
-      "Peça avulsa premium — você monta o pedido do seu jeito.",
       "Atacado de peça avulsa, a partir de 10 peças.",
       "Você escolhe peça por peça (mínimo de 10 no pedido).",
-      "Vendida avulsa, sem precisar levar kit fechado."
+      "Vendida avulsa, sem precisar levar kit fechado.",
+      "É peça avulsa, na malha premium."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -566,7 +567,8 @@
       "Veste bem em corpos diferentes, por isso quase não tem troca.",
       "Esse é daqueles produtos que a cliente manda foto usando, de tão satisfeita.",
       "Peça que vira queridinha na primeira leva — cliente ama e indica pra amiga.",
-      "Peça que valoriza o corpo sem apertar. Cliente satisfeita volta."
+      "Peça que valoriza o corpo sem apertar. Cliente satisfeita volta.",
+      "Aposta segura: modelo que agrada quase todo mundo."
     ]
   }
 }
