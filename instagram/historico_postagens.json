@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "2816695",
@@ -178,15 +178,16 @@
       "326653",
       "327396",
       "3118772",
-      "3336920"
+      "3336920",
+      "332873"
     ]
   },
   "ultimos_pilares": [
-    "qualidade",
     "renda_extra",
     "lucratividade",
     "estilo",
-    "renda_extra"
+    "renda_extra",
+    "cliente_ama"
   ],
   "conhecidos": {
     "kits": [
@@ -480,23 +481,23 @@
       "Kit fechado, 5 peças, suplex vip."
     ],
     "cta_bio": [
-      "Catálogo inteiro tá no link da bio 👆",
       "Link da bio te leva direto pro catálogo 📲",
       "Pedido pelo site, link na bio 🛍️",
       "Dá uma espiada no link da bio 💗",
-      "Catálogo completo — link na bio ✨"
+      "Catálogo completo — link na bio ✨",
+      "Link na bio 🔗"
     ],
     "preco": [
-      "{preco} — e você revende no seu preço.",
       "{nome_curto}: {preco}.",
       "Preço de atacado: {preco}.",
-      "{nome_curto} sai por {preco}."
+      "{nome_curto} sai por {preco}.",
+      "Tudo isso por {preco}."
     ],
     "tag_avulso": [
-      "Vendida avulsa, sem precisar levar kit fechado.",
       "É peça avulsa, na malha premium.",
       "Peça avulsa, malha premium.",
-      "Peça avulsa premium — você monta o pedido do seu jeito."
+      "Peça avulsa premium — você monta o pedido do seu jeito.",
+      "Atacado de peça avulsa, a partir de 10 peças."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -577,7 +578,8 @@
       "Esse é daqueles produtos que a cliente manda foto usando, de tão satisfeita.",
       "Peça que vira queridinha na primeira leva — cliente ama e indica pra amiga.",
       "Peça que valoriza o corpo sem apertar. Cliente satisfeita volta.",
-      "Aposta segura: modelo que agrada quase todo mundo."
+      "Aposta segura: modelo que agrada quase todo mundo.",
+      "Quem comprou elogiou o caimento — e caimento bom é venda garantida."
     ]
   }
 }
