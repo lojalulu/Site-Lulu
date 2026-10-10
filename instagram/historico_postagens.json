@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "2816695",
@@ -129,7 +129,8 @@
       "3221653",
       "1139922",
       "2816717",
-      "3950068"
+      "3950068",
+      "318128"
     ],
     "avulso": [
       "334028",
@@ -183,11 +184,11 @@
     ]
   },
   "ultimos_pilares": [
-    "renda_extra",
     "lucratividade",
     "estilo",
     "renda_extra",
-    "cliente_ama"
+    "cliente_ama",
+    "lucratividade"
   ],
   "conhecidos": {
     "kits": [
@@ -470,22 +471,22 @@
       "Lançamento novinho, direto da fábrica."
     ],
     "frete_kits": [
-      "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚",
       "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦",
-      "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛"
+      "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛",
+      "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚"
     ],
     "tag_kits": [
-      "Kit fechado — ótimo pra começar a revender.",
       "Kit com cores variadas.",
       "Vem em kit fechado de 5, tecido suplex vip.",
-      "Kit fechado, 5 peças, suplex vip."
+      "Kit fechado, 5 peças, suplex vip.",
+      "É kit fechado com 5 peças, em suplex vip."
     ],
     "cta_bio": [
-      "Link da bio te leva direto pro catálogo 📲",
       "Pedido pelo site, link na bio 🛍️",
       "Dá uma espiada no link da bio 💗",
       "Catálogo completo — link na bio ✨",
-      "Link na bio 🔗"
+      "Link na bio 🔗",
+      "Os outros modelos estão no link da bio 👆"
     ],
     "preco": [
       "{nome_curto}: {preco}.",
@@ -510,10 +511,10 @@
       "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛"
     ],
     "preco_kits": [
-      "Kit com {quantidade} por {preco}.",
       "{preco} no kit com {quantidade}.",
       "Hoje, {quantidade} saem por {preco}.",
-      "{quantidade} por {preco} — já pode revender no seu preço."
+      "{quantidade} por {preco} — já pode revender no seu preço.",
+      "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça."
     ],
     "cta_alt": [
       "Me chama no direct que te passo os detalhes 💬",
@@ -569,7 +570,8 @@
       "Custo baixo por peça é o que faz a revenda valer a pena.",
       "Você define seu preço de venda — a margem fica com você.",
       "Compra no kit, sai mais em conta por peça, revende com lucro tranquilo.",
-      "Lucro bom começa na hora da compra — e esse preço ajuda."
+      "Lucro bom começa na hora da compra — e esse preço ajuda.",
+      "Faz a conta: o valor por peça no kit deixa espaço pra um bom lucro."
     ],
     "cliente_ama": [
       "É o tipo de peça que a cliente compra uma e depois volta pra levar mais duas.",
