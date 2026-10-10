@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "2816695",
@@ -176,15 +176,16 @@
       "3145398",
       "326653",
       "327396",
-      "3118772"
+      "3118772",
+      "3336920"
     ]
   },
   "ultimos_pilares": [
-    "conforto",
     "cliente_ama",
     "qualidade",
     "renda_extra",
-    "lucratividade"
+    "lucratividade",
+    "estilo"
   ],
   "conhecidos": {
     "kits": [
@@ -478,11 +479,11 @@
       "Vem em kit fechado de 5, tecido suplex vip."
     ],
     "cta_bio": [
-      "Os outros modelos estão no link da bio 👆",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Catálogo inteiro tá no link da bio 👆",
       "Link da bio te leva direto pro catálogo 📲",
-      "Pedido pelo site, link na bio 🛍️"
+      "Pedido pelo site, link na bio 🛍️",
+      "Dá uma espiada no link da bio 💗"
     ],
     "preco": [
       "{preco} — e você revende no seu preço.",
@@ -491,10 +492,10 @@
       "{nome_curto} sai por {preco}."
     ],
     "tag_avulso": [
-      "Você escolhe peça por peça (mínimo de 10 no pedido).",
       "Vendida avulsa, sem precisar levar kit fechado.",
       "É peça avulsa, na malha premium.",
-      "Peça avulsa, malha premium."
+      "Peça avulsa, malha premium.",
+      "Peça avulsa premium — você monta o pedido do seu jeito."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -542,7 +543,8 @@
       "Moda fitness que dá pra usar no mercado, no passeio e na academia.",
       "Peça que fica linda na foto — ajuda muito na hora de divulgar.",
       "Visual arrumado sem esforço nenhum.",
-      "Cores que chamam atenção na vitrine e no seu status."
+      "Cores que chamam atenção na vitrine e no seu status.",
+      "Modelo que não sai de moda de uma estação pra outra."
     ],
     "qualidade_kits": [
       "Tecido suplex vip, grosso e sem transparência nem agachando.",
