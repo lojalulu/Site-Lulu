@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "2816695",
@@ -132,7 +132,8 @@
       "3950068",
       "318128",
       "3703559",
-      "2049282"
+      "2049282",
+      "318117"
     ],
     "avulso": [
       "334028",
@@ -189,11 +190,11 @@
     ]
   },
   "ultimos_pilares": [
-    "conforto",
     "cliente_ama",
     "estilo",
     "disponibilidade",
-    "cliente_ama"
+    "cliente_ama",
+    "lucratividade"
   ],
   "conhecidos": {
     "kits": [
@@ -481,17 +482,17 @@
       "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚"
     ],
     "tag_kits": [
-      "Kit fechado, 5 peças, suplex vip.",
       "É kit fechado com 5 peças, em suplex vip.",
       "Kit fechado — ótimo pra começar a revender.",
-      "Kit com cores variadas."
+      "Kit com cores variadas.",
+      "Vem em kit fechado de 5, tecido suplex vip."
     ],
     "cta_bio": [
-      "Os outros modelos estão no link da bio 👆",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Pedido pelo site, link na bio 🛍️",
       "Link da bio te leva direto pro catálogo 📲",
-      "Catálogo inteiro tá no link da bio 👆"
+      "Catálogo inteiro tá no link da bio 👆",
+      "Dá uma espiada no link da bio 💗"
     ],
     "preco": [
       "{nome_curto} sai por {preco}.",
@@ -577,7 +578,8 @@
       "Você define seu preço de venda — a margem fica com você.",
       "Compra no kit, sai mais em conta por peça, revende com lucro tranquilo.",
       "Lucro bom começa na hora da compra — e esse preço ajuda.",
-      "Faz a conta: o valor por peça no kit deixa espaço pra um bom lucro."
+      "Faz a conta: o valor por peça no kit deixa espaço pra um bom lucro.",
+      "Quanto menor o custo, mais fácil fica competir e ainda lucrar."
     ],
     "cliente_ama": [
       "Veste bem em corpos diferentes, por isso quase não tem troca.",
