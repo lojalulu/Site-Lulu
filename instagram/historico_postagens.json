@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "2816695",
@@ -180,15 +180,16 @@
       "327396",
       "3118772",
       "3336920",
-      "332873"
+      "332873",
+      "3480260"
     ]
   },
   "ultimos_pilares": [
-    "lucratividade",
     "estilo",
     "renda_extra",
     "cliente_ama",
-    "lucratividade"
+    "lucratividade",
+    "conforto"
   ],
   "conhecidos": {
     "kits": [
@@ -482,23 +483,23 @@
       "É kit fechado com 5 peças, em suplex vip."
     ],
     "cta_bio": [
-      "Pedido pelo site, link na bio 🛍️",
       "Dá uma espiada no link da bio 💗",
       "Catálogo completo — link na bio ✨",
       "Link na bio 🔗",
-      "Os outros modelos estão no link da bio 👆"
+      "Os outros modelos estão no link da bio 👆",
+      "Vê as cores e monta seu pedido pelo link da bio 🔗"
     ],
     "preco": [
-      "{nome_curto}: {preco}.",
       "Preço de atacado: {preco}.",
       "{nome_curto} sai por {preco}.",
-      "Tudo isso por {preco}."
+      "Tudo isso por {preco}.",
+      "{preco} — e você revende no seu preço."
     ],
     "tag_avulso": [
-      "É peça avulsa, na malha premium.",
       "Peça avulsa, malha premium.",
       "Peça avulsa premium — você monta o pedido do seu jeito.",
-      "Atacado de peça avulsa, a partir de 10 peças."
+      "Atacado de peça avulsa, a partir de 10 peças.",
+      "Você escolhe peça por peça (mínimo de 10 no pedido)."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -506,9 +507,9 @@
       "Malha de qualidade superior, que não perde a forma."
     ],
     "frete_avulso": [
-      "Pedido de peça avulsa com frete grátis (Vip) 📦",
       "Frete grátis (Vip) pra Salvador e todo o Brasil 🚚",
-      "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛"
+      "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛",
+      "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦"
     ],
     "preco_kits": [
       "{preco} no kit com {quantidade}.",
@@ -521,14 +522,14 @@
       "Manda mensagem que a gente te ajuda a montar o pedido 💬"
     ],
     "conforto": [
-      "Veste bem do treino da manhã até o fim do dia.",
       "Dá pra agachar, correr e alongar sem ficar ajeitando a roupa.",
       "Modelagem que dá liberdade pra se mexer.",
       "Costura bem feita, que não incomoda na pele.",
       "Cós que não enrola e não aperta a barriga.",
       "Firme sem ser apertada. É isso que a cliente procura.",
       "Conforto é o que faz a cliente usar toda semana — e indicar.",
-      "Elástico que não marca, tecido que respira. Conforto de verdade."
+      "Elástico que não marca, tecido que respira. Conforto de verdade.",
+      "Tecido macio, que não pinica nem esquenta demais."
     ],
     "renda_extra": [
       "Pra quem vende no WhatsApp ou no Instagram, essa peça ajuda a fechar pedido.",
