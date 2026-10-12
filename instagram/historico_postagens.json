@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "2816695",
@@ -135,7 +135,8 @@
       "2049282",
       "318117",
       "2049296",
-      "3501601"
+      "3501601",
+      "2851134"
     ],
     "avulso": [
       "334028",
@@ -195,11 +196,11 @@
     ]
   },
   "ultimos_pilares": [
-    "qualidade",
     "cliente_ama",
     "renda_extra",
     "estilo",
-    "cliente_ama"
+    "cliente_ama",
+    "lucratividade"
   ],
   "conhecidos": {
     "kits": [
@@ -487,17 +488,17 @@
       "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦"
     ],
     "tag_kits": [
-      "Kit com cores variadas.",
       "Vem em kit fechado de 5, tecido suplex vip.",
       "Vendido em kit fechado, cores sortidas.",
-      "É kit fechado com 5 peças, em suplex vip."
+      "É kit fechado com 5 peças, em suplex vip.",
+      "Kit fechado — ótimo pra começar a revender."
     ],
     "cta_bio": [
-      "Catálogo inteiro tá no link da bio 👆",
       "Dá uma espiada no link da bio 💗",
       "Catálogo completo — link na bio ✨",
       "Link na bio 🔗",
-      "Os outros modelos estão no link da bio 👆"
+      "Os outros modelos estão no link da bio 👆",
+      "Vê as cores e monta seu pedido pelo link da bio 🔗"
     ],
     "preco": [
       "{preco} — e você revende no seu preço.",
@@ -523,10 +524,10 @@
       "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚"
     ],
     "preco_kits": [
-      "Hoje, {quantidade} saem por {preco}.",
       "{quantidade} por {preco} — já pode revender no seu preço.",
       "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
-      "{quantidade} - só {preco}."
+      "{quantidade} - só {preco}.",
+      "{quantidade}: {preco}."
     ],
     "cta_alt": [
       "Chama no direct pra garantir o seu 💬",
@@ -585,7 +586,8 @@
       "Compra no kit, sai mais em conta por peça, revende com lucro tranquilo.",
       "Lucro bom começa na hora da compra — e esse preço ajuda.",
       "Faz a conta: o valor por peça no kit deixa espaço pra um bom lucro.",
-      "Quanto menor o custo, mais fácil fica competir e ainda lucrar."
+      "Quanto menor o custo, mais fácil fica competir e ainda lucrar.",
+      "Atacado com preço pensado pra quem revende."
     ],
     "cliente_ama": [
       "Peça que vira queridinha na primeira leva — cliente ama e indica pra amiga.",
