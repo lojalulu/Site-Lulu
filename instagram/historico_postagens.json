@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "2816695",
@@ -134,7 +134,8 @@
       "3703559",
       "2049282",
       "318117",
-      "2049296"
+      "2049296",
+      "3501601"
     ],
     "avulso": [
       "334028",
@@ -193,11 +194,11 @@
     ]
   },
   "ultimos_pilares": [
-    "cliente_ama",
     "lucratividade",
     "qualidade",
     "cliente_ama",
-    "renda_extra"
+    "renda_extra",
+    "estilo"
   ],
   "conhecidos": {
     "kits": [
@@ -480,15 +481,15 @@
       "Lançamento novinho, direto da fábrica."
     ],
     "frete_kits": [
-      "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛",
       "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚",
-      "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚"
+      "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚",
+      "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦"
     ],
     "tag_kits": [
-      "Kit fechado — ótimo pra começar a revender.",
       "Kit com cores variadas.",
       "Vem em kit fechado de 5, tecido suplex vip.",
-      "Vendido em kit fechado, cores sortidas."
+      "Vendido em kit fechado, cores sortidas.",
+      "É kit fechado com 5 peças, em suplex vip."
     ],
     "cta_bio": [
       "Link da bio te leva direto pro catálogo 📲",
@@ -527,8 +528,8 @@
       "{quantidade} - só {preco}."
     ],
     "cta_alt": [
-      "Ficou com dúvida? Chama no direct 💬",
-      "Chama no direct pra garantir o seu 💬"
+      "Chama no direct pra garantir o seu 💬",
+      "Manda mensagem que a gente te ajuda a montar o pedido 💬"
     ],
     "conforto": [
       "Dá pra agachar, correr e alongar sem ficar ajeitando a roupa.",
@@ -551,14 +552,14 @@
       "Quer começar a revender? Esse é o tipo de peça que facilita."
     ],
     "estilo": [
-      "Modelagem atual, cores que estão em alta — moda fitness que também é moda de rua.",
       "Aquele visual que a cliente vê no feed e já quer pro guarda-roupa.",
       "Moda fitness que dá pra usar no mercado, no passeio e na academia.",
       "Peça que fica linda na foto — ajuda muito na hora de divulgar.",
       "Visual arrumado sem esforço nenhum.",
       "Cores que chamam atenção na vitrine e no seu status.",
       "Modelo que não sai de moda de uma estação pra outra.",
-      "Tem cara de peça cara, mas com preço de atacado."
+      "Tem cara de peça cara, mas com preço de atacado.",
+      "Detalhes que fazem diferença e deixam o conjunto mais bonito."
     ],
     "qualidade_kits": [
       "Tecido suplex vip, grosso e sem transparência nem agachando.",
