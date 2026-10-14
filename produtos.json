@@ -1,5 +1,34 @@
 [
   {
+    "id": "317950",
+    "nome": "Pacote com 10 Blusas Com Manga Gg",
+    "preco_original": 105.0,
+    "preco_final": 168.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1674009244_d63e2beeeea914bfeb9e.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1674009241_fd63c6383d66230ef3c0.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1674009243_303d2d09c040f5b2c0ad.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1674009244_8d85737e602332580f7c.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1674009242_cd157b6025d54275d86c.jpeg"
+    ],
+    "cores_variadas": true,
+    "lancamento": true
+  },
+  {
+    "id": "317949",
+    "nome": "Pacote Com 10 Blusas Com Manga G",
+    "preco_original": 105.0,
+    "preco_final": 168.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1674009166_2ff1643694ee5247fe67.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1674009164_90287049395d7f0a18d7.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1674009174_6dd2635646224a6a7db7.jpeg",
+      "https://arquivos.facilzap.app.br/produtos/1674009170_a68bf8d33b7194a1f428.jpeg"
+    ],
+    "cores_variadas": true,
+    "lancamento": true
+  },
+  {
     "id": "3769174",
     "nome": "Pacote com 5 Conjuntos Short Duplo em Poliamida com Proteção UV – Tamanho Único Ref 05",
     "preco_original": 275.0,
