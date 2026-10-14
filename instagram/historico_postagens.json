@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "2816695",
@@ -202,15 +202,16 @@
       "875534",
       "3117884",
       "334025",
-      "4323187"
+      "4323187",
+      "3146488"
     ]
   },
   "ultimos_pilares": [
-    "renda_extra",
     "qualidade",
     "conforto",
     "disponibilidade",
-    "qualidade"
+    "qualidade",
+    "estilo"
   ],
   "conhecidos": {
     "kits": [
@@ -504,23 +505,23 @@
       "Kit fechado — ótimo pra começar a revender."
     ],
     "cta_bio": [
-      "Os outros modelos estão no link da bio 👆",
       "Pedido pelo site, link na bio 🛍️",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Dá uma espiada no link da bio 💗",
-      "Catálogo completo — link na bio ✨"
+      "Catálogo completo — link na bio ✨",
+      "Link na bio 🔗"
     ],
     "preco": [
-      "Valor: {preco}.",
       "{nome_curto}: {preco}.",
       "{nome_curto} sai por {preco}.",
-      "Preço de atacado: {preco}."
+      "Preço de atacado: {preco}.",
+      "Tudo isso por {preco}."
     ],
     "tag_avulso": [
-      "Você escolhe peça por peça (mínimo de 10 no pedido).",
       "É peça avulsa, na malha premium.",
       "Peça avulsa premium — você monta o pedido do seu jeito.",
-      "Atacado de peça avulsa, a partir de 10 peças."
+      "Atacado de peça avulsa, a partir de 10 peças.",
+      "Vendida avulsa, sem precisar levar kit fechado."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -566,14 +567,14 @@
       "Revender moda fitness é bom porque a cliente sempre volta pra comprar mais."
     ],
     "estilo": [
-      "Moda fitness que dá pra usar no mercado, no passeio e na academia.",
       "Peça que fica linda na foto — ajuda muito na hora de divulgar.",
       "Visual arrumado sem esforço nenhum.",
       "Cores que chamam atenção na vitrine e no seu status.",
       "Modelo que não sai de moda de uma estação pra outra.",
       "Tem cara de peça cara, mas com preço de atacado.",
       "Detalhes que fazem diferença e deixam o conjunto mais bonito.",
-      "Combina com tênis, sandália ou papete — serve pra tudo."
+      "Combina com tênis, sandália ou papete — serve pra tudo.",
+      "Sai da academia e já segue o dia sem trocar de roupa."
     ],
     "qualidade_kits": [
       "Tecido suplex vip, grosso e sem transparência nem agachando.",
