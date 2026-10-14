@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "2816695",
@@ -200,15 +200,16 @@
       "3043182",
       "875534",
       "3117884",
-      "334025"
+      "334025",
+      "4323187"
     ]
   },
   "ultimos_pilares": [
-    "conforto",
     "lucratividade",
     "renda_extra",
     "qualidade",
-    "conforto"
+    "conforto",
+    "disponibilidade"
   ],
   "conhecidos": {
     "kits": [
@@ -502,23 +503,23 @@
       "Vem em kit fechado de 5, tecido suplex vip."
     ],
     "cta_bio": [
-      "Link na bio 🔗",
       "Catálogo inteiro tá no link da bio 👆",
       "Os outros modelos estão no link da bio 👆",
       "Pedido pelo site, link na bio 🛍️",
-      "Vê as cores e monta seu pedido pelo link da bio 🔗"
+      "Vê as cores e monta seu pedido pelo link da bio 🔗",
+      "Dá uma espiada no link da bio 💗"
     ],
     "preco": [
-      "Hoje, {nome_curto} sai por {preco}.",
       "Valor: {preco}.",
       "{nome_curto}: {preco}.",
-      "{nome_curto} sai por {preco}."
+      "{nome_curto} sai por {preco}.",
+      "Preço de atacado: {preco}."
     ],
     "tag_avulso": [
-      "Vendida avulsa, sem precisar levar kit fechado.",
       "Você escolhe peça por peça (mínimo de 10 no pedido).",
       "É peça avulsa, na malha premium.",
-      "Peça avulsa premium — você monta o pedido do seu jeito."
+      "Peça avulsa premium — você monta o pedido do seu jeito.",
+      "Atacado de peça avulsa, a partir de 10 peças."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -529,9 +530,9 @@
       "Peça selecionada uma a uma, com padrão premium."
     ],
     "frete_avulso": [
-      "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚",
       "Frete grátis (Vip) pra Salvador e todo o Brasil 🚚",
-      "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛"
+      "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛",
+      "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦"
     ],
     "preco_kits": [
       "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
@@ -581,13 +582,13 @@
       "Não desbota fácil e não faz bolinha — qualidade que dura."
     ],
     "disponibilidade": [
-      "Esse modelo costuma acabar rápido — melhor não deixar pra depois.",
       "Poucas peças disponíveis por enquanto.",
       "Garante o seu antes que o lote acabe.",
       "Quando acaba, a próxima leva pode demorar.",
       "Últimas unidades desse lote — reposição não tem data certa.",
       "Quem viu primeiro já garantiu. Ainda dá tempo.",
-      "Enquanto durar o estoque desse lote, o preço continua esse."
+      "Enquanto durar o estoque desse lote, o preço continua esse.",
+      "Ainda tem, mas não sabemos até quando."
     ],
     "lucratividade": [
       "Custo baixo por peça é o que faz a revenda valer a pena.",
