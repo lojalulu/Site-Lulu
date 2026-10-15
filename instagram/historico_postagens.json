@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "2816695",
@@ -144,7 +144,8 @@
       "3388638",
       "317949",
       "317950",
-      "3347522"
+      "3347522",
+      "3769137"
     ],
     "avulso": [
       "334028",
@@ -213,11 +214,11 @@
     ]
   },
   "ultimos_pilares": [
-    "cliente_ama",
     "lancamento",
     "renda_extra",
     "disponibilidade",
-    "estilo"
+    "estilo",
+    "renda_extra"
   ],
   "conhecidos": {
     "kits": [
@@ -507,10 +508,10 @@
       "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚"
     ],
     "tag_kits": [
-      "Kit fechado — ótimo pra começar a revender.",
       "É kit fechado com 5 peças, em suplex vip.",
       "Kit fechado, 5 peças, suplex vip.",
-      "Kit com cores variadas."
+      "Kit com cores variadas.",
+      "Vem em kit fechado de 5, tecido suplex vip."
     ],
     "cta_bio": [
       "Pedido pelo site, link na bio 🛍️",
@@ -545,14 +546,14 @@
       "Pedido de peça avulsa com frete grátis (Vip) 📦"
     ],
     "preco_kits": [
-      "{quantidade}: {preco}.",
       "{preco} no kit com {quantidade}.",
       "Hoje, {quantidade} saem por {preco}.",
-      "Kit com {quantidade} por {preco}."
+      "Kit com {quantidade} por {preco}.",
+      "{quantidade} - só {preco}."
     ],
     "cta_alt": [
-      "Chama no direct pra garantir o seu 💬",
-      "Manda mensagem que a gente te ajuda a montar o pedido 💬"
+      "Manda mensagem que a gente te ajuda a montar o pedido 💬",
+      "Me chama no direct que te passo os detalhes 💬"
     ],
     "conforto": [
       "Cós que não enrola e não aperta a barriga.",
@@ -565,14 +566,14 @@
       "Malha que acompanha o corpo sem apertar — conforto o dia inteiro."
     ],
     "renda_extra": [
-      "Se você revende moda fitness, essa é a peça que sai rápido.",
       "Boa pra quem vende pra academia, vizinhança ou grupo de amigas.",
       "Dá pra começar pequeno e ir crescendo — peça que gira bem ajuda muito.",
       "Renda extra de verdade começa com produto que a cliente quer comprar.",
       "Peça que você posta no status e já aparece gente perguntando o preço.",
       "Quer começar a revender? Esse é o tipo de peça que facilita.",
       "Revender moda fitness é bom porque a cliente sempre volta pra comprar mais.",
-      "Quem revende sabe: peça boa e barata é lucro certo no fim do mês."
+      "Quem revende sabe: peça boa e barata é lucro certo no fim do mês.",
+      "Muita revendedora começou com um kit só e hoje compra todo mês."
     ],
     "estilo": [
       "Visual arrumado sem esforço nenhum.",
