@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "2816695",
@@ -143,7 +143,8 @@
       "318143",
       "3388638",
       "317949",
-      "317950"
+      "317950",
+      "3347522"
     ],
     "avulso": [
       "334028",
@@ -211,11 +212,11 @@
     ]
   },
   "ultimos_pilares": [
-    "estilo",
     "lancamento",
     "cliente_ama",
     "lancamento",
-    "renda_extra"
+    "renda_extra",
+    "disponibilidade"
   ],
   "conhecidos": {
     "kits": [
@@ -505,17 +506,17 @@
       "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚"
     ],
     "tag_kits": [
-      "Vem em kit fechado de 5, tecido suplex vip.",
       "Kit fechado — ótimo pra começar a revender.",
       "É kit fechado com 5 peças, em suplex vip.",
-      "Kit fechado, 5 peças, suplex vip."
+      "Kit fechado, 5 peças, suplex vip.",
+      "Kit com cores variadas."
     ],
     "cta_bio": [
-      "Link na bio 🔗",
       "Catálogo inteiro tá no link da bio 👆",
       "Pedido pelo site, link na bio 🛍️",
       "Link da bio te leva direto pro catálogo 📲",
-      "Vê as cores e monta seu pedido pelo link da bio 🔗"
+      "Vê as cores e monta seu pedido pelo link da bio 🔗",
+      "Dá uma espiada no link da bio 💗"
     ],
     "preco": [
       "Preço de atacado: {preco}.",
@@ -543,10 +544,10 @@
       "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦"
     ],
     "preco_kits": [
-      "{quantidade} - só {preco}.",
       "{quantidade}: {preco}.",
       "{preco} no kit com {quantidade}.",
-      "Hoje, {quantidade} saem por {preco}."
+      "Hoje, {quantidade} saem por {preco}.",
+      "Kit com {quantidade} por {preco}."
     ],
     "cta_alt": [
       "Chama no direct pra garantir o seu 💬",
@@ -591,13 +592,13 @@
       "Tecido firme, que não perde a forma depois de lavar."
     ],
     "disponibilidade": [
-      "Poucas peças disponíveis por enquanto.",
       "Garante o seu antes que o lote acabe.",
       "Quando acaba, a próxima leva pode demorar.",
       "Últimas unidades desse lote — reposição não tem data certa.",
       "Quem viu primeiro já garantiu. Ainda dá tempo.",
       "Enquanto durar o estoque desse lote, o preço continua esse.",
-      "Ainda tem, mas não sabemos até quando."
+      "Ainda tem, mas não sabemos até quando.",
+      "Esse modelo costuma acabar rápido — melhor não deixar pra depois."
     ],
     "lucratividade": [
       "Custo baixo por peça é o que faz a revenda valer a pena.",
