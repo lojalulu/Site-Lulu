@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "2816695",
@@ -208,15 +208,16 @@
       "4323187",
       "3146488",
       "875523",
-      "333277"
+      "333277",
+      "3118777"
     ]
   },
   "ultimos_pilares": [
-    "lancamento",
     "cliente_ama",
     "lancamento",
     "renda_extra",
-    "disponibilidade"
+    "disponibilidade",
+    "estilo"
   ],
   "conhecidos": {
     "kits": [
@@ -512,11 +513,11 @@
       "Kit com cores variadas."
     ],
     "cta_bio": [
-      "Catálogo inteiro tá no link da bio 👆",
       "Pedido pelo site, link na bio 🛍️",
       "Link da bio te leva direto pro catálogo 📲",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
-      "Dá uma espiada no link da bio 💗"
+      "Dá uma espiada no link da bio 💗",
+      "Catálogo completo — link na bio ✨"
     ],
     "preco": [
       "Preço de atacado: {preco}.",
@@ -525,10 +526,10 @@
       "Valor: {preco}."
     ],
     "tag_avulso": [
-      "Atacado de peça avulsa, a partir de 10 peças.",
       "Vendida avulsa, sem precisar levar kit fechado.",
       "Peça avulsa, malha premium.",
-      "É peça avulsa, na malha premium."
+      "É peça avulsa, na malha premium.",
+      "Você escolhe peça por peça (mínimo de 10 no pedido)."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -539,9 +540,9 @@
       "Peça selecionada uma a uma, com padrão premium."
     ],
     "frete_avulso": [
-      "Frete grátis (Vip) pra Salvador e todo o Brasil 🚚",
       "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛",
-      "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦"
+      "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦",
+      "Pedido de peça avulsa com frete grátis (Vip) 📦"
     ],
     "preco_kits": [
       "{quantidade}: {preco}.",
@@ -574,14 +575,14 @@
       "Quem revende sabe: peça boa e barata é lucro certo no fim do mês."
     ],
     "estilo": [
-      "Peça que fica linda na foto — ajuda muito na hora de divulgar.",
       "Visual arrumado sem esforço nenhum.",
       "Cores que chamam atenção na vitrine e no seu status.",
       "Modelo que não sai de moda de uma estação pra outra.",
       "Tem cara de peça cara, mas com preço de atacado.",
       "Detalhes que fazem diferença e deixam o conjunto mais bonito.",
       "Combina com tênis, sandália ou papete — serve pra tudo.",
-      "Sai da academia e já segue o dia sem trocar de roupa."
+      "Sai da academia e já segue o dia sem trocar de roupa.",
+      "Bonita no treino e bonita na rua também."
     ],
     "qualidade_kits": [
       "Tecido suplex vip, grosso e sem transparência nem agachando.",
