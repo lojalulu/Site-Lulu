@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "2816695",
@@ -147,7 +147,8 @@
       "3347522",
       "3769137",
       "3221639",
-      "2816723"
+      "2816723",
+      "3405523"
     ],
     "avulso": [
       "334028",
@@ -219,11 +220,11 @@
     ]
   },
   "ultimos_pilares": [
-    "disponibilidade",
     "cliente_ama",
     "renda_extra",
     "disponibilidade",
-    "lancamento"
+    "lancamento",
+    "qualidade"
   ],
   "conhecidos": {
     "kits": [
@@ -509,22 +510,22 @@
       "Peça nova no catálogo, quentinha da produção."
     ],
     "frete_kits": [
-      "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛",
       "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚",
-      "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚"
+      "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚",
+      "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦"
     ],
     "tag_kits": [
-      "Kit com cores variadas.",
       "Vem em kit fechado de 5, tecido suplex vip.",
       "Vendido em kit fechado, cores sortidas.",
-      "É kit fechado com 5 peças, em suplex vip."
+      "É kit fechado com 5 peças, em suplex vip.",
+      "Kit fechado, 5 peças, suplex vip."
     ],
     "cta_bio": [
-      "Dá uma espiada no link da bio 💗",
       "Catálogo completo — link na bio ✨",
       "Catálogo inteiro tá no link da bio 👆",
       "Link na bio 🔗",
-      "Os outros modelos estão no link da bio 👆"
+      "Os outros modelos estão no link da bio 👆",
+      "Link da bio te leva direto pro catálogo 📲"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -552,10 +553,10 @@
       "Pedido de peça avulsa com frete grátis (Vip) 📦"
     ],
     "preco_kits": [
-      "{preco} no kit com {quantidade}.",
       "Hoje, {quantidade} saem por {preco}.",
       "Kit com {quantidade} por {preco}.",
-      "{quantidade} - só {preco}."
+      "{quantidade} - só {preco}.",
+      "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça."
     ],
     "cta_alt": [
       "Ficou com dúvida? Chama no direct 💬",
@@ -597,7 +598,8 @@
       "Pode fazer o teste do agachamento: zero transparência.",
       "Zero transparência de verdade — o padrão do suplex vip da Lulu.",
       "Não desbota fácil e não faz bolinha — qualidade que dura.",
-      "Tecido firme, que não perde a forma depois de lavar."
+      "Tecido firme, que não perde a forma depois de lavar.",
+      "Suplex vip, zero transparência — testado antes de entrar no catálogo."
     ],
     "disponibilidade": [
       "Últimas unidades desse lote — reposição não tem data certa.",
