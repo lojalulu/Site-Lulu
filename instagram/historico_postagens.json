@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "2816695",
@@ -145,7 +145,8 @@
       "317949",
       "317950",
       "3347522",
-      "3769137"
+      "3769137",
+      "3221639"
     ],
     "avulso": [
       "334028",
@@ -215,11 +216,11 @@
     ]
   },
   "ultimos_pilares": [
-    "renda_extra",
     "disponibilidade",
     "estilo",
     "renda_extra",
-    "disponibilidade"
+    "disponibilidade",
+    "cliente_ama"
   ],
   "conhecidos": {
     "kits": [
@@ -509,17 +510,17 @@
       "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚"
     ],
     "tag_kits": [
-      "É kit fechado com 5 peças, em suplex vip.",
       "Kit fechado, 5 peças, suplex vip.",
       "Kit com cores variadas.",
-      "Vem em kit fechado de 5, tecido suplex vip."
+      "Vem em kit fechado de 5, tecido suplex vip.",
+      "Vendido em kit fechado, cores sortidas."
     ],
     "cta_bio": [
-      "Pedido pelo site, link na bio 🛍️",
       "Link da bio te leva direto pro catálogo 📲",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Dá uma espiada no link da bio 💗",
-      "Catálogo completo — link na bio ✨"
+      "Catálogo completo — link na bio ✨",
+      "Catálogo inteiro tá no link da bio 👆"
     ],
     "preco": [
       "Preço de atacado: {preco}.",
@@ -614,14 +615,14 @@
       "Preço de fábrica pra você vender com uma margem boa de verdade."
     ],
     "cliente_ama": [
-      "Peça que valoriza o corpo sem apertar. Cliente satisfeita volta.",
       "Aposta segura: modelo que agrada quase todo mundo.",
       "Quem comprou elogiou o caimento — e caimento bom é venda garantida.",
       "Sua cliente vai amar essa modelagem — e voltar pra pedir mais.",
       "Esse modelo costuma ter muita recompra.",
       "Cliente gosta de peça que dá pra usar muito — essa é assim.",
       "A cliente experimenta e já pergunta se tem em outra cor.",
-      "Veste bem em corpos diferentes, por isso quase não tem troca."
+      "Veste bem em corpos diferentes, por isso quase não tem troca.",
+      "Esse é daqueles produtos que a cliente manda foto usando, de tão satisfeita."
     ]
   }
 }
