@@ -29,22 +29,6 @@
     "lancamento": true
   },
   {
-    "id": "3769174",
-    "nome": "Pacote com 5 Conjuntos Short Duplo em Poliamida com Proteção UV – Tamanho Único Ref 05",
-    "preco_original": 275.0,
-    "preco_final": 440.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1770214681_fa8f8302d6af6d70c029.webp",
-      "https://arquivos.facilzap.app.br/produtos/1770214676_1fd5498b8a6d0c05632a.webp",
-      "https://arquivos.facilzap.app.br/produtos/1770214600_f0f04808b8fe7813cbd2.webp",
-      "https://arquivos.facilzap.app.br/produtos/1770214670_d963feedd70eeba35ea0.webp",
-      "https://arquivos.facilzap.app.br/produtos/1770214592_a34ceb971d22ef62949a.webp",
-      "https://arquivos.facilzap.app.br/produtos/1770214589_f2c0dae9814ca128acec.webp"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
     "id": "3703564",
     "nome": "Kit com 5 Conjuntos Fitness em Suplex – Linha Slim (Ref.) 26",
     "preco_original": 155.0,
@@ -407,19 +391,6 @@
       "https://arquivos.facilzap.app.br/produtos/1712758349_9202ffdbdcb529f76280.jpeg.webp",
       "https://arquivos.facilzap.app.br/produtos/1712758346_8dd7bc9ac2330ed04e90.jpeg.webp",
       "https://arquivos.facilzap.app.br/produtos/1712758343_c535498112abc2d1a2c8.jpeg.webp"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
-    "id": "3745068",
-    "nome": "Pacote com 5 Conjuntos – Short Duplo em Suplex 04",
-    "preco_original": 130.0,
-    "preco_final": 208.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1769453023_21115af9d1fc2694276b.webp",
-      "https://arquivos.facilzap.app.br/produtos/1769452946_a66117391a3f29e4dedc.webp",
-      "https://arquivos.facilzap.app.br/produtos/1769453016_3024b48eefd91c8df32e.webp"
     ],
     "cores_variadas": true,
     "lancamento": false
