@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "2816695",
@@ -222,15 +222,16 @@
       "4555358",
       "332840",
       "327731",
-      "331422"
+      "331422",
+      "334031"
     ]
   },
   "ultimos_pilares": [
-    "renda_extra",
     "cliente_ama",
     "lucratividade",
     "conforto",
-    "estilo"
+    "estilo",
+    "disponibilidade"
   ],
   "conhecidos": {
     "kits": [
@@ -527,11 +528,11 @@
       "Kit com cores variadas."
     ],
     "cta_bio": [
-      "Catálogo completo — link na bio ✨",
       "Catálogo inteiro tá no link da bio 👆",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Os outros modelos estão no link da bio 👆",
-      "Link da bio te leva direto pro catálogo 📲"
+      "Link da bio te leva direto pro catálogo 📲",
+      "Pedido pelo site, link na bio 🛍️"
     ],
     "preco": [
       "Valor: {preco}.",
@@ -540,10 +541,10 @@
       "Preço de atacado: {preco}."
     ],
     "tag_avulso": [
-      "Atacado de peça avulsa, a partir de 10 peças.",
       "É peça avulsa, na malha premium.",
       "Você escolhe peça por peça (mínimo de 10 no pedido).",
-      "Peça avulsa premium — você monta o pedido do seu jeito."
+      "Peça avulsa premium — você monta o pedido do seu jeito.",
+      "Peça avulsa, malha premium."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -608,13 +609,13 @@
       "Suplex vip, zero transparência — testado antes de entrar no catálogo."
     ],
     "disponibilidade": [
-      "Quem viu primeiro já garantiu. Ainda dá tempo.",
       "Enquanto durar o estoque desse lote, o preço continua esse.",
       "Ainda tem, mas não sabemos até quando.",
       "Esse modelo costuma acabar rápido — melhor não deixar pra depois.",
       "Poucas peças disponíveis por enquanto.",
       "Garante o seu antes que o lote acabe.",
-      "Quando acaba, a próxima leva pode demorar."
+      "Quando acaba, a próxima leva pode demorar.",
+      "Esse aqui já está saindo bastante essa semana."
     ],
     "lucratividade": [
       "Você define seu preço de venda — a margem fica com você.",
