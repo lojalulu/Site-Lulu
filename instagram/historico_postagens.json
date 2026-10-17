@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "2816695",
@@ -150,7 +150,8 @@
       "2816723",
       "3405523",
       "3405521",
-      "3703564"
+      "3703564",
+      "3769152"
     ],
     "avulso": [
       "334028",
@@ -225,11 +226,11 @@
     ]
   },
   "ultimos_pilares": [
-    "disponibilidade",
     "renda_extra",
     "cliente_ama",
     "lucratividade",
-    "conforto"
+    "conforto",
+    "estilo"
   ],
   "conhecidos": {
     "kits": [
@@ -520,17 +521,17 @@
       "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦"
     ],
     "tag_kits": [
-      "É kit fechado com 5 peças, em suplex vip.",
       "Kit fechado, 5 peças, suplex vip.",
       "Kit fechado — ótimo pra começar a revender.",
-      "Vem em kit fechado de 5, tecido suplex vip."
+      "Vem em kit fechado de 5, tecido suplex vip.",
+      "Kit com cores variadas."
     ],
     "cta_bio": [
-      "Pedido pelo site, link na bio 🛍️",
       "Catálogo completo — link na bio ✨",
       "Catálogo inteiro tá no link da bio 👆",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
-      "Os outros modelos estão no link da bio 👆"
+      "Os outros modelos estão no link da bio 👆",
+      "Link da bio te leva direto pro catálogo 📲"
     ],
     "preco": [
       "Valor: {preco}.",
@@ -588,14 +589,14 @@
       "Se você revende moda fitness, essa é a peça que sai rápido."
     ],
     "estilo": [
-      "Visual arrumado sem esforço nenhum.",
       "Cores que chamam atenção na vitrine e no seu status.",
       "Modelo que não sai de moda de uma estação pra outra.",
       "Tem cara de peça cara, mas com preço de atacado.",
       "Detalhes que fazem diferença e deixam o conjunto mais bonito.",
       "Combina com tênis, sandália ou papete — serve pra tudo.",
       "Sai da academia e já segue o dia sem trocar de roupa.",
-      "Bonita no treino e bonita na rua também."
+      "Bonita no treino e bonita na rua também.",
+      "Peça que fica linda na foto — ajuda muito na hora de divulgar."
     ],
     "qualidade_kits": [
       "Tecido suplex vip, grosso e sem transparência nem agachando.",
