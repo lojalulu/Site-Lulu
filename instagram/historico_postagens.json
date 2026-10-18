@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "2816695",
@@ -151,7 +151,8 @@
       "3405523",
       "3405521",
       "3703564",
-      "3769152"
+      "3769152",
+      "2049286"
     ],
     "avulso": [
       "334028",
@@ -227,11 +228,11 @@
     ]
   },
   "ultimos_pilares": [
-    "cliente_ama",
     "lucratividade",
     "conforto",
     "estilo",
-    "disponibilidade"
+    "disponibilidade",
+    "conforto"
   ],
   "conhecidos": {
     "kits": [
@@ -522,17 +523,17 @@
       "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦"
     ],
     "tag_kits": [
-      "Kit fechado, 5 peças, suplex vip.",
       "Kit fechado — ótimo pra começar a revender.",
       "Vem em kit fechado de 5, tecido suplex vip.",
-      "Kit com cores variadas."
+      "Kit com cores variadas.",
+      "Vendido em kit fechado, cores sortidas."
     ],
     "cta_bio": [
-      "Catálogo inteiro tá no link da bio 👆",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Os outros modelos estão no link da bio 👆",
       "Link da bio te leva direto pro catálogo 📲",
-      "Pedido pelo site, link na bio 🛍️"
+      "Pedido pelo site, link na bio 🛍️",
+      "Dá uma espiada no link da bio 💗"
     ],
     "preco": [
       "Valor: {preco}.",
@@ -560,24 +561,24 @@
       "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛"
     ],
     "preco_kits": [
-      "Hoje, {quantidade} saem por {preco}.",
       "Kit com {quantidade} por {preco}.",
       "{quantidade} - só {preco}.",
-      "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça."
+      "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
+      "{quantidade}: {preco}."
     ],
     "cta_alt": [
       "Ficou com dúvida? Chama no direct 💬",
       "Manda mensagem que a gente te ajuda a montar o pedido 💬"
     ],
     "conforto": [
-      "Firme sem ser apertada. É isso que a cliente procura.",
       "Conforto é o que faz a cliente usar toda semana — e indicar.",
       "Elástico que não marca, tecido que respira. Conforto de verdade.",
       "Tecido macio, que não pinica nem esquenta demais.",
       "Veste bem do treino da manhã até o fim do dia.",
       "Feita pra treinar, trabalhar ou só ficar em casa — confortável do mesmo jeito.",
       "Malha que acompanha o corpo sem apertar — conforto o dia inteiro.",
-      "Modelagem que dá liberdade pra se mexer."
+      "Modelagem que dá liberdade pra se mexer.",
+      "Costura bem feita, que não incomoda na pele."
     ],
     "renda_extra": [
       "Renda extra de verdade começa com produto que a cliente quer comprar.",
