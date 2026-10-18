@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "2816695",
@@ -224,15 +224,16 @@
       "332840",
       "327731",
       "331422",
-      "334031"
+      "334031",
+      "4267810"
     ]
   },
   "ultimos_pilares": [
-    "lucratividade",
     "conforto",
     "estilo",
     "disponibilidade",
-    "conforto"
+    "conforto",
+    "renda_extra"
   ],
   "conhecidos": {
     "kits": [
@@ -529,11 +530,11 @@
       "Vendido em kit fechado, cores sortidas."
     ],
     "cta_bio": [
-      "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Os outros modelos estão no link da bio 👆",
       "Link da bio te leva direto pro catálogo 📲",
       "Pedido pelo site, link na bio 🛍️",
-      "Dá uma espiada no link da bio 💗"
+      "Dá uma espiada no link da bio 💗",
+      "Link na bio 🔗"
     ],
     "preco": [
       "Valor: {preco}.",
@@ -542,10 +543,10 @@
       "Preço de atacado: {preco}."
     ],
     "tag_avulso": [
-      "É peça avulsa, na malha premium.",
       "Você escolhe peça por peça (mínimo de 10 no pedido).",
       "Peça avulsa premium — você monta o pedido do seu jeito.",
-      "Peça avulsa, malha premium."
+      "Peça avulsa, malha premium.",
+      "Vendida avulsa, sem precisar levar kit fechado."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -581,14 +582,14 @@
       "Costura bem feita, que não incomoda na pele."
     ],
     "renda_extra": [
-      "Renda extra de verdade começa com produto que a cliente quer comprar.",
       "Peça que você posta no status e já aparece gente perguntando o preço.",
       "Quer começar a revender? Esse é o tipo de peça que facilita.",
       "Revender moda fitness é bom porque a cliente sempre volta pra comprar mais.",
       "Quem revende sabe: peça boa e barata é lucro certo no fim do mês.",
       "Muita revendedora começou com um kit só e hoje compra todo mês.",
       "Pra quem vende no WhatsApp ou no Instagram, essa peça ajuda a fechar pedido.",
-      "Se você revende moda fitness, essa é a peça que sai rápido."
+      "Se você revende moda fitness, essa é a peça que sai rápido.",
+      "Essa entra no pedido e sai do seu estoque rapidinho."
     ],
     "estilo": [
       "Cores que chamam atenção na vitrine e no seu status.",
