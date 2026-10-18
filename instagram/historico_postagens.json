@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443"
@@ -76,15 +76,16 @@
       "331422",
       "334031",
       "4267810",
-      "333275"
+      "333275",
+      "331480"
     ]
   },
   "ultimos_pilares": [
-    "conforto",
     "renda_extra",
     "cliente_ama",
     "disponibilidade",
-    "renda_extra"
+    "renda_extra",
+    "cliente_ama"
   ],
   "conhecidos": {
     "kits": [
@@ -381,23 +382,23 @@
       "É kit fechado com 5 peças, em suplex vip."
     ],
     "cta_bio": [
-      "Dá uma espiada no link da bio 💗",
       "Link na bio 🔗",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Catálogo completo — link na bio ✨",
-      "Os outros modelos estão no link da bio 👆"
+      "Os outros modelos estão no link da bio 👆",
+      "Link da bio te leva direto pro catálogo 📲"
     ],
     "preco": [
-      "{preco} — e você revende no seu preço.",
       "{nome_curto}: {preco}.",
       "Preço de atacado: {preco}.",
-      "{nome_curto} sai por {preco}."
+      "{nome_curto} sai por {preco}.",
+      "Valor: {preco}."
     ],
     "tag_avulso": [
-      "Peça avulsa premium — você monta o pedido do seu jeito.",
       "Peça avulsa, malha premium.",
       "Vendida avulsa, sem precisar levar kit fechado.",
-      "Atacado de peça avulsa, a partir de 10 peças."
+      "Atacado de peça avulsa, a partir de 10 peças.",
+      "Você escolhe peça por peça (mínimo de 10 no pedido)."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -408,9 +409,9 @@
       "Peça selecionada uma a uma, com padrão premium."
     ],
     "frete_avulso": [
-      "Pedido de peça avulsa com frete grátis (Vip) 📦",
       "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚",
-      "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛"
+      "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛",
+      "Frete grátis (Vip) pra Salvador e todo o Brasil 🚚"
     ],
     "preco_kits": [
       "Kit com {quantidade} por {preco}.",
@@ -481,14 +482,14 @@
       "É difícil achar peça com esse preço e essa qualidade pra revender."
     ],
     "cliente_ama": [
-      "Sua cliente vai amar essa modelagem — e voltar pra pedir mais.",
       "Esse modelo costuma ter muita recompra.",
       "Cliente gosta de peça que dá pra usar muito — essa é assim.",
       "A cliente experimenta e já pergunta se tem em outra cor.",
       "Veste bem em corpos diferentes, por isso quase não tem troca.",
       "Esse é daqueles produtos que a cliente manda foto usando, de tão satisfeita.",
       "É o tipo de peça que a cliente compra uma e depois volta pra levar mais duas.",
-      "Aposta segura: modelo que agrada quase todo mundo."
+      "Aposta segura: modelo que agrada quase todo mundo.",
+      "Peça que valoriza o corpo sem apertar. Cliente satisfeita volta."
     ]
   }
 }
