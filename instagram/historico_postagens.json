@@ -1,8 +1,9 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
-      "947443"
+      "947443",
+      "3555118"
     ],
     "avulso": [
       "334028",
@@ -81,11 +82,11 @@
     ]
   },
   "ultimos_pilares": [
-    "renda_extra",
     "cliente_ama",
     "disponibilidade",
     "renda_extra",
-    "cliente_ama"
+    "cliente_ama",
+    "qualidade"
   ],
   "conhecidos": {
     "kits": [
@@ -376,17 +377,17 @@
       "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚"
     ],
     "tag_kits": [
-      "Kit com cores variadas.",
       "Vendido em kit fechado, cores sortidas.",
       "Kit fechado, 5 peças, suplex vip.",
-      "É kit fechado com 5 peças, em suplex vip."
+      "É kit fechado com 5 peças, em suplex vip.",
+      "Vem em kit fechado de 5, tecido suplex vip."
     ],
     "cta_bio": [
-      "Link na bio 🔗",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Catálogo completo — link na bio ✨",
       "Os outros modelos estão no link da bio 👆",
-      "Link da bio te leva direto pro catálogo 📲"
+      "Link da bio te leva direto pro catálogo 📲",
+      "Catálogo inteiro tá no link da bio 👆"
     ],
     "preco": [
       "{nome_curto}: {preco}.",
@@ -454,13 +455,13 @@
       "Peça que fica linda na foto — ajuda muito na hora de divulgar."
     ],
     "qualidade_kits": [
-      "Tecido suplex vip, grosso e sem transparência nem agachando.",
       "Suplex vip que segura bem e não deixa marquinha.",
       "Pode fazer o teste do agachamento: zero transparência.",
       "Zero transparência de verdade — o padrão do suplex vip da Lulu.",
       "Não desbota fácil e não faz bolinha — qualidade que dura.",
       "Tecido firme, que não perde a forma depois de lavar.",
-      "Suplex vip, zero transparência — testado antes de entrar no catálogo."
+      "Suplex vip, zero transparência — testado antes de entrar no catálogo.",
+      "Todas as peças do kit no mesmo padrão de qualidade."
     ],
     "disponibilidade": [
       "Ainda tem, mas não sabemos até quando.",
