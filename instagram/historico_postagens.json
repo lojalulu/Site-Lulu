@@ -1,10 +1,11 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
       "3555118",
-      "3703564"
+      "3703564",
+      "318117"
     ],
     "avulso": [
       "334028",
@@ -85,11 +86,11 @@
     ]
   },
   "ultimos_pilares": [
-    "cliente_ama",
     "qualidade",
     "lucratividade",
     "disponibilidade",
-    "qualidade"
+    "qualidade",
+    "renda_extra"
   ],
   "conhecidos": {
     "kits": [
@@ -380,10 +381,10 @@
       "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚"
     ],
     "tag_kits": [
-      "Kit fechado, 5 peças, suplex vip.",
       "É kit fechado com 5 peças, em suplex vip.",
       "Vem em kit fechado de 5, tecido suplex vip.",
-      "Kit fechado — ótimo pra começar a revender."
+      "Kit fechado — ótimo pra começar a revender.",
+      "Vendido em kit fechado, cores sortidas."
     ],
     "cta_bio": [
       "Link da bio te leva direto pro catálogo 📲",
@@ -425,8 +426,8 @@
       "{quantidade}: {preco}."
     ],
     "cta_alt": [
-      "Ficou com dúvida? Chama no direct 💬",
-      "Manda mensagem que a gente te ajuda a montar o pedido 💬"
+      "Manda mensagem que a gente te ajuda a montar o pedido 💬",
+      "Me chama no direct que te passo os detalhes 💬"
     ],
     "conforto": [
       "Conforto é o que faz a cliente usar toda semana — e indicar.",
@@ -439,14 +440,14 @@
       "Costura bem feita, que não incomoda na pele."
     ],
     "renda_extra": [
-      "Quer começar a revender? Esse é o tipo de peça que facilita.",
       "Revender moda fitness é bom porque a cliente sempre volta pra comprar mais.",
       "Quem revende sabe: peça boa e barata é lucro certo no fim do mês.",
       "Muita revendedora começou com um kit só e hoje compra todo mês.",
       "Pra quem vende no WhatsApp ou no Instagram, essa peça ajuda a fechar pedido.",
       "Se você revende moda fitness, essa é a peça que sai rápido.",
       "Essa entra no pedido e sai do seu estoque rapidinho.",
-      "Renda extra de verdade começa com produto que a cliente quer comprar."
+      "Renda extra de verdade começa com produto que a cliente quer comprar.",
+      "Peça que você posta no status e já aparece gente perguntando o preço."
     ],
     "estilo": [
       "Cores que chamam atenção na vitrine e no seu status.",
