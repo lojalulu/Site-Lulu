@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -78,15 +78,16 @@
       "334031",
       "4267810",
       "333275",
-      "331480"
+      "331480",
+      "331427"
     ]
   },
   "ultimos_pilares": [
-    "cliente_ama",
     "disponibilidade",
     "renda_extra",
     "cliente_ama",
-    "qualidade"
+    "qualidade",
+    "lucratividade"
   ],
   "conhecidos": {
     "kits": [
@@ -383,11 +384,11 @@
       "Vem em kit fechado de 5, tecido suplex vip."
     ],
     "cta_bio": [
-      "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Catálogo completo — link na bio ✨",
       "Os outros modelos estão no link da bio 👆",
       "Link da bio te leva direto pro catálogo 📲",
-      "Catálogo inteiro tá no link da bio 👆"
+      "Catálogo inteiro tá no link da bio 👆",
+      "Pedido pelo site, link na bio 🛍️"
     ],
     "preco": [
       "{nome_curto}: {preco}.",
@@ -396,10 +397,10 @@
       "Valor: {preco}."
     ],
     "tag_avulso": [
-      "Peça avulsa, malha premium.",
       "Vendida avulsa, sem precisar levar kit fechado.",
       "Atacado de peça avulsa, a partir de 10 peças.",
-      "Você escolhe peça por peça (mínimo de 10 no pedido)."
+      "Você escolhe peça por peça (mínimo de 10 no pedido).",
+      "É peça avulsa, na malha premium."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -473,14 +474,14 @@
       "Estoque limitado nessa leva."
     ],
     "lucratividade": [
-      "Você define seu preço de venda — a margem fica com você.",
       "Compra no kit, sai mais em conta por peça, revende com lucro tranquilo.",
       "Lucro bom começa na hora da compra — e esse preço ajuda.",
       "Faz a conta: o valor por peça no kit deixa espaço pra um bom lucro.",
       "Quanto menor o custo, mais fácil fica competir e ainda lucrar.",
       "Atacado com preço pensado pra quem revende.",
       "Preço de fábrica pra você vender com uma margem boa de verdade.",
-      "É difícil achar peça com esse preço e essa qualidade pra revender."
+      "É difícil achar peça com esse preço e essa qualidade pra revender.",
+      "Preço de atacado de verdade, sem intermediário no meio."
     ],
     "cliente_ama": [
       "Esse modelo costuma ter muita recompra.",
