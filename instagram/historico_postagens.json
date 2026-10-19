@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -80,15 +80,16 @@
       "4267810",
       "333275",
       "331480",
-      "331427"
+      "331427",
+      "3118770"
     ]
   },
   "ultimos_pilares": [
-    "renda_extra",
     "cliente_ama",
     "qualidade",
     "lucratividade",
-    "disponibilidade"
+    "disponibilidade",
+    "qualidade"
   ],
   "conhecidos": {
     "kits": [
@@ -385,11 +386,11 @@
       "Kit fechado — ótimo pra começar a revender."
     ],
     "cta_bio": [
-      "Os outros modelos estão no link da bio 👆",
       "Link da bio te leva direto pro catálogo 📲",
       "Catálogo inteiro tá no link da bio 👆",
       "Pedido pelo site, link na bio 🛍️",
-      "Vê as cores e monta seu pedido pelo link da bio 🔗"
+      "Vê as cores e monta seu pedido pelo link da bio 🔗",
+      "Link na bio 🔗"
     ],
     "preco": [
       "{nome_curto}: {preco}.",
@@ -398,10 +399,10 @@
       "Valor: {preco}."
     ],
     "tag_avulso": [
-      "Vendida avulsa, sem precisar levar kit fechado.",
       "Atacado de peça avulsa, a partir de 10 peças.",
       "Você escolhe peça por peça (mínimo de 10 no pedido).",
-      "É peça avulsa, na malha premium."
+      "É peça avulsa, na malha premium.",
+      "Peça avulsa premium — você monta o pedido do seu jeito."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -409,7 +410,8 @@
       "Malha de qualidade superior, que não perde a forma.",
       "Malha premium, qualidade superior — você sente a diferença assim que veste.",
       "Malha premium com toque macio e caimento bonito.",
-      "Peça selecionada uma a uma, com padrão premium."
+      "Peça selecionada uma a uma, com padrão premium.",
+      "Toque macio, tecido encorpado, acabamento de loja boa."
     ],
     "frete_avulso": [
       "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚",
