@@ -1,9 +1,10 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
-      "3555118"
+      "3555118",
+      "3703564"
     ],
     "avulso": [
       "334028",
@@ -83,11 +84,11 @@
     ]
   },
   "ultimos_pilares": [
-    "disponibilidade",
     "renda_extra",
     "cliente_ama",
     "qualidade",
-    "lucratividade"
+    "lucratividade",
+    "disponibilidade"
   ],
   "conhecidos": {
     "kits": [
@@ -378,17 +379,17 @@
       "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚"
     ],
     "tag_kits": [
-      "Vendido em kit fechado, cores sortidas.",
       "Kit fechado, 5 peças, suplex vip.",
       "É kit fechado com 5 peças, em suplex vip.",
-      "Vem em kit fechado de 5, tecido suplex vip."
+      "Vem em kit fechado de 5, tecido suplex vip.",
+      "Kit fechado — ótimo pra começar a revender."
     ],
     "cta_bio": [
-      "Catálogo completo — link na bio ✨",
       "Os outros modelos estão no link da bio 👆",
       "Link da bio te leva direto pro catálogo 📲",
       "Catálogo inteiro tá no link da bio 👆",
-      "Pedido pelo site, link na bio 🛍️"
+      "Pedido pelo site, link na bio 🛍️",
+      "Vê as cores e monta seu pedido pelo link da bio 🔗"
     ],
     "preco": [
       "{nome_curto}: {preco}.",
@@ -465,13 +466,13 @@
       "Todas as peças do kit no mesmo padrão de qualidade."
     ],
     "disponibilidade": [
-      "Ainda tem, mas não sabemos até quando.",
       "Esse modelo costuma acabar rápido — melhor não deixar pra depois.",
       "Poucas peças disponíveis por enquanto.",
       "Garante o seu antes que o lote acabe.",
       "Quando acaba, a próxima leva pode demorar.",
       "Esse aqui já está saindo bastante essa semana.",
-      "Estoque limitado nessa leva."
+      "Estoque limitado nessa leva.",
+      "Enquanto durar o estoque desse lote, o preço continua esse."
     ],
     "lucratividade": [
       "Compra no kit, sai mais em conta por peça, revende com lucro tranquilo.",
