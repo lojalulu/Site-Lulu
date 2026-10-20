@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -84,15 +84,16 @@
       "331480",
       "331427",
       "3118770",
-      "3552730"
+      "3552730",
+      "4059477"
     ]
   },
   "ultimos_pilares": [
-    "disponibilidade",
     "qualidade",
     "renda_extra",
     "lucratividade",
-    "qualidade"
+    "qualidade",
+    "cliente_ama"
   ],
   "conhecidos": {
     "kits": [
@@ -389,11 +390,11 @@
       "Kit fechado, 5 peças, suplex vip."
     ],
     "cta_bio": [
-      "Pedido pelo site, link na bio 🛍️",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Link na bio 🔗",
       "Dá uma espiada no link da bio 💗",
-      "Os outros modelos estão no link da bio 👆"
+      "Os outros modelos estão no link da bio 👆",
+      "Catálogo completo — link na bio ✨"
     ],
     "preco": [
       "Preço de atacado: {preco}.",
@@ -402,10 +403,10 @@
       "Tudo isso por {preco}."
     ],
     "tag_avulso": [
-      "Você escolhe peça por peça (mínimo de 10 no pedido).",
       "É peça avulsa, na malha premium.",
       "Peça avulsa premium — você monta o pedido do seu jeito.",
-      "Vendida avulsa, sem precisar levar kit fechado."
+      "Vendida avulsa, sem precisar levar kit fechado.",
+      "Peça avulsa, malha premium."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -490,14 +491,14 @@
       "Peça que você revende pelo dobro e a cliente ainda acha justo."
     ],
     "cliente_ama": [
-      "Esse modelo costuma ter muita recompra.",
       "Cliente gosta de peça que dá pra usar muito — essa é assim.",
       "A cliente experimenta e já pergunta se tem em outra cor.",
       "Veste bem em corpos diferentes, por isso quase não tem troca.",
       "Esse é daqueles produtos que a cliente manda foto usando, de tão satisfeita.",
       "É o tipo de peça que a cliente compra uma e depois volta pra levar mais duas.",
       "Aposta segura: modelo que agrada quase todo mundo.",
-      "Peça que valoriza o corpo sem apertar. Cliente satisfeita volta."
+      "Peça que valoriza o corpo sem apertar. Cliente satisfeita volta.",
+      "Peça que vira queridinha na primeira leva — cliente ama e indica pra amiga."
     ]
   }
 }
