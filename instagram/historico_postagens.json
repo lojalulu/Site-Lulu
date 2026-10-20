@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -7,7 +7,8 @@
       "3703564",
       "318117",
       "318147",
-      "4430512"
+      "4430512",
+      "4514241"
     ],
     "avulso": [
       "334028",
@@ -91,11 +92,11 @@
     ]
   },
   "ultimos_pilares": [
-    "lucratividade",
     "qualidade",
     "cliente_ama",
     "lucratividade",
-    "estilo"
+    "estilo",
+    "cliente_ama"
   ],
   "conhecidos": {
     "kits": [
@@ -386,10 +387,10 @@
       "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛"
     ],
     "tag_kits": [
-      "Kit fechado — ótimo pra começar a revender.",
       "Vendido em kit fechado, cores sortidas.",
       "Kit fechado, 5 peças, suplex vip.",
-      "Kit com cores variadas."
+      "Kit com cores variadas.",
+      "Vem em kit fechado de 5, tecido suplex vip."
     ],
     "cta_bio": [
       "Dá uma espiada no link da bio 💗",
@@ -431,8 +432,8 @@
       "Hoje, {quantidade} saem por {preco}."
     ],
     "cta_alt": [
-      "Manda mensagem que a gente te ajuda a montar o pedido 💬",
-      "Me chama no direct que te passo os detalhes 💬"
+      "Me chama no direct que te passo os detalhes 💬",
+      "Chama no direct pra garantir o seu 💬"
     ],
     "conforto": [
       "Conforto é o que faz a cliente usar toda semana — e indicar.",
@@ -493,14 +494,14 @@
       "Compra no kit, sai mais em conta por peça, revende com lucro tranquilo."
     ],
     "cliente_ama": [
-      "Cliente gosta de peça que dá pra usar muito — essa é assim.",
       "A cliente experimenta e já pergunta se tem em outra cor.",
       "Veste bem em corpos diferentes, por isso quase não tem troca.",
       "Esse é daqueles produtos que a cliente manda foto usando, de tão satisfeita.",
       "É o tipo de peça que a cliente compra uma e depois volta pra levar mais duas.",
       "Aposta segura: modelo que agrada quase todo mundo.",
       "Peça que valoriza o corpo sem apertar. Cliente satisfeita volta.",
-      "Peça que vira queridinha na primeira leva — cliente ama e indica pra amiga."
+      "Peça que vira queridinha na primeira leva — cliente ama e indica pra amiga.",
+      "Esse modelo costuma ter muita recompra."
     ]
   }
 }
