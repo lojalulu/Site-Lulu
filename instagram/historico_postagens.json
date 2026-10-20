@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -86,15 +86,16 @@
       "331427",
       "3118770",
       "3552730",
-      "4059477"
+      "4059477",
+      "3553045"
     ]
   },
   "ultimos_pilares": [
-    "renda_extra",
     "lucratividade",
     "qualidade",
     "cliente_ama",
-    "lucratividade"
+    "lucratividade",
+    "estilo"
   ],
   "conhecidos": {
     "kits": [
@@ -391,23 +392,23 @@
       "Kit com cores variadas."
     ],
     "cta_bio": [
-      "Link na bio 🔗",
       "Dá uma espiada no link da bio 💗",
       "Os outros modelos estão no link da bio 👆",
       "Catálogo completo — link na bio ✨",
-      "Link da bio te leva direto pro catálogo 📲"
+      "Link da bio te leva direto pro catálogo 📲",
+      "Pedido pelo site, link na bio 🛍️"
     ],
     "preco": [
-      "Preço de atacado: {preco}.",
       "{nome_curto} sai por {preco}.",
       "Valor: {preco}.",
-      "Tudo isso por {preco}."
+      "Tudo isso por {preco}.",
+      "{preco} — e você revende no seu preço."
     ],
     "tag_avulso": [
-      "É peça avulsa, na malha premium.",
       "Peça avulsa premium — você monta o pedido do seu jeito.",
       "Vendida avulsa, sem precisar levar kit fechado.",
-      "Peça avulsa, malha premium."
+      "Peça avulsa, malha premium.",
+      "Atacado de peça avulsa, a partir de 10 peças."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -454,14 +455,14 @@
       "Peça que você posta no status e já aparece gente perguntando o preço."
     ],
     "estilo": [
-      "Cores que chamam atenção na vitrine e no seu status.",
       "Modelo que não sai de moda de uma estação pra outra.",
       "Tem cara de peça cara, mas com preço de atacado.",
       "Detalhes que fazem diferença e deixam o conjunto mais bonito.",
       "Combina com tênis, sandália ou papete — serve pra tudo.",
       "Sai da academia e já segue o dia sem trocar de roupa.",
       "Bonita no treino e bonita na rua também.",
-      "Peça que fica linda na foto — ajuda muito na hora de divulgar."
+      "Peça que fica linda na foto — ajuda muito na hora de divulgar.",
+      "Moda fitness que dá pra usar no mercado, no passeio e na academia."
     ],
     "qualidade_kits": [
       "Pode fazer o teste do agachamento: zero transparência.",
