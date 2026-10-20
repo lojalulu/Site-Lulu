@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -88,15 +88,16 @@
       "3118770",
       "3552730",
       "4059477",
-      "3553045"
+      "3553045",
+      "333290"
     ]
   },
   "ultimos_pilares": [
-    "qualidade",
     "cliente_ama",
     "lucratividade",
     "estilo",
-    "cliente_ama"
+    "cliente_ama",
+    "qualidade"
   ],
   "conhecidos": {
     "kits": [
@@ -393,11 +394,11 @@
       "Vem em kit fechado de 5, tecido suplex vip."
     ],
     "cta_bio": [
-      "Dá uma espiada no link da bio 💗",
       "Os outros modelos estão no link da bio 👆",
       "Catálogo completo — link na bio ✨",
       "Link da bio te leva direto pro catálogo 📲",
-      "Pedido pelo site, link na bio 🛍️"
+      "Pedido pelo site, link na bio 🛍️",
+      "Link na bio 🔗"
     ],
     "preco": [
       "{nome_curto} sai por {preco}.",
@@ -406,19 +407,19 @@
       "{preco} — e você revende no seu preço."
     ],
     "tag_avulso": [
-      "Peça avulsa premium — você monta o pedido do seu jeito.",
       "Vendida avulsa, sem precisar levar kit fechado.",
       "Peça avulsa, malha premium.",
-      "Atacado de peça avulsa, a partir de 10 peças."
+      "Atacado de peça avulsa, a partir de 10 peças.",
+      "É peça avulsa, na malha premium."
     ],
     "qualidade_avulso": [
-      "Qualidade que a cliente percebe logo no primeiro uso.",
       "Qualidade superior peça por peça, sem precisar levar kit fechado.",
       "Malha de qualidade superior, que não perde a forma.",
       "Malha premium, qualidade superior — você sente a diferença assim que veste.",
       "Malha premium com toque macio e caimento bonito.",
       "Peça selecionada uma a uma, com padrão premium.",
-      "Toque macio, tecido encorpado, acabamento de loja boa."
+      "Toque macio, tecido encorpado, acabamento de loja boa.",
+      "Peça avulsa com malha premium: acabamento caprichado, preço de atacado."
     ],
     "frete_avulso": [
       "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚",
