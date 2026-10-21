@@ -12,7 +12,7 @@
       "https://arquivos.facilzap.app.br/produtos/1674009242_cd157b6025d54275d86c.jpeg"
     ],
     "cores_variadas": true,
-    "lancamento": true
+    "lancamento": false
   },
   {
     "id": "317949",
@@ -26,7 +26,7 @@
       "https://arquivos.facilzap.app.br/produtos/1674009170_a68bf8d33b7194a1f428.jpeg"
     ],
     "cores_variadas": true,
-    "lancamento": true
+    "lancamento": false
   },
   {
     "id": "3703564",
@@ -78,18 +78,6 @@
       "https://arquivos.facilzap.app.br/produtos/1768184676_b607d1feca1dfe289848.webp",
       "https://arquivos.facilzap.app.br/produtos/1768184672_d5131d7438f36053e9f0.webp",
       "https://arquivos.facilzap.app.br/produtos/1768184669_881e591bc748162cd883.webp"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
-    "id": "4496249",
-    "nome": "Pacote com 10 ~ Regatão de tule",
-    "preco_original": 165.5,
-    "preco_final": 264.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1790201558_adbcd58418edc31e09f6.webp",
-      "https://arquivos.facilzap.app.br/produtos/1790201561_90eec2e748b67d2713dc.webp"
     ],
     "cores_variadas": true,
     "lancamento": false
