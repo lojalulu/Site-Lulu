@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -9,18 +9,19 @@
       "318147",
       "4430512",
       "4514241",
-      "4431155"
+      "4431155",
+      "317284"
     ],
     "avulso": [
       "3117836"
     ]
   },
   "ultimos_pilares": [
-    "estilo",
     "cliente_ama",
     "qualidade",
     "disponibilidade",
-    "estilo"
+    "estilo",
+    "cliente_ama"
   ],
   "conhecidos": {
     "kits": [
@@ -306,22 +307,22 @@
       "Peça nova no catálogo, quentinha da produção."
     ],
     "frete_kits": [
-      "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚",
       "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚",
-      "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛"
+      "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛",
+      "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦"
     ],
     "tag_kits": [
-      "Kit fechado, 5 peças, suplex vip.",
       "Kit com cores variadas.",
       "Vem em kit fechado de 5, tecido suplex vip.",
-      "Kit fechado — ótimo pra começar a revender."
+      "Kit fechado — ótimo pra começar a revender.",
+      "Vendido em kit fechado, cores sortidas."
     ],
     "cta_bio": [
-      "Catálogo completo — link na bio ✨",
       "Link da bio te leva direto pro catálogo 📲",
       "Pedido pelo site, link na bio 🛍️",
       "Link na bio 🔗",
-      "Vê as cores e monta seu pedido pelo link da bio 🔗"
+      "Vê as cores e monta seu pedido pelo link da bio 🔗",
+      "Dá uma espiada no link da bio 💗"
     ],
     "preco": [
       "Valor: {preco}.",
@@ -350,10 +351,10 @@
       "Frete grátis (Vip) pra Salvador e todo o Brasil 🚚"
     ],
     "preco_kits": [
-      "{quantidade} - só {preco}.",
       "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
       "{quantidade}: {preco}.",
-      "Hoje, {quantidade} saem por {preco}."
+      "Hoje, {quantidade} saem por {preco}.",
+      "Kit com {quantidade} por {preco}."
     ],
     "cta_alt": [
       "Chama no direct pra garantir o seu 💬",
@@ -418,14 +419,14 @@
       "Compra no kit, sai mais em conta por peça, revende com lucro tranquilo."
     ],
     "cliente_ama": [
-      "A cliente experimenta e já pergunta se tem em outra cor.",
       "Veste bem em corpos diferentes, por isso quase não tem troca.",
       "Esse é daqueles produtos que a cliente manda foto usando, de tão satisfeita.",
       "É o tipo de peça que a cliente compra uma e depois volta pra levar mais duas.",
       "Aposta segura: modelo que agrada quase todo mundo.",
       "Peça que valoriza o corpo sem apertar. Cliente satisfeita volta.",
       "Peça que vira queridinha na primeira leva — cliente ama e indica pra amiga.",
-      "Esse modelo costuma ter muita recompra."
+      "Esse modelo costuma ter muita recompra.",
+      "As revendedoras contam que esse modelo quase não volta pra troca."
     ]
   }
 }
