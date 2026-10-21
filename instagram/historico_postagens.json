@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -10,7 +10,8 @@
       "4430512",
       "4514241",
       "4431155",
-      "317284"
+      "317284",
+      "318124"
     ],
     "avulso": [
       "3117836",
@@ -18,11 +19,11 @@
     ]
   },
   "ultimos_pilares": [
-    "qualidade",
     "disponibilidade",
     "estilo",
     "cliente_ama",
-    "disponibilidade"
+    "disponibilidade",
+    "qualidade"
   ],
   "conhecidos": {
     "kits": [
@@ -313,17 +314,17 @@
       "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦"
     ],
     "tag_kits": [
-      "Kit com cores variadas.",
       "Vem em kit fechado de 5, tecido suplex vip.",
       "Kit fechado — ótimo pra começar a revender.",
-      "Vendido em kit fechado, cores sortidas."
+      "Vendido em kit fechado, cores sortidas.",
+      "É kit fechado com 5 peças, em suplex vip."
     ],
     "cta_bio": [
-      "Link da bio te leva direto pro catálogo 📲",
       "Pedido pelo site, link na bio 🛍️",
       "Link na bio 🔗",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
-      "Dá uma espiada no link da bio 💗"
+      "Dá uma espiada no link da bio 💗",
+      "Os outros modelos estão no link da bio 👆"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -352,10 +353,10 @@
       "Frete grátis (Vip) pra Salvador e todo o Brasil 🚚"
     ],
     "preco_kits": [
-      "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
       "{quantidade}: {preco}.",
       "Hoje, {quantidade} saem por {preco}.",
-      "Kit com {quantidade} por {preco}."
+      "Kit com {quantidade} por {preco}.",
+      "{quantidade} - só {preco}."
     ],
     "cta_alt": [
       "Manda mensagem que a gente te ajuda a montar o pedido 💬",
@@ -392,13 +393,13 @@
       "Modelagem atual, cores que estão em alta — moda fitness que também é moda de rua."
     ],
     "qualidade_kits": [
-      "Pode fazer o teste do agachamento: zero transparência.",
       "Zero transparência de verdade — o padrão do suplex vip da Lulu.",
       "Não desbota fácil e não faz bolinha — qualidade que dura.",
       "Tecido firme, que não perde a forma depois de lavar.",
       "Suplex vip, zero transparência — testado antes de entrar no catálogo.",
       "Todas as peças do kit no mesmo padrão de qualidade.",
-      "Qualidade de confecção própria, em kit fechado."
+      "Qualidade de confecção própria, em kit fechado.",
+      "Tecido suplex vip, grosso e sem transparência nem agachando."
     ],
     "disponibilidade": [
       "Garante o seu antes que o lote acabe.",
