@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -13,15 +13,16 @@
       "317284"
     ],
     "avulso": [
-      "3117836"
+      "3117836",
+      "4414230"
     ]
   },
   "ultimos_pilares": [
-    "cliente_ama",
     "qualidade",
     "disponibilidade",
     "estilo",
-    "cliente_ama"
+    "cliente_ama",
+    "disponibilidade"
   ],
   "conhecidos": {
     "kits": [
@@ -325,16 +326,16 @@
       "Dá uma espiada no link da bio 💗"
     ],
     "preco": [
-      "Valor: {preco}.",
       "Tudo isso por {preco}.",
       "{preco} — e você revende no seu preço.",
-      "Preço de atacado: {preco}."
+      "Preço de atacado: {preco}.",
+      "Hoje, {nome_curto} sai por {preco}."
     ],
     "tag_avulso": [
-      "Peça avulsa, malha premium.",
       "Atacado de peça avulsa, a partir de 10 peças.",
       "É peça avulsa, na malha premium.",
-      "Peça avulsa premium — você monta o pedido do seu jeito."
+      "Peça avulsa premium — você monta o pedido do seu jeito.",
+      "Vendida avulsa, sem precisar levar kit fechado."
     ],
     "qualidade_avulso": [
       "Qualidade superior peça por peça, sem precisar levar kit fechado.",
@@ -357,8 +358,8 @@
       "Kit com {quantidade} por {preco}."
     ],
     "cta_alt": [
-      "Chama no direct pra garantir o seu 💬",
-      "Manda mensagem que a gente te ajuda a montar o pedido 💬"
+      "Manda mensagem que a gente te ajuda a montar o pedido 💬",
+      "Me chama no direct que te passo os detalhes 💬"
     ],
     "conforto": [
       "Conforto é o que faz a cliente usar toda semana — e indicar.",
@@ -400,13 +401,13 @@
       "Qualidade de confecção própria, em kit fechado."
     ],
     "disponibilidade": [
-      "Poucas peças disponíveis por enquanto.",
       "Garante o seu antes que o lote acabe.",
       "Quando acaba, a próxima leva pode demorar.",
       "Esse aqui já está saindo bastante essa semana.",
       "Estoque limitado nessa leva.",
       "Enquanto durar o estoque desse lote, o preço continua esse.",
-      "Quem viu primeiro já garantiu. Ainda dá tempo."
+      "Quem viu primeiro já garantiu. Ainda dá tempo.",
+      "Esse modelo costuma acabar rápido — melhor não deixar pra depois."
     ],
     "lucratividade": [
       "Faz a conta: o valor por peça no kit deixa espaço pra um bom lucro.",
