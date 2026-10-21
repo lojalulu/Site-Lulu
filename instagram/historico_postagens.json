@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -12,93 +12,15 @@
       "4431155"
     ],
     "avulso": [
-      "334028",
-      "327794",
-      "3667508",
-      "331455",
-      "2673557",
-      "327777",
-      "3592535",
-      "3184620",
-      "331394",
-      "327294",
-      "331423",
-      "365104",
-      "4414230",
-      "331487",
-      "4376846",
-      "4371813",
-      "875537",
-      "4307641",
-      "4513458",
-      "3118780",
-      "2673571",
-      "4376841",
-      "3145402",
-      "3480272",
-      "3254120",
-      "4477104",
-      "3117836",
-      "875515",
-      "3133783",
-      "3480266",
-      "3340284",
-      "3117802",
-      "4324179",
-      "331414",
-      "4477094",
-      "4298763",
-      "334036",
-      "875488",
-      "2488494",
-      "332904",
-      "3184622",
-      "4323904",
-      "3145398",
-      "326653",
-      "327396",
-      "3118772",
-      "3336920",
-      "332873",
-      "3480260",
-      "327770",
-      "3133821",
-      "334090",
-      "334077",
-      "328359",
-      "3043182",
-      "875534",
-      "3117884",
-      "334025",
-      "4323187",
-      "3146488",
-      "875523",
-      "333277",
-      "3118777",
-      "3552750",
-      "3338686",
-      "4555358",
-      "332840",
-      "327731",
-      "331422",
-      "334031",
-      "4267810",
-      "333275",
-      "331480",
-      "331427",
-      "3118770",
-      "3552730",
-      "4059477",
-      "3553045",
-      "333290"
+      "3117836"
     ]
   },
   "ultimos_pilares": [
-    "lucratividade",
     "estilo",
     "cliente_ama",
     "qualidade",
-    "disponibilidade"
+    "disponibilidade",
+    "estilo"
   ],
   "conhecidos": {
     "kits": [
@@ -402,16 +324,16 @@
       "Vê as cores e monta seu pedido pelo link da bio 🔗"
     ],
     "preco": [
-      "{nome_curto} sai por {preco}.",
       "Valor: {preco}.",
       "Tudo isso por {preco}.",
-      "{preco} — e você revende no seu preço."
+      "{preco} — e você revende no seu preço.",
+      "Preço de atacado: {preco}."
     ],
     "tag_avulso": [
-      "Vendida avulsa, sem precisar levar kit fechado.",
       "Peça avulsa, malha premium.",
       "Atacado de peça avulsa, a partir de 10 peças.",
-      "É peça avulsa, na malha premium."
+      "É peça avulsa, na malha premium.",
+      "Peça avulsa premium — você monta o pedido do seu jeito."
     ],
     "qualidade_avulso": [
       "Qualidade superior peça por peça, sem precisar levar kit fechado.",
@@ -434,8 +356,8 @@
       "Hoje, {quantidade} saem por {preco}."
     ],
     "cta_alt": [
-      "Me chama no direct que te passo os detalhes 💬",
-      "Chama no direct pra garantir o seu 💬"
+      "Chama no direct pra garantir o seu 💬",
+      "Manda mensagem que a gente te ajuda a montar o pedido 💬"
     ],
     "conforto": [
       "Conforto é o que faz a cliente usar toda semana — e indicar.",
@@ -458,14 +380,14 @@
       "Peça que você posta no status e já aparece gente perguntando o preço."
     ],
     "estilo": [
-      "Modelo que não sai de moda de uma estação pra outra.",
       "Tem cara de peça cara, mas com preço de atacado.",
       "Detalhes que fazem diferença e deixam o conjunto mais bonito.",
       "Combina com tênis, sandália ou papete — serve pra tudo.",
       "Sai da academia e já segue o dia sem trocar de roupa.",
       "Bonita no treino e bonita na rua também.",
       "Peça que fica linda na foto — ajuda muito na hora de divulgar.",
-      "Moda fitness que dá pra usar no mercado, no passeio e na academia."
+      "Moda fitness que dá pra usar no mercado, no passeio e na academia.",
+      "Modelagem atual, cores que estão em alta — moda fitness que também é moda de rua."
     ],
     "qualidade_kits": [
       "Pode fazer o teste do agachamento: zero transparência.",
