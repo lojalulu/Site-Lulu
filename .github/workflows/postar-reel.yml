@@ -38,7 +38,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add instagram/historico_reels.json
+          git add -A instagram/
           git diff --cached --quiet || git commit -m "Atualizar histórico de Reels"
           git pull --rebase origin main
           git push
