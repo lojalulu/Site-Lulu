@@ -1,0 +1,15 @@
+2026-10-22 11:10:28 UTC
+Traceback (most recent call last):
+  File "/home/runner/work/Site-Lulu/Site-Lulu/instagram/postar_reel.py", line 304, in <module>
+    main()
+  File "/home/runner/work/Site-Lulu/Site-Lulu/instagram/postar_reel.py", line 288, in main
+    tema = gerar_video(fotos, SAIDA)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/Site-Lulu/Site-Lulu/instagram/postar_reel.py", line 231, in gerar_video
+    proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
