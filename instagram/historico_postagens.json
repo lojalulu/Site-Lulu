@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -21,15 +21,16 @@
       "4414230",
       "326653",
       "2673571",
-      "3184620"
+      "3184620",
+      "332873"
     ]
   },
   "ultimos_pilares": [
-    "estilo",
     "renda_extra",
     "qualidade",
     "cliente_ama",
-    "renda_extra"
+    "renda_extra",
+    "estilo"
   ],
   "conhecidos": {
     "kits": [
@@ -326,23 +327,23 @@
       "Vem em kit fechado de 5, tecido suplex vip."
     ],
     "cta_bio": [
-      "Catálogo inteiro tá no link da bio 👆",
       "Catálogo completo — link na bio ✨",
       "Link da bio te leva direto pro catálogo 📲",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
-      "Link na bio 🔗"
+      "Link na bio 🔗",
+      "Pedido pelo site, link na bio 🛍️"
     ],
     "preco": [
-      "Tudo isso por {preco}.",
       "{preco} — e você revende no seu preço.",
       "Preço de atacado: {preco}.",
-      "Hoje, {nome_curto} sai por {preco}."
+      "Hoje, {nome_curto} sai por {preco}.",
+      "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Vendida avulsa, sem precisar levar kit fechado.",
       "Peça avulsa, malha premium.",
       "Você escolhe peça por peça (mínimo de 10 no pedido).",
-      "Atacado de peça avulsa, a partir de 10 peças."
+      "Atacado de peça avulsa, a partir de 10 peças.",
+      "É peça avulsa, na malha premium."
     ],
     "qualidade_avulso": [
       "Qualidade superior peça por peça, sem precisar levar kit fechado.",
@@ -389,14 +390,14 @@
       "Quer começar a revender? Esse é o tipo de peça que facilita."
     ],
     "estilo": [
-      "Detalhes que fazem diferença e deixam o conjunto mais bonito.",
       "Combina com tênis, sandália ou papete — serve pra tudo.",
       "Sai da academia e já segue o dia sem trocar de roupa.",
       "Bonita no treino e bonita na rua também.",
       "Peça que fica linda na foto — ajuda muito na hora de divulgar.",
       "Moda fitness que dá pra usar no mercado, no passeio e na academia.",
       "Modelagem atual, cores que estão em alta — moda fitness que também é moda de rua.",
-      "Cores que chamam atenção na vitrine e no seu status."
+      "Cores que chamam atenção na vitrine e no seu status.",
+      "Visual arrumado sem esforço nenhum."
     ],
     "qualidade_kits": [
       "Não desbota fácil e não faz bolinha — qualidade que dura.",
