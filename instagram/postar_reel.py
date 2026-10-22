@@ -252,22 +252,44 @@ def checar(resp, ctx):
     return resp.json()
 
 
+def hospedar_video(caminho):
+    """A API do Instagram (login do Instagram) exige uma URL pública do
+    vídeo. Publicamos o arquivo numa branch temporária 'reel-tmp' que é
+    sobrescrita a cada vez (não incha o histórico do repositório)."""
+    import shutil
+    import tempfile
+    repo, gh = os.environ["GITHUB_REPOSITORY"], os.environ["GITHUB_TOKEN"]
+    tmp = tempfile.mkdtemp()
+    shutil.copy(caminho, os.path.join(tmp, "reel.mp4"))
+    def git(*a):
+        subprocess.run(["git", *a], cwd=tmp, check=True, capture_output=True)
+    git("init", "-q", "-b", "reel-tmp")
+    git("config", "user.name", "github-actions[bot]")
+    git("config", "user.email", "github-actions[bot]@users.noreply.github.com")
+    git("add", "reel.mp4")
+    git("commit", "-q", "-m", "reel temporario")
+    git("push", "-f", f"https://x-access-token:{gh}@github.com/{repo}.git", "reel-tmp:reel-tmp")
+    url = f"https://raw.githubusercontent.com/{repo}/reel-tmp/reel.mp4"
+    for _ in range(10):
+        h = requests.head(url, timeout=30, allow_redirects=True)
+        print("  URL do vídeo:", h.status_code, h.headers.get("content-type"), h.headers.get("content-length"))
+        if h.status_code == 200:
+            break
+        time.sleep(5)
+    return url
+
+
 def publicar_reel(caminho, legenda):
+    url = hospedar_video(caminho)
     r = requests.post(f"{GRAPH}/{IG_ID}/media", data={
-        "media_type": "REELS", "upload_type": "resumable", "caption": legenda,
+        "media_type": "REELS", "video_url": url, "caption": legenda,
         "share_to_feed": "true", "access_token": TOKEN}, timeout=60)
-    dados = checar(r, "criar container do Reel")
-    cid, uri = dados["id"], dados.get("uri") or f"https://rupload.facebook.com/ig-api-upload/v23.0/{dados['id']}"
-    tamanho = os.path.getsize(caminho)
-    with open(caminho, "rb") as f:
-        r = requests.post(uri, data=f, headers={
-            "Authorization": f"OAuth {TOKEN}", "offset": "0", "file_size": str(tamanho)}, timeout=300)
-    checar(r, "enviar o vídeo")
-    for _ in range(40):
+    cid = checar(r, "criar container do Reel")["id"]
+    for _ in range(50):
         time.sleep(6)
         s = checar(requests.get(f"{GRAPH}/{cid}", params={
             "fields": "status_code,status", "access_token": TOKEN}, timeout=30), "status do Reel")
-        print("  status:", s.get("status_code"))
+        print("  status:", s.get("status_code"), s.get("status", ""))
         if s.get("status_code") == "FINISHED":
             break
         if s.get("status_code") == "ERROR":
