@@ -25,7 +25,11 @@ jobs:
         with:
           python-version: '3.11'
 
-      - run: pip install requests Pillow
+      - name: Instalar ffmpeg e dependências
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          pip install requests Pillow
 
       - name: Montar e publicar o Reel
         env:
