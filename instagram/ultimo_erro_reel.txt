@@ -1,15 +1,13 @@
-2026-10-22 11:10:28 UTC
+2026-10-22 11:11:56 UTC
 Traceback (most recent call last):
   File "/home/runner/work/Site-Lulu/Site-Lulu/instagram/postar_reel.py", line 304, in <module>
     main()
-  File "/home/runner/work/Site-Lulu/Site-Lulu/instagram/postar_reel.py", line 288, in main
-    tema = gerar_video(fotos, SAIDA)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/Site-Lulu/Site-Lulu/instagram/postar_reel.py", line 231, in gerar_video
-    proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/subprocess.py", line 1026, in __init__
-    self._execute_child(args, executable, preexec_fn, close_fds,
-  File "/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/subprocess.py", line 1955, in _execute_child
-    raise child_exception_type(errno_num, err_msg, err_filename)
-FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+  File "/home/runner/work/Site-Lulu/Site-Lulu/instagram/postar_reel.py", line 293, in main
+    media_id = publicar_reel(SAIDA, legenda)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/Site-Lulu/Site-Lulu/instagram/postar_reel.py", line 259, in publicar_reel
+    dados = checar(r, "criar container do Reel")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/Site-Lulu/Site-Lulu/instagram/postar_reel.py", line 251, in checar
+    raise RuntimeError(f"Erro em {ctx}: {resp.status_code} — {resp.text}")
+RuntimeError: Erro em criar container do Reel: 400 — {"error":{"message":"The parameter video_url is required","type":"IGApiException","code":100,"fbtrace_id":"A3EmTXD9M6HiaIJELGqSxIL"}}
