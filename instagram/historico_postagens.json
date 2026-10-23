@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -27,15 +27,16 @@
       "3184620",
       "332873",
       "3480266",
-      "331423"
+      "331423",
+      "3480272"
     ]
   },
   "ultimos_pilares": [
-    "qualidade",
     "disponibilidade",
     "lucratividade",
     "conforto",
-    "cliente_ama"
+    "cliente_ama",
+    "lucratividade"
   ],
   "conhecidos": {
     "kits": [
@@ -332,23 +333,23 @@
       "É kit fechado com 5 peças, em suplex vip."
     ],
     "cta_bio": [
-      "Pedido pelo site, link na bio 🛍️",
       "Catálogo inteiro tá no link da bio 👆",
       "Os outros modelos estão no link da bio 👆",
       "Dá uma espiada no link da bio 💗",
-      "Link da bio te leva direto pro catálogo 📲"
+      "Link da bio te leva direto pro catálogo 📲",
+      "Catálogo completo — link na bio ✨"
     ],
     "preco": [
-      "{preco} — e você revende no seu preço.",
       "Preço de atacado: {preco}.",
       "Hoje, {nome_curto} sai por {preco}.",
-      "{nome_curto}: {preco}."
+      "{nome_curto}: {preco}.",
+      "Valor: {preco}."
     ],
     "tag_avulso": [
-      "Atacado de peça avulsa, a partir de 10 peças.",
       "É peça avulsa, na malha premium.",
       "Peça avulsa premium — você monta o pedido do seu jeito.",
-      "Vendida avulsa, sem precisar levar kit fechado."
+      "Vendida avulsa, sem precisar levar kit fechado.",
+      "Peça avulsa, malha premium."
     ],
     "qualidade_avulso": [
       "Qualidade superior peça por peça, sem precisar levar kit fechado.",
@@ -423,14 +424,14 @@
       "Poucas peças disponíveis por enquanto."
     ],
     "lucratividade": [
-      "Quanto menor o custo, mais fácil fica competir e ainda lucrar.",
       "Atacado com preço pensado pra quem revende.",
       "Preço de fábrica pra você vender com uma margem boa de verdade.",
       "É difícil achar peça com esse preço e essa qualidade pra revender.",
       "Preço de atacado de verdade, sem intermediário no meio.",
       "Peça que você revende pelo dobro e a cliente ainda acha justo.",
       "Compra no kit, sai mais em conta por peça, revende com lucro tranquilo.",
-      "Você define seu preço de venda — a margem fica com você."
+      "Você define seu preço de venda — a margem fica com você.",
+      "Comprando direto da fábrica, sobra mais no seu bolso em cada venda."
     ],
     "cliente_ama": [
       "É o tipo de peça que a cliente compra uma e depois volta pra levar mais duas.",
