@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -16,7 +16,8 @@
       "3249070",
       "4116139",
       "853848",
-      "1366405"
+      "1366405",
+      "3769152"
     ],
     "avulso": [
       "3117836",
@@ -30,11 +31,11 @@
     ]
   },
   "ultimos_pilares": [
-    "estilo",
     "qualidade",
     "disponibilidade",
     "lucratividade",
-    "conforto"
+    "conforto",
+    "cliente_ama"
   ],
   "conhecidos": {
     "kits": [
@@ -325,17 +326,17 @@
       "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚"
     ],
     "tag_kits": [
-      "Kit com cores variadas.",
       "Vem em kit fechado de 5, tecido suplex vip.",
       "Kit fechado — ótimo pra começar a revender.",
-      "Vendido em kit fechado, cores sortidas."
+      "Vendido em kit fechado, cores sortidas.",
+      "É kit fechado com 5 peças, em suplex vip."
     ],
     "cta_bio": [
-      "Link na bio 🔗",
       "Pedido pelo site, link na bio 🛍️",
       "Catálogo inteiro tá no link da bio 👆",
       "Os outros modelos estão no link da bio 👆",
-      "Dá uma espiada no link da bio 💗"
+      "Dá uma espiada no link da bio 💗",
+      "Link da bio te leva direto pro catálogo 📲"
     ],
     "preco": [
       "{preco} — e você revende no seu preço.",
@@ -432,14 +433,14 @@
       "Você define seu preço de venda — a margem fica com você."
     ],
     "cliente_ama": [
-      "Esse é daqueles produtos que a cliente manda foto usando, de tão satisfeita.",
       "É o tipo de peça que a cliente compra uma e depois volta pra levar mais duas.",
       "Aposta segura: modelo que agrada quase todo mundo.",
       "Peça que valoriza o corpo sem apertar. Cliente satisfeita volta.",
       "Peça que vira queridinha na primeira leva — cliente ama e indica pra amiga.",
       "Esse modelo costuma ter muita recompra.",
       "As revendedoras contam que esse modelo quase não volta pra troca.",
-      "Quem comprou elogiou o caimento — e caimento bom é venda garantida."
+      "Quem comprou elogiou o caimento — e caimento bom é venda garantida.",
+      "Sua cliente vai amar essa modelagem — e voltar pra pedir mais."
     ]
   }
 }
