@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -23,15 +23,16 @@
       "326653",
       "2673571",
       "3184620",
-      "332873"
+      "332873",
+      "3480266"
     ]
   },
   "ultimos_pilares": [
-    "qualidade",
     "cliente_ama",
     "renda_extra",
     "estilo",
-    "qualidade"
+    "qualidade",
+    "disponibilidade"
   ],
   "conhecidos": {
     "kits": [
@@ -328,11 +329,11 @@
       "Kit fechado — ótimo pra começar a revender."
     ],
     "cta_bio": [
-      "Link da bio te leva direto pro catálogo 📲",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Link na bio 🔗",
       "Pedido pelo site, link na bio 🛍️",
-      "Catálogo inteiro tá no link da bio 👆"
+      "Catálogo inteiro tá no link da bio 👆",
+      "Os outros modelos estão no link da bio 👆"
     ],
     "preco": [
       "{preco} — e você revende no seu preço.",
@@ -341,10 +342,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Peça avulsa, malha premium.",
       "Você escolhe peça por peça (mínimo de 10 no pedido).",
       "Atacado de peça avulsa, a partir de 10 peças.",
-      "É peça avulsa, na malha premium."
+      "É peça avulsa, na malha premium.",
+      "Peça avulsa premium — você monta o pedido do seu jeito."
     ],
     "qualidade_avulso": [
       "Qualidade superior peça por peça, sem precisar levar kit fechado.",
@@ -410,13 +411,13 @@
       "Suplex vip que segura bem e não deixa marquinha."
     ],
     "disponibilidade": [
-      "Garante o seu antes que o lote acabe.",
       "Quando acaba, a próxima leva pode demorar.",
       "Esse aqui já está saindo bastante essa semana.",
       "Estoque limitado nessa leva.",
       "Enquanto durar o estoque desse lote, o preço continua esse.",
       "Quem viu primeiro já garantiu. Ainda dá tempo.",
-      "Esse modelo costuma acabar rápido — melhor não deixar pra depois."
+      "Esse modelo costuma acabar rápido — melhor não deixar pra depois.",
+      "Poucas peças disponíveis por enquanto."
     ],
     "lucratividade": [
       "Faz a conta: o valor por peça no kit deixa espaço pra um bom lucro.",
