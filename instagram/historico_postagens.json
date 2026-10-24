@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -31,15 +31,16 @@
       "3480266",
       "331423",
       "3480272",
-      "334031"
+      "334031",
+      "334025"
     ]
   },
   "ultimos_pilares": [
-    "cliente_ama",
     "lucratividade",
     "qualidade",
     "cliente_ama",
-    "disponibilidade"
+    "disponibilidade",
+    "qualidade"
   ],
   "conhecidos": {
     "kits": [
@@ -336,11 +337,11 @@
       "Vem em kit fechado de 5, tecido suplex vip."
     ],
     "cta_bio": [
-      "Link da bio te leva direto pro catálogo 📲",
       "Catálogo completo — link na bio ✨",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Pedido pelo site, link na bio 🛍️",
-      "Os outros modelos estão no link da bio 👆"
+      "Os outros modelos estão no link da bio 👆",
+      "Link na bio 🔗"
     ],
     "preco": [
       "Preço de atacado: {preco}.",
@@ -349,24 +350,24 @@
       "Valor: {preco}."
     ],
     "tag_avulso": [
-      "Peça avulsa premium — você monta o pedido do seu jeito.",
       "Vendida avulsa, sem precisar levar kit fechado.",
       "Peça avulsa, malha premium.",
-      "Atacado de peça avulsa, a partir de 10 peças."
+      "Atacado de peça avulsa, a partir de 10 peças.",
+      "É peça avulsa, na malha premium."
     ],
     "qualidade_avulso": [
-      "Qualidade superior peça por peça, sem precisar levar kit fechado.",
       "Malha de qualidade superior, que não perde a forma.",
       "Malha premium, qualidade superior — você sente a diferença assim que veste.",
       "Malha premium com toque macio e caimento bonito.",
       "Peça selecionada uma a uma, com padrão premium.",
       "Toque macio, tecido encorpado, acabamento de loja boa.",
-      "Peça avulsa com malha premium: acabamento caprichado, preço de atacado."
+      "Peça avulsa com malha premium: acabamento caprichado, preço de atacado.",
+      "Você escolhe a peça certa pra sua cliente — sem sortimento fechado."
     ],
     "frete_avulso": [
-      "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛",
       "Frete grátis (Vip) pra Salvador e todo o Brasil 🚚",
-      "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦"
+      "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦",
+      "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚"
     ],
     "preco_kits": [
       "{quantidade} - só {preco}.",
