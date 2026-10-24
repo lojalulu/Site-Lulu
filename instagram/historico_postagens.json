@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -19,7 +19,8 @@
       "1366405",
       "3769152",
       "402269",
-      "2632922"
+      "2632922",
+      "1026249"
     ],
     "avulso": [
       "3117836",
@@ -36,11 +37,11 @@
     ]
   },
   "ultimos_pilares": [
-    "lucratividade",
     "qualidade",
     "cliente_ama",
     "disponibilidade",
-    "qualidade"
+    "qualidade",
+    "cliente_ama"
   ],
   "conhecidos": {
     "kits": [
@@ -326,22 +327,22 @@
       "Peça nova no catálogo, quentinha da produção."
     ],
     "frete_kits": [
-      "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚",
       "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛",
-      "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚"
+      "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚",
+      "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦"
     ],
     "tag_kits": [
-      "Vendido em kit fechado, cores sortidas.",
       "É kit fechado com 5 peças, em suplex vip.",
       "Kit com cores variadas.",
-      "Vem em kit fechado de 5, tecido suplex vip."
+      "Vem em kit fechado de 5, tecido suplex vip.",
+      "Kit fechado — ótimo pra começar a revender."
     ],
     "cta_bio": [
-      "Catálogo completo — link na bio ✨",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Pedido pelo site, link na bio 🛍️",
       "Os outros modelos estão no link da bio 👆",
-      "Link na bio 🔗"
+      "Link na bio 🔗",
+      "Link da bio te leva direto pro catálogo 📲"
     ],
     "preco": [
       "Preço de atacado: {preco}.",
@@ -438,14 +439,14 @@
       "Comprando direto da fábrica, sobra mais no seu bolso em cada venda."
     ],
     "cliente_ama": [
-      "Aposta segura: modelo que agrada quase todo mundo.",
       "Peça que valoriza o corpo sem apertar. Cliente satisfeita volta.",
       "Peça que vira queridinha na primeira leva — cliente ama e indica pra amiga.",
       "Esse modelo costuma ter muita recompra.",
       "As revendedoras contam que esse modelo quase não volta pra troca.",
       "Quem comprou elogiou o caimento — e caimento bom é venda garantida.",
       "Sua cliente vai amar essa modelagem — e voltar pra pedir mais.",
-      "A cliente experimenta e já pergunta se tem em outra cor."
+      "A cliente experimenta e já pergunta se tem em outra cor.",
+      "Veste bem em corpos diferentes, por isso quase não tem troca."
     ]
   }
 }
