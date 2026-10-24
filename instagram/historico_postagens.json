@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -18,7 +18,8 @@
       "853848",
       "1366405",
       "3769152",
-      "402269"
+      "402269",
+      "2632922"
     ],
     "avulso": [
       "3117836",
@@ -34,11 +35,11 @@
     ]
   },
   "ultimos_pilares": [
-    "conforto",
     "cliente_ama",
     "lucratividade",
     "qualidade",
-    "cliente_ama"
+    "cliente_ama",
+    "disponibilidade"
   ],
   "conhecidos": {
     "kits": [
@@ -329,17 +330,17 @@
       "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚"
     ],
     "tag_kits": [
-      "Kit fechado — ótimo pra começar a revender.",
       "Vendido em kit fechado, cores sortidas.",
       "É kit fechado com 5 peças, em suplex vip.",
-      "Kit com cores variadas."
+      "Kit com cores variadas.",
+      "Vem em kit fechado de 5, tecido suplex vip."
     ],
     "cta_bio": [
-      "Dá uma espiada no link da bio 💗",
       "Link da bio te leva direto pro catálogo 📲",
       "Catálogo completo — link na bio ✨",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
-      "Pedido pelo site, link na bio 🛍️"
+      "Pedido pelo site, link na bio 🛍️",
+      "Os outros modelos estão no link da bio 👆"
     ],
     "preco": [
       "Preço de atacado: {preco}.",
@@ -368,10 +369,10 @@
       "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦"
     ],
     "preco_kits": [
-      "Kit com {quantidade} por {preco}.",
       "{quantidade} - só {preco}.",
       "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
-      "{quantidade}: {preco}."
+      "{quantidade}: {preco}.",
+      "{quantidade} por {preco} — já pode revender no seu preço."
     ],
     "cta_alt": [
       "Ficou com dúvida? Chama no direct 💬",
@@ -417,13 +418,13 @@
       "Suplex encorpado, que não fica transparente no agachamento."
     ],
     "disponibilidade": [
-      "Quando acaba, a próxima leva pode demorar.",
       "Esse aqui já está saindo bastante essa semana.",
       "Estoque limitado nessa leva.",
       "Enquanto durar o estoque desse lote, o preço continua esse.",
       "Quem viu primeiro já garantiu. Ainda dá tempo.",
       "Esse modelo costuma acabar rápido — melhor não deixar pra depois.",
-      "Poucas peças disponíveis por enquanto."
+      "Poucas peças disponíveis por enquanto.",
+      "Garante o seu antes que o lote acabe."
     ],
     "lucratividade": [
       "Atacado com preço pensado pra quem revende.",
