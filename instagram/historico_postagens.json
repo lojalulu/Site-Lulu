@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -39,15 +39,16 @@
       "334025",
       "3667508",
       "3145398",
-      "327396"
+      "327396",
+      "3552730"
     ]
   },
   "ultimos_pilares": [
-    "conforto",
     "estilo",
     "lucratividade",
     "qualidade",
-    "renda_extra"
+    "renda_extra",
+    "conforto"
   ],
   "conhecidos": {
     "kits": [
@@ -344,23 +345,23 @@
       "Kit com cores variadas."
     ],
     "cta_bio": [
-      "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Catálogo inteiro tá no link da bio 👆",
       "Os outros modelos estão no link da bio 👆",
       "Pedido pelo site, link na bio 🛍️",
-      "Catálogo completo — link na bio ✨"
+      "Catálogo completo — link na bio ✨",
+      "Dá uma espiada no link da bio 💗"
     ],
     "preco": [
-      "{nome_curto}: {preco}.",
       "Valor: {preco}.",
       "{preco} — e você revende no seu preço.",
-      "Tudo isso por {preco}."
+      "Tudo isso por {preco}.",
+      "{nome_curto} sai por {preco}."
     ],
     "tag_avulso": [
-      "É peça avulsa, na malha premium.",
       "Peça avulsa premium — você monta o pedido do seu jeito.",
       "Você escolhe peça por peça (mínimo de 10 no pedido).",
-      "Peça avulsa, malha premium."
+      "Peça avulsa, malha premium.",
+      "Vendida avulsa, sem precisar levar kit fechado."
     ],
     "qualidade_avulso": [
       "Malha premium, qualidade superior — você sente a diferença assim que veste.",
@@ -372,9 +373,9 @@
       "Qualidade que a cliente percebe logo no primeiro uso."
     ],
     "frete_avulso": [
-      "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦",
       "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚",
-      "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛"
+      "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛",
+      "Pedido de peça avulsa com frete grátis (Vip) 📦"
     ],
     "preco_kits": [
       "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
@@ -387,14 +388,14 @@
       "Manda mensagem que a gente te ajuda a montar o pedido 💬"
     ],
     "conforto": [
-      "Veste bem do treino da manhã até o fim do dia.",
       "Feita pra treinar, trabalhar ou só ficar em casa — confortável do mesmo jeito.",
       "Malha que acompanha o corpo sem apertar — conforto o dia inteiro.",
       "Modelagem que dá liberdade pra se mexer.",
       "Costura bem feita, que não incomoda na pele.",
       "Firme sem ser apertada. É isso que a cliente procura.",
       "Cós que não enrola e não aperta a barriga.",
-      "Conforto é o que faz a cliente usar toda semana — e indicar."
+      "Conforto é o que faz a cliente usar toda semana — e indicar.",
+      "Tecido macio, que não pinica nem esquenta demais."
     ],
     "renda_extra": [
       "Se você revende moda fitness, essa é a peça que sai rápido.",
