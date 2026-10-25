@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -22,7 +22,8 @@
       "2632922",
       "1026249",
       "384565",
-      "318145"
+      "318145",
+      "3361887"
     ],
     "avulso": [
       "3117836",
@@ -42,11 +43,11 @@
     ]
   },
   "ultimos_pilares": [
-    "renda_extra",
     "conforto",
     "estilo",
     "lucratividade",
-    "qualidade"
+    "qualidade",
+    "renda_extra"
   ],
   "conhecidos": {
     "kits": [
@@ -332,22 +333,22 @@
       "Peça nova no catálogo, quentinha da produção."
     ],
     "frete_kits": [
-      "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦",
       "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚",
-      "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛"
+      "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛",
+      "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦"
     ],
     "tag_kits": [
-      "Vem em kit fechado de 5, tecido suplex vip.",
       "Kit fechado — ótimo pra começar a revender.",
       "Kit fechado, 5 peças, suplex vip.",
-      "É kit fechado com 5 peças, em suplex vip."
+      "É kit fechado com 5 peças, em suplex vip.",
+      "Kit com cores variadas."
     ],
     "cta_bio": [
-      "Dá uma espiada no link da bio 💗",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Catálogo inteiro tá no link da bio 👆",
       "Os outros modelos estão no link da bio 👆",
-      "Pedido pelo site, link na bio 🛍️"
+      "Pedido pelo site, link na bio 🛍️",
+      "Catálogo completo — link na bio ✨"
     ],
     "preco": [
       "{nome_curto}: {preco}.",
@@ -376,10 +377,10 @@
       "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛"
     ],
     "preco_kits": [
-      "{quantidade} - só {preco}.",
       "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
       "{quantidade}: {preco}.",
-      "{quantidade} por {preco} — já pode revender no seu preço."
+      "{quantidade} por {preco} — já pode revender no seu preço.",
+      "Kit com {quantidade} por {preco}."
     ],
     "cta_alt": [
       "Ficou com dúvida? Chama no direct 💬",
@@ -396,14 +397,14 @@
       "Conforto é o que faz a cliente usar toda semana — e indicar."
     ],
     "renda_extra": [
-      "Pra quem vende no WhatsApp ou no Instagram, essa peça ajuda a fechar pedido.",
       "Se você revende moda fitness, essa é a peça que sai rápido.",
       "Essa entra no pedido e sai do seu estoque rapidinho.",
       "Renda extra de verdade começa com produto que a cliente quer comprar.",
       "Peça que você posta no status e já aparece gente perguntando o preço.",
       "Dá pra começar pequeno e ir crescendo — peça que gira bem ajuda muito.",
       "Quer começar a revender? Esse é o tipo de peça que facilita.",
-      "Se o objetivo é aumentar a renda, começa pelo que vende fácil."
+      "Se o objetivo é aumentar a renda, começa pelo que vende fácil.",
+      "Boa pra quem vende pra academia, vizinhança ou grupo de amigas."
     ],
     "estilo": [
       "Sai da academia e já segue o dia sem trocar de roupa.",
