@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -37,15 +37,16 @@
       "334031",
       "334025",
       "3667508",
-      "3145398"
+      "3145398",
+      "327396"
     ]
   },
   "ultimos_pilares": [
-    "cliente_ama",
     "renda_extra",
     "conforto",
     "estilo",
-    "lucratividade"
+    "lucratividade",
+    "qualidade"
   ],
   "conhecidos": {
     "kits": [
@@ -342,11 +343,11 @@
       "É kit fechado com 5 peças, em suplex vip."
     ],
     "cta_bio": [
-      "Link da bio te leva direto pro catálogo 📲",
       "Dá uma espiada no link da bio 💗",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Catálogo inteiro tá no link da bio 👆",
-      "Os outros modelos estão no link da bio 👆"
+      "Os outros modelos estão no link da bio 👆",
+      "Pedido pelo site, link na bio 🛍️"
     ],
     "preco": [
       "{nome_curto}: {preco}.",
@@ -355,19 +356,19 @@
       "Tudo isso por {preco}."
     ],
     "tag_avulso": [
-      "Atacado de peça avulsa, a partir de 10 peças.",
       "É peça avulsa, na malha premium.",
       "Peça avulsa premium — você monta o pedido do seu jeito.",
-      "Você escolhe peça por peça (mínimo de 10 no pedido)."
+      "Você escolhe peça por peça (mínimo de 10 no pedido).",
+      "Peça avulsa, malha premium."
     ],
     "qualidade_avulso": [
-      "Malha de qualidade superior, que não perde a forma.",
       "Malha premium, qualidade superior — você sente a diferença assim que veste.",
       "Malha premium com toque macio e caimento bonito.",
       "Peça selecionada uma a uma, com padrão premium.",
       "Toque macio, tecido encorpado, acabamento de loja boa.",
       "Peça avulsa com malha premium: acabamento caprichado, preço de atacado.",
-      "Você escolhe a peça certa pra sua cliente — sem sortimento fechado."
+      "Você escolhe a peça certa pra sua cliente — sem sortimento fechado.",
+      "Qualidade que a cliente percebe logo no primeiro uso."
     ],
     "frete_avulso": [
       "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦",
