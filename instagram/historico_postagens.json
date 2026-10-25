@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -35,15 +35,16 @@
       "3480272",
       "334031",
       "334025",
-      "3667508"
+      "3667508",
+      "3145398"
     ]
   },
   "ultimos_pilares": [
-    "disponibilidade",
     "qualidade",
     "cliente_ama",
     "renda_extra",
-    "conforto"
+    "conforto",
+    "estilo"
   ],
   "conhecidos": {
     "kits": [
@@ -340,23 +341,23 @@
       "Kit fechado, 5 peças, suplex vip."
     ],
     "cta_bio": [
-      "Os outros modelos estão no link da bio 👆",
       "Link na bio 🔗",
       "Link da bio te leva direto pro catálogo 📲",
       "Dá uma espiada no link da bio 💗",
-      "Vê as cores e monta seu pedido pelo link da bio 🔗"
+      "Vê as cores e monta seu pedido pelo link da bio 🔗",
+      "Catálogo inteiro tá no link da bio 👆"
     ],
     "preco": [
-      "Hoje, {nome_curto} sai por {preco}.",
       "{nome_curto}: {preco}.",
       "Valor: {preco}.",
-      "{preco} — e você revende no seu preço."
+      "{preco} — e você revende no seu preço.",
+      "Tudo isso por {preco}."
     ],
     "tag_avulso": [
-      "Peça avulsa, malha premium.",
       "Atacado de peça avulsa, a partir de 10 peças.",
       "É peça avulsa, na malha premium.",
-      "Peça avulsa premium — você monta o pedido do seu jeito."
+      "Peça avulsa premium — você monta o pedido do seu jeito.",
+      "Você escolhe peça por peça (mínimo de 10 no pedido)."
     ],
     "qualidade_avulso": [
       "Malha de qualidade superior, que não perde a forma.",
@@ -403,14 +404,14 @@
       "Se o objetivo é aumentar a renda, começa pelo que vende fácil."
     ],
     "estilo": [
-      "Combina com tênis, sandália ou papete — serve pra tudo.",
       "Sai da academia e já segue o dia sem trocar de roupa.",
       "Bonita no treino e bonita na rua também.",
       "Peça que fica linda na foto — ajuda muito na hora de divulgar.",
       "Moda fitness que dá pra usar no mercado, no passeio e na academia.",
       "Modelagem atual, cores que estão em alta — moda fitness que também é moda de rua.",
       "Cores que chamam atenção na vitrine e no seu status.",
-      "Visual arrumado sem esforço nenhum."
+      "Visual arrumado sem esforço nenhum.",
+      "Modelo que não sai de moda de uma estação pra outra."
     ],
     "qualidade_kits": [
       "Suplex vip, zero transparência — testado antes de entrar no catálogo.",
