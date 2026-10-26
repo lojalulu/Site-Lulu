@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -24,7 +24,8 @@
       "384565",
       "318145",
       "3361887",
-      "570213"
+      "570213",
+      "2049293"
     ],
     "avulso": [
       "3117836",
@@ -46,11 +47,11 @@
     ]
   },
   "ultimos_pilares": [
-    "qualidade",
     "renda_extra",
     "conforto",
     "qualidade",
-    "cliente_ama"
+    "cliente_ama",
+    "disponibilidade"
   ],
   "conhecidos": {
     "kits": [
@@ -341,17 +342,17 @@
       "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦"
     ],
     "tag_kits": [
-      "Kit fechado, 5 peças, suplex vip.",
       "É kit fechado com 5 peças, em suplex vip.",
       "Kit com cores variadas.",
-      "Vem em kit fechado de 5, tecido suplex vip."
+      "Vem em kit fechado de 5, tecido suplex vip.",
+      "Vendido em kit fechado, cores sortidas."
     ],
     "cta_bio": [
-      "Pedido pelo site, link na bio 🛍️",
       "Catálogo completo — link na bio ✨",
       "Dá uma espiada no link da bio 💗",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
-      "Link da bio te leva direto pro catálogo 📲"
+      "Link da bio te leva direto pro catálogo 📲",
+      "Os outros modelos estão no link da bio 👆"
     ],
     "preco": [
       "Valor: {preco}.",
@@ -380,10 +381,10 @@
       "Pedido de peça avulsa com frete grátis (Vip) 📦"
     ],
     "preco_kits": [
-      "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
       "{quantidade}: {preco}.",
       "{quantidade} por {preco} — já pode revender no seu preço.",
-      "Kit com {quantidade} por {preco}."
+      "Kit com {quantidade} por {preco}.",
+      "{quantidade} - só {preco}."
     ],
     "cta_alt": [
       "Ficou com dúvida? Chama no direct 💬",
@@ -429,13 +430,13 @@
       "Zero transparência de verdade — o padrão do suplex vip da Lulu."
     ],
     "disponibilidade": [
-      "Esse aqui já está saindo bastante essa semana.",
       "Estoque limitado nessa leva.",
       "Enquanto durar o estoque desse lote, o preço continua esse.",
       "Quem viu primeiro já garantiu. Ainda dá tempo.",
       "Esse modelo costuma acabar rápido — melhor não deixar pra depois.",
       "Poucas peças disponíveis por enquanto.",
-      "Garante o seu antes que o lote acabe."
+      "Garante o seu antes que o lote acabe.",
+      "Últimas unidades desse lote — reposição não tem data certa."
     ],
     "lucratividade": [
       "Preço de fábrica pra você vender com uma margem boa de verdade.",
