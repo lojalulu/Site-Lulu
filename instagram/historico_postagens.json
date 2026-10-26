@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -43,15 +43,16 @@
       "3145398",
       "327396",
       "3552730",
-      "3043182"
+      "3043182",
+      "331480"
     ]
   },
   "ultimos_pilares": [
-    "renda_extra",
     "conforto",
     "qualidade",
     "cliente_ama",
-    "disponibilidade"
+    "disponibilidade",
+    "conforto"
   ],
   "conhecidos": {
     "kits": [
@@ -348,11 +349,11 @@
       "Vendido em kit fechado, cores sortidas."
     ],
     "cta_bio": [
-      "Catálogo completo — link na bio ✨",
       "Dá uma espiada no link da bio 💗",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Link da bio te leva direto pro catálogo 📲",
-      "Os outros modelos estão no link da bio 👆"
+      "Os outros modelos estão no link da bio 👆",
+      "Link na bio 🔗"
     ],
     "preco": [
       "Valor: {preco}.",
@@ -361,10 +362,10 @@
       "{nome_curto} sai por {preco}."
     ],
     "tag_avulso": [
-      "Você escolhe peça por peça (mínimo de 10 no pedido).",
       "Peça avulsa, malha premium.",
       "Vendida avulsa, sem precisar levar kit fechado.",
-      "Atacado de peça avulsa, a partir de 10 peças."
+      "Atacado de peça avulsa, a partir de 10 peças.",
+      "Peça avulsa premium — você monta o pedido do seu jeito."
     ],
     "qualidade_avulso": [
       "Malha premium, qualidade superior — você sente a diferença assim que veste.",
@@ -391,14 +392,14 @@
       "Manda mensagem que a gente te ajuda a montar o pedido 💬"
     ],
     "conforto": [
-      "Feita pra treinar, trabalhar ou só ficar em casa — confortável do mesmo jeito.",
       "Malha que acompanha o corpo sem apertar — conforto o dia inteiro.",
       "Modelagem que dá liberdade pra se mexer.",
       "Costura bem feita, que não incomoda na pele.",
       "Firme sem ser apertada. É isso que a cliente procura.",
       "Cós que não enrola e não aperta a barriga.",
       "Conforto é o que faz a cliente usar toda semana — e indicar.",
-      "Tecido macio, que não pinica nem esquenta demais."
+      "Tecido macio, que não pinica nem esquenta demais.",
+      "Dá pra agachar, correr e alongar sem ficar ajeitando a roupa."
     ],
     "renda_extra": [
       "Se você revende moda fitness, essa é a peça que sai rápido.",
