@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -45,15 +45,16 @@
       "327396",
       "3552730",
       "3043182",
-      "331480"
+      "331480",
+      "4573060"
     ]
   },
   "ultimos_pilares": [
-    "qualidade",
     "cliente_ama",
     "disponibilidade",
     "conforto",
-    "qualidade"
+    "qualidade",
+    "lancamento"
   ],
   "conhecidos": {
     "kits": [
@@ -317,6 +318,7 @@
       "4477104",
       "4513458",
       "4555358",
+      "4573060",
       "875488",
       "875515",
       "875523",
@@ -330,13 +332,13 @@
   },
   "ultimas_frases": {
     "lancamento": [
-      "Lançamento da semana — sai na frente e oferece antes de todo mundo.",
       "Chegou lançamento! Primeira leva disponível.",
       "Você está entre as primeiras a ver essa peça.",
       "Lançamento novinho, direto da fábrica.",
       "Novidade no catálogo, chegou agora.",
       "Acabou de chegar no catálogo — poucas peças por enquanto.",
-      "Peça nova no catálogo, quentinha da produção."
+      "Peça nova no catálogo, quentinha da produção.",
+      "Modelo novo na área — sua cliente ainda não viu em lugar nenhum."
     ],
     "frete_kits": [
       "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛",
@@ -350,11 +352,11 @@
       "Kit fechado, 5 peças, suplex vip."
     ],
     "cta_bio": [
-      "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Link da bio te leva direto pro catálogo 📲",
       "Os outros modelos estão no link da bio 👆",
       "Link na bio 🔗",
-      "Pedido pelo site, link na bio 🛍️"
+      "Pedido pelo site, link na bio 🛍️",
+      "Catálogo inteiro tá no link da bio 👆"
     ],
     "preco": [
       "Valor: {preco}.",
@@ -363,10 +365,10 @@
       "{nome_curto} sai por {preco}."
     ],
     "tag_avulso": [
-      "Peça avulsa, malha premium.",
       "Vendida avulsa, sem precisar levar kit fechado.",
       "Atacado de peça avulsa, a partir de 10 peças.",
-      "Peça avulsa premium — você monta o pedido do seu jeito."
+      "Peça avulsa premium — você monta o pedido do seu jeito.",
+      "É peça avulsa, na malha premium."
     ],
     "qualidade_avulso": [
       "Malha premium, qualidade superior — você sente a diferença assim que veste.",
