@@ -598,9 +598,12 @@ def main():
     itens, hist = escolher_fotos()
     briefing = reel_lab.gerar_briefing(hist["ganchos"])
     print("Briefing:", json.dumps(briefing, ensure_ascii=False))
+    os.makedirs(PASTA_SAIDA, exist_ok=True)
+    with open(f"{PASTA_SAIDA}/briefing.json", "w", encoding="utf-8") as f:
+        json.dump(briefing, f, ensure_ascii=False, indent=1)
     gerar_video(itens, briefing, SAIDA)
     if os.environ.get("GITHUB_TOKEN") and os.environ.get("GITHUB_REPOSITORY"):
-        url = hospedar([SAIDA, PREVIA])
+        url = hospedar([SAIDA, PREVIA, f"{PASTA_SAIDA}/briefing.json"])
         print("PRÉVIA DO VÍDEO:", url)
     elif so_gerar:
         return
