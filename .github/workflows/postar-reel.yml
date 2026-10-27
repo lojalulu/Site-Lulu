@@ -2,7 +2,7 @@ name: Postar Reel no Instagram
 
 on:
   schedule:
-    - cron: '30 22 * * *'   # 19:30 em Salvador
+    - cron: '30 20 * * *'   # 17:30 em Salvador; o GitHub atrasa 1-3h, então o Reel cai por volta das 19h30
   workflow_dispatch:
     inputs:
       publicar:

@@ -108,4 +108,13 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    ERRO = "instagram/ultimo_erro_post.txt"
+    try:
+        main()
+        if os.path.exists(ERRO):
+            os.remove(ERRO)
+    except BaseException:
+        import traceback
+        with open(ERRO, "w", encoding="utf-8") as f:
+            f.write(time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime()) + "\n" + traceback.format_exc()[-3000:])
+        raise
