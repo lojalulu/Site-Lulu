@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -51,15 +51,16 @@
       "331480",
       "4573060",
       "333275",
-      "875537"
+      "875537",
+      "327294"
     ]
   },
   "ultimos_pilares": [
-    "lucratividade",
     "renda_extra",
     "cliente_ama",
     "lucratividade",
-    "qualidade"
+    "qualidade",
+    "renda_extra"
   ],
   "conhecidos": {
     "kits": [
@@ -357,11 +358,11 @@
       "Kit fechado — ótimo pra começar a revender."
     ],
     "cta_bio": [
-      "Dá uma espiada no link da bio 💗",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Link da bio te leva direto pro catálogo 📲",
       "Catálogo completo — link na bio ✨",
-      "Link na bio 🔗"
+      "Link na bio 🔗",
+      "Catálogo inteiro tá no link da bio 👆"
     ],
     "preco": [
       "{preco} — e você revende no seu preço.",
@@ -370,10 +371,10 @@
       "Hoje, {nome_curto} sai por {preco}."
     ],
     "tag_avulso": [
-      "Peça avulsa premium — você monta o pedido do seu jeito.",
       "É peça avulsa, na malha premium.",
       "Você escolhe peça por peça (mínimo de 10 no pedido).",
-      "Peça avulsa, malha premium."
+      "Peça avulsa, malha premium.",
+      "Atacado de peça avulsa, a partir de 10 peças."
     ],
     "qualidade_avulso": [
       "Malha premium, qualidade superior — você sente a diferença assim que veste.",
@@ -410,14 +411,14 @@
       "Dá pra agachar, correr e alongar sem ficar ajeitando a roupa."
     ],
     "renda_extra": [
-      "Essa entra no pedido e sai do seu estoque rapidinho.",
       "Renda extra de verdade começa com produto que a cliente quer comprar.",
       "Peça que você posta no status e já aparece gente perguntando o preço.",
       "Dá pra começar pequeno e ir crescendo — peça que gira bem ajuda muito.",
       "Quer começar a revender? Esse é o tipo de peça que facilita.",
       "Se o objetivo é aumentar a renda, começa pelo que vende fácil.",
       "Boa pra quem vende pra academia, vizinhança ou grupo de amigas.",
-      "Muita revendedora começou com um kit só e hoje compra todo mês."
+      "Muita revendedora começou com um kit só e hoje compra todo mês.",
+      "Se você revende moda fitness, essa é a peça que sai rápido."
     ],
     "estilo": [
       "Sai da academia e já segue o dia sem trocar de roupa.",
