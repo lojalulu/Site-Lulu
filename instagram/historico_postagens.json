@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -27,7 +27,8 @@
       "570213",
       "2049293",
       "2049296",
-      "477732"
+      "477732",
+      "3221669"
     ],
     "avulso": [
       "3117836",
@@ -52,11 +53,11 @@
     ]
   },
   "ultimos_pilares": [
-    "conforto",
     "qualidade",
     "lancamento",
     "lucratividade",
-    "renda_extra"
+    "renda_extra",
+    "cliente_ama"
   ],
   "conhecidos": {
     "kits": [
@@ -348,17 +349,17 @@
       "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚"
     ],
     "tag_kits": [
-      "Vem em kit fechado de 5, tecido suplex vip.",
       "Vendido em kit fechado, cores sortidas.",
       "Kit fechado, 5 peças, suplex vip.",
-      "É kit fechado com 5 peças, em suplex vip."
+      "É kit fechado com 5 peças, em suplex vip.",
+      "Kit com cores variadas."
     ],
     "cta_bio": [
-      "Link na bio 🔗",
       "Pedido pelo site, link na bio 🛍️",
       "Catálogo inteiro tá no link da bio 👆",
       "Dá uma espiada no link da bio 💗",
-      "Vê as cores e monta seu pedido pelo link da bio 🔗"
+      "Vê as cores e monta seu pedido pelo link da bio 🔗",
+      "Link da bio te leva direto pro catálogo 📲"
     ],
     "preco": [
       "{preco} — e você revende no seu preço.",
@@ -387,10 +388,10 @@
       "Pedido de peça avulsa com frete grátis (Vip) 📦"
     ],
     "preco_kits": [
-      "{quantidade} por {preco} — já pode revender no seu preço.",
       "Kit com {quantidade} por {preco}.",
       "{quantidade} - só {preco}.",
-      "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça."
+      "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
+      "Hoje, {quantidade} saem por {preco}."
     ],
     "cta_alt": [
       "Ficou com dúvida? Chama no direct 💬",
@@ -455,14 +456,14 @@
       "Quanto menor o custo, mais fácil fica competir e ainda lucrar."
     ],
     "cliente_ama": [
-      "Peça que vira queridinha na primeira leva — cliente ama e indica pra amiga.",
       "Esse modelo costuma ter muita recompra.",
       "As revendedoras contam que esse modelo quase não volta pra troca.",
       "Quem comprou elogiou o caimento — e caimento bom é venda garantida.",
       "Sua cliente vai amar essa modelagem — e voltar pra pedir mais.",
       "A cliente experimenta e já pergunta se tem em outra cor.",
       "Veste bem em corpos diferentes, por isso quase não tem troca.",
-      "Aposta segura: modelo que agrada quase todo mundo."
+      "Aposta segura: modelo que agrada quase todo mundo.",
+      "É o tipo de peça que a cliente compra uma e depois volta pra levar mais duas."
     ]
   }
 }
