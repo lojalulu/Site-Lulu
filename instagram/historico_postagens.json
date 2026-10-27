@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -47,15 +47,16 @@
       "3552730",
       "3043182",
       "331480",
-      "4573060"
+      "4573060",
+      "333275"
     ]
   },
   "ultimos_pilares": [
-    "disponibilidade",
     "conforto",
     "qualidade",
     "lancamento",
-    "lucratividade"
+    "lucratividade",
+    "renda_extra"
   ],
   "conhecidos": {
     "kits": [
@@ -353,23 +354,23 @@
       "É kit fechado com 5 peças, em suplex vip."
     ],
     "cta_bio": [
-      "Os outros modelos estão no link da bio 👆",
       "Link na bio 🔗",
       "Pedido pelo site, link na bio 🛍️",
       "Catálogo inteiro tá no link da bio 👆",
-      "Dá uma espiada no link da bio 💗"
+      "Dá uma espiada no link da bio 💗",
+      "Vê as cores e monta seu pedido pelo link da bio 🔗"
     ],
     "preco": [
-      "Valor: {preco}.",
       "{preco} — e você revende no seu preço.",
       "Tudo isso por {preco}.",
-      "{nome_curto} sai por {preco}."
+      "{nome_curto} sai por {preco}.",
+      "Hoje, {nome_curto} sai por {preco}."
     ],
     "tag_avulso": [
-      "Vendida avulsa, sem precisar levar kit fechado.",
       "Atacado de peça avulsa, a partir de 10 peças.",
       "Peça avulsa premium — você monta o pedido do seu jeito.",
-      "É peça avulsa, na malha premium."
+      "É peça avulsa, na malha premium.",
+      "Você escolhe peça por peça (mínimo de 10 no pedido)."
     ],
     "qualidade_avulso": [
       "Malha premium, qualidade superior — você sente a diferença assim que veste.",
@@ -406,14 +407,14 @@
       "Dá pra agachar, correr e alongar sem ficar ajeitando a roupa."
     ],
     "renda_extra": [
-      "Se você revende moda fitness, essa é a peça que sai rápido.",
       "Essa entra no pedido e sai do seu estoque rapidinho.",
       "Renda extra de verdade começa com produto que a cliente quer comprar.",
       "Peça que você posta no status e já aparece gente perguntando o preço.",
       "Dá pra começar pequeno e ir crescendo — peça que gira bem ajuda muito.",
       "Quer começar a revender? Esse é o tipo de peça que facilita.",
       "Se o objetivo é aumentar a renda, começa pelo que vende fácil.",
-      "Boa pra quem vende pra academia, vizinhança ou grupo de amigas."
+      "Boa pra quem vende pra academia, vizinhança ou grupo de amigas.",
+      "Muita revendedora começou com um kit só e hoje compra todo mês."
     ],
     "estilo": [
       "Sai da academia e já segue o dia sem trocar de roupa.",
