@@ -263,7 +263,7 @@ class QuadroFoto(Quadro):
             grad = Image.new("L", (1, A), 0)
             for y in range(A):
                 if gancho:
-                    v = 100 + 90 * max(0.0, 1 - abs(y - 900) / 900)
+                    v = 60 + 80 * max(0.0, 1 - abs(y - 900) / 750)
                 else:
                     v = 225 * min(1.0, max(0.0, (y - 780) / 470))
                 grad.putpixel((0, y), int(v))
