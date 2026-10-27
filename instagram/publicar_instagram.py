@@ -70,13 +70,22 @@ def esperar_pronto(creation_id: str, tentativas: int = 10, espera_segundos: int 
 
 
 def publicar(creation_id: str) -> str:
-    resp = requests.post(
-        f"{GRAPH_BASE}/{IG_USER_ID}/media_publish",
-        data={"creation_id": creation_id, "access_token": ACCESS_TOKEN},
-        timeout=30,
-    )
+    # A Meta às vezes diz "FINISHED" e ainda recusa a publicação por alguns
+    # segundos ("Media ID is not available", código 9007/2207027). Tenta de novo.
+    for tentativa in range(1, 9):
+        resp = requests.post(
+            f"{GRAPH_BASE}/{IG_USER_ID}/media_publish",
+            data={"creation_id": creation_id, "access_token": ACCESS_TOKEN},
+            timeout=30,
+        )
+        if resp.status_code < 300:
+            return resp.json()["id"]
+        if "2207027" in resp.text or '"code":9007' in resp.text:
+            print(f"  mídia ainda não pronta (tentativa {tentativa}/8), esperando 8s...")
+            time.sleep(8)
+            continue
+        _checar_erro(resp, "publicar")
     _checar_erro(resp, "publicar")
-    return resp.json()["id"]
 
 
 def main():

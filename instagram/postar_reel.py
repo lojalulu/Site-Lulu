@@ -586,8 +586,17 @@ def publicar_reel(url, legenda):
             raise RuntimeError(f"Meta recusou o vídeo: {s}")
     else:
         raise RuntimeError("Reel não ficou pronto a tempo.")
-    return checar(requests.post(f"{GRAPH}/{IG_ID}/media_publish", data={
-        "creation_id": cid, "access_token": TOKEN}, timeout=60), "publicar o Reel")["id"]
+    for tentativa in range(1, 9):
+        r = requests.post(f"{GRAPH}/{IG_ID}/media_publish", data={
+            "creation_id": cid, "access_token": TOKEN}, timeout=60)
+        if r.status_code < 300:
+            return r.json()["id"]
+        if "2207027" in r.text or '"code":9007' in r.text:
+            print(f"  mídia ainda não pronta (tentativa {tentativa}/8), esperando 8s...")
+            time.sleep(8)
+            continue
+        break
+    return checar(r, "publicar o Reel")["id"]
 
 
 def main():
