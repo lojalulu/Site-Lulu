@@ -9,6 +9,7 @@ on:
     - cron: '30 22 * * *'   # 19:30
     - cron: '30 23 * * *'   # 20:30
     - cron: '30 0 * * *'    # 21:30
+    - cron: '48 22 28 10 *' # TESTE único 28/10 19:48 Salvador
   workflow_dispatch:
     inputs:
       publicar:
@@ -53,6 +54,7 @@ jobs:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           PUBLICAR: ${{ github.event.inputs.publicar }}
           AUTO: ${{ github.event.inputs.auto }}
+          CRON_TESTE: ${{ github.event.schedule == '48 22 28 10 *' && '1' || '0' }}
         run: |
           ARGS=""
           if [ "$PUBLICAR" = "false" ]; then ARGS="--so-gerar"; fi
