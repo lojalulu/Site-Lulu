@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -57,15 +57,16 @@
       "875537",
       "327294",
       "334077",
-      "4588258"
+      "4588258",
+      "3133821"
     ]
   },
   "ultimos_pilares": [
-    "cliente_ama",
     "estilo",
     "lucratividade",
     "lancamento",
-    "qualidade"
+    "qualidade",
+    "renda_extra"
   ],
   "conhecidos": {
     "kits": [
@@ -377,10 +378,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Peça avulsa, malha premium.",
       "Atacado de peça avulsa, a partir de 10 peças.",
       "Vendida avulsa, sem precisar levar kit fechado.",
-      "É peça avulsa, na malha premium."
+      "É peça avulsa, na malha premium.",
+      "Você escolhe peça por peça (mínimo de 10 no pedido)."
     ],
     "qualidade_avulso": [
       "Malha premium, qualidade superior — você sente a diferença assim que veste.",
@@ -403,8 +404,8 @@
       "Kit com {quantidade} por {preco}."
     ],
     "cta_alt": [
-      "Ficou com dúvida? Chama no direct 💬",
-      "Manda mensagem que a gente te ajuda a montar o pedido 💬"
+      "Manda mensagem que a gente te ajuda a montar o pedido 💬",
+      "Chama no direct pra garantir o seu 💬"
     ],
     "conforto": [
       "Malha que acompanha o corpo sem apertar — conforto o dia inteiro.",
@@ -417,14 +418,14 @@
       "Dá pra agachar, correr e alongar sem ficar ajeitando a roupa."
     ],
     "renda_extra": [
-      "Renda extra de verdade começa com produto que a cliente quer comprar.",
       "Peça que você posta no status e já aparece gente perguntando o preço.",
       "Dá pra começar pequeno e ir crescendo — peça que gira bem ajuda muito.",
       "Quer começar a revender? Esse é o tipo de peça que facilita.",
       "Se o objetivo é aumentar a renda, começa pelo que vende fácil.",
       "Boa pra quem vende pra academia, vizinhança ou grupo de amigas.",
       "Muita revendedora começou com um kit só e hoje compra todo mês.",
-      "Se você revende moda fitness, essa é a peça que sai rápido."
+      "Se você revende moda fitness, essa é a peça que sai rápido.",
+      "Quem revende sabe: peça boa e barata é lucro certo no fim do mês."
     ],
     "estilo": [
       "Bonita no treino e bonita na rua também.",
