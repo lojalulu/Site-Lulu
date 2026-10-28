@@ -43,7 +43,9 @@ FATOS = """FATOS PERMITIDOS (use só estes; não invente nada além):
 
 PROIBIDO = """PROIBIDO: promessa de ganho ou lucro garantido, valores em reais, números ou estatísticas inventados,
 "sem estoque", "de graça", urgência falsa ("últimas unidades"), críticas a concorrentes, clickbait que o vídeo não entrega,
-pedir "curta/compartilhe/salve", emojis nos textos do vídeo."""
+pedir "curta/compartilhe/salve", emojis nos textos do vídeo,
+afirmar prazo de entrega, garantia de qualidade ou exclusividade, descrever como outras lojas ou revendedoras compram,
+afirmar que dá pra montar kit peça por peça (os kits já vêm prontos)."""
 
 
 def _sem_emoji(txt: str) -> str:

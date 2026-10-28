@@ -16,6 +16,7 @@ concurrency:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   postar:
@@ -49,8 +50,7 @@ jobs:
           rm -f _tmp_font.ttf instagram/_tmp_font.ttf
           git add -A
           git diff --cached --quiet || git commit -m "Preparar conteúdo do Instagram"
-          git pull --rebase origin main
-          git push
+          for i in 1 2 3 4 5; do git pull --rebase origin main && git push && break; echo "push falhou, tentando de novo..."; sleep $((i*4)); done
 
       - name: Esperar a imagem propagar no CDN do GitHub
         run: sleep 15
@@ -68,5 +68,14 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A instagram/historico_postagens.json instagram/ultimo_erro_post.txt 2>/dev/null || git add -A instagram/
           git diff --cached --quiet || git commit -m "Atualizar histórico de postagens do Instagram"
-          git pull --rebase origin main
-          git push
+          for i in 1 2 3 4 5; do git pull --rebase origin main && git push && break; echo "push falhou, tentando de novo..."; sleep $((i*4)); done
+
+      - name: Avisar no GitHub se o post falhou
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          T="Post do Instagram falhou em $(date -u -d '-3 hours' +%Y-%m-%d)"
+          if [ -z "$(gh issue list --state open --search "$T in:title" --json number --jq '.[0].number')" ]; then
+            gh issue create --title "$T" --body "Um post (feed/story) falhou. Veja instagram/ultimo_erro_post.txt no repositório."
+          fi
