@@ -17,6 +17,7 @@ concurrency:
 permissions:
   contents: write
   issues: write
+  actions: write
 
 jobs:
   postar:
@@ -78,4 +79,16 @@ jobs:
           T="Post do Instagram falhou em $(date -u -d '-3 hours' +%Y-%m-%d)"
           if [ -z "$(gh issue list --state open --search "$T in:title" --json number --jq '.[0].number')" ]; then
             gh issue create --title "$T" --body "Um post (feed/story) falhou. Veja instagram/ultimo_erro_post.txt no repositório."
+          fi
+
+      - name: Garantir o Reel do dia (o agendamento próprio do Reel costuma ser pulado pelo GitHub)
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          H=$(date -u -d '-3 hours' +%H)
+          if [ "$H" -ge 17 ]; then
+            gh workflow run postar-reel.yml -f auto=true || echo "não consegui disparar o Reel"
+          else
+            echo "Ainda é cedo (Salvador ${H}h) — Reel só a partir das 17h."
           fi

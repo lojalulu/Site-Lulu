@@ -607,7 +607,7 @@ def main():
         sys.exit(1)
     hist = carregar_historico()
     hoje = (datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=3)).date().isoformat()  # data em Salvador
-    if os.environ.get("GITHUB_EVENT_NAME") == "schedule" and hist.get("ultimo_post") == hoje:
+    if (os.environ.get("GITHUB_EVENT_NAME") == "schedule" or os.environ.get("AUTO") == "true") and hist.get("ultimo_post") == hoje:
         print(f"Reel de hoje ({hoje}) já foi publicado — nada a fazer.")
         return
     itens, hist = escolher_fotos()
