@@ -35,6 +35,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageChops
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from imagem_story import _carregar_fonte  # noqa: E402  (Baloo 2 com fallback)
 import reel_lab  # noqa: E402
+from conteudo import rotulo_kit  # noqa: E402
 
 L, A = 1080, 1920
 FPS = 30
@@ -412,7 +413,7 @@ def escolher_fotos(n=8):
             break
         try:
             foto = baixar(random.choice(p["imagens"][:3]))
-            itens.append({"foto": foto, "id": p["id"], "preco": float(p.get("preco_final") or 0), "loja": loja})
+            itens.append({"foto": foto, "id": p["id"], "preco": float(p.get("preco_final") or 0), "loja": loja, "nome": p.get("nome", "")})
         except Exception as e:
             print(f"  foto ignorada ({p['id']}): {e}")
     if len(itens) < 4:
@@ -442,8 +443,9 @@ def montar_quadros(itens, briefing):
 
     def etiqueta(foto):
         it = rot(foto)
-        if it["preco"] > 0:
-            return etiqueta_preco("KIT" if it["loja"] == "kits" else "PEÇA", it["preco"])
+        # REGRA: preço só do kit (luluextra.com), no formato "5 Conjuntos por R$ ..."
+        if it["preco"] > 0 and it["loja"] == "kits":
+            return etiqueta_preco(f"{rotulo_kit(it['nome'])} por", it["preco"])
         return None
 
     quadros = []

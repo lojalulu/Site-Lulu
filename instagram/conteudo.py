@@ -375,26 +375,36 @@ def extrair_quantidade(nome: str):
     return None
 
 
+def rotulo_kit(nome: str) -> str:
+    """Rótulo do kit EXATAMENTE como a fonte (luluextra.com) descreve:
+    '5 Conjuntos', '5 Macaquinhos', '10 Blusas'... Usado em todo preço."""
+    n = nome.replace("~", " ")
+    m = re.search(r"\b(\d{1,2})\s+(?!un\b|peças\b|pecas\b|plus\b)([A-Za-zÀ-ÿ]+)(\s+vento\b)?", n, re.I)
+    if m and not m.group(1).startswith("0"):
+        return f"{m.group(1)} {m.group(2).capitalize()}" + (" Vento" if m.group(3) else "")
+    m = re.search(r"(?:com|,)\s*(\d{1,2})\s*(?:pe[çc]as|un)?\s*\.?\s*\)?\s*(?:ref\b.*)?$", n, re.I)
+    q = m.group(1) if m else (re.search(r"com\s+(\d{1,2})\s+pe[çc]as", n, re.I) or re.search(r"(\d{1,2})\s*un", n, re.I) or [None, "5"])[1]
+    return f"{q} Conjuntos" if re.match(r"\s*conjunto", n, re.I) else f"{q} peças"
+
+
 def gerar_texto_story(nome_curto: str, preco: str, loja: str, eh_lancamento: bool, quantidade=None) -> str:
     """Monta o texto do Story em 2 linhas: um destaque curto (preço,
     característica do tecido certo pra essa loja, ou aviso de
     lançamento) + uma chamada pra bio, puxando do mesmo pool de CTAs
     usado no feed pra variar ainda mais."""
     if eh_lancamento:
-        pool = STORY_DESTAQUES_LANCAMENTO_KITS_QTD if (loja == "kits" and quantidade) else STORY_DESTAQUES_LANCAMENTO
+        pool = STORY_DESTAQUES_LANCAMENTO_KITS_QTD if (loja == "kits" and quantidade) else [t for t in STORY_DESTAQUES_LANCAMENTO if "{preco}" not in t]
         destaque = random.choice(pool).format(nome_curto=nome_curto, preco=preco, quantidade=quantidade or "")
     elif loja == "kits":
-        pool_sem_preco = STORY_DESTAQUES_COMUM_SEM_PRECO + STORY_DESTAQUES_KITS_EXTRA
+        pool_sem_preco = [t for t in STORY_DESTAQUES_COMUM_SEM_PRECO + STORY_DESTAQUES_KITS_EXTRA if "{preco}" not in t]
         mostrar_preco = random.random() < PROB_PRECO_STORY_KITS
         if mostrar_preco and quantidade:
             pool_preco = STORY_DESTAQUES_COMUM_COM_PRECO_KITS_QTD
             destaque = random.choice(pool_preco).format(quantidade=quantidade, preco=preco)
-        elif mostrar_preco:
-            destaque = random.choice(STORY_DESTAQUES_COMUM_COM_PRECO).format(nome_curto=nome_curto, preco=preco)
         else:
             destaque = random.choice(pool_sem_preco).format(nome_curto=nome_curto, preco=preco)
     else:
-        pool = STORY_DESTAQUES_COMUM + STORY_DESTAQUES_AVULSO_EXTRA
+        pool = [t for t in STORY_DESTAQUES_COMUM + STORY_DESTAQUES_AVULSO_EXTRA if "{preco}" not in t]
         destaque = random.choice(pool).format(nome_curto=nome_curto, preco=preco)
     cta = random.choice(CTA_STORY)
     return f"{destaque}\n{cta}"
@@ -432,16 +442,14 @@ def gerar_post(produto: dict, loja: str, historico_pilares=None, eh_lancamento: 
         corpo = _escolher(pilar, PILARES[pilar])
     nome_curto = _nome_curto(produto["nome"])
     preco = f"R$ {produto['preco_final']:.2f}".replace(".", ",")
-    quantidade = extrair_quantidade(produto["nome"]) if loja == "kits" else None
+    quantidade = rotulo_kit(produto["nome"]) if loja == "kits" else None
 
     linhas = [random.choice(EMOJIS_ABERTURA) + " " + corpo]
 
     # preço aparece em ~40% dos posts
-    if random.random() < 0.4:
-        if loja == "kits" and quantidade:
-            linhas.append(_escolher("preco_kits", LINHAS_PRECO_KITS_COM_QTD).format(quantidade=quantidade, preco=preco))
-        else:
-            linhas.append(_escolher("preco", LINHAS_PRECO).format(nome_curto=nome_curto, preco=preco))
+    # REGRA: preço só do kit (luluextra.com), sempre "5 Conjuntos por R$ ..."
+    if loja == "kits" and quantidade and random.random() < 0.4:
+        linhas.append(_escolher("preco_kits", LINHAS_PRECO_KITS_COM_QTD).format(quantidade=quantidade, preco=preco))
 
     # frete aparece em ~30% dos posts (linha certa pra cada loja)
     if random.random() < 0.3:
