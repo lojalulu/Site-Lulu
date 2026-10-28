@@ -624,7 +624,10 @@ def main():
         return
     if so_gerar:
         return
-    legenda = briefing["legenda"].strip() + "\n\n" + " ".join(briefing["hashtags"])
+    # varia: ~40% dos Reels sem nenhuma hashtag; nos demais, de 1 a 3
+    qtd = random.choice([0, 0, 1, 2, 3])
+    tags = random.sample(briefing["hashtags"], min(qtd, len(briefing["hashtags"])))
+    legenda = briefing["legenda"].strip() + (("\n\n" + " ".join(tags)) if tags else "")
     print("Publicando Reel...")
     media_id = publicar_reel(url, legenda)
     print(f"Reel publicado: {media_id}")

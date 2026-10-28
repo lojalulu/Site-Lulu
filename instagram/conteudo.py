@@ -234,8 +234,9 @@ HASHTAGS = ["#modafitness", "#salvador", "#modafitnesssalvador", "#modafitnessev
 
 
 def sortear_hashtags() -> str:
-    qtd = random.randint(3, len(HASHTAGS))
-    return " ".join(random.sample(HASHTAGS, qtd))
+    """Varia: ~40% dos posts sem nenhuma hashtag; nos demais, de 1 a 3."""
+    qtd = random.choice([0, 0, 1, 2, 3])
+    return " ".join(random.sample(HASHTAGS, qtd)) if qtd else ""
 
 TAG_LOJA = {
     "kits": [
@@ -451,7 +452,9 @@ def gerar_post(produto: dict, loja: str, historico_pilares=None, eh_lancamento: 
     # CTA: 85% link na bio, 15% alternativa
     linhas.append(_escolher("cta_bio", CTA_BIO) if random.random() < 0.85 else _escolher("cta_alt", CTA_ALTERNATIVA))
 
-    linhas.append(sortear_hashtags())
+    hashtags = sortear_hashtags()
+    if hashtags:
+        linhas.append(hashtags)
 
     legenda_feed = "\n\n".join(linhas)
     texto_story = gerar_texto_story(nome_curto, preco, loja, eh_lancamento, quantidade)
