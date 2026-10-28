@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -29,7 +29,8 @@
       "2049296",
       "477732",
       "3221669",
-      "3405521"
+      "3405521",
+      "3745068"
     ],
     "avulso": [
       "3117836",
@@ -56,11 +57,11 @@
     ]
   },
   "ultimos_pilares": [
-    "renda_extra",
     "cliente_ama",
     "lucratividade",
     "qualidade",
-    "renda_extra"
+    "renda_extra",
+    "cliente_ama"
   ],
   "conhecidos": {
     "kits": [
@@ -352,17 +353,17 @@
       "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚"
     ],
     "tag_kits": [
-      "Kit fechado, 5 peças, suplex vip.",
       "É kit fechado com 5 peças, em suplex vip.",
       "Kit com cores variadas.",
-      "Kit fechado — ótimo pra começar a revender."
+      "Kit fechado — ótimo pra começar a revender.",
+      "Vem em kit fechado de 5, tecido suplex vip."
     ],
     "cta_bio": [
-      "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Link da bio te leva direto pro catálogo 📲",
       "Catálogo completo — link na bio ✨",
       "Link na bio 🔗",
-      "Catálogo inteiro tá no link da bio 👆"
+      "Catálogo inteiro tá no link da bio 👆",
+      "Dá uma espiada no link da bio 💗"
     ],
     "preco": [
       "{preco} — e você revende no seu preço.",
@@ -459,14 +460,14 @@
       "Lucro bom começa na hora da compra — e esse preço ajuda."
     ],
     "cliente_ama": [
-      "Esse modelo costuma ter muita recompra.",
       "As revendedoras contam que esse modelo quase não volta pra troca.",
       "Quem comprou elogiou o caimento — e caimento bom é venda garantida.",
       "Sua cliente vai amar essa modelagem — e voltar pra pedir mais.",
       "A cliente experimenta e já pergunta se tem em outra cor.",
       "Veste bem em corpos diferentes, por isso quase não tem troca.",
       "Aposta segura: modelo que agrada quase todo mundo.",
-      "É o tipo de peça que a cliente compra uma e depois volta pra levar mais duas."
+      "É o tipo de peça que a cliente compra uma e depois volta pra levar mais duas.",
+      "Peça que valoriza o corpo sem apertar. Cliente satisfeita volta."
     ]
   }
 }
