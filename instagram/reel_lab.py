@@ -32,7 +32,7 @@ PILARES = {
 }
 
 MECANISMOS = ["curiosidade", "contraste", "problema específico", "erro comum",
-              "transformação", "opinião contundente", "tensão", "promessa útil"]
+              "transformação", "pergunta direta", "promessa útil", "antes e depois"]
 
 FATOS = """FATOS PERMITIDOS (use só estes; não invente nada além):
 - Lulu Extra Fitness: moda fitness feminina no atacado, kits prontos de 5 peças (também há pacotes de 10 blusas), em suplex e poliamida, cores variadas.
@@ -45,7 +45,19 @@ PROIBIDO = """PROIBIDO: promessa de ganho ou lucro garantido, valores em reais, 
 "sem estoque", "de graça", urgência falsa ("últimas unidades"), críticas a concorrentes, clickbait que o vídeo não entrega,
 pedir "curta/compartilhe/salve", emojis nos textos do vídeo,
 afirmar prazo de entrega, garantia de qualidade ou exclusividade, descrever como outras lojas ou revendedoras compram,
-afirmar que dá pra montar kit peça por peça (os kits já vêm prontos)."""
+afirmar que dá pra montar kit peça por peça (os kits já vêm prontos),
+dizer que a pessoa terá "marca própria" (a mini franquia é uma loja online com o catálogo da Lulu),
+desvalorizar quem não tem loja, frases como "perder tempo" ou "está errado", jargões ("white label", "ecossistema", "funil")."""
+
+COERENCIA = """REGRAS DE COERÊNCIA (obrigatórias):
+1. O gancho fala com UMA pessoa (quem revende ou quer revender moda fitness) e promete algo claro, que os quadros entregam.
+2. Sequência: gancho -> quadro 1 entrega a promessa -> quadro 2 complementa -> chamada convida. Cada frase só faz sentido porque a anterior existe.
+3. Frases completas, simples e concretas, como numa conversa. Nada vago, nada que exija explicação.
+4. Teste final: alguém que lê só o texto da tela, sem som, em 10 segundos entende o que a Lulu oferece e o que fazer?
+
+EXEMPLOS BONS (tom e clareza; não copie):
+- gancho: "Quer *revender* moda fitness sem complicação?" | quadros: ["Os kits da Lulu já vêm prontos, com 5 peças e cores variadas.", "Você escolhe, faz o pedido e começa a vender."] | cta: "Veja os kits no link da bio"
+- gancho: "Sua *loja online* de moda fitness, já pronta" | quadros: ["Na mini franquia Lulu, o catálogo já vem na sua loja.", "Ele se atualiza sozinho, e você foca em atender suas clientes."] | cta: "Conheça no link da bio\""""
 
 
 def _sem_emoji(txt: str) -> str:
@@ -56,7 +68,7 @@ def _n_palavras(txt: str) -> int:
     return len(re.findall(r"\S+", txt))
 
 
-RUIM = re.compile(r"garanti|lucro de|ganhe r\$|r\$\s?\d|sem estoque|de gra[çc]a|últimas unidades|ultimas unidades|curta|compartilhe|salve este", re.I)
+RUIM = re.compile(r"perder tempo|marca pr[óo]pria|errad[oa]|white label|garanti|lucro de|ganhe r\$|r\$\s?\d|sem estoque|de gra[çc]a|últimas unidades|ultimas unidades|curta|compartilhe|salve este", re.I)
 
 
 def _validar(b: dict) -> dict:
@@ -94,7 +106,7 @@ def _chamar_deepseek(pilar, instrucao, mecanismo, recentes):
         "Escreve em português do Brasil, como gente fala, sem texto de robô. Cada Reel tem demanda real de público, "
         "um gancho forte nos 3 primeiros segundos que o vídeo realmente entrega, ritmo sem enrolação e valor logo cedo. "
         "O Reel é feito só de fotos de produtos com texto na tela, então as frases precisam funcionar lidas, em silêncio.\n\n"
-        + FATOS + "\n\n" + PROIBIDO
+        + FATOS + "\n\n" + PROIBIDO + "\n\n" + COERENCIA
     )
     usuario = f"""Crie o briefing do Reel de hoje.
 Pilar: {pilar}. Direção: {instrucao}
@@ -118,6 +130,27 @@ Responda SÓ com JSON neste formato:
         "messages": [{"role": "system", "content": sistema}, {"role": "user", "content": usuario}]})
     r.raise_for_status()
     return json.loads(r.json()["choices"][0]["message"]["content"])
+
+
+def _revisar(b: dict) -> dict:
+    """Segunda leitura (editor): confere coerência, clareza e fatos; devolve versão corrigida."""
+    chave = os.environ.get("DEEPSEEK_API_KEY")
+    sistema = ("Você é o editor-chefe de conteúdo de uma marca de moda fitness. Revise o briefing de um Reel. "
+               "Verifique: (1) o gancho promete algo claro e os quadros entregam; (2) a sequência faz sentido; "
+               "(3) nenhuma contradição nem exagero frente aos FATOS; (4) frases simples e completas. "
+               "Se algo estiver confuso, vago ou contraditório, REESCREVA mantendo o mesmo pilar.\n\n"
+               + FATOS + "\n\n" + PROIBIDO + "\n\n" + COERENCIA)
+    usuario = ("Briefing atual:\n" + json.dumps(b, ensure_ascii=False) +
+               "\n\nResponda SÓ com JSON: {\"aprovado\": true/false, \"motivo\": \"...\", "
+               "\"briefing\": {mesmo formato do briefing, já corrigido se necessário}}")
+    r = requests.post(DEEPSEEK_URL, headers={"Authorization": f"Bearer {chave}"}, timeout=90, json={
+        "model": MODELO, "temperature": 0.4, "max_tokens": 900,
+        "response_format": {"type": "json_object"},
+        "messages": [{"role": "system", "content": sistema}, {"role": "user", "content": usuario}]})
+    r.raise_for_status()
+    res = json.loads(r.json()["choices"][0]["message"]["content"])
+    print(f"  revisão: aprovado={res.get('aprovado')} | {str(res.get('motivo', ''))[:140]}")
+    return _validar(res.get("briefing") or b)
 
 
 # ------------------------------------------------------------ banco de reserva
@@ -154,6 +187,10 @@ def gerar_briefing(recentes):
     for tentativa in (1, 2):
         try:
             b = _validar(_chamar_deepseek(pilar, instrucao, mecanismo, recentes))
+            try:
+                b = _revisar(b)
+            except Exception as e:
+                print(f"  revisão indisponível, seguindo sem ela: {str(e)[:100]}")
             if b["gancho"] in recentes:
                 raise ValueError("gancho repetido")
             print(f"Laboratório (DeepSeek, {pilar} / {mecanismo}): {b['gancho']}")
