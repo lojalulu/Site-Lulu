@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -30,7 +30,8 @@
       "477732",
       "3221669",
       "3405521",
-      "3745068"
+      "3745068",
+      "2107380"
     ],
     "avulso": [
       "3117836",
@@ -58,11 +59,11 @@
     ]
   },
   "ultimos_pilares": [
-    "lucratividade",
     "qualidade",
     "renda_extra",
     "cliente_ama",
-    "estilo"
+    "estilo",
+    "lucratividade"
   ],
   "conhecidos": {
     "kits": [
@@ -354,17 +355,17 @@
       "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚"
     ],
     "tag_kits": [
-      "É kit fechado com 5 peças, em suplex vip.",
       "Kit com cores variadas.",
       "Kit fechado — ótimo pra começar a revender.",
-      "Vem em kit fechado de 5, tecido suplex vip."
+      "Vem em kit fechado de 5, tecido suplex vip.",
+      "Kit fechado, 5 peças, suplex vip."
     ],
     "cta_bio": [
-      "Catálogo completo — link na bio ✨",
       "Link na bio 🔗",
       "Catálogo inteiro tá no link da bio 👆",
       "Dá uma espiada no link da bio 💗",
-      "Os outros modelos estão no link da bio 👆"
+      "Os outros modelos estão no link da bio 👆",
+      "Vê as cores e monta seu pedido pelo link da bio 🔗"
     ],
     "preco": [
       "{preco} — e você revende no seu preço.",
@@ -393,10 +394,10 @@
       "Pedido de peça avulsa com frete grátis (Vip) 📦"
     ],
     "preco_kits": [
-      "{quantidade} - só {preco}.",
       "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
       "Hoje, {quantidade} saem por {preco}.",
-      "{quantidade} por {preco} — já pode revender no seu preço."
+      "{quantidade} por {preco} — já pode revender no seu preço.",
+      "{quantidade}: {preco}."
     ],
     "cta_alt": [
       "Ficou com dúvida? Chama no direct 💬",
@@ -451,14 +452,14 @@
       "Últimas unidades desse lote — reposição não tem data certa."
     ],
     "lucratividade": [
-      "Preço de atacado de verdade, sem intermediário no meio.",
       "Peça que você revende pelo dobro e a cliente ainda acha justo.",
       "Compra no kit, sai mais em conta por peça, revende com lucro tranquilo.",
       "Você define seu preço de venda — a margem fica com você.",
       "Comprando direto da fábrica, sobra mais no seu bolso em cada venda.",
       "Custo baixo por peça é o que faz a revenda valer a pena.",
       "Quanto menor o custo, mais fácil fica competir e ainda lucrar.",
-      "Lucro bom começa na hora da compra — e esse preço ajuda."
+      "Lucro bom começa na hora da compra — e esse preço ajuda.",
+      "É difícil achar peça com esse preço e essa qualidade pra revender."
     ],
     "cliente_ama": [
       "As revendedoras contam que esse modelo quase não volta pra troca.",
