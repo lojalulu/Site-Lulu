@@ -16,6 +16,7 @@ Uso:
   python instagram/postar_reel.py --so-gerar   -> gera, hospeda a prévia (sem publicar)
 """
 
+import datetime
 import functools
 import itertools
 import io
@@ -604,6 +605,11 @@ def main():
     if not so_gerar and (not TOKEN or not IG_ID):
         print("ERRO: faltam INSTAGRAM_ACCESS_TOKEN / INSTAGRAM_BUSINESS_ID.")
         sys.exit(1)
+    hist = carregar_historico()
+    hoje = (datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=3)).date().isoformat()  # data em Salvador
+    if os.environ.get("GITHUB_EVENT_NAME") == "schedule" and hist.get("ultimo_post") == hoje:
+        print(f"Reel de hoje ({hoje}) já foi publicado — nada a fazer.")
+        return
     itens, hist = escolher_fotos()
     briefing = reel_lab.gerar_briefing(hist["ganchos"])
     print("Briefing:", json.dumps(briefing, ensure_ascii=False))
@@ -624,6 +630,7 @@ def main():
     print(f"Reel publicado: {media_id}")
     hist["ids"] = (hist["ids"] + [i["id"] for i in itens])[-300:]
     hist["ganchos"] = (hist["ganchos"] + [briefing["gancho"]])[-60:]
+    hist["ultimo_post"] = hoje
     with open(HIST, "w", encoding="utf-8") as f:
         json.dump(hist, f, ensure_ascii=False, indent=1)
 
