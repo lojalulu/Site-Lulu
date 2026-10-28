@@ -1,15 +1,11 @@
 ﻿id,nome,status,preco_original
-4485666,Pacote com 5 Conjuntos de Calça Poliamida Canelado Ref 83,disponivel,350.0
-4485664,Pacote com 5 Conjuntos de Calça Poliamida Canelado Ref 82,disponivel,350.0
 4485658,Pacote com 5 Conjuntos de Calça Ref 80 Poliamida Canelado,disponivel,350.0
 4485653,Pacote com 5 Macaquinhos De Poliamida Canelado Ref 07,disponivel,320.0
 3745068,Pacote com 5 Conjuntos – Short Duplo em Suplex 04,disponivel,130.0
 3745064,Pacote com 5 Conjuntos – Short Duplo em Suplex 05,disponivel,130.0
 3249117,Pacote com 5 Conjuntos de Calça Bolso Suplex Ref 06,disponivel,115.0
-317950,Pacote com 10 Blusas Com Manga Gg,disponivel,105.0
 317949,Pacote Com 10 Blusas Com Manga G,disponivel,105.0
 3703564,Kit com 5 Conjuntos Fitness em Suplex – Linha Slim (Ref.) 26,disponivel,155.0
-3361887,Pacote com 5 Conjuntos de Short Suplex Ref 12,disponivel,130.0
 4514241,Pacote com 5 Corta Vento Ref 04 Tactel,disponivel,100.0
 3703565,Kit com 5 Conjuntos Fitness em Suplex – Linha Slim (Ref.) 24,disponivel,155.0
 4485661,Pacote com 5 Conjuntos de Short Ref 79 Poliamida Canelado,disponivel,320.0
@@ -31,7 +27,6 @@
 318147,Pacote Com 5 Conjuntos Midi Calça Bolso,disponivel,165.0
 318124,Pacote Com 5 Conjuntos de Calça Bolso Plus,disponivel,175.0
 684191,PACOTE COM 5 MACAQUINHOS CURTO REF 06,disponivel,100.0
-2774063,PACOTE COM 10 REGATAS MASC DRYFIT SORTIDAS,disponivel,125.0
 2107380,"Pacote com 10 Blusas Masc DryFit Lisa P,M,G,GG",disponivel,130.0
 2141881,PACOTE COM 5 MACAQUINHOS POLIAMIDA CANELADO COM REGULAGEM,disponivel,330.0
 4364027,Pacote com 5 Macaquinho Ref 01 Em Suplex,disponivel,125.0
@@ -54,7 +49,6 @@
 3388638,Pacote com 10 Blusão de Tule Sortidos,disponivel,200.5
 3865600,Pacote com 10 Blusa Uv Unisexx,disponivel,155.0
 3703559,PACOTE COM 5 Conjunto Fitness em Suplex – Linha Slim REF 23,disponivel,100.0
-458313,PACOTE COM 5 CONJUNTOS DE SHORT VIÉS 04,disponivel,120.0
 2632922,Pacote com 5 Conjuntos de Calça Ref 45,disponivel,125.0
 3555118,Pacote com 5 Conjuntos de Calça Suplex Bicolor 05,disponivel,175.0
 3249086,Pacote com 5 Conjuntos de Calça Suplex Ref Bicolor 04,disponivel,120.0
@@ -104,8 +98,12 @@
 1026249,PACOTE COM 5 CONJUNTOS DE SHORT PLUS VIES 05,disponivel,145.0
 402270,PACOTE COM 5 CONJUNTOS DE SHORT MIDI SIZE DE VIES,disponivel,145.0
 384571,PACOTE COM 5 CONJUNTOS DE SHORT BICOLOR PLUS,disponivel,130.0
+4485666,Pacote com 5 Conjuntos de Calça Poliamida Canelado Ref 83,esgotado,350.0
+4485664,Pacote com 5 Conjuntos de Calça Poliamida Canelado Ref 82,esgotado,350.0
+317950,Pacote com 10 Blusas Com Manga Gg,esgotado,105.0
 3769174,Pacote com 5 Conjuntos Short Duplo em Poliamida com Proteção UV – Tamanho Único Ref 05,esgotado,275.0
 3781598,Casaco Fitness com Zíper e Bolso – Pacote com 5 (Cores Sortidas) Tecido Poliamida,esgotado,175.0
+3361887,Pacote com 5 Conjuntos de Short Suplex Ref 12,esgotado,130.0
 4019559,Pacote com 5 Macaquinhos Ref 40 em Suplex- Tam M,esgotado,125.0
 3703570,Kit com 5 Conjuntos Fitness em Suplex – Linha Slim (Ref.)25,esgotado,125.0
 3249070,Pacote com 5 Conjuntos de Calça Suplex Ref 14,esgotado,158.1
@@ -122,6 +120,7 @@
 3745047,Pacote com 5 Conjuntos – Short Duplo em Suplex 06,esgotado,155.0
 3769198,Pacote com 5 Conjuntos Short Duplo em Poliamida com Proteção UV REF 06,esgotado,275.0
 3361907,Pacote com 5 Conjuntos de Calça Gramatura 320 Poliamida Ref 73,esgotado,300.0
+2774063,PACOTE COM 10 REGATAS MASC DRYFIT SORTIDAS,esgotado,125.0
 2535719,Pacote com 5 Conjuntos de Calça Poliamida Canelado Ref 58,esgotado,350.0
 2182005,PACOTE COM 5 CONJUNTOS DE CALÇA POLIAMIDA CANELADO REF 55A,esgotado,350.0
 1548828,PACOTE COM 5 CONJUNTOS DE CALÇA 33 POLIAMIDA CANELADO,esgotado,350.0
@@ -178,6 +177,7 @@
 788875,PACOTE COM 5 CONJUNTOS CALÇA 03 POLIAMIDA CANELADO,esgotado,350.0
 3612657,Pacote com 5 Short Duplo Ref 04,esgotado,128.0
 3865602,Pacote com 10 Blusa Uv Feminina,esgotado,155.0
+458313,PACOTE COM 5 CONJUNTOS DE SHORT VIÉS 04,esgotado,120.0
 2902232,Pacote com 5 Short Duplo Tactel,esgotado,128.0
 1366399,Pacote com 5 Conjuntos de Short de Viés 09,esgotado,125.0
 2107307,Pacote com 5 Conjuntos de Calça Bolso 03,esgotado,150.0

@@ -1,11 +1,65 @@
 [
   {
+    "id": "4371813",
+    "nome": "REGATA MACHÃO",
+    "preco_original": 25.0,
+    "preco_final": 40.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1793134890_35169b4bc1010ff8e60c.webp",
+      "https://arquivos.facilzap.app.br/produtos/1793134777_c8019d031db0cbe263a2.webp",
+      "https://arquivos.facilzap.app.br/produtos/1793134896_6fa20c3d8050f83dffdc.webp"
+    ],
+    "cores_variadas": false,
+    "tamanhos": []
+  },
+  {
+    "id": "4323187",
+    "nome": "CALÇA FLARE 001",
+    "preco_original": 60.0,
+    "preco_final": 96.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1793132751_8d0e10dea3a984b36ce1.webp",
+      "https://arquivos.facilzap.app.br/produtos/1793132756_9240369300a46db73482.webp",
+      "https://arquivos.facilzap.app.br/produtos/1793132761_ffbda97c8097d89acc17.webp"
+    ],
+    "cores_variadas": false,
+    "tamanhos": []
+  },
+  {
+    "id": "3145402",
+    "nome": "BLUSA DE TULE",
+    "preco_original": 15.0,
+    "preco_final": 24.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1793133398_9a7d123abed144bf0325.webp",
+      "https://arquivos.facilzap.app.br/produtos/1793133587_4ca670cf429df73dcf21.webp"
+    ],
+    "cores_variadas": false,
+    "tamanhos": []
+  },
+  {
+    "id": "4588258",
+    "nome": "CONJ DE SHORT CANELADO",
+    "preco_original": 55.0,
+    "preco_final": 88.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1793131989_326e1f4284c61353b0c0.webp",
+      "https://arquivos.facilzap.app.br/produtos/1793132109_ac8a45ce24ad195d8c8f.webp",
+      "https://arquivos.facilzap.app.br/produtos/1793131997_e5c55394bfa8d37a300c.webp",
+      "https://arquivos.facilzap.app.br/produtos/1793132117_ecfdc396f4ed23de6819.webp"
+    ],
+    "cores_variadas": false,
+    "tamanhos": []
+  },
+  {
     "id": "4513458",
     "nome": "LEGGING CAPRI COM BOLSO",
     "preco_original": 30.0,
     "preco_final": 48.9,
     "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1790773760_b179647e0be6aae5a690.webp"
+      "https://arquivos.facilzap.app.br/produtos/1793131608_7cdc76aefdfa4edfee0f.webp",
+      "https://arquivos.facilzap.app.br/produtos/1793131612_8d595e0773d162db0920.webp",
+      "https://arquivos.facilzap.app.br/produtos/1793131617_589af3d1961512bb7337.webp"
     ],
     "cores_variadas": false,
     "tamanhos": []
@@ -63,20 +117,6 @@
     "tamanhos": []
   },
   {
-    "id": "3145402",
-    "nome": "BLUSA DE TULE",
-    "preco_original": 15.0,
-    "preco_final": 24.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1777380378_bcf2af7c05e99f79b2e5.webp",
-      "https://arquivos.facilzap.app.br/produtos/1777380213_64ce2a284a5e460a624e.webp",
-      "https://arquivos.facilzap.app.br/produtos/1777380205_d2fd3f93d200f3d87cf8.webp",
-      "https://arquivos.facilzap.app.br/produtos/1777380195_581c218a8f37d4a8f4a8.webp"
-    ],
-    "cores_variadas": false,
-    "tamanhos": []
-  },
-  {
     "id": "3552750",
     "nome": "TOP ALÇA LARGA",
     "preco_original": 20.0,
@@ -109,18 +149,6 @@
       "https://arquivos.facilzap.app.br/produtos/1787749869_161c5b76ab8e1a99a010.webp",
       "https://arquivos.facilzap.app.br/produtos/1787749872_75b196ef25a041a38764.webp",
       "https://arquivos.facilzap.app.br/produtos/1787749876_1f753997623a2fca9b21.webp"
-    ],
-    "cores_variadas": false,
-    "tamanhos": []
-  },
-  {
-    "id": "4323187",
-    "nome": "CALÇA FLARE 001",
-    "preco_original": 60.0,
-    "preco_final": 96.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1785850766_9653b19dcd5c560c615f.webp",
-      "https://arquivos.facilzap.app.br/produtos/1785850771_d72696e98e1335297f18.webp"
     ],
     "cores_variadas": false,
     "tamanhos": []
@@ -159,26 +187,9 @@
     "preco_original": 65.0,
     "preco_final": 104.9,
     "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1787013989_b65cb33fe1a2f83080b1.webp",
-      "https://arquivos.facilzap.app.br/produtos/1787013991_ee4da918da4c96674155.webp",
-      "https://arquivos.facilzap.app.br/produtos/1787013993_f70f04544d3043846db9.webp",
-      "https://arquivos.facilzap.app.br/produtos/1787013995_73185aaa75a8da747b17.webp"
-    ],
-    "cores_variadas": false,
-    "tamanhos": []
-  },
-  {
-    "id": "4371813",
-    "nome": "REGATA MACHÃO",
-    "preco_original": 25.0,
-    "preco_final": 40.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1786972002_958c6ee8150fc056a0a2.webp",
-      "https://arquivos.facilzap.app.br/produtos/1786972078_218ebc45bcb99e8b2e6e.webp",
-      "https://arquivos.facilzap.app.br/produtos/1786972083_1ca51c75d59a04d29be1.webp",
-      "https://arquivos.facilzap.app.br/produtos/1786972199_57ca6d9359926f674757.webp",
-      "https://arquivos.facilzap.app.br/produtos/1786972204_245bd7868aa71bc712ab.webp",
-      "https://arquivos.facilzap.app.br/produtos/1786972210_f45ff27e076d2acb81de.webp"
+      "https://arquivos.facilzap.app.br/produtos/1793132541_48393d7bb14a9c3df08f.webp",
+      "https://arquivos.facilzap.app.br/produtos/1793132545_4ca8438c9cb7a8945ae2.webp",
+      "https://arquivos.facilzap.app.br/produtos/1793132362_879e8102c44f96563a84.webp"
     ],
     "cores_variadas": false,
     "tamanhos": []
@@ -958,6 +969,19 @@
     "tamanhos": []
   },
   {
+    "id": "4555358",
+    "nome": "CONJUNTO PREMIUM",
+    "preco_original": 70.0,
+    "preco_final": 112.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1793131189_93ffd72e7680e6c02f9d.webp",
+      "https://arquivos.facilzap.app.br/produtos/1793131147_23ad697226b2b9ab57e4.webp",
+      "https://arquivos.facilzap.app.br/produtos/1793131161_17780f5ebcaa3136305d.webp"
+    ],
+    "cores_variadas": false,
+    "tamanhos": []
+  },
+  {
     "id": "4573060",
     "nome": "CONJUNTO GG DE SHORT",
     "preco_original": 60.0,
@@ -965,18 +989,6 @@
     "imagens": [
       "https://arquivos.facilzap.app.br/produtos/1792669005_eac8b86d7e1ff3f3e46a.webp",
       "https://arquivos.facilzap.app.br/produtos/1792669009_a1187be8702f8110b863.webp"
-    ],
-    "cores_variadas": false,
-    "tamanhos": []
-  },
-  {
-    "id": "4555358",
-    "nome": "CONJUNTO PREMIUM",
-    "preco_original": 70.0,
-    "preco_final": 112.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1792095034_ab2904d81c06e429b0db.webp",
-      "https://arquivos.facilzap.app.br/produtos/1792095038_c6b4151413294362ef35.webp"
     ],
     "cores_variadas": false,
     "tamanhos": []
