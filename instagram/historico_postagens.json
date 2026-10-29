@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -63,15 +63,16 @@
       "4588258",
       "3133821",
       "4513458",
-      "4376841"
+      "4376841",
+      "3552750"
     ]
   },
   "ultimos_pilares": [
-    "cliente_ama",
     "conforto",
     "renda_extra",
     "lucratividade",
-    "estilo"
+    "estilo",
+    "conforto"
   ],
   "conhecidos": {
     "kits": [
@@ -370,11 +371,11 @@
       "Vem em kit fechado de 5, tecido suplex vip."
     ],
     "cta_bio": [
-      "Link da bio te leva direto pro catálogo 📲",
       "Catálogo completo — link na bio ✨",
       "Catálogo inteiro tá no link da bio 👆",
       "Link na bio 🔗",
-      "Vê as cores e monta seu pedido pelo link da bio 🔗"
+      "Vê as cores e monta seu pedido pelo link da bio 🔗",
+      "Dá uma espiada no link da bio 💗"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -383,10 +384,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "É peça avulsa, na malha premium.",
       "Você escolhe peça por peça (mínimo de 10 no pedido).",
       "Peça avulsa premium — você monta o pedido do seu jeito.",
-      "Atacado de peça avulsa, a partir de 10 peças."
+      "Atacado de peça avulsa, a partir de 10 peças.",
+      "Peça avulsa, malha premium."
     ],
     "qualidade_avulso": [
       "Malha premium, qualidade superior — você sente a diferença assim que veste.",
@@ -413,14 +414,14 @@
       "Me chama no direct que te passo os detalhes 💬"
     ],
     "conforto": [
-      "Modelagem que dá liberdade pra se mexer.",
       "Costura bem feita, que não incomoda na pele.",
       "Firme sem ser apertada. É isso que a cliente procura.",
       "Cós que não enrola e não aperta a barriga.",
       "Conforto é o que faz a cliente usar toda semana — e indicar.",
       "Tecido macio, que não pinica nem esquenta demais.",
       "Dá pra agachar, correr e alongar sem ficar ajeitando a roupa.",
-      "Veste bem do treino da manhã até o fim do dia."
+      "Veste bem do treino da manhã até o fim do dia.",
+      "Feita pra treinar, trabalhar ou só ficar em casa — confortável do mesmo jeito."
     ],
     "renda_extra": [
       "Dá pra começar pequeno e ir crescendo — peça que gira bem ajuda muito.",
