@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -34,7 +34,8 @@
       "2107380",
       "3874845",
       "449557",
-      "2049307"
+      "2049307",
+      "402270"
     ],
     "avulso": [
       "3117836",
@@ -66,11 +67,11 @@
     ]
   },
   "ultimos_pilares": [
-    "renda_extra",
     "cliente_ama",
     "conforto",
     "renda_extra",
-    "lucratividade"
+    "lucratividade",
+    "estilo"
   ],
   "conhecidos": {
     "kits": [
@@ -363,17 +364,17 @@
       "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦"
     ],
     "tag_kits": [
-      "Kit fechado, 5 peças, suplex vip.",
       "Vendido em kit fechado, cores sortidas.",
       "É kit fechado com 5 peças, em suplex vip.",
-      "Kit fechado — ótimo pra começar a revender."
+      "Kit fechado — ótimo pra começar a revender.",
+      "Vem em kit fechado de 5, tecido suplex vip."
     ],
     "cta_bio": [
-      "Pedido pelo site, link na bio 🛍️",
       "Link da bio te leva direto pro catálogo 📲",
       "Catálogo completo — link na bio ✨",
       "Catálogo inteiro tá no link da bio 👆",
-      "Link na bio 🔗"
+      "Link na bio 🔗",
+      "Vê as cores e monta seu pedido pelo link da bio 🔗"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -402,10 +403,10 @@
       "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦"
     ],
     "preco_kits": [
-      "{quantidade}: {preco}.",
       "Kit com {quantidade} por {preco}.",
       "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
-      "Hoje, {quantidade} saem por {preco}."
+      "Hoje, {quantidade} saem por {preco}.",
+      "{quantidade} por {preco} — já pode revender no seu preço."
     ],
     "cta_alt": [
       "Chama no direct pra garantir o seu 💬",
@@ -432,14 +433,14 @@
       "Revender moda fitness é bom porque a cliente sempre volta pra comprar mais."
     ],
     "estilo": [
-      "Bonita no treino e bonita na rua também.",
       "Peça que fica linda na foto — ajuda muito na hora de divulgar.",
       "Moda fitness que dá pra usar no mercado, no passeio e na academia.",
       "Modelagem atual, cores que estão em alta — moda fitness que também é moda de rua.",
       "Cores que chamam atenção na vitrine e no seu status.",
       "Visual arrumado sem esforço nenhum.",
       "Modelo que não sai de moda de uma estação pra outra.",
-      "Tem cara de peça cara, mas com preço de atacado."
+      "Tem cara de peça cara, mas com preço de atacado.",
+      "Sai da academia e já segue o dia sem trocar de roupa."
     ],
     "qualidade_kits": [
       "Pode fazer o teste do agachamento: zero transparência.",
