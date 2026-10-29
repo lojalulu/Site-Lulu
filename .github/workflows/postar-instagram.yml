@@ -109,8 +109,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           H=$(date -u -d '-3 hours' +%H)
-          if [ "$H" -ge 17 ] && [ "$H" -le 21 ]; then
+          if [ "$H" -ge 17 ] && [ "$H" -le 22 ]; then
             gh workflow run postar-reel.yml -f auto=true || echo "não consegui disparar o Reel"
           else
-            echo "Fora da janela do Reel (Salvador ${H}h) — Reel só entre 17h e 21h59."
+            echo "Fora da janela do Reel (Salvador ${H}h) — Reel só entre 17h e 22h59."
           fi

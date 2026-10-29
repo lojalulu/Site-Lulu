@@ -610,7 +610,7 @@ def main():
     hist = carregar_historico()
     _agora = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=3)  # hora de Salvador
     if (os.environ.get("GITHUB_EVENT_NAME") == "schedule" or os.environ.get("AUTO") == "true") \
-            and os.environ.get("CRON_TESTE") != "1" and not (17 <= _agora.hour <= 21):
+            and os.environ.get("CRON_TESTE") != "1" and not (17 <= _agora.hour <= 22):
         print(f"Fora da janela de postagem (Salvador {_agora:%H:%M}) — NÃO publica.")
         return
     hoje = (datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=3)).date().isoformat()  # data em Salvador
