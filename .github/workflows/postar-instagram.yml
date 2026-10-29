@@ -20,7 +20,29 @@ permissions:
   actions: write
 
 jobs:
+  janela:
+    # TRAVA DE HORÁRIO: o GitHub atrasa execuções agendadas por horas. Fora da janela
+    # (Salvador 7h–22h59) rodadas automáticas/atrasadas NÃO publicam nada.
+    runs-on: ubuntu-latest
+    outputs:
+      ok: ${{ steps.j.outputs.ok }}
+    steps:
+      - id: j
+        env:
+          EVENTO: ${{ github.event_name }}
+        run: |
+          H=$(date -u -d '-3 hours' +%-H)
+          echo "Salvador agora: ${H}h | evento: $EVENTO"
+          if [ "$EVENTO" = "schedule" ] && { [ "$H" -lt 7 ] || [ "$H" -gt 22 ]; }; then
+            echo "Fora da janela de postagem — NÃO publica."
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          fi
+
   postar:
+    needs: janela
+    if: needs.janela.outputs.ok == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Baixar o repositório
@@ -87,8 +109,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           H=$(date -u -d '-3 hours' +%H)
-          if [ "$H" -ge 17 ]; then
+          if [ "$H" -ge 17 ] && [ "$H" -le 21 ]; then
             gh workflow run postar-reel.yml -f auto=true || echo "não consegui disparar o Reel"
           else
-            echo "Ainda é cedo (Salvador ${H}h) — Reel só a partir das 17h."
+            echo "Fora da janela do Reel (Salvador ${H}h) — Reel só entre 17h e 21h59."
           fi

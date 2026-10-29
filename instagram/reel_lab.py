@@ -25,13 +25,13 @@ PILARES = {
     0: ("Dica de revenda", "Uma dica prática e útil pra quem revende moda fitness (como escolher mix, girar estoque, precificar, atender). Conteúdo que a pessoa queira salvar."),
     1: ("Kits em destaque", "Mostrar o valor dos kits prontos de 5 peças da Lulu pra quem revende: praticidade, variedade de cores e modelos, preço de atacado."),
     2: ("Mini franquia", "Apresentar a mini franquia Lulu: loja online própria de moda fitness, já pronta, com catálogo atualizado automaticamente. Convite pra conhecer pelo link da bio."),
-    3: ("Erro comum da revendedora", "Um erro comum de quem revende roupa (comprar sem planejamento, não ter variedade, não divulgar...) e como evitar. Tom de ajuda, nunca de bronca."),
+    3: ("Erro comum da revendedora", "Uma dificuldade comum de quem revende roupa (ter pouca variedade, não divulgar, não saber o que oferecer) e como a Lulu facilita (kits prontos com cores variadas, catálogo atualizado). Tom de ajuda, nunca de bronca, sem criticar nenhuma forma de comprar."),
     4: ("Condições do atacado", "Condições reais do atacado Lulu: pedido mínimo de 4 kits, frete grátis a partir de 6 kits, 10% de desconto no Pix. Foco em facilitar a decisão."),
     5: ("Moda fitness em alta", "Moda fitness que vende: peças que as clientes procuram (conjuntos, macacões, leggings, modelos plus size), por que giram bem."),
     6: ("Bastidores da Lulu", "Bastidores e confiança: marca de moda fitness que atende revendedoras de todo o Brasil, com produção própria e anos de estrada. Tom humano e próximo."),
 }
 
-MECANISMOS = ["curiosidade", "contraste", "problema específico", "erro comum",
+MECANISMOS = ["curiosidade", "contraste", "problema específico", "dificuldade comum",
               "transformação", "pergunta direta", "promessa útil", "antes e depois"]
 
 FATOS = """FATOS PERMITIDOS (use só estes; não invente nada além):
@@ -46,6 +46,7 @@ PROIBIDO = """PROIBIDO: promessa de ganho ou lucro garantido, valores em reais, 
 pedir "curta/compartilhe/salve", emojis nos textos do vídeo,
 afirmar prazo de entrega, garantia de qualidade ou exclusividade, descrever como outras lojas ou revendedoras compram,
 afirmar que dá pra montar kit peça por peça (os kits já vêm prontos),
+criticar ou chamar de erro comprar peça solta/avulsa ou comprar kit (a Lulu vende os dois), falar mal de qualquer forma de comprar,
 dizer que a pessoa terá "marca própria" (a mini franquia é uma loja online com o catálogo da Lulu),
 desvalorizar quem não tem loja, frases como "perder tempo" ou "está errado", jargões ("white label", "ecossistema", "funil")."""
 

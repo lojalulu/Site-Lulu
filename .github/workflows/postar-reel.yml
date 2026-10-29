@@ -27,7 +27,30 @@ permissions:
   issues: write
 
 jobs:
+  janela:
+    # TRAVA DE HORÁRIO: o GitHub atrasa execuções agendadas por horas. Fora da janela
+    # (Salvador 17h–21h59) rodadas automáticas/atrasadas NÃO publicam nada.
+    runs-on: ubuntu-latest
+    outputs:
+      ok: ${{ steps.j.outputs.ok }}
+    steps:
+      - id: j
+        env:
+          EVENTO: ${{ github.event_name }}
+          AUTO: ${{ github.event.inputs.auto }}
+        run: |
+          H=$(date -u -d '-3 hours' +%-H)
+          echo "Salvador agora: ${H}h | evento: $EVENTO"
+          if ([ "$EVENTO" = "schedule" ] || [ "$AUTO" = "true" ]) && { [ "$H" -lt 17 ] || [ "$H" -gt 21 ]; }; then
+            echo "Fora da janela de postagem — NÃO publica."
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          fi
+
   reel:
+    needs: janela
+    if: needs.janela.outputs.ok == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
