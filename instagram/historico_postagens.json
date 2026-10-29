@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -61,15 +61,16 @@
       "334077",
       "4588258",
       "3133821",
-      "4513458"
+      "4513458",
+      "4376841"
     ]
   },
   "ultimos_pilares": [
-    "qualidade",
     "renda_extra",
     "cliente_ama",
     "conforto",
-    "renda_extra"
+    "renda_extra",
+    "lucratividade"
   ],
   "conhecidos": {
     "kits": [
@@ -381,10 +382,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Vendida avulsa, sem precisar levar kit fechado.",
       "É peça avulsa, na malha premium.",
       "Você escolhe peça por peça (mínimo de 10 no pedido).",
-      "Peça avulsa premium — você monta o pedido do seu jeito."
+      "Peça avulsa premium — você monta o pedido do seu jeito.",
+      "Atacado de peça avulsa, a partir de 10 peças."
     ],
     "qualidade_avulso": [
       "Malha premium, qualidade superior — você sente a diferença assim que veste.",
@@ -407,8 +408,8 @@
       "Hoje, {quantidade} saem por {preco}."
     ],
     "cta_alt": [
-      "Manda mensagem que a gente te ajuda a montar o pedido 💬",
-      "Chama no direct pra garantir o seu 💬"
+      "Chama no direct pra garantir o seu 💬",
+      "Me chama no direct que te passo os detalhes 💬"
     ],
     "conforto": [
       "Modelagem que dá liberdade pra se mexer.",
@@ -459,14 +460,14 @@
       "Últimas unidades desse lote — reposição não tem data certa."
     ],
     "lucratividade": [
-      "Peça que você revende pelo dobro e a cliente ainda acha justo.",
       "Compra no kit, sai mais em conta por peça, revende com lucro tranquilo.",
       "Você define seu preço de venda — a margem fica com você.",
       "Comprando direto da fábrica, sobra mais no seu bolso em cada venda.",
       "Custo baixo por peça é o que faz a revenda valer a pena.",
       "Quanto menor o custo, mais fácil fica competir e ainda lucrar.",
       "Lucro bom começa na hora da compra — e esse preço ajuda.",
-      "É difícil achar peça com esse preço e essa qualidade pra revender."
+      "É difícil achar peça com esse preço e essa qualidade pra revender.",
+      "Atacado com preço pensado pra quem revende."
     ],
     "cliente_ama": [
       "Quem comprou elogiou o caimento — e caimento bom é venda garantida.",
