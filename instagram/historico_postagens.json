@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -33,7 +33,8 @@
       "3745068",
       "2107380",
       "3874845",
-      "449557"
+      "449557",
+      "2049307"
     ],
     "avulso": [
       "3117836",
@@ -64,11 +65,11 @@
     ]
   },
   "ultimos_pilares": [
-    "lancamento",
     "qualidade",
     "renda_extra",
     "cliente_ama",
-    "conforto"
+    "conforto",
+    "renda_extra"
   ],
   "conhecidos": {
     "kits": [
@@ -361,17 +362,17 @@
       "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦"
     ],
     "tag_kits": [
-      "Vem em kit fechado de 5, tecido suplex vip.",
       "Kit fechado, 5 peças, suplex vip.",
       "Vendido em kit fechado, cores sortidas.",
-      "É kit fechado com 5 peças, em suplex vip."
+      "É kit fechado com 5 peças, em suplex vip.",
+      "Kit fechado — ótimo pra começar a revender."
     ],
     "cta_bio": [
-      "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Pedido pelo site, link na bio 🛍️",
       "Link da bio te leva direto pro catálogo 📲",
       "Catálogo completo — link na bio ✨",
-      "Catálogo inteiro tá no link da bio 👆"
+      "Catálogo inteiro tá no link da bio 👆",
+      "Link na bio 🔗"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -400,10 +401,10 @@
       "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦"
     ],
     "preco_kits": [
-      "{quantidade} por {preco} — já pode revender no seu preço.",
       "{quantidade}: {preco}.",
       "Kit com {quantidade} por {preco}.",
-      "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça."
+      "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
+      "Hoje, {quantidade} saem por {preco}."
     ],
     "cta_alt": [
       "Manda mensagem que a gente te ajuda a montar o pedido 💬",
@@ -420,14 +421,14 @@
       "Veste bem do treino da manhã até o fim do dia."
     ],
     "renda_extra": [
-      "Peça que você posta no status e já aparece gente perguntando o preço.",
       "Dá pra começar pequeno e ir crescendo — peça que gira bem ajuda muito.",
       "Quer começar a revender? Esse é o tipo de peça que facilita.",
       "Se o objetivo é aumentar a renda, começa pelo que vende fácil.",
       "Boa pra quem vende pra academia, vizinhança ou grupo de amigas.",
       "Muita revendedora começou com um kit só e hoje compra todo mês.",
       "Se você revende moda fitness, essa é a peça que sai rápido.",
-      "Quem revende sabe: peça boa e barata é lucro certo no fim do mês."
+      "Quem revende sabe: peça boa e barata é lucro certo no fim do mês.",
+      "Revender moda fitness é bom porque a cliente sempre volta pra comprar mais."
     ],
     "estilo": [
       "Bonita no treino e bonita na rua também.",
