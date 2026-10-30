@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -36,7 +36,8 @@
       "449557",
       "2049307",
       "402270",
-      "3388638"
+      "3388638",
+      "318110"
     ],
     "avulso": [
       "3117836",
@@ -70,11 +71,11 @@
     ]
   },
   "ultimos_pilares": [
-    "lucratividade",
     "estilo",
     "conforto",
     "disponibilidade",
-    "qualidade"
+    "qualidade",
+    "conforto"
   ],
   "conhecidos": {
     "kits": [
@@ -367,17 +368,17 @@
       "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛"
     ],
     "tag_kits": [
-      "É kit fechado com 5 peças, em suplex vip.",
       "Kit fechado — ótimo pra começar a revender.",
       "Vem em kit fechado de 5, tecido suplex vip.",
-      "Kit com cores variadas."
+      "Kit com cores variadas.",
+      "Vendido em kit fechado, cores sortidas."
     ],
     "cta_bio": [
-      "Link na bio 🔗",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Dá uma espiada no link da bio 💗",
       "Os outros modelos estão no link da bio 👆",
-      "Pedido pelo site, link na bio 🛍️"
+      "Pedido pelo site, link na bio 🛍️",
+      "Link da bio te leva direto pro catálogo 📲"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -406,24 +407,24 @@
       "Frete grátis (Vip) pra Salvador e todo o Brasil 🚚"
     ],
     "preco_kits": [
-      "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
       "Hoje, {quantidade} saem por {preco}.",
       "{quantidade} por {preco} — já pode revender no seu preço.",
-      "{quantidade} - só {preco}."
+      "{quantidade} - só {preco}.",
+      "{preco} no kit com {quantidade}."
     ],
     "cta_alt": [
       "Chama no direct pra garantir o seu 💬",
       "Me chama no direct que te passo os detalhes 💬"
     ],
     "conforto": [
-      "Costura bem feita, que não incomoda na pele.",
       "Firme sem ser apertada. É isso que a cliente procura.",
       "Cós que não enrola e não aperta a barriga.",
       "Conforto é o que faz a cliente usar toda semana — e indicar.",
       "Tecido macio, que não pinica nem esquenta demais.",
       "Dá pra agachar, correr e alongar sem ficar ajeitando a roupa.",
       "Veste bem do treino da manhã até o fim do dia.",
-      "Feita pra treinar, trabalhar ou só ficar em casa — confortável do mesmo jeito."
+      "Feita pra treinar, trabalhar ou só ficar em casa — confortável do mesmo jeito.",
+      "Malha que acompanha o corpo sem apertar — conforto o dia inteiro."
     ],
     "renda_extra": [
       "Dá pra começar pequeno e ir crescendo — peça que gira bem ajuda muito.",
