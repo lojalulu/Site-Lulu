@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -35,7 +35,8 @@
       "3874845",
       "449557",
       "2049307",
-      "402270"
+      "402270",
+      "3388638"
     ],
     "avulso": [
       "3117836",
@@ -68,11 +69,11 @@
     ]
   },
   "ultimos_pilares": [
-    "conforto",
     "renda_extra",
     "lucratividade",
     "estilo",
-    "conforto"
+    "conforto",
+    "disponibilidade"
   ],
   "conhecidos": {
     "kits": [
@@ -360,22 +361,22 @@
       "Modelo inédito no catálogo. Vale a pena conferir."
     ],
     "frete_kits": [
-      "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚",
       "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚",
-      "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦"
+      "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦",
+      "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛"
     ],
     "tag_kits": [
-      "Vendido em kit fechado, cores sortidas.",
       "É kit fechado com 5 peças, em suplex vip.",
       "Kit fechado — ótimo pra começar a revender.",
-      "Vem em kit fechado de 5, tecido suplex vip."
+      "Vem em kit fechado de 5, tecido suplex vip.",
+      "Kit com cores variadas."
     ],
     "cta_bio": [
-      "Catálogo completo — link na bio ✨",
       "Catálogo inteiro tá no link da bio 👆",
       "Link na bio 🔗",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
-      "Dá uma espiada no link da bio 💗"
+      "Dá uma espiada no link da bio 💗",
+      "Os outros modelos estão no link da bio 👆"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -404,10 +405,10 @@
       "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦"
     ],
     "preco_kits": [
-      "Kit com {quantidade} por {preco}.",
       "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
       "Hoje, {quantidade} saem por {preco}.",
-      "{quantidade} por {preco} — já pode revender no seu preço."
+      "{quantidade} por {preco} — já pode revender no seu preço.",
+      "{quantidade} - só {preco}."
     ],
     "cta_alt": [
       "Chama no direct pra garantir o seu 💬",
@@ -453,13 +454,13 @@
       "Suplex vip, zero transparência — testado antes de entrar no catálogo."
     ],
     "disponibilidade": [
-      "Estoque limitado nessa leva.",
       "Enquanto durar o estoque desse lote, o preço continua esse.",
       "Quem viu primeiro já garantiu. Ainda dá tempo.",
       "Esse modelo costuma acabar rápido — melhor não deixar pra depois.",
       "Poucas peças disponíveis por enquanto.",
       "Garante o seu antes que o lote acabe.",
-      "Últimas unidades desse lote — reposição não tem data certa."
+      "Últimas unidades desse lote — reposição não tem data certa.",
+      "Esse aqui já está saindo bastante essa semana."
     ],
     "lucratividade": [
       "Compra no kit, sai mais em conta por peça, revende com lucro tranquilo.",
