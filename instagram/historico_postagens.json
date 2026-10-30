@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -67,15 +67,16 @@
       "4513458",
       "4376841",
       "3552750",
-      "332840"
+      "332840",
+      "4298763"
     ]
   },
   "ultimos_pilares": [
-    "estilo",
     "conforto",
     "disponibilidade",
     "qualidade",
-    "conforto"
+    "conforto",
+    "lucratividade"
   ],
   "conhecidos": {
     "kits": [
@@ -374,11 +375,11 @@
       "Vendido em kit fechado, cores sortidas."
     ],
     "cta_bio": [
-      "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Dá uma espiada no link da bio 💗",
       "Os outros modelos estão no link da bio 👆",
       "Pedido pelo site, link na bio 🛍️",
-      "Link da bio te leva direto pro catálogo 📲"
+      "Link da bio te leva direto pro catálogo 📲",
+      "Catálogo inteiro tá no link da bio 👆"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -387,10 +388,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Peça avulsa premium — você monta o pedido do seu jeito.",
       "Atacado de peça avulsa, a partir de 10 peças.",
       "Peça avulsa, malha premium.",
-      "É peça avulsa, na malha premium."
+      "É peça avulsa, na malha premium.",
+      "Vendida avulsa, sem precisar levar kit fechado."
     ],
     "qualidade_avulso": [
       "Malha premium com toque macio e caimento bonito.",
@@ -465,14 +466,14 @@
       "Esse aqui já está saindo bastante essa semana."
     ],
     "lucratividade": [
-      "Compra no kit, sai mais em conta por peça, revende com lucro tranquilo.",
       "Você define seu preço de venda — a margem fica com você.",
       "Comprando direto da fábrica, sobra mais no seu bolso em cada venda.",
       "Custo baixo por peça é o que faz a revenda valer a pena.",
       "Quanto menor o custo, mais fácil fica competir e ainda lucrar.",
       "Lucro bom começa na hora da compra — e esse preço ajuda.",
       "É difícil achar peça com esse preço e essa qualidade pra revender.",
-      "Atacado com preço pensado pra quem revende."
+      "Atacado com preço pensado pra quem revende.",
+      "Preço de atacado de verdade, sem intermediário no meio."
     ],
     "cliente_ama": [
       "Quem comprou elogiou o caimento — e caimento bom é venda garantida.",
