@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -65,15 +65,16 @@
       "3133821",
       "4513458",
       "4376841",
-      "3552750"
+      "3552750",
+      "332840"
     ]
   },
   "ultimos_pilares": [
-    "renda_extra",
     "lucratividade",
     "estilo",
     "conforto",
-    "disponibilidade"
+    "disponibilidade",
+    "qualidade"
   ],
   "conhecidos": {
     "kits": [
@@ -372,11 +373,11 @@
       "Kit com cores variadas."
     ],
     "cta_bio": [
-      "Catálogo inteiro tá no link da bio 👆",
       "Link na bio 🔗",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Dá uma espiada no link da bio 💗",
-      "Os outros modelos estão no link da bio 👆"
+      "Os outros modelos estão no link da bio 👆",
+      "Pedido pelo site, link na bio 🛍️"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -385,24 +386,24 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Você escolhe peça por peça (mínimo de 10 no pedido).",
       "Peça avulsa premium — você monta o pedido do seu jeito.",
       "Atacado de peça avulsa, a partir de 10 peças.",
-      "Peça avulsa, malha premium."
+      "Peça avulsa, malha premium.",
+      "É peça avulsa, na malha premium."
     ],
     "qualidade_avulso": [
-      "Malha premium, qualidade superior — você sente a diferença assim que veste.",
       "Malha premium com toque macio e caimento bonito.",
       "Peça selecionada uma a uma, com padrão premium.",
       "Toque macio, tecido encorpado, acabamento de loja boa.",
       "Peça avulsa com malha premium: acabamento caprichado, preço de atacado.",
       "Você escolhe a peça certa pra sua cliente — sem sortimento fechado.",
-      "Qualidade que a cliente percebe logo no primeiro uso."
+      "Qualidade que a cliente percebe logo no primeiro uso.",
+      "Acabamento caprichado, costura reforçada, peça que dura."
     ],
     "frete_avulso": [
-      "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛",
       "Pedido de peça avulsa com frete grátis (Vip) 📦",
-      "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦"
+      "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦",
+      "Frete grátis (Vip) pra Salvador e todo o Brasil 🚚"
     ],
     "preco_kits": [
       "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
