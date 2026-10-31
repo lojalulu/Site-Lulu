@@ -1,0 +1,107 @@
+name: Vigiar token do Instagram
+
+# Todo dia confere se o token do Instagram ainda funciona e quantos dias faltam
+# para vencer. Abre um aviso (issue no GitHub, aparece no app) se:
+#   - o token parou de funcionar, ou
+#   - faltam 10 dias ou menos para vencer.
+# Também tenta RENOVAR o token pela própria Meta (refresh). Se a Meta devolver o
+# mesmo token com prazo novo, ele se estende sozinho (sem precisar trocar nada).
+on:
+  schedule:
+    - cron: '17 12 * * *'   # ~09:17 Salvador (todo dia; se o GitHub pular um dia, o seguinte cobre)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: vigiar-token
+  cancel-in-progress: false
+
+env:
+  # Data em que o token ATUAL vence (atualizar quando colocar um token novo no Secret)
+  TOKEN_VENCE: '2026-12-19'
+
+jobs:
+  vigiar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Conferir e tentar renovar o token
+        id: v
+        env:
+          TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request, urllib.parse
+          from datetime import datetime, timedelta, timezone
+          tok = os.environ["TOKEN"]
+          agora = datetime.now(timezone.utc)
+          def get(url, params):
+              q = urllib.parse.urlencode(params)
+              try:
+                  with urllib.request.urlopen(f"{url}?{q}", timeout=30) as r:
+                      return r.status, json.loads(r.read())
+              except urllib.error.HTTPError as e:
+                  try: return e.code, json.loads(e.read())
+                  except Exception: return e.code, {}
+              except Exception as e:
+                  return 0, {"erro": str(e)}
+
+          st, me = get("https://graph.instagram.com/v23.0/me", {"fields": "username", "access_token": tok})
+          valido = st == 200 and "username" in me
+          erro = "" if valido else json.dumps(me.get("error", me), ensure_ascii=False)[:300]
+
+          renovou, mesmo, vence = False, None, datetime.fromisoformat(os.environ["TOKEN_VENCE"]).replace(tzinfo=timezone.utc)
+          if valido:
+              st2, rf = get("https://graph.instagram.com/refresh_access_token",
+                            {"grant_type": "ig_refresh_token", "access_token": tok})
+              if st2 == 200 and rf.get("expires_in"):
+                  renovou = True
+                  mesmo = rf.get("access_token") == tok
+                  if mesmo:
+                      # mesmo token com prazo renovado: o vencimento real passa a ser o novo
+                      vence = max(vence, agora + timedelta(seconds=int(rf["expires_in"])))
+
+          dias = (vence - agora).days
+          linhas = [
+              f"Conferido em: {agora - timedelta(hours=3):%d/%m/%Y %H:%M} (Salvador)",
+              f"Token funcionando: {'SIM' if valido else 'NAO'}",
+              f"Vence em: {vence:%d/%m/%Y} (faltam {dias} dias)",
+              f"Renovacao automatica pela Meta: {'funcionou' if renovou else 'nao'}" + ("" if mesmo is None else (" (mesmo token, prazo estendido)" if mesmo else " (Meta devolveu token NOVO — o Secret precisa ser trocado)")),
+          ]
+          if erro: linhas.append(f"Erro: {erro}")
+          os.makedirs("instagram", exist_ok=True)
+          open("instagram/status_token.txt", "w").write("\n".join(linhas) + "\n")
+          print("\n".join(linhas))
+
+          alerta = ""
+          if not valido:
+              alerta = "Token do Instagram PAROU de funcionar — posts e Reels vão falhar"
+          elif dias <= 10:
+              alerta = f"Token do Instagram vence em {dias} dias ({vence:%d/%m}) — renovar"
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(f"alerta={alerta}\n")
+          PY
+
+      - name: Salvar o resultado no repositório
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add instagram/status_token.txt
+          git diff --cached --quiet || git commit -m "Status do token do Instagram"
+          for i in 1 2 3 4 5; do git pull --rebase origin main && git push && break; sleep $((i*4)); done
+
+      - name: Abrir aviso no GitHub
+        if: steps.v.outputs.alerta != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          T: ${{ steps.v.outputs.alerta }}
+        run: |
+          if [ -z "$(gh issue list --state open --search "Token do Instagram in:title" --json number --jq '.[0].number')" ]; then
+            gh issue create --title "$T" --body "Veja instagram/status_token.txt. Como renovar: developers.facebook.com → app Automacao pessoal LULU → gerar token novo → GitHub Site-Lulu → Settings → Secrets → INSTAGRAM_ACCESS_TOKEN. Depois atualizar TOKEN_VENCE em .github/workflows/vigiar-token-instagram.yml."
+          fi
