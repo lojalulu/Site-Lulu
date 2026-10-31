@@ -1,0 +1,68 @@
+name: Diagnostico Instagram (temporario)
+
+# Só LÊ: testa quais permissões o token do Instagram tem (perfil, métricas,
+# comentários, Direct). Não publica nada. Grava o resultado (sem o token)
+# em instagram/diagnostico_permissoes.txt.
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Testar permissões
+        env:
+          TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request, urllib.parse
+          T = os.environ["TOKEN"]; B = "https://graph.instagram.com/v23.0"
+          def get(path, **p):
+              p["access_token"] = T
+              try:
+                  with urllib.request.urlopen(f"{B}/{path}?{urllib.parse.urlencode(p)}", timeout=30) as r:
+                      return r.status, json.loads(r.read())
+              except urllib.error.HTTPError as e:
+                  try: return e.code, json.loads(e.read())
+                  except Exception: return e.code, {}
+          out = []
+          def teste(nome, path, **p):
+              st, d = get(path, **p)
+              if st == 200:
+                  resumo = json.dumps(d, ensure_ascii=False)[:400]
+                  out.append(f"[OK] {nome}: {resumo}")
+              else:
+                  err = d.get("error", {})
+                  out.append(f"[FALHOU {st}] {nome}: {err.get('message','')} (code {err.get('code')})")
+              return st, d
+          teste("perfil", "me", fields="id,username,account_type,followers_count,follows_count,media_count")
+          teste("metricas conta (alcance 7d)", "me/insights", metric="reach", period="day", metric_type="total_value")
+          teste("metricas conta (views, cliques no link da bio)", "me/insights", metric="views,profile_links_taps,accounts_engaged", period="day", metric_type="total_value")
+          st, m = teste("ultimas midias", "me/media", fields="id,media_type,media_product_type,comments_count,like_count,timestamp", limit=5)
+          midias = m.get("data", []) if st == 200 else []
+          com_coment = next((x for x in midias if x.get("comments_count")), None)
+          reel = next((x for x in midias if x.get("media_product_type") == "REELS"), None)
+          if midias:
+              teste("metricas de 1 post", f"{midias[0]['id']}/insights", metric="reach,saved,shares")
+          if reel:
+              teste("metricas de 1 Reel", f"{reel['id']}/insights", metric="reach,views,saved,shares")
+          if com_coment:
+              teste("ler comentarios", f"{com_coment['id']}/comments", fields="id,text,timestamp")
+          else:
+              out.append("[--] ler comentarios: nenhum post recente com comentario para testar")
+          teste("Direct (conversas)", "me/conversations", platform="instagram", limit=1)
+          txt = "\n".join(out)
+          print(txt)
+          open("instagram/diagnostico_permissoes.txt", "w").write(txt + "\n")
+          PY
+      - name: Salvar resultado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add instagram/diagnostico_permissoes.txt
+          git diff --cached --quiet || git commit -m "Diagnóstico de permissões do Instagram"
+          for i in 1 2 3; do git pull --rebase origin main && git push && break; sleep 5; done
