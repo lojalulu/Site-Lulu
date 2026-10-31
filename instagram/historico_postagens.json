@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -38,7 +38,8 @@
       "402270",
       "3388638",
       "318110",
-      "477655"
+      "477655",
+      "906628"
     ],
     "avulso": [
       "3117836",
@@ -74,11 +75,11 @@
     ]
   },
   "ultimos_pilares": [
-    "qualidade",
     "conforto",
     "lucratividade",
     "cliente_ama",
-    "qualidade"
+    "qualidade",
+    "lucratividade"
   ],
   "conhecidos": {
     "kits": [
@@ -371,10 +372,10 @@
       "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛"
     ],
     "tag_kits": [
-      "Vem em kit fechado de 5, tecido suplex vip.",
       "Kit com cores variadas.",
       "Vendido em kit fechado, cores sortidas.",
-      "É kit fechado com 5 peças, em suplex vip."
+      "É kit fechado com 5 peças, em suplex vip.",
+      "Kit fechado — ótimo pra começar a revender."
     ],
     "cta_bio": [
       "Pedido pelo site, link na bio 🛍️",
@@ -416,8 +417,8 @@
       "{preco} no kit com {quantidade}."
     ],
     "cta_alt": [
-      "Chama no direct pra garantir o seu 💬",
-      "Me chama no direct que te passo os detalhes 💬"
+      "Me chama no direct que te passo os detalhes 💬",
+      "Manda mensagem que a gente te ajuda a montar o pedido 💬"
     ],
     "conforto": [
       "Firme sem ser apertada. É isso que a cliente procura.",
@@ -468,14 +469,14 @@
       "Esse aqui já está saindo bastante essa semana."
     ],
     "lucratividade": [
-      "Você define seu preço de venda — a margem fica com você.",
       "Comprando direto da fábrica, sobra mais no seu bolso em cada venda.",
       "Custo baixo por peça é o que faz a revenda valer a pena.",
       "Quanto menor o custo, mais fácil fica competir e ainda lucrar.",
       "Lucro bom começa na hora da compra — e esse preço ajuda.",
       "É difícil achar peça com esse preço e essa qualidade pra revender.",
       "Atacado com preço pensado pra quem revende.",
-      "Preço de atacado de verdade, sem intermediário no meio."
+      "Preço de atacado de verdade, sem intermediário no meio.",
+      "Peça que você revende pelo dobro e a cliente ainda acha justo."
     ],
     "cliente_ama": [
       "Sua cliente vai amar essa modelagem — e voltar pra pedir mais.",
