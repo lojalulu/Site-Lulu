@@ -30,10 +30,11 @@ SAIDA_POST = "instagram/_saida/post.json"
 STORY_IMG_REPO_PATH = "instagram/_saida/story.jpg"
 
 
-def url_bruta_da_imagem_no_github() -> str:
+def url_bruta_da_imagem_no_github(caminho: str = STORY_IMG_REPO_PATH) -> str:
     if not REPO:
         raise RuntimeError("GITHUB_REPOSITORY não definido — rode isso dentro do GitHub Actions.")
-    return f"https://raw.githubusercontent.com/{REPO}/main/{STORY_IMG_REPO_PATH}"
+    # ?v= evita a Meta pegar a imagem antiga do cache (mesmo nome de arquivo toda vez)
+    return f"https://raw.githubusercontent.com/{REPO}/main/{caminho}?v={int(time.time())}"
 
 
 def _checar_erro(resp: requests.Response, contexto: str):
@@ -98,21 +99,37 @@ def main():
 
     print(f"Publicando: [{post['loja']}] {post['produto_nome']}")
 
-    # ----- 1) Feed: foto real do produto + legenda -----
-    print("Criando post do feed...")
-    container_feed = criar_container(post["foto_feed_url"], caption=post["legenda_feed"])
-    esperar_pronto(container_feed)
-    id_feed = publicar(container_feed)
-    print(f"Feed publicado: {id_feed}")
+    falhas = []
 
-    # ----- 2) Story: imagem composta (Link na bio), já publicada no GitHub -----
-    print("Criando Story...")
-    url_story = url_bruta_da_imagem_no_github()
-    container_story = criar_container(url_story, media_type="STORIES")
-    esperar_pronto(container_story)
-    id_story = publicar(container_story)
-    print(f"Story publicado: {id_story}")
+    # ----- 1) Feed: foto do produto (JPEG convertido) + legenda -----
+    try:
+        print("Criando post do feed...")
+        if post.get("feed_img_repo_path"):
+            url_feed = url_bruta_da_imagem_no_github(post["feed_img_repo_path"])
+        else:
+            url_feed = post["foto_feed_url"]
+        container_feed = criar_container(url_feed, caption=post["legenda_feed"])
+        esperar_pronto(container_feed)
+        id_feed = publicar(container_feed)
+        print(f"Feed publicado: {id_feed}")
+    except Exception as e:
+        print(f"FEED FALHOU: {e}")
+        falhas.append(f"feed: {e}")
 
+    # ----- 2) Story: sai mesmo se o feed falhar -----
+    try:
+        print("Criando Story...")
+        url_story = url_bruta_da_imagem_no_github()
+        container_story = criar_container(url_story, media_type="STORIES")
+        esperar_pronto(container_story)
+        id_story = publicar(container_story)
+        print(f"Story publicado: {id_story}")
+    except Exception as e:
+        print(f"STORY FALHOU: {e}")
+        falhas.append(f"story: {e}")
+
+    if falhas:
+        raise RuntimeError(" | ".join(falhas))
     print("\nTudo certo — feed e story publicados com sucesso.")
 
 

@@ -8,7 +8,11 @@ on:
     - cron: '0 21 * * *'   # 18:00 em Salvador
     - cron: '30 22 * * *'  # 19:30 em Salvador
     - cron: '0 0 * * *'    # 21:00 em Salvador
-  workflow_dispatch:          # permite clicar em "Run workflow" manualmente
+  workflow_dispatch:          # "Run workflow" manual OU relógio externo (cron-job.org)
+    inputs:
+      auto:
+        description: "Disparo automático (cron-job.org) — respeita janela e limite de posts do dia"
+        default: "false"
 
 concurrency:
   group: postar-instagram
@@ -21,24 +25,52 @@ permissions:
 
 jobs:
   janela:
-    # TRAVA DE HORÁRIO: o GitHub atrasa execuções agendadas por horas. Fora da janela
-    # (Salvador 7h–22h59) rodadas automáticas/atrasadas NÃO publicam nada.
+    # TRAVAS das rodadas automáticas (agendamento do GitHub ou cron-job.org com auto=true):
+    # 1) só entre 7h e 22h59 de Salvador (o GitHub atrasa rodadas por horas);
+    # 2) só posta se o dia está "devendo" post: posts feitos hoje < horários já vencidos
+    #    (08:00, 10:00, 12:00, 18:00, 19:30, 21:00). Assim o relógio externo é o principal
+    #    e o agendamento do GitHub só cobre um horário que ficou sem post — nunca duplica.
+    # Disparo manual (auto=false) ignora as travas.
     runs-on: ubuntu-latest
     outputs:
       ok: ${{ steps.j.outputs.ok }}
     steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: instagram/historico_postagens.json
+          sparse-checkout-cone-mode: false
       - id: j
         env:
           EVENTO: ${{ github.event_name }}
+          AUTO: ${{ github.event.inputs.auto }}
         run: |
-          H=$(date -u -d '-3 hours' +%-H)
-          echo "Salvador agora: ${H}h | evento: $EVENTO"
-          if [ "$EVENTO" = "schedule" ] && { [ "$H" -lt 7 ] || [ "$H" -gt 22 ]; }; then
-            echo "Fora da janela de postagem — NÃO publica."
-            echo "ok=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "ok=true" >> "$GITHUB_OUTPUT"
-          fi
+          python3 - <<'PY'
+          import json, os
+          from datetime import datetime, timedelta, timezone
+          agora = datetime.now(timezone.utc) - timedelta(hours=3)   # Salvador
+          evento, auto = os.environ["EVENTO"], os.environ.get("AUTO") or ""
+          automatico = evento == "schedule" or auto == "true"
+          ok = True
+          print(f"Salvador agora: {agora:%d/%m %H:%M} | evento: {evento} | auto: {auto}")
+          if automatico:
+              if agora.hour < 7 or agora.hour > 22:
+                  print("Fora da janela 7h-22h59 — NÃO publica."); ok = False
+              else:
+                  try:
+                      h = json.load(open("instagram/historico_postagens.json", encoding="utf-8"))
+                  except Exception:
+                      h = {}
+                  c = h.get("contagem_dia") or {}
+                  feitos = c.get("n", 0) if c.get("data") == agora.strftime("%Y-%m-%d") else 0
+                  limite = agora + timedelta(minutes=20)   # tolera relógio adiantado
+                  minutos = limite.hour * 60 + limite.minute
+                  vencidos = sum(1 for s in (480, 600, 720, 1080, 1170, 1260) if s <= minutos)
+                  print(f"Posts hoje: {feitos} | horários vencidos: {vencidos}")
+                  if feitos >= vencidos:
+                      print("Nenhum horário pendente — NÃO publica (evita duplicado)."); ok = False
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(f"ok={'true' if ok else 'false'}\n")
+          PY
 
   postar:
     needs: janela
@@ -103,14 +135,16 @@ jobs:
             gh issue create --title "$T" --body "Um post (feed/story) falhou. Veja instagram/ultimo_erro_post.txt no repositório."
           fi
 
-      - name: Garantir o Reel do dia (o agendamento próprio do Reel costuma ser pulado pelo GitHub)
+      - name: Reserva do Reel do dia (caso o das 19:30 não tenha saído)
         if: always()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           H=$(date -u -d '-3 hours' +%H)
-          if [ "$H" -ge 17 ] && [ "$H" -le 22 ]; then
+          # O Reel principal vem do cron-job.org às 19:30. Aqui é só reserva:
+          # a partir das 20h, se o Reel do dia não saiu, o post das 21h dispara.
+          if [ "$H" -ge 20 ] && [ "$H" -le 22 ]; then
             gh workflow run postar-reel.yml -f auto=true || echo "não consegui disparar o Reel"
           else
-            echo "Fora da janela do Reel (Salvador ${H}h) — Reel só entre 17h e 22h59."
+            echo "Reserva do Reel só a partir das 20h (Salvador ${H}h)."
           fi

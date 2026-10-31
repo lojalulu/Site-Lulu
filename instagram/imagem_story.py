@@ -5,9 +5,10 @@ via automação, escrevemos o convite direto na imagem.
 """
 
 import io
+import math
 import os
 import requests
-from PIL import Image, ImageDraw, ImageFont, ImageOps
+from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
 
 LARGURA, ALTURA = 1080, 1920  # proporção 9:16 padrão de Story
 
@@ -144,7 +145,47 @@ def _desenhar_linha_com_emoji(canvas: Image.Image, draw, linha: str, y: int, fon
 def _baixar_foto_produto(url_imagem: str) -> Image.Image:
     resp = requests.get(url_imagem, timeout=20)
     resp.raise_for_status()
-    return Image.open(io.BytesIO(resp.content)).convert("RGB")
+    img = Image.open(io.BytesIO(resp.content))
+    img = ImageOps.exif_transpose(img)
+    if img.mode in ("RGBA", "LA", "P"):
+        # PNG com transparência: fundo branco (senão vira preto)
+        img = img.convert("RGBA")
+        fundo = Image.new("RGBA", img.size, (255, 255, 255, 255))
+        fundo.alpha_composite(img)
+        img = fundo
+    return img.convert("RGB")
+
+
+# Feed do Instagram: só aceita proporção entre 4:5 (0,8) e 1,91:1, e a API
+# só aceita JPEG com segurança (PNG do fornecedor já falhou — 31/10/2026).
+FEED_LARGURA = 1080
+FEED_PROP_MIN, FEED_PROP_MAX = 0.8, 1.91
+
+
+def gerar_imagem_feed(url_foto_produto: str) -> bytes:
+    """Converte a foto do produto num JPEG que o Instagram sempre aceita:
+    largura 1080, proporção dentro do permitido. Se a foto for alta/larga
+    demais, a foto inteira fica no centro sobre um fundo borrado dela
+    mesma (nada da roupa é cortado)."""
+    foto = _baixar_foto_produto(url_foto_produto)
+    w, h = foto.size
+    prop = w / h
+    if FEED_PROP_MIN <= prop <= FEED_PROP_MAX:
+        alvo_w, alvo_h = FEED_LARGURA, math.ceil(FEED_LARGURA / prop)
+        canvas = foto.resize((alvo_w, alvo_h), Image.LANCZOS)
+    else:
+        prop_alvo = FEED_PROP_MIN if prop < FEED_PROP_MIN else FEED_PROP_MAX
+        alvo_w, alvo_h = FEED_LARGURA, math.ceil(FEED_LARGURA / prop_alvo)
+        fundo = ImageOps.fit(foto, (alvo_w, alvo_h), method=Image.LANCZOS)
+        fundo = fundo.filter(ImageFilter.GaussianBlur(40))
+        fundo = Image.blend(fundo, Image.new("RGB", fundo.size, (255, 255, 255)), 0.35)
+        f = min(alvo_w / w, alvo_h / h)
+        nova = foto.resize((max(1, round(w * f)), max(1, round(h * f))), Image.LANCZOS)
+        fundo.paste(nova, ((alvo_w - nova.width) // 2, (alvo_h - nova.height) // 2))
+        canvas = fundo
+    buf = io.BytesIO()
+    canvas.save(buf, format="JPEG", quality=92, optimize=True)
+    return buf.getvalue()
 
 
 def _preencher_cover(img: Image.Image, largura: int, altura: int) -> Image.Image:

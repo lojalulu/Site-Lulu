@@ -10,14 +10,16 @@ publicar no próximo passo.
 import json
 import os
 import random
+from datetime import datetime, timedelta, timezone
 
 from conteudo import gerar_post
-from imagem_story import gerar_imagem_story
+from imagem_story import gerar_imagem_feed, gerar_imagem_story
 
 HISTORICO_PATH = "instagram/historico_postagens.json"
 SAIDA_DIR = "instagram/_saida"
 SAIDA_POST = f"{SAIDA_DIR}/post.json"
 SAIDA_STORY_IMG = f"{SAIDA_DIR}/story.jpg"
+SAIDA_FEED_IMG = f"{SAIDA_DIR}/feed.jpg"
 
 LOJAS = {
     "kits": "produtos.json",
@@ -136,11 +138,16 @@ def main():
     with open(SAIDA_STORY_IMG, "wb") as f:
         f.write(imagem_bytes)
 
+    # foto do feed sempre convertida pra JPEG em proporção aceita pelo Instagram
+    with open(SAIDA_FEED_IMG, "wb") as f:
+        f.write(gerar_imagem_feed(produto["imagens"][0]))
+
     saida = {
         "loja": loja,
         "produto_id": produto["id"],
         "produto_nome": produto["nome"],
-        "foto_feed_url": produto["imagens"][0],
+        "foto_feed_url": produto["imagens"][0],  # original (referência)
+        "feed_img_repo_path": SAIDA_FEED_IMG,
         "legenda_feed": post["legenda_feed"],
         "pilar": post["pilar"],
         "eh_lancamento": eh_lancamento,
@@ -153,6 +160,12 @@ def main():
     historico["postados"][loja].append(produto["id"])
     historico["ultimos_pilares"] = (historico["ultimos_pilares"] + [post["pilar"]])[-5:]
     historico["proxima_loja"] = "avulso" if loja == "kits" else "kits"
+    # contagem de posts do dia (Salvador) — usada pela trava que evita post
+    # duplicado quando o relógio externo e o agendamento do GitHub rodam juntos
+    hoje = (datetime.now(timezone.utc) - timedelta(hours=3)).strftime("%Y-%m-%d")
+    cont = historico.get("contagem_dia") or {}
+    n = cont.get("n", 0) if cont.get("data") == hoje else 0
+    historico["contagem_dia"] = {"data": hoje, "n": n + 1}
     salvar_historico(historico)
 
     tag = " [LANÇAMENTO]" if eh_lancamento else ""
