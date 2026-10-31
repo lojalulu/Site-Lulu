@@ -4,8 +4,6 @@ name: Vigiar token do Instagram
 # para vencer. Abre um aviso (issue no GitHub, aparece no app) se:
 #   - o token parou de funcionar, ou
 #   - faltam 10 dias ou menos para vencer.
-# Também tenta RENOVAR o token pela própria Meta (refresh). Se a Meta devolver o
-# mesmo token com prazo novo, ele se estende sozinho (sem precisar trocar nada).
 on:
   schedule:
     - cron: '17 12 * * *'   # ~09:17 Salvador (todo dia; se o GitHub pular um dia, o seguinte cobre)
@@ -56,23 +54,14 @@ jobs:
           valido = st == 200 and "username" in me
           erro = "" if valido else json.dumps(me.get("error", me), ensure_ascii=False)[:300]
 
-          renovou, mesmo, vence = False, None, datetime.fromisoformat(os.environ["TOKEN_VENCE"]).replace(tzinfo=timezone.utc)
-          if valido:
-              st2, rf = get("https://graph.instagram.com/refresh_access_token",
-                            {"grant_type": "ig_refresh_token", "access_token": tok})
-              if st2 == 200 and rf.get("expires_in"):
-                  renovou = True
-                  mesmo = rf.get("access_token") == tok
-                  if mesmo:
-                      # mesmo token com prazo renovado: o vencimento real passa a ser o novo
-                      vence = max(vence, agora + timedelta(seconds=int(rf["expires_in"])))
-
+          # (teste de 31/10/2026: o refresh da Meta devolve um token NOVO, que não dá pra
+          # salvar no Secret sozinho — por isso aqui só conferimos, sem renovar)
+          vence = datetime.fromisoformat(os.environ["TOKEN_VENCE"]).replace(tzinfo=timezone.utc)
           dias = (vence - agora).days
           linhas = [
               f"Conferido em: {agora - timedelta(hours=3):%d/%m/%Y %H:%M} (Salvador)",
               f"Token funcionando: {'SIM' if valido else 'NAO'}",
               f"Vence em: {vence:%d/%m/%Y} (faltam {dias} dias)",
-              f"Renovacao automatica pela Meta: {'funcionou' if renovou else 'nao'}" + ("" if mesmo is None else (" (mesmo token, prazo estendido)" if mesmo else " (Meta devolveu token NOVO — o Secret precisa ser trocado)")),
           ]
           if erro: linhas.append(f"Erro: {erro}")
           os.makedirs("instagram", exist_ok=True)
