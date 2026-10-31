@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -71,15 +71,16 @@
       "3552750",
       "332840",
       "4298763",
-      "875523"
+      "875523",
+      "331487"
     ]
   },
   "ultimos_pilares": [
-    "conforto",
     "lucratividade",
     "cliente_ama",
     "qualidade",
-    "lucratividade"
+    "lucratividade",
+    "cliente_ama"
   ],
   "conhecidos": {
     "kits": [
@@ -391,10 +392,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Peça avulsa, malha premium.",
       "É peça avulsa, na malha premium.",
       "Vendida avulsa, sem precisar levar kit fechado.",
-      "Você escolhe peça por peça (mínimo de 10 no pedido)."
+      "Você escolhe peça por peça (mínimo de 10 no pedido).",
+      "Peça avulsa premium — você monta o pedido do seu jeito."
     ],
     "qualidade_avulso": [
       "Peça selecionada uma a uma, com padrão premium.",
@@ -417,8 +418,8 @@
       "{preco} no kit com {quantidade}."
     ],
     "cta_alt": [
-      "Me chama no direct que te passo os detalhes 💬",
-      "Manda mensagem que a gente te ajuda a montar o pedido 💬"
+      "Manda mensagem que a gente te ajuda a montar o pedido 💬",
+      "Ficou com dúvida? Chama no direct 💬"
     ],
     "conforto": [
       "Firme sem ser apertada. É isso que a cliente procura.",
@@ -479,14 +480,18 @@
       "Peça que você revende pelo dobro e a cliente ainda acha justo."
     ],
     "cliente_ama": [
-      "Sua cliente vai amar essa modelagem — e voltar pra pedir mais.",
       "A cliente experimenta e já pergunta se tem em outra cor.",
       "Veste bem em corpos diferentes, por isso quase não tem troca.",
       "Aposta segura: modelo que agrada quase todo mundo.",
       "É o tipo de peça que a cliente compra uma e depois volta pra levar mais duas.",
       "Peça que valoriza o corpo sem apertar. Cliente satisfeita volta.",
       "Peça que vira queridinha na primeira leva — cliente ama e indica pra amiga.",
-      "Esse modelo costuma ter muita recompra."
+      "Esse modelo costuma ter muita recompra.",
+      "Cliente gosta de peça que dá pra usar muito — essa é assim."
     ]
+  },
+  "contagem_dia": {
+    "data": "2026-10-31",
+    "n": 1
   }
 }
