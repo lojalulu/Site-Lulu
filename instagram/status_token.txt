@@ -1,0 +1,4 @@
+Conferido em: 31/10/2026 14:21 (Salvador)
+Token funcionando: SIM
+Vence em: 19/12/2026 (faltam 48 dias)
+Renovacao automatica pela Meta: funcionou (Meta devolveu token NOVO — o Secret precisa ser trocado)
