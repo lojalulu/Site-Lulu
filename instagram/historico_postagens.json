@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -73,15 +73,16 @@
       "332840",
       "4298763",
       "875523",
-      "331487"
+      "331487",
+      "3118770"
     ]
   },
   "ultimos_pilares": [
-    "cliente_ama",
     "qualidade",
     "lucratividade",
     "cliente_ama",
-    "conforto"
+    "conforto",
+    "qualidade"
   ],
   "conhecidos": {
     "kits": [
@@ -393,19 +394,19 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "É peça avulsa, na malha premium.",
       "Vendida avulsa, sem precisar levar kit fechado.",
       "Você escolhe peça por peça (mínimo de 10 no pedido).",
-      "Peça avulsa premium — você monta o pedido do seu jeito."
+      "Peça avulsa premium — você monta o pedido do seu jeito.",
+      "Atacado de peça avulsa, a partir de 10 peças."
     ],
     "qualidade_avulso": [
-      "Peça selecionada uma a uma, com padrão premium.",
       "Toque macio, tecido encorpado, acabamento de loja boa.",
       "Peça avulsa com malha premium: acabamento caprichado, preço de atacado.",
       "Você escolhe a peça certa pra sua cliente — sem sortimento fechado.",
       "Qualidade que a cliente percebe logo no primeiro uso.",
       "Acabamento caprichado, costura reforçada, peça que dura.",
-      "Malha de qualidade superior, que não perde a forma."
+      "Malha de qualidade superior, que não perde a forma.",
+      "Malha premium, qualidade superior — você sente a diferença assim que veste."
     ],
     "frete_avulso": [
       "Pedido de peça avulsa com frete grátis (Vip) 📦",
@@ -419,8 +420,8 @@
       "Kit com {quantidade} por {preco}."
     ],
     "cta_alt": [
-      "Manda mensagem que a gente te ajuda a montar o pedido 💬",
-      "Ficou com dúvida? Chama no direct 💬"
+      "Ficou com dúvida? Chama no direct 💬",
+      "Me chama no direct que te passo os detalhes 💬"
     ],
     "conforto": [
       "Cós que não enrola e não aperta a barriga.",
@@ -493,6 +494,6 @@
   },
   "contagem_dia": {
     "data": "2026-10-31",
-    "n": 2
+    "n": 3
   }
 }
