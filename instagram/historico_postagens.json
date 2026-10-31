@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -40,7 +40,8 @@
       "318110",
       "477655",
       "906628",
-      "4485658"
+      "4485658",
+      "2773815"
     ],
     "avulso": [
       "3117836",
@@ -78,11 +79,11 @@
     ]
   },
   "ultimos_pilares": [
-    "qualidade",
     "lucratividade",
     "cliente_ama",
     "conforto",
-    "qualidade"
+    "qualidade",
+    "lucratividade"
   ],
   "conhecidos": {
     "kits": [
@@ -375,17 +376,17 @@
       "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛"
     ],
     "tag_kits": [
-      "Vendido em kit fechado, cores sortidas.",
       "É kit fechado com 5 peças, em suplex vip.",
       "Kit fechado — ótimo pra começar a revender.",
-      "Vem em kit fechado de 5, tecido suplex vip."
+      "Vem em kit fechado de 5, tecido suplex vip.",
+      "Kit com cores variadas."
     ],
     "cta_bio": [
-      "Link da bio te leva direto pro catálogo 📲",
       "Catálogo inteiro tá no link da bio 👆",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Catálogo completo — link na bio ✨",
-      "Link na bio 🔗"
+      "Link na bio 🔗",
+      "Os outros modelos estão no link da bio 👆"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -472,14 +473,14 @@
       "Esse aqui já está saindo bastante essa semana."
     ],
     "lucratividade": [
-      "Comprando direto da fábrica, sobra mais no seu bolso em cada venda.",
       "Custo baixo por peça é o que faz a revenda valer a pena.",
       "Quanto menor o custo, mais fácil fica competir e ainda lucrar.",
       "Lucro bom começa na hora da compra — e esse preço ajuda.",
       "É difícil achar peça com esse preço e essa qualidade pra revender.",
       "Atacado com preço pensado pra quem revende.",
       "Preço de atacado de verdade, sem intermediário no meio.",
-      "Peça que você revende pelo dobro e a cliente ainda acha justo."
+      "Peça que você revende pelo dobro e a cliente ainda acha justo.",
+      "Compra no kit, sai mais em conta por peça, revende com lucro tranquilo."
     ],
     "cliente_ama": [
       "A cliente experimenta e já pergunta se tem em outra cor.",
@@ -494,6 +495,6 @@
   },
   "contagem_dia": {
     "data": "2026-10-31",
-    "n": 3
+    "n": 4
   }
 }
