@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -42,7 +42,8 @@
       "906628",
       "4485658",
       "2773815",
-      "3703559"
+      "3703559",
+      "3950005"
     ],
     "avulso": [
       "3117836",
@@ -82,11 +83,11 @@
     ]
   },
   "ultimos_pilares": [
-    "qualidade",
     "lucratividade",
     "estilo",
     "disponibilidade",
-    "cliente_ama"
+    "cliente_ama",
+    "lucratividade"
   ],
   "conhecidos": {
     "kits": [
@@ -374,15 +375,15 @@
       "Modelo inédito no catálogo. Vale a pena conferir."
     ],
     "frete_kits": [
-      "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦",
       "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛",
-      "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦"
+      "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦",
+      "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚"
     ],
     "tag_kits": [
-      "Kit fechado — ótimo pra começar a revender.",
       "Vem em kit fechado de 5, tecido suplex vip.",
       "Kit com cores variadas.",
-      "Kit fechado, 5 peças, suplex vip."
+      "Kit fechado, 5 peças, suplex vip.",
+      "É kit fechado com 5 peças, em suplex vip."
     ],
     "cta_bio": [
       "Catálogo completo — link na bio ✨",
@@ -418,14 +419,14 @@
       "Frete grátis (Vip) pra Salvador e todo o Brasil 🚚"
     ],
     "preco_kits": [
-      "{quantidade} - só {preco}.",
       "{preco} no kit com {quantidade}.",
       "Kit com {quantidade} por {preco}.",
-      "Hoje, {quantidade} saem por {preco}."
+      "Hoje, {quantidade} saem por {preco}.",
+      "{quantidade}: {preco}."
     ],
     "cta_alt": [
-      "Me chama no direct que te passo os detalhes 💬",
-      "Manda mensagem que a gente te ajuda a montar o pedido 💬"
+      "Manda mensagem que a gente te ajuda a montar o pedido 💬",
+      "Ficou com dúvida? Chama no direct 💬"
     ],
     "conforto": [
       "Cós que não enrola e não aperta a barriga.",
@@ -476,14 +477,14 @@
       "Estoque limitado nessa leva."
     ],
     "lucratividade": [
-      "Custo baixo por peça é o que faz a revenda valer a pena.",
       "Quanto menor o custo, mais fácil fica competir e ainda lucrar.",
       "Lucro bom começa na hora da compra — e esse preço ajuda.",
       "É difícil achar peça com esse preço e essa qualidade pra revender.",
       "Atacado com preço pensado pra quem revende.",
       "Preço de atacado de verdade, sem intermediário no meio.",
       "Peça que você revende pelo dobro e a cliente ainda acha justo.",
-      "Compra no kit, sai mais em conta por peça, revende com lucro tranquilo."
+      "Compra no kit, sai mais em conta por peça, revende com lucro tranquilo.",
+      "Comprando direto da fábrica, sobra mais no seu bolso em cada venda."
     ],
     "cliente_ama": [
       "Veste bem em corpos diferentes, por isso quase não tem troca.",
@@ -498,6 +499,6 @@
   },
   "contagem_dia": {
     "data": "2026-11-01",
-    "n": 2
+    "n": 3
   }
 }
