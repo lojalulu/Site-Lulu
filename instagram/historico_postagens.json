@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -75,15 +75,16 @@
       "4298763",
       "875523",
       "331487",
-      "3118770"
+      "3118770",
+      "4323904"
     ]
   },
   "ultimos_pilares": [
-    "lucratividade",
     "cliente_ama",
     "conforto",
     "qualidade",
-    "lucratividade"
+    "lucratividade",
+    "estilo"
   ],
   "conhecidos": {
     "kits": [
@@ -395,10 +396,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Vendida avulsa, sem precisar levar kit fechado.",
       "Você escolhe peça por peça (mínimo de 10 no pedido).",
       "Peça avulsa premium — você monta o pedido do seu jeito.",
-      "Atacado de peça avulsa, a partir de 10 peças."
+      "Atacado de peça avulsa, a partir de 10 peças.",
+      "É peça avulsa, na malha premium."
     ],
     "qualidade_avulso": [
       "Toque macio, tecido encorpado, acabamento de loja boa.",
@@ -421,8 +422,8 @@
       "Kit com {quantidade} por {preco}."
     ],
     "cta_alt": [
-      "Ficou com dúvida? Chama no direct 💬",
-      "Me chama no direct que te passo os detalhes 💬"
+      "Me chama no direct que te passo os detalhes 💬",
+      "Manda mensagem que a gente te ajuda a montar o pedido 💬"
     ],
     "conforto": [
       "Cós que não enrola e não aperta a barriga.",
@@ -445,14 +446,14 @@
       "Revender moda fitness é bom porque a cliente sempre volta pra comprar mais."
     ],
     "estilo": [
-      "Peça que fica linda na foto — ajuda muito na hora de divulgar.",
       "Moda fitness que dá pra usar no mercado, no passeio e na academia.",
       "Modelagem atual, cores que estão em alta — moda fitness que também é moda de rua.",
       "Cores que chamam atenção na vitrine e no seu status.",
       "Visual arrumado sem esforço nenhum.",
       "Modelo que não sai de moda de uma estação pra outra.",
       "Tem cara de peça cara, mas com preço de atacado.",
-      "Sai da academia e já segue o dia sem trocar de roupa."
+      "Sai da academia e já segue o dia sem trocar de roupa.",
+      "Bonita no treino e bonita na rua também."
     ],
     "qualidade_kits": [
       "Pode fazer o teste do agachamento: zero transparência.",
@@ -495,6 +496,6 @@
   },
   "contagem_dia": {
     "data": "2026-10-31",
-    "n": 4
+    "n": 5
   }
 }
