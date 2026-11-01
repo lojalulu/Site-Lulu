@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -77,15 +77,16 @@
       "875523",
       "331487",
       "3118770",
-      "4323904"
+      "4323904",
+      "3118780"
     ]
   },
   "ultimos_pilares": [
-    "conforto",
     "qualidade",
     "lucratividade",
     "estilo",
-    "disponibilidade"
+    "disponibilidade",
+    "cliente_ama"
   ],
   "conhecidos": {
     "kits": [
@@ -384,11 +385,11 @@
       "Kit fechado, 5 peças, suplex vip."
     ],
     "cta_bio": [
-      "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Catálogo completo — link na bio ✨",
       "Link na bio 🔗",
       "Os outros modelos estão no link da bio 👆",
-      "Link da bio te leva direto pro catálogo 📲"
+      "Link da bio te leva direto pro catálogo 📲",
+      "Catálogo inteiro tá no link da bio 👆"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -397,10 +398,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Você escolhe peça por peça (mínimo de 10 no pedido).",
       "Peça avulsa premium — você monta o pedido do seu jeito.",
       "Atacado de peça avulsa, a partir de 10 peças.",
-      "É peça avulsa, na malha premium."
+      "É peça avulsa, na malha premium.",
+      "Peça avulsa, malha premium."
     ],
     "qualidade_avulso": [
       "Toque macio, tecido encorpado, acabamento de loja boa.",
@@ -485,18 +486,18 @@
       "Compra no kit, sai mais em conta por peça, revende com lucro tranquilo."
     ],
     "cliente_ama": [
-      "A cliente experimenta e já pergunta se tem em outra cor.",
       "Veste bem em corpos diferentes, por isso quase não tem troca.",
       "Aposta segura: modelo que agrada quase todo mundo.",
       "É o tipo de peça que a cliente compra uma e depois volta pra levar mais duas.",
       "Peça que valoriza o corpo sem apertar. Cliente satisfeita volta.",
       "Peça que vira queridinha na primeira leva — cliente ama e indica pra amiga.",
       "Esse modelo costuma ter muita recompra.",
-      "Cliente gosta de peça que dá pra usar muito — essa é assim."
+      "Cliente gosta de peça que dá pra usar muito — essa é assim.",
+      "Quem comprou elogiou o caimento — e caimento bom é venda garantida."
     ]
   },
   "contagem_dia": {
     "data": "2026-11-01",
-    "n": 1
+    "n": 2
   }
 }
