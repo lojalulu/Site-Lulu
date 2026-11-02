@@ -1,0 +1,46 @@
+name: Teste preview (temporario)
+on:
+  push:
+    branches: [provas]
+    paths: ['.github/workflows/teste-preview.yml']
+permissions:
+  contents: write
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: provas }
+      - run: npm i --no-save playwright@1.48.2 && npx playwright install --with-deps chromium
+      - run: |
+          cat > t.cjs <<'JS'
+          const { chromium } = require("playwright");
+          (async () => {
+            const b = await chromium.launch();
+            const ctx = await b.newContext({ userAgent: "Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 Chrome/129.0 Mobile Safari/537.36", viewport: { width: 400, height: 860 } });
+            const out = [];
+            for (const [u, min] of [["https://deploy-preview-5--lojalulu.netlify.app/?origem=teste-preview", 4], ["https://deploy-preview-5--lojalulu.netlify.app/kitavulso/?origem=teste-preview", 10]]) {
+              const p = await ctx.newPage(); const erros = []; p.on("pageerror", e => erros.push(e.message));
+              const wa = []; p.on("popup", pp => wa.push(pp.url()));
+              await p.goto(u, { waitUntil: "networkidle" });
+              const produtos = await p.locator("[data-action='adicionar']").count();
+              const selos = await p.locator(".provas-selos li").count();
+              const depOculto = await p.locator("#provas-dep").isHidden();
+              await p.click(".provas-faq > summary"); const faqAberto = await p.locator(".provas-faq dt").first().isVisible();
+              const id = await p.locator("[data-action='adicionar']").first().getAttribute("data-id");
+              for (let i = 0; i < min; i++) await p.click(`.qty-stepper[data-id='${id}'] [data-action='mais']`);
+              await p.locator("[data-action='adicionar']").first().click();
+              await p.click("#cart-toggle");
+              await p.waitForTimeout(400);
+              const pixAtivo = await p.locator("#btn-confirmar-pix").isEnabled();
+              out.push(`${u.includes("kitavulso") ? "avulso" : "kits"}: produtos=${produtos} selos=${selos} depoimentosOcultos=${depOculto} faqAbre=${faqAberto} botaoPixLiberado=${pixAtivo} errosJS=${erros.length} ${erros.join(";")}`);
+              await p.screenshot({ path: (u.includes("kitavulso") ? "avulso" : "kits") + ".png" });
+            }
+            console.log(out.join("\n")); await b.close();
+          })();
+          JS
+          node t.cjs | tee relatorios/teste-preview.txt
+      - run: |
+          git config user.name "github-actions[bot]"; git config user.email "github-actions[bot]@users.noreply.github.com"
+          mkdir -p relatorios/prints && mv *.png relatorios/prints/
+          git add relatorios && git commit -m "resultado teste preview" && git push origin HEAD:provas
