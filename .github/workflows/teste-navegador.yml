@@ -2,7 +2,7 @@ name: Teste navegador real (temporario)
 on:
   push:
     branches: [main]
-    paths: ['.github/workflows/teste-navegador.yml']
+    paths: ['.github/workflows/teste-navegador.yml', 'index.html']
 permissions:
   contents: write
   id-token: write
@@ -33,6 +33,7 @@ jobs:
             await b.close();
           })();
           JS
+          sleep 60  # espera o deploy do Netlify
           node t.cjs | tee resultado.txt
           sleep 5
           HOJE=$(date -u -d '-3 hours' +%F)

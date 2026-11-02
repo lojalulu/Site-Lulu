@@ -2161,7 +2161,7 @@ iniciar();
       return m ? Number(m[1].replace(/\./g, "").replace(",", ".")) : 0;
     }
     // 1) visita (1 por aba)
-    try { if (!sessionStorage.getItem("lulu_visitou")) { sessionStorage.setItem("lulu_visitou", "1"); enviar({ t: "visita" }); } }
+    try { if (!sessionStorage.getItem("lulu_visitou_" + LOJA)) { sessionStorage.setItem("lulu_visitou_" + LOJA, "1"); enviar({ t: "visita" }); } }
     catch (e) { enviar({ t: "visita" }); }
     // 2) pedido iniciado: observa a mensagem que vai pro WhatsApp
     if (typeof window.abrirWhatsApp === "function") {
