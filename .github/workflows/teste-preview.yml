@@ -25,7 +25,7 @@ jobs:
             for (const [u, min, loja] of [[P + "/?origem=teste-preview", 4, "kits"], [P + "/kitavulso/?origem=teste-preview", 10, "avulso"]]) {
               const p = await ctx.newPage(); const erros = []; p.on("pageerror", e => erros.push(e.message));
               const resp = []; p.on("response", r => { if (r.url().includes("/functions/evento")) resp.push(r.status()); });
-              ctx.on("page", pg => pg.close().catch(()=>{}));
+              p.on("popup", pg => pg.close().catch(()=>{}));
               await p.goto(u, { waitUntil: "networkidle" });
               const id = await p.locator("[data-action='adicionar']").first().getAttribute("data-id");
               const tam = p.locator(".card").first().locator("[data-tamanho], .tamanho-btn, [data-action='tamanho']").first();
@@ -41,7 +41,7 @@ jobs:
             console.log(out.join("\n")); await b.close();
           })();
           JS
-          node t.cjs $P | tee r.txt
+          node t.cjs $P 2>&1 | tee r.txt
           sleep 4; HOJE=$(date -u -d '-3 hours' +%F)
           TOK=$(curl -s -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=lulu-relatorio" | python3 -c 'import sys,json;print(json.load(sys.stdin)["value"])')
           curl -s -H "Authorization: Bearer $TOK" "$P/.netlify/functions/dados?de=$HOJE&ate=$HOJE" | python3 -c 'import sys,json;d=json.load(sys.stdin);print("store",d["loja"],"pedidos:",[(e["loja"],e["pedido"],e["valor"],e["prod"]) for e in d["eventos"] if e["t"]=="pedido"][-4:])' | tee -a r.txt
