@@ -1,2 +1,0 @@
-kits produtos=12 | avulso produtos=12 | erros JS=0  | eventos enviados=2 respostas=204,204
-gravados hoje em produção: eventos 3 [('visita', 'kits', 'teste-navegador'), ('visita', 'kits', 'teste-navegador'), ('visita', 'avulso', 'teste-navegador')]
