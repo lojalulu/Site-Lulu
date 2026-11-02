@@ -47,7 +47,7 @@ DOURADO = (255, 177, 0)
 AMEIXA = (43, 21, 36)
 BRANCO = (255, 255, 255)
 
-CATALOGOS = {"kits": "produtos.json", "avulso": "kitavulso/produtos.json"}
+CATALOGOS = {"kits": "produtos.json"}  # desde 03/11/2026: Reels SÓ dos kits de luluextra.com
 HIST = "instagram/historico_reels.json"
 PASTA_SAIDA = "instagram/_saida"
 SAIDA = f"{PASTA_SAIDA}/reel.mp4"
@@ -390,6 +390,9 @@ def carregar_historico():
         h = {}
     h.setdefault("ids", [])
     h.setdefault("ganchos", [])
+    h.setdefault("angulos", [])
+    h.setdefault("formatos", [])
+    h.setdefault("musicas", [])
     return h
 
 
@@ -422,9 +425,52 @@ def escolher_fotos(n=8):
     return itens, hist
 
 
+def texto_preco(itens):
+    """Preço real de um kit do vídeo, no formato da regra: '5 Conjuntos por R$ 199,90'."""
+    com_preco = [i for i in itens if i["preco"] > 0 and i["loja"] == "kits"]
+    if not com_preco:
+        return None
+    it = min(com_preco, key=lambda i: i["preco"])  # o mais em conta chama mais atenção
+    return f"{rotulo_kit(it['nome'])} por R$ {it['preco']:.2f}".replace(".", ",")
+
+
+def aplicar_preco(briefing, preco_txt):
+    """Troca o marcador {PRECO}. Sem preço disponível, a frase com o marcador sai do vídeo."""
+    b = dict(briefing)
+    def troca(t):
+        return t.replace("{PRECO}", preco_txt) if preco_txt else t
+    if preco_txt:
+        b["gancho"], b["cta"], b["legenda"] = troca(b["gancho"]), troca(b["cta"]), troca(b["legenda"])
+        b["quadros"] = [troca(q) for q in b["quadros"]]
+    else:
+        b["quadros"] = [q for q in b["quadros"] if "{PRECO}" not in q] or ["Kits prontos de 5 peças com cores variadas."]
+        b["gancho"] = b["gancho"].replace("{PRECO}.", "").replace("{PRECO}", "Kits de 5 peças").strip() or "Kits *prontos* de 5 peças"
+        b["legenda"] = b["legenda"].replace("{PRECO}", "Kits prontos de 5 peças")
+        b["cta"] = b["cta"].replace("{PRECO}", "")
+    return b
+
+
+FORMATOS = ["classico", "vitrine", "pergunta", "rapido"]
+
+
+def escolher_formato(recentes):
+    livres = [f for f in FORMATOS if f not in list(recentes)[-2:]]
+    return random.choice(livres or FORMATOS)
+
+
+def escolher_musica(recentes):
+    todas = sorted(m for m in os.listdir(MUSICAS) if m.lower().endswith(".mp3"))
+    livres = [m for m in todas if m not in list(recentes)[-3:]]
+    return random.choice(livres or todas)
+
+
 # ================================================================ roteiro do vídeo
-def montar_quadros(itens, briefing):
-    """Roteiro: GANCHO -> fotos -> VALOR -> fotos -> (VALOR 2) -> fotos -> CTA."""
+def montar_quadros(itens, briefing, formato="classico"):
+    """Roteiros (rodízio, sem repetir os 2 últimos):
+    classico: GANCHO -> fotos -> VALOR -> fotos -> VALOR 2 -> CTA
+    vitrine:  GANCHO -> 4 kits seguidos, cada um com etiqueta de preço -> VALOR -> CTA
+    pergunta: PERGUNTA (tela escura, longa) -> RESPOSTA grande -> fotos -> VALOR 2 -> CTA
+    rapido:   GANCHO -> 6 fotos rápidas alternando layouts -> VALOR -> CTA"""
     fotos = [i["foto"] for i in itens]
     usadas = itertools.count()
     movs = ["zoom_in", "pan_esq", "zoom_out", "pan_dir"]
@@ -449,6 +495,57 @@ def montar_quadros(itens, briefing):
         return None
 
     quadros = []
+    if formato == "vitrine":
+        f = prox()
+        quadros.append(QuadroFoto([f], "cheio", "zoom_in", tempo_leitura(briefing["gancho"], 3.4, 1.4, 0.3),
+                                  BlocoTexto(briefing["gancho"], tam_max=112, largura=880, max_linhas=4, y_centro=900, atraso=0.15), gancho=True))
+        for k in range(4):
+            f = prox()
+            quadros.append(QuadroFoto([f], ["cartao", "cheio"][k % 2], mov(), 2.3, etiqueta=etiqueta(f)))
+        for q in briefing["quadros"][:2]:
+            f = prox()
+            quadros.append(QuadroFoto([f], "cartao", mov(), tempo_leitura(q), BlocoTexto(q, tam_max=84, largura=840, max_linhas=4, y_base=1470)))
+        quadros.append(QuadroFinal(briefing["cta"], briefing["selo"], fotos[-3:] if len(fotos) >= 3 else fotos))
+    elif formato == "pergunta":
+        f = prox()
+        quadros.append(QuadroFoto([f], "cheio", "zoom_out", tempo_leitura(briefing["gancho"], 3.8, 1.6, 0.3),
+                                  BlocoTexto(briefing["gancho"], tam_max=118, largura=900, max_linhas=4, y_centro=920, atraso=0.1),
+                                  escuro=0.45, gancho=True))
+        q1 = briefing["quadros"][0]
+        f = prox()
+        quadros.append(QuadroFoto([f], "cartao", "zoom_in", tempo_leitura(q1, 3.4, 1.4, 0.34),
+                                  BlocoTexto(q1, tam_max=96, largura=860, max_linhas=5, y_centro=1350, atraso=0.2), etiqueta=etiqueta(f)))
+        f1, f2 = prox(), prox()
+        quadros.append(QuadroFoto([f1, f2], "duo", mov(), random.uniform(*DUR_FOTO)))
+        f = prox()
+        quadros.append(QuadroFoto([f], "cheio", mov(), random.uniform(*DUR_FOTO), etiqueta=etiqueta(f)))
+        if len(briefing["quadros"]) > 1:
+            q2 = briefing["quadros"][1]
+            f = prox()
+            quadros.append(QuadroFoto([f], "cartao", mov(), tempo_leitura(q2), BlocoTexto(q2, tam_max=84, largura=840, max_linhas=4, y_base=1470)))
+        quadros.append(QuadroFinal(briefing["cta"], briefing["selo"], fotos[-3:] if len(fotos) >= 3 else fotos))
+    elif formato == "rapido":
+        f = prox()
+        quadros.append(QuadroFoto([f], "cheio", "zoom_in", tempo_leitura(briefing["gancho"], 3.2, 1.3, 0.3),
+                                  BlocoTexto(briefing["gancho"], tam_max=112, largura=880, max_linhas=4, y_centro=900, atraso=0.1), gancho=True))
+        lays = ["cheio", "cartao", "duo", "cheio", "cartao", "duo"]
+        for k, lay in enumerate(lays):
+            fs = [prox(), prox()] if lay == "duo" else [prox()]
+            quadros.append(QuadroFoto(fs, lay, mov(), 1.35, etiqueta=etiqueta(fs[0]) if k in (1, 4) else None))
+        q = " ".join(briefing["quadros"][:1])
+        f = prox()
+        quadros.append(QuadroFoto([f], "cheio", mov(), tempo_leitura(q), BlocoTexto(q, tam_max=84, largura=840, max_linhas=4, y_base=1470)))
+        quadros.append(QuadroFinal(briefing["cta"], briefing["selo"], fotos[-3:] if len(fotos) >= 3 else fotos))
+    if quadros:
+        def total(qs):
+            return sum(q.dur for q in qs) - FADE * (len(qs) - 1)
+        while total(quadros) > MAX_TOTAL:
+            cand = [i for i, q in enumerate(quadros[1:-1], 1) if not q.texto]
+            if not cand:
+                break
+            quadros.pop(cand[-1])
+        return quadros
+    # ---- classico
     # 1) gancho (primeiros 3+ segundos)
     f = prox()
     bloco = BlocoTexto(briefing["gancho"], tam_max=112, largura=880, max_linhas=4, y_centro=900, atraso=0.15)
@@ -488,8 +585,8 @@ def montar_quadros(itens, briefing):
     return quadros
 
 
-def gerar_video(itens, briefing, saida):
-    quadros = montar_quadros(itens, briefing)
+def gerar_video(itens, briefing, saida, formato="classico", musica_nome=None):
+    quadros = montar_quadros(itens, briefing, formato)
     tipos = ["fade", "esq", "cima", "zoom"]
     trans = [random.choice(tipos) for _ in quadros[:-1]]
     inicios, t = [], 0.0
@@ -497,8 +594,8 @@ def gerar_video(itens, briefing, saida):
         inicios.append(t)
         t += q.dur - FADE
     total = t + FADE
-    musica = os.path.join(MUSICAS, random.choice(sorted(os.listdir(MUSICAS))))
-    print(f"Música: {musica} | {len(quadros)} quadros | {total:.1f}s | transições: {trans}")
+    musica = os.path.join(MUSICAS, musica_nome or random.choice(sorted(os.listdir(MUSICAS))))
+    print(f"Formato: {formato} | Música: {musica} | {len(quadros)} quadros | {total:.1f}s | transições: {trans}")
 
     os.makedirs(os.path.dirname(saida), exist_ok=True)
     cmd = ["ffmpeg", "-v", "error", "-y",
@@ -618,12 +715,15 @@ def main():
         print(f"Reel de hoje ({hoje}) já foi publicado — nada a fazer.")
         return
     itens, hist = escolher_fotos()
-    briefing = reel_lab.gerar_briefing(hist["ganchos"])
+    briefing = reel_lab.gerar_briefing(hist["ganchos"], hist["angulos"])
+    briefing = aplicar_preco(briefing, texto_preco(itens))
+    formato = os.environ.get("REEL_FORMATO") or escolher_formato(hist["formatos"])
+    musica_nome = escolher_musica(hist["musicas"])
     print("Briefing:", json.dumps(briefing, ensure_ascii=False))
     os.makedirs(PASTA_SAIDA, exist_ok=True)
     with open(f"{PASTA_SAIDA}/briefing.json", "w", encoding="utf-8") as f:
         json.dump(briefing, f, ensure_ascii=False, indent=1)
-    gerar_video(itens, briefing, SAIDA)
+    gerar_video(itens, briefing, SAIDA, formato, musica_nome)
     if os.environ.get("GITHUB_TOKEN") and os.environ.get("GITHUB_REPOSITORY"):
         url = hospedar([SAIDA, PREVIA, f"{PASTA_SAIDA}/briefing.json"])
         print("PRÉVIA DO VÍDEO:", url)
@@ -640,6 +740,9 @@ def main():
     print(f"Reel publicado: {media_id}")
     hist["ids"] = (hist["ids"] + [i["id"] for i in itens])[-300:]
     hist["ganchos"] = (hist["ganchos"] + [briefing["gancho"]])[-60:]
+    hist["angulos"] = (hist["angulos"] + [briefing.get("angulo", "")])[-30:]
+    hist["formatos"] = (hist["formatos"] + [formato])[-30:]
+    hist["musicas"] = (hist["musicas"] + [musica_nome])[-30:]
     hist["ultimo_post"] = hoje
     with open(HIST, "w", encoding="utf-8") as f:
         json.dump(hist, f, ensure_ascii=False, indent=1)

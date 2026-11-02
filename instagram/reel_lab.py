@@ -20,49 +20,60 @@ import requests
 DEEPSEEK_URL = "https://api.deepseek.com/chat/completions"
 MODELO = "deepseek-chat"
 
-# Pilar do dia (varia por dia da semana: 0 = segunda)
-PILARES = {
-    0: ("Dica de revenda", "Uma dica prática e útil pra quem revende moda fitness (como escolher mix, girar estoque, precificar, atender). Conteúdo que a pessoa queira salvar."),
-    1: ("Kits em destaque", "Mostrar o valor dos kits prontos de 5 peças da Lulu pra quem revende: praticidade, variedade de cores e modelos, preço de atacado."),
-    2: ("Mini franquia", "Apresentar a mini franquia Lulu: loja online própria de moda fitness, já pronta, com catálogo atualizado automaticamente. Convite pra conhecer pelo link da bio."),
-    3: ("Erro comum da revendedora", "Uma dificuldade comum de quem revende roupa (ter pouca variedade, não divulgar, não saber o que oferecer) e como a Lulu facilita (kits prontos com cores variadas, catálogo atualizado). Tom de ajuda, nunca de bronca, sem criticar nenhuma forma de comprar."),
-    4: ("Condições do atacado", "Condições reais do atacado Lulu: pedido mínimo de 4 kits, frete grátis a partir de 6 kits, 10% de desconto no Pix. Foco em facilitar a decisão."),
-    5: ("Moda fitness em alta", "Moda fitness que vende: peças que as clientes procuram (conjuntos, macacões, leggings, modelos plus size), por que giram bem."),
-    6: ("Bastidores da Lulu", "Bastidores e confiança: marca de moda fitness que atende revendedoras de todo o Brasil, com produção própria e anos de estrada. Tom humano e próximo."),
+# ÂNGULOS de venda (desde 03/11/2026): giram em rodízio, sem repetir os últimos 4.
+# O Reel fala SÓ dos kits de luluextra.com. {PRECO} = preço real de um kit do vídeo,
+# inserido pelo código no formato "5 Conjuntos por R$ 199,90" (a IA nunca escreve valores).
+ANGULOS = {
+    "salvador": ("Mora em Salvador", "Fala direto com quem mora em Salvador e revende ou quer revender: a Lulu nasceu em Salvador; a partir de 6 kits o frete Vip é grátis e chega em 4 dias úteis.",
+                 ["Mora em *Salvador* e revende moda fitness?", "*Salvador*, chegou kit novo no catálogo"]),
+    "nordeste": ("Revendedora do Nordeste", "Fala com revendedoras do Nordeste: fábrica própria nordestina (Recife) desde 2013, marca nascida em Salvador, frete grátis a partir de 6 kits.",
+                 ["Revende no *Nordeste*? Olha isso", "Fábrica *nordestina* de moda fitness desde 2013"]),
+    "frete": ("Frete que não pesa", "Contraste com o problema de frete caro em compra de atacado (sem citar nenhuma loja): aqui, a partir de 6 kits, o frete Vip é grátis pro Brasil todo.",
+              ["Cansada de *frete caro* no atacado fitness?", "O frete *não precisa* comer seu lucro"]),
+    "preco": ("Preço do kit", "Mostra o preço real de um kit, sempre no formato {PRECO}, e o que vem nele (5 peças, cores variadas). Direto e sem exagero.",
+              ["{PRECO}. *Sim*, no atacado", "Quanto custa um *kit* da Lulu?"]),
+    "pix": ("Desconto no Pix", "Pagamento facilitado: 10% de desconto nas peças pagando no Pix, ou cartão em até 3x sem juros.",
+            ["*10% off* no Pix em todo kit", "Pagando no *Pix* o kit sai mais barato"]),
+    "cores": ("Vitrine cheia", "Cada kit vem com cores variadas: a revendedora monta uma vitrine cheia e colorida com um pedido só.",
+              ["Uma vitrine *colorida* com um pedido só", "5 peças, *cores variadas*, um kit só"]),
+    "tecido": ("Tecido que segura", "Qualidade do tecido: suplex e poliamida, zero transparência no agachamento — o que a cliente final mais pergunta.",
+               ["O teste do *agachamento* que sua cliente faz", "Suplex que *não fica transparente*"]),
+    "comecar": ("Começar a revender", "Pra quem quer começar: pedido mínimo de 4 kits, kits prontos, catálogo atualizado toda semana em luluextra.com.",
+                ["Começar a revender com *4 kits*", "Seu *primeiro pedido* de revenda, sem complicação"]),
+    "plus": ("Plus size", "Kits com modelos plus size (o tamanho vem no nome do produto), um público que muita revendedora ainda não atende.",
+             ["Sua cliente *plus size* também treina", "Tem *plus size* no catálogo, sim"]),
+    "novidade": ("Catálogo novo", "O catálogo de luluextra.com é atualizado toda semana com modelos novos; convite pra ver as novidades.",
+                 ["Modelos *novos* toda semana", "Olha o que *entrou* no catálogo"]),
 }
 
-MECANISMOS = ["curiosidade", "contraste", "problema específico", "dificuldade comum",
-              "transformação", "pergunta direta", "promessa útil", "antes e depois"]
+MECANISMOS = ["curiosidade", "contraste", "problema específico", "pergunta direta",
+              "chamada regional", "número concreto", "objeção respondida", "antes e depois"]
 
 FATOS = """FATOS PERMITIDOS (use só estes; não invente nada além):
-- Lulu Extra Fitness: moda fitness feminina no atacado, kits prontos de 5 peças (também há pacotes de 10 blusas), em suplex e poliamida, cores variadas.
-- Pedido mínimo: 4 kits. Frete grátis a partir de 6 kits (Salvador e Brasil). Pix com 10% de desconto. Cartão em até 3x.
-- Catálogo completo no link da bio (luluextra.com).
-- Mini franquia: loja online própria de moda fitness, pronta, com catálogo atualizado automaticamente (informações no link da bio).
-- Público: revendedoras e donas de loja de moda fitness, e mulheres que querem começar a revender."""
+- Lulu Extra Fitness: moda fitness feminina no ATACADO em luluextra.com. Kits prontos de 5 peças (alguns pacotes de 10 blusas), em suplex e poliamida, cores variadas, zero transparência.
+- Marca nascida em Salvador (BA), com fábrica própria no Nordeste (Recife) desde 2013. A maioria das clientes é de Salvador e do Nordeste, mas enviamos pra todo o Brasil.
+- Pedido mínimo: 4 kits. A partir de 6 kits, frete Vip GRÁTIS pra Salvador e todo o Brasil (Vip: 4 dias úteis). Abaixo disso: Econômico R$ 39,90 (9 dias úteis) ou Vip R$ 90.
+- Pix com 10% de desconto nas peças. Cartão em até 3x sem juros.
+- Catálogo atualizado toda semana em luluextra.com (link da bio).
+- Preço: só use o marcador {PRECO} (o sistema troca pelo preço real, ex.: "5 Conjuntos por R$ 199,90"). Nunca escreva valores."""
 
-PROIBIDO = """PROIBIDO: promessa de ganho ou lucro garantido, valores em reais, números ou estatísticas inventados,
-"sem estoque", "de graça", urgência falsa ("últimas unidades"), críticas a concorrentes, clickbait que o vídeo não entrega,
-pedir "curta/compartilhe/salve", emojis nos textos do vídeo,
-afirmar prazo de entrega, garantia de qualidade ou exclusividade, descrever como outras lojas ou revendedoras compram,
-afirmar que dá pra montar kit peça por peça (os kits já vêm prontos),
-criticar ou chamar de erro comprar peça solta/avulsa ou comprar kit (a Lulu vende os dois), falar mal de qualquer forma de comprar,
-dizer que a pessoa terá "marca própria" (a mini franquia é uma loja online com o catálogo da Lulu),
-desvalorizar quem não tem loja, frases como "perder tempo" ou "está errado", jargões ("white label", "ecossistema", "funil")."""
+PROIBIDO = """PROIBIDO: promessa de ganho ou lucro garantido, escrever valores em reais (use {PRECO}), números ou estatísticas inventados,
+"sem estoque", "de graça", urgência falsa ("últimas unidades"), citar ou criticar concorrentes pelo nome, clickbait que o vídeo não entrega,
+pedir "curta/compartilhe/salve", emojis nos textos do vídeo, prometer data exata de entrega,
+falar de peças avulsas ou da mini franquia (este Reel é SÓ dos kits de luluextra.com),
+afirmar que dá pra montar kit peça por peça (os kits já vêm prontos), criticar qualquer forma de comprar,
+dizer que a pessoa terá "marca própria", frases como "perder tempo" ou "está errado", jargões ("white label", "ecossistema", "funil")."""
 
 COERENCIA = """REGRAS DE COERÊNCIA (obrigatórias):
-1. O gancho fala com UMA pessoa (quem revende ou quer revender moda fitness) e promete algo claro, que os quadros entregam.
-2. Sequência: gancho -> quadro 1 entrega a promessa -> quadro 2 complementa -> chamada convida. Cada frase só faz sentido porque a anterior existe.
-3. Frases completas, simples e concretas, como numa conversa. Nada vago, nada que exija explicação.
-4. Teste final: alguém que lê só o texto da tela, sem som, em 10 segundos entende o que a Lulu oferece e o que fazer?
-
-EXEMPLOS BONS (tom e clareza; não copie):
-- gancho: "Quer *revender* moda fitness sem complicação?" | quadros: ["Os kits da Lulu já vêm prontos, com 5 peças e cores variadas.", "Você escolhe, faz o pedido e começa a vender."] | cta: "Veja os kits no link da bio"
-- gancho: "Sua *loja online* de moda fitness, já pronta" | quadros: ["Na mini franquia Lulu, o catálogo já vem na sua loja.", "Ele se atualiza sozinho, e você foca em atender suas clientes."] | cta: "Conheça no link da bio\""""
+1. O gancho fala com UMA pessoa (revendedora ou quem quer revender, de preferência de Salvador/Nordeste quando o ângulo pedir) e promete algo que os quadros entregam.
+2. Sequência: gancho -> quadro 1 entrega -> quadro 2 complementa -> chamada leva a luluextra.com / link da bio.
+3. Frases completas, simples, concretas, com cara de conversa baiana/nordestina sem forçar sotaque.
+4. NUNCA comece o gancho com "Quer revender" nem repita o começo (2 primeiras palavras) dos ganchos recentes.
+5. Teste: lido sem som, em 10 segundos dá pra entender a oferta e o que fazer?"""
 
 
 def _sem_emoji(txt: str) -> str:
-    return re.sub(r"[^\w\s\.,;:!\?\-–—'\"“”‘’%/\*\(\)·&@ÀÁÂÃÇÉÊÍÓÔÕÚàáâãçéêíóôõú]", "", txt).strip()
+    return re.sub(r"[^\w\s\.,;:!\?\-–—'\"“”‘’%/\*\(\)\{\}·&@ÀÁÂÃÇÉÊÍÓÔÕÚàáâãçéêíóôõú]", "", txt).strip()
 
 
 def _n_palavras(txt: str) -> int:
@@ -72,11 +83,15 @@ def _n_palavras(txt: str) -> int:
 RUIM = re.compile(r"perder tempo|marca pr[óo]pria|errad[oa]|white label|garanti|lucro de|ganhe r\$|r\$\s?\d|sem estoque|de gra[çc]a|últimas unidades|ultimas unidades|curta|compartilhe|salve este", re.I)
 
 
+def _comeco(txt):
+    return " ".join(re.findall(r"[a-zà-ú]+", txt.lower().replace("*", ""))[:2])
+
+
 def _validar(b: dict) -> dict:
     gancho = _sem_emoji(str(b.get("gancho", "")))
     quadros = [_sem_emoji(str(q)) for q in (b.get("quadros") or []) if str(q).strip()][:2]
     cta = _sem_emoji(str(b.get("cta", "")))
-    selo = _sem_emoji(str(b.get("selo", ""))).upper() or "LINK NA BIO"
+    selo = _sem_emoji(str(b.get("selo", ""))).upper() or "LULUEXTRA.COM"
     legenda = str(b.get("legenda", "")).strip()
     hashtags = [h if h.startswith("#") else "#" + h for h in (b.get("hashtags") or []) if isinstance(h, str)]
     hashtags = [re.sub(r"[^#\wÀ-ú]", "", h) for h in hashtags][:9]
@@ -93,12 +108,19 @@ def _validar(b: dict) -> dict:
             raise ValueError(f"texto proibido: {t[:40]}")
     if len(selo) > 34:
         selo = "LINK NA BIO"
-    return {"pilar": b.get("pilar", ""), "mecanismo": b.get("mecanismo", ""), "gancho": gancho,
+    if re.match(r"\s*\*?quer\s+\*?revender", gancho, re.I):
+        raise ValueError("gancho começa com 'Quer revender' (proibido: repetitivo)")
+    for t in [gancho, cta, legenda] + quadros:
+        if re.search(r"avuls|mini franquia|franquia", t, re.I):
+            raise ValueError("Reel é só dos kits")
+        if "{" in t.replace("{PRECO}", ""):
+            raise ValueError("marcador inválido")
+    return {"pilar": b.get("pilar", ""), "angulo": b.get("angulo", ""), "mecanismo": b.get("mecanismo", ""), "gancho": gancho,
             "quadros": quadros, "cta": cta, "selo": selo, "legenda": legenda,
             "hashtags": hashtags or ["#modafitness", "#revendedora", "#atacado", "#lulumodafitness"]}
 
 
-def _chamar_deepseek(pilar, instrucao, mecanismo, recentes):
+def _chamar_deepseek(pilar, instrucao, mecanismo, recentes, exemplos=()):
     chave = os.environ.get("DEEPSEEK_API_KEY")
     if not chave:
         raise RuntimeError("DEEPSEEK_API_KEY ausente")
@@ -106,12 +128,15 @@ def _chamar_deepseek(pilar, instrucao, mecanismo, recentes):
         "Você é um estrategista sênior de Reels e diretor de marketing de uma marca de moda fitness brasileira. "
         "Escreve em português do Brasil, como gente fala, sem texto de robô. Cada Reel tem demanda real de público, "
         "um gancho forte nos 3 primeiros segundos que o vídeo realmente entrega, ritmo sem enrolação e valor logo cedo. "
-        "O Reel é feito só de fotos de produtos com texto na tela, então as frases precisam funcionar lidas, em silêncio.\n\n"
+        "O Reel é feito só de fotos de produtos com texto na tela, então as frases precisam funcionar lidas, em silêncio. "
+        "O público principal são revendedoras de Salvador e do Nordeste. O objetivo é levar a pessoa a luluextra.com (link da bio).\n\n"
         + FATOS + "\n\n" + PROIBIDO + "\n\n" + COERENCIA
     )
     usuario = f"""Crie o briefing do Reel de hoje.
-Pilar: {pilar}. Direção: {instrucao}
+Ângulo de venda: {pilar}. Direção: {instrucao}
 Mecanismo do gancho: {mecanismo}.
+Exemplos de gancho deste ângulo (inspiração, NÃO copie): {json.dumps(list(exemplos), ensure_ascii=False)}
+Pode usar o marcador {{PRECO}} em no máximo UMA frase (gancho ou quadro).
 Ganchos já usados recentemente (NÃO repita nem parafraseie): {json.dumps(recentes[-15:], ensure_ascii=False)}
 
 Responda SÓ com JSON neste formato:
@@ -120,7 +145,7 @@ Responda SÓ com JSON neste formato:
  "mecanismo": "{mecanismo}",
  "gancho": "abertura de 4 a 9 palavras; marque 1 ou 2 palavras-chave com *asteriscos*",
  "quadros": ["frase de valor de 6 a 14 palavras", "(opcional) segunda frase de 6 a 14 palavras"],
- "cta": "chamada final de 4 a 9 palavras, natural, mandando pro link da bio",
+ "cta": "chamada final de 4 a 9 palavras, natural, mandando pra luluextra.com ou pro link da bio",
  "selo": "LINK NA BIO",
  "legenda": "legenda de 2 a 4 frases, tom próximo, terminando com convite pra acessar o link da bio",
  "hashtags": ["#...", "#...", "#...", "#...", "#...", "#...", "#..."]
@@ -155,49 +180,58 @@ def _revisar(b: dict) -> dict:
 
 
 # ------------------------------------------------------------ banco de reserva
-RESERVA = [
-    {"pilar": 0, "gancho": "Quem revende *moda fitness* não pode errar isso", "quadros": ["Misture modelos e cores no mesmo pedido: sua cliente sempre acha algo pra levar.", "Variedade faz a cliente voltar na próxima coleção."], "cta": "Monte o seu pedido no link da bio", "legenda": "Variedade é o que faz a cliente voltar. Nos kits da Lulu você já recebe modelos e cores misturados pra montar a vitrine. Veja o catálogo completo no link da bio."},
-    {"pilar": 0, "gancho": "O jeito *mais simples* de girar o estoque", "quadros": ["Peça que combina com outra vende junto: conjunto, top e legging na mesma foto.", "Mostre o look completo, não só a peça."], "cta": "Veja os kits no link da bio", "legenda": "Cliente que vê o look completo leva mais de uma peça. Monte combinações com os kits da Lulu e divulgue como conjunto. Catálogo no link da bio."},
-    {"pilar": 1, "gancho": "Kit pronto de *5 peças*, direto pra sua vitrine", "quadros": ["Você escolhe o kit, a gente envia as peças com cores variadas.", "Pedido mínimo de 4 kits e frete grátis a partir de 6."], "cta": "Escolha o seu no link da bio", "legenda": "Kits prontos de 5 peças com cores variadas, direto pra sua revenda. Pedido mínimo de 4 kits e frete grátis a partir de 6. Veja tudo no link da bio."},
-    {"pilar": 1, "gancho": "Seu *próximo kit* já está aqui", "quadros": ["Suplex e poliamida, conjuntos, macacões e linha plus size.", "Tudo no atacado, pronto pra revender."], "cta": "Catálogo completo no link da bio", "legenda": "Conjuntos, macacões e linha plus size em suplex e poliamida, tudo no atacado. O catálogo completo está no link da bio."},
-    {"pilar": 2, "gancho": "Já pensou em ter a *sua loja* de moda fitness?", "quadros": ["A mini franquia Lulu é uma loja online sua, pronta pra divulgar.", "O catálogo se atualiza sozinho, você foca em vender."], "cta": "Conheça a mini franquia no link da bio", "selo": "MINI FRANQUIA · LINK NA BIO", "legenda": "Quer ter a sua própria loja de moda fitness? A mini franquia Lulu entrega uma loja online pronta, com catálogo sempre atualizado. Saiba mais no link da bio."},
-    {"pilar": 2, "gancho": "Sua loja online *pronta* em vez de começar do zero", "quadros": ["Catálogo, fotos e preços já organizados pra você divulgar.", "Mais tempo pra atender cliente e vender."], "cta": "Saiba como no link da bio", "selo": "MINI FRANQUIA · LINK NA BIO", "legenda": "Começar uma loja do zero dá trabalho. Com a mini franquia Lulu você recebe a loja online pronta e foca no que importa: vender. Detalhes no link da bio."},
-    {"pilar": 3, "gancho": "O *erro* que trava muita revendedora", "quadros": ["Comprar só o que você gosta e esquecer o que a cliente procura.", "Ouça sua cliente antes de montar o pedido."], "cta": "Monte um pedido certeiro no link da bio", "legenda": "Muita revendedora compra pelo gosto próprio e esquece de perguntar o que a cliente quer. Antes de fechar o pedido, ouça quem compra. Catálogo no link da bio."},
-    {"pilar": 3, "gancho": "Revender sem *divulgar* não funciona", "quadros": ["Foto boa, vitrine organizada e postagem todo dia fazem diferença.", "Quem aparece, vende."], "cta": "Pegue as peças no link da bio", "legenda": "Não adianta ter peça bonita parada. Foto boa e constância nas postagens colocam sua revenda na frente da cliente. Veja os kits no link da bio."},
-    {"pilar": 4, "gancho": "Frete *grátis* a partir de 6 kits", "quadros": ["Pedido mínimo de 4 kits e 10% de desconto pagando no Pix.", "Condição pensada pra quem revende."], "cta": "Faça seu pedido no link da bio", "legenda": "Pedido mínimo de 4 kits, frete grátis a partir de 6 e 10% de desconto no Pix. Condições pensadas pra quem revende. Veja os kits no link da bio."},
-    {"pilar": 4, "gancho": "Comprar no atacado *ficou mais fácil*", "quadros": ["Escolha os kits, pague no Pix com 10% off ou em até 3x no cartão.", "Seu pedido sai organizado e você acompanha tudo."], "cta": "Peça pelo link da bio", "legenda": "Escolha os kits, pague no Pix com 10% de desconto ou em até 3x no cartão. Tudo começa no link da bio."},
-    {"pilar": 5, "gancho": "As peças que *mais saem* na moda fitness", "quadros": ["Conjuntos, macacões e leggings com bom caimento sempre giram.", "Modelos plus size ampliam o seu público."], "cta": "Veja os modelos no link da bio", "legenda": "Conjuntos, macacões e leggings com bom caimento giram bem, e a linha plus size amplia seu público. Veja os modelos no link da bio."},
-    {"pilar": 6, "gancho": "Moda fitness *de verdade*, feita pra revender", "quadros": ["A Lulu atende revendedoras de todo o Brasil há anos.", "Qualidade que a sua cliente sente no treino."], "cta": "Conheça a Lulu no link da bio", "legenda": "A Lulu Extra Fitness atende revendedoras de todo o Brasil, com peças pensadas pra quem treina. Conheça tudo no link da bio."},
-]
+RESERVA = {
+    "salvador": [{"gancho": "Mora em *Salvador* e revende moda fitness?", "quadros": ["A Lulu nasceu aqui, e a partir de 6 kits o frete Vip é grátis.", "{PRECO}, com cores variadas em cada kit."], "cta": "Veja os kits em luluextra.com"}],
+    "nordeste": [{"gancho": "Fábrica *nordestina* de moda fitness desde 2013", "quadros": ["Kits prontos de 5 peças em suplex e poliamida, direto da fábrica.", "A partir de 6 kits o frete Vip é grátis."], "cta": "Catálogo completo no link da bio"}],
+    "frete": [{"gancho": "Cansada de *frete caro* no atacado?", "quadros": ["Aqui, a partir de 6 kits, o frete Vip é grátis pro Brasil todo.", "Chega em 4 dias úteis, pronto pra revender."], "cta": "Monte seu pedido em luluextra.com"}],
+    "preco": [{"gancho": "{PRECO}. *Sim*, no atacado", "quadros": ["Kit pronto com 5 peças e cores variadas.", "Pedido mínimo de 4 kits e 10% de desconto no Pix."], "cta": "Veja todos os preços no link da bio"}],
+    "pix": [{"gancho": "*10% off* pagando no Pix", "quadros": ["O desconto vale nas peças de todos os kits.", "Prefere cartão? Em até 3x sem juros."], "cta": "Escolha seus kits em luluextra.com"}],
+    "cores": [{"gancho": "Uma vitrine *colorida* com um pedido só", "quadros": ["Cada kit vem com 5 peças em cores variadas.", "Sua cliente sempre acha a cor que procura."], "cta": "Veja os kits no link da bio"}],
+    "tecido": [{"gancho": "Suplex que *não fica transparente*", "quadros": ["Pode agachar: zero transparência, do jeito que a cliente pede.", "Suplex e poliamida em kits prontos de 5 peças."], "cta": "Confira em luluextra.com"}],
+    "comecar": [{"gancho": "Começar a revender com *4 kits*", "quadros": ["Os kits já vêm prontos, com 5 peças e cores variadas.", "Você escolhe no site e fecha o pedido pelo WhatsApp."], "cta": "Comece pelo link da bio"}],
+    "plus": [{"gancho": "Sua cliente *plus size* também treina", "quadros": ["Tem kit plus size no catálogo, é só olhar o nome do produto.", "Mais clientes atendidas com o mesmo pedido."], "cta": "Veja os modelos em luluextra.com"}],
+    "novidade": [{"gancho": "Modelos *novos* toda semana", "quadros": ["O catálogo de luluextra.com é atualizado toda semana.", "{PRECO}, pronto pra sua vitrine."], "cta": "Veja as novidades no link da bio"}],
+}
 
 
-def _reserva(dia):
-    ops = [b for b in RESERVA if b["pilar"] == dia] or RESERVA
-    b = dict(random.choice(ops))
-    b["pilar"] = PILARES[dia][0]
-    b.setdefault("selo", "LINK NA BIO")
+def _reserva(angulo):
+    b = dict(random.choice(RESERVA[angulo]))
+    b["pilar"] = ANGULOS[angulo][0]
+    b["angulo"] = angulo
+    b.setdefault("selo", "LULUEXTRA.COM")
     b["mecanismo"] = "reserva"
-    b["hashtags"] = ["#modafitness", "#revendedora", "#atacado", "#lulumodafitness", "#roupafitness", "#revendademoda", "#empreendedorismofeminino"]
+    b["legenda"] = (b["quadros"][0] + " " + (b["quadros"][1] if len(b["quadros"]) > 1 else "") +
+                    " Catálogo completo e preços atualizados em luluextra.com, no link da bio.")
+    b["hashtags"] = ["#modafitness", "#atacadofitness", "#revendedora", "#modafitnesssalvador", "#lulumodafitness", "#roupafitness", "#nordeste"]
     return _validar(b)
 
 
-def gerar_briefing(recentes):
-    dia = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-3))).weekday()
-    pilar, instrucao = PILARES[dia]
+def escolher_angulo(recentes_angulos):
+    livres = [a for a in ANGULOS if a not in list(recentes_angulos)[-4:]]
+    return random.choice(livres or list(ANGULOS))
+
+
+def gerar_briefing(recentes, recentes_angulos=()):
+    angulo = escolher_angulo(recentes_angulos)
+    pilar, instrucao, exemplos = ANGULOS[angulo]
     mecanismo = random.choice(MECANISMOS)
+    comecos = {_comeco(g) for g in recentes[-10:]}
     for tentativa in (1, 2):
         try:
-            b = _validar(_chamar_deepseek(pilar, instrucao, mecanismo, recentes))
+            b = _chamar_deepseek(pilar, instrucao, mecanismo, recentes, exemplos)
+            b["angulo"] = angulo
+            b = _validar(b)
             try:
                 b = _revisar(b)
+                b["angulo"] = angulo
             except Exception as e:
                 print(f"  revisão indisponível, seguindo sem ela: {str(e)[:100]}")
-            if b["gancho"] in recentes:
-                raise ValueError("gancho repetido")
+            if b["gancho"] in recentes or _comeco(b["gancho"]) in comecos:
+                raise ValueError("gancho repetido (ou começa igual a um recente)")
             print(f"Laboratório (DeepSeek, {pilar} / {mecanismo}): {b['gancho']}")
             return b
         except Exception as e:
             print(f"  laboratório tentativa {tentativa} falhou: {str(e)[:120]}")
-    b = _reserva(dia)
+    b = _reserva(angulo)
     print(f"Laboratório (banco reserva, {pilar}): {b['gancho']}")
     return b
