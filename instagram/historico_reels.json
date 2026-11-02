@@ -91,7 +91,15 @@
   "2816717",
   "317277",
   "2773815",
-  "3703564"
+  "3703564",
+  "4485661",
+  "684193",
+  "402269",
+  "2708869",
+  "317284",
+  "3405521",
+  "3703565",
+  "3405523"
  ],
  "ganchos": [
   "Montar *loja online* sem marca própria é perder tempo",
@@ -100,7 +108,17 @@
   "Quer *revender* moda fitness e não sabe por onde começar?",
   "Quer *revender* moda fitness? Veja as condições do atacado",
   "Quer *revender* moda fitness que suas clientes procuram?",
-  "Revender fitness e *bater cabeça* com fornecedor?"
+  "Revender fitness e *bater cabeça* com fornecedor?",
+  "Com *6 kits*, o frete Vip fica grátis"
  ],
- "ultimo_post": "2026-11-01"
+ "ultimo_post": "2026-11-02",
+ "angulos": [
+  "frete"
+ ],
+ "formatos": [
+  "classico"
+ ],
+ "musicas": [
+  "upbeat-atlas.mp3"
+ ]
 }
