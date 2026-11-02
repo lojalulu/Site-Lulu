@@ -1,0 +1,42 @@
+name: Conferir medição (eventos de hoje)
+
+# Mostra quantas visitas / cliques / pedidos o site registrou hoje e ontem,
+# por loja e origem. Grava em relatorios/conferencia.txt (sem dado pessoal).
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  conferir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ler eventos
+        run: |
+          HOJE=$(date -u -d '-3 hours' +%F); ONTEM=$(date -u -d '-27 hours' +%F)
+          TOK=$(curl -s -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=lulu-relatorio" | python3 -c 'import sys,json;print(json.load(sys.stdin)["value"])')
+          curl -s -H "Authorization: Bearer $TOK" "https://luluextra.com/.netlify/functions/dados?de=$ONTEM&ate=$HOJE" -o r.json -w '%{http_code}' > status.txt
+          python3 - <<'PY'
+          import json, collections, datetime
+          st = open("status.txt").read()
+          linhas = [f"Conferido em {datetime.datetime.utcnow() - datetime.timedelta(hours=3):%d/%m/%Y %H:%M} (Salvador) | HTTP {st}"]
+          try:
+              d = json.load(open("r.json"))
+              c = collections.Counter((e["dia"], e["t"], e["loja"], e["origem"]) for e in d["eventos"])
+              linhas.append(f"Total de eventos (ontem + hoje): {d['total']}")
+              for (dia, t, loja, o), n in sorted(c.items()):
+                  linhas.append(f"{dia} | {t:7} | {loja:6} | origem {o:12} | {n}")
+          except Exception as e:
+              linhas.append(f"erro lendo dados: {type(e).__name__}")
+          open("relatorios/conferencia.txt", "w").write("\n".join(linhas) + "\n")
+          print("\n".join(linhas))
+          PY
+      - name: Salvar
+        run: |
+          git config user.name "github-actions[bot]"; git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add relatorios/conferencia.txt
+          git diff --cached --quiet || git commit -m "Conferência da medição"
+          for i in 1 2 3; do git pull --rebase origin main && git push && break; sleep 5; done
