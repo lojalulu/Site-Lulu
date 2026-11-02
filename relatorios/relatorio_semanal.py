@@ -156,6 +156,8 @@ def resumir_site(eventos):
     vis = defaultdict(set)
     pedidos = {}  # nº do pedido -> último evento (Pix e cartão do mesmo pedido contam 1 vez)
     for e in sorted(eventos, key=lambda x: x.get("ts", 0)):
+        if str(e.get("origem", "")).startswith("teste"):
+            continue  # eventos de teste do robô não entram no relatório
         loja = e.get("loja", "")
         if e["t"] == "visita":
             vis[loja].add(e.get("v") or str(e.get("ts")))
