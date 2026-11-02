@@ -440,6 +440,79 @@ a{ color: inherit; }
     </div>
   </section>
 
+<!-- PROVAS:START — selos, depoimentos reais e dúvidas logo abaixo do topo. Depoimentos: editar só a lista DEPOIMENTOS (texto real da cliente). -->
+<style>
+/* PROVAS: confiança logo abaixo do topo (selos, depoimentos, dúvidas) */
+.provas{ max-width: 760px; margin: -16px auto 8px; padding: 0 20px; display: grid; gap: 14px; }
+.provas-selos{ display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin:0; padding:0; list-style:none; }
+.provas-selos li{ background: var(--surface); border:1px solid var(--line); border-radius:999px; padding:6px 12px; font-size:13px; color: var(--text); }
+.provas-dep{ display:grid; gap:8px; }
+.provas-dep[hidden]{ display:none; }
+.provas-dep h2{ font-family: var(--font-display); font-size: 20px; margin:0; text-align:center; }
+.provas-rolo{ display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; padding:2px 2px 8px; -webkit-overflow-scrolling:touch; }
+.provas-zap{ flex:0 0 min(260px, 78%); scroll-snap-align:start; background:#EFE7DE; border-radius:14px; padding:10px; display:grid; gap:6px; align-content:start; }
+.provas-topo{ display:flex; align-items:center; gap:8px; font-weight:600; font-size:13px; color:#2B1524; }
+.provas-av{ width:28px; height:28px; border-radius:50%; background: var(--accent); color: var(--accent-ink); display:grid; place-items:center; font-family: var(--font-display); font-weight:700; flex:none; }
+.provas-balao{ background:#E7FFDB; color:#1C2B18; border-radius:10px 10px 10px 2px; padding:8px 10px; font-size:14px; line-height:1.45; }
+.provas-dica{ text-align:center; font-size:12px; color: var(--text-muted); margin:0; }
+.provas-faq{ background: var(--surface); border:1px solid var(--line); border-radius: var(--radius); padding: 4px 14px; }
+.provas-faq > summary{ cursor:pointer; list-style:none; padding:10px 0; font-weight:600; display:flex; justify-content:space-between; gap:10px; }
+.provas-faq > summary::-webkit-details-marker{ display:none; }
+.provas-faq > summary::after{ content:"+"; color: var(--accent); font-weight:700; }
+.provas-faq[open] > summary::after{ content:"–"; }
+.provas-faq summary:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; }
+.provas-faq dl{ margin:0 0 12px; display:grid; gap:10px; }
+.provas-faq dt{ font-weight:600; font-size:14px; }
+.provas-faq dd{ margin:2px 0 0; font-size:14px; color: var(--text-muted); line-height:1.5; }
+.provas-faq table{ width:100%; border-collapse:collapse; font-size:14px; margin-top:4px; }
+.provas-faq td{ padding:6px 4px; border-bottom:1px solid var(--line); }
+.provas-faq td:last-child{ font-family: var(--font-mono); white-space:nowrap; text-align:right; }
+</style>
+<section class="provas" aria-label="Por que comprar com a Lulu">
+  <ul class="provas-selos">
+    <li>🏭 Fábrica própria desde 2013</li>
+    <li>📦 Enviamos pra todo o Brasil</li>
+    <li>🔁 Troca por defeito em até 30 dias</li>
+  </ul>
+  <div class="provas-dep" id="provas-dep" hidden>
+    <h2>O que as clientes falam</h2>
+    <div class="provas-rolo" id="provas-rolo"></div>
+    <p class="provas-dica">Deslize pro lado ›</p>
+  </div>
+  <details class="provas-faq">
+    <summary>Dúvidas: frete, pagamento, troca e tamanhos</summary>
+    <dl>
+<dt>Qual o pedido mínimo?</dt><dd>10 peças por pedido. Não dá pra misturar peça avulsa com kit fechado.</dd>
+<dt>Frete e prazo</dt><dd>Frete Vip <strong>grátis</strong>, de 4 a 7 dias úteis, pra todo o Brasil.</dd>
+<dt>Como pago?</dt><dd>Pix com 10% de desconto nas peças, ou cartão em até 3x sem juros (link de pagamento pelo WhatsApp).</dd>
+<dt>Troca</dt><dd>Até 30 dias, por defeito de fabricação. Por ser atacado, não há troca por desistência.</dd>
+<dt>Tamanho</dt><dd>Você escolhe o tamanho de cada peça na hora de adicionar ao pedido.</dd>
+<dt>Nota fiscal e envio</dt><dd>Somos MEI (sem nota fiscal). Enviamos para todo o Brasil.</dd>
+    </dl>
+  </details>
+</section>
+<script>
+(function () {
+  try {
+    // Só depoimentos REAIS, com autorização da cliente: { nome, cidade, texto }
+    var DEPOIMENTOS = [];
+    if (!DEPOIMENTOS.length) return;
+    var rolo = document.getElementById("provas-rolo");
+    DEPOIMENTOS.forEach(function (d) {
+      var card = document.createElement("div"); card.className = "provas-zap";
+      var topo = document.createElement("div"); topo.className = "provas-topo";
+      var av = document.createElement("span"); av.className = "provas-av"; av.textContent = (d.nome || "?").charAt(0).toUpperCase();
+      var nome = document.createElement("span"); nome.textContent = d.nome + (d.cidade ? " · " + d.cidade : "");
+      topo.appendChild(av); topo.appendChild(nome);
+      var balao = document.createElement("div"); balao.className = "provas-balao"; balao.textContent = d.texto;
+      card.appendChild(topo); card.appendChild(balao); rolo.appendChild(card);
+    });
+    document.getElementById("provas-dep").hidden = false;
+  } catch (e) {}
+})();
+</script>
+<!-- PROVAS:END -->
+
   <div class="busca-wrap">
     <div class="busca-input-wrap" id="busca-input-wrap">
       <span class="busca-icone">🔍</span>
