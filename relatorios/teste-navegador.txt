@@ -1,0 +1,2 @@
+kits produtos=12 | avulso produtos=12 | erros JS=0  | eventos enviados=1 respostas=204
+gravados hoje em produção: eventos 1 [('visita', 'kits', 'teste-navegador')]
