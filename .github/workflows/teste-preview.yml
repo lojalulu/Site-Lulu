@@ -32,9 +32,11 @@ jobs:
               if (await tam.count()) await tam.click().catch(()=>{});
               for (let i = 0; i < min; i++) await p.click(`.qty-stepper[data-id='${id}'] [data-action='mais']`);
               await p.locator("[data-action='adicionar']").first().click();
-              await p.click("#cart-toggle"); await p.waitForTimeout(400);
+              await p.evaluate(() => { const d = document.querySelector("[data-netlify-deploy-id]"); if (d) d.remove(); });
+              await p.locator("#cart-toggle").dispatchEvent("click"); await p.waitForTimeout(400);
               const ativo = await p.locator("#btn-confirmar-pix").isEnabled();
-              if (ativo) await p.click("#btn-confirmar-pix");
+              await p.evaluate(() => { const d = document.querySelector("[data-netlify-deploy-id]"); if (d) d.remove(); });
+              if (ativo) await p.locator("#btn-confirmar-pix").dispatchEvent("click");
               await p.waitForTimeout(2500);
               out.push(`${loja}: pixLiberado=${ativo} respostasEvento=${resp.join(",")} errosJS=${erros.length} ${erros.join(";")}`);
             }
