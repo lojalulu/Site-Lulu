@@ -1,0 +1,13 @@
+teste em Mon Nov  2 15:13:21 UTC 2026
+GET / -> 200
+GET /kitavulso/ -> 200
+GET /node_modules/jose/package.json -> 404
+GET /netlify/functions/dados.mjs -> 404
+GET /package.json -> 200
+site tem MEDICAO: 1 / avulso: 1
+site tem produtos: 1
+POST evento -> 204
+POST bot -> 204
+dados SEM token -> 401
+dados COM token OIDC -> 200
+loja: eventos-teste | total: 1 | ultimos: [{'t': 'pedido', 'loja': 'kits', 'origem': 'teste', 'pedido': 'lu999', 'valor': 1500, 'itens': 4, 'pag': 'pix'}]
