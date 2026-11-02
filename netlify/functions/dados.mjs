@@ -23,7 +23,7 @@ export async function autorizado(req, verificar = jwtVerify) {
 }
 import { nomeLoja } from "./evento.mjs";
 
-const CAMPOS = ["t", "loja", "origem", "pedido", "valor", "itens", "pag", "v"];
+const CAMPOS = ["t", "loja", "origem", "pedido", "valor", "itens", "pag", "v", "prod"];
 
 export function lerChave(chave) {
   const [diaId, ...resto] = chave.split("~");

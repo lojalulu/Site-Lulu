@@ -1,0 +1,49 @@
+name: Relatório mensal (dia 1)
+
+on:
+  schedule:
+    - cron: '23 11 1 * *'   # dia 1 ~08:23 Salvador
+    - cron: '23 15 1 * *'   # reserva ~12:23
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+  id-token: write   # assinatura OIDC para ler os dados do site no Netlify (sem senha)
+
+concurrency:
+  group: relatorio-mensal
+  cancel-in-progress: false
+
+jobs:
+  relatorio:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Gerar relatório
+        id: r
+        env:
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          AUTO: ${{ github.event_name == 'schedule' && 'true' || 'false' }}
+        run: python3 relatorios/relatorio_mensal.py
+      - name: Salvar no repositório
+        if: steps.r.outputs.feito == 'sim'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add relatorios/
+          git diff --cached --quiet || git commit -m "Relatório mensal"
+          for i in 1 2 3 4 5; do git pull --rebase origin main && git push && break; sleep $((i*4)); done
+      - name: Avisar no GitHub (aparece no app)
+        if: steps.r.outputs.feito == 'sim'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TITULO: ${{ steps.r.outputs.titulo }}
+          ARQ: ${{ steps.r.outputs.arquivo }}
+        run: |
+          gh label create relatorio-mensal --color 5319E7 --description "Relatório mensal" 2>/dev/null || true
+          # fecha o relatório anterior para ficar só o atual aberto
+          for n in $(gh issue list --label relatorio-mensal --state open --json number --jq '.[].number'); do gh issue close "$n" >/dev/null; done
+          gh issue create --title "$TITULO" --body-file "$ARQ" --label relatorio-mensal

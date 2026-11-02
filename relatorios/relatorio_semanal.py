@@ -152,7 +152,7 @@ def dados_site(ini, fim):
 def resumir_site(eventos):
     r = {"visitantes": {}, "whats": 0, "pedidos": {}, "valor": {}, "itens": {},
          "origem_visit": Counter(), "origem_ped": Counter(), "valor_origem": defaultdict(float),
-         "pag": Counter(), "por_dia": Counter()}
+         "pag": Counter(), "por_dia": Counter(), "produtos": Counter()}
     vis = defaultdict(set)
     pedidos = {}  # nº do pedido -> último evento (Pix e cartão do mesmo pedido contam 1 vez)
     for e in sorted(eventos, key=lambda x: x.get("ts", 0)):
@@ -177,6 +177,11 @@ def resumir_site(eventos):
         r["valor_origem"][o] += e.get("valor", 0)
         r["pag"][e.get("pag") or "?"] += 1
         r["por_dia"][e.get("dia", "")] += 1
+        for parte in str(e.get("prod") or "").split("."):
+            if "x" in parte:
+                pid, _, q = parte.partition("x")
+                if pid.isdigit() and q.isdigit():
+                    r["produtos"][(loja, pid)] += int(q)
     r["visitantes"] = {k: len(v) for k, v in vis.items()}
     r["total_visitantes"] = sum(r["visitantes"].values())
     r["total_pedidos"] = len(pedidos)

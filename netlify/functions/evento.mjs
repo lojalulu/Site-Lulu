@@ -29,7 +29,7 @@ export function montarChave(d, agora = new Date()) {
   const itens = Math.max(0, Math.min(10000, Math.round(Number(d.itens) || 0)));
   const campos = [
     t, loja, limpa(d.origem) || "direto", limpa(d.pedido, 16), valor, itens,
-    limpa(d.pag, 10), limpa(d.v, 16),
+    limpa(d.pag, 10), limpa(d.v, 16), limpa(d.prod, 300),
   ];
   const id = `${agora.getTime()}-${Math.random().toString(36).slice(2, 8)}`;
   return `${dia}/${id}~${campos.join("~")}`;
