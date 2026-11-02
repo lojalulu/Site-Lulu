@@ -4,6 +4,7 @@
   "type": "module",
   "description": "Só para as funções do Netlify (medição). O site continua sendo os index.html autocontidos.",
   "dependencies": {
-    "@netlify/blobs": "^11.1.7"
+    "@netlify/blobs": "^11.1.7",
+    "jose": "^6.2.15"
   }
 }

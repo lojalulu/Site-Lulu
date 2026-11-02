@@ -1,6 +1,26 @@
 // Entrega ao relatório semanal os eventos de um período (protegido por chave).
-// GET /.netlify/functions/dados?de=AAAA-MM-DD&ate=AAAA-MM-DD  (header x-chave)
+// GET /.netlify/functions/dados?de=AAAA-MM-DD&ate=AAAA-MM-DD
+// Acesso: só robôs do GitHub Actions do repositório lojalulu/Site-Lulu, que se
+// identificam com o token OIDC assinado pelo próprio GitHub (sem senha guardada).
 import { getStore } from "@netlify/blobs";
+import { createRemoteJWKSet, jwtVerify } from "jose";
+
+const EMISSOR = "https://token.actions.githubusercontent.com";
+const PUBLICO = "lulu-relatorio";
+const REPO = "lojalulu/Site-Lulu";
+const JWKS = createRemoteJWKSet(new URL(EMISSOR + "/.well-known/jwks"));
+
+export async function autorizado(req, verificar = jwtVerify) {
+  const h = req.headers.get("authorization") || "";
+  const token = h.startsWith("Bearer ") ? h.slice(7) : "";
+  if (!token) return false;
+  try {
+    const { payload } = await verificar(token, JWKS, { issuer: EMISSOR, audience: PUBLICO });
+    return String(payload.repository || "").toLowerCase() === REPO.toLowerCase();
+  } catch {
+    return false;
+  }
+}
 import { nomeLoja } from "./evento.mjs";
 
 const CAMPOS = ["t", "loja", "origem", "pedido", "valor", "itens", "pag", "v"];
@@ -26,8 +46,7 @@ function dias(de, ate) {
 }
 
 export default async (req, context) => {
-  const chave = Netlify.env.get("RELATORIO_CHAVE");
-  if (!chave || req.headers.get("x-chave") !== chave) {
+  if (!(await autorizado(req))) {
     return new Response("nao autorizado", { status: 401 });
   }
   const u = new URL(req.url);
