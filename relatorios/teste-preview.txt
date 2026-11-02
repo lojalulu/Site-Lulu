@@ -1,0 +1,1 @@
+store eventos-teste pedidos: [('kits', 'lu999', 1500, '')]
