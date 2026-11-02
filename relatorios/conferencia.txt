@@ -1,5 +1,8 @@
 /g -> 302 https://luluextra.com/?origem=grupo
 /bio -> 302 https://luluextra.com/?origem=bio
 /bio-avulso -> 302 https://luluextra.com/kitavulso/?origem=bio
-Conferido em 02/11/2026 12:28 (Salvador) | HTTP 200
-Total de eventos (ontem + hoje): 0
+Conferido em 02/11/2026 17:07 (Salvador) | HTTP 200
+Total de eventos (ontem + hoje): 4
+2026-11-02 | visita  | avulso | origem teste-navegador | 1
+2026-11-02 | visita  | kits   | origem bio          | 1
+2026-11-02 | visita  | kits   | origem teste-navegador | 2
