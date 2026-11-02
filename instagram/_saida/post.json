@@ -1,12 +1,12 @@
 {
-  "loja": "kits",
-  "produto_id": "449556",
-  "produto_nome": "PACOTE COM 5 CONJUNTOS DE CALÇA LANÇAMENTOCÓS REF03",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1685233936_01dba4c449d23c15e67f.jpeg",
+  "loja": "avulso",
+  "produto_id": "4477094",
+  "produto_nome": "CONJ DE SHORT SAIA PREMIUM",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1789645889_655d0d84475937640c4e.webp",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "🏋️‍♀️ Lançamento da semana — sai na frente e oferece antes de todo mundo.\n\nFrete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦\n\nVem em kit fechado de 5, tecido suplex vip.\n\nCatálogo completo — link na bio ✨\n\n#modafitnessevangelica #modafitnesssalvador #salvador",
-  "pilar": "lancamento",
-  "eh_lancamento": true,
-  "publicar_feed": true,
-  "rodada_do_dia": 2
+  "legenda_feed": "🔥 Qualidade superior peça por peça, sem precisar levar kit fechado.\n\nAtacado de peça avulsa, a partir de 10 peças.\n\nOs outros modelos estão no link da bio 👆\n\n#modafitness #rendaextra",
+  "pilar": "qualidade",
+  "eh_lancamento": false,
+  "publicar_feed": false,
+  "rodada_do_dia": 3
 }
