@@ -53,6 +53,10 @@ def instagram_mes(ini, fim):
         tot.setdefault("posts", []).extend(d["posts"])
         a = b + timedelta(days=1)
     tot["seguidores"] = seguidores
+    unicos = {}
+    for p in tot.get("posts", []):
+        unicos[p["link"] or id(p)] = p
+    tot["posts"] = list(unicos.values())
     if not ok:
         for k in ("views", "cliques_links", "interacoes"):
             tot[k] = None

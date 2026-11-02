@@ -106,12 +106,22 @@ def dados_instagram(ini, fim):
             out["novos_seguidores"] = sum(vals)
 
     # posts da semana
-    midias, url_params = [], dict(fields="id,caption,media_product_type,media_type,timestamp,like_count,comments_count,permalink", limit=50)
-    pagina = ig("me/media", **url_params)
-    for p in (pagina or {}).get("data", []):
-        ts = datetime.strptime(p["timestamp"][:19], "%Y-%m-%dT%H:%M:%S").replace(tzinfo=timezone.utc).astimezone(SALVADOR).date()
-        if ini <= ts <= fim:
-            midias.append((p, ts))
+    midias, vistos = [], set()
+    params = dict(fields="id,caption,media_product_type,media_type,timestamp,like_count,comments_count,permalink", limit=50)
+    for _ in range(10):  # até 500 publicações; para quando passar do início do período
+        pagina = ig("me/media", **params) or {}
+        dados = pagina.get("data", [])
+        mais_antigo = None
+        for p in dados:
+            ts = datetime.strptime(p["timestamp"][:19], "%Y-%m-%dT%H:%M:%S").replace(tzinfo=timezone.utc).astimezone(SALVADOR).date()
+            mais_antigo = ts
+            if ini <= ts <= fim and p["id"] not in vistos:
+                vistos.add(p["id"])
+                midias.append((p, ts))
+        depois = ((pagina.get("paging") or {}).get("cursors") or {}).get("after")
+        if not dados or not depois or (mais_antigo and mais_antigo < ini):
+            break
+        params["after"] = depois  # só o cursor; nunca usar o link "next" (tem o token)
     for p, ts in midias:
         reel = p.get("media_product_type") == "REELS"
         met = "reach,saved,shares,views" if reel else "reach,saved,shares"
