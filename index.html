@@ -2658,7 +2658,16 @@ iniciar();
           var tot = (/Total(?: pago)?:\s*(R\$\s*[\d.,]+)/.exec(txt) || [])[1] || "";
           var itens = 0, re = /^•\s*(\d+)x/gm, m;
           while ((m = re.exec(txt))) itens += Number(m[1]);
-          enviar({ t: "pedido", pedido: ped, valor: numero(tot), itens: itens, pag: /via Pix/i.test(txt) ? "pix" : "cartao" });
+          // produtos do carrinho: "id x qtd" (ex.: 906628x4.3555118x2) — pro top 10 do relatório mensal
+          var prod = "";
+          try {
+            if (typeof carrinho === "object" && carrinho) {
+              var soma = {};
+              Object.keys(carrinho).forEach(function (k) { var q = Number(carrinho[k]) || 0; if (q > 0) { var id = String(k).split("::")[0]; soma[id] = (soma[id] || 0) + q; } });
+              prod = Object.keys(soma).slice(0, 15).map(function (id) { return id + "x" + soma[id]; }).join(".");
+            }
+          } catch (e2) {}
+          enviar({ t: "pedido", pedido: ped, valor: numero(tot), itens: itens, pag: /via Pix/i.test(txt) ? "pix" : "cartao", prod: prod });
         } catch (e) {}
         return original.apply(this, arguments);
       };
