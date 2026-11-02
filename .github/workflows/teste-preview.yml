@@ -1,0 +1,51 @@
+name: Teste preview (temporario)
+on:
+  push:
+    branches: [produtos]
+    paths: ['.github/workflows/teste-preview.yml']
+permissions:
+  contents: write
+  id-token: write
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: produtos }
+      - run: npm i --no-save playwright@1.48.2 && npx playwright install --with-deps chromium
+      - run: |
+          P=https://deploy-preview-6--lojalulu.netlify.app
+          for i in $(seq 1 30); do curl -s $P/ | grep -q 'prod: prod' && break; sleep 10; done
+          cat > t.cjs <<'JS'
+          const { chromium } = require("playwright");
+          (async () => {
+            const P = process.argv[2]; const b = await chromium.launch();
+            const ctx = await b.newContext({ userAgent: "Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 Chrome/129.0 Mobile Safari/537.36", viewport: { width: 400, height: 860 } });
+            const out = [];
+            for (const [u, min, loja] of [[P + "/?origem=teste-preview", 4, "kits"], [P + "/kitavulso/?origem=teste-preview", 10, "avulso"]]) {
+              const p = await ctx.newPage(); const erros = []; p.on("pageerror", e => erros.push(e.message));
+              const resp = []; p.on("response", r => { if (r.url().includes("/functions/evento")) resp.push(r.status()); });
+              ctx.on("page", pg => pg.close().catch(()=>{}));
+              await p.goto(u, { waitUntil: "networkidle" });
+              const id = await p.locator("[data-action='adicionar']").first().getAttribute("data-id");
+              const tam = p.locator(".card").first().locator("[data-tamanho], .tamanho-btn, [data-action='tamanho']").first();
+              if (await tam.count()) await tam.click().catch(()=>{});
+              for (let i = 0; i < min; i++) await p.click(`.qty-stepper[data-id='${id}'] [data-action='mais']`);
+              await p.locator("[data-action='adicionar']").first().click();
+              await p.click("#cart-toggle"); await p.waitForTimeout(400);
+              const ativo = await p.locator("#btn-confirmar-pix").isEnabled();
+              if (ativo) await p.click("#btn-confirmar-pix");
+              await p.waitForTimeout(2500);
+              out.push(`${loja}: pixLiberado=${ativo} respostasEvento=${resp.join(",")} errosJS=${erros.length} ${erros.join(";")}`);
+            }
+            console.log(out.join("\n")); await b.close();
+          })();
+          JS
+          node t.cjs $P | tee r.txt
+          sleep 4; HOJE=$(date -u -d '-3 hours' +%F)
+          TOK=$(curl -s -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=lulu-relatorio" | python3 -c 'import sys,json;print(json.load(sys.stdin)["value"])')
+          curl -s -H "Authorization: Bearer $TOK" "$P/.netlify/functions/dados?de=$HOJE&ate=$HOJE" | python3 -c 'import sys,json;d=json.load(sys.stdin);print("store",d["loja"],"pedidos:",[(e["loja"],e["pedido"],e["valor"],e["prod"]) for e in d["eventos"] if e["t"]=="pedido"][-4:])' | tee -a r.txt
+          mkdir -p relatorios && mv r.txt relatorios/teste-preview.txt
+      - run: |
+          git config user.name "github-actions[bot]"; git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add relatorios/teste-preview.txt && git commit -m "resultado teste" && git push origin HEAD:produtos
