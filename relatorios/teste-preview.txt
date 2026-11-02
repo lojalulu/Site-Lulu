@@ -1,2 +1,0 @@
-kits: produtos=12 selos=3 depoimentosOcultos=false faqAbre=true botaoPixLiberado=true errosJS=0 
-avulso: produtos=12 selos=3 depoimentosOcultos=false faqAbre=true botaoPixLiberado=true errosJS=0 

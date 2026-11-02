@@ -2,7 +2,7 @@ name: Teste preview (temporario)
 on:
   push:
     branches: [provas]
-    paths: ['.github/workflows/teste-preview.yml']
+    paths: ['.github/workflows/teste-preview.yml', 'index.html']
 permissions:
   contents: write
 jobs:
@@ -39,7 +39,7 @@ jobs:
             console.log(out.join("\n")); await b.close();
           })();
           JS
-          node t.cjs | tee relatorios/teste-preview.txt
+          sleep 75; node t.cjs | tee relatorios/teste-preview.txt
       - run: |
           git config user.name "github-actions[bot]"; git config user.email "github-actions[bot]@users.noreply.github.com"
           mkdir -p relatorios/prints && mv *.png relatorios/prints/
