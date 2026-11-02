@@ -52,3 +52,9 @@
   status = 302
   force = true
 
+
+[[redirects]]
+  from = "/story"
+  to = "/?origem=story"
+  status = 302
+  force = true
