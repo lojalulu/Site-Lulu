@@ -95,7 +95,7 @@ def _validar(b: dict) -> dict:
     legenda = str(b.get("legenda", "")).strip()
     hashtags = [h if h.startswith("#") else "#" + h for h in (b.get("hashtags") or []) if isinstance(h, str)]
     hashtags = [re.sub(r"[^#\wÀ-ú]", "", h) for h in hashtags][:9]
-    if not (2 <= _n_palavras(gancho) <= 12):
+    if not (2 <= _n_palavras(gancho) <= 10):
         raise ValueError("gancho fora do tamanho")
     if not quadros or any(not (3 <= _n_palavras(q) <= 18) for q in quadros):
         raise ValueError("quadros fora do tamanho")
