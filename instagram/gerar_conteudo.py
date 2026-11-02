@@ -142,6 +142,15 @@ def main():
     with open(SAIDA_FEED_IMG, "wb") as f:
         f.write(gerar_imagem_feed(produto["imagens"][0]))
 
+    # contagem de rodadas do dia (Salvador): usada pela trava anti-duplicado e
+    # pra decidir feed x story. Desde 02/11/2026: Story em TODAS as rodadas (6/dia),
+    # post no FEED só nas rodadas pares (2ª, 4ª, 6ª ≈ 10h, 18h, 21h) — 3 por dia.
+    # Motivo: 44 posts/semana com quase zero interação (relatório 26/10–01/11).
+    hoje = (datetime.now(timezone.utc) - timedelta(hours=3)).strftime("%Y-%m-%d")
+    cont = historico.get("contagem_dia") or {}
+    rodada = (cont.get("n", 0) if cont.get("data") == hoje else 0) + 1
+    publicar_feed = os.environ.get("FORCAR_FEED") == "1" or rodada % 2 == 0
+
     saida = {
         "loja": loja,
         "produto_id": produto["id"],
@@ -151,6 +160,8 @@ def main():
         "legenda_feed": post["legenda_feed"],
         "pilar": post["pilar"],
         "eh_lancamento": eh_lancamento,
+        "publicar_feed": publicar_feed,
+        "rodada_do_dia": rodada,
     }
     with open(SAIDA_POST, "w", encoding="utf-8") as f:
         json.dump(saida, f, ensure_ascii=False, indent=2)
@@ -160,12 +171,7 @@ def main():
     historico["postados"][loja].append(produto["id"])
     historico["ultimos_pilares"] = (historico["ultimos_pilares"] + [post["pilar"]])[-5:]
     historico["proxima_loja"] = "avulso" if loja == "kits" else "kits"
-    # contagem de posts do dia (Salvador) — usada pela trava que evita post
-    # duplicado quando o relógio externo e o agendamento do GitHub rodam juntos
-    hoje = (datetime.now(timezone.utc) - timedelta(hours=3)).strftime("%Y-%m-%d")
-    cont = historico.get("contagem_dia") or {}
-    n = cont.get("n", 0) if cont.get("data") == hoje else 0
-    historico["contagem_dia"] = {"data": hoje, "n": n + 1}
+    historico["contagem_dia"] = {"data": hoje, "n": rodada}
     salvar_historico(historico)
 
     tag = " [LANÇAMENTO]" if eh_lancamento else ""

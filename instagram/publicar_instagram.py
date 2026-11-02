@@ -102,19 +102,23 @@ def main():
     falhas = []
 
     # ----- 1) Feed: foto do produto (JPEG convertido) + legenda -----
-    try:
-        print("Criando post do feed...")
-        if post.get("feed_img_repo_path"):
-            url_feed = url_bruta_da_imagem_no_github(post["feed_img_repo_path"])
-        else:
-            url_feed = post["foto_feed_url"]
-        container_feed = criar_container(url_feed, caption=post["legenda_feed"])
-        esperar_pronto(container_feed)
-        id_feed = publicar(container_feed)
-        print(f"Feed publicado: {id_feed}")
-    except Exception as e:
-        print(f"FEED FALHOU: {e}")
-        falhas.append(f"feed: {e}")
+    # (só nas rodadas pares: 3 posts no feed por dia; story sai sempre)
+    if post.get("publicar_feed", True) is False:
+        print(f"Rodada {post.get('rodada_do_dia')} do dia: só Story (feed fica para a próxima rodada).")
+    else:
+        try:
+            print("Criando post do feed...")
+            if post.get("feed_img_repo_path"):
+                url_feed = url_bruta_da_imagem_no_github(post["feed_img_repo_path"])
+            else:
+                url_feed = post["foto_feed_url"]
+            container_feed = criar_container(url_feed, caption=post["legenda_feed"])
+            esperar_pronto(container_feed)
+            id_feed = publicar(container_feed)
+            print(f"Feed publicado: {id_feed}")
+        except Exception as e:
+            print(f"FEED FALHOU: {e}")
+            falhas.append(f"feed: {e}")
 
     # ----- 2) Story: sai mesmo se o feed falhar -----
     try:
