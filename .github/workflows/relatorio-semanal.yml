@@ -1,0 +1,54 @@
+name: Relatório semanal (segunda)
+
+on:
+  schedule:
+    - cron: '17 11 * * 1'   # segunda ~08:17 Salvador
+    - cron: '17 15 * * 1'   # reserva ~12:17 (se o GitHub pular a primeira)
+  workflow_dispatch:
+    inputs:
+      ultimos7:
+        description: "Usar os últimos 7 dias em vez da semana seg–dom anterior"
+        default: "false"
+
+permissions:
+  contents: write
+  issues: write
+  id-token: write   # assinatura OIDC para ler os dados do site no Netlify (sem senha)
+
+concurrency:
+  group: relatorio-semanal
+  cancel-in-progress: false
+
+jobs:
+  relatorio:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Gerar relatório
+        id: r
+        env:
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          AUTO: ${{ github.event_name == 'schedule' && 'true' || 'false' }}
+          ULTIMOS_7: ${{ github.event.inputs.ultimos7 == 'true' && '1' || '' }}
+        run: python3 relatorios/relatorio_semanal.py
+      - name: Salvar no repositório
+        if: steps.r.outputs.feito == 'sim'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add relatorios/
+          git diff --cached --quiet || git commit -m "Relatório semanal"
+          for i in 1 2 3 4 5; do git pull --rebase origin main && git push && break; sleep $((i*4)); done
+      - name: Avisar no GitHub (aparece no app)
+        if: steps.r.outputs.feito == 'sim'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TITULO: ${{ steps.r.outputs.titulo }}
+          ARQ: ${{ steps.r.outputs.arquivo }}
+        run: |
+          gh label create relatorio --color 1D76DB --description "Relatório semanal" 2>/dev/null || true
+          # fecha o relatório anterior para ficar só o atual aberto
+          for n in $(gh issue list --label relatorio --state open --json number --jq '.[].number'); do gh issue close "$n" >/dev/null; done
+          gh issue create --title "$TITULO" --body-file "$ARQ" --label relatorio
