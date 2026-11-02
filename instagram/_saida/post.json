@@ -1,10 +1,12 @@
 {
-  "loja": "kits",
-  "produto_id": "384571",
-  "produto_nome": "PACOTE COM 5 CONJUNTOS DE SHORT BICOLOR PLUS",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1679942359_405a4f5ff647a9279851.jpeg",
+  "loja": "avulso",
+  "produto_id": "3480260",
+  "produto_nome": "SHORT 3D COM BOLSO",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1777385891_739391f10f63d3ffc334.webp",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "💗 Firme sem ser apertada. É isso que a cliente procura.\n\n5 Conjuntos por R$ 208,90 — já pode revender no seu preço.\n\nE tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚\n\nKit fechado — ótimo pra começar a revender.\n\nVê as cores e monta seu pedido pelo link da bio 🔗\n\n#modafitnessevangelica #modafitness",
-  "pilar": "conforto",
-  "eh_lancamento": false
+  "legenda_feed": "🔥 Peça que você posta no status e já aparece gente perguntando o preço.\n\nPeça avulsa premium — você monta o pedido do seu jeito.\n\nLink na bio 🔗\n\n#rendaextra",
+  "pilar": "renda_extra",
+  "eh_lancamento": false,
+  "publicar_feed": false,
+  "rodada_do_dia": 1
 }
