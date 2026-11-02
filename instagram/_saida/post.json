@@ -1,12 +1,12 @@
 {
-  "loja": "avulso",
-  "produto_id": "3480260",
-  "produto_nome": "SHORT 3D COM BOLSO",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1777385891_739391f10f63d3ffc334.webp",
+  "loja": "kits",
+  "produto_id": "449556",
+  "produto_nome": "PACOTE COM 5 CONJUNTOS DE CALÇA LANÇAMENTOCÓS REF03",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1685233936_01dba4c449d23c15e67f.jpeg",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "🔥 Peça que você posta no status e já aparece gente perguntando o preço.\n\nPeça avulsa premium — você monta o pedido do seu jeito.\n\nLink na bio 🔗\n\n#rendaextra",
-  "pilar": "renda_extra",
-  "eh_lancamento": false,
-  "publicar_feed": false,
-  "rodada_do_dia": 1
+  "legenda_feed": "🏋️‍♀️ Lançamento da semana — sai na frente e oferece antes de todo mundo.\n\nFrete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦\n\nVem em kit fechado de 5, tecido suplex vip.\n\nCatálogo completo — link na bio ✨\n\n#modafitnessevangelica #modafitnesssalvador #salvador",
+  "pilar": "lancamento",
+  "eh_lancamento": true,
+  "publicar_feed": true,
+  "rodada_do_dia": 2
 }

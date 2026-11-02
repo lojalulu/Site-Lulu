@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -44,7 +44,8 @@
       "2773815",
       "3703559",
       "3950005",
-      "384571"
+      "384571",
+      "449556"
     ],
     "avulso": [
       "3117836",
@@ -86,11 +87,11 @@
     ]
   },
   "ultimos_pilares": [
-    "cliente_ama",
     "lucratividade",
     "qualidade",
     "conforto",
-    "renda_extra"
+    "renda_extra",
+    "lancamento"
   ],
   "conhecidos": {
     "kits": [
@@ -196,6 +197,7 @@
       "3703557",
       "3703559",
       "3703560",
+      "3703562",
       "3703564",
       "3703565",
       "3703570",
@@ -227,6 +229,7 @@
       "3950068",
       "4019547",
       "4019559",
+      "4019589",
       "402269",
       "402270",
       "4116139",
@@ -246,10 +249,12 @@
       "4485661",
       "4485664",
       "4485666",
+      "449556",
       "449557",
       "4496249",
       "4514241",
       "458313",
+      "4598001",
       "477630",
       "477632",
       "477655",
@@ -364,36 +369,40 @@
     ]
   },
   "lancamentos_pendentes": {
-    "kits": [],
+    "kits": [
+      "3703562",
+      "4019589",
+      "4598001"
+    ],
     "avulso": []
   },
   "ultimas_frases": {
     "lancamento": [
-      "Você está entre as primeiras a ver essa peça.",
       "Lançamento novinho, direto da fábrica.",
       "Novidade no catálogo, chegou agora.",
       "Acabou de chegar no catálogo — poucas peças por enquanto.",
       "Peça nova no catálogo, quentinha da produção.",
       "Modelo novo na área — sua cliente ainda não viu em lugar nenhum.",
-      "Modelo inédito no catálogo. Vale a pena conferir."
+      "Modelo inédito no catálogo. Vale a pena conferir.",
+      "Lançamento da semana — sai na frente e oferece antes de todo mundo."
     ],
     "frete_kits": [
-      "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦",
       "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚",
-      "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚"
+      "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚",
+      "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦"
     ],
     "tag_kits": [
-      "Kit com cores variadas.",
       "Kit fechado, 5 peças, suplex vip.",
       "É kit fechado com 5 peças, em suplex vip.",
-      "Kit fechado — ótimo pra começar a revender."
+      "Kit fechado — ótimo pra começar a revender.",
+      "Vem em kit fechado de 5, tecido suplex vip."
     ],
     "cta_bio": [
-      "Link da bio te leva direto pro catálogo 📲",
       "Catálogo inteiro tá no link da bio 👆",
       "Dá uma espiada no link da bio 💗",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
-      "Link na bio 🔗"
+      "Link na bio 🔗",
+      "Catálogo completo — link na bio ✨"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -502,6 +511,6 @@
   },
   "contagem_dia": {
     "data": "2026-11-02",
-    "n": 1
+    "n": 2
   }
 }
