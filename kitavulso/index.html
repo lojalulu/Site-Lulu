@@ -2116,5 +2116,79 @@ function iniciar() {
 iniciar();
 
 </script>
+<!-- MEDICAO:START — contador leve (visitas, cliques no WhatsApp, pedidos iniciados). Só observa; não mexe no carrinho. -->
+<script>
+(function () {
+  try {
+    var LOJA = "avulso";
+    var URL_EVENTO = "/.netlify/functions/evento";
+    function ls(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+    function idVisitante() {
+      var v = ls("lulu_v");
+      if (!v) { v = Math.random().toString(36).slice(2, 12); ls("lulu_v", v); }
+      return v;
+    }
+    // origem: ?origem= > utm_source > site de onde veio > "direto". Vale por 7 dias.
+    function origemAtual() {
+      var p = new URLSearchParams(location.search);
+      var o = p.get("origem") || p.get("utm_source") || "";
+      if (!o && document.referrer) {
+        try {
+          var h = new URL(document.referrer).hostname.replace(/^www\./, "");
+          if (h && h !== location.hostname) {
+            o = /instagram/.test(h) ? "instagram" : /lnk\.bio/.test(h) ? "bio" : /whatsapp|wa\.me/.test(h) ? "whatsapp" : /facebook|fb\./.test(h) ? "facebook" : /google/.test(h) ? "google" : h;
+          }
+        } catch (e) {}
+      }
+      var agora = Date.now();
+      if (o) { ls("lulu_origem", o); ls("lulu_origem_ts", String(agora)); return o; }
+      var salva = ls("lulu_origem"), ts = Number(ls("lulu_origem_ts") || 0);
+      if (salva && agora - ts < 7 * 864e5) return salva;
+      return "direto";
+    }
+    var ORIGEM = origemAtual();
+    function enviar(dados) {
+      try {
+        dados.loja = LOJA; dados.origem = ORIGEM; dados.v = idVisitante();
+        var corpo = JSON.stringify(dados);
+        if (navigator.sendBeacon) { navigator.sendBeacon(URL_EVENTO, new Blob([corpo], { type: "text/plain" })); }
+        else { fetch(URL_EVENTO, { method: "POST", body: corpo, keepalive: true }).catch(function () {}); }
+      } catch (e) {}
+    }
+    function numero(txt) {
+      // "R$ 1.234,56" -> 1234.56
+      var m = /R\$\s*([\d.]+,\d{2})/.exec(txt || "");
+      return m ? Number(m[1].replace(/\./g, "").replace(",", ".")) : 0;
+    }
+    // 1) visita (1 por aba)
+    try { if (!sessionStorage.getItem("lulu_visitou")) { sessionStorage.setItem("lulu_visitou", "1"); enviar({ t: "visita" }); } }
+    catch (e) { enviar({ t: "visita" }); }
+    // 2) pedido iniciado: observa a mensagem que vai pro WhatsApp
+    if (typeof window.abrirWhatsApp === "function") {
+      var original = window.abrirWhatsApp;
+      window.abrirWhatsApp = function (mensagem) {
+        try {
+          var txt = String(mensagem || "");
+          var ped = (/pedido\s+((?:LU|AV)\d+)/i.exec(txt) || [])[1] || "";
+          var tot = (/Total(?: pago)?:\s*(R\$\s*[\d.,]+)/.exec(txt) || [])[1] || "";
+          var itens = 0, re = /^•\s*(\d+)x/gm, m;
+          while ((m = re.exec(txt))) itens += Number(m[1]);
+          enviar({ t: "pedido", pedido: ped, valor: numero(tot), itens: itens, pag: /via Pix/i.test(txt) ? "pix" : "cartao" });
+        } catch (e) {}
+        return original.apply(this, arguments);
+      };
+    }
+    // 3) clique em qualquer outro link de WhatsApp (topo, flutuante etc.)
+    document.addEventListener("click", function (e) {
+      try {
+        var a = e.target.closest && e.target.closest('a[href*="wa.me"],a[href*="whatsapp"]');
+        if (a) enviar({ t: "whats" });
+      } catch (err) {}
+    }, true);
+  } catch (e) {}
+})();
+</script>
+<!-- MEDICAO:END -->
+
 </body>
 </html>

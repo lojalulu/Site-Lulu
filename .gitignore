@@ -3,3 +3,5 @@ _tmp_font.ttf
 instagram/_saida/reel.mp4
 instagram/_saida/previa.jpg
 instagram/_saida/briefing.json
+node_modules/
+.netlify/
