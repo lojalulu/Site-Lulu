@@ -1,3 +1,0 @@
-kits: pixLiberado=true respostasEvento=204,204 errosJS=0 
-avulso: pixLiberado=true respostasEvento=204,204 errosJS=0 
-store eventos-teste pedidos: [('kits', 'lu999', 1500, ''), ('kits', 'lu752', 2059, '4485658x4'), ('avulso', 'av508', 368, '4371813x10')]
