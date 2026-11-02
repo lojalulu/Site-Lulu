@@ -32,3 +32,23 @@
   to = "/404.html"
   status = 404
   force = true
+
+# Endereços curtos com origem (medição): o contador do site lê o ?origem=
+[[redirects]]
+  from = "/g"
+  to = "/?origem=grupo"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/bio"
+  to = "/?origem=bio"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/bio-avulso"
+  to = "/kitavulso/?origem=bio"
+  status = 302
+  force = true
+
