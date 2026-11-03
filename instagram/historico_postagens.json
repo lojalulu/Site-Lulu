@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -45,7 +45,8 @@
       "3703559",
       "3950005",
       "384571",
-      "449556"
+      "449556",
+      "3703562"
     ],
     "avulso": [
       "3117836",
@@ -88,11 +89,11 @@
     ]
   },
   "ultimos_pilares": [
-    "qualidade",
     "conforto",
     "renda_extra",
     "lancamento",
-    "qualidade"
+    "qualidade",
+    "lancamento"
   ],
   "conhecidos": {
     "kits": [
@@ -371,7 +372,6 @@
   },
   "lancamentos_pendentes": {
     "kits": [
-      "3703562",
       "4019589",
       "4598001"
     ],
@@ -379,31 +379,31 @@
   },
   "ultimas_frases": {
     "lancamento": [
-      "Lançamento novinho, direto da fábrica.",
       "Novidade no catálogo, chegou agora.",
       "Acabou de chegar no catálogo — poucas peças por enquanto.",
       "Peça nova no catálogo, quentinha da produção.",
       "Modelo novo na área — sua cliente ainda não viu em lugar nenhum.",
       "Modelo inédito no catálogo. Vale a pena conferir.",
-      "Lançamento da semana — sai na frente e oferece antes de todo mundo."
+      "Lançamento da semana — sai na frente e oferece antes de todo mundo.",
+      "Você está entre as primeiras a ver essa peça."
     ],
     "frete_kits": [
-      "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚",
       "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚",
-      "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦"
+      "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦",
+      "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦"
     ],
     "tag_kits": [
-      "Kit fechado, 5 peças, suplex vip.",
       "É kit fechado com 5 peças, em suplex vip.",
       "Kit fechado — ótimo pra começar a revender.",
-      "Vem em kit fechado de 5, tecido suplex vip."
+      "Vem em kit fechado de 5, tecido suplex vip.",
+      "Kit com cores variadas."
     ],
     "cta_bio": [
-      "Dá uma espiada no link da bio 💗",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Link na bio 🔗",
       "Catálogo completo — link na bio ✨",
-      "Os outros modelos estão no link da bio 👆"
+      "Os outros modelos estão no link da bio 👆",
+      "Link da bio te leva direto pro catálogo 📲"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -432,10 +432,10 @@
       "Frete grátis (Vip) pra Salvador e todo o Brasil 🚚"
     ],
     "preco_kits": [
-      "Kit com {quantidade} por {preco}.",
       "Hoje, {quantidade} saem por {preco}.",
       "{quantidade}: {preco}.",
-      "{quantidade} por {preco} — já pode revender no seu preço."
+      "{quantidade} por {preco} — já pode revender no seu preço.",
+      "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça."
     ],
     "cta_alt": [
       "Manda mensagem que a gente te ajuda a montar o pedido 💬",
@@ -511,7 +511,7 @@
     ]
   },
   "contagem_dia": {
-    "data": "2026-11-02",
-    "n": 3
+    "data": "2026-11-03",
+    "n": 1
   }
 }
