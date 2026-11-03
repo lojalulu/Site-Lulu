@@ -16,7 +16,7 @@
 //   INSTAGRAM_BUSINESS_ID   - (opcional) padrão 17841401562118752
 //   FRANQUIA_URL            - (opcional) link enviado a quem comenta FRANQUIA
 //   DIRECT_LIGADO           - "nao" desliga as respostas sem precisar mexer no código
-import { createHmac, timingSafeEqual } from "node:crypto";
+import { createHash, createHmac, timingSafeEqual } from "node:crypto";
 import { getStore } from "@netlify/blobs";
 
 const GRAPH = "https://graph.instagram.com/v23.0";
@@ -69,11 +69,22 @@ export function mensagemPrivada(tipo, env = {}) {
 
 export function assinaturaValida(corpoBruto, cabecalho, segredo) {
   if (!segredo || !cabecalho || !cabecalho.startsWith("sha256=")) return false;
-  const esperado = createHmac("sha256", segredo).update(corpoBruto).digest("hex");
-  const recebido = cabecalho.slice(7);
-  const a = Buffer.from(esperado);
-  const b = Buffer.from(recebido);
-  return a.length === b.length && timingSafeEqual(a, b);
+  const recebido = Buffer.from(cabecalho.slice(7));
+  // A Meta às vezes assina o texto com acentos escritos como \\uXXXX (minúsculo).
+  const escapado = corpoBruto.replace(/[\u0080-\uffff]/g, (c) => "\\u" + c.charCodeAt(0).toString(16).padStart(4, "0"));
+  for (const texto of new Set([corpoBruto, escapado])) {
+    const esperado = Buffer.from(createHmac("sha256", segredo).update(texto).digest("hex"));
+    if (esperado.length === recebido.length && timingSafeEqual(esperado, recebido)) return true;
+  }
+  return false;
+}
+
+// Aceita a chave do app Instagram e, opcionalmente, a do app Meta (INSTAGRAM_APP_SECRET_FB).
+// Devolve o número da chave que bateu (1 ou 2) ou 0.
+export function qualChaveAssina(corpo, cabecalho, env) {
+  const chaves = [env.INSTAGRAM_APP_SECRET, env.INSTAGRAM_APP_SECRET_FB].map((k) => String(k ?? "").trim());
+  for (let i = 0; i < chaves.length; i++) if (chaves[i] && assinaturaValida(corpo, cabecalho, chaves[i])) return i + 1;
+  return 0;
 }
 
 // Extrai só os comentários novos, de outras pessoas, que não são respostas.
@@ -167,11 +178,14 @@ export default async (req, context) => {
 
   const corpo = await req.text();
   const cab = req.headers.get("x-hub-signature-256");
-  if (!assinaturaValida(corpo, cab, env.INSTAGRAM_APP_SECRET)) {
-    // Só diz o MOTIVO (nunca valores): ajuda a achar chave errada ou variável faltando.
-    console.log(`direct: recusado 401 (chave_no_netlify=${env.INSTAGRAM_APP_SECRET ? "sim" : "NAO"}, assinatura_da_meta=${cab ? "sim" : "NAO"}, tamanho_chave=${String(env.INSTAGRAM_APP_SECRET ?? "").length})`);
+  const chave = qualChaveAssina(corpo, cab, env);
+  if (!chave) {
+    // Só diz o MOTIVO e uma "impressão" curta (nunca a chave): ajuda a achar chave errada ou deploy velho.
+    const imp = (k) => (k ? createHash("sha256").update(String(k).trim()).digest("hex").slice(0, 6) : "-");
+    console.log(`direct: recusado 401 (assinatura_da_meta=${cab ? "sim" : "NAO"}, tamanhos=${String(env.INSTAGRAM_APP_SECRET ?? "").length}/${String(env.INSTAGRAM_APP_SECRET_FB ?? "").length}, impressoes=${imp(env.INSTAGRAM_APP_SECRET)}/${imp(env.INSTAGRAM_APP_SECRET_FB)}, corpo=${corpo.length}b)`);
     return new Response("assinatura invalida", { status: 401 });
   }
+  console.log(`direct: assinatura ok (chave ${chave})`);
   if (String(env.DIRECT_LIGADO).toLowerCase() === "nao") return new Response("desligado", { status: 200 });
   try {
     const payload = JSON.parse(corpo);
