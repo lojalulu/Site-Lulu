@@ -180,3 +180,4 @@ export default async (req, context) => {
   // Sempre 200: a Meta reenvia em caso de erro e isso geraria mensagem duplicada.
   return new Response("ok", { status: 200 });
 };
+// (deploy de 03/11 para aplicar as variáveis do Netlify)
