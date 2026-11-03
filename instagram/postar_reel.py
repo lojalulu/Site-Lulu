@@ -457,7 +457,9 @@ def aplicar_funil_direct(briefing, indice=0):
     b = dict(briefing)
     b["cta"] = CTAS_DIRETO[indice % len(CTAS_DIRETO)]
     b["selo"] = "COMENTA QUERO"
-    leg = b["legenda"].rstrip()
+    # uma chamada só: tira frases que mandam pro "link da bio" para não competir com o comentário
+    frases = re.split(r"(?<=[.!?])\s+", b["legenda"].strip())
+    leg = " ".join(f for f in frases if not re.search(r"\bbio\b", f, re.I)).strip() or b["legenda"].strip()
     b["legenda"] = leg + "\n\nComenta QUERO aqui embaixo que eu te mando o catálogo completo no Direct 💗"
     return b
 

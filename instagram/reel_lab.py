@@ -58,7 +58,7 @@ FATOS = """FATOS PERMITIDOS (use só estes; não invente nada além):
 - Preço: só use o marcador {PRECO} (o sistema troca pelo preço real, ex.: "5 Conjuntos por R$ 199,90"). Nunca escreva valores."""
 
 PROIBIDO = """PROIBIDO: promessa de ganho ou lucro garantido, escrever valores em reais (use {PRECO}), números ou estatísticas inventados,
-"sem estoque", "de graça", urgência falsa ("últimas unidades"), citar ou criticar concorrentes pelo nome, clickbait que o vídeo não entrega,
+"sem estoque", "de graça", dizer que envia "pro mundo"/exterior (só enviamos pro Brasil), urgência falsa ("últimas unidades"), citar ou criticar concorrentes pelo nome, clickbait que o vídeo não entrega,
 pedir "curta/compartilhe/salve", emojis nos textos do vídeo, prometer data exata de entrega,
 falar de peças avulsas ou da mini franquia (este Reel é SÓ dos kits de luluextra.com),
 afirmar que dá pra montar kit peça por peça (os kits já vêm prontos), criticar qualquer forma de comprar,
