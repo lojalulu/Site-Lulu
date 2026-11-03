@@ -27,7 +27,7 @@ PASTA = "relatorios"
 HIST = f"{PASTA}/historico.json"
 SALVADOR = timezone(timedelta(hours=-3))
 NOMES_ORIGEM = {
-    "bio": "Link da bio", "instagram": "Instagram", "reel": "Reel", "story": "Story",
+    "bio": "Link da bio", "direct": "Direct (comentou no Reel)", "instagram": "Instagram", "reel": "Reel", "story": "Story",
     "grupo": "Grupos de WhatsApp", "whatsapp": "WhatsApp", "facebook": "Facebook",
     "google": "Google", "direto": "Direto / sem origem", "ig": "Instagram",
 }

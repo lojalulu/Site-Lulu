@@ -58,3 +58,10 @@
   to = "/?origem=story"
   status = 302
   force = true
+
+# Link enviado no Direct a quem comenta QUERO nos Reels (funil comenta-e-recebe)
+[[redirects]]
+  from = "/direct"
+  to = "/?origem=direct"
+  status = 302
+  force = true

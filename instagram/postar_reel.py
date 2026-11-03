@@ -434,6 +434,34 @@ def texto_preco(itens):
     return f"{rotulo_kit(it['nome'])} por R$ {it['preco']:.2f}".replace(".", ",")
 
 
+CTAS_DIRETO = [
+    "Comenta QUERO e te mando o catálogo no Direct",
+    "Comenta QUERO que o catálogo chega no seu Direct",
+    "Comente QUERO e receba os kits no Direct",
+    "Escreve QUERO aqui embaixo e confere seu Direct",
+]
+
+
+def funil_direct_ligado():
+    """Interruptor do funil 'comenta QUERO e recebe no Direct'.
+    Só liga depois que o webhook do Instagram estiver funcionando (arquivo instagram/funil_direct.txt)."""
+    try:
+        with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "funil_direct.txt"), encoding="utf-8") as f:
+            return f.read().strip().lower() == "ligado"
+    except OSError:
+        return False
+
+
+def aplicar_funil_direct(briefing, indice=0):
+    """Chamada final pede o comentário QUERO (a automação manda o link no Direct)."""
+    b = dict(briefing)
+    b["cta"] = CTAS_DIRETO[indice % len(CTAS_DIRETO)]
+    b["selo"] = "COMENTA QUERO"
+    leg = b["legenda"].rstrip()
+    b["legenda"] = leg + "\n\nComenta QUERO aqui embaixo que eu te mando o catálogo completo no Direct 💗"
+    return b
+
+
 def aplicar_preco(briefing, preco_txt):
     """Troca o marcador {PRECO}. Sem preço disponível, a frase com o marcador sai do vídeo."""
     b = dict(briefing)
@@ -717,6 +745,8 @@ def main():
     itens, hist = escolher_fotos()
     briefing = reel_lab.gerar_briefing(hist["ganchos"], hist["angulos"])
     briefing = aplicar_preco(briefing, texto_preco(itens))
+    if funil_direct_ligado():
+        briefing = aplicar_funil_direct(briefing, len(hist.get("ganchos", [])))
     formato = os.environ.get("REEL_FORMATO") or escolher_formato(hist["formatos"])
     musica_nome = escolher_musica(hist["musicas"])
     print("Briefing:", json.dumps(briefing, ensure_ascii=False))
