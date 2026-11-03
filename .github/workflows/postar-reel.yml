@@ -4,6 +4,10 @@ on:
   schedule:
     # vários horários de reserva: o GitHub às vezes atrasa ou pula execuções agendadas;
     # o robô só publica 1 Reel por dia (ignora as rodadas seguintes se já postou)
+    # meio do dia (Reel de conteúdo/franquia): o principal vem do cron-job.org às 12:30
+    - cron: '30 15 * * *'   # 12:30 Salvador
+    - cron: '30 16 * * *'   # 13:30
+    - cron: '30 17 * * *'   # 14:30
     - cron: '30 20 * * *'   # 17:30 Salvador
     - cron: '30 21 * * *'   # 18:30
     - cron: '30 22 * * *'   # 19:30
@@ -15,8 +19,14 @@ on:
         description: "Publicar no Instagram? (false = só gerar a prévia)"
         default: "true"
       auto:
-        description: "Disparo automático (respeita a trava de 1 Reel por dia)"
+        description: "Disparo automático (respeita a trava de 1 Reel por slot)"
         default: "false"
+      slot:
+        description: "meio (conteúdo/franquia) ou noite (venda com QUERO). Vazio = pela hora"
+        default: ""
+      modo:
+        description: "Só pra teste: venda, conteudo ou franquia. Vazio = automático"
+        default: ""
 
 concurrency:
   group: postar-reel   # grupo próprio: uma rodada do post normal nunca cancela uma do Reel
@@ -29,7 +39,7 @@ permissions:
 jobs:
   janela:
     # TRAVA DE HORÁRIO: o GitHub atrasa execuções agendadas por horas. Fora da janela
-    # (Salvador 17h–22h59) rodadas automáticas/atrasadas NÃO publicam nada.
+    # (Salvador 11h–22h59) rodadas automáticas/atrasadas NÃO publicam nada.
     runs-on: ubuntu-latest
     outputs:
       ok: ${{ steps.j.outputs.ok }}
@@ -41,7 +51,7 @@ jobs:
         run: |
           H=$(date -u -d '-3 hours' +%-H)
           echo "Salvador agora: ${H}h | evento: $EVENTO"
-          if ([ "$EVENTO" = "schedule" ] || [ "$AUTO" = "true" ]) && { [ "$H" -lt 17 ] || [ "$H" -gt 22 ]; }; then
+          if ([ "$EVENTO" = "schedule" ] || [ "$AUTO" = "true" ]) && { [ "$H" -lt 11 ] || [ "$H" -gt 22 ]; }; then
             echo "Fora da janela de postagem — NÃO publica."
             echo "ok=false" >> "$GITHUB_OUTPUT"
           else
@@ -76,6 +86,8 @@ jobs:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           PUBLICAR: ${{ github.event.inputs.publicar }}
           AUTO: ${{ github.event.inputs.auto }}
+          SLOT: ${{ github.event.inputs.slot }}
+          REEL_MODO: ${{ github.event.inputs.modo }}
           CRON_TESTE: ${{ github.event.schedule == '48 22 28 10 *' && '1' || '0' }}
         run: |
           ARGS=""

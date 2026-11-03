@@ -464,6 +464,17 @@ def aplicar_funil_direct(briefing, indice=0):
     return b
 
 
+def aplicar_funil_franquia(briefing):
+    """Reel de franquia: pede o comentário FRANQUIA (a automação manda o link da franquia no Direct)."""
+    b = dict(briefing)
+    b["cta"] = "Comenta FRANQUIA aqui embaixo"
+    b["selo"] = "COMENTA FRANQUIA"
+    frases = re.split(r"(?<=[.!?])\s+", b["legenda"].strip())
+    leg = " ".join(f for f in frases if not re.search(r"\bbio\b|comenta", f, re.I)).strip() or b["legenda"].strip()
+    b["legenda"] = leg + "\n\nComenta FRANQUIA aqui embaixo que eu te mando o link da Franquia Online Lulu no Direct 💗"
+    return b
+
+
 def aplicar_preco(briefing, preco_txt):
     """Troca o marcador {PRECO}. Sem preço disponível, a frase com o marcador sai do vídeo."""
     b = dict(briefing)
@@ -736,19 +747,36 @@ def main():
         sys.exit(1)
     hist = carregar_historico()
     _agora = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=3)  # hora de Salvador
-    if (os.environ.get("GITHUB_EVENT_NAME") == "schedule" or os.environ.get("AUTO") == "true") \
-            and os.environ.get("CRON_TESTE") != "1" and not (17 <= _agora.hour <= 22):
-        print(f"Fora da janela de postagem (Salvador {_agora:%H:%M}) — NÃO publica.")
+    automatico = os.environ.get("GITHUB_EVENT_NAME") == "schedule" or os.environ.get("AUTO") == "true"
+    # DOIS REELS POR DIA: "meio" (11h-16h59, conteúdo ou franquia) e "noite" (17h-22h59, venda com QUERO).
+    slot = (os.environ.get("SLOT") or "").strip().lower()
+    if slot not in ("meio", "noite"):
+        slot = "meio" if _agora.hour < 17 else "noite"
+    faixa = (11, 16) if slot == "meio" else (17, 22)
+    if automatico and os.environ.get("CRON_TESTE") != "1" and not (faixa[0] <= _agora.hour <= faixa[1]):
+        print(f"Fora da janela do slot '{slot}' (Salvador {_agora:%H:%M}) — NÃO publica.")
         return
-    hoje = (datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=3)).date().isoformat()  # data em Salvador
-    if os.environ.get("CRON_TESTE") != "1" and (os.environ.get("GITHUB_EVENT_NAME") == "schedule" or os.environ.get("AUTO") == "true") and hist.get("ultimo_post") == hoje:
-        print(f"Reel de hoje ({hoje}) já foi publicado — nada a fazer.")
+    hoje = _agora.date().isoformat()  # data em Salvador
+    chave_trava = "ultimo_post_meio" if slot == "meio" else "ultimo_post"
+    if os.environ.get("CRON_TESTE") != "1" and automatico and hist.get(chave_trava) == hoje:
+        print(f"Reel '{slot}' de hoje ({hoje}) já foi publicado — nada a fazer.")
         return
+    modo = "venda"
+    if slot == "meio":
+        # a cada 5 Reels do meio do dia, 1 é de franquia (= 1 em cada 10 Reels no total)
+        modo = "franquia" if hist.get("contagem_meio", 0) % 5 == 4 else "conteudo"
+    if os.environ.get("REEL_MODO") in ("venda", "conteudo", "franquia"):
+        modo = os.environ["REEL_MODO"]
+    print(f"Slot: {slot} | modo: {modo}")
     itens, hist = escolher_fotos()
-    briefing = reel_lab.gerar_briefing(hist["ganchos"], hist["angulos"])
+    briefing = reel_lab.gerar_briefing(hist["ganchos"], hist["angulos"], modo)
     briefing = aplicar_preco(briefing, texto_preco(itens))
-    if funil_direct_ligado():
+    if modo == "venda" and funil_direct_ligado():
         briefing = aplicar_funil_direct(briefing, len(hist.get("ganchos", [])))
+    elif modo == "franquia":
+        briefing = aplicar_funil_franquia(briefing)
+    elif modo == "conteudo":
+        briefing["selo"] = briefing.get("selo") or "DICA LULU"
     formato = os.environ.get("REEL_FORMATO") or escolher_formato(hist["formatos"])
     musica_nome = escolher_musica(hist["musicas"])
     print("Briefing:", json.dumps(briefing, ensure_ascii=False))
@@ -775,7 +803,9 @@ def main():
     hist["angulos"] = (hist["angulos"] + [briefing.get("angulo", "")])[-30:]
     hist["formatos"] = (hist["formatos"] + [formato])[-30:]
     hist["musicas"] = (hist["musicas"] + [musica_nome])[-30:]
-    hist["ultimo_post"] = hoje
+    hist[chave_trava] = hoje
+    if slot == "meio":
+        hist["contagem_meio"] = hist.get("contagem_meio", 0) + 1
     with open(HIST, "w", encoding="utf-8") as f:
         json.dump(hist, f, ensure_ascii=False, indent=1)
 
