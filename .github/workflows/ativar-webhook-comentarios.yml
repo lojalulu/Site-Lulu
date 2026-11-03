@@ -1,0 +1,38 @@
+name: Ativar webhook de comentários do Instagram
+
+# Assina a conta do Instagram para avisar o site quando chegar comentário novo.
+# Mostra só status e erro (nunca o token).
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  ativar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assinar comentários e mensagens
+        env:
+          TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request, urllib.parse
+          tok = os.environ["TOKEN"]
+          B = "https://graph.instagram.com/v23.0/me/subscribed_apps"
+          def chamar(metodo, params):
+              params = dict(params, access_token=tok)
+              url = f"{B}?{urllib.parse.urlencode(params)}"
+              req = urllib.request.Request(url, method=metodo)
+              try:
+                  with urllib.request.urlopen(req, timeout=30) as r:
+                      return r.status, json.loads(r.read())
+              except urllib.error.HTTPError as e:
+                  try: return e.code, json.loads(e.read())
+                  except Exception: return e.code, {}
+          st, d = chamar("POST", {"subscribed_fields": "comments,messages"})
+          e = d.get("error", {})
+          print("assinar:", st, "OK" if not e else f"erro {e.get('code')} {str(e.get('message',''))[:140]}")
+          st, d = chamar("GET", {})
+          print("campos agora:", [f for a in d.get("data", []) for f in a.get("subscribed_fields", [])])
+          PY
