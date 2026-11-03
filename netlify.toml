@@ -2,7 +2,7 @@
   # Só gera deploy quando muda algo do SITE (as 2 lojas, as funções de medição
   # ou o package.json). Os ~10 commits diários dos robôs (Instagram, catálogo
   # JSON etc.) não gastam crédito do Netlify.
-  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- index.html kitavulso/index.html netlify/ package.json netlify.toml"
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- index.html kitavulso/index.html privacidade/ netlify/ package.json netlify.toml"
 
 [functions]
   directory = "netlify/functions"

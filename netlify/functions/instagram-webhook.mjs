@@ -7,7 +7,7 @@
 //
 // Segurança: só aceita chamadas assinadas pela Meta (X-Hub-Signature-256) e
 // nunca grava texto de comentário, nome ou id de pessoa. Guarda só o id do
-// comentário (anti-duplicado) e um contador por dia/palavra.
+// comentário e um resumo anônimo (hash) da conta (anti-duplicado) e um contador por dia/palavra.
 //
 // Variáveis no Netlify (Site configuration > Environment variables):
 //   INSTAGRAM_ACCESS_TOKEN  - o mesmo token já usado pelos robôs
@@ -32,6 +32,10 @@ const RESPOSTAS_PUBLICAS = [
   "Pronto! Olha seu Direct 💗",
   "Mandei o link no Direct, confere lá 💗",
 ];
+
+export function resumo(t) {
+  return createHash("sha256").update(String(t)).digest("hex").slice(0, 24);
+}
 
 export function normaliza(t) {
   return String(t ?? "")
@@ -113,7 +117,7 @@ export async function processar(payload, env, deps) {
     if (!tipo) { resultado.ignorados++; continue; }
     // anti-duplicado: mesmo comentário, ou mesma pessoa no mesmo post
     const chaveComentario = `c-${c.id}`;
-    const chavePessoa = `p-${c.autor}-${c.midia}-${tipo}`;
+    const chavePessoa = `p-${resumo(`${c.autor}-${c.midia}-${tipo}`)}`; // só um resumo anônimo, nunca o id da pessoa
     if ((await deps.jaFez(chaveComentario)) || (c.autor && (await deps.jaFez(chavePessoa)))) {
       resultado.ignorados++;
       continue;
