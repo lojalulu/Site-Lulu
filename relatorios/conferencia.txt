@@ -5,9 +5,13 @@
 /direct -> 302 https://luluextra.com/?origem=direct
 /privacidade/ -> 200 
 webhook (esperado 403 sem senha) -> 403
-Conferido em 03/11/2026 08:39 (Salvador) | HTTP 200
-Total de eventos (ontem + hoje): 6
+Conferido em 03/11/2026 13:28 (Salvador) | HTTP 200
+Total de eventos (ontem + hoje): 18
 2026-11-02 | visita  | avulso | origem teste-navegador | 1
 2026-11-02 | visita  | kits   | origem bio          | 2
 2026-11-02 | visita  | kits   | origem teste-navegador | 2
-2026-11-03 | visita  | kits   | origem bio          | 1
+2026-11-03 | visita  | avulso | origem direto       | 1
+2026-11-03 | visita  | kits   | origem bio          | 4
+2026-11-03 | visita  | kits   | origem direct       | 4
+2026-11-03 | visita  | kits   | origem direto       | 3
+2026-11-03 | whats   | kits   | origem direto       | 1
