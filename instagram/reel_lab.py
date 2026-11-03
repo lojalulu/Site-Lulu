@@ -173,6 +173,8 @@ def _validar(b: dict, modo: str = "venda") -> dict:
     for t in [gancho, cta, legenda] + quadros:
         if re.search(r"avuls|mini franquia", t, re.I) or (modo != "franquia" and re.search(r"franquia", t, re.I)):
             raise ValueError("assunto fora do modo do Reel")
+        if "{PRECO}" in t and re.search(r"\b\d+\s*(pe[çc]as|kits?|conjuntos|regatas|blusas)", t, re.I):
+            raise ValueError("número de peças junto do {PRECO} (o preço já diz a quantidade)")
         if modo == "conteudo" and re.search(r"\bquero\b|\{PRECO\}", t, re.I):
             raise ValueError("Reel de conteúdo não pede QUERO nem usa preço")
         if "{" in t.replace("{PRECO}", ""):

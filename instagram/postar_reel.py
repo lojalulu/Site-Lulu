@@ -776,7 +776,8 @@ def main():
     elif modo == "franquia":
         briefing = aplicar_funil_franquia(briefing)
     elif modo == "conteudo":
-        briefing["selo"] = briefing.get("selo") or "DICA LULU"
+        if briefing.get("selo") in ("", "LINK NA BIO", "LULUEXTRA.COM"):
+            briefing["selo"] = "DICA LULU"
     formato = os.environ.get("REEL_FORMATO") or escolher_formato(hist["formatos"])
     musica_nome = escolher_musica(hist["musicas"])
     print("Briefing:", json.dumps(briefing, ensure_ascii=False))
