@@ -1,12 +1,12 @@
 {
-  "loja": "avulso",
-  "produto_id": "331455",
-  "produto_nome": "TOP NADADOR SUPLEX REF 02",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1747771139_fb68abd9c7c240915266.jpeg.webp",
+  "loja": "kits",
+  "produto_id": "4019589",
+  "produto_nome": "Pacote com 5 Conjuntos Ref 37 Em Suplex",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1777481809_58171181d599ea48535d.webp",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "🌸 Ainda tem, mas não sabemos até quando.\n\nÉ peça avulsa, na malha premium.\n\nPedido pelo site, link na bio 🛍️\n\n#modafitness #salvador",
-  "pilar": "disponibilidade",
-  "eh_lancamento": false,
-  "publicar_feed": true,
-  "rodada_do_dia": 2
+  "legenda_feed": "✨ Novidade que acabou de entrar — primeira remessa.\n\nKit fechado, 5 peças, suplex vip.\n\nCatálogo inteiro tá no link da bio 👆\n\n#modafitnesssalvador #modafitness #modafitnessevangelica",
+  "pilar": "lancamento",
+  "eh_lancamento": true,
+  "publicar_feed": false,
+  "rodada_do_dia": 3
 }
