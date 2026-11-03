@@ -2,8 +2,11 @@
 /bio -> 302 https://luluextra.com/?origem=bio
 /bio-avulso -> 302 https://luluextra.com/kitavulso/?origem=bio
 /story -> 302 https://luluextra.com/?origem=story
-Conferido em 02/11/2026 18:12 (Salvador) | HTTP 200
-Total de eventos (ontem + hoje): 4
+/direct -> 302 https://luluextra.com/?origem=direct
+webhook (esperado 403 sem senha) -> 403
+Conferido em 03/11/2026 06:30 (Salvador) | HTTP 200
+Total de eventos (ontem + hoje): 6
 2026-11-02 | visita  | avulso | origem teste-navegador | 1
-2026-11-02 | visita  | kits   | origem bio          | 1
+2026-11-02 | visita  | kits   | origem bio          | 2
 2026-11-02 | visita  | kits   | origem teste-navegador | 2
+2026-11-03 | visita  | kits   | origem bio          | 1
