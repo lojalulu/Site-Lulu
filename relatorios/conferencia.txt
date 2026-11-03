@@ -5,7 +5,7 @@
 /direct -> 302 https://luluextra.com/?origem=direct
 webhook (esperado 403 sem senha) -> 403
 webhook com a senha certa (esperado 200 e o numero 777) -> negado 403
-Conferido em 03/11/2026 06:58 (Salvador) | HTTP 200
+Conferido em 03/11/2026 07:00 (Salvador) | HTTP 200
 Total de eventos (ontem + hoje): 6
 2026-11-02 | visita  | avulso | origem teste-navegador | 1
 2026-11-02 | visita  | kits   | origem bio          | 2
