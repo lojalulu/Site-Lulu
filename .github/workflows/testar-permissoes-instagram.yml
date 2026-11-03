@@ -1,0 +1,50 @@
+name: Testar permissões do Instagram (comentários e Direct)
+
+# Só confere se o token atual consegue LER comentários e usar o Direct.
+# Mostra apenas status e código de erro. Nunca grava resposta nem token.
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Conferir permissões
+        env:
+          TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request, urllib.parse
+          tok = os.environ["TOKEN"]
+          B = "https://graph.instagram.com/v23.0"
+          def get(path, params):
+              params = dict(params, access_token=tok)
+              try:
+                  with urllib.request.urlopen(f"{B}/{path}?{urllib.parse.urlencode(params)}", timeout=30) as r:
+                      return r.status, json.loads(r.read())
+              except urllib.error.HTTPError as e:
+                  try: return e.code, json.loads(e.read())
+                  except Exception: return e.code, {}
+              except Exception as e:
+                  return 0, {"error": {"message": str(e)}}
+          def resumo(nome, st, d):
+              e = d.get("error", {})
+              print(f"{nome}: HTTP {st}" + (f" | erro {e.get('code')} {str(e.get('message',''))[:140]}" if e else " | OK"))
+          st, d = get("me", {"fields": "id,username"})
+          resumo("conta", st, d)
+          st, m = get("me/media", {"fields": "id", "limit": 1})
+          resumo("listar posts", st, m)
+          mid = (m.get("data") or [{}])[0].get("id")
+          if mid:
+              st, c = get(f"{mid}/comments", {"fields": "id", "limit": 1})
+              resumo("LER COMENTÁRIOS", st, c)
+          st, cv = get("me/conversations", {"platform": "instagram", "limit": 1})
+          resumo("LER DIRECT (conversas)", st, cv)
+          st, sa = get("me/subscribed_apps", {})
+          resumo("webhook assinado (subscribed_apps)", st, sa)
+          if st == 200:
+              print("campos assinados:", [f for a in sa.get("data", []) for f in a.get("subscribed_fields", [])])
+          PY
