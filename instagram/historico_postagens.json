@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -85,15 +85,16 @@
       "3118780",
       "328359",
       "3480260",
-      "4477094"
+      "4477094",
+      "331455"
     ]
   },
   "ultimos_pilares": [
-    "conforto",
     "renda_extra",
     "lancamento",
     "qualidade",
-    "lancamento"
+    "lancamento",
+    "disponibilidade"
   ],
   "conhecidos": {
     "kits": [
@@ -399,11 +400,11 @@
       "Kit com cores variadas."
     ],
     "cta_bio": [
-      "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Link na bio 🔗",
       "Catálogo completo — link na bio ✨",
       "Os outros modelos estão no link da bio 👆",
-      "Link da bio te leva direto pro catálogo 📲"
+      "Link da bio te leva direto pro catálogo 📲",
+      "Pedido pelo site, link na bio 🛍️"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -412,10 +413,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Peça avulsa, malha premium.",
       "Você escolhe peça por peça (mínimo de 10 no pedido).",
       "Peça avulsa premium — você monta o pedido do seu jeito.",
-      "Atacado de peça avulsa, a partir de 10 peças."
+      "Atacado de peça avulsa, a partir de 10 peças.",
+      "É peça avulsa, na malha premium."
     ],
     "qualidade_avulso": [
       "Você escolhe a peça certa pra sua cliente — sem sortimento fechado.",
@@ -481,13 +482,13 @@
       "Suplex vip, zero transparência — testado antes de entrar no catálogo."
     ],
     "disponibilidade": [
-      "Quem viu primeiro já garantiu. Ainda dá tempo.",
       "Esse modelo costuma acabar rápido — melhor não deixar pra depois.",
       "Poucas peças disponíveis por enquanto.",
       "Garante o seu antes que o lote acabe.",
       "Últimas unidades desse lote — reposição não tem data certa.",
       "Esse aqui já está saindo bastante essa semana.",
-      "Estoque limitado nessa leva."
+      "Estoque limitado nessa leva.",
+      "Ainda tem, mas não sabemos até quando."
     ],
     "lucratividade": [
       "Quanto menor o custo, mais fácil fica competir e ainda lucrar.",
@@ -512,6 +513,6 @@
   },
   "contagem_dia": {
     "data": "2026-11-03",
-    "n": 1
+    "n": 2
   }
 }
