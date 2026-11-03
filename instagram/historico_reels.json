@@ -99,7 +99,15 @@
   "317284",
   "3405521",
   "3703565",
-  "3405523"
+  "3405523",
+  "853848",
+  "477732",
+  "3555118",
+  "3865600",
+  "318146",
+  "2107380",
+  "477630",
+  "1026249"
  ],
  "ganchos": [
   "Montar *loja online* sem marca própria é perder tempo",
@@ -109,16 +117,20 @@
   "Quer *revender* moda fitness? Veja as condições do atacado",
   "Quer *revender* moda fitness que suas clientes procuram?",
   "Revender fitness e *bater cabeça* com fornecedor?",
-  "Com *6 kits*, o frete Vip fica grátis"
+  "Com *6 kits*, o frete Vip fica grátis",
+  "Suplex que *não fica transparente*"
  ],
- "ultimo_post": "2026-11-02",
+ "ultimo_post": "2026-11-03",
  "angulos": [
-  "frete"
+  "frete",
+  "tecido"
  ],
  "formatos": [
-  "classico"
+  "classico",
+  "pergunta"
  ],
  "musicas": [
-  "upbeat-atlas.mp3"
+  "upbeat-atlas.mp3",
+  "phonk-subclair.mp3"
  ]
 }
