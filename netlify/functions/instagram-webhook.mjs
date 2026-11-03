@@ -166,7 +166,10 @@ export default async (req, context) => {
   if (req.method !== "POST") return new Response("ok", { status: 200 });
 
   const corpo = await req.text();
-  if (!assinaturaValida(corpo, req.headers.get("x-hub-signature-256"), env.INSTAGRAM_APP_SECRET)) {
+  const cab = req.headers.get("x-hub-signature-256");
+  if (!assinaturaValida(corpo, cab, env.INSTAGRAM_APP_SECRET)) {
+    // Só diz o MOTIVO (nunca valores): ajuda a achar chave errada ou variável faltando.
+    console.log(`direct: recusado 401 (chave_no_netlify=${env.INSTAGRAM_APP_SECRET ? "sim" : "NAO"}, assinatura_da_meta=${cab ? "sim" : "NAO"}, tamanho_chave=${String(env.INSTAGRAM_APP_SECRET ?? "").length})`);
     return new Response("assinatura invalida", { status: 401 });
   }
   if (String(env.DIRECT_LIGADO).toLowerCase() === "nao") return new Response("desligado", { status: 200 });
@@ -180,4 +183,3 @@ export default async (req, context) => {
   // Sempre 200: a Meta reenvia em caso de erro e isso geraria mensagem duplicada.
   return new Response("ok", { status: 200 });
 };
-// (deploy de 03/11 para aplicar as variáveis do Netlify)
