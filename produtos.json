@@ -1,5 +1,19 @@
 [
   {
+    "id": "3724372",
+    "nome": "Kit com 5 Conjuntos de Colete+ Short Duplo Tactel",
+    "preco_original": 200.5,
+    "preco_final": 320.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1768828151_95866216300b8872759d.webp",
+      "https://arquivos.facilzap.app.br/produtos/1768828148_25ccfd2a262a668ea416.webp",
+      "https://arquivos.facilzap.app.br/produtos/1768828206_9e7400c51e02013566b7.webp",
+      "https://arquivos.facilzap.app.br/produtos/1768828204_519177c3b7603388c333.webp"
+    ],
+    "cores_variadas": true,
+    "lancamento": true
+  },
+  {
     "id": "3311193",
     "nome": "Pacote com 5 Casacos Corta Vento Em Tactel",
     "preco_original": 100.0,
