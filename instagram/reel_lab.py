@@ -24,7 +24,7 @@ MODELO = "deepseek-chat"
 # O Reel fala SÓ dos kits de luluextra.com. {PRECO} = preço real de um kit do vídeo,
 # inserido pelo código no formato "5 Conjuntos por R$ 199,90" (a IA nunca escreve valores).
 ANGULOS = {
-    "salvador": ("Mora em Salvador", "Fala direto com quem mora em Salvador e revende ou quer revender: a Lulu nasceu em Salvador; a partir de 6 kits o frete Vip é grátis e chega em 4 dias úteis.",
+    "salvador": ("Mora em Salvador", "Fala direto com quem mora em Salvador e revende ou quer revender: a Lulu nasceu em Salvador; a partir de 6 kits o frete Vip é grátis e chega em 7 a 9 dias úteis.",
                  ["Mora em *Salvador* e revende moda fitness?", "*Salvador*, chegou kit novo no catálogo"]),
     "nordeste": ("Revendedora do Nordeste", "Fala com revendedoras do Nordeste: fábrica própria nordestina (Recife) desde 2013, marca nascida em Salvador, frete grátis a partir de 6 kits.",
                  ["Revende no *Nordeste*? Olha isso", "Fábrica *nordestina* de moda fitness desde 2013"]),
@@ -80,7 +80,7 @@ MECANISMOS = ["curiosidade", "contraste", "problema específico", "pergunta dire
 FATOS = """FATOS PERMITIDOS (use só estes; não invente nada além):
 - Lulu Extra Fitness: moda fitness feminina no ATACADO em luluextra.com. Kits prontos de 5 peças (alguns pacotes de 10 blusas), em suplex e poliamida, cores variadas, zero transparência.
 - Marca nascida em Salvador (BA), com fábrica própria no Nordeste (Recife) desde 2013. A maioria das clientes é de Salvador e do Nordeste, mas enviamos pra todo o Brasil.
-- Pedido mínimo: 4 kits. A partir de 6 kits, frete Vip GRÁTIS pra Salvador e todo o Brasil (Vip: 4 dias úteis). Abaixo disso: Econômico R$ 39,90 (9 dias úteis) ou Vip R$ 90.
+- Pedido mínimo: 4 kits. A partir de 6 kits, frete Vip GRÁTIS pra Salvador e todo o Brasil (Vip: 7 a 9 dias úteis). Abaixo disso: Econômico R$ 39,90 (9 dias úteis) ou Vip R$ 90.
 - Pix com 10% de desconto nas peças. Cartão em até 3x sem juros.
 - Catálogo atualizado toda semana em luluextra.com (link da bio).
 - Preço: só use o marcador {PRECO} (o sistema troca pelo preço real, ex.: "5 Conjuntos por R$ 199,90"). Nunca escreva valores."""
@@ -248,7 +248,7 @@ def _revisar(b: dict, modo: str = "venda") -> dict:
 RESERVA = {
     "salvador": [{"gancho": "Mora em *Salvador* e revende moda fitness?", "quadros": ["A Lulu nasceu aqui, e a partir de 6 kits o frete Vip é grátis.", "{PRECO}, com cores variadas em cada kit."], "cta": "Veja os kits em luluextra.com"}],
     "nordeste": [{"gancho": "Fábrica *nordestina* de moda fitness desde 2013", "quadros": ["Kits prontos de 5 peças em suplex e poliamida, direto da fábrica.", "A partir de 6 kits o frete Vip é grátis."], "cta": "Catálogo completo no link da bio"}],
-    "frete": [{"gancho": "Cansada de *frete caro* no atacado?", "quadros": ["Aqui, a partir de 6 kits, o frete Vip é grátis pro Brasil todo.", "Chega em 4 dias úteis, pronto pra revender."], "cta": "Monte seu pedido em luluextra.com"}],
+    "frete": [{"gancho": "Cansada de *frete caro* no atacado?", "quadros": ["Aqui, a partir de 6 kits, o frete Vip é grátis pro Brasil todo.", "Chega em 7 a 9 dias úteis, pronto pra revender."], "cta": "Monte seu pedido em luluextra.com"}],
     "preco": [{"gancho": "{PRECO}. *Sim*, no atacado", "quadros": ["Kit pronto com 5 peças e cores variadas.", "Pedido mínimo de 4 kits e 10% de desconto no Pix."], "cta": "Veja todos os preços no link da bio"}],
     "pix": [{"gancho": "*10% off* pagando no Pix", "quadros": ["O desconto vale nas peças de todos os kits.", "Prefere cartão? Em até 3x sem juros."], "cta": "Escolha seus kits em luluextra.com"}],
     "cores": [{"gancho": "Uma vitrine *colorida* com um pedido só", "quadros": ["Cada kit vem com 5 peças em cores variadas.", "Sua cliente sempre acha a cor que procura."], "cta": "Veja os kits no link da bio"}],

@@ -21,7 +21,7 @@ import { getStore } from "@netlify/blobs";
 
 const GRAPH = "https://graph.instagram.com/v23.0";
 const IG_ID_PADRAO = "17841401562118752";
-const FRANQUIA_PADRAO = "https://cursofranquia.netlify.app";
+const FRANQUIA_PADRAO = "https://franquialulu.netlify.app";
 
 const PALAVRAS_KIT = ["quero", "catalogo", "link", "preco", "precos", "kit", "kits"];
 const PALAVRAS_FRANQUIA = ["franquia"];
