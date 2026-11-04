@@ -1,0 +1,17 @@
+loja: eventos total: 25
+('2026-11-02', 'visita', 'avulso', 'teste-navegador', '') 1
+('2026-11-02', 'visita', 'kits', 'bio', '') 2
+('2026-11-02', 'visita', 'kits', 'teste-navegador', '') 2
+('2026-11-03', 'pedido', 'kits', 'direto', 'cartao') 1
+('2026-11-03', 'pedido', 'kits', 'direto', 'pix') 1
+('2026-11-03', 'visita', 'avulso', 'direto', '') 1
+('2026-11-03', 'visita', 'kits', 'bio', '') 6
+('2026-11-03', 'visita', 'kits', 'direct', '') 4
+('2026-11-03', 'visita', 'kits', 'direto', '') 3
+('2026-11-03', 'whats', 'kits', 'direto', '') 1
+('2026-11-04', 'pedido', 'kits', 'teste-diag', 'pix') 1
+('2026-11-04', 'visita', 'kits', 'bio', '') 2
+--- eventos de pedido (sem dado pessoal) ---
+03/11 13:34 kits direto lu738 778 4 pix
+03/11 13:37 kits direto lu738 860 4 cartao
+04/11 11:01 kits teste-diag lu000 706 4 pix
