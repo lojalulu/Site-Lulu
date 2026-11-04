@@ -144,12 +144,12 @@ def main():
 
     # contagem de rodadas do dia (Salvador): usada pela trava anti-duplicado e
     # pra decidir feed x story. Desde 02/11/2026: Story em TODAS as rodadas (6/dia),
-    # post no FEED só nas rodadas pares (2ª, 4ª, 6ª ≈ 10h, 18h, 21h) — 3 por dia.
+    # post no FEED só nas rodadas 2 e 6 (≈10h e 21h) — 2 por dia (desde 04/11, auditoria: alcance mediano ~120).
     # Motivo: 44 posts/semana com quase zero interação (relatório 26/10–01/11).
     hoje = (datetime.now(timezone.utc) - timedelta(hours=3)).strftime("%Y-%m-%d")
     cont = historico.get("contagem_dia") or {}
     rodada = (cont.get("n", 0) if cont.get("data") == hoje else 0) + 1
-    publicar_feed = os.environ.get("FORCAR_FEED") == "1" or rodada % 2 == 0
+    publicar_feed = os.environ.get("FORCAR_FEED") == "1" or rodada in (2, 6)  # desde 04/11: 2 no feed/dia (≈10h e 21h)
 
     saida = {
         "loja": loja,
