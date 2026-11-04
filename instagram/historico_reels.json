@@ -115,7 +115,15 @@
   "4364027",
   "2049299",
   "2632922",
-  "2049307"
+  "2049307",
+  "317949",
+  "2816743",
+  "4430522",
+  "4485658",
+  "3724372",
+  "3745064",
+  "684180",
+  "4485664"
  ],
  "ganchos": [
   "Montar *loja online* sem marca própria é perder tempo",
@@ -127,23 +135,27 @@
   "Revender fitness e *bater cabeça* com fornecedor?",
   "Com *6 kits*, o frete Vip fica grátis",
   "Suplex que *não fica transparente*",
-  "Antes a vitrine dela ficava sem graça"
+  "Antes a vitrine dela ficava sem graça",
+  "Comece a revender com *4 kits*"
  ],
- "ultimo_post": "2026-11-03",
+ "ultimo_post": "2026-11-04",
  "angulos": [
   "frete",
   "tecido",
-  "tendencia"
+  "tendencia",
+  "comecar"
  ],
  "formatos": [
   "classico",
   "pergunta",
-  "rapido"
+  "rapido",
+  "classico"
  ],
  "musicas": [
   "upbeat-atlas.mp3",
   "phonk-subclair.mp3",
-  "upbeat-rock.mp3"
+  "upbeat-rock.mp3",
+  "phonk-brasileiro.mp3"
  ],
  "ultimo_post_meio": "2026-11-04",
  "contagem_meio": 1
