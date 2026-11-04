@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -47,7 +47,8 @@
       "384571",
       "449556",
       "3703562",
-      "4019589"
+      "4019589",
+      "4598001"
     ],
     "avulso": [
       "3117836",
@@ -92,11 +93,11 @@
     ]
   },
   "ultimos_pilares": [
-    "qualidade",
     "lancamento",
     "disponibilidade",
     "lancamento",
-    "qualidade"
+    "qualidade",
+    "lancamento"
   ],
   "conhecidos": {
     "kits": [
@@ -207,6 +208,7 @@
       "3703565",
       "3703570",
       "3709232",
+      "3724372",
       "3745047",
       "3745064",
       "3745068",
@@ -375,19 +377,19 @@
   },
   "lancamentos_pendentes": {
     "kits": [
-      "4598001"
+      "3724372"
     ],
     "avulso": []
   },
   "ultimas_frases": {
     "lancamento": [
-      "Acabou de chegar no catálogo — poucas peças por enquanto.",
       "Peça nova no catálogo, quentinha da produção.",
       "Modelo novo na área — sua cliente ainda não viu em lugar nenhum.",
       "Modelo inédito no catálogo. Vale a pena conferir.",
       "Lançamento da semana — sai na frente e oferece antes de todo mundo.",
       "Você está entre as primeiras a ver essa peça.",
-      "Novidade que acabou de entrar — primeira remessa."
+      "Novidade que acabou de entrar — primeira remessa.",
+      "Novidade no catálogo, chegou agora."
     ],
     "frete_kits": [
       "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚",
@@ -395,17 +397,17 @@
       "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦"
     ],
     "tag_kits": [
-      "Kit fechado — ótimo pra começar a revender.",
       "Vem em kit fechado de 5, tecido suplex vip.",
       "Kit com cores variadas.",
-      "Kit fechado, 5 peças, suplex vip."
+      "Kit fechado, 5 peças, suplex vip.",
+      "Vendido em kit fechado, cores sortidas."
     ],
     "cta_bio": [
-      "Os outros modelos estão no link da bio 👆",
       "Link da bio te leva direto pro catálogo 📲",
       "Pedido pelo site, link na bio 🛍️",
       "Catálogo inteiro tá no link da bio 👆",
-      "Link na bio 🔗"
+      "Link na bio 🔗",
+      "Dá uma espiada no link da bio 💗"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -434,10 +436,10 @@
       "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛"
     ],
     "preco_kits": [
-      "Hoje, {quantidade} saem por {preco}.",
       "{quantidade}: {preco}.",
       "{quantidade} por {preco} — já pode revender no seu preço.",
-      "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça."
+      "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
+      "{quantidade} - só {preco}."
     ],
     "cta_alt": [
       "Manda mensagem que a gente te ajuda a montar o pedido 💬",
@@ -513,7 +515,7 @@
     ]
   },
   "contagem_dia": {
-    "data": "2026-11-03",
-    "n": 4
+    "data": "2026-11-04",
+    "n": 1
   }
 }
