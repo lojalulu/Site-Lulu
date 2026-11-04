@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -89,15 +89,16 @@
       "3480260",
       "4477094",
       "331455",
-      "365104"
+      "365104",
+      "327770"
     ]
   },
   "ultimos_pilares": [
-    "lancamento",
     "disponibilidade",
     "lancamento",
     "qualidade",
-    "lancamento"
+    "lancamento",
+    "renda_extra"
   ],
   "conhecidos": {
     "kits": [
@@ -403,11 +404,11 @@
       "Vendido em kit fechado, cores sortidas."
     ],
     "cta_bio": [
-      "Link da bio te leva direto pro catálogo 📲",
       "Pedido pelo site, link na bio 🛍️",
       "Catálogo inteiro tá no link da bio 👆",
       "Link na bio 🔗",
-      "Dá uma espiada no link da bio 💗"
+      "Dá uma espiada no link da bio 💗",
+      "Os outros modelos estão no link da bio 👆"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -416,10 +417,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Peça avulsa premium — você monta o pedido do seu jeito.",
       "Atacado de peça avulsa, a partir de 10 peças.",
       "É peça avulsa, na malha premium.",
-      "Peça avulsa, malha premium."
+      "Peça avulsa, malha premium.",
+      "Você escolhe peça por peça (mínimo de 10 no pedido)."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -431,9 +432,9 @@
       "Peça avulsa com malha premium: acabamento caprichado, preço de atacado."
     ],
     "frete_avulso": [
-      "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦",
       "Frete grátis (Vip) pra Salvador e todo o Brasil 🚚",
-      "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛"
+      "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛",
+      "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚"
     ],
     "preco_kits": [
       "{quantidade}: {preco}.",
@@ -456,14 +457,14 @@
       "Firme sem ser apertada. É isso que a cliente procura."
     ],
     "renda_extra": [
-      "Quer começar a revender? Esse é o tipo de peça que facilita.",
       "Se o objetivo é aumentar a renda, começa pelo que vende fácil.",
       "Boa pra quem vende pra academia, vizinhança ou grupo de amigas.",
       "Muita revendedora começou com um kit só e hoje compra todo mês.",
       "Se você revende moda fitness, essa é a peça que sai rápido.",
       "Quem revende sabe: peça boa e barata é lucro certo no fim do mês.",
       "Revender moda fitness é bom porque a cliente sempre volta pra comprar mais.",
-      "Peça que você posta no status e já aparece gente perguntando o preço."
+      "Peça que você posta no status e já aparece gente perguntando o preço.",
+      "Pra quem vende no WhatsApp ou no Instagram, essa peça ajuda a fechar pedido."
     ],
     "estilo": [
       "Moda fitness que dá pra usar no mercado, no passeio e na academia.",
@@ -516,6 +517,6 @@
   },
   "contagem_dia": {
     "data": "2026-11-04",
-    "n": 1
+    "n": 2
   }
 }

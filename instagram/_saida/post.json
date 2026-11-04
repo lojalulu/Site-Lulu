@@ -1,12 +1,12 @@
 {
-  "loja": "kits",
-  "produto_id": "4598001",
-  "produto_nome": "Pacote com 10 regata croped tule",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1793287381_2cab87d713d0a4b18991.webp",
+  "loja": "avulso",
+  "produto_id": "327770",
+  "produto_nome": "LEGGING 3D REF 067",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1674758287_8ffa9879cb93f1b2289c.jpeg",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "⭐ Novidade no catálogo, chegou agora.\n\n10 Regata - só R$ 264,90.\n\nVendido em kit fechado, cores sortidas.\n\nDá uma espiada no link da bio 💗\n\n#modafitnesssalvador #modafitnessevangelica #rendaextra",
-  "pilar": "lancamento",
-  "eh_lancamento": true,
-  "publicar_feed": false,
-  "rodada_do_dia": 1
+  "legenda_feed": "💗 Pra quem vende no WhatsApp ou no Instagram, essa peça ajuda a fechar pedido.\n\nAproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚\n\nVocê escolhe peça por peça (mínimo de 10 no pedido).\n\nOs outros modelos estão no link da bio 👆",
+  "pilar": "renda_extra",
+  "eh_lancamento": false,
+  "publicar_feed": true,
+  "rodada_do_dia": 2
 }
