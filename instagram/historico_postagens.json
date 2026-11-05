@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -93,15 +93,16 @@
       "331455",
       "365104",
       "327770",
-      "327731"
+      "327731",
+      "4324179"
     ]
   },
   "ultimos_pilares": [
-    "lancamento",
     "renda_extra",
     "lancamento",
     "estilo",
-    "lucratividade"
+    "lucratividade",
+    "conforto"
   ],
   "conhecidos": {
     "kits": [
@@ -418,10 +419,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "É peça avulsa, na malha premium.",
       "Peça avulsa, malha premium.",
       "Você escolhe peça por peça (mínimo de 10 no pedido).",
-      "Vendida avulsa, sem precisar levar kit fechado."
+      "Vendida avulsa, sem precisar levar kit fechado.",
+      "Peça avulsa premium — você monta o pedido do seu jeito."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -444,18 +445,18 @@
       "Hoje, {quantidade} saem por {preco}."
     ],
     "cta_alt": [
-      "Manda mensagem que a gente te ajuda a montar o pedido 💬",
-      "Ficou com dúvida? Chama no direct 💬"
+      "Ficou com dúvida? Chama no direct 💬",
+      "Chama no direct pra garantir o seu 💬"
     ],
     "conforto": [
-      "Conforto é o que faz a cliente usar toda semana — e indicar.",
       "Tecido macio, que não pinica nem esquenta demais.",
       "Dá pra agachar, correr e alongar sem ficar ajeitando a roupa.",
       "Veste bem do treino da manhã até o fim do dia.",
       "Feita pra treinar, trabalhar ou só ficar em casa — confortável do mesmo jeito.",
       "Malha que acompanha o corpo sem apertar — conforto o dia inteiro.",
       "Costura bem feita, que não incomoda na pele.",
-      "Firme sem ser apertada. É isso que a cliente procura."
+      "Firme sem ser apertada. É isso que a cliente procura.",
+      "Modelagem que dá liberdade pra se mexer."
     ],
     "renda_extra": [
       "Se o objetivo é aumentar a renda, começa pelo que vende fácil.",
@@ -518,6 +519,6 @@
   },
   "contagem_dia": {
     "data": "2026-11-05",
-    "n": 1
+    "n": 2
   }
 }
