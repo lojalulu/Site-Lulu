@@ -1,12 +1,12 @@
 {
-  "loja": "avulso",
-  "produto_id": "4324179",
-  "produto_nome": "SHORT MASCULINO",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1785858412_3c734896704b986c16b8.webp",
+  "loja": "kits",
+  "produto_id": "2708869",
+  "produto_nome": "Pacote com 5 Conjuntos de Short Ref 91",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1737393048_a0ef97679c10b124ac87.jpeg.webp",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "💪 Modelagem que dá liberdade pra se mexer.\n\nPeça avulsa premium — você monta o pedido do seu jeito.\n\nChama no direct pra garantir o seu 💬\n\n#modafitness #salvador",
-  "pilar": "conforto",
+  "legenda_feed": "🔥 Quando acaba, a próxima leva pode demorar.\n\nKit com cores variadas.\n\nLink da bio te leva direto pro catálogo 📲\n\n#modafitnesssalvador #modafitness",
+  "pilar": "disponibilidade",
   "eh_lancamento": false,
-  "publicar_feed": true,
-  "rodada_do_dia": 2
+  "publicar_feed": false,
+  "rodada_do_dia": 3
 }
