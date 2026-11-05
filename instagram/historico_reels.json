@@ -131,7 +131,15 @@
   "384565",
   "3769137",
   "477632",
-  "318128"
+  "318128",
+  "1366405",
+  "2049287",
+  "906628",
+  "3709232",
+  "3221685",
+  "3874845",
+  "3249086",
+  "3950005"
  ],
  "ganchos": [
   "Montar *loja online* sem marca própria é perder tempo",
@@ -145,29 +153,33 @@
   "Suplex que *não fica transparente*",
   "Antes a vitrine dela ficava sem graça",
   "Comece a revender com *4 kits*",
-  "Sua legging dura mais com dois cuidados simples"
+  "Sua legging dura mais com dois cuidados simples",
+  "Sua cliente *plus size* também treina"
  ],
- "ultimo_post": "2026-11-04",
+ "ultimo_post": "2026-11-05",
  "angulos": [
   "frete",
   "tecido",
   "tendencia",
   "comecar",
-  "dica_tecido"
+  "dica_tecido",
+  "plus"
  ],
  "formatos": [
   "classico",
   "pergunta",
   "rapido",
   "classico",
-  "pergunta"
+  "pergunta",
+  "rapido"
  ],
  "musicas": [
   "upbeat-atlas.mp3",
   "phonk-subclair.mp3",
   "upbeat-rock.mp3",
   "phonk-brasileiro.mp3",
-  "lofi-reel.mp3"
+  "lofi-reel.mp3",
+  "phonk-hard.mp3"
  ],
  "ultimo_post_meio": "2026-11-05",
  "contagem_meio": 2
