@@ -123,7 +123,15 @@
   "3724372",
   "3745064",
   "684180",
-  "4485664"
+  "4485664",
+  "947443",
+  "317954",
+  "3703559",
+  "4485666",
+  "384565",
+  "3769137",
+  "477632",
+  "318128"
  ],
  "ganchos": [
   "Montar *loja online* sem marca própria é perder tempo",
@@ -136,27 +144,31 @@
   "Com *6 kits*, o frete Vip fica grátis",
   "Suplex que *não fica transparente*",
   "Antes a vitrine dela ficava sem graça",
-  "Comece a revender com *4 kits*"
+  "Comece a revender com *4 kits*",
+  "Sua legging dura mais com dois cuidados simples"
  ],
  "ultimo_post": "2026-11-04",
  "angulos": [
   "frete",
   "tecido",
   "tendencia",
-  "comecar"
+  "comecar",
+  "dica_tecido"
  ],
  "formatos": [
   "classico",
   "pergunta",
   "rapido",
-  "classico"
+  "classico",
+  "pergunta"
  ],
  "musicas": [
   "upbeat-atlas.mp3",
   "phonk-subclair.mp3",
   "upbeat-rock.mp3",
-  "phonk-brasileiro.mp3"
+  "phonk-brasileiro.mp3",
+  "lofi-reel.mp3"
  ],
- "ultimo_post_meio": "2026-11-04",
- "contagem_meio": 1
+ "ultimo_post_meio": "2026-11-05",
+ "contagem_meio": 2
 }
