@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -91,15 +91,16 @@
       "4477094",
       "331455",
       "365104",
-      "327770"
+      "327770",
+      "327731"
     ]
   },
   "ultimos_pilares": [
-    "lancamento",
     "qualidade",
     "lancamento",
     "renda_extra",
-    "lancamento"
+    "lancamento",
+    "estilo"
   ],
   "conhecidos": {
     "kits": [
@@ -403,11 +404,11 @@
       "É kit fechado com 5 peças, em suplex vip."
     ],
     "cta_bio": [
-      "Catálogo inteiro tá no link da bio 👆",
       "Link na bio 🔗",
       "Dá uma espiada no link da bio 💗",
       "Os outros modelos estão no link da bio 👆",
-      "Vê as cores e monta seu pedido pelo link da bio 🔗"
+      "Vê as cores e monta seu pedido pelo link da bio 🔗",
+      "Catálogo completo — link na bio ✨"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -416,10 +417,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Atacado de peça avulsa, a partir de 10 peças.",
       "É peça avulsa, na malha premium.",
       "Peça avulsa, malha premium.",
-      "Você escolhe peça por peça (mínimo de 10 no pedido)."
+      "Você escolhe peça por peça (mínimo de 10 no pedido).",
+      "Vendida avulsa, sem precisar levar kit fechado."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -466,14 +467,14 @@
       "Pra quem vende no WhatsApp ou no Instagram, essa peça ajuda a fechar pedido."
     ],
     "estilo": [
-      "Moda fitness que dá pra usar no mercado, no passeio e na academia.",
       "Modelagem atual, cores que estão em alta — moda fitness que também é moda de rua.",
       "Cores que chamam atenção na vitrine e no seu status.",
       "Visual arrumado sem esforço nenhum.",
       "Modelo que não sai de moda de uma estação pra outra.",
       "Tem cara de peça cara, mas com preço de atacado.",
       "Sai da academia e já segue o dia sem trocar de roupa.",
-      "Bonita no treino e bonita na rua também."
+      "Bonita no treino e bonita na rua também.",
+      "Aquele visual que a cliente vê no feed e já quer pro guarda-roupa."
     ],
     "qualidade_kits": [
       "Pode fazer o teste do agachamento: zero transparência.",
@@ -516,6 +517,6 @@
   },
   "contagem_dia": {
     "data": "2026-11-04",
-    "n": 3
+    "n": 4
   }
 }
