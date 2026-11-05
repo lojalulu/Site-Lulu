@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -49,7 +49,8 @@
       "3703562",
       "4019589",
       "4598001",
-      "3724372"
+      "3724372",
+      "317277"
     ],
     "avulso": [
       "3117836",
@@ -96,11 +97,11 @@
     ]
   },
   "ultimos_pilares": [
-    "qualidade",
     "lancamento",
     "renda_extra",
     "lancamento",
-    "estilo"
+    "estilo",
+    "lucratividade"
   ],
   "conhecidos": {
     "kits": [
@@ -398,17 +399,17 @@
       "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛"
     ],
     "tag_kits": [
-      "Kit com cores variadas.",
       "Kit fechado, 5 peças, suplex vip.",
       "Vendido em kit fechado, cores sortidas.",
-      "É kit fechado com 5 peças, em suplex vip."
+      "É kit fechado com 5 peças, em suplex vip.",
+      "Vem em kit fechado de 5, tecido suplex vip."
     ],
     "cta_bio": [
-      "Link na bio 🔗",
       "Dá uma espiada no link da bio 💗",
       "Os outros modelos estão no link da bio 👆",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
-      "Catálogo completo — link na bio ✨"
+      "Catálogo completo — link na bio ✨",
+      "Pedido pelo site, link na bio 🛍️"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -437,10 +438,10 @@
       "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚"
     ],
     "preco_kits": [
-      "{quantidade}: {preco}.",
       "{quantidade} por {preco} — já pode revender no seu preço.",
       "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
-      "{quantidade} - só {preco}."
+      "{quantidade} - só {preco}.",
+      "Hoje, {quantidade} saem por {preco}."
     ],
     "cta_alt": [
       "Manda mensagem que a gente te ajuda a montar o pedido 💬",
@@ -495,14 +496,14 @@
       "Ainda tem, mas não sabemos até quando."
     ],
     "lucratividade": [
-      "Quanto menor o custo, mais fácil fica competir e ainda lucrar.",
       "Lucro bom começa na hora da compra — e esse preço ajuda.",
       "É difícil achar peça com esse preço e essa qualidade pra revender.",
       "Atacado com preço pensado pra quem revende.",
       "Preço de atacado de verdade, sem intermediário no meio.",
       "Peça que você revende pelo dobro e a cliente ainda acha justo.",
       "Compra no kit, sai mais em conta por peça, revende com lucro tranquilo.",
-      "Comprando direto da fábrica, sobra mais no seu bolso em cada venda."
+      "Comprando direto da fábrica, sobra mais no seu bolso em cada venda.",
+      "Faz a conta: o valor por peça no kit deixa espaço pra um bom lucro."
     ],
     "cliente_ama": [
       "Veste bem em corpos diferentes, por isso quase não tem troca.",
@@ -516,7 +517,7 @@
     ]
   },
   "contagem_dia": {
-    "data": "2026-11-04",
-    "n": 4
+    "data": "2026-11-05",
+    "n": 1
   }
 }
