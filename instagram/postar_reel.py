@@ -41,6 +41,8 @@ L, A = 1080, 1920
 FPS = 30
 FADE = 0.45            # duração das transições
 DUR_FOTO = (2.0, 2.6)  # quadros só de foto
+DUR_PRECO = 3.8        # quadro com etiqueta de preço: dá tempo de ler (nunca menos que isso)
+ESC_ETIQUETA = 1.3     # etiqueta de preço maior no vídeo
 MAX_TOTAL = 29.5       # as músicas têm 30s
 ROSA = (255, 61, 128)
 DOURADO = (255, 177, 0)
@@ -238,6 +240,8 @@ class QuadroFoto(Quadro):
     """Foto(s) com layout, movimento de câmera, texto opcional e etiqueta de preço."""
 
     def __init__(self, fotos, layout, movimento, dur, bloco=None, etiqueta=None, escuro=0.0, gancho=False):
+        if etiqueta is not None:
+            dur = max(dur, DUR_PRECO)
         self.dur, self.movimento, self.bloco, self.etiqueta = dur, movimento, bloco, etiqueta
         self.escuro, self.gancho = escuro, gancho
         self.texto = bloco is not None
@@ -293,14 +297,14 @@ class QuadroFoto(Quadro):
             return im
         rgba = im.convert("RGBA")
         if self.etiqueta is not None:
-            a = ease_out((t - 0.45) / 0.45)
+            a = ease_out((t - 0.25) / 0.40)
             if a > 0:
-                esc = 0.55 + 0.45 * a + 0.12 * math.sin(a * math.pi)  # "pop"
+                esc = ESC_ETIQUETA * (0.55 + 0.45 * a + 0.12 * math.sin(a * math.pi))  # "pop"
                 et = self.etiqueta
                 et = et.resize((max(1, int(et.width * esc)), max(1, int(et.height * esc))), Image.BILINEAR)
                 if a < 1:
                     et.putalpha(et.getchannel("A").point(lambda v: int(v * a)))
-                rgba.alpha_composite(et, (L - et.width - 150, 300))
+                rgba.alpha_composite(et, (max(20, L - et.width - 90), 300))
         if self.bloco is not None:
             self.bloco.desenhar(rgba, t)
         return rgba.convert("RGB")
@@ -542,7 +546,7 @@ def montar_quadros(itens, briefing, formato="classico"):
                                   BlocoTexto(briefing["gancho"], tam_max=112, largura=880, max_linhas=4, y_centro=900, atraso=0.15), gancho=True))
         for k in range(4):
             f = prox()
-            quadros.append(QuadroFoto([f], ["cartao", "cheio"][k % 2], mov(), 2.3, etiqueta=etiqueta(f)))
+            quadros.append(QuadroFoto([f], ["cartao", "cheio"][k % 2], mov(), 2.3, etiqueta=etiqueta(f) if k in (0, 2) else None))
         for q in briefing["quadros"][:2]:
             f = prox()
             quadros.append(QuadroFoto([f], "cartao", mov(), tempo_leitura(q), BlocoTexto(q, tam_max=84, largura=840, max_linhas=4, y_base=1470)))
@@ -581,7 +585,7 @@ def montar_quadros(itens, briefing, formato="classico"):
         def total(qs):
             return sum(q.dur for q in qs) - FADE * (len(qs) - 1)
         while total(quadros) > MAX_TOTAL:
-            cand = [i for i, q in enumerate(quadros[1:-1], 1) if not q.texto]
+            cand = [i for i, q in enumerate(quadros[1:-1], 1) if not q.texto and getattr(q, "etiqueta", None) is None]
             if not cand:
                 break
             quadros.pop(cand[-1])
@@ -619,7 +623,7 @@ def montar_quadros(itens, briefing, formato="classico"):
     def total(qs):
         return sum(q.dur for q in qs) - FADE * (len(qs) - 1)
     while total(quadros) > MAX_TOTAL:
-        cand = [i for i, q in enumerate(quadros[1:-1], 1) if not q.texto]
+        cand = [i for i, q in enumerate(quadros[1:-1], 1) if not q.texto and getattr(q, "etiqueta", None) is None]
         if not cand:
             break
         quadros.pop(cand[-1])

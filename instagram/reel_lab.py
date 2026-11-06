@@ -140,7 +140,7 @@ def _n_palavras(txt: str) -> int:
     return len(re.findall(r"\S+", txt))
 
 
-RUIM = re.compile(r"perder tempo|marca pr[óo]pria|errad[oa]|white label|garanti|lucro de|ganhe r\$|r\$\s?\d|sem estoque|de gra[çc]a|últimas unidades|ultimas unidades|curta|compartilhe|salve este", re.I)
+RUIM = re.compile(r"perder tempo|marca pr[óo]pria|errad[oa]|white label|garanti|lucro de|ganhe r\$|r\$\s?\d|sem estoque|de gra[çc]a|últimas unidades|ultimas unidades", re.I)
 
 
 def _comeco(txt):
@@ -202,6 +202,7 @@ Mecanismo do gancho: {mecanismo}.
 { {"conteudo": "Chamada final leve: convida a seguir o perfil ou conhecer o catálogo no link da bio. NÃO peça comentário.", "franquia": "Chamada final: diz que quem quiser saber mais é só comentar a palavra FRANQUIA aqui embaixo."}.get(modo, "") }
 Exemplos de gancho deste ângulo (inspiração, NÃO copie): {json.dumps(list(exemplos), ensure_ascii=False)}
 Pode usar o marcador {{PRECO}} em no máximo UMA frase (gancho ou quadro).
+Regras de RETENÇÃO da legenda: a primeira linha aparece sozinha no feed, então ela precisa prender (nada de "Olha só" nem "Oi gente"); frases curtas, uma ideia por linha, linhas separadas por linha em branco; sem repetir o texto do vídeo palavra por palavra; no tipo CONTEUDO, feche convidando a SALVAR pra consultar depois ou a MARCAR uma amiga lojista; no tipo VENDA e FRANQUIA siga a chamada do tipo. Até 4 emojis no total, nunca no início da primeira linha.
 Ganchos já usados recentemente (NÃO repita nem parafraseie): {json.dumps(recentes[-15:], ensure_ascii=False)}
 
 Responda SÓ com JSON neste formato:
@@ -212,7 +213,7 @@ Responda SÓ com JSON neste formato:
  "quadros": ["frase de valor de 6 a 14 palavras", "(opcional) segunda frase de 6 a 14 palavras"],
  "cta": "chamada final de 4 a 9 palavras, natural, mandando pra luluextra.com ou pro link da bio",
  "selo": "LINK NA BIO",
- "legenda": "legenda de 2 a 4 frases, tom próximo, terminando com convite pra acessar o link da bio",
+ "legenda": "legenda de RETENÇÃO: 1ª linha = gancho curto de até 90 caracteres que dá vontade de abrir o 'mais' (pergunta, número ou promessa que o Reel cumpre); depois 2 a 3 linhas curtas separadas por linha em branco, com 1 insight útil que NÃO está no vídeo; fechar com UMA chamada de ação clara (a do tipo de Reel)",
  "hashtags": ["#...", "#...", "#...", "#...", "#...", "#...", "#..."]
 }}"""
     r = requests.post(DEEPSEEK_URL, headers={"Authorization": f"Bearer {chave}"}, timeout=90, json={
