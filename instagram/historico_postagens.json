@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -97,15 +97,16 @@
       "327770",
       "327731",
       "4324179",
-      "3118772"
+      "3118772",
+      "3146488"
     ]
   },
   "ultimos_pilares": [
-    "lucratividade",
     "conforto",
     "disponibilidade",
     "cliente_ama",
-    "qualidade"
+    "qualidade",
+    "conforto"
   ],
   "conhecidos": {
     "kits": [
@@ -409,11 +410,11 @@
       "Kit fechado — ótimo pra começar a revender."
     ],
     "cta_bio": [
-      "Catálogo completo — link na bio ✨",
       "Pedido pelo site, link na bio 🛍️",
       "Link da bio te leva direto pro catálogo 📲",
       "Catálogo inteiro tá no link da bio 👆",
-      "Dá uma espiada no link da bio 💗"
+      "Dá uma espiada no link da bio 💗",
+      "Vê as cores e monta seu pedido pelo link da bio 🔗"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -422,10 +423,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Você escolhe peça por peça (mínimo de 10 no pedido).",
       "Vendida avulsa, sem precisar levar kit fechado.",
       "Peça avulsa premium — você monta o pedido do seu jeito.",
-      "É peça avulsa, na malha premium."
+      "É peça avulsa, na malha premium.",
+      "Peça avulsa, malha premium."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -437,9 +438,9 @@
       "Peça avulsa com malha premium: acabamento caprichado, preço de atacado."
     ],
     "frete_avulso": [
-      "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛",
       "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚",
-      "Pedido de peça avulsa com frete grátis (Vip) 📦"
+      "Pedido de peça avulsa com frete grátis (Vip) 📦",
+      "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦"
     ],
     "preco_kits": [
       "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
@@ -452,14 +453,14 @@
       "Chama no direct pra garantir o seu 💬"
     ],
     "conforto": [
-      "Tecido macio, que não pinica nem esquenta demais.",
       "Dá pra agachar, correr e alongar sem ficar ajeitando a roupa.",
       "Veste bem do treino da manhã até o fim do dia.",
       "Feita pra treinar, trabalhar ou só ficar em casa — confortável do mesmo jeito.",
       "Malha que acompanha o corpo sem apertar — conforto o dia inteiro.",
       "Costura bem feita, que não incomoda na pele.",
       "Firme sem ser apertada. É isso que a cliente procura.",
-      "Modelagem que dá liberdade pra se mexer."
+      "Modelagem que dá liberdade pra se mexer.",
+      "Conforto é o que faz a cliente usar toda semana — e indicar."
     ],
     "renda_extra": [
       "Se o objetivo é aumentar a renda, começa pelo que vende fácil.",
@@ -522,6 +523,6 @@
   },
   "contagem_dia": {
     "data": "2026-11-06",
-    "n": 1
+    "n": 2
   }
 }

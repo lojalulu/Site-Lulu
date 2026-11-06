@@ -1,12 +1,12 @@
 {
-  "loja": "kits",
-  "produto_id": "317954",
-  "produto_nome": "Pacote com 10 Regatas G",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1674009406_2ce52462c588c719f720.jpeg",
+  "loja": "avulso",
+  "produto_id": "3146488",
+  "produto_nome": "MACAQUITO CANELADO DE BOLSO",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1762890523_ed688a31e41edc4e983a.webp",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "🌸 Não desbota fácil e não faz bolinha — qualidade que dura.\n\nR$ 152,90 no kit com 10 Regatas.\n\nKit fechado — ótimo pra começar a revender.\n\nDá uma espiada no link da bio 💗",
-  "pilar": "qualidade",
+  "legenda_feed": "🌸 Conforto é o que faz a cliente usar toda semana — e indicar.\n\nTem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦\n\nPeça avulsa, malha premium.\n\nVê as cores e monta seu pedido pelo link da bio 🔗\n\n#modafitness #rendaextra #modafitnesssalvador",
+  "pilar": "conforto",
   "eh_lancamento": false,
-  "publicar_feed": false,
-  "rodada_do_dia": 1
+  "publicar_feed": true,
+  "rodada_do_dia": 2
 }
