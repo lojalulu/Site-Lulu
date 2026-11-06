@@ -27,6 +27,9 @@ on:
       modo:
         description: "Só pra teste: venda, conteudo ou franquia. Vazio = automático"
         default: ""
+      narrar:
+        description: "Só pra teste: 1 = com narração, 0 = sem. Vazio = automático (~35% dos Reels)"
+        default: ""
 
 concurrency:
   group: postar-reel   # grupo próprio: uma rodada do post normal nunca cancela uma do Reel
@@ -76,7 +79,7 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg
-          pip install requests Pillow
+          pip install requests Pillow edge-tts gTTS
 
       - name: Montar e publicar o Reel
         env:
@@ -88,6 +91,7 @@ jobs:
           AUTO: ${{ github.event.inputs.auto }}
           SLOT: ${{ github.event.inputs.slot }}
           REEL_MODO: ${{ github.event.inputs.modo }}
+          REEL_NARRAR: ${{ github.event.inputs.narrar }}
           CRON_TESTE: ${{ github.event.schedule == '48 22 28 10 *' && '1' || '0' }}
         run: |
           ARGS=""

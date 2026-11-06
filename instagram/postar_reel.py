@@ -171,6 +171,7 @@ class BlocoTexto:
 
     def __init__(self, frase, tam_max=96, largura=860, max_linhas=4, y_base=None, y_centro=None,
                  selo=None, atraso=0.25):
+        self.frase = frase
         self.linhas = linhas_renderizadas(frase, tam_max, largura, max_linhas)
         self.atraso = atraso
         alt_total = sum(i.height for i in self.linhas)
@@ -236,6 +237,18 @@ class Quadro:
         raise NotImplementedError
 
 
+def pilula(texto):
+    """Frase de retenção em pílula (aparece ~1,6s no topo do quadro)."""
+    f = fonte(46)
+    d0 = ImageDraw.Draw(Image.new("RGB", (4, 4)))
+    w = int(d0.textlength(texto, font=f)) + 100
+    im = Image.new("RGBA", (w, 96), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    d.rounded_rectangle((0, 0, w - 1, 95), radius=48, fill=AMEIXA + (235,), outline=ROSA + (255,), width=5)
+    d.text((50, 18), texto, font=f, fill=BRANCO + (255,))
+    return im
+
+
 class QuadroFoto(Quadro):
     """Foto(s) com layout, movimento de câmera, texto opcional e etiqueta de preço."""
 
@@ -244,6 +257,7 @@ class QuadroFoto(Quadro):
             dur = max(dur, DUR_PRECO)
         self.dur, self.movimento, self.bloco, self.etiqueta = dur, movimento, bloco, etiqueta
         self.escuro, self.gancho = escuro, gancho
+        self.chamada = None  # frase de retenção no topo (pílula)
         self.texto = bloco is not None
         if layout == "cheio":
             fundo = fundo_borrado(fotos[0], 0.35)
@@ -293,9 +307,15 @@ class QuadroFoto(Quadro):
 
     def render(self, t):
         im = self._camera(t)
-        if self.bloco is None and self.etiqueta is None:
+        if self.bloco is None and self.etiqueta is None and self.chamada is None:
             return im
         rgba = im.convert("RGBA")
+        if self.chamada is not None:
+            a = ease_out((t - 0.30) / 0.35) * (1 - ease_out((t - 1.90) / 0.30))
+            if a > 0:
+                pil = self.chamada.copy()
+                pil.putalpha(pil.getchannel("A").point(lambda v: int(v * a)))
+                rgba.alpha_composite(pil, ((L - pil.width) // 2, 215 + int((1 - a) * -30)))
         if self.etiqueta is not None:
             a = ease_out((t - 0.25) / 0.40)
             if a > 0:
@@ -315,6 +335,7 @@ class QuadroFinal(Quadro):
 
     def __init__(self, cta, selo, fotos):
         self.texto = True
+        self.frase = cta
         self.dur = max(4.6, tempo_leitura(cta, 4.6, 2.2, 0.3))
         bg = Image.new("RGB", (L, A), AMEIXA)
         d = ImageDraw.Draw(bg)
@@ -630,23 +651,80 @@ def montar_quadros(itens, briefing, formato="classico"):
     return quadros
 
 
-def gerar_video(itens, briefing, saida, formato="classico", musica_nome=None):
+FRASES_MEIO = ["AGORA VEM O MELHOR", "ATENÇÃO NESSA PARTE", "O DETALHE QUE IMPORTA"]
+FRASE_TEASER = "FICA ATÉ O FINAL"
+
+
+def adicionar_retencao(quadros):
+    """Frases de retenção em pílula: um teaser logo no começo e uma antes do 1º quadro de valor."""
+    fotos = [q for q in quadros if isinstance(q, QuadroFoto)]
+    if len(quadros) >= 5 and isinstance(quadros[1], QuadroFoto) and quadros[1].bloco is None:
+        quadros[1].chamada = pilula(FRASE_TEASER)
+    valor = next((q for q in fotos[1:] if q.bloco is not None and not q.gancho), None)
+    if valor is not None and valor.chamada is None:
+        valor.chamada = pilula(random.choice(FRASES_MEIO))
+
+
+def preparar_narracao(quadros):
+    """Gera a voz de cada quadro com texto e estica o quadro até caber a fala. Devolve {indice: (arquivo, dur)}."""
+    import voz
+    falas = {}
+    for i, q in enumerate(quadros):
+        frase = getattr(getattr(q, "bloco", None), "frase", None) or getattr(q, "frase", None)
+        if not frase:
+            continue
+        r = voz.gerar_voz(frase, f"{PASTA_SAIDA}/voz_{i}.mp3")
+        if r is None:
+            return {}  # sem voz em um quadro = Reel inteiro sem narração (coerência)
+        falas[i] = r
+        q.dur = max(q.dur, r[1] + 0.95)  # entrada do texto + fala + respiro
+    return falas
+
+
+def gerar_video(itens, briefing, saida, formato="classico", musica_nome=None, narrar=False):
     quadros = montar_quadros(itens, briefing, formato)
+    adicionar_retencao(quadros)
+    os.makedirs(PASTA_SAIDA, exist_ok=True)
+    falas = {}
+    if narrar:
+        try:
+            falas = preparar_narracao(quadros)
+        except Exception as e:  # noqa: BLE001
+            print(f"Narração indisponível ({type(e).__name__}): sai sem voz")
+            falas = {}
+    # loop: o vídeo termina voltando ao 1º quadro, então o replay emenda sem corte
+    import copy
+    volta = copy.copy(quadros[0])
+    volta.dur = FADE + 0.35
+    quadros.append(volta)
     tipos = ["fade", "esq", "cima", "zoom"]
-    trans = [random.choice(tipos) for _ in quadros[:-1]]
+    trans = [random.choice(tipos) for _ in quadros[:-2]] + ["fade", "fade"]
     inicios, t = [], 0.0
     for q in quadros:
         inicios.append(t)
         t += q.dur - FADE
     total = t + FADE
     musica = os.path.join(MUSICAS, musica_nome or random.choice(sorted(os.listdir(MUSICAS))))
-    print(f"Formato: {formato} | Música: {musica} | {len(quadros)} quadros | {total:.1f}s | transições: {trans}")
+    print(f"Formato: {formato} | Música: {musica} | {len(quadros)} quadros | {total:.1f}s | narrado: {bool(falas)} | transições: {trans}")
 
     os.makedirs(os.path.dirname(saida), exist_ok=True)
-    cmd = ["ffmpeg", "-v", "error", "-y",
-           "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{L}x{A}", "-r", str(FPS), "-i", "-",
-           "-stream_loop", "-1", "-i", musica,
-           "-af", f"afade=t=in:d=0.4,afade=t=out:st={total - 1.8:.2f}:d=1.8",
+    entradas = ["-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{L}x{A}", "-r", str(FPS), "-i", "-",
+                "-stream_loop", "-1", "-i", musica]
+    if falas:
+        ordem = sorted(falas)
+        for i in ordem:
+            entradas += ["-i", falas[i][0]]
+        f = [f"[1:a]volume=0.28,afade=t=in:d=0.3[m]"]
+        rot = ["[m]"]
+        for k, i in enumerate(ordem):
+            ms = int((inicios[i] + 0.35) * 1000)
+            f.append(f"[{k + 2}:a]adelay={ms}|{ms},volume=1.6[v{k}]")
+            rot.append(f"[v{k}]")
+        f.append("".join(rot) + f"amix=inputs={len(rot)}:normalize=0:duration=first,afade=t=out:st={total - 0.8:.2f}:d=0.8[a]")
+        audio = ["-filter_complex", ";".join(f), "-map", "0:v", "-map", "[a]"]
+    else:
+        audio = ["-af", f"afade=t=in:d=0.4,afade=t=out:st={total - 1.0:.2f}:d=1.0"]
+    cmd = ["ffmpeg", "-v", "error", "-y", *entradas, *audio,
            "-t", f"{total:.2f}", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
            "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", saida]
     proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
@@ -788,7 +866,9 @@ def main():
     os.makedirs(PASTA_SAIDA, exist_ok=True)
     with open(f"{PASTA_SAIDA}/briefing.json", "w", encoding="utf-8") as f:
         json.dump(briefing, f, ensure_ascii=False, indent=1)
-    gerar_video(itens, briefing, SAIDA, formato, musica_nome)
+    env_n = os.environ.get("REEL_NARRAR", "")
+    narrar = (env_n == "1") if env_n in ("0", "1") else random.random() < 0.35
+    gerar_video(itens, briefing, SAIDA, formato, musica_nome, narrar)
     if os.environ.get("GITHUB_TOKEN") and os.environ.get("GITHUB_REPOSITORY"):
         url = hospedar([SAIDA, PREVIA, f"{PASTA_SAIDA}/briefing.json"])
         print("PRÉVIA DO VÍDEO:", url)
