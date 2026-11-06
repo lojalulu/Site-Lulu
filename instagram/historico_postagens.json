@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -52,7 +52,8 @@
       "3724372",
       "317277",
       "2708869",
-      "317954"
+      "317954",
+      "2049286"
     ],
     "avulso": [
       "3117836",
@@ -102,11 +103,11 @@
     ]
   },
   "ultimos_pilares": [
-    "conforto",
     "disponibilidade",
     "cliente_ama",
     "qualidade",
-    "conforto"
+    "conforto",
+    "renda_extra"
   ],
   "conhecidos": {
     "kits": [
@@ -404,17 +405,17 @@
       "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛"
     ],
     "tag_kits": [
-      "É kit fechado com 5 peças, em suplex vip.",
       "Vem em kit fechado de 5, tecido suplex vip.",
       "Kit com cores variadas.",
-      "Kit fechado — ótimo pra começar a revender."
+      "Kit fechado — ótimo pra começar a revender.",
+      "Vendido em kit fechado, cores sortidas."
     ],
     "cta_bio": [
-      "Pedido pelo site, link na bio 🛍️",
       "Link da bio te leva direto pro catálogo 📲",
       "Catálogo inteiro tá no link da bio 👆",
       "Dá uma espiada no link da bio 💗",
-      "Vê as cores e monta seu pedido pelo link da bio 🔗"
+      "Vê as cores e monta seu pedido pelo link da bio 🔗",
+      "Link na bio 🔗"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -463,14 +464,14 @@
       "Conforto é o que faz a cliente usar toda semana — e indicar."
     ],
     "renda_extra": [
-      "Se o objetivo é aumentar a renda, começa pelo que vende fácil.",
       "Boa pra quem vende pra academia, vizinhança ou grupo de amigas.",
       "Muita revendedora começou com um kit só e hoje compra todo mês.",
       "Se você revende moda fitness, essa é a peça que sai rápido.",
       "Quem revende sabe: peça boa e barata é lucro certo no fim do mês.",
       "Revender moda fitness é bom porque a cliente sempre volta pra comprar mais.",
       "Peça que você posta no status e já aparece gente perguntando o preço.",
-      "Pra quem vende no WhatsApp ou no Instagram, essa peça ajuda a fechar pedido."
+      "Pra quem vende no WhatsApp ou no Instagram, essa peça ajuda a fechar pedido.",
+      "Essa entra no pedido e sai do seu estoque rapidinho."
     ],
     "estilo": [
       "Modelagem atual, cores que estão em alta — moda fitness que também é moda de rua.",
@@ -523,6 +524,6 @@
   },
   "contagem_dia": {
     "data": "2026-11-06",
-    "n": 2
+    "n": 3
   }
 }
