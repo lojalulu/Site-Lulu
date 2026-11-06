@@ -139,7 +139,15 @@
   "3221685",
   "3874845",
   "3249086",
-  "3950005"
+  "3950005",
+  "3347550",
+  "3950065",
+  "3950022",
+  "684175",
+  "4598001",
+  "3388638",
+  "2708825",
+  "3347534"
  ],
  "ganchos": [
   "Montar *loja online* sem marca própria é perder tempo",
@@ -154,7 +162,8 @@
   "Antes a vitrine dela ficava sem graça",
   "Comece a revender com *4 kits*",
   "Sua legging dura mais com dois cuidados simples",
-  "Sua cliente *plus size* também treina"
+  "Sua cliente *plus size* também treina",
+  "De onde vem a *Lulu*?"
  ],
  "ultimo_post": "2026-11-05",
  "angulos": [
@@ -163,7 +172,8 @@
   "tendencia",
   "comecar",
   "dica_tecido",
-  "plus"
+  "plus",
+  "bastidores"
  ],
  "formatos": [
   "classico",
@@ -171,7 +181,8 @@
   "rapido",
   "classico",
   "pergunta",
-  "rapido"
+  "rapido",
+  "classico"
  ],
  "musicas": [
   "upbeat-atlas.mp3",
@@ -179,8 +190,9 @@
   "upbeat-rock.mp3",
   "phonk-brasileiro.mp3",
   "lofi-reel.mp3",
-  "phonk-hard.mp3"
+  "phonk-hard.mp3",
+  "upbeat-rock.mp3"
  ],
- "ultimo_post_meio": "2026-11-05",
- "contagem_meio": 2
+ "ultimo_post_meio": "2026-11-06",
+ "contagem_meio": 3
 }
