@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -51,7 +51,8 @@
       "4598001",
       "3724372",
       "317277",
-      "2708869"
+      "2708869",
+      "317954"
     ],
     "avulso": [
       "3117836",
@@ -100,11 +101,11 @@
     ]
   },
   "ultimos_pilares": [
-    "estilo",
     "lucratividade",
     "conforto",
     "disponibilidade",
-    "cliente_ama"
+    "cliente_ama",
+    "qualidade"
   ],
   "conhecidos": {
     "kits": [
@@ -402,17 +403,17 @@
       "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛"
     ],
     "tag_kits": [
-      "Vendido em kit fechado, cores sortidas.",
       "É kit fechado com 5 peças, em suplex vip.",
       "Vem em kit fechado de 5, tecido suplex vip.",
-      "Kit com cores variadas."
+      "Kit com cores variadas.",
+      "Kit fechado — ótimo pra começar a revender."
     ],
     "cta_bio": [
-      "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Catálogo completo — link na bio ✨",
       "Pedido pelo site, link na bio 🛍️",
       "Link da bio te leva direto pro catálogo 📲",
-      "Catálogo inteiro tá no link da bio 👆"
+      "Catálogo inteiro tá no link da bio 👆",
+      "Dá uma espiada no link da bio 💗"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -441,10 +442,10 @@
       "Pedido de peça avulsa com frete grátis (Vip) 📦"
     ],
     "preco_kits": [
-      "{quantidade} por {preco} — já pode revender no seu preço.",
       "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
       "{quantidade} - só {preco}.",
-      "Hoje, {quantidade} saem por {preco}."
+      "Hoje, {quantidade} saem por {preco}.",
+      "{preco} no kit com {quantidade}."
     ],
     "cta_alt": [
       "Ficou com dúvida? Chama no direct 💬",
@@ -481,13 +482,13 @@
       "Aquele visual que a cliente vê no feed e já quer pro guarda-roupa."
     ],
     "qualidade_kits": [
-      "Pode fazer o teste do agachamento: zero transparência.",
       "Suplex vip que segura bem e não deixa marquinha.",
       "Suplex encorpado, que não fica transparente no agachamento.",
       "Zero transparência de verdade — o padrão do suplex vip da Lulu.",
       "Tecido firme, que não perde a forma depois de lavar.",
       "Todas as peças do kit no mesmo padrão de qualidade.",
-      "Suplex vip, zero transparência — testado antes de entrar no catálogo."
+      "Suplex vip, zero transparência — testado antes de entrar no catálogo.",
+      "Não desbota fácil e não faz bolinha — qualidade que dura."
     ],
     "disponibilidade": [
       "Poucas peças disponíveis por enquanto.",
@@ -520,7 +521,7 @@
     ]
   },
   "contagem_dia": {
-    "data": "2026-11-05",
-    "n": 4
+    "data": "2026-11-06",
+    "n": 1
   }
 }
