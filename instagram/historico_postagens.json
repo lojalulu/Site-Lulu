@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -101,15 +101,16 @@
       "4324179",
       "3118772",
       "3146488",
-      "3336920"
+      "3336920",
+      "331414"
     ]
   },
   "ultimos_pilares": [
-    "qualidade",
     "conforto",
     "renda_extra",
     "lucratividade",
-    "conforto"
+    "conforto",
+    "estilo"
   ],
   "conhecidos": {
     "kits": [
@@ -426,10 +427,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Peça avulsa premium — você monta o pedido do seu jeito.",
       "É peça avulsa, na malha premium.",
       "Peça avulsa, malha premium.",
-      "Você escolhe peça por peça (mínimo de 10 no pedido)."
+      "Você escolhe peça por peça (mínimo de 10 no pedido).",
+      "Vendida avulsa, sem precisar levar kit fechado."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -441,9 +442,9 @@
       "Peça avulsa com malha premium: acabamento caprichado, preço de atacado."
     ],
     "frete_avulso": [
-      "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚",
       "Pedido de peça avulsa com frete grátis (Vip) 📦",
-      "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦"
+      "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦",
+      "Frete grátis (Vip) pra Salvador e todo o Brasil 🚚"
     ],
     "preco_kits": [
       "{quantidade} - só {preco}.",
@@ -452,8 +453,8 @@
       "{quantidade}: {preco}."
     ],
     "cta_alt": [
-      "Ficou com dúvida? Chama no direct 💬",
-      "Chama no direct pra garantir o seu 💬"
+      "Chama no direct pra garantir o seu 💬",
+      "Manda mensagem que a gente te ajuda a montar o pedido 💬"
     ],
     "conforto": [
       "Veste bem do treino da manhã até o fim do dia.",
@@ -476,14 +477,14 @@
       "Essa entra no pedido e sai do seu estoque rapidinho."
     ],
     "estilo": [
-      "Modelagem atual, cores que estão em alta — moda fitness que também é moda de rua.",
       "Cores que chamam atenção na vitrine e no seu status.",
       "Visual arrumado sem esforço nenhum.",
       "Modelo que não sai de moda de uma estação pra outra.",
       "Tem cara de peça cara, mas com preço de atacado.",
       "Sai da academia e já segue o dia sem trocar de roupa.",
       "Bonita no treino e bonita na rua também.",
-      "Aquele visual que a cliente vê no feed e já quer pro guarda-roupa."
+      "Aquele visual que a cliente vê no feed e já quer pro guarda-roupa.",
+      "Peça que fica linda na foto — ajuda muito na hora de divulgar."
     ],
     "qualidade_kits": [
       "Suplex vip que segura bem e não deixa marquinha.",
@@ -526,6 +527,6 @@
   },
   "contagem_dia": {
     "data": "2026-11-07",
-    "n": 2
+    "n": 3
   }
 }
