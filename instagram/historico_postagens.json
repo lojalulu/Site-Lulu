@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -99,15 +99,16 @@
       "327731",
       "4324179",
       "3118772",
-      "3146488"
+      "3146488",
+      "3336920"
     ]
   },
   "ultimos_pilares": [
-    "disponibilidade",
     "cliente_ama",
     "qualidade",
     "conforto",
-    "renda_extra"
+    "renda_extra",
+    "lucratividade"
   ],
   "conhecidos": {
     "kits": [
@@ -411,11 +412,11 @@
       "Vendido em kit fechado, cores sortidas."
     ],
     "cta_bio": [
-      "Link da bio te leva direto pro catálogo 📲",
       "Catálogo inteiro tá no link da bio 👆",
       "Dá uma espiada no link da bio 💗",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
-      "Link na bio 🔗"
+      "Link na bio 🔗",
+      "Catálogo completo — link na bio ✨"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -424,10 +425,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Vendida avulsa, sem precisar levar kit fechado.",
       "Peça avulsa premium — você monta o pedido do seu jeito.",
       "É peça avulsa, na malha premium.",
-      "Peça avulsa, malha premium."
+      "Peça avulsa, malha premium.",
+      "Você escolhe peça por peça (mínimo de 10 no pedido)."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -502,14 +503,14 @@
       "Quando acaba, a próxima leva pode demorar."
     ],
     "lucratividade": [
-      "Lucro bom começa na hora da compra — e esse preço ajuda.",
       "É difícil achar peça com esse preço e essa qualidade pra revender.",
       "Atacado com preço pensado pra quem revende.",
       "Preço de atacado de verdade, sem intermediário no meio.",
       "Peça que você revende pelo dobro e a cliente ainda acha justo.",
       "Compra no kit, sai mais em conta por peça, revende com lucro tranquilo.",
       "Comprando direto da fábrica, sobra mais no seu bolso em cada venda.",
-      "Faz a conta: o valor por peça no kit deixa espaço pra um bom lucro."
+      "Faz a conta: o valor por peça no kit deixa espaço pra um bom lucro.",
+      "Custo baixo por peça é o que faz a revenda valer a pena."
     ],
     "cliente_ama": [
       "Aposta segura: modelo que agrada quase todo mundo.",
@@ -523,7 +524,7 @@
     ]
   },
   "contagem_dia": {
-    "data": "2026-11-06",
-    "n": 3
+    "data": "2026-11-07",
+    "n": 1
   }
 }
