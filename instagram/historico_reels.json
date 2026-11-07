@@ -163,7 +163,15 @@
   "384571",
   "3501601",
   "3311193",
-  "3781598"
+  "3781598",
+  "449557",
+  "4431155",
+  "2967282",
+  "384568",
+  "4210537",
+  "318110",
+  "1366446",
+  "3703562"
  ],
  "ganchos": [
   "Montar *loja online* sem marca própria é perder tempo",
@@ -181,9 +189,10 @@
   "Sua cliente *plus size* também treina",
   "De onde vem a *Lulu*?",
   "Modelos *novos* toda semana",
-  "Dúvida de *tamanho* sem perder a venda"
+  "Dúvida de *tamanho* sem perder a venda",
+  "Suplex que *não fica transparente*"
  ],
- "ultimo_post": "2026-11-06",
+ "ultimo_post": "2026-11-07",
  "angulos": [
   "frete",
   "tecido",
@@ -193,7 +202,8 @@
   "plus",
   "bastidores",
   "novidade",
-  "atendimento"
+  "atendimento",
+  "tecido"
  ],
  "formatos": [
   "classico",
@@ -204,7 +214,8 @@
   "rapido",
   "classico",
   "pergunta",
-  "rapido"
+  "rapido",
+  "vitrine"
  ],
  "musicas": [
   "upbeat-atlas.mp3",
@@ -215,7 +226,8 @@
   "phonk-hard.mp3",
   "upbeat-rock.mp3",
   "upbeat-atlas.mp3",
-  "phonk-mountain2.mp3"
+  "phonk-mountain2.mp3",
+  "phonk-solarflex.mp3"
  ],
  "ultimo_post_meio": "2026-11-07",
  "contagem_meio": 4
