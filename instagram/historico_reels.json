@@ -155,7 +155,15 @@
   "684191",
   "318124",
   "3221653",
-  "2049293"
+  "2049293",
+  "318143",
+  "2049296",
+  "318126",
+  "3221669",
+  "384571",
+  "3501601",
+  "3311193",
+  "3781598"
  ],
  "ganchos": [
   "Montar *loja online* sem marca própria é perder tempo",
@@ -172,7 +180,8 @@
   "Sua legging dura mais com dois cuidados simples",
   "Sua cliente *plus size* também treina",
   "De onde vem a *Lulu*?",
-  "Modelos *novos* toda semana"
+  "Modelos *novos* toda semana",
+  "Dúvida de *tamanho* sem perder a venda"
  ],
  "ultimo_post": "2026-11-06",
  "angulos": [
@@ -183,7 +192,8 @@
   "dica_tecido",
   "plus",
   "bastidores",
-  "novidade"
+  "novidade",
+  "atendimento"
  ],
  "formatos": [
   "classico",
@@ -193,7 +203,8 @@
   "pergunta",
   "rapido",
   "classico",
-  "pergunta"
+  "pergunta",
+  "rapido"
  ],
  "musicas": [
   "upbeat-atlas.mp3",
@@ -203,8 +214,9 @@
   "lofi-reel.mp3",
   "phonk-hard.mp3",
   "upbeat-rock.mp3",
-  "upbeat-atlas.mp3"
+  "upbeat-atlas.mp3",
+  "phonk-mountain2.mp3"
  ],
- "ultimo_post_meio": "2026-11-06",
- "contagem_meio": 3
+ "ultimo_post_meio": "2026-11-07",
+ "contagem_meio": 4
 }
