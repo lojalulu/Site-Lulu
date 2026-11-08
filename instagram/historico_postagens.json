@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -103,15 +103,16 @@
       "3118772",
       "3146488",
       "3336920",
-      "331414"
+      "331414",
+      "331394"
     ]
   },
   "ultimos_pilares": [
-    "renda_extra",
     "lucratividade",
     "conforto",
     "estilo",
-    "lucratividade"
+    "lucratividade",
+    "renda_extra"
   ],
   "conhecidos": {
     "kits": [
@@ -415,11 +416,11 @@
       "É kit fechado com 5 peças, em suplex vip."
     ],
     "cta_bio": [
-      "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Link na bio 🔗",
       "Catálogo completo — link na bio ✨",
       "Os outros modelos estão no link da bio 👆",
-      "Link da bio te leva direto pro catálogo 📲"
+      "Link da bio te leva direto pro catálogo 📲",
+      "Catálogo inteiro tá no link da bio 👆"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -428,10 +429,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "É peça avulsa, na malha premium.",
       "Peça avulsa, malha premium.",
       "Você escolhe peça por peça (mínimo de 10 no pedido).",
-      "Vendida avulsa, sem precisar levar kit fechado."
+      "Vendida avulsa, sem precisar levar kit fechado.",
+      "Atacado de peça avulsa, a partir de 10 peças."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -468,14 +469,14 @@
       "Peça leve, que não pesa nem nos dias mais quentes."
     ],
     "renda_extra": [
-      "Boa pra quem vende pra academia, vizinhança ou grupo de amigas.",
       "Muita revendedora começou com um kit só e hoje compra todo mês.",
       "Se você revende moda fitness, essa é a peça que sai rápido.",
       "Quem revende sabe: peça boa e barata é lucro certo no fim do mês.",
       "Revender moda fitness é bom porque a cliente sempre volta pra comprar mais.",
       "Peça que você posta no status e já aparece gente perguntando o preço.",
       "Pra quem vende no WhatsApp ou no Instagram, essa peça ajuda a fechar pedido.",
-      "Essa entra no pedido e sai do seu estoque rapidinho."
+      "Essa entra no pedido e sai do seu estoque rapidinho.",
+      "Quer começar a revender? Esse é o tipo de peça que facilita."
     ],
     "estilo": [
       "Cores que chamam atenção na vitrine e no seu status.",
@@ -528,6 +529,6 @@
   },
   "contagem_dia": {
     "data": "2026-11-07",
-    "n": 4
+    "n": 5
   }
 }
