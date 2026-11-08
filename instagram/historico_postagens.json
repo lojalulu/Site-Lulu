@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -54,7 +54,8 @@
       "2708869",
       "317954",
       "2049286",
-      "318143"
+      "318143",
+      "2049299"
     ],
     "avulso": [
       "3117836",
@@ -106,11 +107,11 @@
     ]
   },
   "ultimos_pilares": [
-    "conforto",
     "renda_extra",
     "lucratividade",
     "conforto",
-    "estilo"
+    "estilo",
+    "lucratividade"
   ],
   "conhecidos": {
     "kits": [
@@ -408,17 +409,17 @@
       "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛"
     ],
     "tag_kits": [
-      "Kit com cores variadas.",
       "Kit fechado — ótimo pra começar a revender.",
       "Vendido em kit fechado, cores sortidas.",
-      "Kit fechado, 5 peças, suplex vip."
+      "Kit fechado, 5 peças, suplex vip.",
+      "É kit fechado com 5 peças, em suplex vip."
     ],
     "cta_bio": [
-      "Dá uma espiada no link da bio 💗",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Link na bio 🔗",
       "Catálogo completo — link na bio ✨",
-      "Os outros modelos estão no link da bio 👆"
+      "Os outros modelos estão no link da bio 👆",
+      "Link da bio te leva direto pro catálogo 📲"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -505,14 +506,14 @@
       "Quando acaba, a próxima leva pode demorar."
     ],
     "lucratividade": [
-      "É difícil achar peça com esse preço e essa qualidade pra revender.",
       "Atacado com preço pensado pra quem revende.",
       "Preço de atacado de verdade, sem intermediário no meio.",
       "Peça que você revende pelo dobro e a cliente ainda acha justo.",
       "Compra no kit, sai mais em conta por peça, revende com lucro tranquilo.",
       "Comprando direto da fábrica, sobra mais no seu bolso em cada venda.",
       "Faz a conta: o valor por peça no kit deixa espaço pra um bom lucro.",
-      "Custo baixo por peça é o que faz a revenda valer a pena."
+      "Custo baixo por peça é o que faz a revenda valer a pena.",
+      "Quanto menor o custo, mais fácil fica competir e ainda lucrar."
     ],
     "cliente_ama": [
       "Aposta segura: modelo que agrada quase todo mundo.",
@@ -527,6 +528,6 @@
   },
   "contagem_dia": {
     "data": "2026-11-07",
-    "n": 3
+    "n": 4
   }
 }
