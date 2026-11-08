@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -56,7 +56,8 @@
       "2049286",
       "318143",
       "2049299",
-      "3405523"
+      "3405523",
+      "2816723"
     ],
     "avulso": [
       "3117836",
@@ -110,11 +111,11 @@
     ]
   },
   "ultimos_pilares": [
-    "estilo",
     "lucratividade",
     "renda_extra",
     "disponibilidade",
-    "estilo"
+    "estilo",
+    "lucratividade"
   ],
   "conhecidos": {
     "kits": [
@@ -407,22 +408,22 @@
       "Chegou lançamento! Primeira leva disponível."
     ],
     "frete_kits": [
-      "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦",
       "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦",
-      "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛"
+      "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛",
+      "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚"
     ],
     "tag_kits": [
-      "Vendido em kit fechado, cores sortidas.",
       "Kit fechado, 5 peças, suplex vip.",
       "É kit fechado com 5 peças, em suplex vip.",
-      "Vem em kit fechado de 5, tecido suplex vip."
+      "Vem em kit fechado de 5, tecido suplex vip.",
+      "Kit com cores variadas."
     ],
     "cta_bio": [
-      "Os outros modelos estão no link da bio 👆",
       "Link da bio te leva direto pro catálogo 📲",
       "Catálogo inteiro tá no link da bio 👆",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
-      "Pedido pelo site, link na bio 🛍️"
+      "Pedido pelo site, link na bio 🛍️",
+      "Catálogo completo — link na bio ✨"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -509,14 +510,14 @@
       "Esse modelo costuma acabar rápido — melhor não deixar pra depois."
     ],
     "lucratividade": [
-      "Atacado com preço pensado pra quem revende.",
       "Preço de atacado de verdade, sem intermediário no meio.",
       "Peça que você revende pelo dobro e a cliente ainda acha justo.",
       "Compra no kit, sai mais em conta por peça, revende com lucro tranquilo.",
       "Comprando direto da fábrica, sobra mais no seu bolso em cada venda.",
       "Faz a conta: o valor por peça no kit deixa espaço pra um bom lucro.",
       "Custo baixo por peça é o que faz a revenda valer a pena.",
-      "Quanto menor o custo, mais fácil fica competir e ainda lucrar."
+      "Quanto menor o custo, mais fácil fica competir e ainda lucrar.",
+      "Você define seu preço de venda — a margem fica com você."
     ],
     "cliente_ama": [
       "Aposta segura: modelo que agrada quase todo mundo.",
@@ -531,6 +532,6 @@
   },
   "contagem_dia": {
     "data": "2026-11-08",
-    "n": 2
+    "n": 3
   }
 }
