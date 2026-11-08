@@ -171,7 +171,15 @@
   "4210537",
   "318110",
   "1366446",
-  "3703562"
+  "3703562",
+  "3745068",
+  "4514241",
+  "4430515",
+  "947432",
+  "318144",
+  "402270",
+  "684178",
+  "2816717"
  ],
  "ganchos": [
   "Montar *loja online* sem marca própria é perder tempo",
@@ -190,7 +198,8 @@
   "De onde vem a *Lulu*?",
   "Modelos *novos* toda semana",
   "Dúvida de *tamanho* sem perder a venda",
-  "Suplex que *não fica transparente*"
+  "Suplex que *não fica transparente*",
+  "A margem da sua loja é você quem decide"
  ],
  "ultimo_post": "2026-11-07",
  "angulos": [
@@ -203,7 +212,8 @@
   "bastidores",
   "novidade",
   "atendimento",
-  "tecido"
+  "tecido",
+  "fq_margem"
  ],
  "formatos": [
   "classico",
@@ -215,7 +225,8 @@
   "classico",
   "pergunta",
   "rapido",
-  "vitrine"
+  "vitrine",
+  "classico"
  ],
  "musicas": [
   "upbeat-atlas.mp3",
@@ -227,8 +238,9 @@
   "upbeat-rock.mp3",
   "upbeat-atlas.mp3",
   "phonk-mountain2.mp3",
-  "phonk-solarflex.mp3"
+  "phonk-solarflex.mp3",
+  "phonk-brasileiro.mp3"
  ],
- "ultimo_post_meio": "2026-11-07",
- "contagem_meio": 4
+ "ultimo_post_meio": "2026-11-08",
+ "contagem_meio": 5
 }
