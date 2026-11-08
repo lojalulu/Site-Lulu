@@ -1,12 +1,12 @@
 {
-  "loja": "kits",
-  "produto_id": "3405523",
-  "produto_nome": "Pacote com 10 Blusa de Tule em Poliamida",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1758651718_fe7124a1b6b6feafce56.jpeg.webp",
+  "loja": "avulso",
+  "produto_id": "327794",
+  "produto_nome": "BLUSA DE NÓ POLIAMIDA REF 328",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1674759478_f2fef323fceea3cc7e62.jpeg",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "👗 Esse modelo costuma acabar rápido — melhor não deixar pra depois.\n\nSão 10 Blusa por R$ 264,90. Faz a conta de quanto sai cada peça.\n\nVem em kit fechado de 5, tecido suplex vip.\n\nVê as cores e monta seu pedido pelo link da bio 🔗\n\n#modafitnesssalvador #modafitness #rendaextra",
-  "pilar": "disponibilidade",
+  "legenda_feed": "🌸 Detalhes que fazem diferença e deixam o conjunto mais bonito.\n\nPeça avulsa premium — você monta o pedido do seu jeito.\n\nPedido pelo site, link na bio 🛍️\n\n#modafitness",
+  "pilar": "estilo",
   "eh_lancamento": false,
-  "publicar_feed": false,
-  "rodada_do_dia": 1
+  "publicar_feed": true,
+  "rodada_do_dia": 2
 }
