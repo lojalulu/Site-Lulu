@@ -179,7 +179,15 @@
   "318144",
   "402270",
   "684178",
-  "2816717"
+  "2816717",
+  "477655",
+  "449556",
+  "2049286",
+  "2708869",
+  "4485653",
+  "3552957",
+  "402269",
+  "853903"
  ],
  "ganchos": [
   "Montar *loja online* sem marca própria é perder tempo",
@@ -199,9 +207,10 @@
   "Modelos *novos* toda semana",
   "Dúvida de *tamanho* sem perder a venda",
   "Suplex que *não fica transparente*",
-  "A margem da sua loja é você quem decide"
+  "A margem da sua loja é você quem decide",
+  "Frete caro *antes*, frete grátis *depois*"
  ],
- "ultimo_post": "2026-11-07",
+ "ultimo_post": "2026-11-08",
  "angulos": [
   "frete",
   "tecido",
@@ -213,7 +222,8 @@
   "novidade",
   "atendimento",
   "tecido",
-  "fq_margem"
+  "fq_margem",
+  "frete"
  ],
  "formatos": [
   "classico",
@@ -226,7 +236,8 @@
   "pergunta",
   "rapido",
   "vitrine",
-  "classico"
+  "classico",
+  "rapido"
  ],
  "musicas": [
   "upbeat-atlas.mp3",
@@ -239,7 +250,8 @@
   "upbeat-atlas.mp3",
   "phonk-mountain2.mp3",
   "phonk-solarflex.mp3",
-  "phonk-brasileiro.mp3"
+  "phonk-brasileiro.mp3",
+  "phonk-hard.mp3"
  ],
  "ultimo_post_meio": "2026-11-08",
  "contagem_meio": 5
