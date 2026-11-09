@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -57,7 +57,8 @@
       "318143",
       "2049299",
       "3405523",
-      "2816723"
+      "2816723",
+      "3311193"
     ],
     "avulso": [
       "3117836",
@@ -112,11 +113,11 @@
     ]
   },
   "ultimos_pilares": [
-    "renda_extra",
     "disponibilidade",
     "estilo",
     "lucratividade",
-    "conforto"
+    "conforto",
+    "disponibilidade"
   ],
   "conhecidos": {
     "kits": [
@@ -409,22 +410,22 @@
       "Chegou lançamento! Primeira leva disponível."
     ],
     "frete_kits": [
-      "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦",
       "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛",
-      "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚"
+      "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚",
+      "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚"
     ],
     "tag_kits": [
-      "Kit fechado, 5 peças, suplex vip.",
       "É kit fechado com 5 peças, em suplex vip.",
       "Vem em kit fechado de 5, tecido suplex vip.",
-      "Kit com cores variadas."
+      "Kit com cores variadas.",
+      "Kit fechado — ótimo pra começar a revender."
     ],
     "cta_bio": [
-      "Link da bio te leva direto pro catálogo 📲",
       "Catálogo inteiro tá no link da bio 👆",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Pedido pelo site, link na bio 🛍️",
-      "Catálogo completo — link na bio ✨"
+      "Catálogo completo — link na bio ✨",
+      "Dá uma espiada no link da bio 💗"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -453,10 +454,10 @@
       "Frete grátis (Vip) pra Salvador e todo o Brasil 🚚"
     ],
     "preco_kits": [
-      "Hoje, {quantidade} saem por {preco}.",
       "{preco} no kit com {quantidade}.",
       "{quantidade}: {preco}.",
-      "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça."
+      "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
+      "Kit com {quantidade} por {preco}."
     ],
     "cta_alt": [
       "Manda mensagem que a gente te ajuda a montar o pedido 💬",
@@ -502,13 +503,13 @@
       "Não desbota fácil e não faz bolinha — qualidade que dura."
     ],
     "disponibilidade": [
-      "Garante o seu antes que o lote acabe.",
       "Últimas unidades desse lote — reposição não tem data certa.",
       "Esse aqui já está saindo bastante essa semana.",
       "Estoque limitado nessa leva.",
       "Ainda tem, mas não sabemos até quando.",
       "Quando acaba, a próxima leva pode demorar.",
-      "Esse modelo costuma acabar rápido — melhor não deixar pra depois."
+      "Esse modelo costuma acabar rápido — melhor não deixar pra depois.",
+      "Enquanto durar o estoque desse lote, o preço continua esse."
     ],
     "lucratividade": [
       "Preço de atacado de verdade, sem intermediário no meio.",
@@ -533,6 +534,6 @@
   },
   "contagem_dia": {
     "data": "2026-11-08",
-    "n": 4
+    "n": 5
   }
 }
