@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -111,14 +111,15 @@
       "331394",
       "327794",
       "3184622",
-      "332904"
+      "332904",
+      "4615013"
     ]
   },
   "ultimos_pilares": [
-    "lucratividade",
     "conforto",
     "disponibilidade",
     "cliente_ama",
+    "lancamento",
     "lancamento"
   ],
   "conhecidos": {
@@ -393,6 +394,7 @@
       "4555358",
       "4573060",
       "4588258",
+      "4615013",
       "875488",
       "875515",
       "875523",
@@ -409,13 +411,13 @@
   },
   "ultimas_frases": {
     "lancamento": [
-      "Modelo inédito no catálogo. Vale a pena conferir.",
       "Lançamento da semana — sai na frente e oferece antes de todo mundo.",
       "Você está entre as primeiras a ver essa peça.",
       "Novidade que acabou de entrar — primeira remessa.",
       "Novidade no catálogo, chegou agora.",
       "Chegou lançamento! Primeira leva disponível.",
-      "Peça nova no catálogo, quentinha da produção."
+      "Peça nova no catálogo, quentinha da produção.",
+      "Lançamento novinho, direto da fábrica."
     ],
     "frete_kits": [
       "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛",
@@ -442,10 +444,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Atacado de peça avulsa, a partir de 10 peças.",
       "Peça avulsa premium — você monta o pedido do seu jeito.",
       "É peça avulsa, na malha premium.",
-      "Você escolhe peça por peça (mínimo de 10 no pedido)."
+      "Você escolhe peça por peça (mínimo de 10 no pedido).",
+      "Peça avulsa, malha premium."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -468,8 +470,8 @@
       "Kit com {quantidade} por {preco}."
     ],
     "cta_alt": [
-      "Manda mensagem que a gente te ajuda a montar o pedido 💬",
-      "Me chama no direct que te passo os detalhes 💬"
+      "Me chama no direct que te passo os detalhes 💬",
+      "Chama no direct pra garantir o seu 💬"
     ],
     "conforto": [
       "Feita pra treinar, trabalhar ou só ficar em casa — confortável do mesmo jeito.",
@@ -542,6 +544,6 @@
   },
   "contagem_dia": {
     "data": "2026-11-09",
-    "n": 2
+    "n": 3
   }
 }

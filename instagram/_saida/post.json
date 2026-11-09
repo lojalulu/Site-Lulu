@@ -1,12 +1,12 @@
 {
-  "loja": "kits",
-  "produto_id": "4613760",
-  "produto_nome": "Pacote com 5 Conjunto Uv Ref 12 Poliamida",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1793827404_53a599aabdc23d24112f.webp",
+  "loja": "avulso",
+  "produto_id": "4615013",
+  "produto_nome": "BABY LOOK LISA",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1793885509_c44268a74581a589cda7.webp",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "🌸 Peça nova no catálogo, quentinha da produção.\n\nVendido em kit fechado, cores sortidas.\n\nLink na bio 🔗",
+  "legenda_feed": "💪 Lançamento novinho, direto da fábrica.\n\nPeça avulsa, malha premium.\n\nChama no direct pra garantir o seu 💬\n\n#modafitnesssalvador",
   "pilar": "lancamento",
   "eh_lancamento": true,
-  "publicar_feed": true,
-  "rodada_do_dia": 2
+  "publicar_feed": false,
+  "rodada_do_dia": 3
 }
