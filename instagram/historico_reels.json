@@ -187,7 +187,15 @@
   "4485653",
   "3552957",
   "402269",
-  "853903"
+  "853903",
+  "3249117",
+  "477630",
+  "3703565",
+  "318117",
+  "4485661",
+  "1026249",
+  "3405521",
+  "317277"
  ],
  "ganchos": [
   "Montar *loja online* sem marca própria é perder tempo",
@@ -208,7 +216,8 @@
   "Dúvida de *tamanho* sem perder a venda",
   "Suplex que *não fica transparente*",
   "A margem da sua loja é você quem decide",
-  "Frete caro *antes*, frete grátis *depois*"
+  "Frete caro *antes*, frete grátis *depois*",
+  "A *Lulu* nasceu em Salvador e cresceu em Recife"
  ],
  "ultimo_post": "2026-11-08",
  "angulos": [
@@ -223,7 +232,8 @@
   "atendimento",
   "tecido",
   "fq_margem",
-  "frete"
+  "frete",
+  "bastidores"
  ],
  "formatos": [
   "classico",
@@ -237,7 +247,8 @@
   "rapido",
   "vitrine",
   "classico",
-  "rapido"
+  "rapido",
+  "pergunta"
  ],
  "musicas": [
   "upbeat-atlas.mp3",
@@ -251,8 +262,9 @@
   "phonk-mountain2.mp3",
   "phonk-solarflex.mp3",
   "phonk-brasileiro.mp3",
-  "phonk-hard.mp3"
+  "phonk-hard.mp3",
+  "upbeat-rock.mp3"
  ],
- "ultimo_post_meio": "2026-11-08",
- "contagem_meio": 5
+ "ultimo_post_meio": "2026-11-09",
+ "contagem_meio": 6
 }
