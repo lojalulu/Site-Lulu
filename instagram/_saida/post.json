@@ -1,12 +1,12 @@
 {
-  "loja": "avulso",
-  "produto_id": "332904",
-  "produto_nome": "LEGGING LISA CADARÇO POLIAMIDA REF 023",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1747770651_e53122da674e98f0e239.jpeg.webp",
+  "loja": "kits",
+  "produto_id": "4613760",
+  "produto_nome": "Pacote com 5 Conjunto Uv Ref 12 Poliamida",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1793827404_53a599aabdc23d24112f.webp",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "⭐ Veste bem em corpos diferentes, por isso quase não tem troca.\n\nVocê escolhe peça por peça (mínimo de 10 no pedido).\n\nOs outros modelos estão no link da bio 👆",
-  "pilar": "cliente_ama",
-  "eh_lancamento": false,
-  "publicar_feed": false,
-  "rodada_do_dia": 1
+  "legenda_feed": "🌸 Peça nova no catálogo, quentinha da produção.\n\nVendido em kit fechado, cores sortidas.\n\nLink na bio 🔗",
+  "pilar": "lancamento",
+  "eh_lancamento": true,
+  "publicar_feed": true,
+  "rodada_do_dia": 2
 }
