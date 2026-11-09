@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -109,15 +109,16 @@
       "331414",
       "331394",
       "327794",
-      "3184622"
+      "3184622",
+      "332904"
     ]
   },
   "ultimos_pilares": [
-    "disponibilidade",
     "estilo",
     "lucratividade",
     "conforto",
-    "disponibilidade"
+    "disponibilidade",
+    "cliente_ama"
   ],
   "conhecidos": {
     "kits": [
@@ -421,11 +422,11 @@
       "Kit fechado — ótimo pra começar a revender."
     ],
     "cta_bio": [
-      "Catálogo inteiro tá no link da bio 👆",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Pedido pelo site, link na bio 🛍️",
       "Catálogo completo — link na bio ✨",
-      "Dá uma espiada no link da bio 💗"
+      "Dá uma espiada no link da bio 💗",
+      "Os outros modelos estão no link da bio 👆"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -434,10 +435,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Vendida avulsa, sem precisar levar kit fechado.",
       "Atacado de peça avulsa, a partir de 10 peças.",
       "Peça avulsa premium — você monta o pedido do seu jeito.",
-      "É peça avulsa, na malha premium."
+      "É peça avulsa, na malha premium.",
+      "Você escolhe peça por peça (mínimo de 10 no pedido)."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -522,18 +523,18 @@
       "Você define seu preço de venda — a margem fica com você."
     ],
     "cliente_ama": [
-      "Aposta segura: modelo que agrada quase todo mundo.",
       "É o tipo de peça que a cliente compra uma e depois volta pra levar mais duas.",
       "Peça que valoriza o corpo sem apertar. Cliente satisfeita volta.",
       "Peça que vira queridinha na primeira leva — cliente ama e indica pra amiga.",
       "Esse modelo costuma ter muita recompra.",
       "Cliente gosta de peça que dá pra usar muito — essa é assim.",
       "Quem comprou elogiou o caimento — e caimento bom é venda garantida.",
-      "Sua cliente vai amar essa modelagem — e voltar pra pedir mais."
+      "Sua cliente vai amar essa modelagem — e voltar pra pedir mais.",
+      "Veste bem em corpos diferentes, por isso quase não tem troca."
     ]
   },
   "contagem_dia": {
-    "data": "2026-11-08",
-    "n": 5
+    "data": "2026-11-09",
+    "n": 1
   }
 }
