@@ -1,12 +1,12 @@
 {
-  "loja": "avulso",
-  "produto_id": "3340284",
-  "produto_nome": "LEGGING DE BOLSO CANELADA GG",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1777379964_91c83a01bf6d7b7f4641.webp",
+  "loja": "kits",
+  "produto_id": "4613751",
+  "produto_nome": "Pacote com 5 Casacos Ref 02 Poliamida Uv",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1793827294_a5b64c1ba424c0f5c611.webp",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "👗 Combina com tênis, sandália ou papete — serve pra tudo.\n\nVendida avulsa, sem precisar levar kit fechado.\n\nPedido pelo site, link na bio 🛍️",
-  "pilar": "estilo",
-  "eh_lancamento": false,
-  "publicar_feed": true,
-  "rodada_do_dia": 2
+  "legenda_feed": "⭐ Modelo inédito no catálogo. Vale a pena conferir.\n\nA partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦\n\nÉ kit fechado com 5 peças, em suplex vip.\n\nCatálogo completo — link na bio ✨\n\n#modafitness #modafitnessevangelica #modafitnesssalvador",
+  "pilar": "lancamento",
+  "eh_lancamento": true,
+  "publicar_feed": false,
+  "rodada_do_dia": 3
 }
