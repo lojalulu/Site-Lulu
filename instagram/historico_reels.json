@@ -203,7 +203,15 @@
   "4613751",
   "3769158",
   "318146",
-  "4430502"
+  "4430502",
+  "4364027",
+  "3405523",
+  "570213",
+  "853848",
+  "317284",
+  "3745064",
+  "3555118",
+  "318147"
  ],
  "ganchos": [
   "Montar *loja online* sem marca própria é perder tempo",
@@ -226,7 +234,8 @@
   "A margem da sua loja é você quem decide",
   "Frete caro *antes*, frete grátis *depois*",
   "A *Lulu* nasceu em Salvador e cresceu em Recife",
-  "Seu primeiro pedido de revenda pode ser simples assim"
+  "Seu primeiro pedido de revenda pode ser simples assim",
+  "Acham que revender fitness pede muito dinheiro. Será?"
  ],
  "ultimo_post": "2026-11-09",
  "angulos": [
@@ -243,7 +252,8 @@
   "fq_margem",
   "frete",
   "bastidores",
-  "comecar"
+  "comecar",
+  "mito"
  ],
  "formatos": [
   "classico",
@@ -259,7 +269,8 @@
   "classico",
   "rapido",
   "pergunta",
-  "classico"
+  "classico",
+  "rapido"
  ],
  "musicas": [
   "upbeat-atlas.mp3",
@@ -275,8 +286,9 @@
   "phonk-brasileiro.mp3",
   "phonk-hard.mp3",
   "upbeat-rock.mp3",
-  "upbeat-atlas.mp3"
+  "upbeat-atlas.mp3",
+  "lofi-reel.mp3"
  ],
- "ultimo_post_meio": "2026-11-09",
- "contagem_meio": 6
+ "ultimo_post_meio": "2026-11-10",
+ "contagem_meio": 7
 }
