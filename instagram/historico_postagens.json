@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -62,7 +62,8 @@
       "4613760",
       "3378707",
       "4613751",
-      "318146"
+      "318146",
+      "684193"
     ],
     "avulso": [
       "3117836",
@@ -122,11 +123,11 @@
     ]
   },
   "ultimos_pilares": [
-    "estilo",
     "lancamento",
     "conforto",
     "lucratividade",
-    "estilo"
+    "estilo",
+    "renda_extra"
   ],
   "conhecidos": {
     "kits": [
@@ -428,17 +429,17 @@
       "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦"
     ],
     "tag_kits": [
-      "Vendido em kit fechado, cores sortidas.",
       "Kit fechado, 5 peças, suplex vip.",
       "É kit fechado com 5 peças, em suplex vip.",
-      "Kit com cores variadas."
+      "Kit com cores variadas.",
+      "Vem em kit fechado de 5, tecido suplex vip."
     ],
     "cta_bio": [
-      "Link da bio te leva direto pro catálogo 📲",
       "Pedido pelo site, link na bio 🛍️",
       "Catálogo completo — link na bio ✨",
       "Catálogo inteiro tá no link da bio 👆",
-      "Dá uma espiada no link da bio 💗"
+      "Dá uma espiada no link da bio 💗",
+      "Link na bio 🔗"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -487,14 +488,14 @@
       "Cós que não enrola e não aperta a barriga."
     ],
     "renda_extra": [
-      "Muita revendedora começou com um kit só e hoje compra todo mês.",
       "Se você revende moda fitness, essa é a peça que sai rápido.",
       "Quem revende sabe: peça boa e barata é lucro certo no fim do mês.",
       "Revender moda fitness é bom porque a cliente sempre volta pra comprar mais.",
       "Peça que você posta no status e já aparece gente perguntando o preço.",
       "Pra quem vende no WhatsApp ou no Instagram, essa peça ajuda a fechar pedido.",
       "Essa entra no pedido e sai do seu estoque rapidinho.",
-      "Quer começar a revender? Esse é o tipo de peça que facilita."
+      "Quer começar a revender? Esse é o tipo de peça que facilita.",
+      "Se o objetivo é aumentar a renda, começa pelo que vende fácil."
     ],
     "estilo": [
       "Tem cara de peça cara, mas com preço de atacado.",
@@ -547,6 +548,6 @@
   },
   "contagem_dia": {
     "data": "2026-11-11",
-    "n": 2
+    "n": 3
   }
 }
