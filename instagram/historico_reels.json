@@ -219,7 +219,15 @@
   "477632",
   "4613760",
   "2632922",
-  "2816743"
+  "2816743",
+  "1366405",
+  "947443",
+  "3378713",
+  "4430512",
+  "2049299",
+  "3950005",
+  "684180",
+  "3874845"
  ],
  "ganchos": [
   "Montar *loja online* sem marca própria é perder tempo",
@@ -244,9 +252,10 @@
   "A *Lulu* nasceu em Salvador e cresceu em Recife",
   "Seu primeiro pedido de revenda pode ser simples assim",
   "Acham que revender fitness pede muito dinheiro. Será?",
-  "Revendedora do Nordeste, o catálogo da Lulu muda toda semana."
+  "Revendedora do Nordeste, o catálogo da Lulu muda toda semana.",
+  "São *5 peças plus size* em um kit"
  ],
- "ultimo_post": "2026-11-10",
+ "ultimo_post": "2026-11-11",
  "angulos": [
   "frete",
   "tecido",
@@ -263,7 +272,8 @@
   "bastidores",
   "comecar",
   "mito",
-  "novidade"
+  "novidade",
+  "plus"
  ],
  "formatos": [
   "classico",
@@ -281,7 +291,8 @@
   "pergunta",
   "classico",
   "rapido",
-  "pergunta"
+  "pergunta",
+  "classico"
  ],
  "musicas": [
   "upbeat-atlas.mp3",
@@ -299,7 +310,8 @@
   "upbeat-rock.mp3",
   "upbeat-atlas.mp3",
   "lofi-reel.mp3",
-  "upbeat-alex.mp3"
+  "upbeat-alex.mp3",
+  "phonk-mountain.mp3"
  ],
  "ultimo_post_meio": "2026-11-10",
  "contagem_meio": 7
