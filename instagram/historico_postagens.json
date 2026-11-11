@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -117,15 +117,16 @@
       "332904",
       "4615013",
       "3340284",
-      "875534"
+      "875534",
+      "333277"
     ]
   },
   "ultimos_pilares": [
-    "lancamento",
     "estilo",
     "lancamento",
     "conforto",
-    "lucratividade"
+    "lucratividade",
+    "estilo"
   ],
   "conhecidos": {
     "kits": [
@@ -433,11 +434,11 @@
       "Kit com cores variadas."
     ],
     "cta_bio": [
-      "Link na bio 🔗",
       "Link da bio te leva direto pro catálogo 📲",
       "Pedido pelo site, link na bio 🛍️",
       "Catálogo completo — link na bio ✨",
-      "Catálogo inteiro tá no link da bio 👆"
+      "Catálogo inteiro tá no link da bio 👆",
+      "Dá uma espiada no link da bio 💗"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -446,10 +447,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Você escolhe peça por peça (mínimo de 10 no pedido).",
       "Peça avulsa, malha premium.",
       "Vendida avulsa, sem precisar levar kit fechado.",
-      "Atacado de peça avulsa, a partir de 10 peças."
+      "Atacado de peça avulsa, a partir de 10 peças.",
+      "É peça avulsa, na malha premium."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -496,14 +497,14 @@
       "Quer começar a revender? Esse é o tipo de peça que facilita."
     ],
     "estilo": [
-      "Modelo que não sai de moda de uma estação pra outra.",
       "Tem cara de peça cara, mas com preço de atacado.",
       "Sai da academia e já segue o dia sem trocar de roupa.",
       "Bonita no treino e bonita na rua também.",
       "Aquele visual que a cliente vê no feed e já quer pro guarda-roupa.",
       "Peça que fica linda na foto — ajuda muito na hora de divulgar.",
       "Detalhes que fazem diferença e deixam o conjunto mais bonito.",
-      "Combina com tênis, sandália ou papete — serve pra tudo."
+      "Combina com tênis, sandália ou papete — serve pra tudo.",
+      "Visual arrumado sem esforço nenhum."
     ],
     "qualidade_kits": [
       "Suplex vip que segura bem e não deixa marquinha.",
@@ -546,6 +547,6 @@
   },
   "contagem_dia": {
     "data": "2026-11-11",
-    "n": 1
+    "n": 2
   }
 }
