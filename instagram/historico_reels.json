@@ -235,7 +235,15 @@
   "3769137",
   "3724372",
   "906628",
-  "2049307"
+  "2049307",
+  "4613760",
+  "4613751",
+  "3378707",
+  "3555110",
+  "2107380",
+  "1139922",
+  "2816699",
+  "4430522"
  ],
  "ganchos": [
   "Montar *loja online* sem marca própria é perder tempo",
@@ -262,9 +270,10 @@
   "Acham que revender fitness pede muito dinheiro. Será?",
   "Revendedora do Nordeste, o catálogo da Lulu muda toda semana.",
   "São *5 peças plus size* em um kit",
-  "O *detalhe* que muda a foto do conjunto"
+  "O *detalhe* que muda a foto do conjunto",
+  "Cansada de pagar frete caro no atacado?"
  ],
- "ultimo_post": "2026-11-11",
+ "ultimo_post": "2026-11-12",
  "angulos": [
   "frete",
   "tecido",
@@ -283,7 +292,8 @@
   "mito",
   "novidade",
   "plus",
-  "dica_vitrine"
+  "dica_vitrine",
+  "frete"
  ],
  "formatos": [
   "classico",
@@ -303,7 +313,8 @@
   "rapido",
   "pergunta",
   "classico",
-  "rapido"
+  "rapido",
+  "pergunta"
  ],
  "musicas": [
   "upbeat-atlas.mp3",
@@ -323,7 +334,8 @@
   "lofi-reel.mp3",
   "upbeat-alex.mp3",
   "phonk-mountain.mp3",
-  "phonk-subclair.mp3"
+  "phonk-subclair.mp3",
+  "phonk-instrumental.mp3"
  ],
  "ultimo_post_meio": "2026-11-12",
  "contagem_meio": 8
