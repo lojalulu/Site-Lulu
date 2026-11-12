@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -119,15 +119,16 @@
       "4615013",
       "3340284",
       "875534",
-      "333277"
+      "333277",
+      "2488494"
     ]
   },
   "ultimos_pilares": [
-    "lancamento",
     "conforto",
     "lucratividade",
     "estilo",
-    "renda_extra"
+    "renda_extra",
+    "disponibilidade"
   ],
   "conhecidos": {
     "kits": [
@@ -448,10 +449,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Peça avulsa, malha premium.",
       "Vendida avulsa, sem precisar levar kit fechado.",
       "Atacado de peça avulsa, a partir de 10 peças.",
-      "É peça avulsa, na malha premium."
+      "É peça avulsa, na malha premium.",
+      "Peça avulsa premium — você monta o pedido do seu jeito."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -463,9 +464,9 @@
       "Peça avulsa com malha premium: acabamento caprichado, preço de atacado."
     ],
     "frete_avulso": [
-      "Pedido de peça avulsa com frete grátis (Vip) 📦",
       "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦",
-      "Frete grátis (Vip) pra Salvador e todo o Brasil 🚚"
+      "Frete grátis (Vip) pra Salvador e todo o Brasil 🚚",
+      "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚"
     ],
     "preco_kits": [
       "{quantidade}: {preco}.",
@@ -474,8 +475,8 @@
       "{quantidade} - só {preco}."
     ],
     "cta_alt": [
-      "Chama no direct pra garantir o seu 💬",
-      "Manda mensagem que a gente te ajuda a montar o pedido 💬"
+      "Manda mensagem que a gente te ajuda a montar o pedido 💬",
+      "Me chama no direct que te passo os detalhes 💬"
     ],
     "conforto": [
       "Malha que acompanha o corpo sem apertar — conforto o dia inteiro.",
@@ -517,13 +518,13 @@
       "Não desbota fácil e não faz bolinha — qualidade que dura."
     ],
     "disponibilidade": [
-      "Últimas unidades desse lote — reposição não tem data certa.",
       "Esse aqui já está saindo bastante essa semana.",
       "Estoque limitado nessa leva.",
       "Ainda tem, mas não sabemos até quando.",
       "Quando acaba, a próxima leva pode demorar.",
       "Esse modelo costuma acabar rápido — melhor não deixar pra depois.",
-      "Enquanto durar o estoque desse lote, o preço continua esse."
+      "Enquanto durar o estoque desse lote, o preço continua esse.",
+      "Poucas peças disponíveis por enquanto."
     ],
     "lucratividade": [
       "Peça que você revende pelo dobro e a cliente ainda acha justo.",
@@ -547,7 +548,7 @@
     ]
   },
   "contagem_dia": {
-    "data": "2026-11-11",
-    "n": 3
+    "data": "2026-11-12",
+    "n": 1
   }
 }
