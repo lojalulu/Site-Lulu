@@ -259,7 +259,7 @@ def montar_feed(formato, produto, hist, produtos_kits, novidades_livres, lancs):
         feitos.append(tema)
         hist["temas_info"] = feitos[-12:]
         info = car.TEMAS_INFO[tema]
-        kits = kits_para_vitrine(hist, produtos_kits, 4)
+        kits = kits_para_vitrine(hist, produtos_kits, 7)
         fotos = []
         for p in kits:
             try:
@@ -270,7 +270,7 @@ def montar_feed(formato, produto, hist, produtos_kits, novidades_livres, lancs):
             return None
         grava(car.slide_capa(fotos[0], *info["capa"]))
         for k, (tit, txt) in enumerate(info["passos"], 1):
-            grava(car.slide_info(k, tit, txt, fotos[k % len(fotos)]))
+            grava(car.slide_info(k, tit, txt, [fotos[(2 * k - 1) % len(fotos)], fotos[(2 * k) % len(fotos)]] if len(fotos) > 1 else fotos))
         grava(car.slide_final(fotos[1:4] or fotos))
         ids = [p["id"] for p in kits[:len(fotos)]]
         legenda = _fechar(list(info["legenda"]))
