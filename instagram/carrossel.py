@@ -179,11 +179,17 @@ def slide_info(numero, titulo, texto, foto=None):
     """Texto em cima (grande, fácil de ler no celular) e foto do catálogo embaixo."""
     img = Image.new("RGB", (W, H), FUNDO)
     topo = 130
-    if foto is not None:  # foto embaixo, corte pelo alto (mostra a modelo, não só o tronco)
-        card = ImageOps.fit(foto, (W - 120, 500), method=Image.LANCZOS, centering=(0.5, 0.12))
-        m = Image.new("L", card.size, 0)
-        ImageDraw.Draw(m).rounded_rectangle((0, 0, card.width - 1, card.height - 1), radius=44, fill=255)
-        img.paste(card, (60, H - 130 - 500), m)
+    fotos = [f for f in (foto if isinstance(foto, (list, tuple)) else [foto]) if f is not None][:2]
+    if fotos:  # foto(s) INTEIRAS embaixo (sem cortar cabeça nem sobrar parede de estúdio)
+        n = len(fotos)
+        larg = (W - 120 - 30 * (n - 1)) // n
+        for i, f in enumerate(fotos):
+            card = ImageOps.contain(f, (larg, 520), method=Image.LANCZOS)
+            m = Image.new("L", card.size, 0)
+            ImageDraw.Draw(m).rounded_rectangle((0, 0, card.width - 1, card.height - 1), radius=36, fill=255)
+            x = 60 + i * (larg + 30) + (larg - card.width) // 2
+            img.paste(card, (x, H - 130 - card.height), m)
+    foto = fotos or None
     d = ImageDraw.Draw(img)
     _marca(d, ROSA)
     if numero:

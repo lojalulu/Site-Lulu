@@ -193,6 +193,14 @@ class BlocoTexto:
         self.selo_pos = ((L - self.selo_img.width) // 2 - 20, y + 36) if self.selo_img else None
         self.topo, self.base = topo, topo + total
 
+    def mover(self, y_centro):
+        """Reposiciona o bloco inteiro (ex.: tirar o gancho de cima do rosto)."""
+        dy = int(y_centro - (self.topo + self.base) / 2)
+        self.pos = [(x, y + dy) for x, y in self.pos]
+        if self.selo_pos:
+            self.selo_pos = (self.selo_pos[0], self.selo_pos[1] + dy)
+        self.topo, self.base = self.topo + dy, self.base + dy
+
     @staticmethod
     def _selo(texto):
         f = fonte(44)
@@ -362,7 +370,27 @@ class QuadroFoto(Quadro):
         x, y, z = self._caixa_camera(t)
         return self.base.resize((L, A), Image.BILINEAR, box=(x, y, x + L / z, y + A / z))
 
-    def zonas_rosto(self):
+    def tirar_texto_do_rosto(self):
+        """Gancho em cima do rosto da modelo? Desce (ou sobe) o texto pra área livre mais próxima."""
+        if self.bloco is None:
+            return
+        rostos_ = self.zonas_rosto(so_detectados=True)
+        if not rostos_:
+            return
+        h = self.bloco.base - self.bloco.topo
+        caixa = (0, self.bloco.topo, L, self.bloco.base)
+        if not any(visao._inter(caixa, z) for z in rostos_):
+            return
+        baixo = max(z[3] for z in rostos_) + 30 + h / 2
+        cima = min(z[1] for z in rostos_) - 30 - h / 2
+        if baixo + h / 2 <= SEGURO_BASE - 40:
+            self.bloco.mover(baixo)
+        elif cima - h / 2 >= SEGURO_TOPO:
+            self.bloco.mover(cima)
+        else:
+            self.bloco.mover(min(SEGURO_BASE - 40 - h / 2, baixo))
+
+    def zonas_rosto(self, so_detectados=False):
         """Zonas (coordenadas da TELA, já com o movimento de câmera) onde há rosto."""
         zonas = []
         for foto, (rx0, ry0, rx1, ry1), (esc, ox, oy) in self.regioes:
@@ -376,7 +404,7 @@ class QuadroFoto(Quadro):
                     zx1, zy1 = min(rx1, b[2] * esc - ox), min(ry1, b[3] * esc - oy)
                     if zx1 > zx0 and zy1 > zy0:
                         zonas.append((zx0, zy0, zx1, zy1))
-            else:  # sem detector ou nenhum rosto achado: evita o alto-centro da foto (cabeça provável)
+            elif not so_detectados:  # sem detector ou nenhum rosto achado: evita o alto-centro da foto (cabeça provável)
                 rw, rh = rx1 - rx0, ry1 - ry0
                 zonas.append((rx0 + rw * 0.2, ry0, rx1 - rw * 0.2, ry0 + rh * 0.36))
         tela = []
@@ -866,6 +894,9 @@ def adicionar_retencao(quadros, compartilhar=None):
     """Pílulas: teaser logo no começo, uma antes do 1º quadro de valor e (às vezes) o pedido de envio
     no último quadro de foto antes da chamada final."""
     fotos = [q for q in quadros if isinstance(q, QuadroFoto)]
+    for q in fotos:
+        if q.gancho:
+            q.tirar_texto_do_rosto()
     if len(quadros) >= 5 and isinstance(quadros[1], QuadroFoto) and quadros[1].bloco is None:
         _dar_tempo(quadros[1], random.choice(TEASERS))
     valor = next((q for q in fotos[1:] if q.bloco is not None and not q.gancho), None)

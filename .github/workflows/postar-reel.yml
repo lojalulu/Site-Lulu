@@ -79,7 +79,7 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg
-          pip install requests Pillow edge-tts gTTS opencv-python-headless
+          pip install requests Pillow edge-tts gTTS "opencv-python-headless<5"
 
       - name: Montar e publicar o Reel
         env:
