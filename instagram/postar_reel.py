@@ -92,10 +92,11 @@ def tempo_leitura(txt, minimo=3.2, base=1.3, por_palavra=0.34):
     return min(7.5, max(minimo, base + por_palavra * palavras(txt)))
 
 
-def cobrir(img, w, h):
+def cobrir(img, w, h, fy=0.5):
+    """Preenche w x h cortando o excesso; fy < 0.5 guarda mais o ALTO da foto (cabeça da modelo)."""
     esc = max(w / img.width, h / img.height)
     im = img.resize((int(img.width * esc) + 1, int(img.height * esc) + 1), Image.LANCZOS)
-    x, y = (im.width - w) // 2, (im.height - h) // 2
+    x, y = (im.width - w) // 2, int((im.height - h) * fy)
     return im.crop((x, y, x + w, y + h))
 
 
@@ -104,9 +105,9 @@ def fundo_borrado(foto, escurecer=0.4):
     return Image.blend(f, Image.new("RGB", (L, A), AMEIXA), escurecer)
 
 
-def cartao(foto, w, h, raio=46):
+def cartao(foto, w, h, raio=46, fy=0.5):
     """Foto recortada em cartão arredondado, com sombra suave (RGBA já com sombra)."""
-    im = cobrir(foto, w, h).convert("RGBA")
+    im = cobrir(foto, w, h, fy).convert("RGBA")
     mask = Image.new("L", (w, h), 0)
     ImageDraw.Draw(mask).rounded_rectangle((0, 0, w - 1, h - 1), radius=raio, fill=255)
     im.putalpha(mask)
@@ -288,10 +289,10 @@ def rostos_da_foto(foto):
     return _ROSTOS[k]
 
 
-def mapa_cobrir(foto, w, h):
+def mapa_cobrir(foto, w, h, fy=0.5):
     """Como cobrir() coloca a foto num retângulo w x h: (escala, corte_x, corte_y)."""
     esc = max(w / foto.width, h / foto.height)
-    return esc, (int(foto.width * esc) + 1 - w) // 2, (int(foto.height * esc) + 1 - h) // 2
+    return esc, (int(foto.width * esc) + 1 - w) // 2, int((int(foto.height * esc) + 1 - h) * fy)
 
 
 class QuadroFoto(Quadro):
@@ -333,10 +334,10 @@ class QuadroFoto(Quadro):
         else:  # duo
             fundo = fundo_borrado(fotos[0], 0.55).convert("RGBA")
             for i, ft in enumerate(fotos[:2]):
-                card, pad = cartao(ft, 940, 700, 42)
+                card, pad = cartao(ft, 940, 700, 42, fy=0.25)  # corte pelo alto: aparece o rosto, não só o tronco
                 cx, cy = (L - card.width) // 2, 250 + i * 730 - pad
                 fundo.alpha_composite(card, (cx, cy))
-                esc, ex, ey = mapa_cobrir(ft, 940, 700)
+                esc, ex, ey = mapa_cobrir(ft, 940, 700, fy=0.25)
                 self.regioes.append((ft, (cx + pad, cy + pad, cx + pad + 940, cy + pad + 700), (esc, ex - cx - pad, ey - cy - pad)))
             fundo = fundo.convert("RGB")
         if escuro:
