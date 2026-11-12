@@ -42,12 +42,15 @@ def _checar_erro(resp: requests.Response, contexto: str):
         raise RuntimeError(f"Erro em {contexto}: {resp.status_code} — {resp.text}")
 
 
-def criar_container(image_url: str, media_type: str = None, caption: str = None) -> str:
-    params = {"image_url": image_url, "access_token": ACCESS_TOKEN}
+def criar_container(image_url: str = None, media_type: str = None, caption: str = None, **extra) -> str:
+    params = {"access_token": ACCESS_TOKEN}
+    if image_url:
+        params["image_url"] = image_url
     if media_type:
         params["media_type"] = media_type
     if caption:
         params["caption"] = caption
+    params.update({k: v for k, v in extra.items() if v is not None})
     resp = requests.post(f"{GRAPH_BASE}/{IG_USER_ID}/media", data=params, timeout=30)
     _checar_erro(resp, "criar container")
     return resp.json()["id"]
@@ -89,6 +92,19 @@ def publicar(creation_id: str) -> str:
     _checar_erro(resp, "publicar")
 
 
+def publicar_carrossel(caminhos, legenda) -> str:
+    """Carrossel (2 a 10 lâminas JPEG 4:5 hospedadas no repositório)."""
+    filhos = []
+    for c in caminhos[:10]:
+        cid = criar_container(url_bruta_da_imagem_no_github(c), is_carousel_item="true")
+        filhos.append(cid)
+    for cid in filhos:
+        esperar_pronto(cid)
+    pai = criar_container(media_type="CAROUSEL", caption=legenda, children=",".join(filhos))
+    esperar_pronto(pai, tentativas=20)
+    return publicar(pai)
+
+
 def main():
     if not ACCESS_TOKEN or not IG_USER_ID:
         print("ERRO: faltam os segredos INSTAGRAM_ACCESS_TOKEN / INSTAGRAM_BUSINESS_ID.")
@@ -108,14 +124,25 @@ def main():
     else:
         try:
             print("Criando post do feed...")
-            if post.get("feed_img_repo_path"):
+            if post.get("carrossel"):
+                try:
+                    id_feed = publicar_carrossel(post["carrossel"], post["legenda_feed"])
+                    print(f"Carrossel publicado ({post.get('formato_feed')}, {len(post['carrossel'])} lâminas): {id_feed}")
+                    post["_feito"] = True
+                except Exception as e:  # noqa: BLE001
+                    print(f"CARROSSEL FALHOU ({e}); publicando a foto única do kit no lugar.")
+            if post.get("_feito"):
+                pass
+            elif post.get("feed_img_repo_path"):
                 url_feed = url_bruta_da_imagem_no_github(post["feed_img_repo_path"])
             else:
                 url_feed = post["foto_feed_url"]
-            container_feed = criar_container(url_feed, caption=post["legenda_feed"])
-            esperar_pronto(container_feed)
-            id_feed = publicar(container_feed)
-            print(f"Feed publicado: {id_feed}")
+            if not post.get("_feito"):
+                legenda = post["legenda_feed"] if not post.get("carrossel") else post.get("legenda_reserva", post["legenda_feed"])
+                container_feed = criar_container(url_feed, caption=legenda)
+                esperar_pronto(container_feed)
+                id_feed = publicar(container_feed)
+                print(f"Feed publicado: {id_feed}")
         except Exception as e:
             print(f"FEED FALHOU: {e}")
             falhas.append(f"feed: {e}")
