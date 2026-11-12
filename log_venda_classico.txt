@@ -1,0 +1,14 @@
+Slot: noite | modo: venda
+Catálogo: kits | 8 fotos | novidades no vídeo: 3 | detector de rosto: ok
+  revisão: aprovado=False | clareza=5 | O gancho atual é uma pergunta que só faz sentido para quem já conhece o 'teste do agachamento' e o contexto de revenda; uma mulher de Salvad
+  laboratório tentativa 1 falhou: gancho fora do tamanho
+  revisão: aprovado=False | clareza=4 | O gancho atual é uma pergunta direta e faz sentido sozinho, mas usa um termo entre asteriscos e um conceito ('teste do agachamento') que pod
+Laboratório (DeepSeek, venda, Tecido que segura / benefício direto): Você tem medo de vender kit fitness que fica transparente?
+Briefing: {"pilar": "Tecido que segura", "angulo": "tecido", "mecanismo": "benefício direto", "gancho": "Você tem medo de vender kit fitness que fica transparente?", "quadros": ["Nos kits em suplex e poliamida, a peça não fica transparente no movimento.", "São kits prontos de 5 peças, com cores variadas, direto da fábrica."], "cta": "Comenta QUERO que o catálogo chega no seu Direct", "selo": "COMENTA QUERO", "legenda": "Ela agacha sem medo? A resposta está no tecido. Suplex e poliamida seguram a transparência no movimento. Kits prontos de 5 peças no atacado, direto da fábrica. 👖✨\n\nComenta QUERO aqui embaixo que eu te mando o catálogo completo no Direct 💗", "hashtags": ["#modafitness", "#atacadofitness", "#revendafitness", "#suplex", "#poliamida", "#salvador", "#nordeste"]}
+Narração: True | compartilhar: -
+Voz (edge-tts): 4.1s — Você tem medo de vender kit fitness que fica trans
+Voz (edge-tts): 5.3s — Nos kits em suplex e poliamida, a peça não fica tr
+Voz (edge-tts): 5.2s — São kits prontos de 5 peças, com cores variadas, d
+Voz (edge-tts): 3.6s — Comenta QUERO que o catálogo chega no seu Direct
+Formato: classico | Música: instagram/musicas/phonk-solarflex.mp3 | 9 quadros | 31.6s | narrado: True | transições: ['esq', 'zoom', 'esq', 'zoom', 'cima', 'esq', 'fade', 'fade', 'fade']
+Vídeo pronto: instagram/_saida/reel.mp4 (6.2 MB)

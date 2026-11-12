@@ -1,0 +1,17 @@
+Slot: noite | modo: venda
+Catálogo: kits | 8 fotos | novidades no vídeo: 3 | detector de rosto: ok
+  revisão: aprovado=True | clareza=5 | Gancho é pergunta direta, com verbo, fala com uma pessoa de Salvador e diz claramente do que se trata (revender fitness). Os quadros entrega
+  laboratório tentativa 1 falhou: quadros fora do tamanho
+  revisão: aprovado=False | clareza=5 | O gancho é um fragmento sem verbo e sem sentido sozinho: 'Mora em Salvador e revende fitness? São 6 kits' — a segunda parte ('São 6 kits') f
+  laboratório tentativa 2 falhou: gancho fora do tamanho
+  revisão: aprovado=False | clareza=5 | O gancho atual começa com 'Mora em Salvador e revende fitness?' — é uma pergunta que funciona, mas o teste do desconhecido falha parcialment
+  laboratório tentativa 3 falhou: gancho fora do tamanho
+Laboratório (banco reserva, venda, Mora em Salvador): Mora em *Salvador* e revende moda fitness?
+Briefing: {"pilar": "Mora em Salvador", "angulo": "salvador", "mecanismo": "reserva", "gancho": "Mora em *Salvador* e revende moda fitness?", "quadros": ["A Lulu nasceu aqui, e a partir de 6 kits o frete Vip é grátis.", "5 Conjuntos por R$ 200,90, com cores variadas em cada kit."], "cta": "Comenta QUERO que o catálogo chega no seu Direct", "selo": "COMENTA QUERO", "legenda": "A Lulu nasceu aqui, e a partir de 6 kits o frete Vip é grátis. 5 Conjuntos por R$ 200,90, com cores variadas em cada kit.\n\nComenta QUERO aqui embaixo que eu te mando o catálogo completo no Direct 💗", "hashtags": ["#modafitness", "#atacadofitness", "#revendedora", "#modafitnesssalvador", "#lulumodafitness", "#roupafitness", "#nordeste"]}
+Narração: True | compartilhar: ENVIA PRA AMIGA QUE QUER COMEÇAR A REVENDER
+Voz (edge-tts): 3.3s — Mora em Salvador e revende moda fitness?
+Voz (edge-tts): 5.0s — A Lulu nasceu aqui, e a partir de 6 kits o frete V
+Voz (edge-tts): 6.0s — 5 Conjuntos por 200 reais e 90 centavos, com cores
+Voz (edge-tts): 3.6s — Comenta QUERO que o catálogo chega no seu Direct
+Formato: vitrine | Música: instagram/musicas/phonk-mountain2.mp3 | 9 quadros | 31.9s | narrado: True | transições: ['fade', 'zoom', 'esq', 'esq', 'fade', 'zoom', 'zoom', 'fade', 'fade']
+Vídeo pronto: instagram/_saida/reel.mp4 (5.3 MB)
