@@ -35,6 +35,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageChops
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from imagem_story import _carregar_fonte  # noqa: E402  (Baloo 2 com fallback)
 import reel_lab  # noqa: E402
+import visao  # noqa: E402  (rostos e bordas: etiqueta nunca em cima do rosto)
 from conteudo import rotulo_kit  # noqa: E402
 
 L, A = 1080, 1920
@@ -42,7 +43,12 @@ FPS = 30
 FADE = 0.45            # duração das transições
 DUR_FOTO = (2.0, 2.6)  # quadros só de foto
 DUR_PRECO = 3.8        # quadro com etiqueta de preço: dá tempo de ler (nunca menos que isso)
-ESC_ETIQUETA = 1.3     # etiqueta de preço maior no vídeo
+ESC_ETIQUETA = 1.15    # etiqueta de preço (12/11: um pouco menor; cai p/ 1.0 e 0.85 se não achar canto livre)
+ESC_ETIQUETA_MIN = (1.0, 0.85)
+MARGEM = 36            # distância da etiqueta até a borda da tela
+# zona segura do Reel: o Instagram cobre o topo (~200px), a coluna de botões à direita
+# (x > 930, y 1000-1750) e a legenda embaixo (y > 1640)
+SEGURO_TOPO, SEGURO_BASE, BOTOES_X, BOTOES_Y = 220, 1600, 920, 980
 MAX_TOTAL = 29.5       # as músicas têm 30s
 ROSA = (255, 61, 128)
 DOURADO = (255, 177, 0)
@@ -170,8 +176,9 @@ class BlocoTexto:
     """Linhas que entram uma a uma (sobem + aparecem). Ancorado por y_base (fundo) ou y_centro."""
 
     def __init__(self, frase, tam_max=96, largura=860, max_linhas=4, y_base=None, y_centro=None,
-                 selo=None, atraso=0.25):
+                 selo=None, atraso=0.25, entrada=0.5, passo=0.20):
         self.frase = frase
+        self.entrada, self.passo = entrada, passo
         self.linhas = linhas_renderizadas(frase, tam_max, largura, max_linhas)
         self.atraso = atraso
         alt_total = sum(i.height for i in self.linhas)
@@ -202,7 +209,7 @@ class BlocoTexto:
         if self.selo_img:
             itens.append((self.selo_img, self.selo_pos))
         for i, (im, (x, y)) in enumerate(itens):
-            a = ease_out((t - self.atraso - 0.20 * i) / 0.5)
+            a = ease_out((t - self.atraso - self.passo * i) / self.entrada)
             if a <= 0:
                 continue
             yy = int(y + (1 - a) * 50)
@@ -237,16 +244,46 @@ class Quadro:
         raise NotImplementedError
 
 
-def pilula(texto):
-    """Frase de retenção em pílula (aparece ~1,6s no topo do quadro)."""
+def pilula(texto, largura_max=900):
+    """Frase de retenção em pílula no topo do quadro (1 ou 2 linhas)."""
     f = fonte(46)
     d0 = ImageDraw.Draw(Image.new("RGB", (4, 4)))
-    w = int(d0.textlength(texto, font=f)) + 100
-    im = Image.new("RGBA", (w, 96), (0, 0, 0, 0))
+    linhas = [ln for ln in (" ".join(w for w, _ in l) for l in quebrar(d0, [(p, False) for p in texto.split()], f, largura_max - 100))]
+    w = int(max(d0.textlength(ln, font=f) for ln in linhas)) + 100
+    alt = 96 + 58 * (len(linhas) - 1)
+    im = Image.new("RGBA", (w, alt), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
-    d.rounded_rectangle((0, 0, w - 1, 95), radius=48, fill=AMEIXA + (235,), outline=ROSA + (255,), width=5)
-    d.text((50, 18), texto, font=f, fill=BRANCO + (255,))
+    d.rounded_rectangle((0, 0, w - 1, alt - 1), radius=48, fill=AMEIXA + (235,), outline=ROSA + (255,), width=5)
+    for k, ln in enumerate(linhas):
+        d.text(((w - d0.textlength(ln, font=f)) / 2, 18 + 58 * k), ln, font=f, fill=BRANCO + (255,))
     return im
+
+
+def tempo_pilula(texto):
+    """Quanto tempo a pílula fica 100% visível (12/11: o Lucas achou rápido demais).
+    Frase curta (3-4 palavras) ~2,2s (antes ~1,3s); frase de compartilhar (8-10 palavras) ~3,6s."""
+    return min(4.0, max(2.2, 1.2 + 0.27 * palavras(texto)))
+
+
+_ROSTOS = {}
+
+
+def rostos_da_foto(foto):
+    """Rostos detectados na foto original (cache por foto)."""
+    k = id(foto)
+    if k not in _ROSTOS:
+        try:
+            _ROSTOS[k] = visao.rostos(foto)
+        except Exception as e:  # noqa: BLE001
+            print(f"  detecção de rosto falhou ({type(e).__name__}); usando zona provável da cabeça")
+            _ROSTOS[k] = None
+    return _ROSTOS[k]
+
+
+def mapa_cobrir(foto, w, h):
+    """Como cobrir() coloca a foto num retângulo w x h: (escala, corte_x, corte_y)."""
+    esc = max(w / foto.width, h / foto.height)
+    return esc, (int(foto.width * esc) + 1 - w) // 2, (int(foto.height * esc) + 1 - h) // 2
 
 
 class QuadroFoto(Quadro):
@@ -258,24 +295,41 @@ class QuadroFoto(Quadro):
         self.dur, self.movimento, self.bloco, self.etiqueta = dur, movimento, bloco, etiqueta
         self.escuro, self.gancho = escuro, gancho
         self.chamada = None  # frase de retenção no topo (pílula)
+        self.chamada_vis = 2.6  # segundos 100% visível
+        self.pos_etiqueta = None
         self.texto = bloco is not None
-        if layout == "cheio":
+        self.regioes = []  # (foto, (x0, y0, x1, y1), (escala, corte_x, corte_y)) — onde cada foto está no quadro
+        if layout == "tela" and fotos[0].width / fotos[0].height > 0.86:
+            layout = "cheio"  # foto larga/quadrada: tela cheia cortaria demais a roupa
+        if layout == "tela":  # tela cheia de verdade (gancho): mais impacto no 1º segundo
+            fundo = cobrir(fotos[0], L, A)
+            self.regioes.append((fotos[0], (0, 0, L, A), mapa_cobrir(fotos[0], L, A)))
+        elif layout == "cheio":
             fundo = fundo_borrado(fotos[0], 0.35)
             w, h = fotos[0].size
             esc = min(L / w, 1560 / h)
             fg = fotos[0].resize((int(w * esc), int(h * esc)), Image.LANCZOS)
-            fundo.paste(fg, ((L - fg.width) // 2, (A - fg.height) // 2 - 40))
+            px, py = (L - fg.width) // 2, (A - fg.height) // 2 - 40
+            fundo.paste(fg, (px, py))
+            self.regioes.append((fotos[0], (px, py, px + fg.width, py + fg.height), (esc, -px, -py)))
         elif layout == "cartao":
             fundo = fundo_borrado(fotos[0], 0.55)
             card, pad = cartao(fotos[0], 940, 1240)
             fundo = fundo.convert("RGBA")
-            fundo.alpha_composite(card, ((L - card.width) // 2, 330 - pad + 20))
+            cx, cy = (L - card.width) // 2, 330 - pad + 20
+            fundo.alpha_composite(card, (cx, cy))
             fundo = fundo.convert("RGB")
+            ex, ey = mapa_cobrir(fotos[0], 940, 1240)[1:]
+            esc = mapa_cobrir(fotos[0], 940, 1240)[0]
+            self.regioes.append((fotos[0], (cx + pad, cy + pad, cx + pad + 940, cy + pad + 1240), (esc, ex - cx - pad, ey - cy - pad)))
         else:  # duo
             fundo = fundo_borrado(fotos[0], 0.55).convert("RGBA")
             for i, ft in enumerate(fotos[:2]):
                 card, pad = cartao(ft, 940, 700, 42)
-                fundo.alpha_composite(card, ((L - card.width) // 2, 250 + i * 730 - pad))
+                cx, cy = (L - card.width) // 2, 250 + i * 730 - pad
+                fundo.alpha_composite(card, (cx, cy))
+                esc, ex, ey = mapa_cobrir(ft, 940, 700)
+                self.regioes.append((ft, (cx + pad, cy + pad, cx + pad + 940, cy + pad + 700), (esc, ex - cx - pad, ey - cy - pad)))
             fundo = fundo.convert("RGB")
         if escuro:
             fundo = Image.blend(fundo, Image.new("RGB", (L, A), (10, 4, 10)), escuro)
@@ -290,7 +344,7 @@ class QuadroFoto(Quadro):
             fundo = Image.composite(Image.new("RGB", (L, A), (14, 5, 12)), fundo, grad.resize((L, A)))
         self.base = fundo
 
-    def _camera(self, t):
+    def _caixa_camera(self, t):
         p = min(max(t / (self.dur + FADE), 0), 1)
         m = self.movimento
         if m == "zoom_in":
@@ -302,8 +356,60 @@ class QuadroFoto(Quadro):
         else:  # pan_dir
             z, fx = 1.10, 0.15 + 0.7 * p
         cw, ch = L / z, A / z
-        x, y = (L - cw) * fx, (A - ch) / 2
-        return self.base.resize((L, A), Image.BILINEAR, box=(x, y, x + cw, y + ch))
+        return (L - cw) * fx, (A - ch) / 2, z
+
+    def _camera(self, t):
+        x, y, z = self._caixa_camera(t)
+        return self.base.resize((L, A), Image.BILINEAR, box=(x, y, x + L / z, y + A / z))
+
+    def zonas_rosto(self):
+        """Zonas (coordenadas da TELA, já com o movimento de câmera) onde há rosto."""
+        zonas = []
+        for foto, (rx0, ry0, rx1, ry1), (esc, ox, oy) in self.regioes:
+            caixas = rostos_da_foto(foto)
+            if caixas:
+                for fx0, fy0, fx1, fy1 in caixas:
+                    fw, fh = fx1 - fx0, fy1 - fy0
+                    # rosto + cabelo + pescoço, com folga
+                    b = (fx0 - fw * 0.35, fy0 - fh * 0.45, fx1 + fw * 0.35, fy1 + fh * 0.7)
+                    zx0, zy0 = max(rx0, b[0] * esc - ox), max(ry0, b[1] * esc - oy)
+                    zx1, zy1 = min(rx1, b[2] * esc - ox), min(ry1, b[3] * esc - oy)
+                    if zx1 > zx0 and zy1 > zy0:
+                        zonas.append((zx0, zy0, zx1, zy1))
+            else:  # sem detector ou nenhum rosto achado: evita o alto-centro da foto (cabeça provável)
+                rw, rh = rx1 - rx0, ry1 - ry0
+                zonas.append((rx0 + rw * 0.2, ry0, rx1 - rw * 0.2, ry0 + rh * 0.36))
+        tela = []
+        for zx0, zy0, zx1, zy1 in zonas:  # passa pelo movimento de câmera (início e fim) e junta
+            pts = []
+            for t in (0.0, self.dur):
+                cx, cy, z = self._caixa_camera(t)
+                pts += [((zx0 - cx) * z, (zy0 - cy) * z), ((zx1 - cx) * z, (zy1 - cy) * z)]
+            xs, ys = [p[0] for p in pts], [p[1] for p in pts]
+            tela.append((min(xs) - 24, min(ys) - 24, max(xs) + 24, max(ys) + 24))
+        return tela
+
+    def _posicionar_etiqueta(self):
+        """Canto livre para a etiqueta: nunca no rosto, nem no texto, nem nos botões do Instagram."""
+        proibidas = self.zonas_rosto()
+        if self.bloco is not None:
+            proibidas.append((0, self.bloco.topo - 30, L, self.bloco.base + 30))
+        if self.chamada is not None:
+            proibidas.append(((L - self.chamada.width) / 2 - 10, 180, (L + self.chamada.width) / 2 + 10, 215 + self.chamada.height + 20))
+        proibidas.append((BOTOES_X, BOTOES_Y, L, SEGURO_BASE + 200))  # botões do Instagram
+        melhor = None
+        for esc in (ESC_ETIQUETA,) + ESC_ETIQUETA_MIN:
+            w, h = int(self.etiqueta.width * esc * 1.08), int(self.etiqueta.height * esc * 1.08)  # 1.08 = "pop"
+            cands = [(L - w - MARGEM, SEGURO_TOPO + 10), (MARGEM, SEGURO_TOPO + 10),
+                     (L - w - MARGEM, 640), (MARGEM, 640),
+                     (MARGEM, 1180), (min(L - w - MARGEM, BOTOES_X - w - 10), 1180),
+                     (MARGEM, SEGURO_BASE - h)]
+            pos, sob = visao.lugar_livre((w, h), cands, proibidas)
+            if sob == 0:
+                return pos, esc
+            if melhor is None or sob < melhor[2]:
+                melhor = (pos, esc, sob)
+        return melhor[0], melhor[1]
 
     def render(self, t):
         im = self._camera(t)
@@ -311,20 +417,27 @@ class QuadroFoto(Quadro):
             return im
         rgba = im.convert("RGBA")
         if self.chamada is not None:
-            a = ease_out((t - 0.30) / 0.35) * (1 - ease_out((t - 1.90) / 0.30))
+            a = ease_out((t - 0.30) / 0.35) * (1 - ease_out((t - 0.65 - self.chamada_vis) / 0.30))
             if a > 0:
                 pil = self.chamada.copy()
                 pil.putalpha(pil.getchannel("A").point(lambda v: int(v * a)))
                 rgba.alpha_composite(pil, ((L - pil.width) // 2, 215 + int((1 - a) * -30)))
         if self.etiqueta is not None:
+            if self.pos_etiqueta is None:
+                self.pos_etiqueta = self._posicionar_etiqueta()
+            (ex, ey), esc_base = self.pos_etiqueta
             a = ease_out((t - 0.25) / 0.40)
             if a > 0:
-                esc = ESC_ETIQUETA * (0.55 + 0.45 * a + 0.12 * math.sin(a * math.pi))  # "pop"
+                k = 0.55 + 0.45 * a + 0.08 * math.sin(a * math.pi)  # "pop"
+                esc = esc_base * k
                 et = self.etiqueta
                 et = et.resize((max(1, int(et.width * esc)), max(1, int(et.height * esc))), Image.BILINEAR)
                 if a < 1:
                     et.putalpha(et.getchannel("A").point(lambda v: int(v * a)))
-                rgba.alpha_composite(et, (max(20, L - et.width - 90), 300))
+                # cresce a partir do centro da posição final (não "pula" de lugar)
+                cx = ex + self.etiqueta.width * esc_base / 2
+                cy = ey + self.etiqueta.height * esc_base / 2
+                rgba.alpha_composite(et, (int(cx - et.width / 2), int(cy - et.height / 2)))
         if self.bloco is not None:
             self.bloco.desenhar(rgba, t)
         return rgba.convert("RGB")
@@ -424,29 +537,74 @@ def carregar_historico():
 def baixar(url):
     r = requests.get(url, timeout=30)
     r.raise_for_status()
-    return Image.open(io.BytesIO(r.content)).convert("RGB")
+    return visao.aparar_bordas(Image.open(io.BytesIO(r.content)).convert("RGB"))  # tira faixa preta/branca colada
+
+
+DIAS_NOVIDADE = 14
+
+
+def lancamentos_recentes(dias=DIAS_NOVIDADE):
+    """{id: data} dos produtos que entraram no catálogo nos últimos `dias` (lancamentos_datas.json do robô)."""
+    try:
+        with open("lancamentos_datas.json", encoding="utf-8") as f:
+            datas = json.load(f)
+    except Exception:  # noqa: BLE001
+        return {}
+    hoje = (datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=3)).date()
+    out = {}
+    for pid, d in datas.items():
+        try:
+            if (hoje - datetime.date.fromisoformat(d)).days <= dias:
+                out[str(pid)] = d
+        except ValueError:
+            pass
+    return out
+
+
+def ordem_rodizio(catalogo, ids_usados, lancs, max_lanc=3, usos_lanc=2):
+    """Ordem das fotos do Reel (12/11/2026):
+    1) NOVIDADES primeiro: até `max_lanc` lançamentos recentes que ainda apareceram < `usos_lanc` vezes nos Reels;
+    2) depois rodízio de verdade: primeiro quem NUNCA apareceu, depois quem apareceu há mais tempo
+       (empate sorteado) — o catálogo inteiro passa antes de repetir."""
+    ultimo = {}
+    for k, pid in enumerate(ids_usados):
+        ultimo[pid] = k
+    usos = {}
+    for pid in ids_usados[-60:]:
+        usos[pid] = usos.get(pid, 0) + 1
+    novidades = [p for p in catalogo if p["id"] in lancs and usos.get(p["id"], 0) < usos_lanc]
+    novidades.sort(key=lambda p: (lancs[p["id"]], random.random()), reverse=True)
+    novidades = novidades[:max_lanc]
+    ja = {p["id"] for p in novidades}
+    resto = [p for p in catalogo if p["id"] not in ja]
+    resto.sort(key=lambda p: (ultimo.get(p["id"], -1), random.random()))
+    return novidades + resto, len(novidades)
 
 
 def escolher_fotos(n=8):
     hist = carregar_historico()
-    recentes = set(hist["ids"][-80:])
     loja = random.choice(list(CATALOGOS))
     with open(CATALOGOS[loja], encoding="utf-8") as f:
         catalogo = [p for p in json.load(f) if p.get("imagens")]
-    novos = [p for p in catalogo if p["id"] not in recentes] or catalogo
-    random.shuffle(novos)
+    lancs = lancamentos_recentes()
+    novos, n_lanc = ordem_rodizio(catalogo, [str(i) for i in hist["ids"]], lancs)
+    hist["_novidades_no_video"] = n_lanc
     itens = []
     for p in novos:
         if len(itens) == n:
             break
         try:
-            foto = baixar(random.choice(p["imagens"][:3]))
-            itens.append({"foto": foto, "id": p["id"], "preco": float(p.get("preco_final") or 0), "loja": loja, "nome": p.get("nome", "")})
+            # gira também QUAL foto do produto aparece (não sempre a 1ª)
+            fotos_p = p["imagens"][:4]
+            vezes = sum(1 for i in hist["ids"] if str(i) == p["id"])
+            foto = baixar(fotos_p[vezes % len(fotos_p)])
+            itens.append({"foto": foto, "id": p["id"], "preco": float(p.get("preco_final") or 0), "loja": loja,
+                          "nome": p.get("nome", ""), "novo": p["id"] in lancs})
         except Exception as e:
             print(f"  foto ignorada ({p['id']}): {e}")
     if len(itens) < 4:
         raise RuntimeError("Poucas fotos disponíveis pra montar o Reel.")
-    print(f"Catálogo: {loja} | {len(itens)} fotos")
+    print(f"Catálogo: {loja} | {len(itens)} fotos | novidades no vídeo: {n_lanc} | detector de rosto: {'ok' if visao.opencv_ok() else 'indisponível'}")
     return itens, hist
 
 
@@ -516,6 +674,17 @@ def aplicar_preco(briefing, preco_txt):
     return b
 
 
+CHANCE_NARRAR = 0.75
+
+
+def inserir_compartilhar(legenda, frase):
+    """Põe o pedido de envio ANTES da chamada final (QUERO/FRANQUIA), para a chamada continuar por último."""
+    partes = legenda.rstrip().split("\n\n")
+    if len(partes) > 1 and re.search(r"comenta|link da bio|luluextra", partes[-1], re.I):
+        return "\n\n".join(partes[:-1] + [frase, partes[-1]])
+    return legenda.rstrip() + "\n\n" + frase
+
+
 FORMATOS = ["classico", "vitrine", "pergunta", "rapido"]
 
 
@@ -531,7 +700,14 @@ def escolher_musica(recentes):
 
 
 # ================================================================ roteiro do vídeo
-def montar_quadros(itens, briefing, formato="classico"):
+def bloco_gancho(frase, tam_max=112, largura=880, y_centro=900):
+    """Gancho JÁ LEGÍVEL no 1º frame (retenção do 1º segundo): as linhas entram em ~0,3s,
+    a primeira já aparece no quadro zero — ninguém vê tela 'vazia'."""
+    return BlocoTexto(frase, tam_max=tam_max, largura=largura, max_linhas=4, y_centro=y_centro,
+                      atraso=-0.18, entrada=0.30, passo=0.07)
+
+
+def montar_quadros(itens, briefing, formato="classico", modo="venda"):
     """Roteiros (rodízio, sem repetir os 2 últimos):
     classico: GANCHO -> fotos -> VALOR -> fotos -> VALOR 2 -> CTA
     vitrine:  GANCHO -> 4 kits seguidos, cada um com etiqueta de preço -> VALOR -> CTA
@@ -556,15 +732,16 @@ def montar_quadros(itens, briefing, formato="classico"):
     def etiqueta(foto):
         it = rot(foto)
         # REGRA: preço só do kit (luluextra.com), no formato "5 Conjuntos por R$ ..."
-        if it["preco"] > 0 and it["loja"] == "kits":
+        # e só no Reel de VENDA (conteúdo/franquia não mostram preço de kit — 12/11/2026)
+        if modo == "venda" and it["preco"] > 0 and it["loja"] == "kits":
             return etiqueta_preco(f"{rotulo_kit(it['nome'])} por", it["preco"])
         return None
 
     quadros = []
     if formato == "vitrine":
         f = prox()
-        quadros.append(QuadroFoto([f], "cheio", "zoom_in", tempo_leitura(briefing["gancho"], 3.4, 1.4, 0.3),
-                                  BlocoTexto(briefing["gancho"], tam_max=112, largura=880, max_linhas=4, y_centro=900, atraso=0.15), gancho=True))
+        quadros.append(QuadroFoto([f], "tela", "zoom_in", tempo_leitura(briefing["gancho"], 3.4, 1.4, 0.3),
+                                  bloco_gancho(briefing["gancho"]), gancho=True))
         for k in range(4):
             f = prox()
             quadros.append(QuadroFoto([f], ["cartao", "cheio"][k % 2], mov(), 2.3, etiqueta=etiqueta(f) if k in (0, 2) else None))
@@ -574,9 +751,9 @@ def montar_quadros(itens, briefing, formato="classico"):
         quadros.append(QuadroFinal(briefing["cta"], briefing["selo"], fotos[-3:] if len(fotos) >= 3 else fotos))
     elif formato == "pergunta":
         f = prox()
-        quadros.append(QuadroFoto([f], "cheio", "zoom_out", tempo_leitura(briefing["gancho"], 3.8, 1.6, 0.3),
-                                  BlocoTexto(briefing["gancho"], tam_max=118, largura=900, max_linhas=4, y_centro=920, atraso=0.1),
-                                  escuro=0.45, gancho=True))
+        quadros.append(QuadroFoto([f], "tela", "zoom_out", tempo_leitura(briefing["gancho"], 3.8, 1.6, 0.3),
+                                  bloco_gancho(briefing["gancho"], tam_max=118, largura=900, y_centro=920),
+                                  escuro=0.40, gancho=True))
         q1 = briefing["quadros"][0]
         f = prox()
         quadros.append(QuadroFoto([f], "cartao", "zoom_in", tempo_leitura(q1, 3.4, 1.4, 0.34),
@@ -592,8 +769,8 @@ def montar_quadros(itens, briefing, formato="classico"):
         quadros.append(QuadroFinal(briefing["cta"], briefing["selo"], fotos[-3:] if len(fotos) >= 3 else fotos))
     elif formato == "rapido":
         f = prox()
-        quadros.append(QuadroFoto([f], "cheio", "zoom_in", tempo_leitura(briefing["gancho"], 3.2, 1.3, 0.3),
-                                  BlocoTexto(briefing["gancho"], tam_max=112, largura=880, max_linhas=4, y_centro=900, atraso=0.1), gancho=True))
+        quadros.append(QuadroFoto([f], "tela", "zoom_in", tempo_leitura(briefing["gancho"], 3.2, 1.3, 0.3),
+                                  bloco_gancho(briefing["gancho"]), gancho=True))
         lays = ["cheio", "cartao", "duo", "cheio", "cartao", "duo"]
         for k, lay in enumerate(lays):
             fs = [prox(), prox()] if lay == "duo" else [prox()]
@@ -603,19 +780,12 @@ def montar_quadros(itens, briefing, formato="classico"):
         quadros.append(QuadroFoto([f], "cheio", mov(), tempo_leitura(q), BlocoTexto(q, tam_max=84, largura=840, max_linhas=4, y_base=1470)))
         quadros.append(QuadroFinal(briefing["cta"], briefing["selo"], fotos[-3:] if len(fotos) >= 3 else fotos))
     if quadros:
-        def total(qs):
-            return sum(q.dur for q in qs) - FADE * (len(qs) - 1)
-        while total(quadros) > MAX_TOTAL:
-            cand = [i for i, q in enumerate(quadros[1:-1], 1) if not q.texto and getattr(q, "etiqueta", None) is None]
-            if not cand:
-                break
-            quadros.pop(cand[-1])
-        return quadros
+        return ajustar_total(quadros)
     # ---- classico
     # 1) gancho (primeiros 3+ segundos)
     f = prox()
-    bloco = BlocoTexto(briefing["gancho"], tam_max=112, largura=880, max_linhas=4, y_centro=900, atraso=0.15)
-    quadros.append(QuadroFoto([f], "cheio", "zoom_in", tempo_leitura(briefing["gancho"], 3.4, 1.4, 0.3), bloco, gancho=True))
+    bloco = bloco_gancho(briefing["gancho"])
+    quadros.append(QuadroFoto([f], "tela", "zoom_in", tempo_leitura(briefing["gancho"], 3.4, 1.4, 0.3), bloco, gancho=True))
     # 2) duas fotos rápidas (uma em duo, uma com preço)
     f1, f2 = prox(), prox()
     quadros.append(QuadroFoto([f1, f2], "duo", mov(), random.uniform(*DUR_FOTO)))
@@ -640,11 +810,18 @@ def montar_quadros(itens, briefing, formato="classico"):
     # 6) cartão final
     quadros.append(QuadroFinal(briefing["cta"], briefing["selo"], fotos[-3:] if len(fotos) >= 3 else fotos))
 
-    # cabe nos 30 s da música? tira quadros de foto (sem texto) do meio até caber
-    def total(qs):
-        return sum(q.dur for q in qs) - FADE * (len(qs) - 1)
-    while total(quadros) > MAX_TOTAL:
-        cand = [i for i, q in enumerate(quadros[1:-1], 1) if not q.texto and getattr(q, "etiqueta", None) is None]
+    return ajustar_total(quadros)
+
+
+def duracao_total(qs):
+    return sum(q.dur for q in qs) - FADE * (len(qs) - 1)
+
+
+def ajustar_total(quadros):
+    """Cabe nos ~30 s da música? Tira quadros só de foto (sem texto, preço ou pílula) do meio até caber."""
+    while duracao_total(quadros) > MAX_TOTAL:
+        cand = [i for i, q in enumerate(quadros[1:-1], 1)
+                if not q.texto and getattr(q, "etiqueta", None) is None and getattr(q, "chamada", None) is None]
         if not cand:
             break
         quadros.pop(cand[-1])
@@ -652,17 +829,53 @@ def montar_quadros(itens, briefing, formato="classico"):
 
 
 FRASES_MEIO = ["AGORA VEM O MELHOR", "ATENÇÃO NESSA PARTE", "O DETALHE QUE IMPORTA"]
-FRASE_TEASER = "FICA ATÉ O FINAL"
+TEASERS = ["FICA ATÉ O FINAL", "ASSISTE ATÉ O FIM"]
+
+# 12/11/2026 (pedido do Lucas): incentivar o ENVIO do vídeo (o "envio por Direct" é um dos sinais
+# que mais aumentam o alcance). Frases fixas e revisadas — a IA não escreve isso.
+COMPARTILHAR = {
+    "venda": [("MANDA ESSE VÍDEO PRA QUEM VAI REVENDER COM VOCÊ", "Manda esse vídeo pra quem vai revender com você 💌"),
+              ("ENVIA PRA AMIGA QUE QUER COMEÇAR A REVENDER", "Envia pra aquela amiga que vive dizendo que quer começar a revender 💌"),
+              ("MANDA PRA SUA SÓCIA DE REVENDA", "Manda pra sua sócia de revenda ver também 💌"),
+              ("MANDA PRA AMIGA QUE VIVE FALANDO EM REVENDER", "Conhece alguém que quer revender moda fitness? Manda esse vídeo pra ela 💌")],
+    "conteudo": [("MANDA ESSA DICA PRA UMA AMIGA LOJISTA", "Manda essa dica pra uma amiga lojista 💌"),
+                 ("ENVIA PRA QUEM VENDE MODA FITNESS COM VOCÊ", "Envia pra quem vende moda fitness com você 💌"),
+                 ("MANDA ESSE VÍDEO PRA QUEM VAI REVENDER COM VOCÊ", "Manda esse vídeo pra quem vai revender com você 💌")],
+    "franquia": [("MANDA PRA AMIGA QUE SONHA COM LOJA ONLINE", "Tem uma amiga que sonha com loja online? Manda esse vídeo pra ela 💌"),
+                 ("ENVIA PRA QUEM QUER VENDER PELA INTERNET", "Envia pra quem quer começar a vender pela internet 💌")],
+}
+CHANCE_COMPARTILHAR = {"venda": 0.55, "conteudo": 0.75, "franquia": 0.5}
 
 
-def adicionar_retencao(quadros):
-    """Frases de retenção em pílula: um teaser logo no começo e uma antes do 1º quadro de valor."""
+def escolher_compartilhar(modo, indice):
+    """Devolve (frase da pílula, frase da legenda) ou None. Gira as frases sem repetir seguidas."""
+    if random.random() >= CHANCE_COMPARTILHAR.get(modo, 0.5):
+        return None
+    opcoes = COMPARTILHAR.get(modo) or COMPARTILHAR["venda"]
+    return opcoes[indice % len(opcoes)]
+
+
+def _dar_tempo(q, texto):
+    """Pílula com tempo de leitura: o quadro dura o suficiente pra ela entrar, ficar e sair antes da transição."""
+    q.chamada = pilula(texto)
+    q.chamada_vis = tempo_pilula(texto)
+    q.dur = max(q.dur, 0.65 + q.chamada_vis + 0.30 + FADE + 0.1)
+
+
+def adicionar_retencao(quadros, compartilhar=None):
+    """Pílulas: teaser logo no começo, uma antes do 1º quadro de valor e (às vezes) o pedido de envio
+    no último quadro de foto antes da chamada final."""
     fotos = [q for q in quadros if isinstance(q, QuadroFoto)]
     if len(quadros) >= 5 and isinstance(quadros[1], QuadroFoto) and quadros[1].bloco is None:
-        quadros[1].chamada = pilula(FRASE_TEASER)
+        _dar_tempo(quadros[1], random.choice(TEASERS))
     valor = next((q for q in fotos[1:] if q.bloco is not None and not q.gancho), None)
     if valor is not None and valor.chamada is None:
-        valor.chamada = pilula(random.choice(FRASES_MEIO))
+        _dar_tempo(valor, random.choice(FRASES_MEIO))
+    if compartilhar:
+        alvo = next((q for q in reversed(fotos[1:]) if q.chamada is None and q is not quadros[1]), None)
+        if alvo is not None:
+            _dar_tempo(alvo, compartilhar[0])
+    ajustar_total(quadros)
 
 
 def preparar_narracao(quadros):
@@ -681,9 +894,9 @@ def preparar_narracao(quadros):
     return falas
 
 
-def gerar_video(itens, briefing, saida, formato="classico", musica_nome=None, narrar=False):
-    quadros = montar_quadros(itens, briefing, formato)
-    adicionar_retencao(quadros)
+def gerar_video(itens, briefing, saida, formato="classico", musica_nome=None, narrar=False, compartilhar=None, modo="venda"):
+    quadros = montar_quadros(itens, briefing, formato, modo)
+    adicionar_retencao(quadros, compartilhar)
     os.makedirs(PASTA_SAIDA, exist_ok=True)
     falas = {}
     if narrar:
@@ -793,9 +1006,10 @@ def hospedar(arquivos):
     return url
 
 
-def publicar_reel(url, legenda):
+def publicar_reel(url, legenda, capa_ms=1200):
+    # thumb_offset: a capa do Reel (grade do perfil e feed) é o quadro do GANCHO já legível
     r = requests.post(f"{GRAPH}/{IG_ID}/media", data={
-        "media_type": "REELS", "video_url": url, "caption": legenda,
+        "media_type": "REELS", "video_url": url, "caption": legenda, "thumb_offset": str(int(capa_ms)),
         "share_to_feed": "true", "access_token": TOKEN}, timeout=60)
     cid = checar(r, "criar container do Reel")["id"]
     for _ in range(60):
@@ -851,7 +1065,10 @@ def main():
         modo = os.environ["REEL_MODO"]
     print(f"Slot: {slot} | modo: {modo}")
     itens, hist = escolher_fotos()
-    briefing = reel_lab.gerar_briefing(hist["ganchos"], hist["angulos"], modo)
+    n_novos = hist.pop("_novidades_no_video", 0)
+    # tem novidade de verdade no vídeo? o Reel de venda puxa o ângulo "novidade" (se não foi usado há pouco)
+    preferido = "novidade" if (modo == "venda" and n_novos >= 2) else None
+    briefing = reel_lab.gerar_briefing(hist["ganchos"], hist["angulos"], modo, preferido=preferido)
     briefing = aplicar_preco(briefing, texto_preco(itens))
     if modo == "venda" and funil_direct_ligado():
         briefing = aplicar_funil_direct(briefing, len(hist.get("ganchos", [])))
@@ -867,8 +1084,15 @@ def main():
     with open(f"{PASTA_SAIDA}/briefing.json", "w", encoding="utf-8") as f:
         json.dump(briefing, f, ensure_ascii=False, indent=1)
     env_n = os.environ.get("REEL_NARRAR", "")
-    narrar = (env_n == "1") if env_n in ("0", "1") else random.random() < 0.35
-    gerar_video(itens, briefing, SAIDA, formato, musica_nome, narrar)
+    # 12/11/2026: narração (voz lendo o texto da tela) em ~75% dos Reels (antes 35%)
+    narrar = (env_n == "1") if env_n in ("0", "1") else random.random() < CHANCE_NARRAR
+    compartilhar = escolher_compartilhar(modo, len(hist.get("ganchos", [])))
+    if compartilhar:
+        briefing["legenda"] = inserir_compartilhar(briefing["legenda"], compartilhar[1])
+        with open(f"{PASTA_SAIDA}/briefing.json", "w", encoding="utf-8") as f:
+            json.dump(briefing, f, ensure_ascii=False, indent=1)
+    print(f"Narração: {narrar} | compartilhar: {compartilhar[0] if compartilhar else '-'}")
+    gerar_video(itens, briefing, SAIDA, formato, musica_nome, narrar, compartilhar, modo)
     if os.environ.get("GITHUB_TOKEN") and os.environ.get("GITHUB_REPOSITORY"):
         url = hospedar([SAIDA, PREVIA, f"{PASTA_SAIDA}/briefing.json"])
         print("PRÉVIA DO VÍDEO:", url)

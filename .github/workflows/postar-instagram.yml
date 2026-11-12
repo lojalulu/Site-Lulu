@@ -88,7 +88,7 @@ jobs:
           python-version: '3.11'
 
       - name: Instalar dependências
-        run: pip install requests Pillow
+        run: pip install requests Pillow opencv-python-headless
 
       - name: Escolher produto e preparar conteúdo (legenda + imagem do Story)
         working-directory: .

@@ -17,46 +17,37 @@ PILARES = {
     "qualidade": [],  # tratado à parte por loja — ver QUALIDADE_POR_LOJA (kits usa suplex vip/zero
                        # transparência, avulso usa malha premium — são tecidos e propostas diferentes)
     "renda_extra": [
-        "Quem revende sabe: peça boa e barata é lucro certo no fim do mês.",
-        "Se você revende moda fitness, essa é a peça que sai rápido.",
+        "Quem revende sabe: peça boa e com preço de atacado faz diferença no fim do mês.",
+        "Se você revende moda fitness, vale ter esse modelo na vitrine.",
         "Dá pra começar pequeno e ir crescendo — peça que gira bem ajuda muito.",
-        "Muita revendedora começou com um kit só e hoje compra todo mês.",
+        "Dá pra começar com o pedido mínimo de 4 kits e ir crescendo.",
         "Renda extra de verdade começa com produto que a cliente quer comprar.",
         "Pra quem vende no WhatsApp ou no Instagram, essa peça ajuda a fechar pedido.",
         "Peça que você posta no status e já aparece gente perguntando o preço.",
         "Quer começar a revender? Esse é o tipo de peça que facilita.",
         "Revender moda fitness é bom porque a cliente sempre volta pra comprar mais.",
         "Se o objetivo é aumentar a renda, começa pelo que vende fácil.",
-        "Essa entra no pedido e sai do seu estoque rapidinho.",
+        "Modelo fácil de mostrar no status e no Instagram.",
         "Boa pra quem vende pra academia, vizinhança ou grupo de amigas.",
     ],
     "cliente_ama": [
-        "Sua cliente vai amar essa modelagem — e voltar pra pedir mais.",
-        "Esse é daqueles produtos que a cliente manda foto usando, de tão satisfeita.",
-        "Peça que vira queridinha na primeira leva — cliente ama e indica pra amiga.",
-        "Veste bem em corpos diferentes, por isso quase não tem troca.",
-        "A cliente experimenta e já pergunta se tem em outra cor.",
-        "É o tipo de peça que a cliente compra uma e depois volta pra levar mais duas.",
-        "Quem comprou elogiou o caimento — e caimento bom é venda garantida.",
-        "Peça que valoriza o corpo sem apertar. Cliente satisfeita volta.",
-        "Esse modelo costuma ter muita recompra.",
-        "As revendedoras contam que esse modelo quase não volta pra troca.",
+        "Modelagem pensada pra valorizar o corpo sem apertar.",
+        "Peça que a cliente usa no treino e no dia a dia.",
+        "Cores variadas no kit: cada cliente acha a cor que gosta.",
+        "Caimento bonito na foto e no corpo — ajuda a vender.",
         "Cliente gosta de peça que dá pra usar muito — essa é assim.",
-        "Aposta segura: modelo que agrada quase todo mundo.",
+        "Modelo versátil, que combina com vários estilos.",
     ],
     "lucratividade": [
         "Preço de fábrica pra você vender com uma margem boa de verdade.",
-        "Compra no kit, sai mais em conta por peça, revende com lucro tranquilo.",
-        "É difícil achar peça com esse preço e essa qualidade pra revender.",
-        "Faz a conta: o valor por peça no kit deixa espaço pra um bom lucro.",
-        "Comprando direto da fábrica, sobra mais no seu bolso em cada venda.",
+        "Compra no kit e o valor por peça fica mais em conta.",
+        "Faz a conta: divide o valor do kit por 5 e veja quanto sai cada peça.",
+        "Comprando direto da fábrica, sem intermediário.",
         "Preço de atacado de verdade, sem intermediário no meio.",
         "Você define seu preço de venda — a margem fica com você.",
         "Custo baixo por peça é o que faz a revenda valer a pena.",
-        "Peça que você revende pelo dobro e a cliente ainda acha justo.",
-        "Quanto menor o custo, mais fácil fica competir e ainda lucrar.",
         "Atacado com preço pensado pra quem revende.",
-        "Lucro bom começa na hora da compra — e esse preço ajuda.",
+        "Custo por peça de atacado, pra você montar sua margem.",
     ],
     "conforto": [
         "Malha que acompanha o corpo sem apertar — conforto o dia inteiro.",
@@ -86,29 +77,17 @@ PILARES = {
         "Modelo que não sai de moda de uma estação pra outra.",
         "Tem cara de peça cara, mas com preço de atacado.",
     ],
-    "disponibilidade": [
-        "Últimas unidades desse lote — reposição não tem data certa.",
-        "Poucas peças disponíveis por enquanto.",
-        "Enquanto durar o estoque desse lote, o preço continua esse.",
-        "Esse modelo costuma acabar rápido — melhor não deixar pra depois.",
-        "Estoque limitado nessa leva.",
-        "Quando acaba, a próxima leva pode demorar.",
-        "Ainda tem, mas não sabemos até quando.",
-        "Garante o seu antes que o lote acabe.",
-        "Esse aqui já está saindo bastante essa semana.",
-        "Quem viu primeiro já garantiu. Ainda dá tempo.",
-    ],
     "lancamento": [
-        "Acabou de chegar no catálogo — poucas peças por enquanto.",
+        "Acabou de chegar no catálogo.",
         "Lançamento novinho, direto da fábrica.",
         "Você está entre as primeiras a ver essa peça.",
         "Novidade no catálogo, chegou agora.",
         "Modelo novo na área — sua cliente ainda não viu em lugar nenhum.",
-        "Chegou lançamento! Primeira leva disponível.",
+        "Chegou lançamento no catálogo!",
         "Peça nova no catálogo, quentinha da produção.",
         "Lançamento da semana — sai na frente e oferece antes de todo mundo.",
         "Modelo inédito no catálogo. Vale a pena conferir.",
-        "Novidade que acabou de entrar — primeira remessa.",
+        "Novidade que acabou de entrar no site.",
     ],
 }
 
@@ -118,7 +97,7 @@ PILARES = {
 # por peça, com proposta de qualidade superior/atacado. =================
 QUALIDADE_POR_LOJA = {
     "kits": [
-        "Suplex vip, zero transparência — testado antes de entrar no catálogo.",
+        "Suplex vip, zero transparência.",
         "Tecido suplex vip, grosso e sem transparência nem agachando.",
         "Zero transparência de verdade — o padrão do suplex vip da Lulu.",
         "Suplex encorpado, que não fica transparente no agachamento.",
@@ -150,7 +129,6 @@ PESOS_PILARES = {
     "lucratividade": 1.0,
     "conforto": 1.0,
     "estilo": 1.0,
-    "disponibilidade": 0.8,
     "lancamento": 0,  # nunca sorteado à toa — só é usado quando forçado (eh_lancamento=True)
 }
 
@@ -221,7 +199,7 @@ CTA_STORY = [
 ]
 
 CTA_ALTERNATIVA = [
-    "Chama no direct pra garantir o seu 💬",
+    "Chama no direct que a gente te ajuda 💬",
     "Manda mensagem que a gente te ajuda a montar o pedido 💬",
     "Ficou com dúvida? Chama no direct 💬",
     "Me chama no direct que te passo os detalhes 💬",
@@ -284,7 +262,6 @@ STORY_DESTAQUES_COMUM_COM_PRECO_KITS_QTD = [
 STORY_DESTAQUES_COMUM_SEM_PRECO = [
     "Conforto o dia inteiro",
     "Direto da fábrica pra você",
-    "Poucas peças desse lote",
     "Chegou fresquinho no catálogo",
     "Cores variadas disponíveis",
     "Ótimo pra revenda 💰",
@@ -309,7 +286,7 @@ STORY_DESTAQUES_LANCAMENTO = [
     "Lançamento: {nome_curto}",
     "Lançamento por {preco}",
     "Chegou agora — lançamento!",
-    "Primeira leva, poucas peças",
+    "Chegou no catálogo esta semana",
     "Novidade no catálogo hoje",
 ]
 
@@ -322,7 +299,7 @@ STORY_DESTAQUES_LANCAMENTO_KITS_QTD = [
     "Lançamento: {nome_curto}",
     "Lançamento: {quantidade} por {preco}",
     "Chegou agora — lançamento!",
-    "Primeira leva, poucas peças",
+    "Chegou no catálogo esta semana",
     "Novidade no catálogo hoje",
 ]
 
