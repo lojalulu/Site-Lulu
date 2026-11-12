@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -121,15 +121,16 @@
       "3340284",
       "875534",
       "333277",
-      "2488494"
+      "2488494",
+      "3592535"
     ]
   },
   "ultimos_pilares": [
-    "lucratividade",
     "estilo",
     "renda_extra",
     "disponibilidade",
-    "qualidade"
+    "qualidade",
+    "lucratividade"
   ],
   "conhecidos": {
     "kits": [
@@ -450,10 +451,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Vendida avulsa, sem precisar levar kit fechado.",
       "Atacado de peça avulsa, a partir de 10 peças.",
       "É peça avulsa, na malha premium.",
-      "Peça avulsa premium — você monta o pedido do seu jeito."
+      "Peça avulsa premium — você monta o pedido do seu jeito.",
+      "Você escolhe peça por peça (mínimo de 10 no pedido)."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -465,9 +466,9 @@
       "Peça avulsa com malha premium: acabamento caprichado, preço de atacado."
     ],
     "frete_avulso": [
-      "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦",
       "Frete grátis (Vip) pra Salvador e todo o Brasil 🚚",
-      "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚"
+      "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚",
+      "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛"
     ],
     "preco_kits": [
       "{quantidade}: {preco}.",
@@ -476,8 +477,8 @@
       "{quantidade} - só {preco}."
     ],
     "cta_alt": [
-      "Manda mensagem que a gente te ajuda a montar o pedido 💬",
-      "Me chama no direct que te passo os detalhes 💬"
+      "Me chama no direct que te passo os detalhes 💬",
+      "Chama no direct que a gente te ajuda 💬"
     ],
     "conforto": [
       "Malha que acompanha o corpo sem apertar — conforto o dia inteiro.",
@@ -528,14 +529,12 @@
       "Poucas peças disponíveis por enquanto."
     ],
     "lucratividade": [
-      "Peça que você revende pelo dobro e a cliente ainda acha justo.",
-      "Compra no kit, sai mais em conta por peça, revende com lucro tranquilo.",
-      "Comprando direto da fábrica, sobra mais no seu bolso em cada venda.",
       "Faz a conta: o valor por peça no kit deixa espaço pra um bom lucro.",
       "Custo baixo por peça é o que faz a revenda valer a pena.",
       "Quanto menor o custo, mais fácil fica competir e ainda lucrar.",
       "Você define seu preço de venda — a margem fica com você.",
-      "Preço de fábrica pra você vender com uma margem boa de verdade."
+      "Preço de fábrica pra você vender com uma margem boa de verdade.",
+      "Comprando direto da fábrica, sem intermediário."
     ],
     "cliente_ama": [
       "É o tipo de peça que a cliente compra uma e depois volta pra levar mais duas.",
@@ -550,6 +549,6 @@
   },
   "contagem_dia": {
     "data": "2026-11-12",
-    "n": 2
+    "n": 3
   }
 }

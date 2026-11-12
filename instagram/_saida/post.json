@@ -1,12 +1,15 @@
 {
-  "loja": "kits",
-  "produto_id": "3249086",
-  "produto_nome": "Pacote com 5 Conjuntos de Calça Suplex Ref Bicolor 04",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1754399310_ae7f99af0f3078b894fd.jpeg.webp",
+  "loja": "avulso",
+  "produto_id": "3592535",
+  "produto_nome": "CASACO DEBORAH",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1793816360_acecb12a623644a8dccf.webp",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "🛍️ Tecido suplex vip, grosso e sem transparência nem agachando.\n\nE tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚\n\nKit fechado — ótimo pra começar a revender.\n\nOs outros modelos estão no link da bio 👆\n\n#salvador #modafitness",
-  "pilar": "qualidade",
+  "legenda_feed": "💗 Comprando direto da fábrica, sem intermediário.\n\nDá pra aproveitar o frete grátis (Vip) nesse pedido 🚛\n\nVocê escolhe peça por peça (mínimo de 10 no pedido).\n\nChama no direct que a gente te ajuda 💬",
+  "formato_feed": null,
+  "carrossel": null,
+  "legenda_reserva": "💗 Comprando direto da fábrica, sem intermediário.\n\nDá pra aproveitar o frete grátis (Vip) nesse pedido 🚛\n\nVocê escolhe peça por peça (mínimo de 10 no pedido).\n\nChama no direct que a gente te ajuda 💬",
+  "pilar": "lucratividade",
   "eh_lancamento": false,
-  "publicar_feed": true,
-  "rodada_do_dia": 2
+  "publicar_feed": false,
+  "rodada_do_dia": 3
 }
