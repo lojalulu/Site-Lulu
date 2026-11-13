@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -123,15 +123,16 @@
       "875534",
       "333277",
       "2488494",
-      "3592535"
+      "3592535",
+      "4059477"
     ]
   },
   "ultimos_pilares": [
-    "renda_extra",
     "disponibilidade",
     "qualidade",
     "lucratividade",
-    "renda_extra"
+    "renda_extra",
+    "conforto"
   ],
   "conhecidos": {
     "kits": [
@@ -439,11 +440,11 @@
       "Vendido em kit fechado, cores sortidas."
     ],
     "cta_bio": [
-      "Catálogo inteiro tá no link da bio 👆",
       "Dá uma espiada no link da bio 💗",
       "Link na bio 🔗",
       "Os outros modelos estão no link da bio 👆",
-      "Pedido pelo site, link na bio 🛍️"
+      "Pedido pelo site, link na bio 🛍️",
+      "Link da bio te leva direto pro catálogo 📲"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -452,10 +453,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Atacado de peça avulsa, a partir de 10 peças.",
       "É peça avulsa, na malha premium.",
       "Peça avulsa premium — você monta o pedido do seu jeito.",
-      "Você escolhe peça por peça (mínimo de 10 no pedido)."
+      "Você escolhe peça por peça (mínimo de 10 no pedido).",
+      "Peça avulsa, malha premium."
     ],
     "qualidade_avulso": [
       "Qualidade que a cliente percebe logo no primeiro uso.",
@@ -482,14 +483,14 @@
       "Chama no direct que a gente te ajuda 💬"
     ],
     "conforto": [
-      "Malha que acompanha o corpo sem apertar — conforto o dia inteiro.",
       "Costura bem feita, que não incomoda na pele.",
       "Firme sem ser apertada. É isso que a cliente procura.",
       "Modelagem que dá liberdade pra se mexer.",
       "Conforto é o que faz a cliente usar toda semana — e indicar.",
       "Peça leve, que não pesa nem nos dias mais quentes.",
       "Tecido macio, que não pinica nem esquenta demais.",
-      "Cós que não enrola e não aperta a barriga."
+      "Cós que não enrola e não aperta a barriga.",
+      "Veste bem do treino da manhã até o fim do dia."
     ],
     "renda_extra": [
       "Quem revende sabe: peça boa e barata é lucro certo no fim do mês.",
@@ -549,7 +550,7 @@
     ]
   },
   "contagem_dia": {
-    "data": "2026-11-12",
-    "n": 4
+    "data": "2026-11-13",
+    "n": 1
   }
 }
