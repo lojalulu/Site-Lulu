@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -65,7 +65,8 @@
       "318146",
       "684193",
       "3249086",
-      "477632"
+      "477632",
+      "3950068"
     ],
     "avulso": [
       "3117836",
@@ -128,11 +129,11 @@
     ]
   },
   "ultimos_pilares": [
-    "disponibilidade",
     "qualidade",
     "lucratividade",
     "renda_extra",
-    "conforto"
+    "conforto",
+    "cliente_ama"
   ],
   "conhecidos": {
     "kits": [
@@ -434,17 +435,17 @@
       "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚"
     ],
     "tag_kits": [
-      "Kit com cores variadas.",
       "Vem em kit fechado de 5, tecido suplex vip.",
       "Kit fechado — ótimo pra começar a revender.",
-      "Vendido em kit fechado, cores sortidas."
+      "Vendido em kit fechado, cores sortidas.",
+      "Kit fechado, 5 peças, suplex vip."
     ],
     "cta_bio": [
-      "Dá uma espiada no link da bio 💗",
       "Link na bio 🔗",
       "Os outros modelos estão no link da bio 👆",
       "Pedido pelo site, link na bio 🛍️",
-      "Link da bio te leva direto pro catálogo 📲"
+      "Link da bio te leva direto pro catálogo 📲",
+      "Catálogo completo — link na bio ✨"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -539,18 +540,24 @@
       "Comprando direto da fábrica, sem intermediário."
     ],
     "cliente_ama": [
-      "É o tipo de peça que a cliente compra uma e depois volta pra levar mais duas.",
-      "Peça que valoriza o corpo sem apertar. Cliente satisfeita volta.",
-      "Peça que vira queridinha na primeira leva — cliente ama e indica pra amiga.",
-      "Esse modelo costuma ter muita recompra.",
-      "Cliente gosta de peça que dá pra usar muito — essa é assim.",
       "Quem comprou elogiou o caimento — e caimento bom é venda garantida.",
       "Sua cliente vai amar essa modelagem — e voltar pra pedir mais.",
-      "Veste bem em corpos diferentes, por isso quase não tem troca."
+      "Veste bem em corpos diferentes, por isso quase não tem troca.",
+      "Modelagem pensada pra valorizar o corpo sem apertar."
     ]
   },
   "contagem_dia": {
     "data": "2026-11-13",
-    "n": 1
-  }
+    "n": 2
+  },
+  "novidades_feed": [
+    "3378707",
+    "3724372",
+    "4613760",
+    "4613751",
+    "4019589"
+  ],
+  "formatos_feed": [
+    "novidades"
+  ]
 }
