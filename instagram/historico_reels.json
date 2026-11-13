@@ -243,7 +243,15 @@
   "2107380",
   "1139922",
   "2816699",
-  "4430522"
+  "4430522",
+  "3724372",
+  "3703562",
+  "4598001",
+  "4485658",
+  "317954",
+  "2049287",
+  "3709232",
+  "3221685"
  ],
  "ganchos": [
   "Montar *loja online* sem marca própria é perder tempo",
@@ -271,7 +279,8 @@
   "Revendedora do Nordeste, o catálogo da Lulu muda toda semana.",
   "São *5 peças plus size* em um kit",
   "O *detalhe* que muda a foto do conjunto",
-  "Cansada de pagar frete caro no atacado?"
+  "Cansada de pagar frete caro no atacado?",
+  "Você lava sua legging do jeito certo, revendedora de Salvador?"
  ],
  "ultimo_post": "2026-11-12",
  "angulos": [
@@ -293,7 +302,8 @@
   "novidade",
   "plus",
   "dica_vitrine",
-  "frete"
+  "frete",
+  "dica_tecido"
  ],
  "formatos": [
   "classico",
@@ -314,7 +324,8 @@
   "pergunta",
   "classico",
   "rapido",
-  "pergunta"
+  "pergunta",
+  "vitrine"
  ],
  "musicas": [
   "upbeat-atlas.mp3",
@@ -335,8 +346,9 @@
   "upbeat-alex.mp3",
   "phonk-mountain.mp3",
   "phonk-subclair.mp3",
-  "phonk-instrumental.mp3"
+  "phonk-instrumental.mp3",
+  "upbeat-rock.mp3"
  ],
- "ultimo_post_meio": "2026-11-12",
- "contagem_meio": 8
+ "ultimo_post_meio": "2026-11-13",
+ "contagem_meio": 9
 }
