@@ -251,7 +251,15 @@
   "317954",
   "2049287",
   "3709232",
-  "3221685"
+  "3221685",
+  "3703562",
+  "449556",
+  "4019589",
+  "3249086",
+  "3347550",
+  "3950065",
+  "3950022",
+  "684175"
  ],
  "ganchos": [
   "Montar *loja online* sem marca própria é perder tempo",
@@ -280,9 +288,10 @@
   "São *5 peças plus size* em um kit",
   "O *detalhe* que muda a foto do conjunto",
   "Cansada de pagar frete caro no atacado?",
-  "Você lava sua legging do jeito certo, revendedora de Salvador?"
+  "Você lava sua legging do jeito certo, revendedora de Salvador?",
+  "Sua vitrine precisa de modelos novos toda semana?"
  ],
- "ultimo_post": "2026-11-12",
+ "ultimo_post": "2026-11-13",
  "angulos": [
   "frete",
   "tecido",
@@ -303,7 +312,8 @@
   "plus",
   "dica_vitrine",
   "frete",
-  "dica_tecido"
+  "dica_tecido",
+  "novidade"
  ],
  "formatos": [
   "classico",
@@ -325,7 +335,8 @@
   "classico",
   "rapido",
   "pergunta",
-  "vitrine"
+  "vitrine",
+  "rapido"
  ],
  "musicas": [
   "upbeat-atlas.mp3",
@@ -347,7 +358,8 @@
   "phonk-mountain.mp3",
   "phonk-subclair.mp3",
   "phonk-instrumental.mp3",
-  "upbeat-rock.mp3"
+  "upbeat-rock.mp3",
+  "upbeat-corporate.mp3"
  ],
  "ultimo_post_meio": "2026-11-13",
  "contagem_meio": 9
