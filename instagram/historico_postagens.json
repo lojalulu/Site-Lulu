@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -127,15 +127,16 @@
       "2488494",
       "3592535",
       "4059477",
-      "334036"
+      "334036",
+      "4323187"
     ]
   },
   "ultimos_pilares": [
-    "renda_extra",
     "conforto",
     "cliente_ama",
     "qualidade",
-    "estilo"
+    "estilo",
+    "lucratividade"
   ],
   "conhecidos": {
     "kits": [
@@ -443,11 +444,11 @@
       "Kit com cores variadas."
     ],
     "cta_bio": [
-      "Pedido pelo site, link na bio 🛍️",
       "Link da bio te leva direto pro catálogo 📲",
       "Catálogo completo — link na bio ✨",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
-      "Dá uma espiada no link da bio 💗"
+      "Dá uma espiada no link da bio 💗",
+      "Catálogo inteiro tá no link da bio 👆"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -456,10 +457,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Peça avulsa premium — você monta o pedido do seu jeito.",
       "Você escolhe peça por peça (mínimo de 10 no pedido).",
       "Peça avulsa, malha premium.",
-      "Vendida avulsa, sem precisar levar kit fechado."
+      "Vendida avulsa, sem precisar levar kit fechado.",
+      "Atacado de peça avulsa, a partir de 10 peças."
     ],
     "qualidade_avulso": [
       "Acabamento caprichado, costura reforçada, peça que dura.",
@@ -534,12 +535,12 @@
       "Poucas peças disponíveis por enquanto."
     ],
     "lucratividade": [
-      "Faz a conta: o valor por peça no kit deixa espaço pra um bom lucro.",
       "Custo baixo por peça é o que faz a revenda valer a pena.",
       "Quanto menor o custo, mais fácil fica competir e ainda lucrar.",
       "Você define seu preço de venda — a margem fica com você.",
       "Preço de fábrica pra você vender com uma margem boa de verdade.",
-      "Comprando direto da fábrica, sem intermediário."
+      "Comprando direto da fábrica, sem intermediário.",
+      "Faz a conta: divide o valor do kit por 5 e veja quanto sai cada peça."
     ],
     "cliente_ama": [
       "Quem comprou elogiou o caimento — e caimento bom é venda garantida.",
@@ -549,8 +550,8 @@
     ]
   },
   "contagem_dia": {
-    "data": "2026-11-13",
-    "n": 4
+    "data": "2026-11-14",
+    "n": 1
   },
   "novidades_feed": [
     "3378707",
