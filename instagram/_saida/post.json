@@ -1,15 +1,21 @@
 {
-  "loja": "avulso",
-  "produto_id": "4323187",
-  "produto_nome": "CALÇA FLARE 001",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1793132751_8d0e10dea3a984b36ce1.webp",
+  "loja": "kits",
+  "produto_id": "947432",
+  "produto_nome": "Pacote com 5 Conjuntos De Short Saia 02",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1701110849_90feb39535b8be252697.jpeg",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "🏋️‍♀️ Faz a conta: divide o valor do kit por 5 e veja quanto sai cada peça.\n\nAtacado de peça avulsa, a partir de 10 peças.\n\nCatálogo inteiro tá no link da bio 👆",
-  "formato_feed": null,
-  "carrossel": null,
-  "legenda_reserva": "🏋️‍♀️ Faz a conta: divide o valor do kit por 5 e veja quanto sai cada peça.\n\nAtacado de peça avulsa, a partir de 10 peças.\n\nCatálogo inteiro tá no link da bio 👆",
-  "pilar": "lucratividade",
+  "legenda_feed": "Você já conhece a história da Lulu? 💗\n\nNascemos em Salvador e temos fábrica própria em Recife desde 2013.\n\nHoje a vitrine é toda online: luluextra.com.\n\nVê todos os modelos e cores no link da bio 👆\n\n#rendaextra #salvador #modafitnesssalvador",
+  "formato_feed": "info",
+  "carrossel": [
+    "instagram/_saida/carrossel_1.jpg",
+    "instagram/_saida/carrossel_2.jpg",
+    "instagram/_saida/carrossel_3.jpg",
+    "instagram/_saida/carrossel_4.jpg",
+    "instagram/_saida/carrossel_5.jpg"
+  ],
+  "legenda_reserva": "🛍️ Suplex vip, zero transparência.\n\nFrete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦\n\nVem em kit fechado de 5, tecido suplex vip.\n\nPedido pelo site, link na bio 🛍️\n\n#modafitnesssalvador",
+  "pilar": "qualidade",
   "eh_lancamento": false,
-  "publicar_feed": false,
-  "rodada_do_dia": 1
+  "publicar_feed": true,
+  "rodada_do_dia": 2
 }
