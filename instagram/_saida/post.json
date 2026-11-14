@@ -1,21 +1,15 @@
 {
-  "loja": "kits",
-  "produto_id": "947432",
-  "produto_nome": "Pacote com 5 Conjuntos De Short Saia 02",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1701110849_90feb39535b8be252697.jpeg",
+  "loja": "avulso",
+  "produto_id": "327777",
+  "produto_nome": "TOP NADADOR 3D REF 091",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1777398338_72981bde90a992375686.webp",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "Você já conhece a história da Lulu? 💗\n\nNascemos em Salvador e temos fábrica própria em Recife desde 2013.\n\nHoje a vitrine é toda online: luluextra.com.\n\nVê todos os modelos e cores no link da bio 👆\n\n#rendaextra #salvador #modafitnesssalvador",
-  "formato_feed": "info",
-  "carrossel": [
-    "instagram/_saida/carrossel_1.jpg",
-    "instagram/_saida/carrossel_2.jpg",
-    "instagram/_saida/carrossel_3.jpg",
-    "instagram/_saida/carrossel_4.jpg",
-    "instagram/_saida/carrossel_5.jpg"
-  ],
-  "legenda_reserva": "🛍️ Suplex vip, zero transparência.\n\nFrete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦\n\nVem em kit fechado de 5, tecido suplex vip.\n\nPedido pelo site, link na bio 🛍️\n\n#modafitnesssalvador",
-  "pilar": "qualidade",
+  "legenda_feed": "💗 Se você revende moda fitness, vale ter esse modelo na vitrine.\n\nTem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦\n\nPeça avulsa premium — você monta o pedido do seu jeito.\n\nLink da bio te leva direto pro catálogo 📲",
+  "formato_feed": null,
+  "carrossel": null,
+  "legenda_reserva": "💗 Se você revende moda fitness, vale ter esse modelo na vitrine.\n\nTem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦\n\nPeça avulsa premium — você monta o pedido do seu jeito.\n\nLink da bio te leva direto pro catálogo 📲",
+  "pilar": "renda_extra",
   "eh_lancamento": false,
-  "publicar_feed": true,
-  "rodada_do_dia": 2
+  "publicar_feed": false,
+  "rodada_do_dia": 3
 }

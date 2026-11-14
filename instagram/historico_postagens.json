@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -136,15 +136,16 @@
       "3592535",
       "4059477",
       "334036",
-      "4323187"
+      "4323187",
+      "327777"
     ]
   },
   "ultimos_pilares": [
-    "cliente_ama",
     "qualidade",
     "estilo",
     "lucratividade",
-    "qualidade"
+    "qualidade",
+    "renda_extra"
   ],
   "conhecidos": {
     "kits": [
@@ -452,11 +453,11 @@
       "Vem em kit fechado de 5, tecido suplex vip."
     ],
     "cta_bio": [
-      "Catálogo completo — link na bio ✨",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Dá uma espiada no link da bio 💗",
       "Catálogo inteiro tá no link da bio 👆",
-      "Pedido pelo site, link na bio 🛍️"
+      "Pedido pelo site, link na bio 🛍️",
+      "Link da bio te leva direto pro catálogo 📲"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -465,10 +466,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Você escolhe peça por peça (mínimo de 10 no pedido).",
       "Peça avulsa, malha premium.",
       "Vendida avulsa, sem precisar levar kit fechado.",
-      "Atacado de peça avulsa, a partir de 10 peças."
+      "Atacado de peça avulsa, a partir de 10 peças.",
+      "Peça avulsa premium — você monta o pedido do seu jeito."
     ],
     "qualidade_avulso": [
       "Acabamento caprichado, costura reforçada, peça que dura.",
@@ -480,9 +481,9 @@
       "Toque macio, tecido encorpado, acabamento de loja boa."
     ],
     "frete_avulso": [
-      "Frete grátis (Vip) pra Salvador e todo o Brasil 🚚",
       "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚",
-      "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛"
+      "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛",
+      "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦"
     ],
     "preco_kits": [
       "{quantidade}: {preco}.",
@@ -505,14 +506,14 @@
       "Veste bem do treino da manhã até o fim do dia."
     ],
     "renda_extra": [
-      "Quem revende sabe: peça boa e barata é lucro certo no fim do mês.",
       "Revender moda fitness é bom porque a cliente sempre volta pra comprar mais.",
       "Peça que você posta no status e já aparece gente perguntando o preço.",
       "Pra quem vende no WhatsApp ou no Instagram, essa peça ajuda a fechar pedido.",
       "Essa entra no pedido e sai do seu estoque rapidinho.",
       "Quer começar a revender? Esse é o tipo de peça que facilita.",
       "Se o objetivo é aumentar a renda, começa pelo que vende fácil.",
-      "Renda extra de verdade começa com produto que a cliente quer comprar."
+      "Renda extra de verdade começa com produto que a cliente quer comprar.",
+      "Se você revende moda fitness, vale ter esse modelo na vitrine."
     ],
     "estilo": [
       "Sai da academia e já segue o dia sem trocar de roupa.",
@@ -559,7 +560,7 @@
   },
   "contagem_dia": {
     "data": "2026-11-14",
-    "n": 2
+    "n": 3
   },
   "novidades_feed": [
     "3378707",
