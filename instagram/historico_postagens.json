@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -138,15 +138,16 @@
       "4059477",
       "334036",
       "4323187",
-      "327777"
+      "327777",
+      "4555358"
     ]
   },
   "ultimos_pilares": [
-    "estilo",
     "lucratividade",
     "qualidade",
     "renda_extra",
-    "lucratividade"
+    "lucratividade",
+    "estilo"
   ],
   "conhecidos": {
     "kits": [
@@ -454,11 +455,11 @@
       "Kit fechado — ótimo pra começar a revender."
     ],
     "cta_bio": [
-      "Dá uma espiada no link da bio 💗",
       "Catálogo inteiro tá no link da bio 👆",
       "Pedido pelo site, link na bio 🛍️",
       "Link da bio te leva direto pro catálogo 📲",
-      "Catálogo completo — link na bio ✨"
+      "Catálogo completo — link na bio ✨",
+      "Link na bio 🔗"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -467,10 +468,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Peça avulsa, malha premium.",
       "Vendida avulsa, sem precisar levar kit fechado.",
       "Atacado de peça avulsa, a partir de 10 peças.",
-      "Peça avulsa premium — você monta o pedido do seu jeito."
+      "Peça avulsa premium — você monta o pedido do seu jeito.",
+      "Você escolhe peça por peça (mínimo de 10 no pedido)."
     ],
     "qualidade_avulso": [
       "Acabamento caprichado, costura reforçada, peça que dura.",
@@ -517,14 +518,14 @@
       "Se você revende moda fitness, vale ter esse modelo na vitrine."
     ],
     "estilo": [
-      "Sai da academia e já segue o dia sem trocar de roupa.",
       "Bonita no treino e bonita na rua também.",
       "Aquele visual que a cliente vê no feed e já quer pro guarda-roupa.",
       "Peça que fica linda na foto — ajuda muito na hora de divulgar.",
       "Detalhes que fazem diferença e deixam o conjunto mais bonito.",
       "Combina com tênis, sandália ou papete — serve pra tudo.",
       "Visual arrumado sem esforço nenhum.",
-      "Cores que chamam atenção na vitrine e no seu status."
+      "Cores que chamam atenção na vitrine e no seu status.",
+      "Tem cara de peça cara, mas com preço de atacado."
     ],
     "qualidade_kits": [
       "Zero transparência de verdade — o padrão do suplex vip da Lulu.",
@@ -560,8 +561,8 @@
     ]
   },
   "contagem_dia": {
-    "data": "2026-11-14",
-    "n": 4
+    "data": "2026-11-15",
+    "n": 1
   },
   "novidades_feed": [
     "3378707",
