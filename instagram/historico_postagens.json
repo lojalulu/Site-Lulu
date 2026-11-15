@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -76,7 +76,8 @@
       "4485653",
       "2708825",
       "947432",
-      "384568"
+      "384568",
+      "4430502"
     ],
     "avulso": [
       "3117836",
@@ -143,11 +144,11 @@
     ]
   },
   "ultimos_pilares": [
-    "lucratividade",
     "qualidade",
     "renda_extra",
     "lucratividade",
-    "estilo"
+    "estilo",
+    "renda_extra"
   ],
   "conhecidos": {
     "kits": [
@@ -449,17 +450,17 @@
       "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦"
     ],
     "tag_kits": [
-      "Kit fechado, 5 peças, suplex vip.",
       "Kit com cores variadas.",
       "Vem em kit fechado de 5, tecido suplex vip.",
-      "Kit fechado — ótimo pra começar a revender."
+      "Kit fechado — ótimo pra começar a revender.",
+      "É kit fechado com 5 peças, em suplex vip."
     ],
     "cta_bio": [
-      "Catálogo inteiro tá no link da bio 👆",
       "Pedido pelo site, link na bio 🛍️",
       "Link da bio te leva direto pro catálogo 📲",
       "Catálogo completo — link na bio ✨",
-      "Link na bio 🔗"
+      "Link na bio 🔗",
+      "Vê as cores e monta seu pedido pelo link da bio 🔗"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -508,14 +509,14 @@
       "Veste bem do treino da manhã até o fim do dia."
     ],
     "renda_extra": [
-      "Revender moda fitness é bom porque a cliente sempre volta pra comprar mais.",
       "Peça que você posta no status e já aparece gente perguntando o preço.",
       "Pra quem vende no WhatsApp ou no Instagram, essa peça ajuda a fechar pedido.",
       "Essa entra no pedido e sai do seu estoque rapidinho.",
       "Quer começar a revender? Esse é o tipo de peça que facilita.",
       "Se o objetivo é aumentar a renda, começa pelo que vende fácil.",
       "Renda extra de verdade começa com produto que a cliente quer comprar.",
-      "Se você revende moda fitness, vale ter esse modelo na vitrine."
+      "Se você revende moda fitness, vale ter esse modelo na vitrine.",
+      "Boa pra quem vende pra academia, vizinhança ou grupo de amigas."
     ],
     "estilo": [
       "Bonita no treino e bonita na rua também.",
@@ -562,7 +563,7 @@
   },
   "contagem_dia": {
     "data": "2026-11-15",
-    "n": 1
+    "n": 2
   },
   "novidades_feed": [
     "3378707",
@@ -573,7 +574,8 @@
   ],
   "formatos_feed": [
     "novidades",
-    "info"
+    "info",
+    "produto"
   ],
   "temas_info": [
     "lulu"

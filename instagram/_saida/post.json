@@ -1,15 +1,15 @@
 {
-  "loja": "avulso",
-  "produto_id": "4555358",
-  "produto_nome": "CONJUNTO PREMIUM",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1793131189_93ffd72e7680e6c02f9d.webp",
+  "loja": "kits",
+  "produto_id": "4430502",
+  "produto_nome": "Pacote com 5 Conjuntos Short Duplo Ref 09 Em Poliamida",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1788226162_509cfdcf2a315716becc.webp",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "✨ Tem cara de peça cara, mas com preço de atacado.\n\nVocê escolhe peça por peça (mínimo de 10 no pedido).\n\nLink na bio 🔗\n\n#modafitness",
-  "formato_feed": null,
+  "legenda_feed": "💫 Boa pra quem vende pra academia, vizinhança ou grupo de amigas.\n\nÉ kit fechado com 5 peças, em suplex vip.\n\nVê as cores e monta seu pedido pelo link da bio 🔗\n\n#modafitnessevangelica",
+  "formato_feed": "produto",
   "carrossel": null,
-  "legenda_reserva": "✨ Tem cara de peça cara, mas com preço de atacado.\n\nVocê escolhe peça por peça (mínimo de 10 no pedido).\n\nLink na bio 🔗\n\n#modafitness",
-  "pilar": "estilo",
+  "legenda_reserva": "💫 Boa pra quem vende pra academia, vizinhança ou grupo de amigas.\n\nÉ kit fechado com 5 peças, em suplex vip.\n\nVê as cores e monta seu pedido pelo link da bio 🔗\n\n#modafitnessevangelica",
+  "pilar": "renda_extra",
   "eh_lancamento": false,
-  "publicar_feed": false,
-  "rodada_do_dia": 1
+  "publicar_feed": true,
+  "rodada_do_dia": 2
 }
