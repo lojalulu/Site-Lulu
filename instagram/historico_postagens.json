@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -140,15 +140,16 @@
       "334036",
       "4323187",
       "327777",
-      "4555358"
+      "4555358",
+      "3118777"
     ]
   },
   "ultimos_pilares": [
-    "qualidade",
     "renda_extra",
     "lucratividade",
     "estilo",
-    "renda_extra"
+    "renda_extra",
+    "conforto"
   ],
   "conhecidos": {
     "kits": [
@@ -469,10 +470,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Vendida avulsa, sem precisar levar kit fechado.",
       "Atacado de peça avulsa, a partir de 10 peças.",
       "Peça avulsa premium — você monta o pedido do seu jeito.",
-      "Você escolhe peça por peça (mínimo de 10 no pedido)."
+      "Você escolhe peça por peça (mínimo de 10 no pedido).",
+      "É peça avulsa, na malha premium."
     ],
     "qualidade_avulso": [
       "Acabamento caprichado, costura reforçada, peça que dura.",
@@ -484,9 +485,9 @@
       "Toque macio, tecido encorpado, acabamento de loja boa."
     ],
     "frete_avulso": [
-      "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚",
       "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛",
-      "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦"
+      "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦",
+      "Pedido de peça avulsa com frete grátis (Vip) 📦"
     ],
     "preco_kits": [
       "{quantidade}: {preco}.",
@@ -495,18 +496,18 @@
       "{quantidade} - só {preco}."
     ],
     "cta_alt": [
-      "Me chama no direct que te passo os detalhes 💬",
-      "Chama no direct que a gente te ajuda 💬"
+      "Chama no direct que a gente te ajuda 💬",
+      "Manda mensagem que a gente te ajuda a montar o pedido 💬"
     ],
     "conforto": [
-      "Costura bem feita, que não incomoda na pele.",
       "Firme sem ser apertada. É isso que a cliente procura.",
       "Modelagem que dá liberdade pra se mexer.",
       "Conforto é o que faz a cliente usar toda semana — e indicar.",
       "Peça leve, que não pesa nem nos dias mais quentes.",
       "Tecido macio, que não pinica nem esquenta demais.",
       "Cós que não enrola e não aperta a barriga.",
-      "Veste bem do treino da manhã até o fim do dia."
+      "Veste bem do treino da manhã até o fim do dia.",
+      "Elástico que não marca, tecido que respira. Conforto de verdade."
     ],
     "renda_extra": [
       "Peça que você posta no status e já aparece gente perguntando o preço.",
@@ -563,7 +564,7 @@
   },
   "contagem_dia": {
     "data": "2026-11-15",
-    "n": 2
+    "n": 3
   },
   "novidades_feed": [
     "3378707",

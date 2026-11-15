@@ -1,15 +1,15 @@
 {
-  "loja": "kits",
-  "produto_id": "4430502",
-  "produto_nome": "Pacote com 5 Conjuntos Short Duplo Ref 09 Em Poliamida",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1788226162_509cfdcf2a315716becc.webp",
+  "loja": "avulso",
+  "produto_id": "3118777",
+  "produto_nome": "LEGGING LISA GG",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1750292562_a2d51897d782435a0fcd.jpg.webp",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "💫 Boa pra quem vende pra academia, vizinhança ou grupo de amigas.\n\nÉ kit fechado com 5 peças, em suplex vip.\n\nVê as cores e monta seu pedido pelo link da bio 🔗\n\n#modafitnessevangelica",
-  "formato_feed": "produto",
+  "legenda_feed": "⭐ Elástico que não marca, tecido que respira. Conforto de verdade.\n\nPedido de peça avulsa com frete grátis (Vip) 📦\n\nÉ peça avulsa, na malha premium.\n\nManda mensagem que a gente te ajuda a montar o pedido 💬",
+  "formato_feed": null,
   "carrossel": null,
-  "legenda_reserva": "💫 Boa pra quem vende pra academia, vizinhança ou grupo de amigas.\n\nÉ kit fechado com 5 peças, em suplex vip.\n\nVê as cores e monta seu pedido pelo link da bio 🔗\n\n#modafitnessevangelica",
-  "pilar": "renda_extra",
+  "legenda_reserva": "⭐ Elástico que não marca, tecido que respira. Conforto de verdade.\n\nPedido de peça avulsa com frete grátis (Vip) 📦\n\nÉ peça avulsa, na malha premium.\n\nManda mensagem que a gente te ajuda a montar o pedido 💬",
+  "pilar": "conforto",
   "eh_lancamento": false,
-  "publicar_feed": true,
-  "rodada_do_dia": 2
+  "publicar_feed": false,
+  "rodada_do_dia": 3
 }
