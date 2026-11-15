@@ -275,7 +275,15 @@
   "2049293",
   "318143",
   "2049296",
-  "318126"
+  "318126",
+  "3221669",
+  "384571",
+  "3501601",
+  "3311193",
+  "3781598",
+  "449557",
+  "4431155",
+  "2967282"
  ],
  "ganchos": [
   "Montar *loja online* sem marca própria é perder tempo",
@@ -307,7 +315,8 @@
   "Você lava sua legging do jeito certo, revendedora de Salvador?",
   "Sua vitrine precisa de modelos novos toda semana?",
   "Que tal ter sua *loja online* pronta?",
-  "Monte uma vitrine *colorida* com um pedido só"
+  "Monte uma vitrine *colorida* com um pedido só",
+  "Sua foto de *conjunto fitness* pode vender mais"
  ],
  "ultimo_post": "2026-11-14",
  "angulos": [
@@ -333,7 +342,8 @@
   "dica_tecido",
   "novidade",
   "fq_loja",
-  "cores"
+  "cores",
+  "dica_vitrine"
  ],
  "formatos": [
   "classico",
@@ -358,7 +368,8 @@
   "vitrine",
   "rapido",
   "classico",
-  "pergunta"
+  "pergunta",
+  "rapido"
  ],
  "musicas": [
   "upbeat-atlas.mp3",
@@ -383,8 +394,9 @@
   "upbeat-rock.mp3",
   "upbeat-corporate.mp3",
   "upbeat-alex.mp3",
-  "phonk-mountain2.mp3"
+  "phonk-mountain2.mp3",
+  "upbeat-atlas.mp3"
  ],
- "ultimo_post_meio": "2026-11-14",
- "contagem_meio": 10
+ "ultimo_post_meio": "2026-11-15",
+ "contagem_meio": 11
 }
