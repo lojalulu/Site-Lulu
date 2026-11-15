@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -75,7 +75,8 @@
       "3249117",
       "4485653",
       "2708825",
-      "947432"
+      "947432",
+      "384568"
     ],
     "avulso": [
       "3117836",
@@ -141,11 +142,11 @@
     ]
   },
   "ultimos_pilares": [
-    "qualidade",
     "estilo",
     "lucratividade",
     "qualidade",
-    "renda_extra"
+    "renda_extra",
+    "lucratividade"
   ],
   "conhecidos": {
     "kits": [
@@ -447,17 +448,17 @@
       "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦"
     ],
     "tag_kits": [
-      "Vendido em kit fechado, cores sortidas.",
       "Kit fechado, 5 peças, suplex vip.",
       "Kit com cores variadas.",
-      "Vem em kit fechado de 5, tecido suplex vip."
+      "Vem em kit fechado de 5, tecido suplex vip.",
+      "Kit fechado — ótimo pra começar a revender."
     ],
     "cta_bio": [
-      "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Dá uma espiada no link da bio 💗",
       "Catálogo inteiro tá no link da bio 👆",
       "Pedido pelo site, link na bio 🛍️",
-      "Link da bio te leva direto pro catálogo 📲"
+      "Link da bio te leva direto pro catálogo 📲",
+      "Catálogo completo — link na bio ✨"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -544,12 +545,12 @@
       "Poucas peças disponíveis por enquanto."
     ],
     "lucratividade": [
-      "Custo baixo por peça é o que faz a revenda valer a pena.",
       "Quanto menor o custo, mais fácil fica competir e ainda lucrar.",
       "Você define seu preço de venda — a margem fica com você.",
       "Preço de fábrica pra você vender com uma margem boa de verdade.",
       "Comprando direto da fábrica, sem intermediário.",
-      "Faz a conta: divide o valor do kit por 5 e veja quanto sai cada peça."
+      "Faz a conta: divide o valor do kit por 5 e veja quanto sai cada peça.",
+      "Preço de atacado de verdade, sem intermediário no meio."
     ],
     "cliente_ama": [
       "Quem comprou elogiou o caimento — e caimento bom é venda garantida.",
@@ -560,7 +561,7 @@
   },
   "contagem_dia": {
     "data": "2026-11-14",
-    "n": 3
+    "n": 4
   },
   "novidades_feed": [
     "3378707",
