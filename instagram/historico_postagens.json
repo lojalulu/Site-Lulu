@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -151,15 +151,16 @@
       "327777",
       "4555358",
       "3118777",
-      "4477104"
+      "4477104",
+      "331422"
     ]
   },
   "ultimos_pilares": [
-    "renda_extra",
     "conforto",
     "qualidade",
     "cliente_ama",
-    "lucratividade"
+    "lucratividade",
+    "renda_extra"
   ],
   "conhecidos": {
     "kits": [
@@ -467,11 +468,11 @@
       "Kit com cores variadas."
     ],
     "cta_bio": [
-      "Link na bio 🔗",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Dá uma espiada no link da bio 💗",
       "Pedido pelo site, link na bio 🛍️",
-      "Os outros modelos estão no link da bio 👆"
+      "Os outros modelos estão no link da bio 👆",
+      "Catálogo inteiro tá no link da bio 👆"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -480,10 +481,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Peça avulsa premium — você monta o pedido do seu jeito.",
       "Você escolhe peça por peça (mínimo de 10 no pedido).",
       "É peça avulsa, na malha premium.",
-      "Peça avulsa, malha premium."
+      "Peça avulsa, malha premium.",
+      "Atacado de peça avulsa, a partir de 10 peças."
     ],
     "qualidade_avulso": [
       "Acabamento caprichado, costura reforçada, peça que dura.",
@@ -495,9 +496,9 @@
       "Toque macio, tecido encorpado, acabamento de loja boa."
     ],
     "frete_avulso": [
-      "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛",
       "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦",
-      "Pedido de peça avulsa com frete grátis (Vip) 📦"
+      "Pedido de peça avulsa com frete grátis (Vip) 📦",
+      "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚"
     ],
     "preco_kits": [
       "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
@@ -520,14 +521,14 @@
       "Elástico que não marca, tecido que respira. Conforto de verdade."
     ],
     "renda_extra": [
-      "Peça que você posta no status e já aparece gente perguntando o preço.",
       "Pra quem vende no WhatsApp ou no Instagram, essa peça ajuda a fechar pedido.",
       "Essa entra no pedido e sai do seu estoque rapidinho.",
       "Quer começar a revender? Esse é o tipo de peça que facilita.",
       "Se o objetivo é aumentar a renda, começa pelo que vende fácil.",
       "Renda extra de verdade começa com produto que a cliente quer comprar.",
       "Se você revende moda fitness, vale ter esse modelo na vitrine.",
-      "Boa pra quem vende pra academia, vizinhança ou grupo de amigas."
+      "Boa pra quem vende pra academia, vizinhança ou grupo de amigas.",
+      "Quem revende sabe: peça boa e com preço de atacado faz diferença no fim do mês."
     ],
     "estilo": [
       "Bonita no treino e bonita na rua também.",
@@ -574,7 +575,7 @@
   },
   "contagem_dia": {
     "data": "2026-11-16",
-    "n": 2
+    "n": 3
   },
   "novidades_feed": [
     "3378707",
