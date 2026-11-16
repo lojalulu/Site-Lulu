@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -142,15 +142,16 @@
       "4323187",
       "327777",
       "4555358",
-      "3118777"
+      "3118777",
+      "4477104"
     ]
   },
   "ultimos_pilares": [
-    "lucratividade",
     "estilo",
     "renda_extra",
     "conforto",
-    "qualidade"
+    "qualidade",
+    "cliente_ama"
   ],
   "conhecidos": {
     "kits": [
@@ -458,11 +459,11 @@
       "Vendido em kit fechado, cores sortidas."
     ],
     "cta_bio": [
-      "Link da bio te leva direto pro catálogo 📲",
       "Catálogo completo — link na bio ✨",
       "Link na bio 🔗",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
-      "Dá uma espiada no link da bio 💗"
+      "Dá uma espiada no link da bio 💗",
+      "Pedido pelo site, link na bio 🛍️"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -471,10 +472,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Atacado de peça avulsa, a partir de 10 peças.",
       "Peça avulsa premium — você monta o pedido do seu jeito.",
       "Você escolhe peça por peça (mínimo de 10 no pedido).",
-      "É peça avulsa, na malha premium."
+      "É peça avulsa, na malha premium.",
+      "Peça avulsa, malha premium."
     ],
     "qualidade_avulso": [
       "Acabamento caprichado, costura reforçada, peça que dura.",
@@ -557,15 +558,15 @@
       "Preço de atacado de verdade, sem intermediário no meio."
     ],
     "cliente_ama": [
-      "Quem comprou elogiou o caimento — e caimento bom é venda garantida.",
       "Sua cliente vai amar essa modelagem — e voltar pra pedir mais.",
       "Veste bem em corpos diferentes, por isso quase não tem troca.",
-      "Modelagem pensada pra valorizar o corpo sem apertar."
+      "Modelagem pensada pra valorizar o corpo sem apertar.",
+      "Modelo versátil, que combina com vários estilos."
     ]
   },
   "contagem_dia": {
-    "data": "2026-11-15",
-    "n": 4
+    "data": "2026-11-16",
+    "n": 1
   },
   "novidades_feed": [
     "3378707",
