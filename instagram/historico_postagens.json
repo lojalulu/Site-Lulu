@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -78,7 +78,15 @@
       "947432",
       "384568",
       "4430502",
-      "4210537"
+      "4210537",
+      "3703565",
+      "2049282",
+      "4430522",
+      "1139922",
+      "3347550",
+      "684191",
+      "2816699",
+      "3378713"
     ],
     "avulso": [
       "3117836",
@@ -147,11 +155,11 @@
     ]
   },
   "ultimos_pilares": [
-    "estilo",
     "renda_extra",
     "conforto",
     "qualidade",
-    "cliente_ama"
+    "cliente_ama",
+    "lucratividade"
   ],
   "conhecidos": {
     "kits": [
@@ -448,22 +456,22 @@
       "Modelo inédito no catálogo. Vale a pena conferir."
     ],
     "frete_kits": [
-      "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚",
       "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚",
-      "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦"
+      "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦",
+      "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛"
     ],
     "tag_kits": [
-      "Vem em kit fechado de 5, tecido suplex vip.",
       "Kit fechado — ótimo pra começar a revender.",
       "É kit fechado com 5 peças, em suplex vip.",
-      "Vendido em kit fechado, cores sortidas."
+      "Vendido em kit fechado, cores sortidas.",
+      "Kit com cores variadas."
     ],
     "cta_bio": [
-      "Catálogo completo — link na bio ✨",
       "Link na bio 🔗",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Dá uma espiada no link da bio 💗",
-      "Pedido pelo site, link na bio 🛍️"
+      "Pedido pelo site, link na bio 🛍️",
+      "Os outros modelos estão no link da bio 👆"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -550,12 +558,12 @@
       "Poucas peças disponíveis por enquanto."
     ],
     "lucratividade": [
-      "Quanto menor o custo, mais fácil fica competir e ainda lucrar.",
       "Você define seu preço de venda — a margem fica com você.",
       "Preço de fábrica pra você vender com uma margem boa de verdade.",
       "Comprando direto da fábrica, sem intermediário.",
       "Faz a conta: divide o valor do kit por 5 e veja quanto sai cada peça.",
-      "Preço de atacado de verdade, sem intermediário no meio."
+      "Preço de atacado de verdade, sem intermediário no meio.",
+      "Atacado com preço pensado pra quem revende."
     ],
     "cliente_ama": [
       "Sua cliente vai amar essa modelagem — e voltar pra pedir mais.",
@@ -566,7 +574,7 @@
   },
   "contagem_dia": {
     "data": "2026-11-16",
-    "n": 1
+    "n": 2
   },
   "novidades_feed": [
     "3378707",
@@ -578,9 +586,11 @@
   "formatos_feed": [
     "novidades",
     "info",
-    "produto"
+    "produto",
+    "info"
   ],
   "temas_info": [
-    "lulu"
+    "lulu",
+    "kit"
   ]
 }
