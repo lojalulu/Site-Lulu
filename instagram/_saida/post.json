@@ -1,15 +1,23 @@
 {
   "loja": "kits",
-  "produto_id": "2816743",
-  "produto_nome": "Pacote com 5 Conjuntos de Short 04 Suplex PLUS SIZE",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1740420789_4099cdd6334bcd8d85f5.jpeg.webp",
+  "produto_id": "4430515",
+  "produto_nome": "Pacote com 5 Conjuntos Corta Vento+Short Duplo de Tactel Ref 03",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1788226825_0c94985bb3de0fd01273.webp",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "✨ Caimento bonito na foto e no corpo — ajuda a vender.\n\n5 Conjuntos: R$ 264,90.\n\nVem em kit fechado de 5, tecido suplex vip.\n\nLink na bio 🔗\n\n#salvador #rendaextra",
-  "formato_feed": null,
-  "carrossel": null,
-  "legenda_reserva": "✨ Caimento bonito na foto e no corpo — ajuda a vender.\n\n5 Conjuntos: R$ 264,90.\n\nVem em kit fechado de 5, tecido suplex vip.\n\nLink na bio 🔗\n\n#salvador #rendaextra",
-  "pilar": "cliente_ama",
+  "legenda_feed": "Vitrine da semana na Lulu 👇\n\n• 5 peças por R$ 280,90 — Casaco Fitness com Zíper e Bolso\n• 5 Conjuntos por R$ 192,90 — Conjuntos De Calça Viés 07\n• 5 Conjuntos por R$ 261,90 — Conjuntos Plus Size Faixa Cós\n• 5 Conjuntos por R$ 208,90 — Conjuntos de Short Duplo em Suplex 05\n• 5 Conjuntos por R$ 320,90 — Conjuntos Corta Vento+Short Duplo de Tactel…\n\nPedido mínimo de 4 kits • frete Vip grátis a partir de 6 • Pix com 10% de desconto nas peças.\n\nEnvia pra sua sócia de revenda ver também 💌\n\nCatálogo completo no link da bio 🔗",
+  "formato_feed": "vitrine",
+  "carrossel": [
+    "instagram/_saida/carrossel_1.jpg",
+    "instagram/_saida/carrossel_2.jpg",
+    "instagram/_saida/carrossel_3.jpg",
+    "instagram/_saida/carrossel_4.jpg",
+    "instagram/_saida/carrossel_5.jpg",
+    "instagram/_saida/carrossel_6.jpg",
+    "instagram/_saida/carrossel_7.jpg"
+  ],
+  "legenda_reserva": "🌸 Custo baixo por peça é o que faz a revenda valer a pena.\n\nR$ 320,90 no kit com 5 Conjuntos.\n\nKit fechado, 5 peças, suplex vip.\n\nCatálogo completo — link na bio ✨\n\n#salvador",
+  "pilar": "lucratividade",
   "eh_lancamento": false,
-  "publicar_feed": false,
-  "rodada_do_dia": 1
+  "publicar_feed": true,
+  "rodada_do_dia": 2
 }

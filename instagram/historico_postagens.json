@@ -87,7 +87,12 @@
       "684191",
       "2816699",
       "3378713",
-      "2816743"
+      "2816743",
+      "3781598",
+      "1366446",
+      "318126",
+      "3745064",
+      "4430515"
     ],
     "avulso": [
       "3117836",
@@ -157,11 +162,11 @@
     ]
   },
   "ultimos_pilares": [
-    "qualidade",
     "cliente_ama",
     "lucratividade",
     "renda_extra",
-    "cliente_ama"
+    "cliente_ama",
+    "lucratividade"
   ],
   "conhecidos": {
     "kits": [
@@ -463,17 +468,17 @@
       "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛"
     ],
     "tag_kits": [
-      "É kit fechado com 5 peças, em suplex vip.",
       "Vendido em kit fechado, cores sortidas.",
       "Kit com cores variadas.",
-      "Vem em kit fechado de 5, tecido suplex vip."
+      "Vem em kit fechado de 5, tecido suplex vip.",
+      "Kit fechado, 5 peças, suplex vip."
     ],
     "cta_bio": [
-      "Dá uma espiada no link da bio 💗",
       "Pedido pelo site, link na bio 🛍️",
       "Os outros modelos estão no link da bio 👆",
       "Catálogo inteiro tá no link da bio 👆",
-      "Link na bio 🔗"
+      "Link na bio 🔗",
+      "Catálogo completo — link na bio ✨"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -502,10 +507,10 @@
       "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚"
     ],
     "preco_kits": [
-      "Kit com {quantidade} por {preco}.",
       "{quantidade} - só {preco}.",
       "Hoje, {quantidade} saem por {preco}.",
-      "{quantidade}: {preco}."
+      "{quantidade}: {preco}.",
+      "{preco} no kit com {quantidade}."
     ],
     "cta_alt": [
       "Chama no direct que a gente te ajuda 💬",
@@ -560,12 +565,12 @@
       "Poucas peças disponíveis por enquanto."
     ],
     "lucratividade": [
-      "Você define seu preço de venda — a margem fica com você.",
       "Preço de fábrica pra você vender com uma margem boa de verdade.",
       "Comprando direto da fábrica, sem intermediário.",
       "Faz a conta: divide o valor do kit por 5 e veja quanto sai cada peça.",
       "Preço de atacado de verdade, sem intermediário no meio.",
-      "Atacado com preço pensado pra quem revende."
+      "Atacado com preço pensado pra quem revende.",
+      "Custo baixo por peça é o que faz a revenda valer a pena."
     ],
     "cliente_ama": [
       "Veste bem em corpos diferentes, por isso quase não tem troca.",
@@ -576,7 +581,7 @@
   },
   "contagem_dia": {
     "data": "2026-11-17",
-    "n": 1
+    "n": 2
   },
   "novidades_feed": [
     "3378707",
@@ -589,7 +594,8 @@
     "novidades",
     "info",
     "produto",
-    "info"
+    "info",
+    "vitrine"
   ],
   "temas_info": [
     "lulu",
