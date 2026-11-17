@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -158,15 +158,16 @@
       "4555358",
       "3118777",
       "4477104",
-      "331422"
+      "331422",
+      "4307641"
     ]
   },
   "ultimos_pilares": [
-    "cliente_ama",
     "lucratividade",
     "renda_extra",
     "cliente_ama",
-    "lucratividade"
+    "lucratividade",
+    "estilo"
   ],
   "conhecidos": {
     "kits": [
@@ -487,10 +488,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Você escolhe peça por peça (mínimo de 10 no pedido).",
       "É peça avulsa, na malha premium.",
       "Peça avulsa, malha premium.",
-      "Atacado de peça avulsa, a partir de 10 peças."
+      "Atacado de peça avulsa, a partir de 10 peças.",
+      "Peça avulsa premium — você monta o pedido do seu jeito."
     ],
     "qualidade_avulso": [
       "Acabamento caprichado, costura reforçada, peça que dura.",
@@ -502,9 +503,9 @@
       "Toque macio, tecido encorpado, acabamento de loja boa."
     ],
     "frete_avulso": [
-      "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦",
       "Pedido de peça avulsa com frete grátis (Vip) 📦",
-      "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚"
+      "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚",
+      "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛"
     ],
     "preco_kits": [
       "{quantidade} - só {preco}.",
@@ -513,8 +514,8 @@
       "{preco} no kit com {quantidade}."
     ],
     "cta_alt": [
-      "Chama no direct que a gente te ajuda 💬",
-      "Manda mensagem que a gente te ajuda a montar o pedido 💬"
+      "Manda mensagem que a gente te ajuda a montar o pedido 💬",
+      "Me chama no direct que te passo os detalhes 💬"
     ],
     "conforto": [
       "Firme sem ser apertada. É isso que a cliente procura.",
@@ -537,14 +538,14 @@
       "Quem revende sabe: peça boa e com preço de atacado faz diferença no fim do mês."
     ],
     "estilo": [
-      "Bonita no treino e bonita na rua também.",
       "Aquele visual que a cliente vê no feed e já quer pro guarda-roupa.",
       "Peça que fica linda na foto — ajuda muito na hora de divulgar.",
       "Detalhes que fazem diferença e deixam o conjunto mais bonito.",
       "Combina com tênis, sandália ou papete — serve pra tudo.",
       "Visual arrumado sem esforço nenhum.",
       "Cores que chamam atenção na vitrine e no seu status.",
-      "Tem cara de peça cara, mas com preço de atacado."
+      "Tem cara de peça cara, mas com preço de atacado.",
+      "Moda fitness que dá pra usar no mercado, no passeio e na academia."
     ],
     "qualidade_kits": [
       "Tecido firme, que não perde a forma depois de lavar.",
@@ -581,7 +582,7 @@
   },
   "contagem_dia": {
     "data": "2026-11-17",
-    "n": 2
+    "n": 3
   },
   "novidades_feed": [
     "3378707",
