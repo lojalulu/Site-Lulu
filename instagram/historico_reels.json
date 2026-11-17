@@ -1,13 +1,5 @@
 {
  "ids": [
-  "327794",
-  "3043182",
-  "3950022",
-  "1366405",
-  "906628",
-  "3249070",
-  "853903",
-  "3950005",
   "326653",
   "327777",
   "4371813",
@@ -299,7 +291,15 @@
   "1026249",
   "3405521",
   "317277",
-  "3865600"
+  "3865600",
+  "3724372",
+  "3703564",
+  "3769158",
+  "318146",
+  "4430502",
+  "4364027",
+  "3405523",
+  "570213"
  ],
  "ganchos": [
   "Montar *loja online* sem marca própria é perder tempo",
@@ -336,9 +336,10 @@
   "Frete caro tá comendo sua margem no atacado?",
   "Sua legging perde a modelagem depois de algumas lavagens?",
   "Você já viu as novidades do catálogo desta semana?",
-  "Sua cliente merece treinar com roupa que não transparece?"
+  "Sua cliente merece treinar com roupa que não transparece?",
+  "Sua cliente *plus size* também treina"
  ],
- "ultimo_post": "2026-11-16",
+ "ultimo_post": "2026-11-17",
  "angulos": [
   "frete",
   "tecido",
@@ -367,7 +368,8 @@
   "frete",
   "dica_tecido",
   "novidade",
-  "treino"
+  "treino",
+  "plus"
  ],
  "formatos": [
   "classico",
@@ -397,7 +399,8 @@
   "classico",
   "vitrine",
   "pergunta",
-  "rapido"
+  "rapido",
+  "vitrine"
  ],
  "musicas": [
   "upbeat-atlas.mp3",
@@ -427,7 +430,8 @@
   "phonk-subclair.mp3",
   "phonk-hard.mp3",
   "phonk-instrumental.mp3",
-  "lofi-reel.mp3"
+  "lofi-reel.mp3",
+  "upbeat-alex.mp3"
  ],
  "ultimo_post_meio": "2026-11-17",
  "contagem_meio": 13
