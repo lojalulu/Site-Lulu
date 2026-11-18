@@ -1,15 +1,21 @@
 {
   "loja": "kits",
-  "produto_id": "3865600",
-  "produto_nome": "Pacote com 10 Blusa Uv Unisexx",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1773060718_c5bc13c015a45f27e3b4.webp",
+  "produto_id": "3249092",
+  "produto_nome": "Pacote com 5 Conjuntos de Calça Ref 13 Suplex",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1754399375_bcb20b4807674d4c35e5.jpeg.webp",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "💪 Costura bem feita, que não incomoda na pele.\n\nKit fechado — ótimo pra começar a revender.\n\nVê as cores e monta seu pedido pelo link da bio 🔗\n\n#modafitnessevangelica",
-  "formato_feed": null,
-  "carrossel": null,
-  "legenda_reserva": "💪 Costura bem feita, que não incomoda na pele.\n\nKit fechado — ótimo pra começar a revender.\n\nVê as cores e monta seu pedido pelo link da bio 🔗\n\n#modafitnessevangelica",
-  "pilar": "conforto",
-  "eh_lancamento": false,
-  "publicar_feed": false,
-  "rodada_do_dia": 1
+  "legenda_feed": "O teste do agachamento que toda cliente faz ✅\n\nNossas malhas são zero transparência: Suplex Vip, Poliamida Premium e Poliamida Canelado.\n\nDica extra: lave do avesso, sem amaciante, e seque à sombra.\n\nCatálogo completo no link da bio 🔗\n\n#salvador",
+  "formato_feed": "info",
+  "carrossel": [
+    "instagram/_saida/carrossel_1.jpg",
+    "instagram/_saida/carrossel_2.jpg",
+    "instagram/_saida/carrossel_3.jpg",
+    "instagram/_saida/carrossel_4.jpg",
+    "instagram/_saida/carrossel_5.jpg"
+  ],
+  "legenda_reserva": "💪 Chegou lançamento no catálogo!\n\nKit com 5 Conjuntos por R$ 252,90.\n\nA partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦\n\nÉ kit fechado com 5 peças, em suplex vip.\n\nPedido pelo site, link na bio 🛍️",
+  "pilar": "lancamento",
+  "eh_lancamento": true,
+  "publicar_feed": true,
+  "rodada_do_dia": 2
 }
