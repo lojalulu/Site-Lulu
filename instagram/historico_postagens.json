@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -92,7 +92,8 @@
       "1366446",
       "318126",
       "3745064",
-      "4430515"
+      "4430515",
+      "3865600"
     ],
     "avulso": [
       "3117836",
@@ -163,11 +164,11 @@
     ]
   },
   "ultimos_pilares": [
-    "lucratividade",
     "renda_extra",
     "cliente_ama",
     "lucratividade",
-    "estilo"
+    "estilo",
+    "conforto"
   ],
   "conhecidos": {
     "kits": [
@@ -469,17 +470,17 @@
       "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛"
     ],
     "tag_kits": [
-      "Vendido em kit fechado, cores sortidas.",
       "Kit com cores variadas.",
       "Vem em kit fechado de 5, tecido suplex vip.",
-      "Kit fechado, 5 peças, suplex vip."
+      "Kit fechado, 5 peças, suplex vip.",
+      "Kit fechado — ótimo pra começar a revender."
     ],
     "cta_bio": [
-      "Pedido pelo site, link na bio 🛍️",
       "Os outros modelos estão no link da bio 👆",
       "Catálogo inteiro tá no link da bio 👆",
       "Link na bio 🔗",
-      "Catálogo completo — link na bio ✨"
+      "Catálogo completo — link na bio ✨",
+      "Vê as cores e monta seu pedido pelo link da bio 🔗"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -518,14 +519,14 @@
       "Me chama no direct que te passo os detalhes 💬"
     ],
     "conforto": [
-      "Firme sem ser apertada. É isso que a cliente procura.",
       "Modelagem que dá liberdade pra se mexer.",
       "Conforto é o que faz a cliente usar toda semana — e indicar.",
       "Peça leve, que não pesa nem nos dias mais quentes.",
       "Tecido macio, que não pinica nem esquenta demais.",
       "Cós que não enrola e não aperta a barriga.",
       "Veste bem do treino da manhã até o fim do dia.",
-      "Elástico que não marca, tecido que respira. Conforto de verdade."
+      "Elástico que não marca, tecido que respira. Conforto de verdade.",
+      "Costura bem feita, que não incomoda na pele."
     ],
     "renda_extra": [
       "Pra quem vende no WhatsApp ou no Instagram, essa peça ajuda a fechar pedido.",
@@ -581,8 +582,8 @@
     ]
   },
   "contagem_dia": {
-    "data": "2026-11-17",
-    "n": 3
+    "data": "2026-11-18",
+    "n": 1
   },
   "novidades_feed": [
     "3378707",
