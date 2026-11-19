@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -100,7 +100,8 @@
       "3552957",
       "2967282",
       "3769158",
-      "3249092"
+      "3249092",
+      "2632822"
     ],
     "avulso": [
       "3117836",
@@ -172,11 +173,11 @@
     ]
   },
   "ultimos_pilares": [
-    "lucratividade",
     "estilo",
     "conforto",
     "lancamento",
-    "qualidade"
+    "qualidade",
+    "lancamento"
   ],
   "conhecidos": {
     "kits": [
@@ -461,20 +462,18 @@
     ]
   },
   "lancamentos_pendentes": {
-    "kits": [
-      "2632822"
-    ],
+    "kits": [],
     "avulso": []
   },
   "ultimas_frases": {
     "lancamento": [
-      "Novidade no catálogo, chegou agora.",
       "Chegou lançamento! Primeira leva disponível.",
       "Peça nova no catálogo, quentinha da produção.",
       "Lançamento novinho, direto da fábrica.",
       "Acabou de chegar no catálogo — poucas peças por enquanto.",
       "Modelo inédito no catálogo. Vale a pena conferir.",
-      "Chegou lançamento no catálogo!"
+      "Chegou lançamento no catálogo!",
+      "Você está entre as primeiras a ver essa peça."
     ],
     "frete_kits": [
       "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦",
@@ -482,10 +481,10 @@
       "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦"
     ],
     "tag_kits": [
-      "Vem em kit fechado de 5, tecido suplex vip.",
       "Kit fechado, 5 peças, suplex vip.",
       "Kit fechado — ótimo pra começar a revender.",
-      "É kit fechado com 5 peças, em suplex vip."
+      "É kit fechado com 5 peças, em suplex vip.",
+      "Vendido em kit fechado, cores sortidas."
     ],
     "cta_bio": [
       "Catálogo inteiro tá no link da bio 👆",
@@ -527,8 +526,8 @@
       "Kit com {quantidade} por {preco}."
     ],
     "cta_alt": [
-      "Me chama no direct que te passo os detalhes 💬",
-      "Ficou com dúvida? Chama no direct 💬"
+      "Ficou com dúvida? Chama no direct 💬",
+      "Chama no direct que a gente te ajuda 💬"
     ],
     "conforto": [
       "Modelagem que dá liberdade pra se mexer.",
@@ -594,8 +593,8 @@
     ]
   },
   "contagem_dia": {
-    "data": "2026-11-18",
-    "n": 3
+    "data": "2026-11-19",
+    "n": 1
   },
   "novidades_feed": [
     "3378707",
