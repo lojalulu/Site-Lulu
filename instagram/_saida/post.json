@@ -1,18 +1,15 @@
 {
-  "loja": "kits",
-  "produto_id": "684175",
-  "produto_nome": "PACOTE COM 5 MACACÃO PLUS 02",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1695078824_3964622c4050d782dd3c.jpg",
+  "loja": "avulso",
+  "produto_id": "875515",
+  "produto_nome": "LEGGING EMPINA BUMBUM POLIAMIDA REF 370",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1730139915_95b2658093d89c7d5ab6.jpg.webp",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "Arrasta pra ver esse kit de todos os ângulos 👉\n\nMacacão Plus 02\n\n5 Macacão por R$ 240,90. Cores variadas em cada kit.\n\nPedido mínimo de 4 kits.\n\nEnvia pra sua sócia de revenda ver também 💌\n\nMonte seu pedido em luluextra.com (link na bio) 🛍️",
-  "formato_feed": "carrossel_produto",
-  "carrossel": [
-    "instagram/_saida/carrossel_1.jpg",
-    "instagram/_saida/carrossel_2.jpg"
-  ],
-  "legenda_reserva": "🌸 Você define seu preço de venda — a margem fica com você.\n\nE tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚\n\nKit com cores variadas.\n\nLink da bio te leva direto pro catálogo 📲",
-  "pilar": "lucratividade",
+  "legenda_feed": "🛍️ Malha que acompanha o corpo sem apertar — conforto o dia inteiro.\n\nÉ peça avulsa, na malha premium.\n\nOs outros modelos estão no link da bio 👆\n\n#rendaextra #salvador",
+  "formato_feed": null,
+  "carrossel": null,
+  "legenda_reserva": "🛍️ Malha que acompanha o corpo sem apertar — conforto o dia inteiro.\n\nÉ peça avulsa, na malha premium.\n\nOs outros modelos estão no link da bio 👆\n\n#rendaextra #salvador",
+  "pilar": "conforto",
   "eh_lancamento": false,
-  "publicar_feed": true,
-  "rodada_do_dia": 2
+  "publicar_feed": false,
+  "rodada_do_dia": 3
 }
