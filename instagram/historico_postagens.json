@@ -101,7 +101,8 @@
       "2967282",
       "3769158",
       "3249092",
-      "2632822"
+      "2632822",
+      "684175"
     ],
     "avulso": [
       "3117836",
@@ -173,11 +174,11 @@
     ]
   },
   "ultimos_pilares": [
-    "estilo",
     "conforto",
     "lancamento",
     "qualidade",
-    "lancamento"
+    "lancamento",
+    "lucratividade"
   ],
   "conhecidos": {
     "kits": [
@@ -476,22 +477,22 @@
       "Você está entre as primeiras a ver essa peça."
     ],
     "frete_kits": [
-      "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦",
       "E o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛",
-      "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦"
+      "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦",
+      "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚"
     ],
     "tag_kits": [
-      "Kit fechado, 5 peças, suplex vip.",
       "Kit fechado — ótimo pra começar a revender.",
       "É kit fechado com 5 peças, em suplex vip.",
-      "Vendido em kit fechado, cores sortidas."
+      "Vendido em kit fechado, cores sortidas.",
+      "Kit com cores variadas."
     ],
     "cta_bio": [
-      "Catálogo inteiro tá no link da bio 👆",
       "Link na bio 🔗",
       "Catálogo completo — link na bio ✨",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
-      "Pedido pelo site, link na bio 🛍️"
+      "Pedido pelo site, link na bio 🛍️",
+      "Link da bio te leva direto pro catálogo 📲"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -578,12 +579,12 @@
       "Poucas peças disponíveis por enquanto."
     ],
     "lucratividade": [
-      "Preço de fábrica pra você vender com uma margem boa de verdade.",
       "Comprando direto da fábrica, sem intermediário.",
       "Faz a conta: divide o valor do kit por 5 e veja quanto sai cada peça.",
       "Preço de atacado de verdade, sem intermediário no meio.",
       "Atacado com preço pensado pra quem revende.",
-      "Custo baixo por peça é o que faz a revenda valer a pena."
+      "Custo baixo por peça é o que faz a revenda valer a pena.",
+      "Você define seu preço de venda — a margem fica com você."
     ],
     "cliente_ama": [
       "Veste bem em corpos diferentes, por isso quase não tem troca.",
@@ -594,7 +595,7 @@
   },
   "contagem_dia": {
     "data": "2026-11-19",
-    "n": 1
+    "n": 2
   },
   "novidades_feed": [
     "3378707",
@@ -609,7 +610,8 @@
     "produto",
     "info",
     "vitrine",
-    "info"
+    "info",
+    "carrossel_produto"
   ],
   "temas_info": [
     "lulu",

@@ -1,15 +1,18 @@
 {
   "loja": "kits",
-  "produto_id": "2632822",
-  "produto_nome": "Pacote com 5 Conjuntos de Short Ref 50",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1734449998_0a7b451a7ac7ad7625b7.jpeg.webp",
+  "produto_id": "684175",
+  "produto_nome": "PACOTE COM 5 MACACÃO PLUS 02",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1695078824_3964622c4050d782dd3c.jpg",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "✨ Você está entre as primeiras a ver essa peça.\n\nVendido em kit fechado, cores sortidas.\n\nChama no direct que a gente te ajuda 💬\n\n#salvador #modafitnesssalvador",
-  "formato_feed": null,
-  "carrossel": null,
-  "legenda_reserva": "✨ Você está entre as primeiras a ver essa peça.\n\nVendido em kit fechado, cores sortidas.\n\nChama no direct que a gente te ajuda 💬\n\n#salvador #modafitnesssalvador",
-  "pilar": "lancamento",
-  "eh_lancamento": true,
-  "publicar_feed": false,
-  "rodada_do_dia": 1
+  "legenda_feed": "Arrasta pra ver esse kit de todos os ângulos 👉\n\nMacacão Plus 02\n\n5 Macacão por R$ 240,90. Cores variadas em cada kit.\n\nPedido mínimo de 4 kits.\n\nEnvia pra sua sócia de revenda ver também 💌\n\nMonte seu pedido em luluextra.com (link na bio) 🛍️",
+  "formato_feed": "carrossel_produto",
+  "carrossel": [
+    "instagram/_saida/carrossel_1.jpg",
+    "instagram/_saida/carrossel_2.jpg"
+  ],
+  "legenda_reserva": "🌸 Você define seu preço de venda — a margem fica com você.\n\nE tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚\n\nKit com cores variadas.\n\nLink da bio te leva direto pro catálogo 📲",
+  "pilar": "lucratividade",
+  "eh_lancamento": false,
+  "publicar_feed": true,
+  "rodada_do_dia": 2
 }
