@@ -1,15 +1,15 @@
 {
-  "loja": "kits",
-  "produto_id": "3221685",
-  "produto_nome": "Pacote com 5 Conjuntos de Calça Ref 68 Suplex",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1753795269_e4b3c9186dc8b5104c2e.jpeg.webp",
+  "loja": "avulso",
+  "produto_id": "3145402",
+  "produto_nome": "BLUSA DE TULE",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1793133398_9a7d123abed144bf0325.webp",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "💪 Dá pra começar com o pedido mínimo de 4 kits e ir crescendo.\n\nSão 5 Conjuntos por R$ 248,90. Faz a conta de quanto sai cada peça.\n\nKit fechado — ótimo pra começar a revender.\n\nDá uma espiada no link da bio 💗",
-  "formato_feed": "produto",
+  "legenda_feed": "🛍️ Custo por peça de atacado, pra você montar sua margem.\n\nPeça avulsa, malha premium.\n\nLink na bio 🔗\n\n#modafitness",
+  "formato_feed": null,
   "carrossel": null,
-  "legenda_reserva": "💪 Dá pra começar com o pedido mínimo de 4 kits e ir crescendo.\n\nSão 5 Conjuntos por R$ 248,90. Faz a conta de quanto sai cada peça.\n\nKit fechado — ótimo pra começar a revender.\n\nDá uma espiada no link da bio 💗",
-  "pilar": "renda_extra",
+  "legenda_reserva": "🛍️ Custo por peça de atacado, pra você montar sua margem.\n\nPeça avulsa, malha premium.\n\nLink na bio 🔗\n\n#modafitness",
+  "pilar": "lucratividade",
   "eh_lancamento": false,
-  "publicar_feed": true,
-  "rodada_do_dia": 2
+  "publicar_feed": false,
+  "rodada_do_dia": 3
 }

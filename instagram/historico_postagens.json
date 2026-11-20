@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "947443",
@@ -173,15 +173,16 @@
       "331422",
       "4307641",
       "875488",
-      "875515"
+      "875515",
+      "3145402"
     ]
   },
   "ultimos_pilares": [
-    "lancamento",
     "lucratividade",
     "conforto",
     "qualidade",
-    "renda_extra"
+    "renda_extra",
+    "lucratividade"
   ],
   "conhecidos": {
     "kits": [
@@ -491,11 +492,11 @@
       "Kit fechado — ótimo pra começar a revender."
     ],
     "cta_bio": [
-      "Pedido pelo site, link na bio 🛍️",
       "Link da bio te leva direto pro catálogo 📲",
       "Os outros modelos estão no link da bio 👆",
       "Catálogo inteiro tá no link da bio 👆",
-      "Dá uma espiada no link da bio 💗"
+      "Dá uma espiada no link da bio 💗",
+      "Link na bio 🔗"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -504,10 +505,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Atacado de peça avulsa, a partir de 10 peças.",
       "Peça avulsa premium — você monta o pedido do seu jeito.",
       "Vendida avulsa, sem precisar levar kit fechado.",
-      "É peça avulsa, na malha premium."
+      "É peça avulsa, na malha premium.",
+      "Peça avulsa, malha premium."
     ],
     "qualidade_avulso": [
       "Malha de qualidade superior, que não perde a forma.",
@@ -582,12 +583,12 @@
       "Poucas peças disponíveis por enquanto."
     ],
     "lucratividade": [
-      "Comprando direto da fábrica, sem intermediário.",
       "Faz a conta: divide o valor do kit por 5 e veja quanto sai cada peça.",
       "Preço de atacado de verdade, sem intermediário no meio.",
       "Atacado com preço pensado pra quem revende.",
       "Custo baixo por peça é o que faz a revenda valer a pena.",
-      "Você define seu preço de venda — a margem fica com você."
+      "Você define seu preço de venda — a margem fica com você.",
+      "Custo por peça de atacado, pra você montar sua margem."
     ],
     "cliente_ama": [
       "Veste bem em corpos diferentes, por isso quase não tem troca.",
@@ -598,7 +599,7 @@
   },
   "contagem_dia": {
     "data": "2026-11-20",
-    "n": 2
+    "n": 3
   },
   "novidades_feed": [
     "3378707",
