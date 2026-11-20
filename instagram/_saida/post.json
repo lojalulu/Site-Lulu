@@ -1,15 +1,15 @@
 {
   "loja": "kits",
-  "produto_id": "3221639",
-  "produto_nome": "Pacote com 5 Conjuntos de Calça Ref 67 Suplex",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1753794431_d6bf27bf3afe301cb29c.jpeg.webp",
+  "produto_id": "3221685",
+  "produto_nome": "Pacote com 5 Conjuntos de Calça Ref 68 Suplex",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1753795269_e4b3c9186dc8b5104c2e.jpeg.webp",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "💗 Suplex vip que segura bem e não deixa marquinha.\n\nKit fechado, 5 peças, suplex vip.\n\nCatálogo inteiro tá no link da bio 👆",
-  "formato_feed": null,
+  "legenda_feed": "💪 Dá pra começar com o pedido mínimo de 4 kits e ir crescendo.\n\nSão 5 Conjuntos por R$ 248,90. Faz a conta de quanto sai cada peça.\n\nKit fechado — ótimo pra começar a revender.\n\nDá uma espiada no link da bio 💗",
+  "formato_feed": "produto",
   "carrossel": null,
-  "legenda_reserva": "💗 Suplex vip que segura bem e não deixa marquinha.\n\nKit fechado, 5 peças, suplex vip.\n\nCatálogo inteiro tá no link da bio 👆",
-  "pilar": "qualidade",
+  "legenda_reserva": "💪 Dá pra começar com o pedido mínimo de 4 kits e ir crescendo.\n\nSão 5 Conjuntos por R$ 248,90. Faz a conta de quanto sai cada peça.\n\nKit fechado — ótimo pra começar a revender.\n\nDá uma espiada no link da bio 💗",
+  "pilar": "renda_extra",
   "eh_lancamento": false,
-  "publicar_feed": false,
-  "rodada_do_dia": 1
+  "publicar_feed": true,
+  "rodada_do_dia": 2
 }
