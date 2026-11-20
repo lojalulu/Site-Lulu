@@ -1,13 +1,5 @@
 {
  "ids": [
-  "4210537",
-  "449557",
-  "4430515",
-  "2049293",
-  "3769158",
-  "2816723",
-  "4485653",
-  "2049282",
   "3221669",
   "2967282",
   "947432",
@@ -299,7 +291,15 @@
   "1139922",
   "2816699",
   "4430522",
-  "4485658"
+  "4485658",
+  "4613751",
+  "3378707",
+  "4613760",
+  "2049287",
+  "3709232",
+  "3221685",
+  "3703562",
+  "3249086"
  ],
  "ganchos": [
   "Montar *loja online* sem marca própria é perder tempo",
@@ -342,11 +342,11 @@
   "Chegaram modelos *novos* no catálogo",
   "Que tal ter sua *loja online* pronta?",
   "Sua cliente faz o teste do *agachamento*?",
-  "Você lava a *legging* do jeito certo?"
+  "Você lava a *legging* do jeito certo?",
+  "Chegaram modelos *novos* no catálogo"
  ],
- "ultimo_post": "2026-11-19",
+ "ultimo_post": "2026-11-20",
  "angulos": [
-  "dica_tecido",
   "plus",
   "bastidores",
   "novidade",
@@ -375,10 +375,10 @@
   "novidade",
   "fq_loja",
   "tecido",
-  "dica_tecido"
+  "dica_tecido",
+  "novidade"
  ],
  "formatos": [
-  "pergunta",
   "rapido",
   "classico",
   "pergunta",
@@ -407,10 +407,10 @@
   "rapido",
   "pergunta",
   "classico",
-  "rapido"
+  "rapido",
+  "pergunta"
  ],
  "musicas": [
-  "lofi-reel.mp3",
   "phonk-hard.mp3",
   "upbeat-rock.mp3",
   "upbeat-atlas.mp3",
@@ -439,7 +439,8 @@
   "phonk-hard.mp3",
   "phonk-instrumental.mp3",
   "upbeat-alex.mp3",
-  "phonk-mountain2.mp3"
+  "phonk-mountain2.mp3",
+  "phonk-brasileiro.mp3"
  ],
  "ultimo_post_meio": "2026-11-20",
  "contagem_meio": 16
