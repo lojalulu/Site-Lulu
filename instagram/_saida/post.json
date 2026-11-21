@@ -1,18 +1,15 @@
 {
-  "loja": "kits",
-  "produto_id": "477630",
-  "produto_nome": "Pacote com 5 Conjuntos Plus Size Calça Viés 04",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1687124782_06d71fd22ebec12c5524.jpeg",
+  "loja": "avulso",
+  "produto_id": "4376846",
+  "produto_nome": "CONJ GG DE CALÇA CANELADA",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1787014363_74e25371160075acad40.webp",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "Olha esse kit por todos os lados 👉\n\nConjuntos Plus Size Calça Viés 04\n\n5 Conjuntos por R$ 224,90. Cores variadas em cada kit.\n\nPedido mínimo de 4 kits.\n\nCatálogo completo no link da bio 🔗",
-  "formato_feed": "carrossel_produto",
-  "carrossel": [
-    "instagram/_saida/carrossel_1.jpg",
-    "instagram/_saida/carrossel_2.jpg"
-  ],
-  "legenda_reserva": "🛍️ Bonita no treino e bonita na rua também.\n\nHoje, 5 Conjuntos saem por R$ 224,90.\n\nFrete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦\n\nVem em kit fechado de 5, tecido suplex vip.\n\nCatálogo completo — link na bio ✨",
-  "pilar": "estilo",
+  "legenda_feed": "🌸 Modelo fácil de mostrar no status e no Instagram.\n\nAtacado de peça avulsa, a partir de 10 peças.\n\nOs outros modelos estão no link da bio 👆",
+  "formato_feed": null,
+  "carrossel": null,
+  "legenda_reserva": "🌸 Modelo fácil de mostrar no status e no Instagram.\n\nAtacado de peça avulsa, a partir de 10 peças.\n\nOs outros modelos estão no link da bio 👆",
+  "pilar": "renda_extra",
   "eh_lancamento": false,
-  "publicar_feed": true,
-  "rodada_do_dia": 2
+  "publicar_feed": false,
+  "rodada_do_dia": 3
 }
