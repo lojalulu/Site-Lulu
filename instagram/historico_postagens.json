@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -104,7 +104,8 @@
       "2632822",
       "684175",
       "3221639",
-      "3221685"
+      "3221685",
+      "3501601"
     ],
     "avulso": [
       "3117836",
@@ -178,11 +179,11 @@
     ]
   },
   "ultimos_pilares": [
-    "lucratividade",
     "conforto",
     "qualidade",
     "renda_extra",
-    "lucratividade"
+    "lucratividade",
+    "cliente_ama"
   ],
   "conhecidos": {
     "kits": [
@@ -486,17 +487,17 @@
       "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚"
     ],
     "tag_kits": [
-      "Vendido em kit fechado, cores sortidas.",
       "Kit com cores variadas.",
       "Kit fechado, 5 peças, suplex vip.",
-      "Kit fechado — ótimo pra começar a revender."
+      "Kit fechado — ótimo pra começar a revender.",
+      "É kit fechado com 5 peças, em suplex vip."
     ],
     "cta_bio": [
-      "Link da bio te leva direto pro catálogo 📲",
       "Os outros modelos estão no link da bio 👆",
       "Catálogo inteiro tá no link da bio 👆",
       "Dá uma espiada no link da bio 💗",
-      "Link na bio 🔗"
+      "Link na bio 🔗",
+      "Vê as cores e monta seu pedido pelo link da bio 🔗"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -525,10 +526,10 @@
       "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛"
     ],
     "preco_kits": [
-      "{quantidade}: {preco}.",
       "{preco} no kit com {quantidade}.",
       "Kit com {quantidade} por {preco}.",
-      "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça."
+      "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
+      "{quantidade} por {preco} — já pode revender no seu preço."
     ],
     "cta_alt": [
       "Ficou com dúvida? Chama no direct 💬",
@@ -591,15 +592,15 @@
       "Custo por peça de atacado, pra você montar sua margem."
     ],
     "cliente_ama": [
-      "Veste bem em corpos diferentes, por isso quase não tem troca.",
       "Modelagem pensada pra valorizar o corpo sem apertar.",
       "Modelo versátil, que combina com vários estilos.",
-      "Caimento bonito na foto e no corpo — ajuda a vender."
+      "Caimento bonito na foto e no corpo — ajuda a vender.",
+      "Cores variadas no kit: cada cliente acha a cor que gosta."
     ]
   },
   "contagem_dia": {
-    "data": "2026-11-20",
-    "n": 3
+    "data": "2026-11-21",
+    "n": 1
   },
   "novidades_feed": [
     "3378707",
