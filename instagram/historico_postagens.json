@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -106,7 +106,8 @@
       "3221639",
       "3221685",
       "3501601",
-      "477630"
+      "477630",
+      "2049287"
     ],
     "avulso": [
       "3117836",
@@ -181,11 +182,11 @@
     ]
   },
   "ultimos_pilares": [
-    "renda_extra",
     "lucratividade",
     "cliente_ama",
     "estilo",
-    "renda_extra"
+    "renda_extra",
+    "cliente_ama"
   ],
   "conhecidos": {
     "kits": [
@@ -484,22 +485,22 @@
       "Você está entre as primeiras a ver essa peça."
     ],
     "frete_kits": [
-      "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦",
       "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚",
-      "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦"
+      "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦",
+      "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚"
     ],
     "tag_kits": [
-      "Kit fechado, 5 peças, suplex vip.",
       "Kit fechado — ótimo pra começar a revender.",
       "É kit fechado com 5 peças, em suplex vip.",
-      "Vem em kit fechado de 5, tecido suplex vip."
+      "Vem em kit fechado de 5, tecido suplex vip.",
+      "Kit com cores variadas."
     ],
     "cta_bio": [
-      "Dá uma espiada no link da bio 💗",
       "Link na bio 🔗",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Catálogo completo — link na bio ✨",
-      "Os outros modelos estão no link da bio 👆"
+      "Os outros modelos estão no link da bio 👆",
+      "Link da bio te leva direto pro catálogo 📲"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -594,15 +595,15 @@
       "Custo por peça de atacado, pra você montar sua margem."
     ],
     "cliente_ama": [
-      "Modelagem pensada pra valorizar o corpo sem apertar.",
       "Modelo versátil, que combina com vários estilos.",
       "Caimento bonito na foto e no corpo — ajuda a vender.",
-      "Cores variadas no kit: cada cliente acha a cor que gosta."
+      "Cores variadas no kit: cada cliente acha a cor que gosta.",
+      "Peça que a cliente usa no treino e no dia a dia."
     ]
   },
   "contagem_dia": {
     "data": "2026-11-21",
-    "n": 3
+    "n": 4
   },
   "novidades_feed": [
     "3378707",
