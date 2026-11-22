@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "947443",
@@ -107,7 +107,10 @@
       "3221685",
       "3501601",
       "477630",
-      "2049287"
+      "2049287",
+      "3221653",
+      "3709232",
+      "3555110"
     ],
     "avulso": [
       "3117836",
@@ -183,11 +186,11 @@
     ]
   },
   "ultimos_pilares": [
-    "cliente_ama",
     "estilo",
     "renda_extra",
     "cliente_ama",
-    "lucratividade"
+    "lucratividade",
+    "renda_extra"
   ],
   "conhecidos": {
     "kits": [
@@ -491,17 +494,17 @@
       "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚"
     ],
     "tag_kits": [
-      "Kit fechado — ótimo pra começar a revender.",
       "É kit fechado com 5 peças, em suplex vip.",
       "Vem em kit fechado de 5, tecido suplex vip.",
-      "Kit com cores variadas."
+      "Kit com cores variadas.",
+      "Kit fechado, 5 peças, suplex vip."
     ],
     "cta_bio": [
-      "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Catálogo completo — link na bio ✨",
       "Os outros modelos estão no link da bio 👆",
       "Link da bio te leva direto pro catálogo 📲",
-      "Pedido pelo site, link na bio 🛍️"
+      "Pedido pelo site, link na bio 🛍️",
+      "Dá uma espiada no link da bio 💗"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -530,10 +533,10 @@
       "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛"
     ],
     "preco_kits": [
-      "Kit com {quantidade} por {preco}.",
       "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
       "{quantidade} por {preco} — já pode revender no seu preço.",
-      "Hoje, {quantidade} saem por {preco}."
+      "Hoje, {quantidade} saem por {preco}.",
+      "{quantidade} - só {preco}."
     ],
     "cta_alt": [
       "Ficou com dúvida? Chama no direct 💬",
@@ -550,14 +553,14 @@
       "Malha que acompanha o corpo sem apertar — conforto o dia inteiro."
     ],
     "renda_extra": [
-      "Quer começar a revender? Esse é o tipo de peça que facilita.",
       "Se o objetivo é aumentar a renda, começa pelo que vende fácil.",
       "Renda extra de verdade começa com produto que a cliente quer comprar.",
       "Se você revende moda fitness, vale ter esse modelo na vitrine.",
       "Boa pra quem vende pra academia, vizinhança ou grupo de amigas.",
       "Quem revende sabe: peça boa e com preço de atacado faz diferença no fim do mês.",
       "Dá pra começar com o pedido mínimo de 4 kits e ir crescendo.",
-      "Modelo fácil de mostrar no status e no Instagram."
+      "Modelo fácil de mostrar no status e no Instagram.",
+      "Peça que você posta no status e já aparece gente perguntando o preço."
     ],
     "estilo": [
       "Peça que fica linda na foto — ajuda muito na hora de divulgar.",
@@ -604,14 +607,15 @@
   },
   "contagem_dia": {
     "data": "2026-11-22",
-    "n": 1
+    "n": 2
   },
   "novidades_feed": [
     "3378707",
     "3724372",
     "4613760",
     "4613751",
-    "4019589"
+    "4019589",
+    "3249092"
   ],
   "formatos_feed": [
     "novidades",
@@ -622,7 +626,8 @@
     "info",
     "carrossel_produto",
     "produto",
-    "carrossel_produto"
+    "carrossel_produto",
+    "vitrine"
   ],
   "temas_info": [
     "lulu",
