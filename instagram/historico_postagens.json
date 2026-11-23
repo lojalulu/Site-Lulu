@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "1366405"
@@ -75,15 +75,16 @@
       "3145402",
       "4376846",
       "4371813",
-      "3117884"
+      "3117884",
+      "2673557"
     ]
   },
   "ultimos_pilares": [
-    "cliente_ama",
     "lucratividade",
     "renda_extra",
     "conforto",
-    "lucratividade"
+    "lucratividade",
+    "renda_extra"
   ],
   "conhecidos": {
     "kits": [
@@ -393,11 +394,11 @@
       "Vendido em kit fechado, cores sortidas."
     ],
     "cta_bio": [
-      "Link da bio te leva direto pro catálogo 📲",
       "Pedido pelo site, link na bio 🛍️",
       "Dá uma espiada no link da bio 💗",
       "Link na bio 🔗",
-      "Vê as cores e monta seu pedido pelo link da bio 🔗"
+      "Vê as cores e monta seu pedido pelo link da bio 🔗",
+      "Catálogo completo — link na bio ✨"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -406,10 +407,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Peça avulsa, malha premium.",
       "Atacado de peça avulsa, a partir de 10 peças.",
       "Você escolhe peça por peça (mínimo de 10 no pedido).",
-      "Peça avulsa premium — você monta o pedido do seu jeito."
+      "Peça avulsa premium — você monta o pedido do seu jeito.",
+      "Vendida avulsa, sem precisar levar kit fechado."
     ],
     "qualidade_avulso": [
       "Malha de qualidade superior, que não perde a forma.",
@@ -446,14 +447,14 @@
       "Firme sem ser apertada. É isso que a cliente procura."
     ],
     "renda_extra": [
-      "Se o objetivo é aumentar a renda, começa pelo que vende fácil.",
       "Renda extra de verdade começa com produto que a cliente quer comprar.",
       "Se você revende moda fitness, vale ter esse modelo na vitrine.",
       "Boa pra quem vende pra academia, vizinhança ou grupo de amigas.",
       "Quem revende sabe: peça boa e com preço de atacado faz diferença no fim do mês.",
       "Dá pra começar com o pedido mínimo de 4 kits e ir crescendo.",
       "Modelo fácil de mostrar no status e no Instagram.",
-      "Peça que você posta no status e já aparece gente perguntando o preço."
+      "Peça que você posta no status e já aparece gente perguntando o preço.",
+      "Pra quem vende no WhatsApp ou no Instagram, essa peça ajuda a fechar pedido."
     ],
     "estilo": [
       "Peça que fica linda na foto — ajuda muito na hora de divulgar.",
@@ -499,8 +500,8 @@
     ]
   },
   "contagem_dia": {
-    "data": "2026-11-22",
-    "n": 4
+    "data": "2026-11-23",
+    "n": 1
   },
   "novidades_feed": [
     "3378707",
