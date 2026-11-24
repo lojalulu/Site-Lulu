@@ -1,15 +1,15 @@
 {
-  "loja": "kits",
-  "produto_id": "3249070",
-  "produto_nome": "Pacote com 5 Conjuntos de Calça Suplex Ref 14",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1754399218_e52542a9d86b3461cd1b.jpeg.webp",
+  "loja": "avulso",
+  "produto_id": "334028",
+  "produto_nome": "SAIA LISA POLIAMIDA REF 046",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1793820466_1d621dc4b6ba0894c944.webp",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "🌸 Cliente gosta de peça que dá pra usar muito — essa é assim.\n\nR$ 252,90 no kit com 5 Conjuntos.\n\nÉ kit fechado com 5 peças, em suplex vip.\n\nCatálogo inteiro tá no link da bio 👆\n\n#rendaextra",
-  "formato_feed": "produto",
+  "legenda_feed": "🔥 Você escolhe a peça certa pra sua cliente — sem sortimento fechado.\n\nPeça avulsa, malha premium.\n\nOs outros modelos estão no link da bio 👆\n\n#salvador #rendaextra #modafitness",
+  "formato_feed": null,
   "carrossel": null,
-  "legenda_reserva": "🌸 Cliente gosta de peça que dá pra usar muito — essa é assim.\n\nR$ 252,90 no kit com 5 Conjuntos.\n\nÉ kit fechado com 5 peças, em suplex vip.\n\nCatálogo inteiro tá no link da bio 👆\n\n#rendaextra",
-  "pilar": "cliente_ama",
+  "legenda_reserva": "🔥 Você escolhe a peça certa pra sua cliente — sem sortimento fechado.\n\nPeça avulsa, malha premium.\n\nOs outros modelos estão no link da bio 👆\n\n#salvador #rendaextra #modafitness",
+  "pilar": "qualidade",
   "eh_lancamento": false,
-  "publicar_feed": true,
-  "rodada_do_dia": 2
+  "publicar_feed": false,
+  "rodada_do_dia": 3
 }
