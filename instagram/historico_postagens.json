@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "1366405",
@@ -84,15 +84,16 @@
       "4376846",
       "4371813",
       "3117884",
-      "2673557"
+      "2673557",
+      "331427"
     ]
   },
   "ultimos_pilares": [
-    "renda_extra",
     "conforto",
     "lucratividade",
     "renda_extra",
-    "conforto"
+    "conforto",
+    "lucratividade"
   ],
   "conhecidos": {
     "kits": [
@@ -402,11 +403,11 @@
       "Kit fechado — ótimo pra começar a revender."
     ],
     "cta_bio": [
-      "Pedido pelo site, link na bio 🛍️",
       "Dá uma espiada no link da bio 💗",
       "Link na bio 🔗",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
-      "Catálogo completo — link na bio ✨"
+      "Catálogo completo — link na bio ✨",
+      "Link da bio te leva direto pro catálogo 📲"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -415,10 +416,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Atacado de peça avulsa, a partir de 10 peças.",
       "Você escolhe peça por peça (mínimo de 10 no pedido).",
       "Peça avulsa premium — você monta o pedido do seu jeito.",
-      "Vendida avulsa, sem precisar levar kit fechado."
+      "Vendida avulsa, sem precisar levar kit fechado.",
+      "É peça avulsa, na malha premium."
     ],
     "qualidade_avulso": [
       "Malha de qualidade superior, que não perde a forma.",
@@ -493,12 +494,12 @@
       "Poucas peças disponíveis por enquanto."
     ],
     "lucratividade": [
-      "Atacado com preço pensado pra quem revende.",
       "Custo baixo por peça é o que faz a revenda valer a pena.",
       "Você define seu preço de venda — a margem fica com você.",
       "Custo por peça de atacado, pra você montar sua margem.",
       "Comprando direto da fábrica, sem intermediário.",
-      "Preço de fábrica pra você vender com uma margem boa de verdade."
+      "Preço de fábrica pra você vender com uma margem boa de verdade.",
+      "Compra no kit e o valor por peça fica mais em conta."
     ],
     "cliente_ama": [
       "Modelo versátil, que combina com vários estilos.",
@@ -508,8 +509,8 @@
     ]
   },
   "contagem_dia": {
-    "data": "2026-11-23",
-    "n": 2
+    "data": "2026-11-24",
+    "n": 1
   },
   "novidades_feed": [
     "3378707",

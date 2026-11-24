@@ -1,21 +1,15 @@
 {
-  "loja": "kits",
-  "produto_id": "2967282",
-  "produto_nome": "Pacote com 5 Conjuntos de Short Saia Plus Bicolor",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1745421791_cfa865ed51eaf94f0b16.jpeg.webp",
+  "loja": "avulso",
+  "produto_id": "331427",
+  "produto_nome": "REGATÃO POLIAMIDA DRYFIT REF 050",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1793817252_0d3dfa1040bfa826b55c.webp",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "Quanto custa o frete dos kits? 🚚\n\nEconômico R$ 39,90 (até 9 dias úteis) ou Vip R$ 90 (até 7 dias úteis).\n\nFechando 6 kits ou mais, o Vip sai grátis pra Salvador e pro Brasil todo.\n\nCatálogo completo no link da bio 🔗",
-  "formato_feed": "info",
-  "carrossel": [
-    "instagram/_saida/carrossel_1.jpg",
-    "instagram/_saida/carrossel_2.jpg",
-    "instagram/_saida/carrossel_3.jpg",
-    "instagram/_saida/carrossel_4.jpg",
-    "instagram/_saida/carrossel_5.jpg"
-  ],
-  "legenda_reserva": "🏋️‍♀️ Feita pra treinar, trabalhar ou só ficar em casa — confortável do mesmo jeito.\n\nSão 5 Conjuntos por R$ 264,90. Faz a conta de quanto sai cada peça.\n\nA partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦\n\nKit fechado — ótimo pra começar a revender.\n\nMe chama no direct que te passo os detalhes 💬\n\n#salvador",
-  "pilar": "conforto",
+  "legenda_feed": "✨ Compra no kit e o valor por peça fica mais em conta.\n\nÉ peça avulsa, na malha premium.\n\nLink da bio te leva direto pro catálogo 📲",
+  "formato_feed": null,
+  "carrossel": null,
+  "legenda_reserva": "✨ Compra no kit e o valor por peça fica mais em conta.\n\nÉ peça avulsa, na malha premium.\n\nLink da bio te leva direto pro catálogo 📲",
+  "pilar": "lucratividade",
   "eh_lancamento": false,
-  "publicar_feed": true,
-  "rodada_do_dia": 2
+  "publicar_feed": false,
+  "rodada_do_dia": 1
 }
