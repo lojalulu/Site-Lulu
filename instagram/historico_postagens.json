@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "1366405",
@@ -10,7 +10,8 @@
       "4598001",
       "2816726",
       "384565",
-      "2967282"
+      "2967282",
+      "3249070"
     ],
     "avulso": [
       "3117836",
@@ -89,11 +90,11 @@
     ]
   },
   "ultimos_pilares": [
-    "conforto",
     "lucratividade",
     "renda_extra",
     "conforto",
-    "lucratividade"
+    "lucratividade",
+    "cliente_ama"
   ],
   "conhecidos": {
     "kits": [
@@ -397,17 +398,17 @@
       "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦"
     ],
     "tag_kits": [
-      "Kit com cores variadas.",
       "Kit fechado, 5 peças, suplex vip.",
       "Vendido em kit fechado, cores sortidas.",
-      "Kit fechado — ótimo pra começar a revender."
+      "Kit fechado — ótimo pra começar a revender.",
+      "É kit fechado com 5 peças, em suplex vip."
     ],
     "cta_bio": [
-      "Dá uma espiada no link da bio 💗",
       "Link na bio 🔗",
       "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Catálogo completo — link na bio ✨",
-      "Link da bio te leva direto pro catálogo 📲"
+      "Link da bio te leva direto pro catálogo 📲",
+      "Catálogo inteiro tá no link da bio 👆"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -436,10 +437,10 @@
       "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛"
     ],
     "preco_kits": [
-      "Hoje, {quantidade} saem por {preco}.",
       "{quantidade} - só {preco}.",
       "Kit com {quantidade} por {preco}.",
-      "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça."
+      "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
+      "{preco} no kit com {quantidade}."
     ],
     "cta_alt": [
       "Chama no direct que a gente te ajuda 💬",
@@ -502,15 +503,15 @@
       "Compra no kit e o valor por peça fica mais em conta."
     ],
     "cliente_ama": [
-      "Modelo versátil, que combina com vários estilos.",
       "Caimento bonito na foto e no corpo — ajuda a vender.",
       "Cores variadas no kit: cada cliente acha a cor que gosta.",
-      "Peça que a cliente usa no treino e no dia a dia."
+      "Peça que a cliente usa no treino e no dia a dia.",
+      "Cliente gosta de peça que dá pra usar muito — essa é assim."
     ]
   },
   "contagem_dia": {
     "data": "2026-11-24",
-    "n": 1
+    "n": 2
   },
   "novidades_feed": [
     "3378707",
@@ -531,7 +532,8 @@
     "produto",
     "carrossel_produto",
     "vitrine",
-    "info"
+    "info",
+    "produto"
   ],
   "temas_info": [
     "lulu",

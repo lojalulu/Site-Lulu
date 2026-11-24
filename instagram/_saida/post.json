@@ -1,15 +1,15 @@
 {
-  "loja": "avulso",
-  "produto_id": "331427",
-  "produto_nome": "REGATÃO POLIAMIDA DRYFIT REF 050",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1793817252_0d3dfa1040bfa826b55c.webp",
+  "loja": "kits",
+  "produto_id": "3249070",
+  "produto_nome": "Pacote com 5 Conjuntos de Calça Suplex Ref 14",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1754399218_e52542a9d86b3461cd1b.jpeg.webp",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "✨ Compra no kit e o valor por peça fica mais em conta.\n\nÉ peça avulsa, na malha premium.\n\nLink da bio te leva direto pro catálogo 📲",
-  "formato_feed": null,
+  "legenda_feed": "🌸 Cliente gosta de peça que dá pra usar muito — essa é assim.\n\nR$ 252,90 no kit com 5 Conjuntos.\n\nÉ kit fechado com 5 peças, em suplex vip.\n\nCatálogo inteiro tá no link da bio 👆\n\n#rendaextra",
+  "formato_feed": "produto",
   "carrossel": null,
-  "legenda_reserva": "✨ Compra no kit e o valor por peça fica mais em conta.\n\nÉ peça avulsa, na malha premium.\n\nLink da bio te leva direto pro catálogo 📲",
-  "pilar": "lucratividade",
+  "legenda_reserva": "🌸 Cliente gosta de peça que dá pra usar muito — essa é assim.\n\nR$ 252,90 no kit com 5 Conjuntos.\n\nÉ kit fechado com 5 peças, em suplex vip.\n\nCatálogo inteiro tá no link da bio 👆\n\n#rendaextra",
+  "pilar": "cliente_ama",
   "eh_lancamento": false,
-  "publicar_feed": false,
-  "rodada_do_dia": 1
+  "publicar_feed": true,
+  "rodada_do_dia": 2
 }
