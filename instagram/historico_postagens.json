@@ -1,8 +1,16 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
-      "1366405"
+      "1366405",
+      "318126",
+      "4613751",
+      "3378707",
+      "906628",
+      "4598001",
+      "2816726",
+      "384565",
+      "2967282"
     ],
     "avulso": [
       "3117836",
@@ -80,11 +88,11 @@
     ]
   },
   "ultimos_pilares": [
-    "lucratividade",
     "renda_extra",
     "conforto",
     "lucratividade",
-    "renda_extra"
+    "renda_extra",
+    "conforto"
   ],
   "conhecidos": {
     "kits": [
@@ -383,15 +391,15 @@
       "Você está entre as primeiras a ver essa peça."
     ],
     "frete_kits": [
-      "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚",
       "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦",
-      "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚"
+      "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚",
+      "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦"
     ],
     "tag_kits": [
-      "Vem em kit fechado de 5, tecido suplex vip.",
       "Kit com cores variadas.",
       "Kit fechado, 5 peças, suplex vip.",
-      "Vendido em kit fechado, cores sortidas."
+      "Vendido em kit fechado, cores sortidas.",
+      "Kit fechado — ótimo pra começar a revender."
     ],
     "cta_bio": [
       "Pedido pelo site, link na bio 🛍️",
@@ -427,24 +435,24 @@
       "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛"
     ],
     "preco_kits": [
-      "{quantidade} por {preco} — já pode revender no seu preço.",
       "Hoje, {quantidade} saem por {preco}.",
       "{quantidade} - só {preco}.",
-      "Kit com {quantidade} por {preco}."
+      "Kit com {quantidade} por {preco}.",
+      "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça."
     ],
     "cta_alt": [
-      "Ficou com dúvida? Chama no direct 💬",
-      "Chama no direct que a gente te ajuda 💬"
+      "Chama no direct que a gente te ajuda 💬",
+      "Me chama no direct que te passo os detalhes 💬"
     ],
     "conforto": [
-      "Peça leve, que não pesa nem nos dias mais quentes.",
       "Tecido macio, que não pinica nem esquenta demais.",
       "Cós que não enrola e não aperta a barriga.",
       "Veste bem do treino da manhã até o fim do dia.",
       "Elástico que não marca, tecido que respira. Conforto de verdade.",
       "Costura bem feita, que não incomoda na pele.",
       "Malha que acompanha o corpo sem apertar — conforto o dia inteiro.",
-      "Firme sem ser apertada. É isso que a cliente procura."
+      "Firme sem ser apertada. É isso que a cliente procura.",
+      "Feita pra treinar, trabalhar ou só ficar em casa — confortável do mesmo jeito."
     ],
     "renda_extra": [
       "Renda extra de verdade começa com produto que a cliente quer comprar.",
@@ -501,7 +509,7 @@
   },
   "contagem_dia": {
     "data": "2026-11-23",
-    "n": 1
+    "n": 2
   },
   "novidades_feed": [
     "3378707",
@@ -521,11 +529,13 @@
     "carrossel_produto",
     "produto",
     "carrossel_produto",
-    "vitrine"
+    "vitrine",
+    "info"
   ],
   "temas_info": [
     "lulu",
     "kit",
-    "tecido"
+    "tecido",
+    "frete"
   ]
 }
