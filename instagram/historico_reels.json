@@ -1,13 +1,5 @@
 {
  "ids": [
-  "3221685",
-  "3874845",
-  "3249086",
-  "3950005",
-  "3347550",
-  "3950065",
-  "3950022",
-  "684175",
   "4598001",
   "3388638",
   "2708825",
@@ -299,7 +291,15 @@
   "3724372",
   "3703564",
   "3769158",
-  "318146"
+  "318146",
+  "4116139",
+  "4430502",
+  "4364027",
+  "3405523",
+  "570213",
+  "853848",
+  "317284",
+  "3555118"
  ],
  "ganchos": [
   "Montar *loja online* sem marca própria é perder tempo",
@@ -351,11 +351,11 @@
   "Quer vender kit fitness que não fica transparente no movimento?",
   "Roupa boa *muda o treino* da sua cliente",
   "Dá pra começar a revender com *4 kits*",
-  "Dá pra ter loja online *sem CNPJ*?"
+  "Dá pra ter loja online *sem CNPJ*?",
+  "Pagando no *Pix*, seu kit sai 10% mais barato"
  ],
- "ultimo_post": "2026-11-24",
+ "ultimo_post": "2026-11-25",
  "angulos": [
-  "comecar",
   "mito",
   "novidade",
   "plus",
@@ -384,10 +384,10 @@
   "tecido",
   "treino",
   "comecar",
-  "fq_comeco"
+  "fq_comeco",
+  "pix"
  ],
  "formatos": [
-  "classico",
   "rapido",
   "pergunta",
   "classico",
@@ -416,10 +416,10 @@
   "rapido",
   "vitrine",
   "classico",
-  "rapido"
+  "rapido",
+  "pergunta"
  ],
  "musicas": [
-  "upbeat-atlas.mp3",
   "lofi-reel.mp3",
   "upbeat-alex.mp3",
   "phonk-mountain.mp3",
@@ -448,7 +448,8 @@
   "upbeat-corporate.mp3",
   "phonk-solarflex.mp3",
   "phonk-hard.mp3",
-  "phonk-mountain.mp3"
+  "phonk-mountain.mp3",
+  "upbeat-alex.mp3"
  ],
  "ultimo_post_meio": "2026-11-25",
  "contagem_meio": 20
