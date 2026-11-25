@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "kits",
+  "proxima_loja": "avulso",
   "postados": {
     "kits": [
       "1366405",
@@ -11,7 +11,8 @@
       "2816726",
       "384565",
       "2967282",
-      "3249070"
+      "3249070",
+      "402270"
     ],
     "avulso": [
       "3117836",
@@ -91,11 +92,11 @@
     ]
   },
   "ultimos_pilares": [
-    "renda_extra",
     "conforto",
     "lucratividade",
     "cliente_ama",
-    "qualidade"
+    "qualidade",
+    "lucratividade"
   ],
   "conhecidos": {
     "kits": [
@@ -399,17 +400,17 @@
       "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦"
     ],
     "tag_kits": [
-      "Kit fechado, 5 peças, suplex vip.",
       "Vendido em kit fechado, cores sortidas.",
       "Kit fechado — ótimo pra começar a revender.",
-      "É kit fechado com 5 peças, em suplex vip."
+      "É kit fechado com 5 peças, em suplex vip.",
+      "Vem em kit fechado de 5, tecido suplex vip."
     ],
     "cta_bio": [
-      "Vê as cores e monta seu pedido pelo link da bio 🔗",
       "Catálogo completo — link na bio ✨",
       "Link da bio te leva direto pro catálogo 📲",
       "Catálogo inteiro tá no link da bio 👆",
-      "Os outros modelos estão no link da bio 👆"
+      "Os outros modelos estão no link da bio 👆",
+      "Link na bio 🔗"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -438,10 +439,10 @@
       "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛"
     ],
     "preco_kits": [
-      "{quantidade} - só {preco}.",
       "Kit com {quantidade} por {preco}.",
       "São {quantidade} por {preco}. Faz a conta de quanto sai cada peça.",
-      "{preco} no kit com {quantidade}."
+      "{preco} no kit com {quantidade}.",
+      "{quantidade}: {preco}."
     ],
     "cta_alt": [
       "Chama no direct que a gente te ajuda 💬",
@@ -496,12 +497,12 @@
       "Poucas peças disponíveis por enquanto."
     ],
     "lucratividade": [
-      "Custo baixo por peça é o que faz a revenda valer a pena.",
       "Você define seu preço de venda — a margem fica com você.",
       "Custo por peça de atacado, pra você montar sua margem.",
       "Comprando direto da fábrica, sem intermediário.",
       "Preço de fábrica pra você vender com uma margem boa de verdade.",
-      "Compra no kit e o valor por peça fica mais em conta."
+      "Compra no kit e o valor por peça fica mais em conta.",
+      "Atacado com preço pensado pra quem revende."
     ],
     "cliente_ama": [
       "Caimento bonito na foto e no corpo — ajuda a vender.",
@@ -511,8 +512,8 @@
     ]
   },
   "contagem_dia": {
-    "data": "2026-11-24",
-    "n": 3
+    "data": "2026-11-25",
+    "n": 1
   },
   "novidades_feed": [
     "3378707",
