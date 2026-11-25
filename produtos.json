@@ -147,7 +147,7 @@
       "https://arquivos.facilzap.app.br/produtos/1754399380_8dd2ca51a9d5d0072a18.jpeg.webp"
     ],
     "cores_variadas": true,
-    "lancamento": true
+    "lancamento": false
   },
   {
     "id": "2632822",
@@ -160,7 +160,7 @@
       "https://arquivos.facilzap.app.br/produtos/1734449991_5d8f7803cb58a616a59d.jpeg.webp"
     ],
     "cores_variadas": true,
-    "lancamento": true
+    "lancamento": false
   },
   {
     "id": "3405523",
@@ -171,18 +171,6 @@
       "https://arquivos.facilzap.app.br/produtos/1758651718_fe7124a1b6b6feafce56.jpeg.webp",
       "https://arquivos.facilzap.app.br/produtos/1758651716_82a40711205abe6e3d49.jpeg.webp",
       "https://arquivos.facilzap.app.br/produtos/1758651715_5db5c843f3b517511523.jpeg.webp"
-    ],
-    "cores_variadas": true,
-    "lancamento": false
-  },
-  {
-    "id": "318147",
-    "nome": "Pacote Com 5 Conjuntos Midi Calça Bolso",
-    "preco_original": 165.0,
-    "preco_final": 264.9,
-    "imagens": [
-      "https://arquivos.facilzap.app.br/produtos/1674044552_139f43c353fd422289a5.png",
-      "https://arquivos.facilzap.app.br/produtos/1674044553_46e866836b21a1006a34.png"
     ],
     "cores_variadas": true,
     "lancamento": false
@@ -1328,6 +1316,23 @@
     "imagens": [
       "https://arquivos.facilzap.app.br/produtos/1674044208_b2a9620e080b009d4406.png",
       "https://arquivos.facilzap.app.br/produtos/1674044207_b16cf5e0d1561538dd88.png"
+    ],
+    "cores_variadas": true,
+    "lancamento": false
+  },
+  {
+    "id": "4116139",
+    "nome": "Corta vento transversal pacote 5 unidades",
+    "preco_original": 200.0,
+    "preco_final": 320.9,
+    "imagens": [
+      "https://arquivos.facilzap.app.br/produtos/1780339590_16a2696b235979c86851.webp",
+      "https://arquivos.facilzap.app.br/produtos/1780339588_63725e873f292d73efa5.webp",
+      "https://arquivos.facilzap.app.br/produtos/1780339585_a1becd81568e334c6a0f.webp",
+      "https://arquivos.facilzap.app.br/produtos/1780339582_7547e557b744a77c60f5.webp",
+      "https://arquivos.facilzap.app.br/produtos/1793287576_575e40e8a103b4157fcd.webp",
+      "https://arquivos.facilzap.app.br/produtos/1793287578_be59054c075eb9c9b3e2.webp",
+      "https://arquivos.facilzap.app.br/produtos/1793287581_b0ba50356a38dc65998c.webp"
     ],
     "cores_variadas": true,
     "lancamento": false
