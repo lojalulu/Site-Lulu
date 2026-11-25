@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "1366405",
@@ -94,15 +94,16 @@
       "3117884",
       "2673557",
       "331427",
-      "334028"
+      "334028",
+      "333290"
     ]
   },
   "ultimos_pilares": [
-    "lucratividade",
     "cliente_ama",
     "qualidade",
     "lucratividade",
-    "renda_extra"
+    "renda_extra",
+    "conforto"
   ],
   "conhecidos": {
     "kits": [
@@ -412,11 +413,11 @@
       "Kit com cores variadas."
     ],
     "cta_bio": [
-      "Link da bio te leva direto pro catálogo 📲",
       "Catálogo inteiro tá no link da bio 👆",
       "Os outros modelos estão no link da bio 👆",
       "Link na bio 🔗",
-      "Pedido pelo site, link na bio 🛍️"
+      "Pedido pelo site, link na bio 🛍️",
+      "Dá uma espiada no link da bio 💗"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -425,10 +426,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Peça avulsa premium — você monta o pedido do seu jeito.",
       "Vendida avulsa, sem precisar levar kit fechado.",
       "É peça avulsa, na malha premium.",
-      "Peça avulsa, malha premium."
+      "Peça avulsa, malha premium.",
+      "Você escolhe peça por peça (mínimo de 10 no pedido)."
     ],
     "qualidade_avulso": [
       "Malha premium, qualidade superior — você sente a diferença assim que veste.",
@@ -440,9 +441,9 @@
       "Você escolhe a peça certa pra sua cliente — sem sortimento fechado."
     ],
     "frete_avulso": [
-      "Pedido de peça avulsa com frete grátis (Vip) 📦",
       "Aproveite a opção de frete grátis (Vip) pra Salvador e o Brasil 🚚",
-      "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛"
+      "Dá pra aproveitar o frete grátis (Vip) nesse pedido 🚛",
+      "Tem opção de frete grátis (Vip), de 4 a 7 dias úteis 📦"
     ],
     "preco_kits": [
       "Kit com {quantidade} por {preco}.",
@@ -455,14 +456,14 @@
       "Me chama no direct que te passo os detalhes 💬"
     ],
     "conforto": [
-      "Tecido macio, que não pinica nem esquenta demais.",
       "Cós que não enrola e não aperta a barriga.",
       "Veste bem do treino da manhã até o fim do dia.",
       "Elástico que não marca, tecido que respira. Conforto de verdade.",
       "Costura bem feita, que não incomoda na pele.",
       "Malha que acompanha o corpo sem apertar — conforto o dia inteiro.",
       "Firme sem ser apertada. É isso que a cliente procura.",
-      "Feita pra treinar, trabalhar ou só ficar em casa — confortável do mesmo jeito."
+      "Feita pra treinar, trabalhar ou só ficar em casa — confortável do mesmo jeito.",
+      "Conforto é o que faz a cliente usar toda semana — e indicar."
     ],
     "renda_extra": [
       "Se você revende moda fitness, vale ter esse modelo na vitrine.",
@@ -519,7 +520,7 @@
   },
   "contagem_dia": {
     "data": "2026-11-25",
-    "n": 2
+    "n": 3
   },
   "novidades_feed": [
     "3378707",
