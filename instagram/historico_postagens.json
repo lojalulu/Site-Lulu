@@ -12,7 +12,13 @@
       "384565",
       "2967282",
       "3249070",
-      "402270"
+      "402270",
+      "2632822",
+      "4364027",
+      "3249117",
+      "684180",
+      "449557",
+      "3703564"
     ],
     "avulso": [
       "3117836",
@@ -92,11 +98,11 @@
     ]
   },
   "ultimos_pilares": [
-    "conforto",
     "lucratividade",
     "cliente_ama",
     "qualidade",
-    "lucratividade"
+    "lucratividade",
+    "renda_extra"
   ],
   "conhecidos": {
     "kits": [
@@ -395,22 +401,22 @@
       "Você está entre as primeiras a ver essa peça."
     ],
     "frete_kits": [
-      "Frete grátis pra Salvador e qualquer canto do Brasil, a partir de 6 kits no pedido 📦",
       "Fechando 6 kits, o frete sai grátis pra todo o Brasil 🚚",
-      "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦"
+      "A partir de 6 kits você não paga frete, pra Salvador e pro Brasil todo 📦",
+      "E tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚"
     ],
     "tag_kits": [
-      "Vendido em kit fechado, cores sortidas.",
       "Kit fechado — ótimo pra começar a revender.",
       "É kit fechado com 5 peças, em suplex vip.",
-      "Vem em kit fechado de 5, tecido suplex vip."
+      "Vem em kit fechado de 5, tecido suplex vip.",
+      "Kit com cores variadas."
     ],
     "cta_bio": [
-      "Catálogo completo — link na bio ✨",
       "Link da bio te leva direto pro catálogo 📲",
       "Catálogo inteiro tá no link da bio 👆",
       "Os outros modelos estão no link da bio 👆",
-      "Link na bio 🔗"
+      "Link na bio 🔗",
+      "Pedido pelo site, link na bio 🛍️"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -459,14 +465,14 @@
       "Feita pra treinar, trabalhar ou só ficar em casa — confortável do mesmo jeito."
     ],
     "renda_extra": [
-      "Renda extra de verdade começa com produto que a cliente quer comprar.",
       "Se você revende moda fitness, vale ter esse modelo na vitrine.",
       "Boa pra quem vende pra academia, vizinhança ou grupo de amigas.",
       "Quem revende sabe: peça boa e com preço de atacado faz diferença no fim do mês.",
       "Dá pra começar com o pedido mínimo de 4 kits e ir crescendo.",
       "Modelo fácil de mostrar no status e no Instagram.",
       "Peça que você posta no status e já aparece gente perguntando o preço.",
-      "Pra quem vende no WhatsApp ou no Instagram, essa peça ajuda a fechar pedido."
+      "Pra quem vende no WhatsApp ou no Instagram, essa peça ajuda a fechar pedido.",
+      "Dá pra começar pequeno e ir crescendo — peça que gira bem ajuda muito."
     ],
     "estilo": [
       "Peça que fica linda na foto — ajuda muito na hora de divulgar.",
@@ -513,7 +519,7 @@
   },
   "contagem_dia": {
     "data": "2026-11-25",
-    "n": 1
+    "n": 2
   },
   "novidades_feed": [
     "3378707",
@@ -521,7 +527,8 @@
     "4613760",
     "4613751",
     "4019589",
-    "3249092"
+    "3249092",
+    "2632822"
   ],
   "formatos_feed": [
     "novidades",
@@ -535,7 +542,8 @@
     "carrossel_produto",
     "vitrine",
     "info",
-    "produto"
+    "produto",
+    "vitrine"
   ],
   "temas_info": [
     "lulu",

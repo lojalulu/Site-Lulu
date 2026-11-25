@@ -1,15 +1,23 @@
 {
   "loja": "kits",
-  "produto_id": "402270",
-  "produto_nome": "PACOTE COM 5 CONJUNTOS DE SHORT MIDI SIZE DE VIES",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1681733332_5b4c7b4a97411bc97f1d.jpeg",
+  "produto_id": "3703564",
+  "produto_nome": "Kit com 5 Conjuntos Fitness em Suplex – Linha Slim (Ref.) 26",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1768184567_0909681e4c190dba1cf2.webp",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "💗 Atacado com preço pensado pra quem revende.\n\n5 Conjuntos: R$ 232,90.\n\nVem em kit fechado de 5, tecido suplex vip.\n\nLink na bio 🔗",
-  "formato_feed": null,
-  "carrossel": null,
-  "legenda_reserva": "💗 Atacado com preço pensado pra quem revende.\n\n5 Conjuntos: R$ 232,90.\n\nVem em kit fechado de 5, tecido suplex vip.\n\nLink na bio 🔗",
-  "pilar": "lucratividade",
+  "legenda_feed": "Vitrine da semana na Lulu 👇\n\n• 5 Conjuntos por R$ 200,90 — Conjuntos de Short Ref 50\n• 5 Macaquinho por R$ 200,90 — Macaquinho Ref 01 Em Suplex\n• 5 Conjuntos por R$ 184,90 — Conjuntos de Calça Bolso Suplex Ref 06\n• 5 Conjuntos por R$ 280,90 — Conjuntos De Calça Plus Viés 05\n• 5 Conjuntos por R$ 240,90 — Conjuntos De Calça Lançamento Viés 04\n\nPedido mínimo de 4 kits • frete Vip grátis a partir de 6 • Pix com 10% de desconto nas peças.\n\nManda esse post pra quem vai revender com você 💌\n\nMonte seu pedido em luluextra.com (link na bio) 🛍️\n\n#modafitness #rendaextra #modafitnesssalvador",
+  "formato_feed": "vitrine",
+  "carrossel": [
+    "instagram/_saida/carrossel_1.jpg",
+    "instagram/_saida/carrossel_2.jpg",
+    "instagram/_saida/carrossel_3.jpg",
+    "instagram/_saida/carrossel_4.jpg",
+    "instagram/_saida/carrossel_5.jpg",
+    "instagram/_saida/carrossel_6.jpg",
+    "instagram/_saida/carrossel_7.jpg"
+  ],
+  "legenda_reserva": "💗 Dá pra começar pequeno e ir crescendo — peça que gira bem ajuda muito.\n\nE tem mais: frete grátis pra Salvador e o Brasil inteiro em pedidos a partir de 6 kits 🚚\n\nKit com cores variadas.\n\nPedido pelo site, link na bio 🛍️",
+  "pilar": "renda_extra",
   "eh_lancamento": false,
-  "publicar_feed": false,
-  "rodada_do_dia": 1
+  "publicar_feed": true,
+  "rodada_do_dia": 2
 }
