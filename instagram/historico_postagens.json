@@ -1,5 +1,5 @@
 {
-  "proxima_loja": "avulso",
+  "proxima_loja": "kits",
   "postados": {
     "kits": [
       "1366405",
@@ -97,15 +97,16 @@
       "2673557",
       "331427",
       "334028",
-      "333290"
+      "333290",
+      "3553045"
     ]
   },
   "ultimos_pilares": [
-    "lucratividade",
     "renda_extra",
     "conforto",
     "qualidade",
-    "renda_extra"
+    "renda_extra",
+    "conforto"
   ],
   "conhecidos": {
     "kits": [
@@ -415,11 +416,11 @@
       "Kit fechado, 5 peças, suplex vip."
     ],
     "cta_bio": [
-      "Link na bio 🔗",
       "Pedido pelo site, link na bio 🛍️",
       "Dá uma espiada no link da bio 💗",
       "Catálogo completo — link na bio ✨",
-      "Catálogo inteiro tá no link da bio 👆"
+      "Catálogo inteiro tá no link da bio 👆",
+      "Link da bio te leva direto pro catálogo 📲"
     ],
     "preco": [
       "Tudo isso por {preco}.",
@@ -428,10 +429,10 @@
       "{nome_curto}: {preco}."
     ],
     "tag_avulso": [
-      "Vendida avulsa, sem precisar levar kit fechado.",
       "É peça avulsa, na malha premium.",
       "Peça avulsa, malha premium.",
-      "Você escolhe peça por peça (mínimo de 10 no pedido)."
+      "Você escolhe peça por peça (mínimo de 10 no pedido).",
+      "Atacado de peça avulsa, a partir de 10 peças."
     ],
     "qualidade_avulso": [
       "Malha premium, qualidade superior — você sente a diferença assim que veste.",
@@ -458,14 +459,14 @@
       "Me chama no direct que te passo os detalhes 💬"
     ],
     "conforto": [
-      "Cós que não enrola e não aperta a barriga.",
       "Veste bem do treino da manhã até o fim do dia.",
       "Elástico que não marca, tecido que respira. Conforto de verdade.",
       "Costura bem feita, que não incomoda na pele.",
       "Malha que acompanha o corpo sem apertar — conforto o dia inteiro.",
       "Firme sem ser apertada. É isso que a cliente procura.",
       "Feita pra treinar, trabalhar ou só ficar em casa — confortável do mesmo jeito.",
-      "Conforto é o que faz a cliente usar toda semana — e indicar."
+      "Conforto é o que faz a cliente usar toda semana — e indicar.",
+      "Modelagem que dá liberdade pra se mexer."
     ],
     "renda_extra": [
       "Boa pra quem vende pra academia, vizinhança ou grupo de amigas.",
@@ -522,7 +523,7 @@
   },
   "contagem_dia": {
     "data": "2026-11-26",
-    "n": 2
+    "n": 3
   },
   "novidades_feed": [
     "3378707",

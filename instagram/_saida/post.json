@@ -1,19 +1,15 @@
 {
-  "loja": "kits",
-  "produto_id": "3405523",
-  "produto_nome": "Pacote com 10 Blusa de Tule em Poliamida",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1758651718_fe7124a1b6b6feafce56.jpeg.webp",
+  "loja": "avulso",
+  "produto_id": "3553045",
+  "produto_nome": "SHORT CICLISTA 3D GG",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1777385892_4299b75524a898d46e79.webp",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "Arrasta pra ver esse kit de todos os ângulos 👉\n\nBlusa de Tule em Poliamida\n\n10 Blusa por R$ 264,90. Cores variadas em cada kit.\n\nPix com 10% de desconto nas peças.\n\nMonte seu pedido em luluextra.com (link na bio) 🛍️",
-  "formato_feed": "carrossel_produto",
-  "carrossel": [
-    "instagram/_saida/carrossel_1.jpg",
-    "instagram/_saida/carrossel_2.jpg",
-    "instagram/_saida/carrossel_3.jpg"
-  ],
-  "legenda_reserva": "👗 Revender moda fitness é bom porque a cliente sempre volta pra comprar mais.\n\nKit fechado, 5 peças, suplex vip.\n\nCatálogo inteiro tá no link da bio 👆\n\n#rendaextra",
-  "pilar": "renda_extra",
+  "legenda_feed": "🌸 Modelagem que dá liberdade pra se mexer.\n\nAtacado de peça avulsa, a partir de 10 peças.\n\nLink da bio te leva direto pro catálogo 📲\n\n#rendaextra",
+  "formato_feed": null,
+  "carrossel": null,
+  "legenda_reserva": "🌸 Modelagem que dá liberdade pra se mexer.\n\nAtacado de peça avulsa, a partir de 10 peças.\n\nLink da bio te leva direto pro catálogo 📲\n\n#rendaextra",
+  "pilar": "conforto",
   "eh_lancamento": false,
-  "publicar_feed": true,
-  "rodada_do_dia": 2
+  "publicar_feed": false,
+  "rodada_do_dia": 3
 }
