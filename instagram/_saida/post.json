@@ -1,15 +1,19 @@
 {
   "loja": "kits",
-  "produto_id": "3709232",
-  "produto_nome": "Pacote com 10 Blusa de Tule em Poliamida Ref 03",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1768320738_7233a3b5a97afbf82e33.webp",
+  "produto_id": "3405523",
+  "produto_nome": "Pacote com 10 Blusa de Tule em Poliamida",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1758651718_fe7124a1b6b6feafce56.jpeg.webp",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "🛍️ Pode fazer o teste do agachamento: zero transparência.\n\nE o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛\n\nVendido em kit fechado, cores sortidas.\n\nCatálogo completo — link na bio ✨",
-  "formato_feed": null,
-  "carrossel": null,
-  "legenda_reserva": "🛍️ Pode fazer o teste do agachamento: zero transparência.\n\nE o frete? Sai grátis pra Salvador e o Brasil inteiro fechando 6 kits ou mais 🚛\n\nVendido em kit fechado, cores sortidas.\n\nCatálogo completo — link na bio ✨",
-  "pilar": "qualidade",
+  "legenda_feed": "Arrasta pra ver esse kit de todos os ângulos 👉\n\nBlusa de Tule em Poliamida\n\n10 Blusa por R$ 264,90. Cores variadas em cada kit.\n\nPix com 10% de desconto nas peças.\n\nMonte seu pedido em luluextra.com (link na bio) 🛍️",
+  "formato_feed": "carrossel_produto",
+  "carrossel": [
+    "instagram/_saida/carrossel_1.jpg",
+    "instagram/_saida/carrossel_2.jpg",
+    "instagram/_saida/carrossel_3.jpg"
+  ],
+  "legenda_reserva": "👗 Revender moda fitness é bom porque a cliente sempre volta pra comprar mais.\n\nKit fechado, 5 peças, suplex vip.\n\nCatálogo inteiro tá no link da bio 👆\n\n#rendaextra",
+  "pilar": "renda_extra",
   "eh_lancamento": false,
-  "publicar_feed": false,
-  "rodada_do_dia": 1
+  "publicar_feed": true,
+  "rodada_do_dia": 2
 }
