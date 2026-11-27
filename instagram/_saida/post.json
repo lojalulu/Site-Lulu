@@ -1,15 +1,23 @@
 {
   "loja": "kits",
-  "produto_id": "3724372",
-  "produto_nome": "Kit com 5 Conjuntos de Colete+ Short Duplo Tactel",
-  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1794231097_6d02206b555702467dcb.webp",
+  "produto_id": "318145",
+  "produto_nome": "Pacote com 5 conjuntos Midi Viés 02",
+  "foto_feed_url": "https://arquivos.facilzap.app.br/produtos/1674044327_01f8257d4554abd1a571.png",
   "feed_img_repo_path": "instagram/_saida/feed.jpg",
-  "legenda_feed": "👗 Faz a conta: divide o valor do kit por 5 e veja quanto sai cada peça.\n\n5 Conjuntos por R$ 320,90 — já pode revender no seu preço.\n\nÉ kit fechado com 5 peças, em suplex vip.\n\nOs outros modelos estão no link da bio 👆",
-  "formato_feed": null,
-  "carrossel": null,
-  "legenda_reserva": "👗 Faz a conta: divide o valor do kit por 5 e veja quanto sai cada peça.\n\n5 Conjuntos por R$ 320,90 — já pode revender no seu preço.\n\nÉ kit fechado com 5 peças, em suplex vip.\n\nOs outros modelos estão no link da bio 👆",
-  "pilar": "lucratividade",
+  "legenda_feed": "Qual desses entra no seu pedido? 👇\n\n• 5 Conjuntos por R$ 280,90 — Conjuntos De Calça Bicolor Plus Size\n• 5 Conjuntos por R$ 200,90 — Conjuntos de Short Plus Bicolor 02 Suplex\n• 5 Macacão por R$ 160,90 — Macacão Longo Ref 07\n• 5 Conjuntos por R$ 440,90 — Conjuntos Short Duplo Ref 09 Em Poliamida\n• 5 Conjuntos por R$ 200,90 — Conjuntos Fitness em Suplex – Linha Slim…\n\nPedido mínimo de 4 kits • frete Vip grátis a partir de 6 • Pix com 10% de desconto nas peças.\n\nMarca aquela amiga que quer começar a revender 💌\n\nCatálogo completo no link da bio 🔗",
+  "formato_feed": "vitrine",
+  "carrossel": [
+    "instagram/_saida/carrossel_1.jpg",
+    "instagram/_saida/carrossel_2.jpg",
+    "instagram/_saida/carrossel_3.jpg",
+    "instagram/_saida/carrossel_4.jpg",
+    "instagram/_saida/carrossel_5.jpg",
+    "instagram/_saida/carrossel_6.jpg",
+    "instagram/_saida/carrossel_7.jpg"
+  ],
+  "legenda_reserva": "🏋️‍♀️ Modelagem pensada pra valorizar o corpo sem apertar.\n\nVem em kit fechado de 5, tecido suplex vip.\n\nVê as cores e monta seu pedido pelo link da bio 🔗\n\n#modafitnesssalvador #salvador",
+  "pilar": "cliente_ama",
   "eh_lancamento": false,
-  "publicar_feed": false,
-  "rodada_do_dia": 1
+  "publicar_feed": true,
+  "rodada_do_dia": 2
 }
